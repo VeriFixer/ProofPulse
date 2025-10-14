@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<boogie version="4.11.0.0" commandLine="/home/ricostynha/.vscode/extensions/dafny-lang.ide-vscode-3.5.2/out/resources/4.11.0/github/dafny/Dafny.dll /xml:helper.txt ../dataset/Clover_abs.dfy">
+  <fileFragment name="/home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/Clover_abs.dfy" />
+  <method name="Abs (correctness)" startTime="2025-10-14 14:23:55Z">
+    <assertionBatch number="0" iteration="0" startTime="2025-10-14 14:23:55Z">
+      <assertion file="Clover_abs.dfy" line="2" column="21" />
+      <assertion file="Clover_abs.dfy" line="3" column="22" />
+      <conclusion duration="0.1425846" outcome="valid" resourceCount="4334" />
+    </assertionBatch>
+    <conclusion endTime="2025-10-14 14:23:55Z" duration="0.1425846" resourceCount="4334" outcome="correct" />
+  </method>
+</boogie>

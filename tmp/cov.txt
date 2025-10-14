@@ -1,0 +1,3 @@
+0: Clover_abs.dfy(4,0): entry to method _module._default.Abs
+1: Clover_abs.dfy(5,11): then branch
+2: Clover_abs.dfy(7,9): else branch

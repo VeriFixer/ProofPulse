@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+        xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" href="./.resources/coverage.css" type="text/css"/>
+    <title>Clover_abs_more_assert.dfy, Verification coverage</title>
+</head>
+<body onload="window['PR_TAB_WIDTH']=4">
+<div class="menu" id="menu">
+    <a href="./index_verification.html">Index</a>
+    
+</div>
+<h1>Clover_abs_more_assert.dfy, Verification coverage</h1>
+<h1 hidden>file:///home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/tmp/Clover_abs_more_assert.dfy</h1>
+<pre class="source lang-java linenums">
+<span class="na" id="1:1">method Abs(x: int) returns (y: int)
+  ensures </span><span class="nc" id="2:11">x>=0 ==> </span><span class="pc" id="2:20">x==y
+</span><span class="na" id="3:1">  ensures </span><span class="nc" id="3:11">x<0 ==> </span><span class="pc" id="3:19">x+y==0
+</span><span class="na" id="4:1">{
+  if x < 0 {
+    </span><span class="fc" id="6:5">assert(x < 0);
+</span><span class="na" id="7:1">    </span><span class="fc" id="7:5">y := -x;
+</span><span class="na" id="8:1">    </span><span class="fc" id="8:5">assert x + y == 0;
+</span><span class="na" id="9:1">    assert </span><span class="nc" id="9:12">(x < 0 ==> </span><span class="pc" id="9:23">x+y==0</span><span class="nc" id="9:29">)</span><span class="na" id="9:30">;
+    </span><span class="pc" id="10:5">return y;
+
+</span><span class="na" id="12:1">  } else {
+    </span><span class="fc" id="13:5">assert(x >= 0);
+</span><span class="na" id="14:1">    </span><span class="nc" id="14:5">y := x;
+</span><span class="na" id="15:1">    </span><span class="fc" id="15:5">assert(x == y);
+</span><span class="na" id="16:1">    assert</span><span class="nc" id="16:11">(x>=0 ==> </span><span class="pc" id="16:21">x==y</span><span class="nc" id="16:25">)</span><span class="na" id="16:26">;
+    </span><span class="pc" id="17:5">return y;
+</span><span class="na" id="18:1">  }
+</span><span class="nc" id="19:1">}
+</span></pre>
+<div class="footer">
+    <span class="right">
+        Created with 
+        <a href="https://github.com/dafny-lang/dafny">Dafny</a>
+    </span>
+</div>
+</body>
+</html>

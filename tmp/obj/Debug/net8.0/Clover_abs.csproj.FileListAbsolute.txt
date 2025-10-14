@@ -1,0 +1,5 @@
+/home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/tmp/obj/Debug/net8.0/Clover_abs.GeneratedMSBuildEditorConfig.editorconfig
+/home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/tmp/obj/Debug/net8.0/Clover_abs.AssemblyInfoInputs.cache
+/home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/tmp/obj/Debug/net8.0/Clover_abs.AssemblyInfo.cs
+/home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/tmp/obj/Debug/net8.0/Clover_abs.csproj.CoreCompileInputs.cache
+/home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/tmp/obj/Debug/net8.0/Clover_abs.sourcelink.json
