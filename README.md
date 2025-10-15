@@ -229,3 +229,43 @@ https://github.com/dafny-lang/dafny/pull/4625
 Na verdade o mais acil tem ar de usar a proof dependecy toda:
 --log-format text
 dafny verify Clover_abs_more_assert.dfy --verification-coverage-report cov --log-format text
+
+
+# It seems that the problem i was having is that the program was consider the group of assertions together
+What is faster but worse for this analysys for sure
+Running in this way solves that:
+dafny verify Clover_abs.dfy --verification-coverage-report cov --log-format text --isolate-assertions
+
+Did not work at all really (it complicated the HTML)
+
+Things on proof depedndency (aquilo que me anda a escapar):
+https://dafny.org/blog/2023/10/27/proof-dependencies/
+(this indicates also infomration on: 
+--warn-contradictory-assumptions,
+--warn-redundant-assumptions,
+)
+
+
+
+# From That same link 
+
+
+Dafny includes a verification logger that will describe the status of and statistics about each verification goal in the program. When proof dependency analysis is enabled, this will include information about which potential proof dependencies did or did not take place in the actual proof. This information will only be included if one of the other flags enabling proof dependency analysis is enabled, however. So, if we analyze the binary search example using the command dafny verify --log-format text --warn-redundant-assertions, the output will include the following text.
+
+Theory and implementation
+Internally, Dafny's proof dependency analysis is built on the common SMT feature of unsatisfiable cores. Dafny encodes each verification goal as an SMT query that negates the original goal. This means that a conclusion that the negated goal is unsatisfiable (i.e., no value exists that will make it true) means that the original goal is valid (i.e., true for all possible values). Many SMT solvers, including the Z3 solver that Dafny uses by default, can accompany a conclusion of “unsatisfiable” with a subset of the sub-expressions (clauses, in SMT terminology) from the original goal that is still unsatisfiable. This subset is generally smaller than the original formula, though it is not guaranteed to be so, and is not guaranteed to be minimal.
+
+Because unsatisfiable cores are not guaranteed to be minimal, Dafny may sometimes fail to warn about some goals that are proved using a contradiction, or some assumptions that are not ultimately necessary. In our early experience, however, Dafny does produce useful warnings for all large code bases we've tried it on.
+
+
+
+
+# Other cool tings to consider verification otimizations
+https://dafny.org/latest/VerificationOptimization/VerificationOptimization
+
+# Well I opened some Issue in dafny will need to wait (will se if I can explore other frameworks like verus)
+Deepseeks is thinking on those problemns that are happening:
+- Z3's proof simplification is so aggressive that it's proving the postcondition without the explicit assignment
+- The unsatisfiable core extraction is losing track of necessary dependencies
+- Dafny's translation to Boogie/Z3 might be restructuring the code in ways that break the line-level mapping
+

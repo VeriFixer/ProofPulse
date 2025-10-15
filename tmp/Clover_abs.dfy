@@ -1,10 +1,13 @@
 method Abs(x: int) returns (y: int)
+  ensures x < 0 ==> x+y==0
   ensures x>=0 ==> x==y
-  ensures x<0 ==> x+y==0
 {
-  if x < 0 {
-    return -x;
+  if x >= 0 {
+    y := x;
   } else {
-    return x;
+    y:= -x;
   }
 }
+
+// SMT 
+// Forma a formula  (x < 0 ==> x+y==0) && ( x>=0 ==> x==y) e tenta negar isso
