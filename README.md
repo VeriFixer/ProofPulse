@@ -269,3 +269,17 @@ Deepseeks is thinking on those problemns that are happening:
 - The unsatisfiable core extraction is losing track of necessary dependencies
 - Dafny's translation to Boogie/Z3 might be restructuring the code in ways that break the line-level mapping
 
+
+
+# MM Considering other aproaches : 
+Check this blog psot and paper:
+https://kirancodes.me/posts/log-proof-localisation.html
+https://ilyasergey.net/assets/pdf/papers/axolocl-cav25.pdf
+https://matthias-brun.ch/assets/publications/verus_oopsla2023.pdf
+
+Check Why3 (maybe it is easier to retrieve proof depencnies)
+
+# This gemini deep research query was very good 
+https://docs.google.com/document/d/17VnWyMugNQOA0u6l3SfTsmubEeHletylm9Wt-AkDWe4/edit?tab=t.0
+
+Fiz outro query ao gemini esta nos docs mas de longe pior (nao direcionei para rust Verus, ou why3). Estou um pouco a deriva. Vou ler aqueles 2 papers mais o de verus. tricky
