@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clover_abs", "tmp\Clover_abs.csproj", "{71D29DA4-0E81-1249-EFB3-23D686F000FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dataset", "dataset", "{82CE6C79-4995-14E3-CF4B-C99550C1A4B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clover_abs", "dataset\debugging_coverage\Clover_abs.csproj", "{D89F8C18-80F1-0718-6343-58F1B10644AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71D29DA4-0E81-1249-EFB3-23D686F000FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D29DA4-0E81-1249-EFB3-23D686F000FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D29DA4-0E81-1249-EFB3-23D686F000FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D29DA4-0E81-1249-EFB3-23D686F000FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89F8C18-80F1-0718-6343-58F1B10644AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89F8C18-80F1-0718-6343-58F1B10644AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89F8C18-80F1-0718-6343-58F1B10644AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89F8C18-80F1-0718-6343-58F1B10644AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D89F8C18-80F1-0718-6343-58F1B10644AD} = {82CE6C79-4995-14E3-CF4B-C99550C1A4B0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4773268E-CCE8-41C5-91A2-44544C694A14}
+	EndGlobalSection
+EndGlobal

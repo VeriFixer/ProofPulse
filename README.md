@@ -283,3 +283,8 @@ Check Why3 (maybe it is easier to retrieve proof depencnies)
 https://docs.google.com/document/d/17VnWyMugNQOA0u6l3SfTsmubEeHletylm9Wt-AkDWe4/edit?tab=t.0
 
 Fiz outro query ao gemini esta nos docs mas de longe pior (nao direcionei para rust Verus, ou why3). Estou um pouco a deriva. Vou ler aqueles 2 papers mais o de verus. tricky
+
+# Optimizing Bit vecotr verification
+https://github.com/dafny-lang/dafny/wiki/Bit-Vector-Cookbook
+# Optmizing verification
+https://dafny.org/latest/VerificationOptimization/VerificationOptimization
