@@ -1,6 +1,34 @@
+# Main commands
+# Comboio que faz tudo (gerar boogie e z3 preparados para coverage report):
+E gera os coverage reports
+dafny verify Clover_abs.dfy --verification-coverage-report cov --log-format text --solver-option LOG_FILE=output.smt2 --bprint output.bpl 
+z3 Clover_abs.dfy 
+// Corre o z3
+
+# Papers to read
+A Polymorphic Intermediate Verification Language: Design and Logical Encoding 
+(Nao muito relevante, mas boa leitura sobre tupos)
+Triggerless Happy Intermediate Verification with a First-Order Prover
+Free Facts: An Alternative to Inefficient Axioms in Dafny
+(Interessante para perceber como aximoas e trigger funcionam)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Objectives
 This Repo explores coverage Ideas apllied to SMT based verification-aware languages (particulary Dafny).
-
 
 # Roadmap 
 - 20 Examples datase gatherer
@@ -211,6 +239,7 @@ These options can be specified in dfyconfig.toml, and this is typically the most
 
 More detailed information is available using either the --log-format text or --verification-coverage-report option to dafny verify. The former will include a list of proof dependencies (including source location and description) alongside every assertion batch in the generated log whenever one of the two warning options above is also included. The latter will produce a highlighted HTML version of your source code, in the same format used by dafny test --coverage-report and dafny generate-tests --verification-coverage-report, indicating which parts of the program were used, not used, or partly used in the verification of the entire program.
 (descoberto)
+
 
 
 # Comando para gerar a coverage formal 'e entao

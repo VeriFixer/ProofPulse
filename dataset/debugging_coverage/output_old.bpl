@@ -2967,31 +2967,34 @@ implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "Abs (correct
       $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
     assume {:captureState "Clover_abs.dfy(4,0): initial state"} true;
     $_reverifyPost := false;
-    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/debugging_coverage/Clover_abs.dfy(5,5)
-    assume true;
-    assume true;
-    y#0 := LitInt(0);
-    defass#y#0 := true;
-    assume {:captureState "Clover_abs.dfy(5,8)"} true;
-    // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/debugging_coverage/Clover_abs.dfy(6,3)
+    // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/debugging_coverage/Clover_abs.dfy(5,3)
     assume true;
     if (x#0 < 0)
     {
-        // ----- return statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/debugging_coverage/Clover_abs.dfy(7,5)
-        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/debugging_coverage/Clover_abs.dfy(7,5)
+        // ----- return statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/debugging_coverage/Clover_abs.dfy(6,5)
+        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/debugging_coverage/Clover_abs.dfy(6,5)
         assume true;
         assume true;
         y#0 := 0 - x#0;
         defass#y#0 := true;
-        assume {:captureState "Clover_abs.dfy(7,13)"} true;
-        assert {:id "id12"} defass#y#0;
+        assume {:captureState "Clover_abs.dfy(6,13)"} true;
+        assert {:id "id11"} defass#y#0;
         return;
     }
     else
     {
+        // ----- return statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/debugging_coverage/Clover_abs.dfy(8,5)
+        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/debugging_coverage/Clover_abs.dfy(8,5)
+        assume true;
+        assume true;
+        y#0 := x#0;
+        defass#y#0 := true;
+        assume {:captureState "Clover_abs.dfy(8,12)"} true;
+        assert {:id "id13"} defass#y#0;
+        return;
     }
 
-    assert {:id "id13"} defass#y#0;
+    assert {:id "id14"} defass#y#0;
 }
 
 

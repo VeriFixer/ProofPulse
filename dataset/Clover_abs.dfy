@@ -7,4 +7,5 @@ method Abs(x: int) returns (y: int)
   } else {
     return x;
   }
+  return x;
 }
