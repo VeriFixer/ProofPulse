@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+        xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" href="./.resources/coverage.css" type="text/css"/>
+    <title>BelowZero.dfy, Verification coverage</title>
+</head>
+<body onload="window['PR_TAB_WIDTH']=4">
+<div class="menu" id="menu">
+    <a href="./index_verification.html">Index</a>
+    
+</div>
+<h1>BelowZero.dfy, Verification coverage</h1>
+<h1 hidden>file:///home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy</h1>
+<pre class="source lang-java linenums">
+<span class="na" id="1:1">/* 
+HumanEvalX 3
+You're given a list of deposit and withdrawal operations on a bank account that starts with zero balance. 
+Your task is to detect if at any point the balance of account falls below zero, and at that point function 
+should return True. Otherwise it should return False.
+*/
+
+function sum(s: seq<int>, n: nat): int
+    requires </span><span class="fc" id="9:14">n <= |s|
+</span><span class="na" id="10:1">{
+    if |s| == 0 || n == 0 then
+        </span><span class="nc" id="12:9">0
+</span><span class="na" id="13:1">    else
+        </span><span class="pc" id="14:9">s[0]</span><span class="nc" id="14:13"> + </span><span class="pc" id="14:16">sum(s[1..], n-1)
+</span><span class="na" id="15:1">}
+
+lemma sum_plus(s: seq<int>, i: nat)
+    requires </span><span class="pc" id="18:14">i < |s|
+</span><span class="na" id="19:1">    ensures </span><span class="pc" id="19:13">sum(s, i)</span><span class="nc" id="19:22"> + </span><span class="pc" id="19:25">s[i]</span><span class="nc" id="19:29"> == </span><span class="pc" id="19:33">sum(s, i+1)
+</span><span class="na" id="20:1">{
+}
+
+method BelowZero(ops: seq<int>) returns (result: bool)
+    ensures </span><span class="pc" id="24:13">result <==> exists n: nat :: n <= |ops| && sum(ops, n) < 0
+</span><span class="na" id="25:1">{
+    </span><span class="fc" id="26:5">result := false;
+</span><span class="na" id="27:1">    var </span><span class="fc" id="27:9">t := 0;
+</span><span class="na" id="28:1">    for i := </span><span class="fc" id="28:14">0</span><span class="na" id="28:15"> to |ops|
+        invariant </span><span class="pc" id="29:19">t == sum(ops, i)
+</span><span class="na" id="30:1">        invariant </span><span class="pc" id="30:19">forall n: nat :: n <= i ==> sum(ops, n) >= 0
+</span><span class="na" id="31:1">    {
+        </span><span class="fc" id="32:9">t := t + ops[i];
+</span><span class="na" id="33:1">        </span><span class="nc" id="33:9">sum_plus(ops, </span><span class="pc" id="33:23">i</span><span class="nc" id="33:24">);
+</span><span class="na" id="34:1">        if t < 0 {
+            </span><span class="fc" id="35:13">result := true;
+</span><span class="na" id="36:1">            </span><span class="fc" id="36:13">return;
+</span><span class="na" id="37:1">        }
+    }
+</span><span class="fc" id="39:1">}
+</span></pre>
+<div class="footer">
+    <span class="right">
+        Created with 
+        <a href="https://github.com/dafny-lang/dafny">Dafny</a>
+    </span>
+</div>
+</body>
+</html>

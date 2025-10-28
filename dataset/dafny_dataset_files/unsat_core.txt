@@ -1,0 +1,11 @@
+ z3 output.smt2
+unsat
+(:rlimit 11199)
+(aux$$assert$$id14 aux$$assert$$id13 aux$$assert$$id12 aux$$assume$$id11 aux$$assert$$id15)
+unsat
+(:rlimit 57565)
+(aux$$assume$$id0 aux$$assert$$id43 aux$$assert$$id42 aux$$assert$$id41 aux$$assert$$id40 aux$$assert$$id20 aux$$assert$$id44 aux$$assert$$id45 aux$$assert$$id47 aux$$assert$$id48 aux$$assert$$id49 aux$$assert$$id50 aux$$assert$$id51 aux$$assert$$id52 aux$$assert$$id54 aux$$assert$$id55 aux$$assert$$id56 aux$$assert$$id57 aux$$assert$$id17$id58$requires aux$$assume$$id18$id58$ensures aux$$assert$$id59 aux$$assert$$id60 aux$$assert$$id61 aux$$assert$$id62 aux$$assert$$id63 aux$$assert$$id64 aux$$assert$$id65 aux$$assert$$id66 aux$$assert$$id67 aux$$assert$$id68 aux$$assert$$id69 aux$$assert$$id21 aux$$assert$$id22 aux$$assert$$id23 aux$$assert$$id25 aux$$assert$$id26 aux$$assert$$id27 aux$$assert$$id28 aux$$assert$$id29 aux$$assert$$id30 aux$$assert$$id31 aux$$assert$$id33 aux$$assert$$id34 aux$$assert$$id35 aux$$assert$$id36 aux$$assert$$id37 aux$$assert$$id38 aux$$assume$$id19)
+unsat
+(:rlimit 45517)
+(aux$$assume$$id0 aux$$assert$$id74 aux$$assert$$id79 aux$$assert$$id78 aux$$assert$$id82 aux$$assert$$id92 aux$$assume$$id90 aux$$assert$$id91 aux$$assert$$id81$maintained aux$$assert$$id84$maintained aux$$assert$$id86 aux$$assume$$id87 aux$$assert$$id88 aux$$assert$$id17$id89$requires aux$$assume$$id18$id89$ensures aux$$assume$$id81$assume_in_body aux$$assume$$id84$assume_in_body aux$$assume$$id75 aux$$assume$$id76 aux$$assert$$id77 aux$$assert$$id81$established aux$$assert$$id84$established)
+

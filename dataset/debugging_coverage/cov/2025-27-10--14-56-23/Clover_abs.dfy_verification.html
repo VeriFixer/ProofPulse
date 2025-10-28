@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+        xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" href="./.resources/coverage.css" type="text/css"/>
+    <title>Clover_abs.dfy, Verification coverage</title>
+</head>
+<body onload="window['PR_TAB_WIDTH']=4">
+<div class="menu" id="menu">
+    <a href="./index_verification.html">Index</a>
+    
+</div>
+<h1>Clover_abs.dfy, Verification coverage</h1>
+<h1 hidden>file:///home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/debugging_coverage/Clover_abs.dfy</h1>
+<pre class="source lang-java linenums">
+<span class="na" id="1:1">// Com - e contantes a linha fica protegida por assume, mas com y := x nao (talvez porque ja existe o check do x estar well formed?)
+
+function id(x: int): int {
+  </span><span class="nc" id="4:3">x
+</span><span class="na" id="5:1">}
+
+method Abs(x: int) returns (y: int)
+  ensures </span><span class="nc" id="8:11">x>=0 ==> </span><span class="pc" id="8:20">x==-y
+</span><span class="na" id="9:1">  ensures </span><span class="nc" id="9:11">x<0 ==> </span><span class="pc" id="9:19">x+2==y
+</span><span class="na" id="10:1">{
+  if x < 0 {
+    </span><span class="fc" id="12:5">y := x + 1;
+</span><span class="na" id="13:1">    </span><span class="fc" id="13:5">y := y + 1;
+</span><span class="na" id="14:1">  } else {
+    </span><span class="fc" id="15:5">y := -x;
+</span><span class="na" id="16:1">  }
+</span><span class="fc" id="17:1">}
+</span></pre>
+<div class="footer">
+    <span class="right">
+        Created with 
+        <a href="https://github.com/dafny-lang/dafny">Dafny</a>
+    </span>
+</div>
+</body>
+</html>

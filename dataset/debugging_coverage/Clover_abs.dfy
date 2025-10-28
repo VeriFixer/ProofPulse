@@ -1,11 +1,10 @@
 method Abs(x: int) returns (y: int)
   ensures x>=0 ==> x==y
-  ensures x<0 ==> x+y==0
+  ensures x<0 ==> x==-y
 {
-  y := 0;
   if x < 0 {
-    return -x;
+    y := -x;
   } else {
-    //return x;
+    y :=  x;
   }
 }
