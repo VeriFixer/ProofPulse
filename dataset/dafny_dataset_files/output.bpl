@@ -2877,75 +2877,19 @@ const unique class._System.Tuple0: ClassName;
 
 const unique class._module.__default: ClassName;
 
-procedure {:verboseName "ret32 (well-formedness)"} CheckWellFormed$$_module.__default.ret32(a#0: int) returns (x#0: int);
-  free requires 0 == $FunctionContextHeight;
-  modifies $Heap;
-
-
-
-procedure {:verboseName "ret32 (call)"} Call$$_module.__default.ret32(a#0: int) returns (x#0: int);
-  // user-defined preconditions
-  requires {:id "id2"} a#0 < 10;
-  modifies $Heap;
-  // user-defined postconditions
-  free ensures true;
-  ensures {:id "id3"} x#0 == LitInt(32);
-  // frame condition: object granularity
-  free ensures (forall $o: ref :: 
-    { $Heap[$o] } 
-    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
-       ==> $Heap[$o] == old($Heap)[$o]);
-  // boilerplate
-  free ensures $HeapSucc(old($Heap), $Heap);
-
-
-
-procedure {:verboseName "ret32 (correctness)"} Impl$$_module.__default.ret32(a#0: int) returns (defass#x#0: bool, x#0: int, $_reverifyPost: bool);
-  free requires 0 == $FunctionContextHeight;
-  // user-defined preconditions
-  requires {:id "id4"} a#0 < 10;
-  modifies $Heap;
-  // user-defined postconditions
-  free ensures true;
-  ensures {:id "id5"} x#0 == LitInt(32);
-  // frame condition: object granularity
-  free ensures (forall $o: ref :: 
-    { $Heap[$o] } 
-    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
-       ==> $Heap[$o] == old($Heap)[$o]);
-  // boilerplate
-  free ensures $HeapSucc(old($Heap), $Heap);
-
-
-
-implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "ret32 (correctness)"} Impl$$_module.__default.ret32(a#0: int) returns (defass#x#0: bool, x#0: int, $_reverifyPost: bool)
-{
-  var $_ModifiesFrame: [ref,Field]bool;
-
-    // AddMethodImpl: ret32, Impl$$_module.__default.ret32
-    $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
-      $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
-    assume {:captureState "_main_method_that_calls.dfy(4,0): initial state"} true;
-    $_reverifyPost := false;
-    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_main_method_that_calls.dfy(5,7)
-    assume true;
-    assume true;
-    x#0 := LitInt(32);
-    defass#x#0 := true;
-    assume {:captureState "_main_method_that_calls.dfy(5,11)"} true;
-    assert {:id "id7"} defass#x#0;
-}
-
-
-
-procedure {:verboseName "Main (well-formedness)"} CheckWellFormed$$_module.__default.Main();
+procedure {:verboseName "Abs (well-formedness)"} CheckWellFormed$$_module.__default.Abs(x#0: int) returns (y#0: int);
   free requires 1 == $FunctionContextHeight;
   modifies $Heap;
 
 
 
-procedure {:verboseName "Main (call)"} Call$$_module.__default.Main();
+procedure {:verboseName "Abs (call)"} Call$$_module.__default.Abs(x#0: int) returns (y#0: int);
   modifies $Heap;
+  // user-defined postconditions
+  free ensures true;
+  ensures {:id "id6"} x#0 >= LitInt(0) ==> x#0 == y#0;
+  free ensures true;
+  ensures {:id "id7"} x#0 < 0 ==> x#0 + y#0 == LitInt(0);
   // frame condition: object granularity
   free ensures (forall $o: ref :: 
     { $Heap[$o] } 
@@ -2956,9 +2900,14 @@ procedure {:verboseName "Main (call)"} Call$$_module.__default.Main();
 
 
 
-procedure {:verboseName "Main (correctness)"} Impl$$_module.__default.Main() returns ($_reverifyPost: bool);
+procedure {:verboseName "Abs (correctness)"} Impl$$_module.__default.Abs(x#0: int) returns (defass#y#0: bool, y#0: int, $_reverifyPost: bool);
   free requires 1 == $FunctionContextHeight;
   modifies $Heap;
+  // user-defined postconditions
+  free ensures true;
+  ensures {:id "id8"} x#0 >= LitInt(0) ==> x#0 == y#0;
+  free ensures true;
+  ensures {:id "id9"} x#0 < 0 ==> x#0 + y#0 == LitInt(0);
   // frame condition: object granularity
   free ensures (forall $o: ref :: 
     { $Heap[$o] } 
@@ -2969,33 +2918,113 @@ procedure {:verboseName "Main (correctness)"} Impl$$_module.__default.Main() ret
 
 
 
-implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "Main (correctness)"} Impl$$_module.__default.Main() returns ($_reverifyPost: bool)
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "Abs (correctness)"} Impl$$_module.__default.Abs(x#0: int) returns (defass#y#0: bool, y#0: int, $_reverifyPost: bool)
 {
   var $_ModifiesFrame: [ref,Field]bool;
-  var n#0: int;
-  var $rhs##0: int;
-  var a##0: int;
+  var ##a#2_0: int;
 
-    // AddMethodImpl: Main, Impl$$_module.__default.Main
+    // AddMethodImpl: Abs, Impl$$_module.__default.Abs
     $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
       $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
-    assume {:captureState "_main_method_that_calls.dfy(9,14): initial state"} true;
+    assume {:captureState "_USECASE_find_irrelevant_lines_for_proof.dfy(4,0): initial state"} true;
     $_reverifyPost := false;
-    // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_main_method_that_calls.dfy(10,11)
+    // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_USECASE_find_irrelevant_lines_for_proof.dfy(5,3)
     assume true;
-    // TrCallStmt: Adding lhs with type int
-    // TrCallStmt: Before ProcessCallStmt
+    if (x#0 == LitInt(0))
+    {
+        push;
+        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_USECASE_find_irrelevant_lines_for_proof.dfy(6,7)
+        assume true;
+        assume true;
+        y#0 := LitInt(0);
+        defass#y#0 := true;
+        assume {:captureState "_USECASE_find_irrelevant_lines_for_proof.dfy(6,10)"} true;
+        pop;
+    }
+    else
+    {
+    }
+
+    // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_USECASE_find_irrelevant_lines_for_proof.dfy(9,3)
     assume true;
-    // ProcessCallStmt: CheckSubrange
-    a##0 := LitInt(5);
-    call {:id "id8"} $rhs##0 := Call$$_module.__default.ret32(a##0);
-    // TrCallStmt: After ProcessCallStmt
-    n#0 := $rhs##0;
-    assume {:captureState "_main_method_that_calls.dfy(10,18)"} true;
-    // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_main_method_that_calls.dfy(11,5)
-    assume true;
-    assert {:id "id10"} n#0 == LitInt(32);
+    if (x#0 < 0)
+    {
+        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_USECASE_find_irrelevant_lines_for_proof.dfy(10,7)
+        assume true;
+        assume true;
+        y#0 := 0 - x#0;
+        defass#y#0 := true;
+        assume {:captureState "_USECASE_find_irrelevant_lines_for_proof.dfy(10,11)"} true;
+    }
+    else
+    {
+        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_USECASE_find_irrelevant_lines_for_proof.dfy(12,7)
+        assume true;
+        ##a#2_0 := x#0;
+        // assume allocatedness for argument to function
+        assume $IsAlloc(##a#2_0, TInt, $Heap);
+        assume _module.__default.Id#canCall(TInt, $Box(x#0));
+        assume _module.__default.Id#canCall(TInt, $Box(x#0));
+        y#0 := $Unbox(_module.__default.Id(TInt, $Box(x#0))): int;
+        defass#y#0 := true;
+        assume {:captureState "_USECASE_find_irrelevant_lines_for_proof.dfy(12,14)"} true;
+    }
+
+    assert {:id "id13"} defass#y#0;
 }
+
+
+
+// function declaration for _module._default.Id
+function _module.__default.Id(_module._default.Id$T: Ty, a#0: Box) : Box
+uses {
+// consequence axiom for _module.__default.Id
+axiom 0 <= $FunctionContextHeight
+   ==> (forall _module._default.Id$T: Ty, a#0: Box :: 
+    { _module.__default.Id(_module._default.Id$T, a#0) } 
+    _module.__default.Id#canCall(_module._default.Id$T, a#0)
+         || (0 < $FunctionContextHeight && $IsBox(a#0, _module._default.Id$T))
+       ==> $IsBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T));
+// alloc consequence axiom for _module.__default.Id
+axiom 0 <= $FunctionContextHeight
+   ==> (forall $Heap: Heap, _module._default.Id$T: Ty, a#0: Box :: 
+    { $IsAllocBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T, $Heap) } 
+    (_module.__default.Id#canCall(_module._default.Id$T, a#0)
+           || (0 < $FunctionContextHeight
+             && 
+            $IsBox(a#0, _module._default.Id$T)
+             && $IsAllocBox(a#0, _module._default.Id$T, $Heap)))
+         && $IsGoodHeap($Heap)
+       ==> $IsAllocBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T, $Heap));
+// definition axiom for _module.__default.Id (revealed)
+axiom {:id "id14"} 0 <= $FunctionContextHeight
+   ==> (forall _module._default.Id$T: Ty, a#0: Box :: 
+    { _module.__default.Id(_module._default.Id$T, a#0) } 
+    _module.__default.Id#canCall(_module._default.Id$T, a#0)
+         || (0 < $FunctionContextHeight && $IsBox(a#0, _module._default.Id$T))
+       ==> _module.__default.Id(_module._default.Id$T, a#0) == a#0);
+// definition axiom for _module.__default.Id for all literals (revealed)
+axiom {:id "id15"} 0 <= $FunctionContextHeight
+   ==> (forall _module._default.Id$T: Ty, a#0: Box :: 
+    {:weight 3} { _module.__default.Id(_module._default.Id$T, Lit(a#0)) } 
+    _module.__default.Id#canCall(_module._default.Id$T, Lit(a#0))
+         || (0 < $FunctionContextHeight && $IsBox(a#0, _module._default.Id$T))
+       ==> _module.__default.Id(_module._default.Id$T, Lit(a#0)) == Lit(a#0));
+}
+
+function _module.__default.Id#canCall(_module._default.Id$T: Ty, a#0: Box) : bool;
+
+function _module.__default.Id#requires(Ty, Box) : bool;
+
+// #requires axiom for _module.__default.Id
+axiom (forall _module._default.Id$T: Ty, a#0: Box :: 
+  { _module.__default.Id#requires(_module._default.Id$T, a#0) } 
+  $IsBox(a#0, _module._default.Id$T)
+     ==> _module.__default.Id#requires(_module._default.Id$T, a#0) == true);
+
+procedure {:verboseName "Id (well-formedness)"} CheckWellformed$$_module.__default.Id(_module._default.Id$T: Ty, a#0: Box where $IsBox(a#0, _module._default.Id$T));
+  free requires 0 == $FunctionContextHeight;
+  modifies $Heap;
 
 
 

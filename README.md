@@ -35,11 +35,36 @@ Specification Lines:
   - Uncovered: precondition not necessary to prove postcondiiton and not being used
 
 # Bugs 
+Complete Full List of Bugs
 Found bugs on Coverage can me find in the iles started with _ that are not _USECASE.
 This will need to be adressed. Bug on assign, bug on calling functions/methods, lurking axioms with forall etc.
 
 # Platform Tool objective 
+For now: 
+Generate HTLM (improvements in regards of current feature with):
+FEATURES:
+- Uncovered itens underlines at light blue (to be easy introduced in Vscode extension)
+- Covered Complete itens left bar Dark blue tick (same to pass well to Vscode)
+- Covered Test itens left bar median blue tick
 
+- When clicking any elemnt (on the right full dependency tracker of that elemnt is shown, what elemnts is used to prove)
+  and what is proving (proof graph basically)
+  Related parts get highlighted
+
+FEATURES SECOND PHASE
+- If covered test was signalized as necessary (imagine main assertions, functions without postconditions)
+  need on line {cov-test-to-complete: "Add comment justificaiton"} to signalize that assertion as complete with optional justification
+- If uncovered and need to ignore add after line {cov-uncovered-to-complete: "Add comment justificaiton"} 
+
+# Evaluation 
+- For now I do have the samll dataset (after having MVP need to expand)
+
+# Options 
+This flag is not passed to z3:
+(set-option :smt.core.minimize true)
+maybe it could be passed need to test
+s.set("sat.core.minimize","true")  # For Bit-vector theories
+s.set("smt.core.minimize","true")  # For general SMT 
 
 # Well formness 
 Most well forness checks dont use most things, but they are not criticial I believe. However need to unserstand
