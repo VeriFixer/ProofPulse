@@ -16,7 +16,7 @@ method Abs(x: int) returns (y: int)
 //:: Expected: All Covered
 
 //:: Outcome:
-// Dafny program verifier finished with 1 verified, 0 errors
+//::: Dafny program verifier finished with 1 verified, 0 errors
 // Results for Abs (correctness)
 //   Overall outcome: Correct
 //   Overall time: 00:00:00.1219035
@@ -39,4 +39,4 @@ method Abs(x: int) returns (y: int)
 //       abs_corrected.dfy(12,5)-(12,15): assignment (or return)
 //       abs_corrected.dfy(14,1)-(14,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
 //     Unused by proof:
-
+//:::

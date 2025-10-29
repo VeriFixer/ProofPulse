@@ -24,16 +24,7 @@ lemma sum_plus(s: seq<int>, i: nat)
         assert sum(s, 1) == s[0] + sum(s[1..], 0);
         assert sum(s, 0) + s[0] == sum(s, 1);
     } else {
-        // i > 0, so we can unfold sum at i and i+1
-        assert sum(s, i) == s[0] + sum(s[1..], i - 1);
-        assert sum(s, i + 1) == s[0] + sum(s[1..], i);
-        // apply induction to the tail s[1..] with index i-1
         sum_plus(s[1..], i - 1);
-        // relate indices: (s[1..])[i-1] is s[i]
-        assert (s[1..])[i - 1] == s[i];
-        // from recursive lemma: sum(s[1..], i-1) + (s[1..])[i-1] == sum(s[1..], i)
-        // substitute (s[1..])[i-1] == s[i] to get:
-        assert sum(s[1..], i - 1) + s[i] == sum(s[1..], i);
     }
 }
 
@@ -47,7 +38,9 @@ method BelowZero(ops: seq<int>) returns (result: bool)
         invariant forall n: nat :: n <= i ==> sum(ops, n) >= 0
     {
         t := t + ops[i];
-        // Ou esta
+        //::: Outcome this line is not covered but should
+        // No bogey a call ao sum_plus nao parece estar a ser coberto mas ainda nao percebi porque de todo
+        // Mas vamos para outro
         //assert {:id "id88"} $Is(i#0, Tclass._System.nat());
         //i##0_0 := i#0;
         //call {:id "id89"} Call$$_module.__default.sum__plus(s##0_0, i##0_0);
@@ -59,6 +52,7 @@ method BelowZero(ops: seq<int>) returns (result: bool)
         //call {:id "id58"} Call$$_module.__default.sum__plus(s##1_0, i##1_0);
         // TrCallStmt: After ProcessCallStmt
         sum_plus(ops, i);  //BelowZero.dfy(50,9)-(50,25): call (unused but obviouly needed!)
+        //:::
         if t < 0 {
             result := true;
             return;

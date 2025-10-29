@@ -4,6 +4,47 @@ E gera os coverage reports
 dafny verify Clover_abs.dfy --verification-coverage-report cov --log-format text --solver-option LOG_FILE=output.smt2 --bprint output.bpl 
 z3 Clover_abs.dfy 
 // Corre o z3
+# Running with isolate assertions
+dafny verify _USECASE_irrelevant_postconditions.dfy  --verification-coverage-report cov --log-format text --solver-option LOG_FILE=output.smt2 --bprint output.bpl   --isolate-assertions
+
+# Classification for complete coverage 
+Code Lines:
+- Covered Complete: if used to proof assertions that are postcondiitons (in proof dependency of them)
+- Covered Warning: if used to proof assertions that are not related with postconditions
+  - This in term represents a bad use case of using formal tools, and if a line was not being covered add an 
+  assertion only for that line that is not related to the actual function... (this should be a warning)
+  It is expected that for intance Main method only has warning of this kind
+- Uncovered: Line not use in any assertion/postcondiiton proof 
+
+Specification Lines:
+- plain Asserts
+  - Covered Complete: if used to proof assertion that are postcondtition
+  - Covered Warning: If used to proof other assertion or itself that need to utilize at least one actual line of code
+  - Uncovered: If used to proof only assertion or itself that do not uses any code lines (likely unecessary specification)
+- postconditions
+  - Covered Complete: If for proving the postcondition code lines of the method are used, and the postcondition is used to proof something when that method/function is called. Appears on proof depedencies like so: 
+    _main_method_that_calls.dfy(9,8)-(9,18): ensures clause at _main_method_that_calls.dfy(2,13)-(2,16) from call
+  - Covered Warning: If for proving the postcondition code lines of the method are used but it is not being used for anything the postcondiiton.
+  - Uncovered: No code lines used to prove it
+  if the postcondition is used to proof something when that method/function is called. Appears on proof depedencies like so: 
+    _main_method_that_calls.dfy(9,8)-(9,18): ensures clause at _main_method_that_calls.dfy(2,13)-(2,16) from call
+- preconditions
+  - Covered Complete: If precondition is strictly necessary used in proving its own postcondiiton
+  - Covered Warning: If precondiiton is used to prove that a call can be made with that fucntion/method appears like so (this appears always like a warning it can indicate that restriction could be maybe removed) :
+   _main_method_that_calls.dfy(10,8)-(10,19): requires clause at _main_method_that_calls.dfy(3,14)-(3,17) from call
+  - Uncovered: precondition not necessary to prove postcondiiton and not being used
+
+# Bugs 
+Found bugs on Coverage can me find in the iles started with _ that are not _USECASE.
+This will need to be adressed. Bug on assign, bug on calling functions/methods, lurking axioms with forall etc.
+
+# Platform Tool objective 
+
+
+# Well formness 
+Most well forness checks dont use most things, but they are not criticial I believe. However need to unserstand
+Exactly what are well formed checks
+
 
 # Papers to read
 A Polymorphic Intermediate Verification Language: Design and Logical Encoding 

@@ -39,4 +39,9 @@ method Abs(x: int) returns (y: int)
 //       abs.dfy(10,1)-(10,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
 //     Unused by proof:
 //       abs.dfy(8,5)-(8,11): assignment (or return)
-//:::
+//
+
+// Can be corrected with (wrapping right hand side)
+//function id(x:int) : int {
+//  x
+//}

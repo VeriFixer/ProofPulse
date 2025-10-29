@@ -23,7 +23,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
   // assume $IsHeapAnchor($Heap);
   // c#0 := $nw;  (this assigment is not being tranlated as an assume)
   //              (and it is not captured, same problem I figured it out but more internal)
-  //              (Unfortunatlye it seems that this has to be lolver really on boogie
+  //              (Unfortunatlye it seems that this has to be handle really on boogie no id call to save us
   // defass#c#0 := true;
   // assume {:captureState "array_append.dfy(10,26)"} true;
 
@@ -45,9 +45,9 @@ method append(a:array<int>, b:int) returns (c:array<int>)
   c[a.Length]:=id(b);
 }
 
-//:: Expected: All Covered
+//::: Expected: All Covered
 
-//:: Outcome
+// Outcome
 // Dafny program verifier finished with 2 verified, 0 errors
 
 // Results for append (well-formedness)
@@ -159,7 +159,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //       Clover_array_append.dfy(13,5)-(13,7): target object is never null
 //       Clover_array_append.dfy(14,1)-(14,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
 //     Unused by proof:
-//       Clover_array_append.dfy(4,3)-(4,27): assignment (or return) // Cannot find this is boogey
+//       Clover_array_append.dfy(4,3)-(4,27): assignment (or return) // Explanation of this given on top I beleice
 //       Clover_array_append.dfy(8,15)-(8,49): loop invariant // Identifed something with lurking possiblt
 //       Clover_array_append.dfy(13,3)-(13,17): assignment (or return) // Soved with id() call
 
@@ -170,4 +170,5 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //              LitInt(0) <= ii#1 && ii#1 < i#0
 //                 ==> $Unbox(read($Heap, c#0, IndexField(ii#1))): int
 //                   == $Unbox(read($Heap, a#0, IndexField(ii#1))): int);
-// Fixy this are lurking axioms for sure
+// Fix this are lurking axioms for sure
+//:::

@@ -23,11 +23,6 @@ uses {
 axiom Tag(TInt) == TagInt;
 }
 
-const unique TField: Ty
-uses {
-axiom Tag(TField) == TagField;
-}
-
 const unique TReal: Ty
 uses {
 axiom Tag(TReal) == TagReal;
@@ -110,8 +105,6 @@ const unique TagChar: TyTag;
 
 const unique TagInt: TyTag;
 
-const unique TagField: TyTag;
-
 const unique TagReal: TyTag;
 
 const unique TagORDINAL: TyTag;
@@ -190,24 +183,6 @@ type ref;
 
 const null: ref;
 
-const locals: ref;
-
-type FieldFamily;
-
-const unique object_field: FieldFamily;
-
-revealed function field_depth(f: Field) : int;
-
-revealed function field_family(f: Field) : FieldFamily;
-
-revealed function local_field(ff: FieldFamily, depth: int) : Field
-uses {
-axiom (forall ff: FieldFamily, depth: int :: 
-  {:trigger local_field(ff, depth)} 
-  field_depth(local_field(ff, depth)) == depth
-     && field_family(local_field(ff, depth)) == ff);
-}
-
 type Box;
 
 const $ArbitraryBoxValue: Box;
@@ -216,7 +191,7 @@ revealed function $Box<T>(T) : Box;
 
 revealed function $Unbox<T>(Box) : T;
 
-axiom (forall<T> x: T :: {:weight 3} { $Box(x) } $Unbox($Box(x)) == x);
+axiom (forall<T> x: T :: { $Box(x) } $Unbox($Box(x)) == x);
 
 axiom (forall<T> x: Box :: { $Unbox(x): T } $Box($Unbox(x): T) == x);
 
@@ -295,8 +270,6 @@ axiom (forall v: real :: { $Is(v, TReal) } $Is(v, TReal));
 axiom (forall v: bool :: { $Is(v, TBool) } $Is(v, TBool));
 
 axiom (forall v: char :: { $Is(v, TChar) } $Is(v, TChar));
-
-axiom (forall v: Field :: { $Is(v, TField) } $Is(v, TField));
 
 axiom (forall v: ORDINAL :: { $Is(v, TORDINAL) } $Is(v, TORDINAL));
 
@@ -606,6 +579,10 @@ axiom (forall o: ORDINAL, m: int, n: int ::
        && (m - n <= 0
          ==> ORD#Plus(ORD#Minus(o, ORD#FromNat(m)), ORD#FromNat(n))
            == ORD#Plus(o, ORD#FromNat(n - m))));
+
+const $ModuleContextHeight: int;
+
+const $FunctionContextHeight: int;
 
 type LayerType;
 
@@ -1398,7 +1375,7 @@ axiom (forall s: Seq, n: int ::
   0 <= n && n <= Seq#Length(s) ==> Seq#Length(Seq#Take(s, n)) == n);
 
 axiom (forall s: Seq, n: int, j: int :: 
-  {:weight 11} { Seq#Index(Seq#Take(s, n), j) } { Seq#Index(s, j), Seq#Take(s, n) } 
+  {:weight 25} { Seq#Index(Seq#Take(s, n), j) } { Seq#Index(s, j), Seq#Take(s, n) } 
   0 <= j && j < n && j < Seq#Length(s)
      ==> Seq#Index(Seq#Take(s, n), j) == Seq#Index(s, j));
 
@@ -1409,12 +1386,12 @@ axiom (forall s: Seq, n: int ::
   0 <= n && n <= Seq#Length(s) ==> Seq#Length(Seq#Drop(s, n)) == Seq#Length(s) - n);
 
 axiom (forall s: Seq, n: int, j: int :: 
-  {:weight 11} { Seq#Index(Seq#Drop(s, n), j) } 
+  {:weight 25} { Seq#Index(Seq#Drop(s, n), j) } 
   0 <= n && 0 <= j && j < Seq#Length(s) - n
      ==> Seq#Index(Seq#Drop(s, n), j) == Seq#Index(s, j + n));
 
 axiom (forall s: Seq, n: int, k: int :: 
-  {:weight 11} { Seq#Index(s, k), Seq#Drop(s, n) } 
+  {:weight 25} { Seq#Index(s, k), Seq#Drop(s, n) } 
   0 <= n && n <= k && k < Seq#Length(s)
      ==> Seq#Index(Seq#Drop(s, n), k - n) == Seq#Index(s, k));
 
@@ -1958,6 +1935,7 @@ axiom (forall c#0: ref ::
 // $IsAlloc axiom for non-null type _System.object
 axiom (forall c#0: ref, $h: Heap :: 
   { $IsAlloc(c#0, Tclass._System.object(), $h) } 
+    { $IsAlloc(c#0, Tclass._System.object?(), $h) } 
   $IsAlloc(c#0, Tclass._System.object(), $h)
      <==> $IsAlloc(c#0, Tclass._System.object?(), $h));
 
@@ -2076,6 +2054,7 @@ axiom (forall _System.array$arg: Ty, c#0: ref ::
 // $IsAlloc axiom for non-null type _System.array
 axiom (forall _System.array$arg: Ty, c#0: ref, $h: Heap :: 
   { $IsAlloc(c#0, Tclass._System.array(_System.array$arg), $h) } 
+    { $IsAlloc(c#0, Tclass._System.array?(_System.array$arg), $h) } 
   $IsAlloc(c#0, Tclass._System.array(_System.array$arg), $h)
      <==> $IsAlloc(c#0, Tclass._System.array?(_System.array$arg), $h));
 
@@ -2388,25 +2367,13 @@ axiom (forall #$T0: Ty, #$R: Ty, bx: Box ::
      ==> $Box($Unbox(bx): HandleType) == bx
        && $Is($Unbox(bx): HandleType, Tclass._System.___hTotalFunc1(#$T0, #$R)));
 
-// $Is axioms for subset type _System._#TotalFunc1
+// $Is axiom for subset type _System._#TotalFunc1
 axiom (forall #$T0: Ty, #$R: Ty, f#0: HandleType :: 
   { $Is(f#0, Tclass._System.___hTotalFunc1(#$T0, #$R)) } 
   $Is(f#0, Tclass._System.___hTotalFunc1(#$T0, #$R))
-     ==> $Is(f#0, Tclass._System.___hPartialFunc1(#$T0, #$R))
-       && 
-      (forall x0#0: Box :: 
-        $IsBox(x0#0, #$T0) ==> Requires1#canCall(#$T0, #$R, $OneHeap, f#0, x0#0))
+     <==> $Is(f#0, Tclass._System.___hPartialFunc1(#$T0, #$R))
        && (forall x0#0: Box :: 
         $IsBox(x0#0, #$T0) ==> Requires1(#$T0, #$R, $OneHeap, f#0, x0#0)));
-
-axiom (forall #$T0: Ty, #$R: Ty, f#0: HandleType :: 
-  { $Is(f#0, Tclass._System.___hTotalFunc1(#$T0, #$R)) } 
-  $Is(f#0, Tclass._System.___hPartialFunc1(#$T0, #$R))
-       && ((forall x0#0: Box :: 
-          $IsBox(x0#0, #$T0) ==> Requires1#canCall(#$T0, #$R, $OneHeap, f#0, x0#0))
-         ==> (forall x0#0: Box :: 
-          $IsBox(x0#0, #$T0) ==> Requires1(#$T0, #$R, $OneHeap, f#0, x0#0)))
-     ==> $Is(f#0, Tclass._System.___hTotalFunc1(#$T0, #$R)));
 
 // $IsAlloc axiom for subset type _System._#TotalFunc1
 axiom (forall #$T0: Ty, #$R: Ty, f#0: HandleType, $h: Heap :: 
@@ -2655,20 +2622,11 @@ axiom (forall #$R: Ty, bx: Box ::
      ==> $Box($Unbox(bx): HandleType) == bx
        && $Is($Unbox(bx): HandleType, Tclass._System.___hTotalFunc0(#$R)));
 
-// $Is axioms for subset type _System._#TotalFunc0
+// $Is axiom for subset type _System._#TotalFunc0
 axiom (forall #$R: Ty, f#0: HandleType :: 
   { $Is(f#0, Tclass._System.___hTotalFunc0(#$R)) } 
   $Is(f#0, Tclass._System.___hTotalFunc0(#$R))
-     ==> $Is(f#0, Tclass._System.___hPartialFunc0(#$R))
-       && 
-      Requires0#canCall(#$R, $OneHeap, f#0)
-       && Requires0(#$R, $OneHeap, f#0));
-
-axiom (forall #$R: Ty, f#0: HandleType :: 
-  { $Is(f#0, Tclass._System.___hTotalFunc0(#$R)) } 
-  $Is(f#0, Tclass._System.___hPartialFunc0(#$R))
-       && (Requires0#canCall(#$R, $OneHeap, f#0) ==> Requires0(#$R, $OneHeap, f#0))
-     ==> $Is(f#0, Tclass._System.___hTotalFunc0(#$R)));
+     <==> $Is(f#0, Tclass._System.___hPartialFunc0(#$R)) && Requires0(#$R, $OneHeap, f#0));
 
 // $IsAlloc axiom for subset type _System._#TotalFunc0
 axiom (forall #$R: Ty, f#0: HandleType, $h: Heap :: 
@@ -2793,7 +2751,7 @@ axiom (forall a#4#0#0: Box, a#4#1#0: Box ::
 
 // Inductive rank
 axiom (forall a#5#0#0: Box, a#5#1#0: Box :: 
-  { DtRank(#_System._tuple#2._#Make2(a#5#0#0, a#5#1#0)) } 
+  { #_System._tuple#2._#Make2(a#5#0#0, a#5#1#0) } 
   BoxRank(a#5#0#0) < DtRank(#_System._tuple#2._#Make2(a#5#0#0, a#5#1#0)));
 
 // Constructor injectivity
@@ -2803,7 +2761,7 @@ axiom (forall a#6#0#0: Box, a#6#1#0: Box ::
 
 // Inductive rank
 axiom (forall a#7#0#0: Box, a#7#1#0: Box :: 
-  { DtRank(#_System._tuple#2._#Make2(a#7#0#0, a#7#1#0)) } 
+  { #_System._tuple#2._#Make2(a#7#0#0, a#7#1#0) } 
   BoxRank(a#7#1#0) < DtRank(#_System._tuple#2._#Make2(a#7#0#0, a#7#1#0)));
 
 // Depth-one case-split function
@@ -2917,1156 +2875,126 @@ axiom (forall a: DatatypeType, b: DatatypeType ::
 
 const unique class._System.Tuple0: ClassName;
 
-function Tclass._System.___hFunc2(Ty, Ty, Ty) : Ty;
-
-const unique Tagclass._System.___hFunc2: TyTag;
-
-// Tclass._System.___hFunc2 Tag
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hFunc2(#$T0, #$T1, #$R) } 
-  Tag(Tclass._System.___hFunc2(#$T0, #$T1, #$R)) == Tagclass._System.___hFunc2
-     && TagFamily(Tclass._System.___hFunc2(#$T0, #$T1, #$R)) == tytagFamily$_#Func2);
-
-function Tclass._System.___hFunc2_0(Ty) : Ty;
-
-// Tclass._System.___hFunc2 injectivity 0
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hFunc2(#$T0, #$T1, #$R) } 
-  Tclass._System.___hFunc2_0(Tclass._System.___hFunc2(#$T0, #$T1, #$R)) == #$T0);
-
-function Tclass._System.___hFunc2_1(Ty) : Ty;
-
-// Tclass._System.___hFunc2 injectivity 1
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hFunc2(#$T0, #$T1, #$R) } 
-  Tclass._System.___hFunc2_1(Tclass._System.___hFunc2(#$T0, #$T1, #$R)) == #$T1);
-
-function Tclass._System.___hFunc2_2(Ty) : Ty;
-
-// Tclass._System.___hFunc2 injectivity 2
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hFunc2(#$T0, #$T1, #$R) } 
-  Tclass._System.___hFunc2_2(Tclass._System.___hFunc2(#$T0, #$T1, #$R)) == #$R);
-
-// Box/unbox axiom for Tclass._System.___hFunc2
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty, bx: Box :: 
-  { $IsBox(bx, Tclass._System.___hFunc2(#$T0, #$T1, #$R)) } 
-  $IsBox(bx, Tclass._System.___hFunc2(#$T0, #$T1, #$R))
-     ==> $Box($Unbox(bx): HandleType) == bx
-       && $Is($Unbox(bx): HandleType, Tclass._System.___hFunc2(#$T0, #$T1, #$R)));
-
-function Handle2([Heap,Box,Box]Box, [Heap,Box,Box]bool, [Heap,Box,Box]Set) : HandleType;
-
-function Apply2(Ty, Ty, Ty, Heap, HandleType, Box, Box) : Box;
-
-function Requires2(Ty, Ty, Ty, Heap, HandleType, Box, Box) : bool;
-
-function Reads2(Ty, Ty, Ty, Heap, HandleType, Box, Box) : Set;
-
-axiom (forall t0: Ty, 
-    t1: Ty, 
-    t2: Ty, 
-    heap: Heap, 
-    h: [Heap,Box,Box]Box, 
-    r: [Heap,Box,Box]bool, 
-    rd: [Heap,Box,Box]Set, 
-    bx0: Box, 
-    bx1: Box :: 
-  { Apply2(t0, t1, t2, heap, Handle2(h, r, rd), bx0, bx1) } 
-  Apply2(t0, t1, t2, heap, Handle2(h, r, rd), bx0, bx1) == h[heap, bx0, bx1]);
-
-axiom (forall t0: Ty, 
-    t1: Ty, 
-    t2: Ty, 
-    heap: Heap, 
-    h: [Heap,Box,Box]Box, 
-    r: [Heap,Box,Box]bool, 
-    rd: [Heap,Box,Box]Set, 
-    bx0: Box, 
-    bx1: Box :: 
-  { Requires2(t0, t1, t2, heap, Handle2(h, r, rd), bx0, bx1) } 
-  r[heap, bx0, bx1] ==> Requires2(t0, t1, t2, heap, Handle2(h, r, rd), bx0, bx1));
-
-axiom (forall t0: Ty, 
-    t1: Ty, 
-    t2: Ty, 
-    heap: Heap, 
-    h: [Heap,Box,Box]Box, 
-    r: [Heap,Box,Box]bool, 
-    rd: [Heap,Box,Box]Set, 
-    bx0: Box, 
-    bx1: Box, 
-    bx: Box :: 
-  { Set#IsMember(Reads2(t0, t1, t2, heap, Handle2(h, r, rd), bx0, bx1), bx) } 
-  Set#IsMember(Reads2(t0, t1, t2, heap, Handle2(h, r, rd), bx0, bx1), bx)
-     == Set#IsMember(rd[heap, bx0, bx1], bx));
-
-function {:inline} Requires2#canCall(t0: Ty, t1: Ty, t2: Ty, heap: Heap, f: HandleType, bx0: Box, bx1: Box) : bool
-{
-  true
-}
-
-function {:inline} Reads2#canCall(t0: Ty, t1: Ty, t2: Ty, heap: Heap, f: HandleType, bx0: Box, bx1: Box) : bool
-{
-  true
-}
-
-// frame axiom for Reads2
-axiom (forall t0: Ty, t1: Ty, t2: Ty, h0: Heap, h1: Heap, f: HandleType, bx0: Box, bx1: Box :: 
-  { $HeapSucc(h0, h1), Reads2(t0, t1, t2, h1, f, bx0, bx1) } 
-  $HeapSucc(h0, h1)
-       && 
-      $IsGoodHeap(h0)
-       && $IsGoodHeap(h1)
-       && 
-      $IsBox(bx0, t0)
-       && $IsBox(bx1, t1)
-       && $Is(f, Tclass._System.___hFunc2(t0, t1, t2))
-       && (forall o: ref, fld: Field :: 
-        o != null && Set#IsMember(Reads2(t0, t1, t2, h0, f, bx0, bx1), $Box(o))
-           ==> read(h0, o, fld) == read(h1, o, fld))
-     ==> Reads2(t0, t1, t2, h0, f, bx0, bx1) == Reads2(t0, t1, t2, h1, f, bx0, bx1));
-
-// frame axiom for Reads2
-axiom (forall t0: Ty, t1: Ty, t2: Ty, h0: Heap, h1: Heap, f: HandleType, bx0: Box, bx1: Box :: 
-  { $HeapSucc(h0, h1), Reads2(t0, t1, t2, h1, f, bx0, bx1) } 
-  $HeapSucc(h0, h1)
-       && 
-      $IsGoodHeap(h0)
-       && $IsGoodHeap(h1)
-       && 
-      $IsBox(bx0, t0)
-       && $IsBox(bx1, t1)
-       && $Is(f, Tclass._System.___hFunc2(t0, t1, t2))
-       && (forall o: ref, fld: Field :: 
-        o != null && Set#IsMember(Reads2(t0, t1, t2, h1, f, bx0, bx1), $Box(o))
-           ==> read(h0, o, fld) == read(h1, o, fld))
-     ==> Reads2(t0, t1, t2, h0, f, bx0, bx1) == Reads2(t0, t1, t2, h1, f, bx0, bx1));
-
-// frame axiom for Requires2
-axiom (forall t0: Ty, t1: Ty, t2: Ty, h0: Heap, h1: Heap, f: HandleType, bx0: Box, bx1: Box :: 
-  { $HeapSucc(h0, h1), Requires2(t0, t1, t2, h1, f, bx0, bx1) } 
-  $HeapSucc(h0, h1)
-       && 
-      $IsGoodHeap(h0)
-       && $IsGoodHeap(h1)
-       && 
-      $IsBox(bx0, t0)
-       && $IsBox(bx1, t1)
-       && $Is(f, Tclass._System.___hFunc2(t0, t1, t2))
-       && (forall o: ref, fld: Field :: 
-        o != null && Set#IsMember(Reads2(t0, t1, t2, h0, f, bx0, bx1), $Box(o))
-           ==> read(h0, o, fld) == read(h1, o, fld))
-     ==> Requires2(t0, t1, t2, h0, f, bx0, bx1) == Requires2(t0, t1, t2, h1, f, bx0, bx1));
-
-// frame axiom for Requires2
-axiom (forall t0: Ty, t1: Ty, t2: Ty, h0: Heap, h1: Heap, f: HandleType, bx0: Box, bx1: Box :: 
-  { $HeapSucc(h0, h1), Requires2(t0, t1, t2, h1, f, bx0, bx1) } 
-  $HeapSucc(h0, h1)
-       && 
-      $IsGoodHeap(h0)
-       && $IsGoodHeap(h1)
-       && 
-      $IsBox(bx0, t0)
-       && $IsBox(bx1, t1)
-       && $Is(f, Tclass._System.___hFunc2(t0, t1, t2))
-       && (forall o: ref, fld: Field :: 
-        o != null && Set#IsMember(Reads2(t0, t1, t2, h1, f, bx0, bx1), $Box(o))
-           ==> read(h0, o, fld) == read(h1, o, fld))
-     ==> Requires2(t0, t1, t2, h0, f, bx0, bx1) == Requires2(t0, t1, t2, h1, f, bx0, bx1));
-
-// frame axiom for Apply2
-axiom (forall t0: Ty, t1: Ty, t2: Ty, h0: Heap, h1: Heap, f: HandleType, bx0: Box, bx1: Box :: 
-  { $HeapSucc(h0, h1), Apply2(t0, t1, t2, h1, f, bx0, bx1) } 
-  $HeapSucc(h0, h1)
-       && 
-      $IsGoodHeap(h0)
-       && $IsGoodHeap(h1)
-       && 
-      $IsBox(bx0, t0)
-       && $IsBox(bx1, t1)
-       && $Is(f, Tclass._System.___hFunc2(t0, t1, t2))
-       && (forall o: ref, fld: Field :: 
-        o != null && Set#IsMember(Reads2(t0, t1, t2, h0, f, bx0, bx1), $Box(o))
-           ==> read(h0, o, fld) == read(h1, o, fld))
-     ==> Apply2(t0, t1, t2, h0, f, bx0, bx1) == Apply2(t0, t1, t2, h1, f, bx0, bx1));
-
-// frame axiom for Apply2
-axiom (forall t0: Ty, t1: Ty, t2: Ty, h0: Heap, h1: Heap, f: HandleType, bx0: Box, bx1: Box :: 
-  { $HeapSucc(h0, h1), Apply2(t0, t1, t2, h1, f, bx0, bx1) } 
-  $HeapSucc(h0, h1)
-       && 
-      $IsGoodHeap(h0)
-       && $IsGoodHeap(h1)
-       && 
-      $IsBox(bx0, t0)
-       && $IsBox(bx1, t1)
-       && $Is(f, Tclass._System.___hFunc2(t0, t1, t2))
-       && (forall o: ref, fld: Field :: 
-        o != null && Set#IsMember(Reads2(t0, t1, t2, h1, f, bx0, bx1), $Box(o))
-           ==> read(h0, o, fld) == read(h1, o, fld))
-     ==> Apply2(t0, t1, t2, h0, f, bx0, bx1) == Apply2(t0, t1, t2, h1, f, bx0, bx1));
-
-// empty-reads property for Reads2 
-axiom (forall t0: Ty, t1: Ty, t2: Ty, heap: Heap, f: HandleType, bx0: Box, bx1: Box :: 
-  { Reads2(t0, t1, t2, $OneHeap, f, bx0, bx1), $IsGoodHeap(heap) } 
-    { Reads2(t0, t1, t2, heap, f, bx0, bx1) } 
-  $IsGoodHeap(heap)
-       && 
-      $IsBox(bx0, t0)
-       && $IsBox(bx1, t1)
-       && $Is(f, Tclass._System.___hFunc2(t0, t1, t2))
-     ==> (Set#Equal(Reads2(t0, t1, t2, $OneHeap, f, bx0, bx1), Set#Empty(): Set)
-       <==> Set#Equal(Reads2(t0, t1, t2, heap, f, bx0, bx1), Set#Empty(): Set)));
-
-// empty-reads property for Requires2
-axiom (forall t0: Ty, t1: Ty, t2: Ty, heap: Heap, f: HandleType, bx0: Box, bx1: Box :: 
-  { Requires2(t0, t1, t2, $OneHeap, f, bx0, bx1), $IsGoodHeap(heap) } 
-    { Requires2(t0, t1, t2, heap, f, bx0, bx1) } 
-  $IsGoodHeap(heap)
-       && 
-      $IsBox(bx0, t0)
-       && $IsBox(bx1, t1)
-       && $Is(f, Tclass._System.___hFunc2(t0, t1, t2))
-       && Set#Equal(Reads2(t0, t1, t2, $OneHeap, f, bx0, bx1), Set#Empty(): Set)
-     ==> Requires2(t0, t1, t2, $OneHeap, f, bx0, bx1)
-       == Requires2(t0, t1, t2, heap, f, bx0, bx1));
-
-axiom (forall f: HandleType, t0: Ty, t1: Ty, t2: Ty :: 
-  { $Is(f, Tclass._System.___hFunc2(t0, t1, t2)) } 
-  $Is(f, Tclass._System.___hFunc2(t0, t1, t2))
-     <==> (forall h: Heap, bx0: Box, bx1: Box :: 
-      { Apply2(t0, t1, t2, h, f, bx0, bx1) } 
-      $IsGoodHeap(h)
-           && 
-          $IsBox(bx0, t0)
-           && $IsBox(bx1, t1)
-           && Requires2(t0, t1, t2, h, f, bx0, bx1)
-         ==> $IsBox(Apply2(t0, t1, t2, h, f, bx0, bx1), t2)));
-
-axiom (forall f: HandleType, t0: Ty, t1: Ty, t2: Ty, u0: Ty, u1: Ty, u2: Ty :: 
-  { $Is(f, Tclass._System.___hFunc2(t0, t1, t2)), $Is(f, Tclass._System.___hFunc2(u0, u1, u2)) } 
-  $Is(f, Tclass._System.___hFunc2(t0, t1, t2))
-       && (forall bx: Box :: 
-        { $IsBox(bx, u0) } { $IsBox(bx, t0) } 
-        $IsBox(bx, u0) ==> $IsBox(bx, t0))
-       && (forall bx: Box :: 
-        { $IsBox(bx, u1) } { $IsBox(bx, t1) } 
-        $IsBox(bx, u1) ==> $IsBox(bx, t1))
-       && (forall bx: Box :: 
-        { $IsBox(bx, t2) } { $IsBox(bx, u2) } 
-        $IsBox(bx, t2) ==> $IsBox(bx, u2))
-     ==> $Is(f, Tclass._System.___hFunc2(u0, u1, u2)));
-
-axiom (forall f: HandleType, t0: Ty, t1: Ty, t2: Ty, h: Heap :: 
-  { $IsAlloc(f, Tclass._System.___hFunc2(t0, t1, t2), h) } 
-  $IsGoodHeap(h)
-     ==> ($IsAlloc(f, Tclass._System.___hFunc2(t0, t1, t2), h)
-       <==> (forall bx0: Box, bx1: Box :: 
-        { Apply2(t0, t1, t2, h, f, bx0, bx1) } { Reads2(t0, t1, t2, h, f, bx0, bx1) } 
-        $IsBox(bx0, t0)
-             && $IsAllocBox(bx0, t0, h)
-             && 
-            $IsBox(bx1, t1)
-             && $IsAllocBox(bx1, t1, h)
-             && Requires2(t0, t1, t2, h, f, bx0, bx1)
-           ==> (forall r: ref :: 
-            { Set#IsMember(Reads2(t0, t1, t2, h, f, bx0, bx1), $Box(r)) } 
-            r != null && Set#IsMember(Reads2(t0, t1, t2, h, f, bx0, bx1), $Box(r))
-               ==> $Unbox(read(h, r, alloc)): bool))));
-
-axiom (forall f: HandleType, t0: Ty, t1: Ty, t2: Ty, h: Heap :: 
-  { $IsAlloc(f, Tclass._System.___hFunc2(t0, t1, t2), h) } 
-  $IsGoodHeap(h) && $IsAlloc(f, Tclass._System.___hFunc2(t0, t1, t2), h)
-     ==> (forall bx0: Box, bx1: Box :: 
-      { Apply2(t0, t1, t2, h, f, bx0, bx1) } 
-      $IsAllocBox(bx0, t0, h)
-           && $IsAllocBox(bx1, t1, h)
-           && Requires2(t0, t1, t2, h, f, bx0, bx1)
-         ==> $IsAllocBox(Apply2(t0, t1, t2, h, f, bx0, bx1), t2, h)));
-
-function Tclass._System.___hPartialFunc2(Ty, Ty, Ty) : Ty;
-
-const unique Tagclass._System.___hPartialFunc2: TyTag;
-
-// Tclass._System.___hPartialFunc2 Tag
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R) } 
-  Tag(Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R))
-       == Tagclass._System.___hPartialFunc2
-     && TagFamily(Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R))
-       == tytagFamily$_#PartialFunc2);
-
-function Tclass._System.___hPartialFunc2_0(Ty) : Ty;
-
-// Tclass._System.___hPartialFunc2 injectivity 0
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R) } 
-  Tclass._System.___hPartialFunc2_0(Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R))
-     == #$T0);
-
-function Tclass._System.___hPartialFunc2_1(Ty) : Ty;
-
-// Tclass._System.___hPartialFunc2 injectivity 1
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R) } 
-  Tclass._System.___hPartialFunc2_1(Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R))
-     == #$T1);
-
-function Tclass._System.___hPartialFunc2_2(Ty) : Ty;
-
-// Tclass._System.___hPartialFunc2 injectivity 2
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R) } 
-  Tclass._System.___hPartialFunc2_2(Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R))
-     == #$R);
-
-// Box/unbox axiom for Tclass._System.___hPartialFunc2
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty, bx: Box :: 
-  { $IsBox(bx, Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R)) } 
-  $IsBox(bx, Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R))
-     ==> $Box($Unbox(bx): HandleType) == bx
-       && $Is($Unbox(bx): HandleType, Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R)));
-
-// $Is axiom for subset type _System._#PartialFunc2
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty, f#0: HandleType :: 
-  { $Is(f#0, Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R)) } 
-  $Is(f#0, Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R))
-     <==> $Is(f#0, Tclass._System.___hFunc2(#$T0, #$T1, #$R))
-       && (forall x0#0: Box, x1#0: Box :: 
-        $IsBox(x0#0, #$T0) && $IsBox(x1#0, #$T1)
-           ==> Set#Equal(Reads2(#$T0, #$T1, #$R, $OneHeap, f#0, x0#0, x1#0), Set#Empty(): Set)));
-
-// $IsAlloc axiom for subset type _System._#PartialFunc2
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty, f#0: HandleType, $h: Heap :: 
-  { $IsAlloc(f#0, Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R), $h) } 
-  $IsAlloc(f#0, Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R), $h)
-     <==> $IsAlloc(f#0, Tclass._System.___hFunc2(#$T0, #$T1, #$R), $h));
-
-function Tclass._System.___hTotalFunc2(Ty, Ty, Ty) : Ty;
-
-const unique Tagclass._System.___hTotalFunc2: TyTag;
-
-// Tclass._System.___hTotalFunc2 Tag
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R) } 
-  Tag(Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R))
-       == Tagclass._System.___hTotalFunc2
-     && TagFamily(Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R))
-       == tytagFamily$_#TotalFunc2);
-
-function Tclass._System.___hTotalFunc2_0(Ty) : Ty;
-
-// Tclass._System.___hTotalFunc2 injectivity 0
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R) } 
-  Tclass._System.___hTotalFunc2_0(Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R))
-     == #$T0);
-
-function Tclass._System.___hTotalFunc2_1(Ty) : Ty;
-
-// Tclass._System.___hTotalFunc2 injectivity 1
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R) } 
-  Tclass._System.___hTotalFunc2_1(Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R))
-     == #$T1);
-
-function Tclass._System.___hTotalFunc2_2(Ty) : Ty;
-
-// Tclass._System.___hTotalFunc2 injectivity 2
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty :: 
-  { Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R) } 
-  Tclass._System.___hTotalFunc2_2(Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R))
-     == #$R);
-
-// Box/unbox axiom for Tclass._System.___hTotalFunc2
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty, bx: Box :: 
-  { $IsBox(bx, Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R)) } 
-  $IsBox(bx, Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R))
-     ==> $Box($Unbox(bx): HandleType) == bx
-       && $Is($Unbox(bx): HandleType, Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R)));
-
-// $Is axioms for subset type _System._#TotalFunc2
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty, f#0: HandleType :: 
-  { $Is(f#0, Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R)) } 
-  $Is(f#0, Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R))
-     ==> $Is(f#0, Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R))
-       && 
-      (forall x0#0: Box, x1#0: Box :: 
-        $IsBox(x0#0, #$T0) && $IsBox(x1#0, #$T1)
-           ==> Requires2#canCall(#$T0, #$T1, #$R, $OneHeap, f#0, x0#0, x1#0))
-       && (forall x0#0: Box, x1#0: Box :: 
-        $IsBox(x0#0, #$T0) && $IsBox(x1#0, #$T1)
-           ==> Requires2(#$T0, #$T1, #$R, $OneHeap, f#0, x0#0, x1#0)));
-
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty, f#0: HandleType :: 
-  { $Is(f#0, Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R)) } 
-  $Is(f#0, Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R))
-       && ((forall x0#0: Box, x1#0: Box :: 
-          $IsBox(x0#0, #$T0) && $IsBox(x1#0, #$T1)
-             ==> Requires2#canCall(#$T0, #$T1, #$R, $OneHeap, f#0, x0#0, x1#0))
-         ==> (forall x0#0: Box, x1#0: Box :: 
-          $IsBox(x0#0, #$T0) && $IsBox(x1#0, #$T1)
-             ==> Requires2(#$T0, #$T1, #$R, $OneHeap, f#0, x0#0, x1#0)))
-     ==> $Is(f#0, Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R)));
-
-// $IsAlloc axiom for subset type _System._#TotalFunc2
-axiom (forall #$T0: Ty, #$T1: Ty, #$R: Ty, f#0: HandleType, $h: Heap :: 
-  { $IsAlloc(f#0, Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R), $h) } 
-  $IsAlloc(f#0, Tclass._System.___hTotalFunc2(#$T0, #$T1, #$R), $h)
-     <==> $IsAlloc(f#0, Tclass._System.___hPartialFunc2(#$T0, #$T1, #$R), $h));
-
 const unique class._module.__default: ClassName;
 
-// function declaration for _module._default.sum
-function _module.__default.sum($ly: LayerType, s#0: Seq, n#0: int) : int;
-
-function _module.__default.sum#canCall(s#0: Seq, n#0: int) : bool;
-
-// layer synonym axiom
-axiom (forall $ly: LayerType, s#0: Seq, n#0: int :: 
-  { _module.__default.sum($LS($ly), s#0, n#0) } 
-  _module.__default.sum($LS($ly), s#0, n#0)
-     == _module.__default.sum($ly, s#0, n#0));
-
-// fuel synonym axiom
-axiom (forall $ly: LayerType, s#0: Seq, n#0: int :: 
-  { _module.__default.sum(AsFuelBottom($ly), s#0, n#0) } 
-  _module.__default.sum($ly, s#0, n#0) == _module.__default.sum($LZ, s#0, n#0));
-
-function _module.__default.sum#requires(LayerType, Seq, int) : bool;
-
-// #requires axiom for _module.__default.sum
-axiom (forall $ly: LayerType, s#0: Seq, n#0: int :: 
-  { _module.__default.sum#requires($ly, s#0, n#0) } 
-  $Is(s#0, TSeq(TInt)) && LitInt(0) <= n#0
-     ==> _module.__default.sum#requires($ly, s#0, n#0) == (n#0 <= Seq#Length(s#0)));
-
-// #requires ==> #canCall for _module.__default.sum
-axiom (forall $ly: LayerType, s#0: Seq, n#0: int :: 
-  { _module.__default.sum#requires($ly, s#0, n#0) } 
-  _module.__default.sum#requires($ly, s#0, n#0)
-     ==> _module.__default.sum#canCall(s#0, n#0));
-
-// definition axiom for _module.__default.sum (revealed)
-axiom {:id "id0"} (forall $ly: LayerType, s#0: Seq, n#0: int :: 
-  { _module.__default.sum($LS($ly), s#0, n#0) } 
-  _module.__default.sum#canCall(s#0, n#0)
-     ==> (!(Seq#Length(s#0) == LitInt(0) || n#0 == LitInt(0))
-         ==> _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), n#0 - 1))
-       && _module.__default.sum($LS($ly), s#0, n#0)
-         == (if Seq#Length(s#0) == LitInt(0) || n#0 == LitInt(0)
-           then 0
-           else $Unbox(Seq#Index(s#0, LitInt(0))): int
-             + _module.__default.sum($ly, Seq#Drop(s#0, LitInt(1)), n#0 - 1)));
-
-// definition axiom for _module.__default.sum for all literals (revealed)
-axiom {:id "id1"} (forall $ly: LayerType, s#0: Seq, n#0: int :: 
-  {:weight 3} { _module.__default.sum($LS($ly), Lit(s#0), LitInt(n#0)) } 
-  _module.__default.sum#canCall(Lit(s#0), LitInt(n#0))
-     ==> (!(Seq#Length(Lit(s#0)) == LitInt(0) || LitInt(n#0) == LitInt(0))
-         ==> _module.__default.sum#canCall(Lit(Seq#Drop(Lit(s#0), LitInt(1))), LitInt(n#0 - 1)))
-       && _module.__default.sum($LS($ly), Lit(s#0), LitInt(n#0))
-         == (if Seq#Length(Lit(s#0)) == LitInt(0) || LitInt(n#0) == LitInt(0)
-           then 0
-           else $Unbox(Seq#Index(Lit(s#0), LitInt(0))): int
-             + _module.__default.sum($LS($ly), Lit(Seq#Drop(Lit(s#0), LitInt(1))), LitInt(n#0 - 1))));
-
-procedure {:verboseName "sum (well-formedness)"} CheckWellformed$$_module.__default.sum(s#0: Seq where $Is(s#0, TSeq(TInt)), n#0: int where LitInt(0) <= n#0);
+procedure {:verboseName "ret32 (well-formedness)"} CheckWellFormed$$_module.__default.ret32(a#0: int) returns (x#0: int);
+  free requires 0 == $FunctionContextHeight;
   modifies $Heap;
 
 
 
-implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "sum (well-formedness)"} CheckWellformed$$_module.__default.sum(s#0: Seq, n#0: int)
-{
-  var $_ReadsFrame: [ref,Field]bool;
-  var ##s#0: Seq;
-  var ##n#0: int;
-
-
-    assume {:captureState "BelowZero.dfy(8,9): initial state"} true;
-    $_ReadsFrame := (lambda $o: ref, $f: Field :: 
-      $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
-    // Check well-formedness of preconditions, and then assume them
-    assume {:id "id2"} n#0 <= Seq#Length(s#0);
-    // Check well-formedness of the reads clause
-    // Check well-formedness of the decreases clause
-    // Check body and ensures clauses
-    if (*)
-    {
-        // Check well-formedness of postcondition and assume false
-        assume false;
-    }
-    else
-    {
-        // Check well-formedness of body and result subset type constraint
-        if (Seq#Length(s#0) != LitInt(0))
-        {
-        }
-
-        if (Seq#Length(s#0) == LitInt(0) || n#0 == LitInt(0))
-        {
-            assume true;
-            assume {:id "id3"} _module.__default.sum($LS($LZ), s#0, n#0) == LitInt(0);
-            // CheckWellformedWithResult: any expression
-            assume $Is(_module.__default.sum($LS($LZ), s#0, n#0), TInt);
-            return;
-        }
-        else
-        {
-            assert {:id "id4"} 0 <= LitInt(0) && LitInt(0) < Seq#Length(s#0);
-            assert {:id "id5"} 0 <= LitInt(1) && LitInt(1) <= Seq#Length(s#0);
-            ##s#0 := Seq#Drop(s#0, LitInt(1));
-            // assume allocatedness for argument to function
-            assume $IsAlloc(##s#0, TSeq(TInt), $Heap);
-            assert {:id "id6"} $Is(n#0 - 1, Tclass._System.nat());
-            ##n#0 := n#0 - 1;
-            // assume allocatedness for argument to function
-            assume $IsAlloc(##n#0, Tclass._System.nat(), $Heap);
-            assume true;
-            assert {:id "id7"} {:subsumption 0} ##n#0 <= Seq#Length(##s#0);
-            assume ##n#0 <= Seq#Length(##s#0);
-            assume true;
-            assert {:id "id8"} 0 <= n#0 || Seq#Rank(##s#0) < Seq#Rank(s#0) || ##n#0 == n#0;
-            assert {:id "id9"} Seq#Rank(##s#0) < Seq#Rank(s#0)
-               || (Seq#Rank(##s#0) == Seq#Rank(s#0) && ##n#0 < n#0);
-            assume _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), n#0 - 1);
-            assume _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), n#0 - 1);
-            assume {:id "id10"} _module.__default.sum($LS($LZ), s#0, n#0)
-               == $Unbox(Seq#Index(s#0, LitInt(0))): int
-                 + _module.__default.sum($LS($LZ), Seq#Drop(s#0, LitInt(1)), n#0 - 1);
-            // CheckWellformedWithResult: any expression
-            assume $Is(_module.__default.sum($LS($LZ), s#0, n#0), TInt);
-            return;
-        }
-
-        assume false;
-    }
-}
-
-
-
-procedure {:verboseName "sum_plus (well-formedness)"} CheckWellFormed$$_module.__default.sum__plus(s#0: Seq where $Is(s#0, TSeq(TInt)) && $IsAlloc(s#0, TSeq(TInt), $Heap), 
-    i#0: int where LitInt(0) <= i#0);
-  modifies $Heap;
-
-
-
-implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "sum_plus (well-formedness)"} CheckWellFormed$$_module.__default.sum__plus(s#0: Seq, i#0: int)
-{
-  var $_ModifiesFrame: [ref,Field]bool;
-  var ##s#0: Seq;
-  var ##n#0: int;
-  var ##s#1: Seq;
-  var ##n#1: int;
-
-
-    // AddMethodImpl: sum_plus, CheckWellFormed$$_module.__default.sum__plus
-    $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
-      $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
-    assume {:captureState "BelowZero.dfy(17,6): initial state"} true;
-    assume {:id "id11"} i#0 < Seq#Length(s#0);
-    havoc $Heap;
-    assume old($Heap) == $Heap;
-    assume {:captureState "BelowZero.dfy(19,29): post-state"} true;
-    ##s#0 := s#0;
-    // assume allocatedness for argument to function
-    assume $IsAlloc(##s#0, TSeq(TInt), $Heap);
-    ##n#0 := i#0;
-    // assume allocatedness for argument to function
-    assume $IsAlloc(##n#0, Tclass._System.nat(), $Heap);
-    assume true;
-    assert {:id "id12"} {:subsumption 0} ##n#0 <= Seq#Length(##s#0);
-    assume ##n#0 <= Seq#Length(##s#0);
-    assume _module.__default.sum#canCall(s#0, i#0);
-    assert {:id "id13"} 0 <= i#0 && i#0 < Seq#Length(s#0);
-    ##s#1 := s#0;
-    // assume allocatedness for argument to function
-    assume $IsAlloc(##s#1, TSeq(TInt), $Heap);
-    assert {:id "id14"} $Is(i#0 + 1, Tclass._System.nat());
-    ##n#1 := i#0 + 1;
-    // assume allocatedness for argument to function
-    assume $IsAlloc(##n#1, Tclass._System.nat(), $Heap);
-    assume true;
-    assert {:id "id15"} {:subsumption 0} ##n#1 <= Seq#Length(##s#1);
-    assume ##n#1 <= Seq#Length(##s#1);
-    assume _module.__default.sum#canCall(s#0, i#0 + 1);
-    assume {:id "id16"} _module.__default.sum($LS($LZ), s#0, i#0) + $Unbox(Seq#Index(s#0, i#0)): int
-       == _module.__default.sum($LS($LZ), s#0, i#0 + 1);
-}
-
-
-
-procedure {:verboseName "sum_plus (call)"} Call$$_module.__default.sum__plus(s#0: Seq where $Is(s#0, TSeq(TInt)) && $IsAlloc(s#0, TSeq(TInt), $Heap), 
-    i#0: int where LitInt(0) <= i#0);
+procedure {:verboseName "ret32 (call)"} Call$$_module.__default.ret32(a#0: int) returns (x#0: int);
   // user-defined preconditions
-  free requires {:always_assume} true;
-  requires {:id "id17"} i#0 < Seq#Length(s#0);
+  requires {:id "id2"} a#0 < 10;
   modifies $Heap;
   // user-defined postconditions
-  free ensures {:always_assume} _module.__default.sum#canCall(s#0, i#0)
-     && _module.__default.sum#canCall(s#0, i#0 + 1);
-  ensures {:id "id18"} _module.__default.sum($LS($LS($LZ)), s#0, i#0)
-       + $Unbox(Seq#Index(s#0, i#0)): int
-     == _module.__default.sum($LS($LS($LZ)), s#0, i#0 + 1);
-  // frame condition
-  free ensures old($Heap) == $Heap;
+  free ensures true;
+  ensures {:id "id3"} x#0 == LitInt(32);
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o]);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
 
 
 
-procedure {:verboseName "sum_plus (correctness)"} Impl$$_module.__default.sum__plus(s#0: Seq where $Is(s#0, TSeq(TInt)) && $IsAlloc(s#0, TSeq(TInt), $Heap), 
-    i#0: int where LitInt(0) <= i#0)
-   returns ($_reverifyPost: bool);
+procedure {:verboseName "ret32 (correctness)"} Impl$$_module.__default.ret32(a#0: int) returns (defass#x#0: bool, x#0: int, $_reverifyPost: bool);
+  free requires 0 == $FunctionContextHeight;
   // user-defined preconditions
-  free requires {:always_assume} true;
-  requires {:id "id19"} i#0 < Seq#Length(s#0);
+  requires {:id "id4"} a#0 < 10;
   modifies $Heap;
   // user-defined postconditions
-  free ensures {:always_assume} _module.__default.sum#canCall(s#0, i#0)
-     && _module.__default.sum#canCall(s#0, i#0 + 1);
-  ensures {:id "id20"} _module.__default.sum($LS($LS($LZ)), s#0, i#0)
-       + $Unbox(Seq#Index(s#0, i#0)): int
-     == _module.__default.sum($LS($LS($LZ)), s#0, i#0 + 1);
-  // frame condition
-  free ensures old($Heap) == $Heap;
+  free ensures true;
+  ensures {:id "id5"} x#0 == LitInt(32);
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o]);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
 
 
 
-implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "sum_plus (correctness)"} Impl$$_module.__default.sum__plus(s#0: Seq, i#0: int) returns ($_reverifyPost: bool)
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "ret32 (correctness)"} Impl$$_module.__default.ret32(a#0: int) returns (defass#x#0: bool, x#0: int, $_reverifyPost: bool)
 {
   var $_ModifiesFrame: [ref,Field]bool;
-  var ##s#0_0: Seq;
-  var ##n#0_0: int;
-  var ##s#0_1: Seq;
-  var ##n#0_1: int;
-  var ##s#0_2: Seq;
-  var ##n#0_2: int;
-  var ##s#0_3: Seq;
-  var ##n#0_3: int;
-  var ##s#0_4: Seq;
-  var ##n#0_4: int;
-  var ##s#1_0: Seq;
-  var ##n#1_0: int;
-  var ##s#1_1: Seq;
-  var ##n#1_1: int;
-  var ##s#1_2: Seq;
-  var ##n#1_2: int;
-  var ##s#1_3: Seq;
-  var ##n#1_3: int;
-  var s##1_0: Seq;
-  var i##1_0: int;
-  var ##s#1_4: Seq;
-  var ##n#1_4: int;
-  var ##s#1_5: Seq;
-  var ##n#1_5: int;
 
-    // AddMethodImpl: sum_plus, Impl$$_module.__default.sum__plus
+    // AddMethodImpl: ret32, Impl$$_module.__default.ret32
     $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
       $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
-    assume {:captureState "BelowZero.dfy(20,0): initial state"} true;
+    assume {:captureState "_main_method_that_calls.dfy(4,0): initial state"} true;
     $_reverifyPost := false;
-    // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(21,5)
+    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_main_method_that_calls.dfy(5,7)
     assume true;
-    if (i#0 == LitInt(0))
-    {
-        // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(23,9)
-        ##s#0_0 := s#0;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##s#0_0, TSeq(TInt), $Heap);
-        assert {:id "id21"} $Is(LitInt(0), Tclass._System.nat());
-        ##n#0_0 := LitInt(0);
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##n#0_0, Tclass._System.nat(), $Heap);
-        assume true;
-        assert {:id "id22"} {:subsumption 0} ##n#0_0 <= Seq#Length(##s#0_0);
-        assume _module.__default.sum#canCall(s#0, LitInt(0));
-        assume _module.__default.sum#canCall(s#0, LitInt(0));
-        assert {:id "id23"} {:subsumption 0} _module.__default.sum($LS($LS($LZ)), s#0, LitInt(0)) == LitInt(0);
-        assume {:id "id24"} _module.__default.sum($LS($LZ), s#0, LitInt(0)) == LitInt(0);
-        // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(24,9)
-        ##s#0_1 := s#0;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##s#0_1, TSeq(TInt), $Heap);
-        assert {:id "id25"} $Is(LitInt(1), Tclass._System.nat());
-        ##n#0_1 := LitInt(1);
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##n#0_1, Tclass._System.nat(), $Heap);
-        assume true;
-        assert {:id "id26"} {:subsumption 0} ##n#0_1 <= Seq#Length(##s#0_1);
-        assume _module.__default.sum#canCall(s#0, LitInt(1));
-        assert {:id "id27"} {:subsumption 0} 0 <= LitInt(0) && LitInt(0) < Seq#Length(s#0);
-        assert {:id "id28"} {:subsumption 0} 0 <= LitInt(1) && LitInt(1) <= Seq#Length(s#0);
-        ##s#0_2 := Seq#Drop(s#0, LitInt(1));
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##s#0_2, TSeq(TInt), $Heap);
-        assert {:id "id29"} $Is(LitInt(0), Tclass._System.nat());
-        ##n#0_2 := LitInt(0);
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##n#0_2, Tclass._System.nat(), $Heap);
-        assume true;
-        assert {:id "id30"} {:subsumption 0} ##n#0_2 <= Seq#Length(##s#0_2);
-        assume _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), LitInt(0));
-        assume _module.__default.sum#canCall(s#0, LitInt(1))
-           && _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), LitInt(0));
-        assert {:id "id31"} {:subsumption 0} _module.__default.sum($LS($LS($LZ)), s#0, LitInt(1))
-           == $Unbox(Seq#Index(s#0, LitInt(0))): int
-             + _module.__default.sum($LS($LS($LZ)), Seq#Drop(s#0, LitInt(1)), LitInt(0));
-        assume {:id "id32"} _module.__default.sum($LS($LZ), s#0, LitInt(1))
-           == $Unbox(Seq#Index(s#0, LitInt(0))): int
-             + _module.__default.sum($LS($LZ), Seq#Drop(s#0, LitInt(1)), LitInt(0));
-        // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(25,9)
-        ##s#0_3 := s#0;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##s#0_3, TSeq(TInt), $Heap);
-        assert {:id "id33"} $Is(LitInt(0), Tclass._System.nat());
-        ##n#0_3 := LitInt(0);
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##n#0_3, Tclass._System.nat(), $Heap);
-        assume true;
-        assert {:id "id34"} {:subsumption 0} ##n#0_3 <= Seq#Length(##s#0_3);
-        assume _module.__default.sum#canCall(s#0, LitInt(0));
-        assert {:id "id35"} {:subsumption 0} 0 <= LitInt(0) && LitInt(0) < Seq#Length(s#0);
-        ##s#0_4 := s#0;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##s#0_4, TSeq(TInt), $Heap);
-        assert {:id "id36"} $Is(LitInt(1), Tclass._System.nat());
-        ##n#0_4 := LitInt(1);
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##n#0_4, Tclass._System.nat(), $Heap);
-        assume true;
-        assert {:id "id37"} {:subsumption 0} ##n#0_4 <= Seq#Length(##s#0_4);
-        assume _module.__default.sum#canCall(s#0, LitInt(1));
-        assume _module.__default.sum#canCall(s#0, LitInt(0))
-           && _module.__default.sum#canCall(s#0, LitInt(1));
-        assert {:id "id38"} {:subsumption 0} _module.__default.sum($LS($LS($LZ)), s#0, LitInt(0))
-             + $Unbox(Seq#Index(s#0, LitInt(0))): int
-           == _module.__default.sum($LS($LS($LZ)), s#0, LitInt(1));
-        assume {:id "id39"} _module.__default.sum($LS($LZ), s#0, LitInt(0))
-             + $Unbox(Seq#Index(s#0, LitInt(0))): int
-           == _module.__default.sum($LS($LZ), s#0, LitInt(1));
-    }
-    else
-    {
-        // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(28,9)
-        ##s#1_0 := s#0;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##s#1_0, TSeq(TInt), $Heap);
-        ##n#1_0 := i#0;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##n#1_0, Tclass._System.nat(), $Heap);
-        assume true;
-        assert {:id "id40"} {:subsumption 0} ##n#1_0 <= Seq#Length(##s#1_0);
-        assume _module.__default.sum#canCall(s#0, i#0);
-        assert {:id "id41"} {:subsumption 0} 0 <= LitInt(0) && LitInt(0) < Seq#Length(s#0);
-        assert {:id "id42"} {:subsumption 0} 0 <= LitInt(1) && LitInt(1) <= Seq#Length(s#0);
-        ##s#1_1 := Seq#Drop(s#0, LitInt(1));
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##s#1_1, TSeq(TInt), $Heap);
-        assert {:id "id43"} $Is(i#0 - 1, Tclass._System.nat());
-        ##n#1_1 := i#0 - 1;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##n#1_1, Tclass._System.nat(), $Heap);
-        assume true;
-        assert {:id "id44"} {:subsumption 0} ##n#1_1 <= Seq#Length(##s#1_1);
-        assume _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), i#0 - 1);
-        assume _module.__default.sum#canCall(s#0, i#0)
-           && _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), i#0 - 1);
-        assert {:id "id45"} {:subsumption 0} _module.__default.sum($LS($LS($LZ)), s#0, i#0)
-           == $Unbox(Seq#Index(s#0, LitInt(0))): int
-             + _module.__default.sum($LS($LS($LZ)), Seq#Drop(s#0, LitInt(1)), i#0 - 1);
-        assume {:id "id46"} _module.__default.sum($LS($LZ), s#0, i#0)
-           == $Unbox(Seq#Index(s#0, LitInt(0))): int
-             + _module.__default.sum($LS($LZ), Seq#Drop(s#0, LitInt(1)), i#0 - 1);
-        // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(29,9)
-        ##s#1_2 := s#0;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##s#1_2, TSeq(TInt), $Heap);
-        assert {:id "id47"} $Is(i#0 + 1, Tclass._System.nat());
-        ##n#1_2 := i#0 + 1;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##n#1_2, Tclass._System.nat(), $Heap);
-        assume true;
-        assert {:id "id48"} {:subsumption 0} ##n#1_2 <= Seq#Length(##s#1_2);
-        assume _module.__default.sum#canCall(s#0, i#0 + 1);
-        assert {:id "id49"} {:subsumption 0} 0 <= LitInt(0) && LitInt(0) < Seq#Length(s#0);
-        assert {:id "id50"} {:subsumption 0} 0 <= LitInt(1) && LitInt(1) <= Seq#Length(s#0);
-        ##s#1_3 := Seq#Drop(s#0, LitInt(1));
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##s#1_3, TSeq(TInt), $Heap);
-        ##n#1_3 := i#0;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##n#1_3, Tclass._System.nat(), $Heap);
-        assume true;
-        assert {:id "id51"} {:subsumption 0} ##n#1_3 <= Seq#Length(##s#1_3);
-        assume _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), i#0);
-        assume _module.__default.sum#canCall(s#0, i#0 + 1)
-           && _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), i#0);
-        assert {:id "id52"} {:subsumption 0} _module.__default.sum($LS($LS($LZ)), s#0, i#0 + 1)
-           == $Unbox(Seq#Index(s#0, LitInt(0))): int
-             + _module.__default.sum($LS($LS($LZ)), Seq#Drop(s#0, LitInt(1)), i#0);
-        assume {:id "id53"} _module.__default.sum($LS($LZ), s#0, i#0 + 1)
-           == $Unbox(Seq#Index(s#0, LitInt(0))): int
-             + _module.__default.sum($LS($LZ), Seq#Drop(s#0, LitInt(1)), i#0);
-        // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(31,17)
-        // TrCallStmt: Before ProcessCallStmt
-        assert {:id "id54"} 0 <= LitInt(1) && LitInt(1) <= Seq#Length(s#0);
-        assume true;
-        // ProcessCallStmt: CheckSubrange
-        s##1_0 := Seq#Drop(s#0, LitInt(1));
-        assume true;
-        // ProcessCallStmt: CheckSubrange
-        assert {:id "id55"} $Is(i#0 - 1, Tclass._System.nat());
-        i##1_0 := i#0 - 1;
-        assume true;
-        assert {:id "id56"} 0 <= i#0 || Seq#Rank(s##1_0) < Seq#Rank(s#0) || i##1_0 == i#0;
-        assert {:id "id57"} Seq#Rank(s##1_0) < Seq#Rank(s#0)
-           || (Seq#Rank(s##1_0) == Seq#Rank(s#0) && i##1_0 < i#0);
-        call {:id "id58"} Call$$_module.__default.sum__plus(s##1_0, i##1_0);
-        // TrCallStmt: After ProcessCallStmt
-        assume {:captureState "BelowZero.dfy(31,31)"} true;
-        // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(33,9)
-        assert {:id "id59"} {:subsumption 0} 0 <= LitInt(1) && LitInt(1) <= Seq#Length(s#0);
-        assert {:id "id60"} {:subsumption 0} 0 <= i#0 - 1 && i#0 - 1 < Seq#Length(Seq#Drop(s#0, LitInt(1)));
-        assert {:id "id61"} {:subsumption 0} 0 <= i#0 && i#0 < Seq#Length(s#0);
-        assume true;
-        assert {:id "id62"} $Unbox(Seq#Index(Seq#Drop(s#0, LitInt(1)), i#0 - 1)): int
-           == $Unbox(Seq#Index(s#0, i#0)): int;
-        // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(36,9)
-        assert {:id "id63"} {:subsumption 0} 0 <= LitInt(1) && LitInt(1) <= Seq#Length(s#0);
-        ##s#1_4 := Seq#Drop(s#0, LitInt(1));
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##s#1_4, TSeq(TInt), $Heap);
-        assert {:id "id64"} $Is(i#0 - 1, Tclass._System.nat());
-        ##n#1_4 := i#0 - 1;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##n#1_4, Tclass._System.nat(), $Heap);
-        assume true;
-        assert {:id "id65"} {:subsumption 0} ##n#1_4 <= Seq#Length(##s#1_4);
-        assume _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), i#0 - 1);
-        assert {:id "id66"} {:subsumption 0} 0 <= i#0 && i#0 < Seq#Length(s#0);
-        assert {:id "id67"} {:subsumption 0} 0 <= LitInt(1) && LitInt(1) <= Seq#Length(s#0);
-        ##s#1_5 := Seq#Drop(s#0, LitInt(1));
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##s#1_5, TSeq(TInt), $Heap);
-        ##n#1_5 := i#0;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##n#1_5, Tclass._System.nat(), $Heap);
-        assume true;
-        assert {:id "id68"} {:subsumption 0} ##n#1_5 <= Seq#Length(##s#1_5);
-        assume _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), i#0);
-        assume _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), i#0 - 1)
-           && _module.__default.sum#canCall(Seq#Drop(s#0, LitInt(1)), i#0);
-        assert {:id "id69"} {:subsumption 0} _module.__default.sum($LS($LS($LZ)), Seq#Drop(s#0, LitInt(1)), i#0 - 1)
-             + $Unbox(Seq#Index(s#0, i#0)): int
-           == _module.__default.sum($LS($LS($LZ)), Seq#Drop(s#0, LitInt(1)), i#0);
-        assume {:id "id70"} _module.__default.sum($LS($LZ), Seq#Drop(s#0, LitInt(1)), i#0 - 1)
-             + $Unbox(Seq#Index(s#0, i#0)): int
-           == _module.__default.sum($LS($LZ), Seq#Drop(s#0, LitInt(1)), i#0);
-    }
+    assume true;
+    x#0 := LitInt(32);
+    defass#x#0 := true;
+    assume {:captureState "_main_method_that_calls.dfy(5,11)"} true;
+    assert {:id "id7"} defass#x#0;
 }
 
 
 
-procedure {:verboseName "BelowZero (well-formedness)"} CheckWellFormed$$_module.__default.BelowZero(ops#0: Seq where $Is(ops#0, TSeq(TInt)) && $IsAlloc(ops#0, TSeq(TInt), $Heap))
-   returns (result#0: bool);
+procedure {:verboseName "Main (well-formedness)"} CheckWellFormed$$_module.__default.Main();
+  free requires 1 == $FunctionContextHeight;
   modifies $Heap;
 
 
 
-implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "BelowZero (well-formedness)"} CheckWellFormed$$_module.__default.BelowZero(ops#0: Seq) returns (result#0: bool)
+procedure {:verboseName "Main (call)"} Call$$_module.__default.Main();
+  modifies $Heap;
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o]);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+procedure {:verboseName "Main (correctness)"} Impl$$_module.__default.Main() returns ($_reverifyPost: bool);
+  free requires 1 == $FunctionContextHeight;
+  modifies $Heap;
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o]);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "Main (correctness)"} Impl$$_module.__default.Main() returns ($_reverifyPost: bool)
 {
   var $_ModifiesFrame: [ref,Field]bool;
   var n#0: int;
-  var ##s#0: Seq;
-  var ##n#0: int;
+  var $rhs##0: int;
+  var a##0: int;
 
-
-    // AddMethodImpl: BelowZero, CheckWellFormed$$_module.__default.BelowZero
+    // AddMethodImpl: Main, Impl$$_module.__default.Main
     $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
       $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
-    assume {:captureState "BelowZero.dfy(40,7): initial state"} true;
-    havoc $Heap;
-    assume (forall $o: ref :: 
-      { $Heap[$o] } 
-      $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
-         ==> $Heap[$o] == old($Heap)[$o]);
-    assume $HeapSucc(old($Heap), $Heap);
-    havoc result#0;
-    assume {:captureState "BelowZero.dfy(41,19): post-state"} true;
-    // Begin Comprehension WF check
-    havoc n#0;
-    if (LitInt(0) <= n#0)
-    {
-        if (n#0 <= Seq#Length(ops#0))
-        {
-            ##s#0 := ops#0;
-            // assume allocatedness for argument to function
-            assume $IsAlloc(##s#0, TSeq(TInt), $Heap);
-            ##n#0 := n#0;
-            // assume allocatedness for argument to function
-            assume $IsAlloc(##n#0, Tclass._System.nat(), $Heap);
-            assume true;
-            assert {:id "id71"} {:subsumption 0} ##n#0 <= Seq#Length(##s#0);
-            assume ##n#0 <= Seq#Length(##s#0);
-            assume _module.__default.sum#canCall(ops#0, n#0);
-        }
-    }
-
-    // End Comprehension WF check
-    assume (forall n#1: int :: 
-      { _module.__default.sum($LS($LZ), ops#0, n#1) } 
-      LitInt(0) <= n#1
-         ==> 
-        n#1 <= Seq#Length(ops#0)
-         ==> _module.__default.sum#canCall(ops#0, n#1));
-    assume {:id "id72"} result#0
-       <==> (exists n#1: int :: 
-        { _module.__default.sum($LS($LZ), ops#0, n#1) } 
-        LitInt(0) <= n#1
-           && 
-          n#1 <= Seq#Length(ops#0)
-           && _module.__default.sum($LS($LZ), ops#0, n#1) < 0);
-}
-
-
-
-procedure {:verboseName "BelowZero (call)"} Call$$_module.__default.BelowZero(ops#0: Seq where $Is(ops#0, TSeq(TInt)) && $IsAlloc(ops#0, TSeq(TInt), $Heap))
-   returns (result#0: bool);
-  modifies $Heap;
-  // user-defined postconditions
-  free ensures {:always_assume} (forall n#1: int :: 
-    { _module.__default.sum($LS($LZ), ops#0, n#1) } 
-    LitInt(0) <= n#1
-       ==> 
-      n#1 <= Seq#Length(ops#0)
-       ==> _module.__default.sum#canCall(ops#0, n#1));
-  ensures {:id "id73"} result#0
-     <==> (exists n#1: int :: 
-      { _module.__default.sum($LS($LS($LZ)), ops#0, n#1) } 
-      LitInt(0) <= n#1
-         && 
-        n#1 <= Seq#Length(ops#0)
-         && _module.__default.sum($LS($LS($LZ)), ops#0, n#1) < 0);
-  // frame condition: object granularity
-  free ensures (forall $o: ref :: 
-    { $Heap[$o] } 
-    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
-       ==> $Heap[$o] == old($Heap)[$o]);
-  // boilerplate
-  free ensures $HeapSucc(old($Heap), $Heap);
-
-
-
-procedure {:verboseName "BelowZero (correctness)"} Impl$$_module.__default.BelowZero(ops#0: Seq where $Is(ops#0, TSeq(TInt)) && $IsAlloc(ops#0, TSeq(TInt), $Heap))
-   returns (defass#result#0: bool, result#0: bool, $_reverifyPost: bool);
-  modifies $Heap;
-  // user-defined postconditions
-  free ensures {:always_assume} (forall n#1: int :: 
-    { _module.__default.sum($LS($LZ), ops#0, n#1) } 
-    LitInt(0) <= n#1
-       ==> 
-      n#1 <= Seq#Length(ops#0)
-       ==> _module.__default.sum#canCall(ops#0, n#1));
-  ensures {:id "id74"} result#0
-     <==> (exists n#1: int :: 
-      { _module.__default.sum($LS($LS($LZ)), ops#0, n#1) } 
-      LitInt(0) <= n#1
-         && 
-        n#1 <= Seq#Length(ops#0)
-         && _module.__default.sum($LS($LS($LZ)), ops#0, n#1) < 0);
-  // frame condition: object granularity
-  free ensures (forall $o: ref :: 
-    { $Heap[$o] } 
-    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
-       ==> $Heap[$o] == old($Heap)[$o]);
-  // boilerplate
-  free ensures $HeapSucc(old($Heap), $Heap);
-
-
-
-implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "BelowZero (correctness)"} Impl$$_module.__default.BelowZero(ops#0: Seq)
-   returns (defass#result#0: bool, result#0: bool, $_reverifyPost: bool)
-{
-  var $_ModifiesFrame: [ref,Field]bool;
-  var t#0: int;
-  var i#0: int;
-  var i#0#lo: int;
-  var i#0#hi: int;
-  var $PreLoopHeap$loop#0: Heap;
-  var preLoop$loop#0$defass#result#0: bool;
-  var $w$loop#0: bool;
-  var ##s#1: Seq;
-  var ##n#1: int;
-  var n#2: int;
-  var ##s#2: Seq;
-  var ##n#2: int;
-  var s##0_0: Seq;
-  var i##0_0: int;
-
-    // AddMethodImpl: BelowZero, Impl$$_module.__default.BelowZero
-    $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
-      $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
-    assume {:captureState "BelowZero.dfy(42,0): initial state"} true;
+    assume {:captureState "_main_method_that_calls.dfy(9,14): initial state"} true;
     $_reverifyPost := false;
-    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(43,12)
+    // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_main_method_that_calls.dfy(10,11)
     assume true;
+    // TrCallStmt: Adding lhs with type int
+    // TrCallStmt: Before ProcessCallStmt
     assume true;
-    result#0 := Lit(false);
-    defass#result#0 := true;
-    assume {:captureState "BelowZero.dfy(43,19)"} true;
-    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(44,11)
+    // ProcessCallStmt: CheckSubrange
+    a##0 := LitInt(5);
+    call {:id "id8"} $rhs##0 := Call$$_module.__default.ret32(a##0);
+    // TrCallStmt: After ProcessCallStmt
+    n#0 := $rhs##0;
+    assume {:captureState "_main_method_that_calls.dfy(10,18)"} true;
+    // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_main_method_that_calls.dfy(11,5)
     assume true;
-    assume true;
-    t#0 := LitInt(0);
-    assume {:captureState "BelowZero.dfy(44,14)"} true;
-    // ----- for-loop statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(45,5)
-    i#0#lo := LitInt(0);
-    i#0#hi := Seq#Length(ops#0);
-    assert {:id "id77"} i#0#lo <= i#0#hi;
-    i#0 := i#0#lo;
-    $PreLoopHeap$loop#0 := $Heap;
-    preLoop$loop#0$defass#result#0 := defass#result#0;
-    havoc $w$loop#0;
-    assume $w$loop#0 ==> _module.__default.sum#canCall(ops#0, i#0);
-    assume $w$loop#0
-       ==> (forall n#3: int :: 
-        { _module.__default.sum($LS($LZ), ops#0, n#3) } 
-        LitInt(0) <= n#3 ==> n#3 <= i#0 ==> _module.__default.sum#canCall(ops#0, n#3));
-    while (true)
-      free invariant i#0#lo <= i#0 && i#0 <= i#0#hi;
-      free invariant $w$loop#0 ==> _module.__default.sum#canCall(ops#0, i#0);
-      invariant {:id "id81"} $w$loop#0 ==> t#0 == _module.__default.sum($LS($LS($LZ)), ops#0, i#0);
-      free invariant $w$loop#0
-         ==> (forall n#3: int :: 
-          { _module.__default.sum($LS($LZ), ops#0, n#3) } 
-          LitInt(0) <= n#3 ==> n#3 <= i#0 ==> _module.__default.sum#canCall(ops#0, n#3));
-      invariant {:id "id84"} $w$loop#0
-         ==> (forall n#3: int :: 
-          { _module.__default.sum($LS($LS($LZ)), ops#0, n#3) } 
-          LitInt(0) <= n#3
-             ==> 
-            n#3 <= i#0
-             ==> _module.__default.sum($LS($LS($LZ)), ops#0, n#3) >= LitInt(0));
-      free invariant {:id "id85"} $w$loop#0
-         ==> (forall n#3: int :: 
-          { _module.__default.sum($LS($LZ), ops#0, n#3) } 
-          LitInt(0) <= n#3
-             ==> 
-            n#3 <= i#0
-             ==> _module.__default.sum($LS($LZ), ops#0, n#3) >= LitInt(0));
-      free invariant (forall $o: ref :: 
-        { $Heap[$o] } 
-        $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
-           ==> $Heap[$o] == $PreLoopHeap$loop#0[$o]);
-      free invariant $HeapSucc($PreLoopHeap$loop#0, $Heap);
-      free invariant (forall $o: ref, $f: Field :: 
-        { read($Heap, $o, $f) } 
-        $o != null && $Unbox(read($PreLoopHeap$loop#0, $o, alloc)): bool
-           ==> read($Heap, $o, $f) == read($PreLoopHeap$loop#0, $o, $f)
-             || $_ModifiesFrame[$o, $f]);
-      free invariant preLoop$loop#0$defass#result#0 ==> defass#result#0;
-      free invariant true;
-    {
-        assume {:captureState "BelowZero.dfy(45,4): after some loop iterations"} true;
-        if (!$w$loop#0)
-        {
-            ##s#1 := ops#0;
-            // assume allocatedness for argument to function
-            assume $IsAlloc(##s#1, TSeq(TInt), $Heap);
-            assert {:id "id78"} $Is(i#0, Tclass._System.nat());
-            ##n#1 := i#0;
-            // assume allocatedness for argument to function
-            assume $IsAlloc(##n#1, Tclass._System.nat(), $Heap);
-            assume true;
-            assert {:id "id79"} {:subsumption 0} ##n#1 <= Seq#Length(##s#1);
-            assume _module.__default.sum#canCall(ops#0, i#0);
-            assume _module.__default.sum#canCall(ops#0, i#0);
-            assume {:id "id80"} t#0 == _module.__default.sum($LS($LZ), ops#0, i#0);
-            // Begin Comprehension WF check
-            havoc n#2;
-            if (LitInt(0) <= n#2)
-            {
-                if (n#2 <= i#0)
-                {
-                    ##s#2 := ops#0;
-                    // assume allocatedness for argument to function
-                    assume $IsAlloc(##s#2, TSeq(TInt), $Heap);
-                    ##n#2 := n#2;
-                    // assume allocatedness for argument to function
-                    assume $IsAlloc(##n#2, Tclass._System.nat(), $Heap);
-                    assume true;
-                    assert {:id "id82"} {:subsumption 0} ##n#2 <= Seq#Length(##s#2);
-                    assume _module.__default.sum#canCall(ops#0, n#2);
-                }
-            }
-
-            // End Comprehension WF check
-            assume (forall n#3: int :: 
-              { _module.__default.sum($LS($LZ), ops#0, n#3) } 
-              LitInt(0) <= n#3 ==> n#3 <= i#0 ==> _module.__default.sum#canCall(ops#0, n#3));
-            assume (forall n#3: int :: 
-              { _module.__default.sum($LS($LZ), ops#0, n#3) } 
-              LitInt(0) <= n#3 ==> n#3 <= i#0 ==> _module.__default.sum#canCall(ops#0, n#3));
-            assume {:id "id83"} (forall n#3: int :: 
-              { _module.__default.sum($LS($LZ), ops#0, n#3) } 
-              LitInt(0) <= n#3
-                 ==> 
-                n#3 <= i#0
-                 ==> _module.__default.sum($LS($LZ), ops#0, n#3) >= LitInt(0));
-            assume false;
-        }
-
-        assume true;
-        if (i#0 == i#0#hi)
-        {
-            break;
-        }
-
-        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(49,11)
-        assume true;
-        assert {:id "id86"} 0 <= i#0 && i#0 < Seq#Length(ops#0);
-        assume true;
-        t#0 := t#0 + $Unbox(Seq#Index(ops#0, i#0)): int;
-        assume {:captureState "BelowZero.dfy(49,23)"} true;
-        // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(50,17)
-        // TrCallStmt: Before ProcessCallStmt
-        assume true;
-        // ProcessCallStmt: CheckSubrange
-        s##0_0 := ops#0;
-        assume true;
-        // ProcessCallStmt: CheckSubrange
-        assert {:id "id88"} $Is(i#0, Tclass._System.nat());
-        i##0_0 := i#0;
-        call {:id "id89"} Call$$_module.__default.sum__plus(s##0_0, i##0_0);
-        // TrCallStmt: After ProcessCallStmt
-        assume {:captureState "BelowZero.dfy(50,24)"} true;
-        // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(51,9)
-        assume true;
-        if (t#0 < 0)
-        {
-            // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(52,20)
-            assume true;
-            assume true;
-            result#0 := Lit(true);
-            defass#result#0 := true;
-            assume {:captureState "BelowZero.dfy(52,26)"} true;
-            // ----- return statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/BelowZero.dfy(53,13)
-            assert {:id "id91"} defass#result#0;
-            return;
-        }
-        else
-        {
-        }
-
-        i#0 := i#0 + 1;
-        assume _module.__default.sum#canCall(ops#0, i#0)
-           && (t#0 == _module.__default.sum($LS($LZ), ops#0, i#0)
-             ==> (forall n#3: int :: 
-              { _module.__default.sum($LS($LZ), ops#0, n#3) } 
-              LitInt(0) <= n#3 ==> n#3 <= i#0 ==> _module.__default.sum#canCall(ops#0, n#3)));
-    }
-
-    assert {:id "id92"} defass#result#0;
+    assert {:id "id10"} n#0 == LitInt(32);
 }
 
 
@@ -4092,9 +3020,3 @@ const unique tytagFamily$_#TotalFunc0: TyTagFamily;
 const unique tytagFamily$_tuple#2: TyTagFamily;
 
 const unique tytagFamily$_tuple#0: TyTagFamily;
-
-const unique tytagFamily$_#Func2: TyTagFamily;
-
-const unique tytagFamily$_#PartialFunc2: TyTagFamily;
-
-const unique tytagFamily$_#TotalFunc2: TyTagFamily;
