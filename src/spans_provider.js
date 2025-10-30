@@ -32,6 +32,7 @@ root.prooftoken = class {
   constructor(file, sLine, sCol, eLine, eCol, prooftext, isTopAssertion) {
     this.file = file;
     this.prooftext = prooftext;
+    console.log("prooftext is", prooftext)
     this.start = { line: sLine, col: sCol };
     this.end = { line: eLine, col: eCol };
     this.isTopAssertion = !!isTopAssertion;
@@ -66,7 +67,7 @@ root.proof = class {
     let currentTopAssertion = null;
     let currentBlock = BlockType.NoBlock;
 
-    this.allTokens = [];
+    this.allTokens = new Map();
     this.topLevelProofInfo = [];
 
     for (let i = 0; i < lines.length; i++) {
@@ -131,12 +132,12 @@ root.proof = class {
         continue;
       }
 
-      if (!this.allTokens.some(t => t._key === token._key)) {
-        this.allTokens.push(token);
+      if (!this.allTokens.has(token._key)) {
+        this.allTokens.set(token._key, token);
       } else {
-        token = this.allTokens.find(t => t._key === token._key);
+        token = this.allTokens.get(token._key);
       }
-
+    
       if (isTopAssertion) {
         currentTopAssertion = token;
         if (!this.topLevelProofInfo.some(t => t._key === token._key)) {
@@ -156,29 +157,6 @@ root.proof = class {
       }
     }
   }
-
-  getFile(fname) {
-    const elems = new Map();
-    for (const t of this.allTokens) {
-      if (t.file === fname) {
-        elems.set(t._key, t);
-      }
-    }
-    const tops = this.topLevelProofInfo.filter(t => t.file === fname);
-    return {
-      elements: elems,
-      topLevelProofInfo: tops,
-      getElementAt: (line, col) => {
-        for (const tok of elems.values()) {
-          const s = tok.start, e = tok.end;
-          const beforeStart = (line < s.line) || (line === s.line && col < s.col);
-          const afterEnd = (line > e.line) || (line === e.line && col > e.col);
-          if (!beforeStart && !afterEnd) return tok;
-        }
-        return null;
-      }
-    };
-  }
 };
 
 // environment-aware parseProof:
@@ -190,21 +168,6 @@ root.parseProof = function (dafnyCode ,proofLog) {
     return new root.proof(proofLog);
 }
   
-
-root.getTokensForFile = function (proofOrLog, fname) {
-  let p = null;
-  if (!proofOrLog) {
-    p = new root.proof(root.sampleLog);
-  } else if (typeof proofOrLog === 'string') {
-    p = new root.proof(proofOrLog);
-  } else if (typeof proofOrLog === 'object' && typeof proofOrLog.allTokens !== 'undefined') {
-    p = proofOrLog;
-  } else {
-    p = new root.proof(root.sampleLog);
-  }
-  return p.allTokens.filter(t => t.file === fname);
-};
-
 function internalEscapeHtml(str) {
   return String(str)
     .replace(/&/g, "&amp;")
@@ -227,7 +190,9 @@ root.generateSpansFragment = function (code, tokens, opts = {}) {
   }
 
   const ranges = [];
-  for (const t of tokens || []) {
+  const tokensArray =  Array.from(tokens.values());
+
+  for (const t of tokensArray ) {
     if (!t) continue;
     if (t.isTopAssertion) continue;
     if (!t.start || !t.end) continue;
@@ -279,7 +244,7 @@ root.generateSpansFragment = function (code, tokens, opts = {}) {
 };
 
 root.getDependsOn = function (key, proof) {
-  if (!proof.allTokens.some(t => t._key === key)) {
+  if (!proof.allTokens.has(key)) {
     return null;
   }
 
@@ -300,7 +265,7 @@ root.getDependsOn = function (key, proof) {
 };
 
 root.getUsedOn = function (key, proof) {
-  if (!proof.allTokens.some(t => t._key === key)) {
+  if (!proof.allTokens.has(key)) {
     return null;
   }
 
@@ -344,7 +309,6 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
     prooftoken: root.prooftoken,
     proof: root.proof,
     parseProof: root.parseProof,
-    getTokensForFile: root.getTokensForFile,
     generateSpansFragment: root.generateSpansFragment,
     getDependsOn: root.getDependsOn,
     getUsedOn: root.getUsedOn,

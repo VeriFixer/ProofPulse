@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+        xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" href="./.resources/coverage.css" type="text/css"/>
+    <title>DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy, Verification coverage</title>
+</head>
+<body onload="window['PR_TAB_WIDTH']=4">
+<div class="menu" id="menu">
+    <a href="./index_verification.html">Index</a>
+    
+</div>
+<h1>DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy, Verification coverage</h1>
+<h1 hidden>file:///home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy</h1>
+<pre class="source lang-java linenums">
+<span class="na" id="1:1">//predicate for primeness
+ghost predicate prime(n: nat)
+
+{ </span><span class="nc" id="4:3">n > 1 && (forall nr | 1 < nr < n :: </span><span class="pc" id="4:39">n % nr</span><span class="nc" id="4:45"> != 0)</span><span class="na" id="4:51"> }
+
+datatype Answer = Yes | No | Unknown
+
+//the class containing a prime database, if a number is prime it returns Yes, if it is not No and if the number
+//is not in the database it returns Unknown
+</span><span class="fc" id="10:1">class {:autocontracts} PrimeMap{
+
+  var database: map<nat, bool>; 
+
+//the valid invariant of the class
+  </span><span class="pc" id="15:3">ghost predicate Valid()
+    reads this
+  {
+    forall i | i in database.Keys :: (database[i] == true <==> prime(i)) 
+  }
+
+</span><span class="fc" id="21:1">//the constructor
+  </span><span class="pc" id="22:3">constructor()
+    ensures database == map[]
+  {
+    database := map[];
+  }
+
+</span><span class="fc" id="28:1">  // insert an already known prime number into the database
+  </span><span class="pc" id="29:3">method InsertPrime(n: nat)
+    modifies this;
+    ensures database.Keys == old(database.Keys) + {n}
+    requires prime(n)
+    ensures database == database[n := true] 
+  {
+    database := database[n := true];
+  }
+
+</span><span class="fc" id="38:1">  // check the primeness of n and insert it accordingly into the database 
+  </span><span class="pc" id="39:3">method InsertNumber(n: nat) 
+    modifies this
+    ensures database.Keys == old(database.Keys) + {n}
+    ensures prime(n) <==> database == database[n := true] 
+    ensures !prime(n) <==> database == database[n := false] 
+  {
+    var prime : bool;
+    prime := testPrimeness(n); //:: Unused  DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(46,5)-(46,30): call
+    database := database[n := prime]; //:: Unused DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(46,5)-(46,30): assignment (or return)
+  }
+
+</span><span class="fc" id="50:1">  // lookup n in the database and reply with Yes or No if it's in the database and it is or it is not prime,
+  // or with Unknown when it's not in the databse
+  </span><span class="pc" id="52:3">method IsPrime?(n: nat) returns (answer: Answer) 
+      ensures database.Keys == old(database.Keys)
+      ensures (n in database) && prime(n) <==> answer == Yes 
+      ensures (n in database) && !prime(n) <==> answer == No 
+      ensures !(n in database) <==> answer == Unknown
+  {
+    if !(n in database){
+      return Unknown;
+    } else if database[n] == true {
+      return Yes;
+    } else if database[n] == false {
+      return No;
+    }
+  }</span><span class="fc" id="65:4"> // Unused: DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(65,3)-(65,3): out-parameter 'answer', which is subject to definite-assignment rules, is always initialized at this return point
+
+
+
+  // method to test whether a number is prime, returns bool
+  </span><span class="pc" id="70:3">method testPrimeness(n: nat) returns (result: bool) 
+      requires n >= 0 // UNUSED GOOD FIND: DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(71,16)-(71,21): requires clause
+      ensures result <==> prime(n)
+  {
+   if n == 0 || n == 1{
+    return false;
+   }
+    var i := 2;
+    result := true;
+
+    while i < n 
+      //invariant i >= 2 && i <= n // UNEDED: DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(81,17)-(81,32): loop invariant
+      //invariant i>= 2 // This is actually unused good catch (but reporting seems off)
+      invariant i <= n
+      invariant result <==> (forall j |  1 < j <= i - 1 :: n % j != 0)
+    {
+      if n % i == 0 {
+        result := false; 
+      }
+      i := i + 1;
+    }
+  }
+</span><span class="fc" id="92:1">}
+
+</span><span class="na" id="94:1">method testingMethod() {
+
+  // witness to prove to dafny (exists nr | 1 < nr < n :: n % nr != 0), since 
+  // the !(forall nr | 1 < nr < n :: n % nr != 0) from !prime predicate ==>  (exists nr | 1 < nr < n :: n % nr == 0)
+  assert </span><span class="nc" id="98:10">!(forall nr | 1 < nr < 15 :: </span><span class="pc" id="98:39">15 % nr</span><span class="nc" id="98:46"> != 0) ==>  (</span><span class="pc" id="98:59">exists nr | 1 < nr < 15 :: 15 % nr == 0</span><span class="nc" id="98:98">)</span><span class="na" id="98:99">;
+  </span><span class="fc" id="99:3">assert 15 % 3 == 0;
+</span><span class="na" id="100:1">  </span><span class="fc" id="100:3">assert(exists nr | 1 < nr < 15 :: 15 % nr == 0);
+
+</span><span class="na" id="102:1">  var </span><span class="nc" id="102:7">pm := new PrimeMap();
+
+</span><span class="na" id="104:1">  // InsertPrime test
+  </span><span class="pc" id="105:3">pm.InsertPrime(13);
+</span><span class="na" id="106:1">  // InsertNumber test
+  </span><span class="pc" id="107:3">pm.InsertNumber(17);
+</span><span class="na" id="108:1">  </span><span class="pc" id="108:3">pm.InsertNumber(15);
+
+</span><span class="na" id="110:1">  </span><span class="fc" id="110:3">assert </span><span class="pc" id="110:10">pm</span><span class="fc" id="110:12">.database.Keys == {17, 15, 13};
+
+</span><span class="na" id="112:1">  var </span><span class="pc" id="112:7">result: Answer := pm.IsPrime?(17);
+</span><span class="na" id="113:1">  </span><span class="fc" id="113:3">assert result == Yes;
+
+</span><span class="na" id="115:1">  var </span><span class="pc" id="115:7">result2: Answer := pm.IsPrime?(15);
+</span><span class="na" id="116:1">  </span><span class="fc" id="116:3">assert result2 == No;
+
+</span><span class="na" id="118:1">  var </span><span class="pc" id="118:7">result3: Answer := pm.IsPrime?(454);
+</span><span class="na" id="119:1">  </span><span class="fc" id="119:3">assert result3 == Unknown;
+
+</span><span class="na" id="121:1">  var </span><span class="pc" id="121:7">result4: Answer := pm.IsPrime?(13);
+</span><span class="na" id="122:1">  </span><span class="fc" id="122:3">assert result4 == Yes;
+
+</span><span class="na" id="124:1">}
+</span></pre>
+<div class="footer">
+    <span class="right">
+        Created with 
+        <a href="https://github.com/dafny-lang/dafny">Dafny</a>
+    </span>
+</div>
+</body>
+</html>

@@ -2919,18 +2919,112 @@ const unique class._System.Tuple0: ClassName;
 
 const unique class._module.__default: ClassName;
 
-procedure {:verboseName "Abs (well-formedness)"} CheckWellFormed$$_module.__default.Abs(x#0: int) returns (y#0: int);
+// function declaration for _module._default.prime
+function _module.__default.prime(n#0: int) : bool;
+
+function _module.__default.prime#canCall(n#0: int) : bool;
+
+function _module.__default.prime#requires(int) : bool;
+
+// #requires axiom for _module.__default.prime
+axiom (forall n#0: int :: 
+  { _module.__default.prime#requires(n#0) } 
+  LitInt(0) <= n#0 ==> _module.__default.prime#requires(n#0) == true);
+
+// #requires ==> #canCall for _module.__default.prime
+axiom (forall n#0: int :: 
+  { _module.__default.prime#requires(n#0) } 
+  _module.__default.prime#requires(n#0) ==> _module.__default.prime#canCall(n#0));
+
+// definition axiom for _module.__default.prime (revealed)
+axiom {:id "id0"} (forall n#0: int :: 
+  { _module.__default.prime(n#0) } 
+  _module.__default.prime#canCall(n#0)
+     ==> _module.__default.prime(n#0)
+       == (n#0 > 1
+         && (forall nr#0: int :: 
+          { Mod(n#0, nr#0) } 
+          1 < nr#0 && nr#0 < n#0 ==> Mod(n#0, nr#0) != 0)));
+
+// definition axiom for _module.__default.prime for all literals (revealed)
+axiom {:id "id1"} (forall n#0: int :: 
+  {:weight 3} { _module.__default.prime(LitInt(n#0)) } 
+  _module.__default.prime#canCall(LitInt(n#0))
+     ==> _module.__default.prime(LitInt(n#0))
+       == (n#0 > 1
+         && (forall nr#1: int :: 
+          { Mod(n#0, nr#1) } 
+          1 < nr#1 && nr#1 < n#0 ==> Mod(n#0, nr#1) != 0)));
+
+procedure {:verboseName "prime (well-formedness)"} CheckWellformed$$_module.__default.prime(n#0: int where LitInt(0) <= n#0);
   modifies $Heap;
 
 
 
-procedure {:verboseName "Abs (call)"} Call$$_module.__default.Abs(x#0: int) returns (y#0: int);
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "prime (well-formedness)"} CheckWellformed$$_module.__default.prime(n#0: int)
+{
+  var $_ReadsFrame: [ref,Field]bool;
+  var nr#2: int;
+
+
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(2,16): initial state"} true;
+    $_ReadsFrame := (lambda $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
+    // Check well-formedness of preconditions, and then assume them
+    // Check well-formedness of the reads clause
+    // Check well-formedness of the decreases clause
+    // Check body and ensures clauses
+    if (*)
+    {
+        // Check well-formedness of postcondition and assume false
+        assume false;
+    }
+    else
+    {
+        // Check well-formedness of body and result subset type constraint
+        if (n#0 > 1)
+        {
+            // Begin Comprehension WF check
+            havoc nr#2;
+            if (true)
+            {
+                if (1 < nr#2)
+                {
+                }
+
+                if (1 < nr#2 && nr#2 < n#0)
+                {
+                    assert {:id "id2"} nr#2 != 0;
+                }
+            }
+
+            // End Comprehension WF check
+            assume true;
+        }
+
+        assume true;
+        assume {:id "id3"} _module.__default.prime(n#0)
+           == (n#0 > 1
+             && (forall nr#3: int :: 
+              { Mod(n#0, nr#3) } 
+              1 < nr#3 && nr#3 < n#0 ==> Mod(n#0, nr#3) != 0));
+        // CheckWellformedWithResult: any expression
+        assume $Is(_module.__default.prime(n#0), TBool);
+        return;
+
+        assume false;
+    }
+}
+
+
+
+procedure {:verboseName "testingMethod (well-formedness)"} CheckWellFormed$$_module.__default.testingMethod();
   modifies $Heap;
-  // user-defined postconditions
-  free ensures {:always_assume} true;
-  ensures {:id "id6"} x#0 >= LitInt(0) ==> x#0 == y#0;
-  free ensures {:always_assume} true;
-  ensures {:id "id7"} x#0 < 0 ==> x#0 + y#0 == LitInt(0);
+
+
+
+procedure {:verboseName "testingMethod (call)"} Call$$_module.__default.testingMethod();
+  modifies $Heap;
   // frame condition: object granularity
   free ensures (forall $o: ref :: 
     { $Heap[$o] } 
@@ -2941,13 +3035,8 @@ procedure {:verboseName "Abs (call)"} Call$$_module.__default.Abs(x#0: int) retu
 
 
 
-procedure {:verboseName "Abs (correctness)"} Impl$$_module.__default.Abs(x#0: int) returns (defass#y#0: bool, y#0: int, $_reverifyPost: bool);
+procedure {:verboseName "testingMethod (correctness)"} Impl$$_module.__default.testingMethod() returns ($_reverifyPost: bool);
   modifies $Heap;
-  // user-defined postconditions
-  free ensures {:always_assume} true;
-  ensures {:id "id8"} x#0 >= LitInt(0) ==> x#0 == y#0;
-  free ensures {:always_assume} true;
-  ensures {:id "id9"} x#0 < 0 ==> x#0 + y#0 == LitInt(0);
   // frame condition: object granularity
   free ensures (forall $o: ref :: 
     { $Heap[$o] } 
@@ -2958,114 +3047,2098 @@ procedure {:verboseName "Abs (correctness)"} Impl$$_module.__default.Abs(x#0: in
 
 
 
-implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "Abs (correctness)"} Impl$$_module.__default.Abs(x#0: int) returns (defass#y#0: bool, y#0: int, $_reverifyPost: bool)
+function Tclass._module.PrimeMap() : Ty
+uses {
+// Tclass._module.PrimeMap Tag
+axiom Tag(Tclass._module.PrimeMap()) == Tagclass._module.PrimeMap
+   && TagFamily(Tclass._module.PrimeMap()) == tytagFamily$PrimeMap;
+}
+
+const unique Tagclass._module.PrimeMap: TyTag;
+
+// Box/unbox axiom for Tclass._module.PrimeMap
+axiom (forall bx: Box :: 
+  { $IsBox(bx, Tclass._module.PrimeMap()) } 
+  $IsBox(bx, Tclass._module.PrimeMap())
+     ==> $Box($Unbox(bx): ref) == bx && $Is($Unbox(bx): ref, Tclass._module.PrimeMap()));
+
+function Tclass._module.Answer() : Ty
+uses {
+// Tclass._module.Answer Tag
+axiom Tag(Tclass._module.Answer()) == Tagclass._module.Answer
+   && TagFamily(Tclass._module.Answer()) == tytagFamily$Answer;
+}
+
+const unique Tagclass._module.Answer: TyTag;
+
+// Box/unbox axiom for Tclass._module.Answer
+axiom (forall bx: Box :: 
+  { $IsBox(bx, Tclass._module.Answer()) } 
+  $IsBox(bx, Tclass._module.Answer())
+     ==> $Box($Unbox(bx): DatatypeType) == bx
+       && $Is($Unbox(bx): DatatypeType, Tclass._module.Answer()));
+
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "testingMethod (correctness)"} Impl$$_module.__default.testingMethod() returns ($_reverifyPost: bool)
 {
   var $_ModifiesFrame: [ref,Field]bool;
-  var ##a#2_0: int;
+  var nr#0: int;
+  var nr#2: int;
+  var nr#4: int;
+  var defass#pm#0: bool;
+  var pm#0: ref
+     where defass#pm#0
+       ==> $Is(pm#0, Tclass._module.PrimeMap())
+         && $IsAlloc(pm#0, Tclass._module.PrimeMap(), $Heap);
+  var $nw: ref;
+  var n##0: int;
+  var n##1: int;
+  var n##2: int;
+  var result#0: DatatypeType
+     where $Is(result#0, Tclass._module.Answer())
+       && $IsAlloc(result#0, Tclass._module.Answer(), $Heap);
+  var $rhs##0: DatatypeType;
+  var n##3: int;
+  var result2#0: DatatypeType
+     where $Is(result2#0, Tclass._module.Answer())
+       && $IsAlloc(result2#0, Tclass._module.Answer(), $Heap);
+  var $rhs##1: DatatypeType;
+  var n##4: int;
+  var result3#0: DatatypeType
+     where $Is(result3#0, Tclass._module.Answer())
+       && $IsAlloc(result3#0, Tclass._module.Answer(), $Heap);
+  var $rhs##2: DatatypeType;
+  var n##5: int;
+  var result4#0: DatatypeType
+     where $Is(result4#0, Tclass._module.Answer())
+       && $IsAlloc(result4#0, Tclass._module.Answer(), $Heap);
+  var $rhs##3: DatatypeType;
+  var n##6: int;
 
-    // AddMethodImpl: Abs, Impl$$_module.__default.Abs
+    // AddMethodImpl: testingMethod, Impl$$_module.__default.testingMethod
     $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
       $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
-    assume {:captureState "_USECASE_find_irrelevant_lines_for_proof.dfy(4,0): initial state"} true;
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(94,23): initial state"} true;
     $_reverifyPost := false;
-    // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_USECASE_find_irrelevant_lines_for_proof.dfy(5,3)
+    // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(98,3)
+    // Begin Comprehension WF check
+    havoc nr#0;
+    if (true)
+    {
+        if (1 < nr#0)
+        {
+        }
+
+        if (1 < nr#0 && nr#0 < 15)
+        {
+            assert {:id "id4"} {:subsumption 0} nr#0 != 0;
+        }
+    }
+
+    // End Comprehension WF check
     assume true;
-    if (x#0 == LitInt(0))
+    if (!(forall nr#1: int :: 
+      { Mod(15, nr#1) } 
+      1 < nr#1 && nr#1 < 15 ==> Mod(15, nr#1) != 0))
+    {
+        // Begin Comprehension WF check
+        havoc nr#2;
+        if (true)
+        {
+            if (1 < nr#2)
+            {
+            }
+
+            if (1 < nr#2 && nr#2 < 15)
+            {
+                assert {:id "id5"} {:subsumption 0} nr#2 != 0;
+            }
+        }
+
+        // End Comprehension WF check
+        assume true;
+    }
+
+    assume true;
+    assert {:id "id6"} {:subsumption 0} !(forall nr#1: int :: 
+        { Mod(15, nr#1) } 
+        1 < nr#1 && nr#1 < 15 ==> Mod(15, nr#1) != 0)
+       ==> (exists nr#3: int :: 
+        { Mod(15, nr#3) } 
+        1 < nr#3 && nr#3 < 15 && Mod(15, nr#3) == LitInt(0));
+    assume {:id "id7"} !(forall nr#1: int :: 
+        { Mod(15, nr#1) } 
+        1 < nr#1 && nr#1 < 15 ==> Mod(15, nr#1) != 0)
+       ==> (exists nr#3: int :: 
+        { Mod(15, nr#3) } 
+        1 < nr#3 && nr#3 < 15 && Mod(15, nr#3) == LitInt(0));
+    // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(99,3)
+    assert {:id "id8"} {:subsumption 0} LitInt(3) != 0;
+    assume true;
+    assert {:id "id9"} LitInt(Mod(15, LitInt(3))) == LitInt(0);
+    // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(100,3)
+    // Begin Comprehension WF check
+    havoc nr#4;
+    if (true)
+    {
+        if (1 < nr#4)
+        {
+        }
+
+        if (1 < nr#4 && nr#4 < 15)
+        {
+            assert {:id "id10"} {:subsumption 0} nr#4 != 0;
+        }
+    }
+
+    // End Comprehension WF check
+    assume true;
+    assume true;
+    assert {:id "id11"} (exists nr#5: int :: 
+      { Mod(15, nr#5) } 
+      1 < nr#5 && nr#5 < 15 && Mod(15, nr#5) == LitInt(0));
+    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(102,10)
+    assume true;
+    // ----- init call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(102,13)
+    // TrCallStmt: Before ProcessCallStmt
+    call {:id "id12"} $nw := Call$$_module.PrimeMap.__ctor();
+    // TrCallStmt: After ProcessCallStmt
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(102,26)"} true;
+    pm#0 := $nw;
+    defass#pm#0 := true;
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(102,26)"} true;
+    // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(105,17)
+    // TrCallStmt: Before ProcessCallStmt
+    assert {:id "id14"} defass#pm#0;
+    assume true;
+    assert {:id "id15"} pm#0 != null;
+    assume true;
+    // ProcessCallStmt: CheckSubrange
+    assert {:id "id16"} $Is(LitInt(13), Tclass._System.nat());
+    n##0 := LitInt(13);
+    assume true;
+    assert {:id "id17"} (forall $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool && $o == pm#0
+         ==> $_ModifiesFrame[$o, $f]);
+    call {:id "id18"} Call$$_module.PrimeMap.InsertPrime(pm#0, n##0);
+    // TrCallStmt: After ProcessCallStmt
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(105,20)"} true;
+    // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(107,18)
+    // TrCallStmt: Before ProcessCallStmt
+    assert {:id "id19"} defass#pm#0;
+    assume true;
+    assert {:id "id20"} pm#0 != null;
+    assume true;
+    // ProcessCallStmt: CheckSubrange
+    assert {:id "id21"} $Is(LitInt(17), Tclass._System.nat());
+    n##1 := LitInt(17);
+    assume true;
+    assert {:id "id22"} (forall $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool && $o == pm#0
+         ==> $_ModifiesFrame[$o, $f]);
+    call {:id "id23"} Call$$_module.PrimeMap.InsertNumber(pm#0, n##1);
+    // TrCallStmt: After ProcessCallStmt
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(107,21)"} true;
+    // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(108,18)
+    // TrCallStmt: Before ProcessCallStmt
+    assert {:id "id24"} defass#pm#0;
+    assume true;
+    assert {:id "id25"} pm#0 != null;
+    assume true;
+    // ProcessCallStmt: CheckSubrange
+    assert {:id "id26"} $Is(LitInt(15), Tclass._System.nat());
+    n##2 := LitInt(15);
+    assume true;
+    assert {:id "id27"} (forall $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool && $o == pm#0
+         ==> $_ModifiesFrame[$o, $f]);
+    call {:id "id28"} Call$$_module.PrimeMap.InsertNumber(pm#0, n##2);
+    // TrCallStmt: After ProcessCallStmt
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(108,21)"} true;
+    // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(110,3)
+    assert {:id "id29"} defass#pm#0;
+    assert {:id "id30"} {:subsumption 0} pm#0 != null;
+    assume true;
+    assume true;
+    assume true;
+    assert {:id "id31"} Set#Equal(Map#Domain($Unbox(read($Heap, pm#0, _module.PrimeMap.database)): Map), 
+      Set#UnionOne(Set#UnionOne(Set#UnionOne(Set#Empty(): Set, $Box(LitInt(17))), $Box(LitInt(15))), 
+        $Box(LitInt(13))));
+    // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(112,36)
+    assume true;
+    // TrCallStmt: Adding lhs with type Answer
+    // TrCallStmt: Before ProcessCallStmt
+    assert {:id "id32"} defass#pm#0;
+    assume true;
+    assert {:id "id33"} pm#0 != null;
+    assume true;
+    // ProcessCallStmt: CheckSubrange
+    assert {:id "id34"} $Is(LitInt(17), Tclass._System.nat());
+    n##3 := LitInt(17);
+    assume true;
+    assert {:id "id35"} (forall $o: ref, $f: Field :: 
+      $o != null
+           && $Unbox(read($Heap, $o, alloc)): bool
+           && Set#IsMember($Unbox(read($Heap, pm#0, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $_ModifiesFrame[$o, $f]);
+    call {:id "id36"} $rhs##0 := Call$$_module.PrimeMap.IsPrime_q(pm#0, n##3);
+    // TrCallStmt: After ProcessCallStmt
+    result#0 := $rhs##0;
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(112,39)"} true;
+    // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(113,3)
+    assume $IsA#_module.Answer(result#0);
+    assert {:id "id38"} _module.Answer#Equal(result#0, #_module.Answer.Yes());
+    // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(115,37)
+    assume true;
+    // TrCallStmt: Adding lhs with type Answer
+    // TrCallStmt: Before ProcessCallStmt
+    assert {:id "id39"} defass#pm#0;
+    assume true;
+    assert {:id "id40"} pm#0 != null;
+    assume true;
+    // ProcessCallStmt: CheckSubrange
+    assert {:id "id41"} $Is(LitInt(15), Tclass._System.nat());
+    n##4 := LitInt(15);
+    assume true;
+    assert {:id "id42"} (forall $o: ref, $f: Field :: 
+      $o != null
+           && $Unbox(read($Heap, $o, alloc)): bool
+           && Set#IsMember($Unbox(read($Heap, pm#0, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $_ModifiesFrame[$o, $f]);
+    call {:id "id43"} $rhs##1 := Call$$_module.PrimeMap.IsPrime_q(pm#0, n##4);
+    // TrCallStmt: After ProcessCallStmt
+    result2#0 := $rhs##1;
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(115,40)"} true;
+    // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(116,3)
+    assume $IsA#_module.Answer(result2#0);
+    assert {:id "id45"} _module.Answer#Equal(result2#0, #_module.Answer.No());
+    // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(118,37)
+    assume true;
+    // TrCallStmt: Adding lhs with type Answer
+    // TrCallStmt: Before ProcessCallStmt
+    assert {:id "id46"} defass#pm#0;
+    assume true;
+    assert {:id "id47"} pm#0 != null;
+    assume true;
+    // ProcessCallStmt: CheckSubrange
+    assert {:id "id48"} $Is(LitInt(454), Tclass._System.nat());
+    n##5 := LitInt(454);
+    assume true;
+    assert {:id "id49"} (forall $o: ref, $f: Field :: 
+      $o != null
+           && $Unbox(read($Heap, $o, alloc)): bool
+           && Set#IsMember($Unbox(read($Heap, pm#0, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $_ModifiesFrame[$o, $f]);
+    call {:id "id50"} $rhs##2 := Call$$_module.PrimeMap.IsPrime_q(pm#0, n##5);
+    // TrCallStmt: After ProcessCallStmt
+    result3#0 := $rhs##2;
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(118,41)"} true;
+    // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(119,3)
+    assume $IsA#_module.Answer(result3#0);
+    assert {:id "id52"} _module.Answer#Equal(result3#0, #_module.Answer.Unknown());
+    // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(121,37)
+    assume true;
+    // TrCallStmt: Adding lhs with type Answer
+    // TrCallStmt: Before ProcessCallStmt
+    assert {:id "id53"} defass#pm#0;
+    assume true;
+    assert {:id "id54"} pm#0 != null;
+    assume true;
+    // ProcessCallStmt: CheckSubrange
+    assert {:id "id55"} $Is(LitInt(13), Tclass._System.nat());
+    n##6 := LitInt(13);
+    assume true;
+    assert {:id "id56"} (forall $o: ref, $f: Field :: 
+      $o != null
+           && $Unbox(read($Heap, $o, alloc)): bool
+           && Set#IsMember($Unbox(read($Heap, pm#0, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $_ModifiesFrame[$o, $f]);
+    call {:id "id57"} $rhs##3 := Call$$_module.PrimeMap.IsPrime_q(pm#0, n##6);
+    // TrCallStmt: After ProcessCallStmt
+    result4#0 := $rhs##3;
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(121,40)"} true;
+    // ----- assert statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(122,3)
+    assume $IsA#_module.Answer(result4#0);
+    assert {:id "id59"} _module.Answer#Equal(result4#0, #_module.Answer.Yes());
+}
+
+
+
+// Constructor function declaration
+function #_module.Answer.Yes() : DatatypeType
+uses {
+// Constructor identifier
+axiom DatatypeCtorId(#_module.Answer.Yes()) == ##_module.Answer.Yes;
+// Constructor $Is
+axiom $Is(#_module.Answer.Yes(), Tclass._module.Answer());
+// Constructor literal
+axiom #_module.Answer.Yes() == Lit(#_module.Answer.Yes());
+}
+
+const unique ##_module.Answer.Yes: DtCtorId
+uses {
+// Constructor identifier
+axiom DatatypeCtorId(#_module.Answer.Yes()) == ##_module.Answer.Yes;
+}
+
+function _module.Answer.Yes_q(DatatypeType) : bool;
+
+// Questionmark and identifier
+axiom (forall d: DatatypeType :: 
+  { _module.Answer.Yes_q(d) } 
+  _module.Answer.Yes_q(d) <==> DatatypeCtorId(d) == ##_module.Answer.Yes);
+
+// Constructor questionmark has arguments
+axiom (forall d: DatatypeType :: 
+  { _module.Answer.Yes_q(d) } 
+  _module.Answer.Yes_q(d) ==> d == #_module.Answer.Yes());
+
+// Constructor function declaration
+function #_module.Answer.No() : DatatypeType
+uses {
+// Constructor identifier
+axiom DatatypeCtorId(#_module.Answer.No()) == ##_module.Answer.No;
+// Constructor $Is
+axiom $Is(#_module.Answer.No(), Tclass._module.Answer());
+// Constructor literal
+axiom #_module.Answer.No() == Lit(#_module.Answer.No());
+}
+
+const unique ##_module.Answer.No: DtCtorId
+uses {
+// Constructor identifier
+axiom DatatypeCtorId(#_module.Answer.No()) == ##_module.Answer.No;
+}
+
+function _module.Answer.No_q(DatatypeType) : bool;
+
+// Questionmark and identifier
+axiom (forall d: DatatypeType :: 
+  { _module.Answer.No_q(d) } 
+  _module.Answer.No_q(d) <==> DatatypeCtorId(d) == ##_module.Answer.No);
+
+// Constructor questionmark has arguments
+axiom (forall d: DatatypeType :: 
+  { _module.Answer.No_q(d) } 
+  _module.Answer.No_q(d) ==> d == #_module.Answer.No());
+
+// Constructor function declaration
+function #_module.Answer.Unknown() : DatatypeType
+uses {
+// Constructor identifier
+axiom DatatypeCtorId(#_module.Answer.Unknown()) == ##_module.Answer.Unknown;
+// Constructor $Is
+axiom $Is(#_module.Answer.Unknown(), Tclass._module.Answer());
+// Constructor literal
+axiom #_module.Answer.Unknown() == Lit(#_module.Answer.Unknown());
+}
+
+const unique ##_module.Answer.Unknown: DtCtorId
+uses {
+// Constructor identifier
+axiom DatatypeCtorId(#_module.Answer.Unknown()) == ##_module.Answer.Unknown;
+}
+
+function _module.Answer.Unknown_q(DatatypeType) : bool;
+
+// Questionmark and identifier
+axiom (forall d: DatatypeType :: 
+  { _module.Answer.Unknown_q(d) } 
+  _module.Answer.Unknown_q(d) <==> DatatypeCtorId(d) == ##_module.Answer.Unknown);
+
+// Constructor questionmark has arguments
+axiom (forall d: DatatypeType :: 
+  { _module.Answer.Unknown_q(d) } 
+  _module.Answer.Unknown_q(d) ==> d == #_module.Answer.Unknown());
+
+// Datatype $IsAlloc
+axiom (forall d: DatatypeType, $h: Heap :: 
+  { $IsAlloc(d, Tclass._module.Answer(), $h) } 
+  $IsGoodHeap($h) && $Is(d, Tclass._module.Answer())
+     ==> $IsAlloc(d, Tclass._module.Answer(), $h));
+
+// Depth-one case-split function
+function $IsA#_module.Answer(DatatypeType) : bool;
+
+// Depth-one case-split axiom
+axiom (forall d: DatatypeType :: 
+  { $IsA#_module.Answer(d) } 
+  $IsA#_module.Answer(d)
+     ==> _module.Answer.Yes_q(d) || _module.Answer.No_q(d) || _module.Answer.Unknown_q(d));
+
+// Questionmark data type disjunctivity
+axiom (forall d: DatatypeType :: 
+  { _module.Answer.Unknown_q(d), $Is(d, Tclass._module.Answer()) } 
+    { _module.Answer.No_q(d), $Is(d, Tclass._module.Answer()) } 
+    { _module.Answer.Yes_q(d), $Is(d, Tclass._module.Answer()) } 
+  $Is(d, Tclass._module.Answer())
+     ==> _module.Answer.Yes_q(d) || _module.Answer.No_q(d) || _module.Answer.Unknown_q(d));
+
+// Datatype extensional equality declaration
+function _module.Answer#Equal(DatatypeType, DatatypeType) : bool;
+
+// Datatype extensional equality definition: #_module.Answer.Yes
+axiom (forall a: DatatypeType, b: DatatypeType :: 
+  { _module.Answer#Equal(a, b), _module.Answer.Yes_q(a) } 
+    { _module.Answer#Equal(a, b), _module.Answer.Yes_q(b) } 
+  _module.Answer.Yes_q(a) && _module.Answer.Yes_q(b)
+     ==> _module.Answer#Equal(a, b));
+
+// Datatype extensional equality definition: #_module.Answer.No
+axiom (forall a: DatatypeType, b: DatatypeType :: 
+  { _module.Answer#Equal(a, b), _module.Answer.No_q(a) } 
+    { _module.Answer#Equal(a, b), _module.Answer.No_q(b) } 
+  _module.Answer.No_q(a) && _module.Answer.No_q(b) ==> _module.Answer#Equal(a, b));
+
+// Datatype extensional equality definition: #_module.Answer.Unknown
+axiom (forall a: DatatypeType, b: DatatypeType :: 
+  { _module.Answer#Equal(a, b), _module.Answer.Unknown_q(a) } 
+    { _module.Answer#Equal(a, b), _module.Answer.Unknown_q(b) } 
+  _module.Answer.Unknown_q(a) && _module.Answer.Unknown_q(b)
+     ==> _module.Answer#Equal(a, b));
+
+// Datatype extensionality axiom: _module.Answer
+axiom (forall a: DatatypeType, b: DatatypeType :: 
+  { _module.Answer#Equal(a, b) } 
+  _module.Answer#Equal(a, b) <==> a == b);
+
+const unique class._module.Answer: ClassName;
+
+const unique class._module.PrimeMap?: ClassName;
+
+function Tclass._module.PrimeMap?() : Ty
+uses {
+// Tclass._module.PrimeMap? Tag
+axiom Tag(Tclass._module.PrimeMap?()) == Tagclass._module.PrimeMap?
+   && TagFamily(Tclass._module.PrimeMap?()) == tytagFamily$PrimeMap;
+}
+
+const unique Tagclass._module.PrimeMap?: TyTag;
+
+// Box/unbox axiom for Tclass._module.PrimeMap?
+axiom (forall bx: Box :: 
+  { $IsBox(bx, Tclass._module.PrimeMap?()) } 
+  $IsBox(bx, Tclass._module.PrimeMap?())
+     ==> $Box($Unbox(bx): ref) == bx && $Is($Unbox(bx): ref, Tclass._module.PrimeMap?()));
+
+// $Is axiom for class PrimeMap
+axiom (forall $o: ref :: 
+  { $Is($o, Tclass._module.PrimeMap?()) } 
+  $Is($o, Tclass._module.PrimeMap?())
+     <==> $o == null || dtype($o) == Tclass._module.PrimeMap?());
+
+// $IsAlloc axiom for class PrimeMap
+axiom (forall $o: ref, $h: Heap :: 
+  { $IsAlloc($o, Tclass._module.PrimeMap?(), $h) } 
+  $IsAlloc($o, Tclass._module.PrimeMap?(), $h)
+     <==> $o == null || $Unbox(read($h, $o, alloc)): bool);
+
+const _module.PrimeMap.database: Field
+uses {
+axiom FDim(_module.PrimeMap.database) == 0
+   && FieldOfDecl(class._module.PrimeMap?, field$database)
+     == _module.PrimeMap.database
+   && !$IsGhostField(_module.PrimeMap.database);
+}
+
+// PrimeMap.database: Type axiom
+axiom (forall $h: Heap, $o: ref :: 
+  { $Unbox(read($h, $o, _module.PrimeMap.database)): Map } 
+  $IsGoodHeap($h) && $o != null && dtype($o) == Tclass._module.PrimeMap?()
+     ==> $Is($Unbox(read($h, $o, _module.PrimeMap.database)): Map, 
+      TMap(Tclass._System.nat(), TBool)));
+
+// PrimeMap.database: Allocation axiom
+axiom (forall $h: Heap, $o: ref :: 
+  { $Unbox(read($h, $o, _module.PrimeMap.database)): Map } 
+  $IsGoodHeap($h)
+       && 
+      $o != null
+       && dtype($o) == Tclass._module.PrimeMap?()
+       && $Unbox(read($h, $o, alloc)): bool
+     ==> $IsAlloc($Unbox(read($h, $o, _module.PrimeMap.database)): Map, 
+      TMap(Tclass._System.nat(), TBool), 
+      $h));
+
+// function declaration for _module.PrimeMap.Valid
+function _module.PrimeMap.Valid($heap: Heap, this: ref) : bool;
+
+function _module.PrimeMap.Valid#canCall($heap: Heap, this: ref) : bool;
+
+// frame axiom for _module.PrimeMap.Valid
+axiom (forall $h0: Heap, $h1: Heap, this: ref :: 
+  { $IsHeapAnchor($h0), $HeapSucc($h0, $h1), _module.PrimeMap.Valid($h1, this) } 
+  $IsGoodHeap($h0)
+       && $IsGoodHeap($h1)
+       && 
+      this != null
+       && $Is(this, Tclass._module.PrimeMap())
+       && 
+      $IsHeapAnchor($h0)
+       && $HeapSucc($h0, $h1)
+     ==> 
+    (forall $o: ref, $f: Field :: 
+      $o != null
+           && (
+            $o == this
+             || $o == this
+             || Set#IsMember($Unbox(read($h0, this, _module.PrimeMap.Repr)): Set, $Box($o)))
+         ==> read($h0, $o, $f) == read($h1, $o, $f))
+     ==> _module.PrimeMap.Valid($h0, this) == _module.PrimeMap.Valid($h1, this)
+       && _module.PrimeMap.Valid#canCall($h0, this)
+         == _module.PrimeMap.Valid#canCall($h1, this));
+
+// consequence axiom for _module.PrimeMap.Valid
+axiom (forall $Heap: Heap, this: ref :: 
+  { _module.PrimeMap.Valid($Heap, this) } 
+  _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid#canCall($Heap, this)
+       && (_module.PrimeMap.Valid($Heap, this)
+         ==> Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))));
+
+function _module.PrimeMap.Valid#requires(Heap, ref) : bool;
+
+// #requires axiom for _module.PrimeMap.Valid
+axiom (forall $Heap: Heap, this: ref :: 
+  { _module.PrimeMap.Valid#requires($Heap, this), $IsGoodHeap($Heap) } 
+  $IsGoodHeap($Heap)
+       && 
+      this != null
+       && 
+      $Is(this, Tclass._module.PrimeMap())
+       && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap)
+     ==> _module.PrimeMap.Valid#requires($Heap, this) == true);
+
+// #requires ==> #canCall for _module.PrimeMap.Valid
+axiom (forall $Heap: Heap, this: ref :: 
+  { _module.PrimeMap.Valid#requires($Heap, this), $IsGoodHeap($Heap) } 
+  _module.PrimeMap.Valid#requires($Heap, this)
+     ==> _module.PrimeMap.Valid#canCall($Heap, this));
+
+// definition axiom for _module.PrimeMap.Valid (revealed)
+axiom {:id "id60"} (forall $Heap: Heap, this: ref :: 
+  { _module.PrimeMap.Valid($Heap, this), $IsGoodHeap($Heap) } 
+  _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> (Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+         ==> 
+        !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+         ==> (forall i#0: int :: 
+          { _module.__default.prime(i#0) } 
+            { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)] } 
+            { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0)) } 
+          LitInt(0) <= i#0
+             ==> 
+            Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0))
+             ==> _module.__default.prime#canCall(i#0)))
+       && _module.PrimeMap.Valid($Heap, this)
+         == (
+          Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+           && !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+           && (forall i#0: int :: 
+            { _module.__default.prime(i#0) } 
+              { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)] } 
+              { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0)) } 
+            LitInt(0) <= i#0
+                 && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0))
+               ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)]): bool
+                   == Lit(true)
+                 <==> _module.__default.prime(i#0)))));
+
+procedure {:verboseName "PrimeMap.Valid (well-formedness)"} CheckWellformed$$_module.PrimeMap.Valid(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap));
+  modifies $Heap;
+  free ensures {:always_assume} this == this || _module.PrimeMap.Valid#canCall($Heap, this);
+  ensures {:id "id61"} _module.PrimeMap.Valid($Heap, this)
+     ==> Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this));
+
+
+
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "PrimeMap.Valid (well-formedness)"} CheckWellformed$$_module.PrimeMap.Valid(this: ref)
+{
+  var $_ReadsFrame: [ref,Field]bool;
+  var b$reqreads#0: bool;
+  var newtype$check#0: ref;
+  var i#1: int;
+  var ##n#0: int;
+  var b$reqreads#1: bool;
+  var b$reqreads#2: bool;
+  var b$reqreads#3: bool;
+  var b$reqreads#4: bool;
+
+    b$reqreads#0 := true;
+    b$reqreads#1 := true;
+    b$reqreads#2 := true;
+    b$reqreads#3 := true;
+    b$reqreads#4 := true;
+
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(15,18): initial state"} true;
+    $_ReadsFrame := (lambda $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool
+         ==> $o == this
+           || $o == this
+           || Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o)));
+    // Check well-formedness of preconditions, and then assume them
+    // Check well-formedness of the reads clause
+    b$reqreads#0 := $_ReadsFrame[this, _module.PrimeMap.Repr];
+    assume true;
+    assert {:id "id62"} b$reqreads#0;
+    // Check well-formedness of the decreases clause
+    assume true;
+    // Check body and ensures clauses
+    if (*)
+    {
+        // Check well-formedness of postcondition and assume false
+        if (*)
+        {
+            // assume allocatedness for receiver argument to function
+            assume $IsAllocBox($Box(this), Tclass._module.PrimeMap?(), $Heap);
+            assume true;
+            assert {:id "id63"} this == this
+               || (Set#Subset(Set#Union($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, 
+                    Set#UnionOne(Set#UnionOne(Set#Empty(): Set, $Box(this)), $Box(this))), 
+                  Set#Union($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, 
+                    Set#UnionOne(Set#UnionOne(Set#Empty(): Set, $Box(this)), $Box(this))))
+                 && !Set#Subset(Set#Union($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, 
+                    Set#UnionOne(Set#UnionOne(Set#Empty(): Set, $Box(this)), $Box(this))), 
+                  Set#Union($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, 
+                    Set#UnionOne(Set#UnionOne(Set#Empty(): Set, $Box(this)), $Box(this)))));
+            assume this == this || _module.PrimeMap.Valid#canCall($Heap, this);
+            assume {:id "id64"} _module.PrimeMap.Valid($Heap, this);
+            assume true;
+            assume {:id "id65"} Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this));
+        }
+        else
+        {
+            assume _module.PrimeMap.Valid#canCall($Heap, this);
+            assume {:id "id66"} _module.PrimeMap.Valid($Heap, this)
+               ==> Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this));
+        }
+
+        assume false;
+    }
+    else
+    {
+        // Check well-formedness of body and result subset type constraint
+        b$reqreads#1 := $_ReadsFrame[this, _module.PrimeMap.Repr];
+        assume true;
+        if (Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this)))
+        {
+            newtype$check#0 := null;
+            b$reqreads#2 := $_ReadsFrame[this, _module.PrimeMap.Repr];
+            assume true;
+        }
+
+        if (Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+           && !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null)))
+        {
+            // Begin Comprehension WF check
+            havoc i#1;
+            if (LitInt(0) <= i#1)
+            {
+                b$reqreads#3 := $_ReadsFrame[this, _module.PrimeMap.database];
+                assume true;
+                assume true;
+                if (Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1)))
+                {
+                    b$reqreads#4 := $_ReadsFrame[this, _module.PrimeMap.database];
+                    assume true;
+                    assert {:id "id67"} Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1));
+                    ##n#0 := i#1;
+                    // assume allocatedness for argument to function
+                    assume $IsAlloc(##n#0, Tclass._System.nat(), $Heap);
+                    assume _module.__default.prime#canCall(i#1);
+                }
+            }
+
+            // End Comprehension WF check
+            assume (forall i#2: int :: 
+              { _module.__default.prime(i#2) } 
+                { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#2)] } 
+                { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2)) } 
+              LitInt(0) <= i#2
+                 ==> 
+                Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2))
+                 ==> _module.__default.prime#canCall(i#2));
+        }
+
+        assume Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+           ==> 
+          !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+           ==> (forall i#2: int :: 
+            { _module.__default.prime(i#2) } 
+              { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#2)] } 
+              { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2)) } 
+            LitInt(0) <= i#2
+               ==> 
+              Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2))
+               ==> _module.__default.prime#canCall(i#2));
+        assume {:id "id68"} _module.PrimeMap.Valid($Heap, this)
+           == (
+            Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+             && !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+             && (forall i#2: int :: 
+              { _module.__default.prime(i#2) } 
+                { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#2)] } 
+                { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2)) } 
+              LitInt(0) <= i#2
+                   && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2))
+                 ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#2)]): bool
+                     == Lit(true)
+                   <==> _module.__default.prime(i#2))));
+        // CheckWellformedWithResult: any expression
+        assume $Is(_module.PrimeMap.Valid($Heap, this), TBool);
+        assert {:id "id69"} b$reqreads#1;
+        assert {:id "id70"} b$reqreads#2;
+        assert {:id "id71"} b$reqreads#3;
+        assert {:id "id72"} b$reqreads#4;
+        return;
+
+        assume false;
+    }
+}
+
+
+
+procedure {:verboseName "PrimeMap._ctor (well-formedness)"} CheckWellFormed$$_module.PrimeMap.__ctor() returns (this: ref);
+  modifies $Heap;
+
+
+
+procedure {:verboseName "PrimeMap._ctor (call)"} Call$$_module.PrimeMap.__ctor()
+   returns (this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap));
+  modifies $Heap;
+  // user-defined postconditions
+  free ensures {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  free ensures {:id "id76"} _module.PrimeMap.Valid#canCall($Heap, this)
+     && 
+    _module.PrimeMap.Valid($Heap, this)
+     && 
+    Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+     && !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+     && (forall i#0: int :: 
+      { _module.__default.prime(i#0) } 
+        { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)] } 
+        { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0)) } 
+      LitInt(0) <= i#0
+           && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0))
+         ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)]): bool
+             == Lit(true)
+           <==> _module.__default.prime(i#0)));
+  free ensures {:always_assume} true;
+  ensures {:id "id77"} (forall $o: ref :: 
+      { $o != null } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $o != null)
+     && (forall $o: ref :: 
+      { Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o)) } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> !$Unbox(read(old($Heap), $o, alloc)): bool);
+  free ensures {:always_assume} true;
+  ensures {:id "id78"} Map#Equal($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, Map#Empty(): Map);
+  // constructor allocates the object
+  ensures !$Unbox(read(old($Heap), this, alloc)): bool;
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o]);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+procedure {:verboseName "PrimeMap._ctor (correctness)"} Impl$$_module.PrimeMap.__ctor() returns (this: ref, $_reverifyPost: bool);
+  modifies $Heap;
+  // user-defined postconditions
+  free ensures {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  ensures {:id "id79"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this));
+  ensures {:id "id80"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null));
+  ensures {:id "id81"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || (forall i#1: int :: 
+        { _module.__default.prime(i#1) } 
+          { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#1)] } 
+          { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1)) } 
+        LitInt(0) <= i#1
+             && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1))
+           ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#1)]): bool
+               == Lit(true)
+             <==> _module.__default.prime(i#1)));
+  free ensures {:always_assume} true;
+  ensures {:id "id82"} (forall $o: ref :: 
+      { $o != null } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $o != null)
+     && (forall $o: ref :: 
+      { Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o)) } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> !$Unbox(read(old($Heap), $o, alloc)): bool);
+  free ensures {:always_assume} true;
+  ensures {:id "id83"} Map#Equal($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, Map#Empty(): Map);
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o]);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "PrimeMap._ctor (correctness)"} Impl$$_module.PrimeMap.__ctor() returns (this: ref, $_reverifyPost: bool)
+{
+  var $_ModifiesFrame: [ref,Field]bool;
+  var this.database: Map;
+  var this.Repr: Set;
+  var $rhs#0: Set;
+
+    // AddMethodImpl: _ctor, Impl$$_module.PrimeMap.__ctor
+    $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(24,2): initial state"} true;
+    $_reverifyPost := false;
+    // ----- divided block before new; ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(24,3)
+    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(25,14)
+    assume true;
+    assume true;
+    assume true;
+    this.database := Lit(Map#Empty(): Map);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(25,21)"} true;
+    // ----- new; ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(24,3)
+    assume this != null && $Is(this, Tclass._module.PrimeMap?());
+    assume !$Unbox(read($Heap, this, alloc)): bool;
+    assume $Unbox(read($Heap, this, _module.PrimeMap.database)): Map == this.database;
+    assume $Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set == this.Repr;
+    $Heap := update($Heap, this, alloc, $Box(true));
+    assume $IsGoodHeap($Heap);
+    assume $IsHeapAnchor($Heap);
+    // ----- divided block after new; ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(24,3)
+    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(22,3)
+    assume true;
+    assume true;
+    assert {:id "id85"} $_ModifiesFrame[this, _module.PrimeMap.Repr];
+    assume true;
+    $rhs#0 := Set#UnionOne(Set#Empty(): Set, $Box(this));
+    $Heap := update($Heap, this, _module.PrimeMap.Repr, $Box($rhs#0));
+    assume $IsGoodHeap($Heap);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(26,2)"} true;
+}
+
+
+
+procedure {:verboseName "PrimeMap.InsertPrime (well-formedness)"} CheckWellFormed$$_module.PrimeMap.InsertPrime(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0);
+  modifies $Heap;
+
+
+
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "PrimeMap.InsertPrime (well-formedness)"} CheckWellFormed$$_module.PrimeMap.InsertPrime(this: ref, n#0: int)
+{
+  var $_ModifiesFrame: [ref,Field]bool;
+  var ##n#0: int;
+
+
+    // AddMethodImpl: InsertPrime, CheckWellFormed$$_module.PrimeMap.InsertPrime
+    $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> $o == this);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(29,9): initial state"} true;
+    // assume allocatedness for receiver argument to function
+    assume $IsAllocBox($Box(this), Tclass._module.PrimeMap?(), $Heap);
+    assume _module.PrimeMap.Valid#canCall($Heap, this);
+    assume {:id "id88"} _module.PrimeMap.Valid($Heap, this);
+    ##n#0 := n#0;
+    // assume allocatedness for argument to function
+    assume $IsAlloc(##n#0, Tclass._System.nat(), $Heap);
+    assume _module.__default.prime#canCall(n#0);
+    assume {:id "id89"} _module.__default.prime(n#0);
+    havoc $Heap;
+    assume (forall $o: ref :: 
+      { $Heap[$o] } 
+      $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+         ==> $Heap[$o] == old($Heap)[$o] || $o == this);
+    assume $HeapSucc(old($Heap), $Heap);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(29,9): post-state"} true;
+    // assume allocatedness for receiver argument to function
+    assume $IsAllocBox($Box(this), Tclass._module.PrimeMap?(), $Heap);
+    assume _module.PrimeMap.Valid#canCall($Heap, this);
+    assume {:id "id90"} _module.PrimeMap.Valid($Heap, this);
+    assume true;
+    assert {:id "id91"} $IsAlloc(this, Tclass._module.PrimeMap(), old($Heap));
+    assume true;
+    assume {:id "id92"} (forall $o: ref :: 
+        { $o != null } 
+        Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+             && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+           ==> $o != null)
+       && (forall $o: ref :: 
+        { $Unbox(read(old($Heap), $o, alloc)): bool } 
+        Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+             && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+           ==> !$Unbox(read(old($Heap), $o, alloc)): bool);
+    assume true;
+    assume true;
+    assert {:id "id93"} $IsAlloc(this, Tclass._module.PrimeMap(), old($Heap));
+    assume true;
+    assert {:id "id94"} $IsAlloc($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map, 
+      TMap(Tclass._System.nat(), TBool), 
+      old($Heap));
+    assume true;
+    assume {:id "id95"} Set#Equal(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), 
+      Set#Union(Map#Domain($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map), 
+        Set#UnionOne(Set#Empty(): Set, $Box(n#0))));
+    assume true;
+    assume true;
+    assume {:id "id96"} Map#Equal($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+      Map#Build($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+        $Box(n#0), 
+        $Box(Lit(true))));
+}
+
+
+
+procedure {:verboseName "PrimeMap.InsertPrime (call)"} Call$$_module.PrimeMap.InsertPrime(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0);
+  // user-defined preconditions
+  free requires {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  requires {:id "id97"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this));
+  requires {:id "id98"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null));
+  requires {:id "id99"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || (forall i#0: int :: 
+        { _module.__default.prime(i#0) } 
+          { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)] } 
+          { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0)) } 
+        LitInt(0) <= i#0
+             && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0))
+           ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)]): bool
+               == Lit(true)
+             <==> _module.__default.prime(i#0)));
+  free requires {:always_assume} _module.__default.prime#canCall(n#0);
+  requires {:id "id100"} _module.__default.prime#canCall(n#0) ==> _module.__default.prime(n#0) || n#0 > 1;
+  requires {:id "id101"} _module.__default.prime#canCall(n#0)
+     ==> _module.__default.prime(n#0)
+       || (forall nr#0: int :: 
+        { Mod(n#0, nr#0) } 
+        1 < nr#0 && nr#0 < n#0 ==> Mod(n#0, nr#0) != 0);
+  // user-defined frame expressions
+  free requires {:always_assume} true;
+  modifies $Heap;
+  // user-defined postconditions
+  free ensures {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  free ensures {:id "id102"} _module.PrimeMap.Valid#canCall($Heap, this)
+     && 
+    _module.PrimeMap.Valid($Heap, this)
+     && 
+    Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+     && !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+     && (forall i#1: int :: 
+      { _module.__default.prime(i#1) } 
+        { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#1)] } 
+        { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1)) } 
+      LitInt(0) <= i#1
+           && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1))
+         ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#1)]): bool
+             == Lit(true)
+           <==> _module.__default.prime(i#1)));
+  free ensures {:always_assume} true;
+  ensures {:id "id103"} (forall $o: ref :: 
+      { $o != null } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $o != null)
+     && (forall $o: ref :: 
+      { $Unbox(read(old($Heap), $o, alloc)): bool } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> !$Unbox(read(old($Heap), $o, alloc)): bool);
+  free ensures {:always_assume} true;
+  ensures {:id "id104"} Set#Equal(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), 
+    Set#Union(Map#Domain($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map), 
+      Set#UnionOne(Set#Empty(): Set, $Box(n#0))));
+  free ensures {:always_assume} true;
+  ensures {:id "id105"} Map#Equal($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+    Map#Build($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+      $Box(n#0), 
+      $Box(Lit(true))));
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o] || $o == this);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+procedure {:verboseName "PrimeMap.InsertPrime (correctness)"} Impl$$_module.PrimeMap.InsertPrime(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0)
+   returns ($_reverifyPost: bool);
+  // user-defined preconditions
+  free requires {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  free requires {:id "id106"} _module.PrimeMap.Valid#canCall($Heap, this)
+     && 
+    _module.PrimeMap.Valid($Heap, this)
+     && 
+    Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+     && !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+     && (forall i#2: int :: 
+      { _module.__default.prime(i#2) } 
+        { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#2)] } 
+        { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2)) } 
+      LitInt(0) <= i#2
+           && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2))
+         ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#2)]): bool
+             == Lit(true)
+           <==> _module.__default.prime(i#2)));
+  free requires {:always_assume} _module.__default.prime#canCall(n#0);
+  free requires {:id "id107"} _module.__default.prime#canCall(n#0)
+     && 
+    _module.__default.prime(n#0)
+     && 
+    n#0 > 1
+     && (forall nr#1: int :: 
+      { Mod(n#0, nr#1) } 
+      1 < nr#1 && nr#1 < n#0 ==> Mod(n#0, nr#1) != 0);
+  // user-defined frame expressions
+  free requires {:always_assume} true;
+  modifies $Heap;
+  // user-defined postconditions
+  free ensures {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  ensures {:id "id108"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this));
+  ensures {:id "id109"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null));
+  ensures {:id "id110"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || (forall i#3: int :: 
+        { _module.__default.prime(i#3) } 
+          { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#3)] } 
+          { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#3)) } 
+        LitInt(0) <= i#3
+             && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#3))
+           ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#3)]): bool
+               == Lit(true)
+             <==> _module.__default.prime(i#3)));
+  free ensures {:always_assume} true;
+  ensures {:id "id111"} (forall $o: ref :: 
+      { $o != null } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $o != null)
+     && (forall $o: ref :: 
+      { $Unbox(read(old($Heap), $o, alloc)): bool } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> !$Unbox(read(old($Heap), $o, alloc)): bool);
+  free ensures {:always_assume} true;
+  ensures {:id "id112"} Set#Equal(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), 
+    Set#Union(Map#Domain($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map), 
+      Set#UnionOne(Set#Empty(): Set, $Box(n#0))));
+  free ensures {:always_assume} true;
+  ensures {:id "id113"} Map#Equal($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+    Map#Build($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+      $Box(n#0), 
+      $Box(Lit(true))));
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o] || $o == this);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "PrimeMap.InsertPrime (correctness)"} Impl$$_module.PrimeMap.InsertPrime(this: ref, n#0: int) returns ($_reverifyPost: bool)
+{
+  var $_ModifiesFrame: [ref,Field]bool;
+  var $rhs#0: Map;
+
+    // AddMethodImpl: InsertPrime, Impl$$_module.PrimeMap.InsertPrime
+    $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> $o == this);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(34,2): initial state"} true;
+    $_reverifyPost := false;
+    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(35,14)
+    assume true;
+    assume true;
+    assert {:id "id114"} $_ModifiesFrame[this, _module.PrimeMap.database];
+    assume true;
+    assume true;
+    $rhs#0 := Map#Build($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+      $Box(n#0), 
+      $Box(Lit(true)));
+    $Heap := update($Heap, this, _module.PrimeMap.database, $Box($rhs#0));
+    assume $IsGoodHeap($Heap);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(35,35)"} true;
+}
+
+
+
+procedure {:verboseName "PrimeMap.InsertNumber (well-formedness)"} CheckWellFormed$$_module.PrimeMap.InsertNumber(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0);
+  modifies $Heap;
+
+
+
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "PrimeMap.InsertNumber (well-formedness)"} CheckWellFormed$$_module.PrimeMap.InsertNumber(this: ref, n#0: int)
+{
+  var $_ModifiesFrame: [ref,Field]bool;
+  var ##n#0: int;
+  var ##n#1: int;
+
+
+    // AddMethodImpl: InsertNumber, CheckWellFormed$$_module.PrimeMap.InsertNumber
+    $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> $o == this);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(39,9): initial state"} true;
+    // assume allocatedness for receiver argument to function
+    assume $IsAllocBox($Box(this), Tclass._module.PrimeMap?(), $Heap);
+    assume _module.PrimeMap.Valid#canCall($Heap, this);
+    assume {:id "id117"} _module.PrimeMap.Valid($Heap, this);
+    havoc $Heap;
+    assume (forall $o: ref :: 
+      { $Heap[$o] } 
+      $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+         ==> $Heap[$o] == old($Heap)[$o] || $o == this);
+    assume $HeapSucc(old($Heap), $Heap);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(39,9): post-state"} true;
+    // assume allocatedness for receiver argument to function
+    assume $IsAllocBox($Box(this), Tclass._module.PrimeMap?(), $Heap);
+    assume _module.PrimeMap.Valid#canCall($Heap, this);
+    assume {:id "id118"} _module.PrimeMap.Valid($Heap, this);
+    assume true;
+    assert {:id "id119"} $IsAlloc(this, Tclass._module.PrimeMap(), old($Heap));
+    assume true;
+    assume {:id "id120"} (forall $o: ref :: 
+        { $o != null } 
+        Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+             && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+           ==> $o != null)
+       && (forall $o: ref :: 
+        { $Unbox(read(old($Heap), $o, alloc)): bool } 
+        Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+             && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+           ==> !$Unbox(read(old($Heap), $o, alloc)): bool);
+    assume true;
+    assume true;
+    assert {:id "id121"} $IsAlloc(this, Tclass._module.PrimeMap(), old($Heap));
+    assume true;
+    assert {:id "id122"} $IsAlloc($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map, 
+      TMap(Tclass._System.nat(), TBool), 
+      old($Heap));
+    assume true;
+    assume {:id "id123"} Set#Equal(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), 
+      Set#Union(Map#Domain($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map), 
+        Set#UnionOne(Set#Empty(): Set, $Box(n#0))));
+    ##n#0 := n#0;
+    // assume allocatedness for argument to function
+    assume $IsAlloc(##n#0, Tclass._System.nat(), $Heap);
+    assume _module.__default.prime#canCall(n#0);
+    assume true;
+    assume true;
+    assume {:id "id124"} _module.__default.prime(n#0)
+       <==> Map#Equal($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+        Map#Build($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+          $Box(n#0), 
+          $Box(Lit(true))));
+    ##n#1 := n#0;
+    // assume allocatedness for argument to function
+    assume $IsAlloc(##n#1, Tclass._System.nat(), $Heap);
+    assume _module.__default.prime#canCall(n#0);
+    assume true;
+    assume true;
+    assume {:id "id125"} !_module.__default.prime(n#0)
+       <==> Map#Equal($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+        Map#Build($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+          $Box(n#0), 
+          $Box(Lit(false))));
+}
+
+
+
+procedure {:verboseName "PrimeMap.InsertNumber (call)"} Call$$_module.PrimeMap.InsertNumber(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0);
+  // user-defined preconditions
+  free requires {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  requires {:id "id126"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this));
+  requires {:id "id127"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null));
+  requires {:id "id128"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || (forall i#0: int :: 
+        { _module.__default.prime(i#0) } 
+          { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)] } 
+          { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0)) } 
+        LitInt(0) <= i#0
+             && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0))
+           ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)]): bool
+               == Lit(true)
+             <==> _module.__default.prime(i#0)));
+  // user-defined frame expressions
+  free requires {:always_assume} true;
+  modifies $Heap;
+  // user-defined postconditions
+  free ensures {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  free ensures {:id "id129"} _module.PrimeMap.Valid#canCall($Heap, this)
+     && 
+    _module.PrimeMap.Valid($Heap, this)
+     && 
+    Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+     && !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+     && (forall i#1: int :: 
+      { _module.__default.prime(i#1) } 
+        { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#1)] } 
+        { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1)) } 
+      LitInt(0) <= i#1
+           && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1))
+         ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#1)]): bool
+             == Lit(true)
+           <==> _module.__default.prime(i#1)));
+  free ensures {:always_assume} true;
+  ensures {:id "id130"} (forall $o: ref :: 
+      { $o != null } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $o != null)
+     && (forall $o: ref :: 
+      { $Unbox(read(old($Heap), $o, alloc)): bool } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> !$Unbox(read(old($Heap), $o, alloc)): bool);
+  free ensures {:always_assume} true;
+  ensures {:id "id131"} Set#Equal(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), 
+    Set#Union(Map#Domain($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map), 
+      Set#UnionOne(Set#Empty(): Set, $Box(n#0))));
+  free ensures {:always_assume} _module.__default.prime#canCall(n#0);
+  ensures {:id "id132"} _module.__default.prime(n#0)
+     <==> Map#Equal($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+      Map#Build($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+        $Box(n#0), 
+        $Box(Lit(true))));
+  free ensures {:always_assume} _module.__default.prime#canCall(n#0);
+  ensures {:id "id133"} !_module.__default.prime(n#0)
+     <==> Map#Equal($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+      Map#Build($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+        $Box(n#0), 
+        $Box(Lit(false))));
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o] || $o == this);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+procedure {:verboseName "PrimeMap.InsertNumber (correctness)"} Impl$$_module.PrimeMap.InsertNumber(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0)
+   returns ($_reverifyPost: bool);
+  // user-defined preconditions
+  free requires {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  free requires {:id "id134"} _module.PrimeMap.Valid#canCall($Heap, this)
+     && 
+    _module.PrimeMap.Valid($Heap, this)
+     && 
+    Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+     && !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+     && (forall i#2: int :: 
+      { _module.__default.prime(i#2) } 
+        { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#2)] } 
+        { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2)) } 
+      LitInt(0) <= i#2
+           && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2))
+         ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#2)]): bool
+             == Lit(true)
+           <==> _module.__default.prime(i#2)));
+  // user-defined frame expressions
+  free requires {:always_assume} true;
+  modifies $Heap;
+  // user-defined postconditions
+  free ensures {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  ensures {:id "id135"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this));
+  ensures {:id "id136"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null));
+  ensures {:id "id137"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || (forall i#3: int :: 
+        { _module.__default.prime(i#3) } 
+          { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#3)] } 
+          { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#3)) } 
+        LitInt(0) <= i#3
+             && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#3))
+           ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#3)]): bool
+               == Lit(true)
+             <==> _module.__default.prime(i#3)));
+  free ensures {:always_assume} true;
+  ensures {:id "id138"} (forall $o: ref :: 
+      { $o != null } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $o != null)
+     && (forall $o: ref :: 
+      { $Unbox(read(old($Heap), $o, alloc)): bool } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> !$Unbox(read(old($Heap), $o, alloc)): bool);
+  free ensures {:always_assume} true;
+  ensures {:id "id139"} Set#Equal(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), 
+    Set#Union(Map#Domain($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map), 
+      Set#UnionOne(Set#Empty(): Set, $Box(n#0))));
+  free ensures {:always_assume} _module.__default.prime#canCall(n#0);
+  ensures {:id "id140"} _module.__default.prime(n#0)
+     <==> Map#Equal($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+      Map#Build($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+        $Box(n#0), 
+        $Box(Lit(true))));
+  free ensures {:always_assume} _module.__default.prime#canCall(n#0);
+  ensures {:id "id141"} !_module.__default.prime(n#0)
+     <==> Map#Equal($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+      Map#Build($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+        $Box(n#0), 
+        $Box(Lit(false))));
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o] || $o == this);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "PrimeMap.InsertNumber (correctness)"} Impl$$_module.PrimeMap.InsertNumber(this: ref, n#0: int) returns ($_reverifyPost: bool)
+{
+  var $_ModifiesFrame: [ref,Field]bool;
+  var defass#prime#0: bool;
+  var prime#0: bool;
+  var $rhs##0: bool;
+  var n##0: int;
+  var $rhs#0: Map;
+
+    // AddMethodImpl: InsertNumber, Impl$$_module.PrimeMap.InsertNumber
+    $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> $o == this);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(44,2): initial state"} true;
+    $_reverifyPost := false;
+    havoc prime#0;
+    // ----- call statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(46,27)
+    assume true;
+    // TrCallStmt: Adding lhs with type bool
+    // TrCallStmt: Before ProcessCallStmt
+    assume true;
+    assume true;
+    // ProcessCallStmt: CheckSubrange
+    n##0 := n#0;
+    call {:id "id142"} $rhs##0 := Call$$_module.PrimeMap.testPrimeness(this, n##0);
+    // TrCallStmt: After ProcessCallStmt
+    prime#0 := $rhs##0;
+    defass#prime#0 := true;
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(46,29)"} true;
+    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(47,14)
+    assume true;
+    assume true;
+    assert {:id "id144"} $_ModifiesFrame[this, _module.PrimeMap.database];
+    assume true;
+    assert {:id "id145"} defass#prime#0;
+    assume true;
+    $rhs#0 := Map#Build($Unbox(read($Heap, this, _module.PrimeMap.database)): Map, 
+      $Box(n#0), 
+      $Box(prime#0));
+    $Heap := update($Heap, this, _module.PrimeMap.database, $Box($rhs#0));
+    assume $IsGoodHeap($Heap);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(47,36)"} true;
+}
+
+
+
+procedure {:verboseName "PrimeMap.IsPrime? (well-formedness)"} CheckWellFormed$$_module.PrimeMap.IsPrime_q(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0)
+   returns (answer#0: DatatypeType
+       where $Is(answer#0, Tclass._module.Answer())
+         && $IsAlloc(answer#0, Tclass._module.Answer(), $Heap));
+  modifies $Heap;
+
+
+
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "PrimeMap.IsPrime? (well-formedness)"} CheckWellFormed$$_module.PrimeMap.IsPrime_q(this: ref, n#0: int) returns (answer#0: DatatypeType)
+{
+  var $_ModifiesFrame: [ref,Field]bool;
+  var ##n#0: int;
+  var ##n#1: int;
+
+
+    // AddMethodImpl: IsPrime?, CheckWellFormed$$_module.PrimeMap.IsPrime_q
+    $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool
+         ==> Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o)));
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(52,9): initial state"} true;
+    // assume allocatedness for receiver argument to function
+    assume $IsAllocBox($Box(this), Tclass._module.PrimeMap?(), $Heap);
+    assume _module.PrimeMap.Valid#canCall($Heap, this);
+    assume {:id "id148"} _module.PrimeMap.Valid($Heap, this);
+    assume true;
+    havoc $Heap;
+    assume (forall $o: ref :: 
+      { $Heap[$o] } 
+      $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+         ==> $Heap[$o] == old($Heap)[$o]
+           || Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o)));
+    assume $HeapSucc(old($Heap), $Heap);
+    havoc answer#0;
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(52,9): post-state"} true;
+    // assume allocatedness for receiver argument to function
+    assume $IsAllocBox($Box(this), Tclass._module.PrimeMap?(), $Heap);
+    assume _module.PrimeMap.Valid#canCall($Heap, this);
+    assume {:id "id149"} _module.PrimeMap.Valid($Heap, this);
+    assume true;
+    assert {:id "id150"} $IsAlloc(this, Tclass._module.PrimeMap(), old($Heap));
+    assume true;
+    assume {:id "id151"} (forall $o: ref :: 
+        { $o != null } 
+        Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+             && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+           ==> $o != null)
+       && (forall $o: ref :: 
+        { $Unbox(read(old($Heap), $o, alloc)): bool } 
+        Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+             && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+           ==> !$Unbox(read(old($Heap), $o, alloc)): bool);
+    assume true;
+    assume true;
+    assert {:id "id152"} $IsAlloc(this, Tclass._module.PrimeMap(), old($Heap));
+    assume true;
+    assert {:id "id153"} $IsAlloc($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map, 
+      TMap(Tclass._System.nat(), TBool), 
+      old($Heap));
+    assume true;
+    assume {:id "id154"} Set#Equal(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), 
+      Map#Domain($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map));
+    assume true;
+    if (Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0)))
+    {
+        ##n#0 := n#0;
+        // assume allocatedness for argument to function
+        assume $IsAlloc(##n#0, Tclass._System.nat(), $Heap);
+        assume _module.__default.prime#canCall(n#0);
+    }
+
+    assume {:id "id155"} Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+         && _module.__default.prime(n#0)
+       <==> _module.Answer#Equal(answer#0, #_module.Answer.Yes());
+    assume true;
+    if (Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0)))
+    {
+        ##n#1 := n#0;
+        // assume allocatedness for argument to function
+        assume $IsAlloc(##n#1, Tclass._System.nat(), $Heap);
+        assume _module.__default.prime#canCall(n#0);
+    }
+
+    assume {:id "id156"} Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+         && !_module.__default.prime(n#0)
+       <==> _module.Answer#Equal(answer#0, #_module.Answer.No());
+    assume true;
+    assume {:id "id157"} !Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+       <==> _module.Answer#Equal(answer#0, #_module.Answer.Unknown());
+}
+
+
+
+procedure {:verboseName "PrimeMap.IsPrime? (call)"} Call$$_module.PrimeMap.IsPrime_q(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0)
+   returns (answer#0: DatatypeType
+       where $Is(answer#0, Tclass._module.Answer())
+         && $IsAlloc(answer#0, Tclass._module.Answer(), $Heap));
+  // user-defined preconditions
+  free requires {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  requires {:id "id158"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this));
+  requires {:id "id159"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null));
+  requires {:id "id160"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || (forall i#0: int :: 
+        { _module.__default.prime(i#0) } 
+          { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)] } 
+          { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0)) } 
+        LitInt(0) <= i#0
+             && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0))
+           ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)]): bool
+               == Lit(true)
+             <==> _module.__default.prime(i#0)));
+  // user-defined frame expressions
+  free requires {:always_assume} true;
+  modifies $Heap;
+  // user-defined postconditions
+  free ensures {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  free ensures {:id "id161"} _module.PrimeMap.Valid#canCall($Heap, this)
+     && 
+    _module.PrimeMap.Valid($Heap, this)
+     && 
+    Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+     && !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+     && (forall i#1: int :: 
+      { _module.__default.prime(i#1) } 
+        { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#1)] } 
+        { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1)) } 
+      LitInt(0) <= i#1
+           && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1))
+         ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#1)]): bool
+             == Lit(true)
+           <==> _module.__default.prime(i#1)));
+  free ensures {:always_assume} true;
+  ensures {:id "id162"} (forall $o: ref :: 
+      { $o != null } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $o != null)
+     && (forall $o: ref :: 
+      { $Unbox(read(old($Heap), $o, alloc)): bool } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> !$Unbox(read(old($Heap), $o, alloc)): bool);
+  free ensures {:always_assume} true;
+  ensures {:id "id163"} Set#Equal(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), 
+    Map#Domain($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map));
+  free ensures {:always_assume} (Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+       ==> _module.__default.prime#canCall(n#0))
+     && $IsA#_module.Answer(answer#0);
+  ensures {:id "id164"} Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+       && _module.__default.prime(n#0)
+     <==> _module.Answer#Equal(answer#0, #_module.Answer.Yes());
+  free ensures {:always_assume} (Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+       ==> _module.__default.prime#canCall(n#0))
+     && $IsA#_module.Answer(answer#0);
+  ensures {:id "id165"} Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+       && !_module.__default.prime(n#0)
+     <==> _module.Answer#Equal(answer#0, #_module.Answer.No());
+  free ensures {:always_assume} $IsA#_module.Answer(answer#0);
+  ensures {:id "id166"} !Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+     <==> _module.Answer#Equal(answer#0, #_module.Answer.Unknown());
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o]
+         || Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o)));
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+procedure {:verboseName "PrimeMap.IsPrime? (correctness)"} Impl$$_module.PrimeMap.IsPrime_q(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0)
+   returns (defass#answer#0: bool, 
+    answer#0: DatatypeType
+       where defass#answer#0
+         ==> $Is(answer#0, Tclass._module.Answer())
+           && $IsAlloc(answer#0, Tclass._module.Answer(), $Heap), 
+    $_reverifyPost: bool);
+  // user-defined preconditions
+  free requires {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  free requires {:id "id167"} _module.PrimeMap.Valid#canCall($Heap, this)
+     && 
+    _module.PrimeMap.Valid($Heap, this)
+     && 
+    Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+     && !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+     && (forall i#2: int :: 
+      { _module.__default.prime(i#2) } 
+        { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#2)] } 
+        { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2)) } 
+      LitInt(0) <= i#2
+           && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#2))
+         ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#2)]): bool
+             == Lit(true)
+           <==> _module.__default.prime(i#2)));
+  // user-defined frame expressions
+  free requires {:always_assume} true;
+  modifies $Heap;
+  // user-defined postconditions
+  free ensures {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  ensures {:id "id168"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this));
+  ensures {:id "id169"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null));
+  ensures {:id "id170"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || (forall i#3: int :: 
+        { _module.__default.prime(i#3) } 
+          { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#3)] } 
+          { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#3)) } 
+        LitInt(0) <= i#3
+             && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#3))
+           ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#3)]): bool
+               == Lit(true)
+             <==> _module.__default.prime(i#3)));
+  free ensures {:always_assume} true;
+  ensures {:id "id171"} (forall $o: ref :: 
+      { $o != null } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> $o != null)
+     && (forall $o: ref :: 
+      { $Unbox(read(old($Heap), $o, alloc)): bool } 
+      Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o))
+           && !Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o))
+         ==> !$Unbox(read(old($Heap), $o, alloc)): bool);
+  free ensures {:always_assume} true;
+  ensures {:id "id172"} Set#Equal(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), 
+    Map#Domain($Unbox(read(old($Heap), this, _module.PrimeMap.database)): Map));
+  free ensures {:always_assume} (Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+       ==> _module.__default.prime#canCall(n#0))
+     && $IsA#_module.Answer(answer#0);
+  ensures {:id "id173"} Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+       && _module.__default.prime(n#0)
+     <==> _module.Answer#Equal(answer#0, #_module.Answer.Yes());
+  free ensures {:always_assume} (Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+       ==> _module.__default.prime#canCall(n#0))
+     && $IsA#_module.Answer(answer#0);
+  ensures {:id "id174"} Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+       && !_module.__default.prime(n#0)
+     <==> _module.Answer#Equal(answer#0, #_module.Answer.No());
+  free ensures {:always_assume} $IsA#_module.Answer(answer#0);
+  ensures {:id "id175"} !Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0))
+     <==> _module.Answer#Equal(answer#0, #_module.Answer.Unknown());
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o]
+         || Set#IsMember($Unbox(read(old($Heap), this, _module.PrimeMap.Repr)): Set, $Box($o)));
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "PrimeMap.IsPrime? (correctness)"} Impl$$_module.PrimeMap.IsPrime_q(this: ref, n#0: int)
+   returns (defass#answer#0: bool, answer#0: DatatypeType, $_reverifyPost: bool)
+{
+  var $_ModifiesFrame: [ref,Field]bool;
+
+    // AddMethodImpl: IsPrime?, Impl$$_module.PrimeMap.IsPrime_q
+    $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool
+         ==> Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box($o)));
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(57,2): initial state"} true;
+    $_reverifyPost := false;
+    // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(58,5)
+    assume true;
+    assume true;
+    if (!Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0)))
+    {
+        // ----- return statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(59,7)
+        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(59,7)
+        assume true;
+        assume true;
+        answer#0 := Lit(#_module.Answer.Unknown());
+        defass#answer#0 := true;
+        assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(59,20)"} true;
+        assert {:id "id177"} defass#answer#0;
+        return;
+    }
+    else
+    {
+        // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(60,12)
+        assume true;
+        assert {:id "id178"} Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0));
+        assume true;
+        if ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(n#0)]): bool
+           == Lit(true))
+        {
+            // ----- return statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(61,7)
+            // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(61,7)
+            assume true;
+            assume true;
+            answer#0 := Lit(#_module.Answer.Yes());
+            defass#answer#0 := true;
+            assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(61,16)"} true;
+            assert {:id "id180"} defass#answer#0;
+            return;
+        }
+        else
+        {
+            // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(62,12)
+            assume true;
+            assert {:id "id181"} Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(n#0));
+            assume true;
+            if ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(n#0)]): bool
+               == Lit(false))
+            {
+                // ----- return statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(63,7)
+                // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(63,7)
+                assume true;
+                assume true;
+                answer#0 := Lit(#_module.Answer.No());
+                defass#answer#0 := true;
+                assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(63,15)"} true;
+                assert {:id "id183"} defass#answer#0;
+                return;
+            }
+            else
+            {
+            }
+        }
+    }
+
+    assert {:id "id184"} defass#answer#0;
+}
+
+
+
+procedure {:verboseName "PrimeMap.testPrimeness (well-formedness)"} CheckWellFormed$$_module.PrimeMap.testPrimeness(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0)
+   returns (result#0: bool);
+  modifies $Heap;
+
+
+
+procedure {:verboseName "PrimeMap.testPrimeness (call)"} Call$$_module.PrimeMap.testPrimeness(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0)
+   returns (result#0: bool);
+  // user-defined preconditions
+  free requires {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  requires {:id "id188"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this));
+  requires {:id "id189"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null));
+  requires {:id "id190"} _module.PrimeMap.Valid#canCall($Heap, this)
+     ==> _module.PrimeMap.Valid($Heap, this)
+       || (forall i#0: int :: 
+        { _module.__default.prime(i#0) } 
+          { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)] } 
+          { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0)) } 
+        LitInt(0) <= i#0
+             && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#0))
+           ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#0)]): bool
+               == Lit(true)
+             <==> _module.__default.prime(i#0)));
+  free requires {:always_assume} true;
+  requires {:id "id191"} n#0 >= LitInt(0);
+  modifies $Heap;
+  // user-defined postconditions
+  free ensures {:always_assume} _module.__default.prime#canCall(n#0);
+  ensures {:id "id192"} result#0 <==> _module.__default.prime(n#0);
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o]);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+procedure {:verboseName "PrimeMap.testPrimeness (correctness)"} Impl$$_module.PrimeMap.testPrimeness(this: ref
+       where this != null
+         && 
+        $Is(this, Tclass._module.PrimeMap())
+         && $IsAlloc(this, Tclass._module.PrimeMap(), $Heap), 
+    n#0: int where LitInt(0) <= n#0)
+   returns (defass#result#0: bool, result#0: bool, $_reverifyPost: bool);
+  // user-defined preconditions
+  free requires {:always_assume} _module.PrimeMap.Valid#canCall($Heap, this);
+  free requires {:id "id193"} _module.PrimeMap.Valid#canCall($Heap, this)
+     && 
+    _module.PrimeMap.Valid($Heap, this)
+     && 
+    Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(this))
+     && !Set#IsMember($Unbox(read($Heap, this, _module.PrimeMap.Repr)): Set, $Box(null))
+     && (forall i#1: int :: 
+      { _module.__default.prime(i#1) } 
+        { Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#1)] } 
+        { Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1)) } 
+      LitInt(0) <= i#1
+           && Set#IsMember(Map#Domain($Unbox(read($Heap, this, _module.PrimeMap.database)): Map), $Box(i#1))
+         ==> ($Unbox(Map#Elements($Unbox(read($Heap, this, _module.PrimeMap.database)): Map)[$Box(i#1)]): bool
+             == Lit(true)
+           <==> _module.__default.prime(i#1)));
+  free requires {:always_assume} true;
+  requires {:id "id194"} n#0 >= LitInt(0);
+  modifies $Heap;
+  // user-defined postconditions
+  free ensures {:always_assume} _module.__default.prime#canCall(n#0);
+  ensures {:id "id195"} result#0 <==> _module.__default.prime(n#0);
+  // frame condition: object granularity
+  free ensures (forall $o: ref :: 
+    { $Heap[$o] } 
+    $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+       ==> $Heap[$o] == old($Heap)[$o]);
+  // boilerplate
+  free ensures $HeapSucc(old($Heap), $Heap);
+
+
+
+implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "PrimeMap.testPrimeness (correctness)"} Impl$$_module.PrimeMap.testPrimeness(this: ref, n#0: int)
+   returns (defass#result#0: bool, result#0: bool, $_reverifyPost: bool)
+{
+  var $_ModifiesFrame: [ref,Field]bool;
+  var i#2: int;
+  var $PreLoopHeap$loop#0: Heap;
+  var preLoop$loop#0$defass#result#0: bool;
+  var $decr_init$loop#00: int;
+  var $w$loop#0: bool;
+  var j#0: int;
+  var $decr$loop#00: int;
+
+    // AddMethodImpl: testPrimeness, Impl$$_module.PrimeMap.testPrimeness
+    $_ModifiesFrame := (lambda $o: ref, $f: Field :: 
+      $o != null && $Unbox(read($Heap, $o, alloc)): bool ==> false);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(73,2): initial state"} true;
+    $_reverifyPost := false;
+    // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(74,4)
+    if (n#0 != LitInt(0))
+    {
+    }
+
+    assume true;
+    if (n#0 == LitInt(0) || n#0 == LitInt(1))
     {
         push;
-        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_USECASE_find_irrelevant_lines_for_proof.dfy(6,7)
+        // ----- return statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(75,5)
+        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(75,5)
         assume true;
         assume true;
-        y#0 := LitInt(0);
-        defass#y#0 := true;
-        assume {:captureState "_USECASE_find_irrelevant_lines_for_proof.dfy(6,10)"} true;
+        result#0 := Lit(false);
+        defass#result#0 := true;
+        assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(75,16)"} true;
+        assert {:id "id197"} defass#result#0;
+        pop;
+        return;
+
         pop;
     }
     else
     {
     }
 
-    // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_USECASE_find_irrelevant_lines_for_proof.dfy(9,3)
+    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(77,11)
     assume true;
-    if (x#0 < 0)
+    assume true;
+    i#2 := LitInt(2);
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(77,14)"} true;
+    // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(78,12)
+    assume true;
+    assume true;
+    result#0 := Lit(true);
+    defass#result#0 := true;
+    assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(78,18)"} true;
+    // ----- while statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(80,5)
+    // Assume Fuel Constant
+    $PreLoopHeap$loop#0 := $Heap;
+    preLoop$loop#0$defass#result#0 := defass#result#0;
+    $decr_init$loop#00 := n#0 - i#2;
+    havoc $w$loop#0;
+    assume true;
+    assume true;
+    assume $w$loop#0 ==> true;
+    while (true)
+      free invariant true;
+      invariant {:id "id201"} $w$loop#0 ==> i#2 <= n#0;
+      free invariant true;
+      invariant {:id "id205"} $w$loop#0
+         ==> (result#0
+           <==> (forall j#1: int :: 
+            { Mod(n#0, j#1) } 
+            1 < j#1 && j#1 <= i#2 - 1 ==> Mod(n#0, j#1) != 0));
+      free invariant (forall $o: ref :: 
+        { $Heap[$o] } 
+        $o != null && $Unbox(read(old($Heap), $o, alloc)): bool
+           ==> $Heap[$o] == $PreLoopHeap$loop#0[$o]);
+      free invariant $HeapSucc($PreLoopHeap$loop#0, $Heap);
+      free invariant (forall $o: ref, $f: Field :: 
+        { read($Heap, $o, $f) } 
+        $o != null && $Unbox(read($PreLoopHeap$loop#0, $o, alloc)): bool
+           ==> read($Heap, $o, $f) == read($PreLoopHeap$loop#0, $o, $f)
+             || $_ModifiesFrame[$o, $f]);
+      free invariant preLoop$loop#0$defass#result#0 ==> defass#result#0;
+      free invariant n#0 - i#2 <= $decr_init$loop#00;
     {
-        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_USECASE_find_irrelevant_lines_for_proof.dfy(10,7)
+        assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(80,4): after some loop iterations"} true;
+        if (!$w$loop#0)
+        {
+            assume true;
+            assume {:id "id200"} i#2 <= n#0;
+            assert {:id "id202"} defass#result#0;
+            // Begin Comprehension WF check
+            havoc j#0;
+            if (true)
+            {
+                if (1 < j#0)
+                {
+                }
+
+                if (1 < j#0 && j#0 <= i#2 - 1)
+                {
+                    assert {:id "id203"} {:subsumption 0} j#0 != 0;
+                }
+            }
+
+            // End Comprehension WF check
+            assume true;
+            assume true;
+            assume {:id "id204"} result#0
+               <==> (forall j#1: int :: 
+                { Mod(n#0, j#1) } 
+                1 < j#1 && j#1 <= i#2 - 1 ==> Mod(n#0, j#1) != 0);
+            assume true;
+            assume false;
+        }
+
+        assume true;
+        if (n#0 <= i#2)
+        {
+            break;
+        }
+
+        assume true;
+        $decr$loop#00 := n#0 - i#2;
+        // ----- if statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(86,7)
+        assert {:id "id206"} i#2 != 0;
+        assume true;
+        if (Mod(n#0, i#2) == LitInt(0))
+        {
+            push;
+            // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(87,16)
+            assume true;
+            assume true;
+            result#0 := Lit(false);
+            defass#result#0 := true;
+            assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(87,23)"} true;
+            pop;
+        }
+        else
+        {
+        }
+
+        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(89,9)
         assume true;
         assume true;
-        y#0 := 0 - x#0;
-        defass#y#0 := true;
-        assume {:captureState "_USECASE_find_irrelevant_lines_for_proof.dfy(10,11)"} true;
-    }
-    else
-    {
-        // ----- assignment statement ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/_USECASE_find_irrelevant_lines_for_proof.dfy(12,7)
+        i#2 := i#2 + 1;
+        assume {:captureState "DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(89,16)"} true;
         assume true;
-        ##a#2_0 := x#0;
-        // assume allocatedness for argument to function
-        assume $IsAlloc(##a#2_0, TInt, $Heap);
-        assume _module.__default.Id#canCall(TInt, $Box(x#0));
-        assume _module.__default.Id#canCall(TInt, $Box(x#0));
-        y#0 := $Unbox(_module.__default.Id(TInt, $Box(x#0))): int;
-        defass#y#0 := true;
-        assume {:captureState "_USECASE_find_irrelevant_lines_for_proof.dfy(12,14)"} true;
+        // ----- loop termination check ----- /home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/dafny_dataset_files/DafnyPrograms_tmp_tmp74_f9k_c_prime-database.dfy(80,5)
+        assert {:id "id209"} 0 <= $decr$loop#00 || n#0 - i#2 == $decr$loop#00;
+        assert {:id "id210"} n#0 - i#2 < $decr$loop#00;
+        assume true;
     }
 
-    assert {:id "id13"} defass#y#0;
+    assert {:id "id211"} defass#result#0;
 }
 
 
 
-// function declaration for _module._default.Id
-function _module.__default.Id(_module._default.Id$T: Ty, a#0: Box) : Box;
+const _module.PrimeMap.Repr: Field
+uses {
+axiom FDim(_module.PrimeMap.Repr) == 0
+   && FieldOfDecl(class._module.PrimeMap?, field$Repr) == _module.PrimeMap.Repr
+   && $IsGhostField(_module.PrimeMap.Repr);
+}
 
-function _module.__default.Id#canCall(_module._default.Id$T: Ty, a#0: Box) : bool;
+// PrimeMap.Repr: Type axiom
+axiom (forall $h: Heap, $o: ref :: 
+  { $Unbox(read($h, $o, _module.PrimeMap.Repr)): Set } 
+  $IsGoodHeap($h) && $o != null && dtype($o) == Tclass._module.PrimeMap?()
+     ==> $Is($Unbox(read($h, $o, _module.PrimeMap.Repr)): Set, TSet(Tclass._System.object?())));
 
-// consequence axiom for _module.__default.Id
-axiom (forall _module._default.Id$T: Ty, a#0: Box :: 
-  { _module.__default.Id(_module._default.Id$T, a#0) } 
-  _module.__default.Id#canCall(_module._default.Id$T, a#0)
-     ==> $IsBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T));
-
-// alloc consequence axiom for _module.__default.Id
-axiom (forall $Heap: Heap, _module._default.Id$T: Ty, a#0: Box :: 
-  { $IsAllocBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T, $Heap) } 
-  _module.__default.Id#canCall(_module._default.Id$T, a#0)
+// PrimeMap.Repr: Allocation axiom
+axiom (forall $h: Heap, $o: ref :: 
+  { $Unbox(read($h, $o, _module.PrimeMap.Repr)): Set } 
+  $IsGoodHeap($h)
        && 
-      $IsBox(a#0, _module._default.Id$T)
-       && $IsAllocBox(a#0, _module._default.Id$T, $Heap)
-       && $IsGoodHeap($Heap)
-     ==> $IsAllocBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T, $Heap));
+      $o != null
+       && dtype($o) == Tclass._module.PrimeMap?()
+       && $Unbox(read($h, $o, alloc)): bool
+     ==> $IsAlloc($Unbox(read($h, $o, _module.PrimeMap.Repr)): Set, 
+      TSet(Tclass._System.object?()), 
+      $h));
 
-function _module.__default.Id#requires(Ty, Box) : bool;
+// $Is axiom for non-null type _module.PrimeMap
+axiom (forall c#0: ref :: 
+  { $Is(c#0, Tclass._module.PrimeMap()) } 
+    { $Is(c#0, Tclass._module.PrimeMap?()) } 
+  $Is(c#0, Tclass._module.PrimeMap())
+     <==> $Is(c#0, Tclass._module.PrimeMap?()) && c#0 != null);
 
-// #requires axiom for _module.__default.Id
-axiom (forall _module._default.Id$T: Ty, a#0: Box :: 
-  { _module.__default.Id#requires(_module._default.Id$T, a#0) } 
-  $IsBox(a#0, _module._default.Id$T)
-     ==> _module.__default.Id#requires(_module._default.Id$T, a#0) == true);
-
-// #requires ==> #canCall for _module.__default.Id
-axiom (forall _module._default.Id$T: Ty, a#0: Box :: 
-  { _module.__default.Id#requires(_module._default.Id$T, a#0) } 
-  _module.__default.Id#requires(_module._default.Id$T, a#0)
-     ==> _module.__default.Id#canCall(_module._default.Id$T, a#0));
-
-// definition axiom for _module.__default.Id (revealed)
-axiom {:id "id14"} (forall _module._default.Id$T: Ty, a#0: Box :: 
-  { _module.__default.Id(_module._default.Id$T, a#0) } 
-  _module.__default.Id#canCall(_module._default.Id$T, a#0)
-     ==> _module.__default.Id(_module._default.Id$T, a#0) == a#0);
-
-// definition axiom for _module.__default.Id for all literals (revealed)
-axiom {:id "id15"} (forall _module._default.Id$T: Ty, a#0: Box :: 
-  {:weight 3} { _module.__default.Id(_module._default.Id$T, Lit(a#0)) } 
-  _module.__default.Id#canCall(_module._default.Id$T, Lit(a#0))
-     ==> _module.__default.Id(_module._default.Id$T, Lit(a#0)) == Lit(a#0));
-
-procedure {:verboseName "Id (well-formedness)"} CheckWellformed$$_module.__default.Id(_module._default.Id$T: Ty, a#0: Box where $IsBox(a#0, _module._default.Id$T));
-  modifies $Heap;
-
-
+// $IsAlloc axiom for non-null type _module.PrimeMap
+axiom (forall c#0: ref, $h: Heap :: 
+  { $IsAlloc(c#0, Tclass._module.PrimeMap(), $h) } 
+  $IsAlloc(c#0, Tclass._module.PrimeMap(), $h)
+     <==> $IsAlloc(c#0, Tclass._module.PrimeMap?(), $h));
 
 const unique tytagFamily$nat: TyTagFamily;
 
@@ -3088,3 +5161,11 @@ const unique tytagFamily$_#TotalFunc0: TyTagFamily;
 const unique tytagFamily$_tuple#2: TyTagFamily;
 
 const unique tytagFamily$_tuple#0: TyTagFamily;
+
+const unique tytagFamily$PrimeMap: TyTagFamily;
+
+const unique tytagFamily$Answer: TyTagFamily;
+
+const unique field$database: NameFamily;
+
+const unique field$Repr: NameFamily;

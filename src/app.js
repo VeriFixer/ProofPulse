@@ -21,7 +21,8 @@ function computeLineStatusesFromTokens(code, tokens) {
         if (s === window.CovStatus.CovTest || s === 2 || String(s).toLowerCase().includes('test')) return 'covered-test';
         return 'covered-complete';
     };
-    for (const t of tokens) {
+    const tokensArray =  Array.from(tokens)
+    for (const t of tokensArray ) {
         if (!t || !t.start || !t.end) continue;
         const sLine = Math.max(1, t.start.line || 1);
         const eLine = Math.max(sLine, t.end.line || sLine);
@@ -75,7 +76,11 @@ function clearHighlights() {
 
 function renderPanel(tokenEl, deps) {
     const id = tokenEl.dataset.id;
-    panelTitle.textContent = `Dependency tracker — ${tokenEl.textContent.trim()}`;
+
+    const token =  deps.allTokens.get(id);
+   
+    panelTitle.textContent = `Dependency tracker: ${tokenEl.textContent.trim()}`;
+    
 
     let usedOnIds = window.getUsedOn(id, deps);
     let DepensOnIds = window.getDependsOn(id, deps);
@@ -88,19 +93,27 @@ function renderPanel(tokenEl, deps) {
 
     panelBody.innerHTML = '';
 
-    const status = tokenEl.dataset.status || 'unknown';
+    const status = token.CovStatus;
     const statusP = document.createElement('p');
     statusP.innerHTML = `<strong>Status:</strong> ${status}`;
     panelBody.appendChild(statusP);
+
+
+    const message = token.prooftext;
+    const messageP = document.createElement('p');
+    messageP.innerHTML = `<strong>Message:</strong> ${message}`;
+    panelBody.appendChild(messageP);
+
 
 
     const usesDiv = document.createElement('div'); usesDiv.className = 'group';
     usesDiv.innerHTML = `<strong> Later Proof Dependency (${usedOnIds.length}):</strong>`;
     const usesList = document.createElement('ul');
     usedOnIds.forEach(uid => {
+        const tokenbase =  deps.allTokens.has(uid);
         const el = document.querySelector(`[data-id="${uid}"]`);
         const li = document.createElement('li');
-        li.textContent = el ? `${el.textContent.trim()} (id=${uid})` : uid;
+        li.textContent = el ? `${el.textContent.trim()} (id=${uid}) (${tokenbase.prooftext})` : uid;
         usesList.appendChild(li);
     });
     usesDiv.appendChild(usesList);
@@ -112,22 +125,16 @@ function renderPanel(tokenEl, deps) {
     usedByDiv.innerHTML = `<strong>Earlier Proof Dependency (${DepensOnIds.length}):</strong>`;
     const usedByList = document.createElement('ul');
     DepensOnIds.forEach(uid => {
+        const tokenbase = deps.allTokens.has(uid);
         const el = document.querySelector(`[data-id="${uid}"]`);
         const li = document.createElement('li');
-        li.textContent = el ? `${el.textContent.trim()} (id=${uid})` : uid;
+        li.textContent = el ? `${el.textContent.trim()} (id=${uid}) (${tokenbase.prooftext})` : uid;
         usedByList.appendChild(li);
     });
     usedByDiv.appendChild(usedByList);
     panelBody.appendChild(usedByDiv);
-
     const graphDiv = document.createElement('div'); graphDiv.className = 'group';
-    graphDiv.innerHTML = `<strong>Local proof view</strong>`;
-    const node = document.createElement('div'); node.className = 'graph-node';
-    node.innerHTML = `<div class="title">${tokenEl.textContent.trim()} <span style="font-size:12px;color:var(--muted)">(${id})</span></div>` +
-        `<div class="meta">uses: ${usedOnIds.join(', ') || '—'} • usedBy: ${DepensOnIds.join(', ') || '—'}</div>`;
-    graphDiv.appendChild(node);
-    panelBody.appendChild(graphDiv);
-}
+  }
 
 function attachHandlers(deps) {
     $$('.token').forEach(t => {
@@ -151,8 +158,6 @@ async function bootstrap() {
     let proof = root.parseProof(dafnyCode, proofLog);
     window.proofObj = proof;
     const src = window.getSourceCode();
-
-    console.log("Loaded Dafny source code:\n", src);
 
     let tokens = window.proofObj.allTokens;
 
