@@ -23,6 +23,11 @@ uses {
 axiom Tag(TInt) == TagInt;
 }
 
+const unique TField: Ty
+uses {
+axiom Tag(TField) == TagField;
+}
+
 const unique TReal: Ty
 uses {
 axiom Tag(TReal) == TagReal;
@@ -105,6 +110,8 @@ const unique TagChar: TyTag;
 
 const unique TagInt: TyTag;
 
+const unique TagField: TyTag;
+
 const unique TagReal: TyTag;
 
 const unique TagORDINAL: TyTag;
@@ -183,6 +190,24 @@ type ref;
 
 const null: ref;
 
+const locals: ref;
+
+type FieldFamily;
+
+const unique object_field: FieldFamily;
+
+revealed function field_depth(f: Field) : int;
+
+revealed function field_family(f: Field) : FieldFamily;
+
+revealed function local_field(ff: FieldFamily, depth: int) : Field
+uses {
+axiom (forall ff: FieldFamily, depth: int :: 
+  {:trigger local_field(ff, depth)} 
+  field_depth(local_field(ff, depth)) == depth
+     && field_family(local_field(ff, depth)) == ff);
+}
+
 type Box;
 
 const $ArbitraryBoxValue: Box;
@@ -191,7 +216,7 @@ revealed function $Box<T>(T) : Box;
 
 revealed function $Unbox<T>(Box) : T;
 
-axiom (forall<T> x: T :: { $Box(x) } $Unbox($Box(x)) == x);
+axiom (forall<T> x: T :: {:weight 3} { $Box(x) } $Unbox($Box(x)) == x);
 
 axiom (forall<T> x: Box :: { $Unbox(x): T } $Box($Unbox(x): T) == x);
 
@@ -270,6 +295,8 @@ axiom (forall v: real :: { $Is(v, TReal) } $Is(v, TReal));
 axiom (forall v: bool :: { $Is(v, TBool) } $Is(v, TBool));
 
 axiom (forall v: char :: { $Is(v, TChar) } $Is(v, TChar));
+
+axiom (forall v: Field :: { $Is(v, TField) } $Is(v, TField));
 
 axiom (forall v: ORDINAL :: { $Is(v, TORDINAL) } $Is(v, TORDINAL));
 
@@ -579,10 +606,6 @@ axiom (forall o: ORDINAL, m: int, n: int ::
        && (m - n <= 0
          ==> ORD#Plus(ORD#Minus(o, ORD#FromNat(m)), ORD#FromNat(n))
            == ORD#Plus(o, ORD#FromNat(n - m))));
-
-const $ModuleContextHeight: int;
-
-const $FunctionContextHeight: int;
 
 type LayerType;
 
@@ -1375,7 +1398,7 @@ axiom (forall s: Seq, n: int ::
   0 <= n && n <= Seq#Length(s) ==> Seq#Length(Seq#Take(s, n)) == n);
 
 axiom (forall s: Seq, n: int, j: int :: 
-  {:weight 25} { Seq#Index(Seq#Take(s, n), j) } { Seq#Index(s, j), Seq#Take(s, n) } 
+  {:weight 11} { Seq#Index(Seq#Take(s, n), j) } { Seq#Index(s, j), Seq#Take(s, n) } 
   0 <= j && j < n && j < Seq#Length(s)
      ==> Seq#Index(Seq#Take(s, n), j) == Seq#Index(s, j));
 
@@ -1386,12 +1409,12 @@ axiom (forall s: Seq, n: int ::
   0 <= n && n <= Seq#Length(s) ==> Seq#Length(Seq#Drop(s, n)) == Seq#Length(s) - n);
 
 axiom (forall s: Seq, n: int, j: int :: 
-  {:weight 25} { Seq#Index(Seq#Drop(s, n), j) } 
+  {:weight 11} { Seq#Index(Seq#Drop(s, n), j) } 
   0 <= n && 0 <= j && j < Seq#Length(s) - n
      ==> Seq#Index(Seq#Drop(s, n), j) == Seq#Index(s, j + n));
 
 axiom (forall s: Seq, n: int, k: int :: 
-  {:weight 25} { Seq#Index(s, k), Seq#Drop(s, n) } 
+  {:weight 11} { Seq#Index(s, k), Seq#Drop(s, n) } 
   0 <= n && n <= k && k < Seq#Length(s)
      ==> Seq#Index(Seq#Drop(s, n), k - n) == Seq#Index(s, k));
 
@@ -1935,7 +1958,6 @@ axiom (forall c#0: ref ::
 // $IsAlloc axiom for non-null type _System.object
 axiom (forall c#0: ref, $h: Heap :: 
   { $IsAlloc(c#0, Tclass._System.object(), $h) } 
-    { $IsAlloc(c#0, Tclass._System.object?(), $h) } 
   $IsAlloc(c#0, Tclass._System.object(), $h)
      <==> $IsAlloc(c#0, Tclass._System.object?(), $h));
 
@@ -2054,7 +2076,6 @@ axiom (forall _System.array$arg: Ty, c#0: ref ::
 // $IsAlloc axiom for non-null type _System.array
 axiom (forall _System.array$arg: Ty, c#0: ref, $h: Heap :: 
   { $IsAlloc(c#0, Tclass._System.array(_System.array$arg), $h) } 
-    { $IsAlloc(c#0, Tclass._System.array?(_System.array$arg), $h) } 
   $IsAlloc(c#0, Tclass._System.array(_System.array$arg), $h)
      <==> $IsAlloc(c#0, Tclass._System.array?(_System.array$arg), $h));
 
@@ -2367,13 +2388,25 @@ axiom (forall #$T0: Ty, #$R: Ty, bx: Box ::
      ==> $Box($Unbox(bx): HandleType) == bx
        && $Is($Unbox(bx): HandleType, Tclass._System.___hTotalFunc1(#$T0, #$R)));
 
-// $Is axiom for subset type _System._#TotalFunc1
+// $Is axioms for subset type _System._#TotalFunc1
 axiom (forall #$T0: Ty, #$R: Ty, f#0: HandleType :: 
   { $Is(f#0, Tclass._System.___hTotalFunc1(#$T0, #$R)) } 
   $Is(f#0, Tclass._System.___hTotalFunc1(#$T0, #$R))
-     <==> $Is(f#0, Tclass._System.___hPartialFunc1(#$T0, #$R))
+     ==> $Is(f#0, Tclass._System.___hPartialFunc1(#$T0, #$R))
+       && 
+      (forall x0#0: Box :: 
+        $IsBox(x0#0, #$T0) ==> Requires1#canCall(#$T0, #$R, $OneHeap, f#0, x0#0))
        && (forall x0#0: Box :: 
         $IsBox(x0#0, #$T0) ==> Requires1(#$T0, #$R, $OneHeap, f#0, x0#0)));
+
+axiom (forall #$T0: Ty, #$R: Ty, f#0: HandleType :: 
+  { $Is(f#0, Tclass._System.___hTotalFunc1(#$T0, #$R)) } 
+  $Is(f#0, Tclass._System.___hPartialFunc1(#$T0, #$R))
+       && ((forall x0#0: Box :: 
+          $IsBox(x0#0, #$T0) ==> Requires1#canCall(#$T0, #$R, $OneHeap, f#0, x0#0))
+         ==> (forall x0#0: Box :: 
+          $IsBox(x0#0, #$T0) ==> Requires1(#$T0, #$R, $OneHeap, f#0, x0#0)))
+     ==> $Is(f#0, Tclass._System.___hTotalFunc1(#$T0, #$R)));
 
 // $IsAlloc axiom for subset type _System._#TotalFunc1
 axiom (forall #$T0: Ty, #$R: Ty, f#0: HandleType, $h: Heap :: 
@@ -2622,11 +2655,20 @@ axiom (forall #$R: Ty, bx: Box ::
      ==> $Box($Unbox(bx): HandleType) == bx
        && $Is($Unbox(bx): HandleType, Tclass._System.___hTotalFunc0(#$R)));
 
-// $Is axiom for subset type _System._#TotalFunc0
+// $Is axioms for subset type _System._#TotalFunc0
 axiom (forall #$R: Ty, f#0: HandleType :: 
   { $Is(f#0, Tclass._System.___hTotalFunc0(#$R)) } 
   $Is(f#0, Tclass._System.___hTotalFunc0(#$R))
-     <==> $Is(f#0, Tclass._System.___hPartialFunc0(#$R)) && Requires0(#$R, $OneHeap, f#0));
+     ==> $Is(f#0, Tclass._System.___hPartialFunc0(#$R))
+       && 
+      Requires0#canCall(#$R, $OneHeap, f#0)
+       && Requires0(#$R, $OneHeap, f#0));
+
+axiom (forall #$R: Ty, f#0: HandleType :: 
+  { $Is(f#0, Tclass._System.___hTotalFunc0(#$R)) } 
+  $Is(f#0, Tclass._System.___hPartialFunc0(#$R))
+       && (Requires0#canCall(#$R, $OneHeap, f#0) ==> Requires0(#$R, $OneHeap, f#0))
+     ==> $Is(f#0, Tclass._System.___hTotalFunc0(#$R)));
 
 // $IsAlloc axiom for subset type _System._#TotalFunc0
 axiom (forall #$R: Ty, f#0: HandleType, $h: Heap :: 
@@ -2751,7 +2793,7 @@ axiom (forall a#4#0#0: Box, a#4#1#0: Box ::
 
 // Inductive rank
 axiom (forall a#5#0#0: Box, a#5#1#0: Box :: 
-  { #_System._tuple#2._#Make2(a#5#0#0, a#5#1#0) } 
+  { DtRank(#_System._tuple#2._#Make2(a#5#0#0, a#5#1#0)) } 
   BoxRank(a#5#0#0) < DtRank(#_System._tuple#2._#Make2(a#5#0#0, a#5#1#0)));
 
 // Constructor injectivity
@@ -2761,7 +2803,7 @@ axiom (forall a#6#0#0: Box, a#6#1#0: Box ::
 
 // Inductive rank
 axiom (forall a#7#0#0: Box, a#7#1#0: Box :: 
-  { #_System._tuple#2._#Make2(a#7#0#0, a#7#1#0) } 
+  { DtRank(#_System._tuple#2._#Make2(a#7#0#0, a#7#1#0)) } 
   BoxRank(a#7#1#0) < DtRank(#_System._tuple#2._#Make2(a#7#0#0, a#7#1#0)));
 
 // Depth-one case-split function
@@ -2878,7 +2920,6 @@ const unique class._System.Tuple0: ClassName;
 const unique class._module.__default: ClassName;
 
 procedure {:verboseName "Abs (well-formedness)"} CheckWellFormed$$_module.__default.Abs(x#0: int) returns (y#0: int);
-  free requires 1 == $FunctionContextHeight;
   modifies $Heap;
 
 
@@ -2886,9 +2927,9 @@ procedure {:verboseName "Abs (well-formedness)"} CheckWellFormed$$_module.__defa
 procedure {:verboseName "Abs (call)"} Call$$_module.__default.Abs(x#0: int) returns (y#0: int);
   modifies $Heap;
   // user-defined postconditions
-  free ensures true;
+  free ensures {:always_assume} true;
   ensures {:id "id6"} x#0 >= LitInt(0) ==> x#0 == y#0;
-  free ensures true;
+  free ensures {:always_assume} true;
   ensures {:id "id7"} x#0 < 0 ==> x#0 + y#0 == LitInt(0);
   // frame condition: object granularity
   free ensures (forall $o: ref :: 
@@ -2901,12 +2942,11 @@ procedure {:verboseName "Abs (call)"} Call$$_module.__default.Abs(x#0: int) retu
 
 
 procedure {:verboseName "Abs (correctness)"} Impl$$_module.__default.Abs(x#0: int) returns (defass#y#0: bool, y#0: int, $_reverifyPost: bool);
-  free requires 1 == $FunctionContextHeight;
   modifies $Heap;
   // user-defined postconditions
-  free ensures true;
+  free ensures {:always_assume} true;
   ensures {:id "id8"} x#0 >= LitInt(0) ==> x#0 == y#0;
-  free ensures true;
+  free ensures {:always_assume} true;
   ensures {:id "id9"} x#0 < 0 ==> x#0 + y#0 == LitInt(0);
   // frame condition: object granularity
   free ensures (forall $o: ref :: 
@@ -2976,43 +3016,25 @@ implementation {:smt_option "smt.arith.solver", "2"} {:verboseName "Abs (correct
 
 
 // function declaration for _module._default.Id
-function _module.__default.Id(_module._default.Id$T: Ty, a#0: Box) : Box
-uses {
-// consequence axiom for _module.__default.Id
-axiom 0 <= $FunctionContextHeight
-   ==> (forall _module._default.Id$T: Ty, a#0: Box :: 
-    { _module.__default.Id(_module._default.Id$T, a#0) } 
-    _module.__default.Id#canCall(_module._default.Id$T, a#0)
-         || (0 < $FunctionContextHeight && $IsBox(a#0, _module._default.Id$T))
-       ==> $IsBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T));
-// alloc consequence axiom for _module.__default.Id
-axiom 0 <= $FunctionContextHeight
-   ==> (forall $Heap: Heap, _module._default.Id$T: Ty, a#0: Box :: 
-    { $IsAllocBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T, $Heap) } 
-    (_module.__default.Id#canCall(_module._default.Id$T, a#0)
-           || (0 < $FunctionContextHeight
-             && 
-            $IsBox(a#0, _module._default.Id$T)
-             && $IsAllocBox(a#0, _module._default.Id$T, $Heap)))
-         && $IsGoodHeap($Heap)
-       ==> $IsAllocBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T, $Heap));
-// definition axiom for _module.__default.Id (revealed)
-axiom {:id "id14"} 0 <= $FunctionContextHeight
-   ==> (forall _module._default.Id$T: Ty, a#0: Box :: 
-    { _module.__default.Id(_module._default.Id$T, a#0) } 
-    _module.__default.Id#canCall(_module._default.Id$T, a#0)
-         || (0 < $FunctionContextHeight && $IsBox(a#0, _module._default.Id$T))
-       ==> _module.__default.Id(_module._default.Id$T, a#0) == a#0);
-// definition axiom for _module.__default.Id for all literals (revealed)
-axiom {:id "id15"} 0 <= $FunctionContextHeight
-   ==> (forall _module._default.Id$T: Ty, a#0: Box :: 
-    {:weight 3} { _module.__default.Id(_module._default.Id$T, Lit(a#0)) } 
-    _module.__default.Id#canCall(_module._default.Id$T, Lit(a#0))
-         || (0 < $FunctionContextHeight && $IsBox(a#0, _module._default.Id$T))
-       ==> _module.__default.Id(_module._default.Id$T, Lit(a#0)) == Lit(a#0));
-}
+function _module.__default.Id(_module._default.Id$T: Ty, a#0: Box) : Box;
 
 function _module.__default.Id#canCall(_module._default.Id$T: Ty, a#0: Box) : bool;
+
+// consequence axiom for _module.__default.Id
+axiom (forall _module._default.Id$T: Ty, a#0: Box :: 
+  { _module.__default.Id(_module._default.Id$T, a#0) } 
+  _module.__default.Id#canCall(_module._default.Id$T, a#0)
+     ==> $IsBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T));
+
+// alloc consequence axiom for _module.__default.Id
+axiom (forall $Heap: Heap, _module._default.Id$T: Ty, a#0: Box :: 
+  { $IsAllocBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T, $Heap) } 
+  _module.__default.Id#canCall(_module._default.Id$T, a#0)
+       && 
+      $IsBox(a#0, _module._default.Id$T)
+       && $IsAllocBox(a#0, _module._default.Id$T, $Heap)
+       && $IsGoodHeap($Heap)
+     ==> $IsAllocBox(_module.__default.Id(_module._default.Id$T, a#0), _module._default.Id$T, $Heap));
 
 function _module.__default.Id#requires(Ty, Box) : bool;
 
@@ -3022,8 +3044,25 @@ axiom (forall _module._default.Id$T: Ty, a#0: Box ::
   $IsBox(a#0, _module._default.Id$T)
      ==> _module.__default.Id#requires(_module._default.Id$T, a#0) == true);
 
+// #requires ==> #canCall for _module.__default.Id
+axiom (forall _module._default.Id$T: Ty, a#0: Box :: 
+  { _module.__default.Id#requires(_module._default.Id$T, a#0) } 
+  _module.__default.Id#requires(_module._default.Id$T, a#0)
+     ==> _module.__default.Id#canCall(_module._default.Id$T, a#0));
+
+// definition axiom for _module.__default.Id (revealed)
+axiom {:id "id14"} (forall _module._default.Id$T: Ty, a#0: Box :: 
+  { _module.__default.Id(_module._default.Id$T, a#0) } 
+  _module.__default.Id#canCall(_module._default.Id$T, a#0)
+     ==> _module.__default.Id(_module._default.Id$T, a#0) == a#0);
+
+// definition axiom for _module.__default.Id for all literals (revealed)
+axiom {:id "id15"} (forall _module._default.Id$T: Ty, a#0: Box :: 
+  {:weight 3} { _module.__default.Id(_module._default.Id$T, Lit(a#0)) } 
+  _module.__default.Id#canCall(_module._default.Id$T, Lit(a#0))
+     ==> _module.__default.Id(_module._default.Id$T, Lit(a#0)) == Lit(a#0));
+
 procedure {:verboseName "Id (well-formedness)"} CheckWellformed$$_module.__default.Id(_module._default.Id$T: Ty, a#0: Box where $IsBox(a#0, _module._default.Id$T));
-  free requires 0 == $FunctionContextHeight;
   modifies $Heap;
 
 

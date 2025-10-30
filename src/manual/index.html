@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dependency Tracker — Dafny example (DOM only)</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app">
+    <div class="editor" id="editor">
+      <h2>_USECASE_find_irrelevant_lines_for_proof.dfy (click the underlined token)</h2>
+
+      <!-- The <pre> will be filled by app.js using HTML produced by your spans-provider script -->
+      <pre id="source" aria-label="source code"></pre>
+    </div>
+
+    <aside class="panel" id="panel">
+      <h3 id="panel-title">Select a token</h3>
+      <div id="panel-body"></div>
+    </aside>
+  </div>
+
+  <!-- load the spans/parser first — it will attach functions to window -->
+  <script src="./spans_provider.js"></script>
+
+  <!-- then load the DOM glue that uses window.generateSpansFragment, window.parseProof, etc -->
+  <script src="./app.js"></script>
+</body>
+</html>
