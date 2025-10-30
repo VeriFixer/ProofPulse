@@ -8,72 +8,9 @@ const root = (typeof window !== 'undefined') ? window
 
 // --- Begin original code but using `root` instead of `window` for attachment ---
 
-root.sampleLog = `Dafny program verifier finished with 2 verified, 0 errors
+root.sampleLog = "";
 
-Results for Abs (correctness)
-  Overall outcome: Correct
-  Overall time: 00:00:00.2727431
-  Overall resource count: 11686
-  Maximum assertion batch time: 00:00:00.1363772
-  Maximum assertion batch resource count: 5868
-
-  Assertion batch 1:
-    Outcome: Valid
-    Duration: 00:00:00.1363659
-    Resource count: 5818
-
-    Assertions:
-      _USECASE_find_irrelevant_lines_for_proof.dfy(2,21): this postcondition holds
-
-    Proof dependencies:
-      _USECASE_find_irrelevant_lines_for_proof.dfy(2,20)-(2,23): ensures clause
-      _USECASE_find_irrelevant_lines_for_proof.dfy(12,5)-(12,15): assignment (or return)
-      _USECASE_find_irrelevant_lines_for_proof.dfy(16,1)-(18,1): function definition for Id
-
-    Unused by proof:
-      _USECASE_find_irrelevant_lines_for_proof.dfy(3,19)-(3,24): ensures clause
-      _USECASE_find_irrelevant_lines_for_proof.dfy(6,5)-(6,11): assignment (or return)
-      _USECASE_find_irrelevant_lines_for_proof.dfy(10,5)-(10,12): assignment (or return)
-      _USECASE_find_irrelevant_lines_for_proof.dfy(14,1)-(14,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
-
-  Assertion batch 2:
-    Outcome: Valid
-    Duration: 00:00:00.1363772
-    Resource count: 5868
-
-    Assertions:
-      _USECASE_find_irrelevant_lines_for_proof.dfy(3,22): this postcondition holds
-
-    Proof dependencies:
-      _USECASE_find_irrelevant_lines_for_proof.dfy(3,19)-(3,24): ensures clause
-      _USECASE_find_irrelevant_lines_for_proof.dfy(10,5)-(10,12): assignment (or return)
-
-    Unused by proof:
-      _USECASE_find_irrelevant_lines_for_proof.dfy(2,20)-(2,23): ensures clause
-      _USECASE_find_irrelevant_lines_for_proof.dfy(6,5)-(6,11): assignment (or return)
-      _USECASE_find_irrelevant_lines_for_proof.dfy(12,5)-(12,15): assignment (or return)
-      _USECASE_find_irrelevant_lines_for_proof.dfy(14,1)-(14,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
-`;
-
-root.sourceCode = `method Abs(x: int) returns (y: int)
-  ensures x>=0 ==> x==y
-  ensures x<0 ==> x+y==0
-{
-  if(x == 0){
-    y := 0; // Unused by proof  _USECASE_find_irrelevant_lines.dfy(6,5)-(6,11): assignment (or return)
-  }
-
-  if x < 0 {
-    y := -x;
-  } else {
-    y := Id(x);
-  }
-}
-
-function Id<T> (a : T) : T {
-    a
-}
-`;
+root.sourceCode = "";
 
 root.targetFileName = '_USECASE_find_irrelevant_lines_for_proof.dfy';
 
@@ -244,9 +181,15 @@ root.proof = class {
   }
 };
 
-root.parseProof = function (log) {
-  return new root.proof(log);
-};
+// environment-aware parseProof:
+// - Node: accepts filesystem paths (strings) and returns proof synchronously.
+// - Browser: accepts File/Blob objects or content strings or URLs; returns Promise resolving to proof.
+root.parseProof = function (dafnyCode ,proofLog) {
+    root.sampleLog = proofLog;
+    root.sourceCode = dafnyCode;
+    return new root.proof(proofLog);
+}
+  
 
 root.getTokensForFile = function (proofOrLog, fname) {
   let p = null;
@@ -380,13 +323,21 @@ root.getUsedOn = function (key, proof) {
   return usedOn; // Element not present
 };
 
+root.getSampleLog = function(){
+  return root.sampleLog;
+}
+
+root.getSourceCode = function(){
+  return root.sourceCode;
+}
+
 // --- End original code ---
 
 // If running under Node (CommonJS), export named symbols for unit tests
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   module.exports = {
-    sampleLog: root.sampleLog,
-    sourceCode: root.sourceCode,
+    getSampleLog: root.sampleLog,
+    getSourceCode: root.sourceCode,
     targetFileName: root.targetFileName,
     CovStatus: root.CovStatus,
     TokenType: root.TokenType,
@@ -400,9 +351,12 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   };
 }
 
-if (require.main === module) {
-   proof = root.parseProof(root.sampleLog); 
-   let a = root.getUsedOn("_USECASE_find_irrelevant_lines_for_proof.dfy:10,5-10,12", proof); 
-   let c = root.getDependsOn("_USECASE_find_irrelevant_lines_for_proof.dfy:10,5-10,12", proof); 
-   let b = 3; 
-}
+// if (require.main === module) {
+//    const proofFile = "/home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/src/manual/prover_log.txt";
+//    const sourceFile = "/home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/src/manual/source_code.dfy";
+
+//    proof = root.parseProof(sourceFile ,proofFile);
+//    let a = root.getUsedOn("_USECASE_find_irrelevant_lines_for_proof.dfy:10,5-10,12", proof); 
+//    let c = root.getDependsOn("_USECASE_find_irrelevant_lines_for_proof.dfy:10,5-10,12", proof); 
+//    let b = 3; 
+// }
