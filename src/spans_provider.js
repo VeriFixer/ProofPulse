@@ -32,7 +32,7 @@ root.prooftoken = class {
   constructor(file, sLine, sCol, eLine, eCol, prooftext, isTopAssertion) {
     this.file = file;
     this.prooftext = prooftext;
-    console.log("prooftext is", prooftext)
+
     this.start = { line: sLine, col: sCol };
     this.end = { line: eLine, col: eCol };
     this.isTopAssertion = !!isTopAssertion;
@@ -127,7 +127,7 @@ root.proof = class {
         const sCol = parseInt(n[3], 10);
         const proofText = n[4].trim();
 
-        token = new root.prooftoken(file, sLine, sCol, sLine, sCol + 1, proofText, isTopAssertion);
+        token = new root.prooftoken(file, sLine, sCol, sLine, sCol, proofText, isTopAssertion);
       } else {
         continue;
       }
@@ -140,12 +140,18 @@ root.proof = class {
     
       if (isTopAssertion) {
         currentTopAssertion = token;
+        if(currentTopAssertion.proofUnusedTokens == null){
+            currentTopAssertion.proofUnusedTokens = []; // Assertion appears differently if on top or used in proofs this is for if it appears
+                                                        // without ebing on top to make it on top
+            currentTopAssertion.proofUsedTokens= [];                                         
+            currentTopAssertion.isTopAssertion = true;
+        }
+
         if (!this.topLevelProofInfo.some(t => t._key === token._key)) {
           this.topLevelProofInfo.push(token);
         }
       } else if (currentTopAssertion != null) {
         if (currentBlock === BlockType.ProofDep) {
-          token.CovStatus = root.CovStatus.CovComplete;
           if (!currentTopAssertion.proofUsedTokens.some(t => t._key === token._key)) {
             currentTopAssertion.proofUsedTokens.push(token);
           }
@@ -156,6 +162,177 @@ root.proof = class {
         }
       }
     }
+    this.setCoverageStatus(); 
+  }
+
+  setCoverageStatus() {
+    const allTokensArray = Array.from(this.allTokens.values());
+
+
+    const allpostcondition = allTokensArray.filter(t => t.prooftext.includes("this postcondition holds"));
+    const allpreconditions =  allTokensArray.filter(t => t.prooftext.includes("method requires clause"));
+    const allassertions = allTokensArray.filter(t => t.prooftext.includes("assertion always holds"));  
+    const allcodeLines = allTokensArray.filter(t =>
+      !allassertions.includes(t) &&
+      !allpreconditions.includes(t) &&
+      !allpostcondition.includes(t)
+    );
+    // The ones that contain the actual proves
+    const allTopTokens =  allTokensArray.filter(t => t.isTopAssertion);
+
+
+    // Coverage criterios 
+    //     Code Lines:
+    // - Covered Complete: if used to proof assertions that are postconditons (in proof dependency of them)
+    for (let token of allcodeLines) {
+      var canexit = false;
+      for (const toptoken of allpostcondition){
+        for (const tokdependency of toptoken.proofUsedTokens){
+          if(token._key == tokdependency._key){
+            canexit = true;
+            token.CovStatus = CovStatus.CovComplete;
+            break
+          }
+        }
+        if(canexit){
+          break;
+        }
+      }
+    }
+    // - Covered Warning: if used to proof assertions that are not related with postconditions
+    //   - This in term represents a bad use case of using formal tools, and if a line was not being covered add an 
+    //   assertion only for that line that is not related to the actual function... (this should be a warning)
+    //   It is expected that for intance Main method only has warning of this kind
+    for (let token of allcodeLines) {
+      var canexit = false;
+      if(token.CovStatus == CovStatus.CovComplete){
+        break;
+      }
+      for (const toptoken of allTopTokens){
+        for (const tokdependency of toptoken.proofUsedTokens){
+          if(token._key == tokdependency._key){
+            canexit = true;
+            token.CovStatus = CovStatus.CovTest;
+            break
+          }
+        }
+        if(canexit){
+          break;
+        }
+      }
+    }   
+    // - Uncovered: Line not use in any assertion/postcondiiton proof (this is the default if not rewritten it is this)
+
+
+    // Specification Lines:
+    // - plain Asserts
+    //   - Covered Complete: if used to proof postcondtition
+    for (let token of allassertions ) {
+      var canexit = false;
+      for (const toptoken of allpostcondition){
+        if(toptoken._key == token._key){
+          continue;
+        }
+        for (const tokdependency of toptoken.proofUsedTokens){
+          if(token._key == tokdependency._key){
+            canexit = true;
+            token.CovStatus = CovStatus.CovComplete;
+            break
+          }
+        }
+        if(canexit){
+          break;
+        }
+      }
+    }
+    //   - Covered Warning: If used to proof other assertion or itself that need to utilize at least one code line (or assertion that is actually Covered)
+    for (let token of allassertions )  {
+      var canexit = false;
+      if(token.CovStatus == CovStatus.CovComplete){
+        break;
+      }
+      // If top assertion only needs one dependency to be CovStatusComplete
+      if(allTopTokens.includes(token)){
+        for (const tokdependency of token.proofUsedTokens){
+          if(tokdependency.CovStatus == CovStatus.CovComplete){
+            token.CovStatus == CovStatus.CovTest;
+            break;
+          }
+        }
+      } else {
+        // If not top assertion needs to find in any proof dependency it is present a covered line
+        for (const toptoken of allTopTokens ){
+          let assertion_on_dep = false;
+          let covered_line_on_dep = false;
+          for (const tokdependency of toptoken.proofUsedTokens){
+            if(token._key == tokdependency._key){
+              assertion_on_dep = true;
+            }
+            if(tokdependency.CovStatus == CovStatus.CovComplete){
+              covered_line_on_dep = true;
+            }
+          }
+          if(covered_line_on_dep && assertion_on_dep){
+            token.CovStatus == CovStatus.CovTest;
+            break;
+          }
+        }
+      }
+    }  
+  
+    //   - Uncovered: If used to proof only assertion or itself that do not uses any code lines (likely unecessary specification, only uses other redundant assertions)
+
+
+
+
+    // - postconditions 
+    //   - Covered Warning: If for proving the postcondition code lines of the method are used but it is not being used for anything the postcondiiton.
+    for (let token of allpostcondition  ) {
+      for (const proofToken of token.proofUsedTokens ){
+        if(!proofToken.isTopAssertion){
+          if(proofToken.CovStatus == CovStatus.CovComplete){
+            token.CovStatus = CovStatus.CovTest;
+            break;
+          }
+        }
+      }
+    }
+    //   - Covered Complete: If for proving the postcondition code lines of the method are used, and the postcondition is used to proof something when that method/function is called. Appears on proof depedencies like so: 
+    //     _main_method_that_calls.dfy(9,8)-(9,18): ensures clause at _main_method_that_calls.dfy(2,13)-(2,16) from call
+    //   if the postcondition is used to proof something when that method/function is called. Appears on proof depedencies like so: 
+    //     _main_method_that_calls.dfy(9,8)-(9,18): ensures clause at _main_method_that_calls.dfy(2,13)-(2,16) from call
+   
+
+    // TEMP TO Implement
+
+    //   - Uncovered: No code lines used to prove it (default)
+   
+   
+   
+    // TEMP TO Implement
+    // - preconditions
+    //   - Covered Complete: If precondition is strictly necessary used in proving its own postcondiiton
+    for (let token of allpreconditions) {
+      var canexit = false;
+      for (const toptoken of allpostcondition){
+        for (const tokdependency of toptoken.proofUsedTokens){
+          if(token._key == tokdependency._key){
+            canexit = true;
+            token.CovStatus = CovStatus.CovComplete;
+            break
+          }
+        }
+        if(canexit){
+          break;
+        }
+      }
+    }
+    //   - Covered Warning: If precondiiton is used to prove that a call can be made with that fucntion/method appears like so (this appears always like a warning it can indicate that restriction could be maybe removed) :
+    //    _main_method_that_calls.dfy(10,8)-(10,19): requires clause at _main_method_that_calls.dfy(3,14)-(3,17) from call
+    
+    // TEMP TO IMPLEMENT
+
+    //   - Uncovered: precondition not necessary to prove postcondiiton and not being used
   }
 };
 
@@ -178,7 +355,7 @@ function internalEscapeHtml(str) {
 }
 
 root.generateSpansFragment = function (code, tokens, opts = {}) {
-  const skipOverlapping = opts.skipOverlapping !== false;
+  const skipOverlapping = true;
   const wrapTag = opts.wrapTag || 'span';
   const className = opts.className || 'token';
   const lines = code.split('\n');
@@ -190,11 +367,9 @@ root.generateSpansFragment = function (code, tokens, opts = {}) {
   }
 
   const ranges = [];
-  const tokensArray =  Array.from(tokens.values());
-
-  for (const t of tokensArray ) {
+  const tokensArray = Array.from(tokens.values());
+  for (const t of tokensArray) {
     if (!t) continue;
-    if (t.isTopAssertion) continue;
     if (!t.start || !t.end) continue;
     const sLine = t.start.line, sCol = t.start.col, eLine = t.end.line, eCol = t.end.col;
     if (!Number.isInteger(sLine) || !Number.isInteger(sCol) || !Number.isInteger(eLine) || !Number.isInteger(eCol)) continue;
@@ -205,39 +380,105 @@ root.generateSpansFragment = function (code, tokens, opts = {}) {
     ranges.push({ startIndex, endIndex, token: t });
   }
 
-  ranges.sort((a, b) => b.startIndex - a.startIndex);
+  // Sort by start asc, and for equal starts put the longer range first (so parents come before children)
+  ranges.sort((a, b) => a.startIndex - b.startIndex || b.endIndex - a.endIndex);
 
-  const acceptedDesc = [];
-  if (skipOverlapping) {
-    const occupied = [];
-    for (const r of ranges) {
-      const overlaps = occupied.some(o => !(r.endIndex <= o[0] || r.startIndex >= o[1]));
-      if (!overlaps) { acceptedDesc.push(r); occupied.push([r.startIndex, r.endIndex]); }
+  // Build nested tree of ranges (only allow nesting when fully contained).
+  // If skipOverlapping is true, partially-overlapping ranges are skipped.
+  const roots = [];
+  const stack = [];
+  for (const r of ranges) {
+    // pop finished stack frames
+    while (stack.length && r.startIndex >= stack[stack.length - 1].endIndex) stack.pop();
+
+    if (stack.length === 0) {
+      // no parent -> root
+      r.children = [];
+      roots.push(r);
+      stack.push(r);
+    } else {
+      const parent = stack[stack.length - 1];
+      if (r.endIndex <= parent.endIndex) {
+        // fully contained -> nested child
+        r.children = [];
+        if (!parent.children) parent.children = [];
+        parent.children.push(r);
+        stack.push(r);
+      } else {
+        // partial overlap: start inside parent but ends after parent -> ambiguous
+        if (skipOverlapping) {
+          // skip this range to keep well-formed nested HTML
+          continue;
+        } else {
+          // if not skipping overlapping, add it as a sibling/root at the outermost level where it doesn't start inside
+          // find level to attach as sibling (pop until we find a frame that ends <= r.startIndex)
+          let attached = false;
+          // try to pop until we can attach as root/sibling
+          let tempStack = stack.slice();
+          while (tempStack.length) {
+            if (r.startIndex >= tempStack[tempStack.length - 1].endIndex) {
+              tempStack.pop();
+            } else break;
+          }
+          if (tempStack.length === 0) {
+            r.children = [];
+            roots.push(r);
+            stack.length = 0;
+            stack.push(r);
+            attached = true;
+          }
+          if (!attached) {
+            // fallback: skip to avoid invalid HTML
+            continue;
+          }
+        }
+      }
     }
-  } else {
-    acceptedDesc.push(...ranges);
   }
 
-  const accepted = acceptedDesc.sort((a, b) => a.startIndex - b.startIndex);
-
-  let out = '';
-  let cursor = 0;
-  for (const r of accepted) {
-    if (cursor < r.startIndex) out += internalEscapeHtml(code.slice(cursor, r.startIndex));
-    const inner = code.slice(r.startIndex, r.endIndex);
-    const tok = r.token;
+  // helper to produce attributes for a token
+  function tokenAttrs(tok) {
     let statusStr = '';
     if (tok && tok.CovStatus) {
-      if (tok.CovStatus === root.CovStatus.Uncovered || String(tok.CovStatus).toLowerCase().includes('uncover')) statusStr = 'uncovered';
-      else if (tok.CovStatus === root.CovStatus.CovTest || String(tok.CovStatus).toLowerCase().includes('test')) statusStr = 'covered-test';
+      if (tok.CovStatus === root.CovStatus.Uncovered) statusStr = 'uncovered';
+      else if (tok.CovStatus === root.CovStatus.CovTest) statusStr = 'covered-test';
       else statusStr = 'covered-complete';
     }
     const dataId = internalEscapeHtml(String(tok._key || `${tok.file}:${tok.start.line},${tok.start.col}`));
     const dataStatus = internalEscapeHtml(statusStr);
     const classes = internalEscapeHtml(className);
-    const wrapped = `<${wrapTag} class="${classes}" data-id="${dataId}" data-status="${dataStatus}">${internalEscapeHtml(inner)}</${wrapTag}>`;
-    out += wrapped;
-    cursor = r.endIndex;
+    const istopAttr = tok.isTopAssertion ? ' data-istop="true"' : '';
+    return { dataId, dataStatus, classes, istopAttr };
+  }
+
+  // recursive renderer for a node and its children
+  function renderNode(node) {
+    const tok = node.token;
+    const { dataId, dataStatus, classes, istopAttr } = tokenAttrs(tok || {});
+    let innerOut = '';
+    let cursor = node.startIndex;
+    if (node.children && node.children.length) {
+      // ensure children are sorted by startIndex
+      node.children.sort((a, b) => a.startIndex - b.startIndex);
+      for (const child of node.children) {
+        if (cursor < child.startIndex) innerOut += internalEscapeHtml(code.slice(cursor, child.startIndex));
+        innerOut += renderNode(child);
+        cursor = child.endIndex;
+      }
+    }
+    if (cursor < node.endIndex) innerOut += internalEscapeHtml(code.slice(cursor, node.endIndex));
+    // wrap and return (innerOut already escaped)
+    return `<${wrapTag} class="${classes}" data-id="${dataId}" ${istopAttr} data-status="${dataStatus}">${innerOut}</${wrapTag}>`;
+  }
+
+  // render roots sequentially
+  let out = '';
+  let cursor = 0;
+  roots.sort((a, b) => a.startIndex - b.startIndex);
+  for (const rootNode of roots) {
+    if (cursor < rootNode.startIndex) out += internalEscapeHtml(code.slice(cursor, rootNode.startIndex));
+    out += renderNode(rootNode);
+    cursor = rootNode.endIndex;
   }
   if (cursor < code.length) out += internalEscapeHtml(code.slice(cursor));
   return out;
@@ -315,12 +556,18 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   };
 }
 
-// if (require.main === module) {
-//    const proofFile = "/home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/src/manual/prover_log.txt";
-//    const sourceFile = "/home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/src/manual/source_code.dfy";
 
-//    proof = root.parseProof(sourceFile ,proofFile);
-//    let a = root.getUsedOn("_USECASE_find_irrelevant_lines_for_proof.dfy:10,5-10,12", proof); 
-//    let c = root.getDependsOn("_USECASE_find_irrelevant_lines_for_proof.dfy:10,5-10,12", proof); 
-//    let b = 3; 
-// }
+
+
+// import { createRequire } from 'module';
+// const require = createRequire(import.meta.url);
+// const fs = require('fs');
+
+// const proofFile = "src/prover_log.txt";
+// const sourceFile = "src/source_code.dfy";
+
+// const src = fs.readFileSync(sourceFile, "utf-8");   // <-- make this a string
+// const log = fs.readFileSync(proofFile, "utf-8");    // <-- make this a string
+
+// const proof = root.parseProof(src, log);
+// let b = 3;

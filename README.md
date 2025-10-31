@@ -5,7 +5,7 @@ dafny verify Clover_abs.dfy --verification-coverage-report cov --log-format text
 z3 Clover_abs.dfy 
 // Corre o z3
 # Running with isolate assertions
-dafny verify _USECASE_irrelevant_postconditions.dfy  --verification-coverage-report cov --log-format text --solver-option LOG_FILE=output.smt2 --bprint output.bpl   --isolate-assertions
+dafny verify _USECASE_irrelevant_postconditions.dfy  --verification-coverage-report cov --log-format text --solver-option LOG_FILE=output.smt2 --bprint output.bpl   --isolate-assertions >> prover_log.txt
 
 # Classification for complete coverage 
 Code Lines:

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+        xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" href="./.resources/coverage.css" type="text/css"/>
+    <title>_USECASE_find_irrelevant_assertions.dfy, Verification coverage</title>
+</head>
+<body onload="window['PR_TAB_WIDTH']=4">
+<div class="menu" id="menu">
+    <a href="./index_verification.html">Index</a>
+    
+</div>
+<h1>_USECASE_find_irrelevant_assertions.dfy, Verification coverage</h1>
+<h1 hidden>file:///home/ricostynha/Desktop/drive/ProjectBase/projects/drive.ProjectBase/code/ProofPulse/dataset/usecases/find_irrelevant_assertions/_USECASE_find_irrelevant_assertions.dfy</h1>
+<pre class="source lang-java linenums">
+<span class="na" id="1:1">method Abs(x: int) returns (y: int)
+  ensures </span><span class="nc" id="2:11">x>=0 ==> </span><span class="pc" id="2:20">x==y
+</span><span class="na" id="3:1">  ensures </span><span class="nc" id="3:11">x<0 ==> </span><span class="pc" id="3:19">x+y==0
+</span><span class="na" id="4:1">{
+  </span><span class="fc" id="5:3">assert(43 == 43);</span><span class="na" id="5:20"> // To catch this being useless it is necessary to check only the dependency related to postconditions
+                    // This would catch this assertion as being useless
+
+  if x < 0 {
+    </span><span class="fc" id="9:5">y := -x;
+</span><span class="na" id="10:1">  } else {
+    </span><span class="fc" id="11:5">y := Id(x);
+</span><span class="na" id="12:1">  }
+</span><span class="nc" id="13:1">}
+
+</span><span class="na" id="15:1">function Id<T> (a : T) : T {
+    </span><span class="nc" id="16:5">a
+</span><span class="na" id="17:1">}
+
+//:: Someimes when there are two equal asserrtions or really equivalent the assertion is removed from proof core
+//:: See gaussian example
+//:: From proof dependency see if assertions is related to any postcondition in any way
+//:: Inside loops assertions have to be also related with the invariants assertions
+
+
+</span></pre>
+<div class="footer">
+    <span class="right">
+        Created with 
+        <a href="https://github.com/dafny-lang/dafny">Dafny</a>
+    </span>
+</div>
+</body>
+</html>

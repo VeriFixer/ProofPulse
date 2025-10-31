@@ -17,11 +17,11 @@ function computeLineStatusesFromTokens(code, tokens) {
     const statusByLine = new Array(lines.length).fill('covered-complete');
     if (!tokens || tokens.length === 0) return statusByLine;
     const mapStatus = (s) => {
-        if (s === window.CovStatus.Uncovered || s === 3 || String(s).toLowerCase().includes('uncover')) return 'uncovered';
-        if (s === window.CovStatus.CovTest || s === 2 || String(s).toLowerCase().includes('test')) return 'covered-test';
+        if (s === window.CovStatus.Uncovered) return 'uncovered';
+        if (s === window.CovStatus.CovTest) return 'covered-test';
         return 'covered-complete';
     };
-    const tokensArray =  Array.from(tokens)
+    const tokensArray =  Array.from(tokens.values())
     for (const t of tokensArray ) {
         if (!t || !t.start || !t.end) continue;
         const sLine = Math.max(1, t.start.line || 1);
@@ -44,7 +44,7 @@ function buildSourceDomFromFragment(fragmentHtml, code, lineStatuses) {
 
     for (let i = 0; i < Math.max(linesHtml.length, linesText.length); i++) {
         const lineNum = i + 1;
-        const status = (lineStatuses && lineStatuses[i]) ? lineStatuses[i] : 'covered-complete';
+        const status = (lineStatuses[i]) ? lineStatuses[i] : 'covered-complete';
         const div = document.createElement('div');
         div.className = 'line';
         div.dataset.line = String(lineNum);
@@ -93,16 +93,11 @@ function renderPanel(tokenEl, deps) {
 
     panelBody.innerHTML = '';
 
-    const status = token.CovStatus;
-    const statusP = document.createElement('p');
-    statusP.innerHTML = `<strong>Status:</strong> ${status}`;
-    panelBody.appendChild(statusP);
-
-
-    const message = token.prooftext;
-    const messageP = document.createElement('p');
-    messageP.innerHTML = `<strong>Message:</strong> ${message}`;
-    panelBody.appendChild(messageP);
+    panelBody.insertAdjacentHTML('beforeend', `
+    <p><strong>Status:</strong> ${String(token.CovStatus)}</p>
+    <p><strong>Message:</strong> ${String(token.prooftext)}</p>
+    <p><strong>Loc:</strong> ${String(id)}</p>
+    `);
 
 
 
@@ -137,11 +132,25 @@ function renderPanel(tokenEl, deps) {
   }
 
 function attachHandlers(deps) {
-    $$('.token').forEach(t => {
-        t.addEventListener('click', e => { renderPanel(t, deps); });
-        t.tabIndex = 0;
-        t.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); renderPanel(t, deps); } });
+  // Make tokens focusable so keyboard navigation still works:
+  $$('.token').forEach(t => t.tabIndex = 0);
+
+  // Click delegation: choose the deepest .token
+  pre.addEventListener('click', e => {
+    const tokenEl = e.target.closest('.token');
+    if (!tokenEl) return;
+    renderPanel(tokenEl, deps);
+  });
+
+  // Keyboard: keep per-token keydown so focus + Enter/Space works reliably
+  $$('.token').forEach(t => {
+    t.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        renderPanel(e.currentTarget, deps);
+      }
     });
+  });
 }
 
 async function bootstrap() {

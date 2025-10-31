@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Clover_abs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88bfbeb649967246ebb472617da27d50bee8c7d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6749955076c6d452a8c3d18a69825373c8646f1b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Clover_abs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Clover_abs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

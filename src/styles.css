@@ -2,10 +2,12 @@
   --bg: #000000;
   --panel: #171717;
   --text: #ffffff;
-  --light-blue: #b84141; /* uncovered */
+  --light-blue: #7fd2ff; /* uncovered */
   --dark-blue: #022054;  /* covered-complete */
   --median-blue: #405e8d; /* covered-test */
   --muted: #4e5865;
+  --red : #ff0000;
+  --purple: #ee00ff;
   --gutter-width: 56px; /* enough for 4 digits + padding */
 }
 
@@ -92,7 +94,7 @@ body {
 }
 
 .line[data-status="uncovered"] > .lnum {
-  background: var(--light-blue);
+  background: var(--red);
   color: #022054; /* dark text for readability on light bg */
 }
 
@@ -117,12 +119,19 @@ body {
   display: none !important;
 }
 
+.token[data-istop="true"] {
+  text-decoration-color: var(--light-blue);
+  text-decoration-thickness: 4px;
+  color: var(--purple)
+}
+
 /* uncovered underline (still useful to emphasize token-level uncovered) */
 .token[data-status="uncovered"] {
   text-decoration: underline;
-  text-decoration-color: var(--light-blue);
+  text-decoration-color: var(--red);
   text-decoration-thickness: 2px
 }
+
 
 /* selected token */
 .token.selected {
