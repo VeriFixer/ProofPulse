@@ -25,14 +25,11 @@ function computeLineStatusesFromTokens(code, tokens) {
     for (const t of tokensArray ) {
         if (!t || !t.start || !t.end) continue;
         const sLine = Math.max(1, t.start.line || 1);
-        const eLine = Math.max(sLine, t.end.line || sLine);
         const mapped = mapStatus(t.CovStatus);
-        for (let ln = sLine; ln <= eLine; ln++) {
-            const idx = ln - 1;
-            if (statusByLine[idx] === 'uncovered') continue;
-            if (mapped === 'uncovered') statusByLine[idx] = 'uncovered';
-            else if (mapped === 'covered-test' && statusByLine[idx] !== 'uncovered') statusByLine[idx] = 'covered-test';
-        }
+        const idx =  sLine  - 1;
+        if (statusByLine[idx] === 'uncovered') continue;
+        if (mapped === 'uncovered') statusByLine[idx] = 'uncovered';
+        else if (mapped === 'covered-test' && statusByLine[idx] !== 'uncovered') statusByLine[idx] = 'covered-test';
     }
     return statusByLine;
 }
@@ -105,7 +102,7 @@ function renderPanel(tokenEl, deps) {
     usesDiv.innerHTML = `<strong> Later Proof Dependency (${usedOnIds.length}):</strong>`;
     const usesList = document.createElement('ul');
     usedOnIds.forEach(uid => {
-        const tokenbase =  deps.allTokens.has(uid);
+        const tokenbase =  deps.allTokens.get(uid);
         const el = document.querySelector(`[data-id="${uid}"]`);
         const li = document.createElement('li');
         li.textContent = el ? `${el.textContent.trim()} (id=${uid}) (${tokenbase.prooftext})` : uid;
@@ -120,7 +117,7 @@ function renderPanel(tokenEl, deps) {
     usedByDiv.innerHTML = `<strong>Earlier Proof Dependency (${DepensOnIds.length}):</strong>`;
     const usedByList = document.createElement('ul');
     DepensOnIds.forEach(uid => {
-        const tokenbase = deps.allTokens.has(uid);
+        const tokenbase = deps.allTokens.get(uid);
         const el = document.querySelector(`[data-id="${uid}"]`);
         const li = document.createElement('li');
         li.textContent = el ? `${el.textContent.trim()} (id=${uid}) (${tokenbase.prooftext})` : uid;

@@ -170,12 +170,15 @@ root.proof = class {
 
 
     const allpostcondition = allTokensArray.filter(t => t.prooftext.includes("this postcondition holds"));
+    const allensures =  allTokensArray.filter(t => t.prooftext.includes("ensures clause"));
+
     const allpreconditions =  allTokensArray.filter(t => t.prooftext.includes("method requires clause"));
     const allassertions = allTokensArray.filter(t => t.prooftext.includes("assertion always holds"));  
     const allcodeLines = allTokensArray.filter(t =>
       !allassertions.includes(t) &&
       !allpreconditions.includes(t) &&
-      !allpostcondition.includes(t)
+      !allpostcondition.includes(t) &&
+      !allensures.includes(t)
     );
     // The ones that contain the actual proves
     const allTopTokens =  allTokensArray.filter(t => t.isTopAssertion);
@@ -294,6 +297,21 @@ root.proof = class {
             token.CovStatus = CovStatus.CovTest;
             break;
           }
+        }
+      }
+    }
+    for (let token of allensures  ) {
+      for (const toptoken of allpostcondition){
+        var exit = false;
+        for (const proofToken of toptoken.proofUsedTokens ){
+          if(token._key == proofToken._key){
+              // If ensures used in proving postcondition will be covered simply we can think of semantic afterwards
+              exit = true;
+              token.CovStatus = CovStatus.CovComplete;
+          }
+        }
+        if(exit){
+          break;
         }
       }
     }
