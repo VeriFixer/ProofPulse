@@ -1,0 +1,50 @@
+
+===== dafny run for test_find_irrelevant_lines_for_proof.dfy (2025-11-03T17:41:40.107Z) =====
+
+Dafny program verifier finished with 2 verified, 0 errors
+
+Results for Abs (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.0898573
+  Overall resource count: 11686
+  Maximum assertion batch time: 00:00:00.0449294
+  Maximum assertion batch resource count: 5868
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0449279
+    Resource count: 5818
+
+    Assertions:
+      test_find_irrelevant_lines_for_proof.dfy(2,21): this postcondition holds
+
+    Proof dependencies:
+      test_find_irrelevant_lines_for_proof.dfy(2,20)-(2,23): ensures clause
+      test_find_irrelevant_lines_for_proof.dfy(12,5)-(12,15): assignment (or return)
+      test_find_irrelevant_lines_for_proof.dfy(16,1)-(18,1): function definition for Id
+
+    Unused by proof:
+      test_find_irrelevant_lines_for_proof.dfy(3,19)-(3,24): ensures clause
+      test_find_irrelevant_lines_for_proof.dfy(6,5)-(6,11): assignment (or return)
+      test_find_irrelevant_lines_for_proof.dfy(10,5)-(10,12): assignment (or return)
+      test_find_irrelevant_lines_for_proof.dfy(14,1)-(14,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0449294
+    Resource count: 5868
+
+    Assertions:
+      test_find_irrelevant_lines_for_proof.dfy(3,22): this postcondition holds
+
+    Proof dependencies:
+      test_find_irrelevant_lines_for_proof.dfy(3,19)-(3,24): ensures clause
+      test_find_irrelevant_lines_for_proof.dfy(10,5)-(10,12): assignment (or return)
+
+    Unused by proof:
+      test_find_irrelevant_lines_for_proof.dfy(2,20)-(2,23): ensures clause
+      test_find_irrelevant_lines_for_proof.dfy(6,5)-(6,11): assignment (or return)
+      test_find_irrelevant_lines_for_proof.dfy(12,5)-(12,15): assignment (or return)
+      test_find_irrelevant_lines_for_proof.dfy(14,1)-(14,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+===== end dafny run for test_find_irrelevant_lines_for_proof.dfy =====

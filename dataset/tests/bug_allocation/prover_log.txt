@@ -1,0 +1,417 @@
+
+===== dafny run for bug_allocation.dfy (2025-11-03T17:41:34.495Z) =====
+
+Dafny program verifier finished with 16 verified, 0 errors
+
+Results for append (well-formedness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.3625279
+  Overall resource count: 55474
+  Maximum assertion batch time: 00:00:00.0597504
+  Maximum assertion batch resource count: 9178
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0597504
+    Resource count: 5079
+
+    Assertions:
+      bug_allocation.dfy(2,14): target object is never null
+
+    Proof dependencies:
+      bug_allocation.dfy(2,12)-(2,14): target object is never null
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,23): method requires clause
+      bug_allocation.dfy(3,11)-(3,13): target object is never null
+      bug_allocation.dfy(3,23)-(3,25): target object is never null
+      bug_allocation.dfy(3,11)-(3,25): method ensures clause
+      bug_allocation.dfy(4,11)-(4,11): array is never null
+      bug_allocation.dfy(4,11)-(4,14): index in range
+      bug_allocation.dfy(4,19)-(4,19): array is never null
+      bug_allocation.dfy(4,19)-(4,22): index in range
+      bug_allocation.dfy(4,11)-(4,26): method ensures clause
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0596740
+    Resource count: 7673
+
+    Assertions:
+      bug_allocation.dfy(3,13): target object is never null
+
+    Proof dependencies:
+      bug_allocation.dfy(3,11)-(3,13): target object is never null
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,14): target object is never null
+      bug_allocation.dfy(2,12)-(2,23): method requires clause
+      bug_allocation.dfy(3,23)-(3,25): target object is never null
+      bug_allocation.dfy(3,11)-(3,25): method ensures clause
+      bug_allocation.dfy(4,11)-(4,11): array is never null
+      bug_allocation.dfy(4,11)-(4,14): index in range
+      bug_allocation.dfy(4,19)-(4,19): array is never null
+      bug_allocation.dfy(4,19)-(4,22): index in range
+      bug_allocation.dfy(4,11)-(4,26): method ensures clause
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0596862
+    Resource count: 7788
+
+    Assertions:
+      bug_allocation.dfy(3,25): target object is never null
+
+    Proof dependencies:
+      bug_allocation.dfy(3,23)-(3,25): target object is never null
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,14): target object is never null
+      bug_allocation.dfy(2,12)-(2,23): method requires clause
+      bug_allocation.dfy(3,11)-(3,13): target object is never null
+      bug_allocation.dfy(3,11)-(3,25): method ensures clause
+      bug_allocation.dfy(4,11)-(4,11): array is never null
+      bug_allocation.dfy(4,11)-(4,14): index in range
+      bug_allocation.dfy(4,19)-(4,19): array is never null
+      bug_allocation.dfy(4,19)-(4,22): index in range
+      bug_allocation.dfy(4,11)-(4,26): method ensures clause
+
+  Assertion batch 4:
+    Outcome: Valid
+    Duration: 00:00:00.0596165
+    Resource count: 7998
+
+    Assertions:
+      bug_allocation.dfy(4,11): array is never null
+
+    Proof dependencies:
+      bug_allocation.dfy(4,11)-(4,11): array is never null
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,14): target object is never null
+      bug_allocation.dfy(2,12)-(2,23): method requires clause
+      bug_allocation.dfy(3,11)-(3,13): target object is never null
+      bug_allocation.dfy(3,23)-(3,25): target object is never null
+      bug_allocation.dfy(3,11)-(3,25): method ensures clause
+      bug_allocation.dfy(4,11)-(4,14): index in range
+      bug_allocation.dfy(4,19)-(4,19): array is never null
+      bug_allocation.dfy(4,19)-(4,22): index in range
+      bug_allocation.dfy(4,11)-(4,26): method ensures clause
+
+  Assertion batch 5:
+    Outcome: Valid
+    Duration: 00:00:00.0555910
+    Resource count: 8961
+
+    Assertions:
+      bug_allocation.dfy(4,12): index in range
+
+    Proof dependencies:
+      bug_allocation.dfy(2,12)-(2,23): method requires clause
+      bug_allocation.dfy(3,11)-(3,25): method ensures clause
+      bug_allocation.dfy(4,11)-(4,14): index in range
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,14): target object is never null
+      bug_allocation.dfy(3,11)-(3,13): target object is never null
+      bug_allocation.dfy(3,23)-(3,25): target object is never null
+      bug_allocation.dfy(4,11)-(4,11): array is never null
+      bug_allocation.dfy(4,19)-(4,19): array is never null
+      bug_allocation.dfy(4,19)-(4,22): index in range
+      bug_allocation.dfy(4,11)-(4,26): method ensures clause
+
+  Assertion batch 6:
+    Outcome: Valid
+    Duration: 00:00:00.0556092
+    Resource count: 8797
+
+    Assertions:
+      bug_allocation.dfy(4,19): array is never null
+
+    Proof dependencies:
+      bug_allocation.dfy(4,19)-(4,19): array is never null
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,14): target object is never null
+      bug_allocation.dfy(2,12)-(2,23): method requires clause
+      bug_allocation.dfy(3,11)-(3,13): target object is never null
+      bug_allocation.dfy(3,23)-(3,25): target object is never null
+      bug_allocation.dfy(3,11)-(3,25): method ensures clause
+      bug_allocation.dfy(4,11)-(4,11): array is never null
+      bug_allocation.dfy(4,11)-(4,14): index in range
+      bug_allocation.dfy(4,19)-(4,22): index in range
+      bug_allocation.dfy(4,11)-(4,26): method ensures clause
+
+  Assertion batch 7:
+    Outcome: Valid
+    Duration: 00:00:00.0126006
+    Resource count: 9178
+
+    Assertions:
+      bug_allocation.dfy(4,20): index in range
+
+    Proof dependencies:
+      bug_allocation.dfy(2,12)-(2,23): method requires clause
+      bug_allocation.dfy(4,11)-(4,14): index in range
+      bug_allocation.dfy(4,19)-(4,22): index in range
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,14): target object is never null
+      bug_allocation.dfy(3,11)-(3,13): target object is never null
+      bug_allocation.dfy(3,23)-(3,25): target object is never null
+      bug_allocation.dfy(3,11)-(3,25): method ensures clause
+      bug_allocation.dfy(4,11)-(4,11): array is never null
+      bug_allocation.dfy(4,19)-(4,19): array is never null
+      bug_allocation.dfy(4,11)-(4,26): method ensures clause
+
+Results for append (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.1252181
+  Overall resource count: 88690
+  Maximum assertion batch time: 00:00:00.0172890
+  Maximum assertion batch resource count: 14342
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0127593
+    Resource count: 5779
+
+    Assertions:
+      bug_allocation.dfy(24,18): target object is never null
+
+    Proof dependencies:
+      bug_allocation.dfy(24,16)-(24,18): target object is never null
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,23): requires clause
+      bug_allocation.dfy(3,11)-(3,25): ensures clause
+      bug_allocation.dfy(4,11)-(4,26): ensures clause
+      bug_allocation.dfy(24,16)-(24,18): array size is never negative
+      bug_allocation.dfy(24,3)-(24,25): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,3): variable 'c', which is subject to definite-assignment rules, is always initialized here
+      bug_allocation.dfy(25,3)-(25,3): array is never null
+      bug_allocation.dfy(25,3)-(25,6): index in range
+      bug_allocation.dfy(25,3)-(25,6): an array element is in the enclosing context's modifies clause
+      bug_allocation.dfy(25,11)-(25,11): array is never null
+      bug_allocation.dfy(25,11)-(25,14): index in range
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(26,1)-(26,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0118259
+    Resource count: 5902
+
+    Assertions:
+      bug_allocation.dfy(24,18): array size is never negative
+
+    Proof dependencies:
+      bug_allocation.dfy(2,12)-(2,23): requires clause
+      bug_allocation.dfy(24,16)-(24,18): array size is never negative
+
+    Unused by proof:
+      bug_allocation.dfy(3,11)-(3,25): ensures clause
+      bug_allocation.dfy(4,11)-(4,26): ensures clause
+      bug_allocation.dfy(24,16)-(24,18): target object is never null
+      bug_allocation.dfy(24,3)-(24,25): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,3): variable 'c', which is subject to definite-assignment rules, is always initialized here
+      bug_allocation.dfy(25,3)-(25,3): array is never null
+      bug_allocation.dfy(25,3)-(25,6): index in range
+      bug_allocation.dfy(25,3)-(25,6): an array element is in the enclosing context's modifies clause
+      bug_allocation.dfy(25,11)-(25,11): array is never null
+      bug_allocation.dfy(25,11)-(25,14): index in range
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(26,1)-(26,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0172890
+    Resource count: 8071
+
+    Assertions:
+      bug_allocation.dfy(25,3): array is never null
+
+    Proof dependencies:
+      bug_allocation.dfy(25,3)-(25,3): array is never null
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,23): requires clause
+      bug_allocation.dfy(3,11)-(3,25): ensures clause
+      bug_allocation.dfy(4,11)-(4,26): ensures clause
+      bug_allocation.dfy(24,16)-(24,18): target object is never null
+      bug_allocation.dfy(24,16)-(24,18): array size is never negative
+      bug_allocation.dfy(24,3)-(24,25): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,3): variable 'c', which is subject to definite-assignment rules, is always initialized here
+      bug_allocation.dfy(25,3)-(25,6): index in range
+      bug_allocation.dfy(25,3)-(25,6): an array element is in the enclosing context's modifies clause
+      bug_allocation.dfy(25,11)-(25,11): array is never null
+      bug_allocation.dfy(25,11)-(25,14): index in range
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(26,1)-(26,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 4:
+    Outcome: Valid
+    Duration: 00:00:00.0126925
+    Resource count: 8829
+
+    Assertions:
+      bug_allocation.dfy(25,4): index in range
+
+    Proof dependencies:
+      bug_allocation.dfy(2,12)-(2,23): requires clause
+      bug_allocation.dfy(25,3)-(25,6): index in range
+
+    Unused by proof:
+      bug_allocation.dfy(3,11)-(3,25): ensures clause
+      bug_allocation.dfy(4,11)-(4,26): ensures clause
+      bug_allocation.dfy(24,16)-(24,18): target object is never null
+      bug_allocation.dfy(24,16)-(24,18): array size is never negative
+      bug_allocation.dfy(24,3)-(24,25): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,3): variable 'c', which is subject to definite-assignment rules, is always initialized here
+      bug_allocation.dfy(25,3)-(25,3): array is never null
+      bug_allocation.dfy(25,3)-(25,6): an array element is in the enclosing context's modifies clause
+      bug_allocation.dfy(25,11)-(25,11): array is never null
+      bug_allocation.dfy(25,11)-(25,14): index in range
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(26,1)-(26,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 5:
+    Outcome: Valid
+    Duration: 00:00:00.0153842
+    Resource count: 11307
+
+    Assertions:
+      bug_allocation.dfy(25,4): an array element is in the enclosing context's modifies clause
+
+    Proof dependencies:
+      bug_allocation.dfy(25,3)-(25,6): an array element is in the enclosing context's modifies clause
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,23): requires clause
+      bug_allocation.dfy(3,11)-(3,25): ensures clause
+      bug_allocation.dfy(4,11)-(4,26): ensures clause
+      bug_allocation.dfy(24,16)-(24,18): target object is never null
+      bug_allocation.dfy(24,16)-(24,18): array size is never negative
+      bug_allocation.dfy(24,3)-(24,25): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,3): variable 'c', which is subject to definite-assignment rules, is always initialized here
+      bug_allocation.dfy(25,3)-(25,3): array is never null
+      bug_allocation.dfy(25,3)-(25,6): index in range
+      bug_allocation.dfy(25,11)-(25,11): array is never null
+      bug_allocation.dfy(25,11)-(25,14): index in range
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(26,1)-(26,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 6:
+    Outcome: Valid
+    Duration: 00:00:00.0135449
+    Resource count: 11250
+
+    Assertions:
+      bug_allocation.dfy(25,11): array is never null
+
+    Proof dependencies:
+      bug_allocation.dfy(25,11)-(25,11): array is never null
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,23): requires clause
+      bug_allocation.dfy(3,11)-(3,25): ensures clause
+      bug_allocation.dfy(4,11)-(4,26): ensures clause
+      bug_allocation.dfy(24,16)-(24,18): target object is never null
+      bug_allocation.dfy(24,16)-(24,18): array size is never negative
+      bug_allocation.dfy(24,3)-(24,25): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,3): variable 'c', which is subject to definite-assignment rules, is always initialized here
+      bug_allocation.dfy(25,3)-(25,3): array is never null
+      bug_allocation.dfy(25,3)-(25,6): index in range
+      bug_allocation.dfy(25,3)-(25,6): an array element is in the enclosing context's modifies clause
+      bug_allocation.dfy(25,11)-(25,14): index in range
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(26,1)-(26,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 7:
+    Outcome: Valid
+    Duration: 00:00:00.0140452
+    Resource count: 11354
+
+    Assertions:
+      bug_allocation.dfy(25,12): index in range
+
+    Proof dependencies:
+      bug_allocation.dfy(25,3)-(25,6): index in range
+      bug_allocation.dfy(25,11)-(25,14): index in range
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,23): requires clause
+      bug_allocation.dfy(3,11)-(3,25): ensures clause
+      bug_allocation.dfy(4,11)-(4,26): ensures clause
+      bug_allocation.dfy(24,16)-(24,18): target object is never null
+      bug_allocation.dfy(24,16)-(24,18): array size is never negative
+      bug_allocation.dfy(24,3)-(24,25): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,3): variable 'c', which is subject to definite-assignment rules, is always initialized here
+      bug_allocation.dfy(25,3)-(25,3): array is never null
+      bug_allocation.dfy(25,3)-(25,6): an array element is in the enclosing context's modifies clause
+      bug_allocation.dfy(25,11)-(25,11): array is never null
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(26,1)-(26,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 8:
+    Outcome: Valid
+    Duration: 00:00:00.0137586
+    Resource count: 11856
+
+    Assertions:
+      bug_allocation.dfy(3,20): this postcondition holds
+
+    Proof dependencies:
+      bug_allocation.dfy(3,11)-(3,25): ensures clause
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,23): requires clause
+      bug_allocation.dfy(4,11)-(4,26): ensures clause
+      bug_allocation.dfy(24,16)-(24,18): target object is never null
+      bug_allocation.dfy(24,16)-(24,18): array size is never negative
+      bug_allocation.dfy(24,3)-(24,25): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,3): variable 'c', which is subject to definite-assignment rules, is always initialized here
+      bug_allocation.dfy(25,3)-(25,3): array is never null
+      bug_allocation.dfy(25,3)-(25,6): index in range
+      bug_allocation.dfy(25,3)-(25,6): an array element is in the enclosing context's modifies clause
+      bug_allocation.dfy(25,11)-(25,11): array is never null
+      bug_allocation.dfy(25,11)-(25,14): index in range
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(26,1)-(26,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 9:
+    Outcome: Valid
+    Duration: 00:00:00.0139185
+    Resource count: 14342
+
+    Assertions:
+      bug_allocation.dfy(4,16): this postcondition holds
+
+    Proof dependencies:
+      bug_allocation.dfy(4,11)-(4,26): ensures clause
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,19): assignment (or return)
+
+    Unused by proof:
+      bug_allocation.dfy(2,12)-(2,23): requires clause
+      bug_allocation.dfy(3,11)-(3,25): ensures clause
+      bug_allocation.dfy(24,16)-(24,18): target object is never null
+      bug_allocation.dfy(24,16)-(24,18): array size is never negative
+      bug_allocation.dfy(24,3)-(24,25): assignment (or return)
+      bug_allocation.dfy(25,3)-(25,3): variable 'c', which is subject to definite-assignment rules, is always initialized here
+      bug_allocation.dfy(25,3)-(25,3): array is never null
+      bug_allocation.dfy(25,3)-(25,6): index in range
+      bug_allocation.dfy(25,3)-(25,6): an array element is in the enclosing context's modifies clause
+      bug_allocation.dfy(25,11)-(25,11): array is never null
+      bug_allocation.dfy(25,11)-(25,14): index in range
+      bug_allocation.dfy(26,1)-(26,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
+
+===== end dafny run for bug_allocation.dfy =====

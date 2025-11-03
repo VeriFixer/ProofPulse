@@ -1,0 +1,68 @@
+
+===== dafny run for bug_method_call.dfy (2025-11-03T17:41:37.774Z) =====
+
+Dafny program verifier finished with 3 verified, 0 errors
+
+Results for ret32 (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.0383223
+  Overall resource count: 3492
+  Maximum assertion batch time: 00:00:00.0383223
+  Maximum assertion batch resource count: 3492
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0383223
+    Resource count: 3492
+
+    Assertions:
+      bug_method_call.dfy(2,14): this postcondition holds
+
+    Proof dependencies:
+      bug_method_call.dfy(2,13)-(2,16): ensures clause
+      bug_method_call.dfy(5,5)-(5,12): assignment (or return)
+
+    Unused by proof:
+      bug_method_call.dfy(3,14)-(3,17): requires clause
+      bug_method_call.dfy(6,1)-(6,1): out-parameter 'x', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for Main (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.0765439
+  Overall resource count: 7842
+  Maximum assertion batch time: 00:00:00.0383264
+  Maximum assertion batch resource count: 4488
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0382175
+    Resource count: 3354
+
+    Assertions:
+      bug_method_call.dfy(8,16): the precondition always holds
+
+    Proof dependencies:
+      bug_method_call.dfy(8,6)-(8,19): requires clause at bug_method_call.dfy(3,14)-(3,17) from call
+
+    Unused by proof:
+      bug_method_call.dfy(8,6)-(8,19): call
+      bug_method_call.dfy(8,6)-(8,19): assignment (or return)
+      bug_method_call.dfy(9,5)-(9,17): assertion always holds
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0383264
+    Resource count: 4488
+
+    Assertions:
+      bug_method_call.dfy(9,5): assertion always holds
+
+    Proof dependencies:
+      bug_method_call.dfy(8,6)-(8,19): ensures clause at bug_method_call.dfy(2,13)-(2,16) from call
+      bug_method_call.dfy(9,5)-(9,17): assertion always holds
+
+    Unused by proof:
+      bug_method_call.dfy(8,6)-(8,19): call
+      bug_method_call.dfy(8,6)-(8,19): assignment (or return)
+
+===== end dafny run for bug_method_call.dfy =====

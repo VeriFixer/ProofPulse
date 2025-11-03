@@ -1,0 +1,48 @@
+
+===== dafny run for bug_last_chat_uncovered.dfy (2025-11-03T17:41:36.046Z) =====
+
+Dafny program verifier finished with 2 verified, 0 errors
+
+Results for Abs (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.0962407
+  Overall resource count: 10948
+  Maximum assertion batch time: 00:00:00.0481223
+  Maximum assertion batch resource count: 5499
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0481223
+    Resource count: 5449
+
+    Assertions:
+      bug_last_chat_uncovered.dfy(2,21): this postcondition holds
+
+    Proof dependencies:
+      bug_last_chat_uncovered.dfy(2,20)-(2,23): ensures clause
+      bug_last_chat_uncovered.dfy(8,5)-(8,15): assignment (or return)
+      bug_last_chat_uncovered.dfy(12,1)-(14,1): function definition for Id
+
+    Unused by proof:
+      bug_last_chat_uncovered.dfy(3,19)-(3,24): ensures clause
+      bug_last_chat_uncovered.dfy(6,5)-(6,12): assignment (or return)
+      bug_last_chat_uncovered.dfy(10,1)-(10,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0481184
+    Resource count: 5499
+
+    Assertions:
+      bug_last_chat_uncovered.dfy(3,22): this postcondition holds
+
+    Proof dependencies:
+      bug_last_chat_uncovered.dfy(3,19)-(3,24): ensures clause
+      bug_last_chat_uncovered.dfy(6,5)-(6,12): assignment (or return)
+
+    Unused by proof:
+      bug_last_chat_uncovered.dfy(2,20)-(2,23): ensures clause
+      bug_last_chat_uncovered.dfy(8,5)-(8,15): assignment (or return)
+      bug_last_chat_uncovered.dfy(10,1)-(10,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+===== end dafny run for bug_last_chat_uncovered.dfy =====

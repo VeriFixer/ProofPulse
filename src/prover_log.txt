@@ -1,67 +1,52 @@
-===== dafny run for irrelevant_postconditions.dfy (2025-11-03T16:04:35.516Z) =====
+===== dafny run for bug_two_assigments_same_line.dfy (2025-11-03T17:33:51.071Z) =====
 
-Dafny program verifier finished with 3 verified, 0 errors
+Dafny program verifier finished with 2 verified, 0 errors
 
-Results for Abs (correctness)
+Results for swap (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.1430843
-  Overall resource count: 16203
-  Maximum assertion batch time: 00:00:00.0476981
-  Maximum assertion batch resource count: 5580
+  Overall time: 00:00:00.0906287
+  Overall resource count: 6145
+  Maximum assertion batch time: 00:00:00.0453144
+  Maximum assertion batch resource count: 3113
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0476936
-    Resource count: 5122
+    Duration: 00:00:00.0453143
+    Resource count: 3032
 
     Assertions:
-      irrelevant_postconditions.dfy(2,13): this postcondition holds
+      bug_two_assigments_same_line.dfy(2,19): this postcondition holds
 
     Proof dependencies:
-      irrelevant_postconditions.dfy(2,11)-(2,16): ensures clause
+      bug_two_assigments_same_line.dfy(2,13)-(2,22): ensures clause
+      bug_two_assigments_same_line.dfy(5,5)-(5,23): assignment (or return)
 
     Unused by proof:
-      irrelevant_postconditions.dfy(3,20)-(3,23): ensures clause
-      irrelevant_postconditions.dfy(4,19)-(4,24): ensures clause
-      irrelevant_postconditions.dfy(7,5)-(7,12): assignment (or return)
-      irrelevant_postconditions.dfy(9,5)-(9,16): assignment (or return)
-      irrelevant_postconditions.dfy(11,1)-(11,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+      bug_two_assigments_same_line.dfy(3,13)-(3,22): ensures clause
+      bug_two_assigments_same_line.dfy(5,5)-(5,23): assignment (or return)
+      bug_two_assigments_same_line.dfy(5,5)-(5,23): assignment (or return)
+      bug_two_assigments_same_line.dfy(5,5)-(5,23): assignment (or return)
+      bug_two_assigments_same_line.dfy(6,1)-(6,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
+      bug_two_assigments_same_line.dfy(6,1)-(6,1): out-parameter 'd', which is subject to definite-assignment rules, is always initialized at this return point
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0476981
-    Resource count: 5501
+    Duration: 00:00:00.0453144
+    Resource count: 3113
 
     Assertions:
-      irrelevant_postconditions.dfy(3,21): this postcondition holds
+      bug_two_assigments_same_line.dfy(3,19): this postcondition holds
 
     Proof dependencies:
-      irrelevant_postconditions.dfy(3,20)-(3,23): ensures clause
-      irrelevant_postconditions.dfy(9,5)-(9,16): assignment (or return)
-      irrelevant_postconditions.dfy(13,1)-(15,1): function definition for Id
+      bug_two_assigments_same_line.dfy(3,13)-(3,22): ensures clause
+      bug_two_assigments_same_line.dfy(5,5)-(5,23): assignment (or return)
 
     Unused by proof:
-      irrelevant_postconditions.dfy(2,11)-(2,16): ensures clause
-      irrelevant_postconditions.dfy(4,19)-(4,24): ensures clause
-      irrelevant_postconditions.dfy(7,5)-(7,12): assignment (or return)
-      irrelevant_postconditions.dfy(11,1)-(11,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+      bug_two_assigments_same_line.dfy(2,13)-(2,22): ensures clause
+      bug_two_assigments_same_line.dfy(5,5)-(5,23): assignment (or return)
+      bug_two_assigments_same_line.dfy(5,5)-(5,23): assignment (or return)
+      bug_two_assigments_same_line.dfy(5,5)-(5,23): assignment (or return)
+      bug_two_assigments_same_line.dfy(6,1)-(6,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
+      bug_two_assigments_same_line.dfy(6,1)-(6,1): out-parameter 'd', which is subject to definite-assignment rules, is always initialized at this return point
 
-  Assertion batch 3:
-    Outcome: Valid
-    Duration: 00:00:00.0476926
-    Resource count: 5580
-
-    Assertions:
-      irrelevant_postconditions.dfy(4,22): this postcondition holds
-
-    Proof dependencies:
-      irrelevant_postconditions.dfy(4,19)-(4,24): ensures clause
-      irrelevant_postconditions.dfy(7,5)-(7,12): assignment (or return)
-
-    Unused by proof:
-      irrelevant_postconditions.dfy(2,11)-(2,16): ensures clause
-      irrelevant_postconditions.dfy(3,20)-(3,23): ensures clause
-      irrelevant_postconditions.dfy(9,5)-(9,16): assignment (or return)
-      irrelevant_postconditions.dfy(11,1)-(11,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
-
-===== end dafny run for irrelevant_postconditions.dfy =====
+===== end dafny run for bug_two_assigments_same_line.dfy =====

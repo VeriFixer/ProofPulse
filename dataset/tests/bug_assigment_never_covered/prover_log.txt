@@ -1,0 +1,47 @@
+
+===== dafny run for bug_assigment_never_covered.dfy (2025-11-03T17:41:35.247Z) =====
+
+Dafny program verifier finished with 2 verified, 0 errors
+
+Results for Abs (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.0862490
+  Overall resource count: 8001
+  Maximum assertion batch time: 00:00:00.0431267
+  Maximum assertion batch resource count: 4107
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0431267
+    Resource count: 3894
+
+    Assertions:
+      bug_assigment_never_covered.dfy(2,21): this postcondition holds
+
+    Proof dependencies:
+      bug_assigment_never_covered.dfy(2,20)-(2,23): ensures clause
+
+    Unused by proof:
+      bug_assigment_never_covered.dfy(3,19)-(3,24): ensures clause
+      bug_assigment_never_covered.dfy(6,5)-(6,12): assignment (or return)
+      bug_assigment_never_covered.dfy(8,5)-(8,11): assignment (or return)
+      bug_assigment_never_covered.dfy(10,1)-(10,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0431223
+    Resource count: 4107
+
+    Assertions:
+      bug_assigment_never_covered.dfy(3,22): this postcondition holds
+
+    Proof dependencies:
+      bug_assigment_never_covered.dfy(3,19)-(3,24): ensures clause
+      bug_assigment_never_covered.dfy(6,5)-(6,12): assignment (or return)
+
+    Unused by proof:
+      bug_assigment_never_covered.dfy(2,20)-(2,23): ensures clause
+      bug_assigment_never_covered.dfy(8,5)-(8,11): assignment (or return)
+      bug_assigment_never_covered.dfy(10,1)-(10,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+===== end dafny run for bug_assigment_never_covered.dfy =====

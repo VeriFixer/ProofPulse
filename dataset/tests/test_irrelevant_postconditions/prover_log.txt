@@ -1,0 +1,68 @@
+
+===== dafny run for test_irrelevant_postconditions.dfy (2025-11-03T17:41:40.886Z) =====
+
+Dafny program verifier finished with 3 verified, 0 errors
+
+Results for Abs (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.1435115
+  Overall resource count: 16203
+  Maximum assertion batch time: 00:00:00.0478381
+  Maximum assertion batch resource count: 5580
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0478369
+    Resource count: 5122
+
+    Assertions:
+      test_irrelevant_postconditions.dfy(2,13): this postcondition holds
+
+    Proof dependencies:
+      test_irrelevant_postconditions.dfy(2,11)-(2,16): ensures clause
+
+    Unused by proof:
+      test_irrelevant_postconditions.dfy(3,20)-(3,23): ensures clause
+      test_irrelevant_postconditions.dfy(4,19)-(4,24): ensures clause
+      test_irrelevant_postconditions.dfy(7,5)-(7,12): assignment (or return)
+      test_irrelevant_postconditions.dfy(9,5)-(9,16): assignment (or return)
+      test_irrelevant_postconditions.dfy(11,1)-(11,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0478365
+    Resource count: 5501
+
+    Assertions:
+      test_irrelevant_postconditions.dfy(3,21): this postcondition holds
+
+    Proof dependencies:
+      test_irrelevant_postconditions.dfy(3,20)-(3,23): ensures clause
+      test_irrelevant_postconditions.dfy(9,5)-(9,16): assignment (or return)
+      test_irrelevant_postconditions.dfy(13,1)-(15,1): function definition for Id
+
+    Unused by proof:
+      test_irrelevant_postconditions.dfy(2,11)-(2,16): ensures clause
+      test_irrelevant_postconditions.dfy(4,19)-(4,24): ensures clause
+      test_irrelevant_postconditions.dfy(7,5)-(7,12): assignment (or return)
+      test_irrelevant_postconditions.dfy(11,1)-(11,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0478381
+    Resource count: 5580
+
+    Assertions:
+      test_irrelevant_postconditions.dfy(4,22): this postcondition holds
+
+    Proof dependencies:
+      test_irrelevant_postconditions.dfy(4,19)-(4,24): ensures clause
+      test_irrelevant_postconditions.dfy(7,5)-(7,12): assignment (or return)
+
+    Unused by proof:
+      test_irrelevant_postconditions.dfy(2,11)-(2,16): ensures clause
+      test_irrelevant_postconditions.dfy(3,20)-(3,23): ensures clause
+      test_irrelevant_postconditions.dfy(9,5)-(9,16): assignment (or return)
+      test_irrelevant_postconditions.dfy(11,1)-(11,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+===== end dafny run for test_irrelevant_postconditions.dfy =====

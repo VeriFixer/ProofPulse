@@ -157,11 +157,21 @@ function runAllTests(opts = {}) {
   let skipped = 0;
   let dafnyFailures = 0;
 
+  
+
   console.log("\n");
   for (const srcFile of dfyFiles) {
     total += 1;
-    console.log("--------------------------------------------------");
+
+    var isBug = srcFile.includes("bug_"); //Bug should fail
+
+    if(isBug){
+      console.log("\n-------------- SHOULD FAIL ----------------------");
+    } else {
+      console.log("\n-------------- SHOULD PASS -----------------------");
+    }
     //console.log(`Processing: ${srcFile}`);
+
 
     const dir = path.dirname(srcFile);
     const proofFile = path.join(dir, "prover_log.txt");
@@ -238,7 +248,8 @@ function runAllTests(opts = {}) {
 
     try {
       const ok = check_test(srcFile, testExpectedOut, lineStatus);
-      if (ok) passed += 1;
+      
+      if ((ok && !isBug) || (!ok && isBug)) passed += 1;
       else failed += 1;
     } catch (err) {
       console.error(`Exception while checking test for ${srcFile}:`, err);
