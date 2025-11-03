@@ -85,15 +85,15 @@ body {
 }
 
 /* map statuses to gutter backgrounds (server-provided data-status on .line) */
-.line[data-status="covered-complete"] > .lnum {
+.line[data-status="CovComplete"] > .lnum {
   background: var(--dark-blue);
 }
 
-.line[data-status="covered-test"] > .lnum {
+.line[data-status="CovTest"] > .lnum {
   background: var(--median-blue);
 }
 
-.line[data-status="uncovered"] > .lnum {
+.line[data-status="Uncovered"] > .lnum {
   background: var(--red);
   color: #022054; /* dark text for readability on light bg */
 }

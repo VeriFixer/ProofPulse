@@ -17,7 +17,7 @@ root.targetFileName = '_USECASE_find_irrelevant_lines_for_proof.dfy';
 root.CovStatus = {
   CovComplete: "CovComplete",
   CovTest: "CovTest",
-  Uncovered: "Uncover"
+  Uncovered: "Uncovered"
 };
 
 root.TokenType = {
@@ -59,7 +59,7 @@ root.prooftoken = class {
 };
 
 root.proof = class {
-  constructor(proofLog) {
+  constructor(proofLog, sourceCode) {
     const BlockType = { NoBlock: 0, Assertion: 1, ProofDep: 2, Unused: 3 };
 
     const lines = proofLog.split(/\r?\n/);
@@ -69,6 +69,7 @@ root.proof = class {
 
     this.allTokens = new Map();
     this.topLevelProofInfo = [];
+    this.lineStatus = [];
 
     for (let i = 0; i < lines.length; i++) {
       const raw = lines[i];
@@ -163,6 +164,28 @@ root.proof = class {
       }
     }
     this.setCoverageStatus(); 
+    this.setLineStatus(sourceCode);
+  }
+
+  setLineStatus(code){
+    const tokens = this.allTokens;
+    const lines = code.split('\n');
+    this.lineStatus = new Array(lines.length).fill(CovStatus.CovComplete);
+    if (!tokens || tokens.length === 0) return;
+    const tokensArray =  Array.from(tokens.values())
+    for (const t of tokensArray ) {
+        if (!t || !t.start || !t.end) continue;
+        const sLine = Math.max(1, t.start.line || 1);
+        const mapped = t.CovStatus;
+        const idx =  sLine  - 1;
+        if (this.lineStatus[idx] === CovStatus.Uncovered){
+           continue;
+        } if (mapped === CovStatus.Uncovered) {
+          this.lineStatus[idx] = CovStatus.Uncovered;
+        } else if (mapped === CovStatus.CovTest && this.lineStatus[idx] !== CovStatus.Uncovered){
+           this.lineStatus[idx] = CovStatus.CovTest;
+        }
+    }
   }
 
   setCoverageStatus() {
@@ -360,7 +383,7 @@ root.proof = class {
 root.parseProof = function (dafnyCode ,proofLog) {
     root.sampleLog = proofLog;
     root.sourceCode = dafnyCode;
-    return new root.proof(proofLog);
+    return new root.proof(proofLog, dafnyCode);
 }
   
 function internalEscapeHtml(str) {
@@ -573,19 +596,3 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
     getUsedOn: root.getUsedOn,
   };
 }
-
-
-
-
-// import { createRequire } from 'module';
-// const require = createRequire(import.meta.url);
-// const fs = require('fs');
-
-// const proofFile = "src/prover_log.txt";
-// const sourceFile = "src/source_code.dfy";
-
-// const src = fs.readFileSync(sourceFile, "utf-8");   // <-- make this a string
-// const log = fs.readFileSync(proofFile, "utf-8");    // <-- make this a string
-
-// const proof = root.parseProof(src, log);
-// let b = 3;

@@ -12,28 +12,6 @@ function escapeHtml(s) {
         .replace(/>/g, '&gt;');
 }
 
-function computeLineStatusesFromTokens(code, tokens) {
-    const lines = code.split('\n');
-    const statusByLine = new Array(lines.length).fill('covered-complete');
-    if (!tokens || tokens.length === 0) return statusByLine;
-    const mapStatus = (s) => {
-        if (s === window.CovStatus.Uncovered) return 'uncovered';
-        if (s === window.CovStatus.CovTest) return 'covered-test';
-        return 'covered-complete';
-    };
-    const tokensArray =  Array.from(tokens.values())
-    for (const t of tokensArray ) {
-        if (!t || !t.start || !t.end) continue;
-        const sLine = Math.max(1, t.start.line || 1);
-        const mapped = mapStatus(t.CovStatus);
-        const idx =  sLine  - 1;
-        if (statusByLine[idx] === 'uncovered') continue;
-        if (mapped === 'uncovered') statusByLine[idx] = 'uncovered';
-        else if (mapped === 'covered-test' && statusByLine[idx] !== 'uncovered') statusByLine[idx] = 'covered-test';
-    }
-    return statusByLine;
-}
-
 function buildSourceDomFromFragment(fragmentHtml, code, lineStatuses) {
     const linesHtml = fragmentHtml.split('\n');
     const linesText = code.split('\n');
@@ -41,7 +19,7 @@ function buildSourceDomFromFragment(fragmentHtml, code, lineStatuses) {
 
     for (let i = 0; i < Math.max(linesHtml.length, linesText.length); i++) {
         const lineNum = i + 1;
-        const status = (lineStatuses[i]) ? lineStatuses[i] : 'covered-complete';
+        const status = (lineStatuses[i]) ? lineStatuses[i] : CovStatus.CovComplete;
         const div = document.createElement('div');
         div.className = 'line';
         div.dataset.line = String(lineNum);
@@ -163,12 +141,13 @@ async function bootstrap() {
     // Then pass the actual content strings to parseProof
     let proof = root.parseProof(dafnyCode, proofLog);
     window.proofObj = proof;
+    const lineStatuses = proof.lineStatus;
+
     const src = window.getSourceCode();
 
     let tokens = window.proofObj.allTokens;
 
     const fragment = window.generateSpansFragment(src, tokens);
-    const lineStatuses = computeLineStatusesFromTokens(src, tokens);
     buildSourceDomFromFragment(fragment, src, lineStatuses);
 
     const deps = window.proofObj;
