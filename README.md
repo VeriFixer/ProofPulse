@@ -21,13 +21,13 @@ Specification Lines:
   - Covered Complete: if used to proof assertion that are postcondtition
   - Covered Warning: If used to proof other assertion or itself that need to utilize at least one actual line of code
   - Uncovered: If used to proof only assertion or itself that do not uses any code lines (likely unecessary specification)
+
 - postconditions
   - Covered Complete: If for proving the postcondition code lines of the method are used, and the postcondition is used to proof something when that method/function is called. Appears on proof depedencies like so: 
     _main_method_that_calls.dfy(9,8)-(9,18): ensures clause at _main_method_that_calls.dfy(2,13)-(2,16) from call
   - Covered Warning: If for proving the postcondition code lines of the method are used but it is not being used for anything the postcondiiton.
-  - Uncovered: No code lines used to prove it
-  if the postcondition is used to proof something when that method/function is called. Appears on proof depedencies like so: 
-    _main_method_that_calls.dfy(9,8)-(9,18): ensures clause at _main_method_that_calls.dfy(2,13)-(2,16) from call
+  - Uncovered: No code lines used to prove it (or assertions that use code lines)
+
 - preconditions
   - Covered Complete: If precondition is strictly necessary used in proving its own postcondiiton
   - Covered Warning: If precondiiton is used to prove that a call can be made with that fucntion/method appears like so (this appears always like a warning it can indicate that restriction could be maybe removed) :

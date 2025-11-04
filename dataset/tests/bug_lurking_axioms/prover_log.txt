@@ -1,18 +1,18 @@
 
-===== dafny run for bug_lurking_axioms.dfy (2025-11-03T17:41:36.992Z) =====
+===== dafny run for bug_lurking_axioms.dfy (2025-11-04T09:49:54.436Z) =====
 
 Dafny program verifier finished with 29 verified, 0 errors
 
 Results for append (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.5956200
+  Overall time: 00:00:00.6108198
   Overall resource count: 384087
-  Maximum assertion batch time: 00:00:00.0481209
+  Maximum assertion batch time: 00:00:00.0552802
   Maximum assertion batch resource count: 28628
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0481209
+    Duration: 00:00:00.0552802
     Resource count: 4956
 
     Assertions:
@@ -61,7 +61,7 @@ Results for append (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0481130
+    Duration: 00:00:00.0552608
     Resource count: 5865
 
     Assertions:
@@ -110,7 +110,7 @@ Results for append (correctness)
 
   Assertion batch 3:
     Outcome: Valid
-    Duration: 00:00:00.0407484
+    Duration: 00:00:00.0493194
     Resource count: 8724
 
     Assertions:
@@ -159,7 +159,7 @@ Results for append (correctness)
 
   Assertion batch 4:
     Outcome: Valid
-    Duration: 00:00:00.0407430
+    Duration: 00:00:00.0493045
     Resource count: 8916
 
     Assertions:
@@ -208,7 +208,7 @@ Results for append (correctness)
 
   Assertion batch 5:
     Outcome: Valid
-    Duration: 00:00:00.0210753
+    Duration: 00:00:00.0174964
     Resource count: 11585
 
     Assertions:
@@ -257,7 +257,7 @@ Results for append (correctness)
 
   Assertion batch 6:
     Outcome: Valid
-    Duration: 00:00:00.0197831
+    Duration: 00:00:00.0223420
     Resource count: 13998
 
     Assertions:
@@ -306,7 +306,7 @@ Results for append (correctness)
 
   Assertion batch 7:
     Outcome: Valid
-    Duration: 00:00:00.0220878
+    Duration: 00:00:00.0206361
     Resource count: 14386
 
     Assertions:
@@ -355,7 +355,7 @@ Results for append (correctness)
 
   Assertion batch 8:
     Outcome: Valid
-    Duration: 00:00:00.0285948
+    Duration: 00:00:00.0191772
     Resource count: 14468
 
     Assertions:
@@ -404,7 +404,7 @@ Results for append (correctness)
 
   Assertion batch 9:
     Outcome: Valid
-    Duration: 00:00:00.0216045
+    Duration: 00:00:00.0204185
     Resource count: 14809
 
     Assertions:
@@ -453,7 +453,7 @@ Results for append (correctness)
 
   Assertion batch 10:
     Outcome: Valid
-    Duration: 00:00:00.0222586
+    Duration: 00:00:00.0202626
     Resource count: 14719
 
     Assertions:
@@ -502,7 +502,7 @@ Results for append (correctness)
 
   Assertion batch 11:
     Outcome: Valid
-    Duration: 00:00:00.0127334
+    Duration: 00:00:00.0217675
     Resource count: 14895
 
     Assertions:
@@ -551,7 +551,7 @@ Results for append (correctness)
 
   Assertion batch 12:
     Outcome: Valid
-    Duration: 00:00:00.0211279
+    Duration: 00:00:00.0231203
     Resource count: 15546
 
     Assertions:
@@ -600,7 +600,7 @@ Results for append (correctness)
 
   Assertion batch 13:
     Outcome: Valid
-    Duration: 00:00:00.0200040
+    Duration: 00:00:00.0203855
     Resource count: 15734
 
     Assertions:
@@ -649,7 +649,7 @@ Results for append (correctness)
 
   Assertion batch 14:
     Outcome: Valid
-    Duration: 00:00:00.0232377
+    Duration: 00:00:00.0202946
     Resource count: 15995
 
     Assertions:
@@ -699,7 +699,7 @@ Results for append (correctness)
 
   Assertion batch 15:
     Outcome: Valid
-    Duration: 00:00:00.0194260
+    Duration: 00:00:00.0244634
     Resource count: 16110
 
     Assertions:
@@ -748,7 +748,7 @@ Results for append (correctness)
 
   Assertion batch 16:
     Outcome: Valid
-    Duration: 00:00:00.0226068
+    Duration: 00:00:00.0238139
     Resource count: 22549
 
     Assertions:
@@ -798,7 +798,7 @@ Results for append (correctness)
 
   Assertion batch 17:
     Outcome: Valid
-    Duration: 00:00:00.0103541
+    Duration: 00:00:00.0127418
     Resource count: 14097
 
     Assertions:
@@ -847,7 +847,7 @@ Results for append (correctness)
 
   Assertion batch 18:
     Outcome: Valid
-    Duration: 00:00:00.0119935
+    Duration: 00:00:00.0127185
     Resource count: 14190
 
     Assertions:
@@ -896,7 +896,7 @@ Results for append (correctness)
 
   Assertion batch 19:
     Outcome: Valid
-    Duration: 00:00:00.0202455
+    Duration: 00:00:00.0111113
     Resource count: 14334
 
     Assertions:
@@ -945,7 +945,7 @@ Results for append (correctness)
 
   Assertion batch 20:
     Outcome: Valid
-    Duration: 00:00:00.0245094
+    Duration: 00:00:00.0124100
     Resource count: 14668
 
     Assertions:
@@ -994,7 +994,7 @@ Results for append (correctness)
 
   Assertion batch 21:
     Outcome: Valid
-    Duration: 00:00:00.0248336
+    Duration: 00:00:00.0236754
     Resource count: 28628
 
     Assertions:
@@ -1043,7 +1043,7 @@ Results for append (correctness)
 
   Assertion batch 22:
     Outcome: Valid
-    Duration: 00:00:00.0190182
+    Duration: 00:00:00.0181964
     Resource count: 14993
 
     Assertions:
@@ -1092,7 +1092,7 @@ Results for append (correctness)
 
   Assertion batch 23:
     Outcome: Valid
-    Duration: 00:00:00.0164215
+    Duration: 00:00:00.0110904
     Resource count: 14013
 
     Assertions:
@@ -1141,7 +1141,7 @@ Results for append (correctness)
 
   Assertion batch 24:
     Outcome: Valid
-    Duration: 00:00:00.0114299
+    Duration: 00:00:00.0120518
     Resource count: 14338
 
     Assertions:
@@ -1190,7 +1190,7 @@ Results for append (correctness)
 
   Assertion batch 25:
     Outcome: Valid
-    Duration: 00:00:00.0091142
+    Duration: 00:00:00.0116386
     Resource count: 14088
 
     Assertions:
@@ -1239,7 +1239,7 @@ Results for append (correctness)
 
   Assertion batch 26:
     Outcome: Valid
-    Duration: 00:00:00.0085517
+    Duration: 00:00:00.0142445
     Resource count: 14399
 
     Assertions:
@@ -1288,7 +1288,7 @@ Results for append (correctness)
 
   Assertion batch 27:
     Outcome: Valid
-    Duration: 00:00:00.0068832
+    Duration: 00:00:00.0075982
     Resource count: 13084
 
     Assertions:
@@ -1337,14 +1337,14 @@ Results for append (correctness)
 
 Results for append (well-formedness)
   Overall outcome: Correct
-  Overall time: 00:00:00.0961885
+  Overall time: 00:00:00.1105461
   Overall resource count: 13603
-  Maximum assertion batch time: 00:00:00.0481182
+  Maximum assertion batch time: 00:00:00.0552775
   Maximum assertion batch resource count: 6861
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0480703
+    Duration: 00:00:00.0552686
     Resource count: 6742
 
     Assertions:
@@ -1359,7 +1359,7 @@ Results for append (well-formedness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0481182
+    Duration: 00:00:00.0552775
     Resource count: 6861
 
     Assertions:

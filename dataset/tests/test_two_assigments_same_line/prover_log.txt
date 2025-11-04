@@ -1,18 +1,18 @@
 
-===== dafny run for test_two_assigments_same_line.dfy (2025-11-03T17:41:42.395Z) =====
+===== dafny run for test_two_assigments_same_line.dfy (2025-11-04T09:50:09.477Z) =====
 
 Dafny program verifier finished with 2 verified, 0 errors
 
 Results for swap (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.0868709
+  Overall time: 00:00:00.0942353
   Overall resource count: 6145
-  Maximum assertion batch time: 00:00:00.0434463
+  Maximum assertion batch time: 00:00:00.0471385
   Maximum assertion batch resource count: 3113
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0434463
+    Duration: 00:00:00.0470968
     Resource count: 3032
 
     Assertions:
@@ -32,7 +32,7 @@ Results for swap (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0434246
+    Duration: 00:00:00.0471385
     Resource count: 3113
 
     Assertions:

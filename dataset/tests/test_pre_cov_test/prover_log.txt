@@ -1,0 +1,51 @@
+
+===== dafny run for test_pre_cov_test.dfy (2025-11-04T09:50:07.926Z) =====
+
+Dafny program verifier finished with 2 verified, 0 errors
+
+Results for ret32 (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.0485487
+  Overall resource count: 3484
+  Maximum assertion batch time: 00:00:00.0485487
+  Maximum assertion batch resource count: 3484
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0485487
+    Resource count: 3484
+
+    Assertions:
+      test_pre_cov_test.dfy(3,14): this postcondition holds
+
+    Proof dependencies:
+      test_pre_cov_test.dfy(3,13)-(3,21): ensures clause
+      test_pre_cov_test.dfy(5,5)-(5,16): assignment (or return)
+
+    Unused by proof:
+      test_pre_cov_test.dfy(2,14)-(2,19): requires clause
+      test_pre_cov_test.dfy(6,1)-(6,1): out-parameter 'x', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for Main (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.0485784
+  Overall resource count: 3312
+  Maximum assertion batch time: 00:00:00.0485784
+  Maximum assertion batch resource count: 3312
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0485784
+    Resource count: 3312
+
+    Assertions:
+      test_pre_cov_test.dfy(9,19): the precondition always holds
+
+    Proof dependencies:
+      test_pre_cov_test.dfy(9,9)-(9,23): requires clause at test_pre_cov_test.dfy(2,14)-(2,19) from call
+
+    Unused by proof:
+      test_pre_cov_test.dfy(9,9)-(9,23): call
+      test_pre_cov_test.dfy(9,9)-(9,23): assignment (or return)
+
+===== end dafny run for test_pre_cov_test.dfy =====

@@ -1,0 +1,27 @@
+
+===== dafny run for test_code_line_unc.dfy (2025-11-04T09:49:59.892Z) =====
+
+Dafny program verifier finished with 1 verified, 0 errors
+
+Results for ret32 (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.0429660
+  Overall resource count: 3411
+  Maximum assertion batch time: 00:00:00.0429660
+  Maximum assertion batch resource count: 3411
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0429660
+    Resource count: 3411
+
+    Assertions:
+      test_code_line_unc.dfy(4,1): out-parameter 'x', which is subject to definite-assignment rules, is always initialized at this return point
+
+    Proof dependencies:
+      test_code_line_unc.dfy(4,1)-(4,1): out-parameter 'x', which is subject to definite-assignment rules, is always initialized at this return point
+
+    Unused by proof:
+      test_code_line_unc.dfy(3,5)-(3,12): assignment (or return)
+
+===== end dafny run for test_code_line_unc.dfy =====
