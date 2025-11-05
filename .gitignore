@@ -1,3 +1,4 @@
 tmp/*
 dataset/tests/*/output*
 dataset/tests/*/cov/
+dataset/tests/*/prover_log.txt
