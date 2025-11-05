@@ -93,6 +93,7 @@ function runDafnyAndAppendLog(srcFilePath) {
     "--solver-option", "LOG_FILE=output.smt2",
     "--bprint", "output.bpl",
     "--isolate-assertions",
+    "--allow-warnings", "true"
   ];
 
   //console.log(`Running: dafny ${args.join(" ")}  (cwd: ${dir})`);

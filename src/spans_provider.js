@@ -92,9 +92,10 @@ class Node {
       this.type = root.TokenType.AssertionManual;
     } else if(this.prooftext.includes("index in range") || 
               this.prooftext.includes("target object is never null")||
-              this.prooftext.includes("which is subject to definite-assignment rules, is always initialized at this return point")
-            ) {
-      // Heuristic (if index in range is an automatic assertion safe to treat less severely)
+              this.prooftext.includes("which is subject to definite-assignment rules, is always initialized at this return point") ||
+              this.prooftext.includes("which is subject to definite-assignment rules, is always initialized here")
+             ){
+              // Heuristic (if index in range is an automatic assertion safe to treat less severely)
       this.type = root.TokenType.AssertionAutomatic;
     } else if(this.isTopAssertion){
       this.type = root.TokenType.AssertionAutomatic;

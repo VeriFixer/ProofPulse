@@ -1,18 +1,18 @@
 
-===== dafny run for bug_last_chat_uncovered.dfy (2025-11-05T15:16:08.136Z) =====
+===== dafny run for bug_last_chat_uncovered.dfy (2025-11-05T15:33:05.412Z) =====
 
 Dafny program verifier finished with 2 verified, 0 errors
 
 Results for Abs (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.1068800
+  Overall time: 00:00:00.0941403
   Overall resource count: 10948
-  Maximum assertion batch time: 00:00:00.0534403
+  Maximum assertion batch time: 00:00:00.0470709
   Maximum assertion batch resource count: 5499
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0534403
+    Duration: 00:00:00.0470709
     Resource count: 5449
 
     Assertions:
@@ -30,7 +30,7 @@ Results for Abs (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0534397
+    Duration: 00:00:00.0470694
     Resource count: 5499
 
     Assertions:

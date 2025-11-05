@@ -122,3 +122,8 @@ method testingMethod() {
   assert result4 == Yes;
 
 }
+
+
+//::: Name - Big File is mostly to see on the web console
+//::: Description - assigment line is never covered bug report already opened for Boogie team
+//::: L8 - CovComplete

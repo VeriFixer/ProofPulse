@@ -1,18 +1,18 @@
 
-===== dafny run for test_assert_cov_complete.dfy (2025-11-05T15:16:10.778Z) =====
+===== dafny run for test_assert_cov_complete.dfy (2025-11-05T15:33:08.022Z) =====
 
 Dafny program verifier finished with 6 verified, 0 errors
 
 Results for CardinalitySubsetLt (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.3474036
+  Overall time: 00:00:00.3515746
   Overall resource count: 79445
-  Maximum assertion batch time: 00:00:00.0597205
+  Maximum assertion batch time: 00:00:00.0608604
   Maximum assertion batch resource count: 16476
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0595875
+    Duration: 00:00:00.0608491
     Resource count: 6377
 
     Assertions:
@@ -34,7 +34,7 @@ Results for CardinalitySubsetLt (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0596251
+    Duration: 00:00:00.0608604
     Resource count: 14886
 
     Assertions:
@@ -56,7 +56,7 @@ Results for CardinalitySubsetLt (correctness)
 
   Assertion batch 3:
     Outcome: Valid
-    Duration: 00:00:00.0596030
+    Duration: 00:00:00.0608500
     Resource count: 16476
 
     Assertions:
@@ -78,7 +78,7 @@ Results for CardinalitySubsetLt (correctness)
 
   Assertion batch 4:
     Outcome: Valid
-    Duration: 00:00:00.0597205
+    Duration: 00:00:00.0608511
     Resource count: 16378
 
     Assertions:
@@ -101,7 +101,7 @@ Results for CardinalitySubsetLt (correctness)
 
   Assertion batch 5:
     Outcome: Valid
-    Duration: 00:00:00.0544079
+    Duration: 00:00:00.0540699
     Resource count: 14381
 
     Assertions:
@@ -123,7 +123,7 @@ Results for CardinalitySubsetLt (correctness)
 
   Assertion batch 6:
     Outcome: Valid
-    Duration: 00:00:00.0544596
+    Duration: 00:00:00.0540941
     Resource count: 10947
 
     Assertions:
