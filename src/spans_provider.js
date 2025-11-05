@@ -21,12 +21,12 @@ root.CovStatus = {
 };
 
 root.TokenType = {
-  Undefined: 0, // Not yet evaluated
-  Precondition: 1,
-  Postcondition: 2,
-  AssertionManual: 3,
-  AssertionAutomatic: 4,
-  CodeLine: 5
+  Undefined: "Undefined", // Not yet evaluated
+  Precondition: "Precondition",
+  Postcondition: "Postcondition",
+  AssertionManual: "AssertionManual",
+  AssertionAutomatic: "AssertionAutomatic",
+  CodeLine: "CodeLine"
 };
 
     // Top
@@ -90,6 +90,12 @@ class Node {
       this.type = root.TokenType.Precondition;
     } else if(this.prooftext.includes("assertion always holds")){
       this.type = root.TokenType.AssertionManual;
+    } else if(this.prooftext.includes("index in range") || 
+              this.prooftext.includes("target object is never null")||
+              this.prooftext.includes("which is subject to definite-assignment rules, is always initialized at this return point")
+            ) {
+      // Heuristic (if index in range is an automatic assertion safe to treat less severely)
+      this.type = root.TokenType.AssertionAutomatic;
     } else if(this.isTopAssertion){
       this.type = root.TokenType.AssertionAutomatic;
     } else {
@@ -367,11 +373,11 @@ class Proof {
     // AUTOMATIC ASSERTIONS 
     //  CovStatusInternal=Complete -> CovStatus=Complete
     //  CovStatusInternal=CovTest -> CovStatus=Complete
-    //  CovStatusInternal=Uncovered -> Uncovered (?maybe will pass to CovTest see after)
+    //  CovStatusInternal=Uncovered -> CovTest  (probably is nothing special but just in case CovTest)
     const allAutoAssertions = allTokensArray.filter(t => t.type == root.TokenType.AssertionAutomatic);
     for(let token of allAutoAssertions){
       if(token.CovStatusInternal == CovStatus.Uncovered){
-        token.CovStatus = CovStatus.Uncovered;
+        token.CovStatus = CovStatus.CovTest;
       } else {
         token.CovStatus = CovStatus.CovComplete;
       }

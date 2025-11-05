@@ -1,18 +1,55 @@
 
-===== dafny run for bug_lurking_axioms.dfy (2025-11-05T14:40:09.258Z) =====
+===== dafny run for bug_lurking_axioms.dfy (2025-11-05T15:16:09.142Z) =====
 
 Dafny program verifier finished with 29 verified, 0 errors
 
+Results for append (well-formedness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.1170796
+  Overall resource count: 13603
+  Maximum assertion batch time: 00:00:00.0585416
+  Maximum assertion batch resource count: 6861
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0585416
+    Resource count: 6742
+
+    Assertions:
+      bug_lurking_axioms.dfy(2,12): array is never null
+
+    Proof dependencies:
+      bug_lurking_axioms.dfy(2,12)-(2,12): array is never null
+
+    Unused by proof:
+      bug_lurking_axioms.dfy(2,27)-(2,27): array is never null
+      bug_lurking_axioms.dfy(2,12)-(2,31): method ensures clause
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0585380
+    Resource count: 6861
+
+    Assertions:
+      bug_lurking_axioms.dfy(2,27): array is never null
+
+    Proof dependencies:
+      bug_lurking_axioms.dfy(2,27)-(2,27): array is never null
+
+    Unused by proof:
+      bug_lurking_axioms.dfy(2,12)-(2,12): array is never null
+      bug_lurking_axioms.dfy(2,12)-(2,31): method ensures clause
+
 Results for append (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.5913408
+  Overall time: 00:00:00.6206721
   Overall resource count: 384087
-  Maximum assertion batch time: 00:00:00.0484282
+  Maximum assertion batch time: 00:00:00.0585266
   Maximum assertion batch resource count: 28628
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0484282
+    Duration: 00:00:00.0585266
     Resource count: 4956
 
     Assertions:
@@ -61,7 +98,7 @@ Results for append (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0484144
+    Duration: 00:00:00.0585161
     Resource count: 5865
 
     Assertions:
@@ -110,7 +147,7 @@ Results for append (correctness)
 
   Assertion batch 3:
     Outcome: Valid
-    Duration: 00:00:00.0484054
+    Duration: 00:00:00.0400104
     Resource count: 8724
 
     Assertions:
@@ -159,7 +196,7 @@ Results for append (correctness)
 
   Assertion batch 4:
     Outcome: Valid
-    Duration: 00:00:00.0392060
+    Duration: 00:00:00.0400327
     Resource count: 8916
 
     Assertions:
@@ -208,7 +245,7 @@ Results for append (correctness)
 
   Assertion batch 5:
     Outcome: Valid
-    Duration: 00:00:00.0198470
+    Duration: 00:00:00.0183298
     Resource count: 11585
 
     Assertions:
@@ -257,7 +294,7 @@ Results for append (correctness)
 
   Assertion batch 6:
     Outcome: Valid
-    Duration: 00:00:00.0202900
+    Duration: 00:00:00.0183160
     Resource count: 13998
 
     Assertions:
@@ -306,7 +343,7 @@ Results for append (correctness)
 
   Assertion batch 7:
     Outcome: Valid
-    Duration: 00:00:00.0202936
+    Duration: 00:00:00.0182106
     Resource count: 14386
 
     Assertions:
@@ -355,7 +392,7 @@ Results for append (correctness)
 
   Assertion batch 8:
     Outcome: Valid
-    Duration: 00:00:00.0197535
+    Duration: 00:00:00.0189785
     Resource count: 14468
 
     Assertions:
@@ -404,7 +441,7 @@ Results for append (correctness)
 
   Assertion batch 9:
     Outcome: Valid
-    Duration: 00:00:00.0194532
+    Duration: 00:00:00.0242446
     Resource count: 14809
 
     Assertions:
@@ -453,7 +490,7 @@ Results for append (correctness)
 
   Assertion batch 10:
     Outcome: Valid
-    Duration: 00:00:00.0215501
+    Duration: 00:00:00.0194302
     Resource count: 14719
 
     Assertions:
@@ -502,7 +539,7 @@ Results for append (correctness)
 
   Assertion batch 11:
     Outcome: Valid
-    Duration: 00:00:00.0239401
+    Duration: 00:00:00.0239796
     Resource count: 14895
 
     Assertions:
@@ -551,7 +588,7 @@ Results for append (correctness)
 
   Assertion batch 12:
     Outcome: Valid
-    Duration: 00:00:00.0205086
+    Duration: 00:00:00.0260613
     Resource count: 15546
 
     Assertions:
@@ -600,7 +637,7 @@ Results for append (correctness)
 
   Assertion batch 13:
     Outcome: Valid
-    Duration: 00:00:00.0202259
+    Duration: 00:00:00.0248030
     Resource count: 15734
 
     Assertions:
@@ -649,7 +686,7 @@ Results for append (correctness)
 
   Assertion batch 14:
     Outcome: Valid
-    Duration: 00:00:00.0182254
+    Duration: 00:00:00.0231736
     Resource count: 15995
 
     Assertions:
@@ -699,7 +736,7 @@ Results for append (correctness)
 
   Assertion batch 15:
     Outcome: Valid
-    Duration: 00:00:00.0191792
+    Duration: 00:00:00.0215196
     Resource count: 16110
 
     Assertions:
@@ -748,7 +785,7 @@ Results for append (correctness)
 
   Assertion batch 16:
     Outcome: Valid
-    Duration: 00:00:00.0273391
+    Duration: 00:00:00.0268891
     Resource count: 22549
 
     Assertions:
@@ -798,7 +835,7 @@ Results for append (correctness)
 
   Assertion batch 17:
     Outcome: Valid
-    Duration: 00:00:00.0127372
+    Duration: 00:00:00.0231378
     Resource count: 14097
 
     Assertions:
@@ -847,7 +884,7 @@ Results for append (correctness)
 
   Assertion batch 18:
     Outcome: Valid
-    Duration: 00:00:00.0113218
+    Duration: 00:00:00.0127209
     Resource count: 14190
 
     Assertions:
@@ -896,7 +933,7 @@ Results for append (correctness)
 
   Assertion batch 19:
     Outcome: Valid
-    Duration: 00:00:00.0120014
+    Duration: 00:00:00.0131523
     Resource count: 14334
 
     Assertions:
@@ -945,7 +982,7 @@ Results for append (correctness)
 
   Assertion batch 20:
     Outcome: Valid
-    Duration: 00:00:00.0169978
+    Duration: 00:00:00.0131277
     Resource count: 14668
 
     Assertions:
@@ -994,7 +1031,7 @@ Results for append (correctness)
 
   Assertion batch 21:
     Outcome: Valid
-    Duration: 00:00:00.0243001
+    Duration: 00:00:00.0252289
     Resource count: 28628
 
     Assertions:
@@ -1043,7 +1080,7 @@ Results for append (correctness)
 
   Assertion batch 22:
     Outcome: Valid
-    Duration: 00:00:00.0200141
+    Duration: 00:00:00.0187845
     Resource count: 14993
 
     Assertions:
@@ -1092,7 +1129,7 @@ Results for append (correctness)
 
   Assertion batch 23:
     Outcome: Valid
-    Duration: 00:00:00.0179430
+    Duration: 00:00:00.0106294
     Resource count: 14013
 
     Assertions:
@@ -1141,7 +1178,7 @@ Results for append (correctness)
 
   Assertion batch 24:
     Outcome: Valid
-    Duration: 00:00:00.0117830
+    Duration: 00:00:00.0129909
     Resource count: 14338
 
     Assertions:
@@ -1190,7 +1227,7 @@ Results for append (correctness)
 
   Assertion batch 25:
     Outcome: Valid
-    Duration: 00:00:00.0117003
+    Duration: 00:00:00.0100198
     Resource count: 14088
 
     Assertions:
@@ -1239,7 +1276,7 @@ Results for append (correctness)
 
   Assertion batch 26:
     Outcome: Valid
-    Duration: 00:00:00.0108433
+    Duration: 00:00:00.0103238
     Resource count: 14399
 
     Assertions:
@@ -1288,7 +1325,7 @@ Results for append (correctness)
 
   Assertion batch 27:
     Outcome: Valid
-    Duration: 00:00:00.0066391
+    Duration: 00:00:00.0095344
     Resource count: 13084
 
     Assertions:
@@ -1334,42 +1371,5 @@ Results for append (correctness)
       bug_lurking_axioms.dfy(13,3)-(13,17): assignment (or return)
       bug_lurking_axioms.dfy(13,3)-(13,17): assignment (or return)
       bug_lurking_axioms.dfy(14,1)-(14,1): out-parameter 'c', which is subject to definite-assignment rules, is always initialized at this return point
-
-Results for append (well-formedness)
-  Overall outcome: Correct
-  Overall time: 00:00:00.0968219
-  Overall resource count: 13603
-  Maximum assertion batch time: 00:00:00.0484146
-  Maximum assertion batch resource count: 6861
-
-  Assertion batch 1:
-    Outcome: Valid
-    Duration: 00:00:00.0484146
-    Resource count: 6742
-
-    Assertions:
-      bug_lurking_axioms.dfy(2,12): array is never null
-
-    Proof dependencies:
-      bug_lurking_axioms.dfy(2,12)-(2,12): array is never null
-
-    Unused by proof:
-      bug_lurking_axioms.dfy(2,27)-(2,27): array is never null
-      bug_lurking_axioms.dfy(2,12)-(2,31): method ensures clause
-
-  Assertion batch 2:
-    Outcome: Valid
-    Duration: 00:00:00.0484073
-    Resource count: 6861
-
-    Assertions:
-      bug_lurking_axioms.dfy(2,27): array is never null
-
-    Proof dependencies:
-      bug_lurking_axioms.dfy(2,27)-(2,27): array is never null
-
-    Unused by proof:
-      bug_lurking_axioms.dfy(2,12)-(2,12): array is never null
-      bug_lurking_axioms.dfy(2,12)-(2,31): method ensures clause
 
 ===== end dafny run for bug_lurking_axioms.dfy =====

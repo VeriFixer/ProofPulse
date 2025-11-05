@@ -51,13 +51,8 @@ function clearHighlights() {
 
 function renderPanel(tokenEl, proof) {
     const id = tokenEl.dataset.id;
-    console.log("Id read is ",id)
-
 
     const token =  proof.proofGraph.getNode(id);
-    console.log("Token is", token);
-
-    console.log("All elemnts are ", proof.proofGraph.getAllNodes());
 
     panelTitle.textContent = `Dependency tracker: ${tokenEl.textContent.trim()}`;
     
@@ -76,6 +71,8 @@ function renderPanel(tokenEl, proof) {
     <p><strong>Status:</strong> ${String(token.CovStatus)}</p>
     <p><strong>Message:</strong> ${String(token.prooftext)}</p>
     <p><strong>Loc:</strong> ${String(id)}</p>
+    <p><strong>Kind:</strong> ${String(token.type)}</p>
+    <p><strong>CovInternal:</strong> ${String(token.CovStatusInternal)}</p>
     `);
 
     const usedByDiv = document.createElement('div'); usedByDiv.className = 'group';

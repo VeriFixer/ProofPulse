@@ -1,18 +1,18 @@
 
-===== dafny run for test_index_in_range.dfy (2025-11-05T14:40:17.093Z) =====
+===== dafny run for test_index_in_range.dfy (2025-11-05T15:16:16.929Z) =====
 
 Dafny program verifier finished with 25 verified, 0 errors
 
 Results for zeroVector (well-formedness)
   Overall outcome: Correct
-  Overall time: 00:00:00.3120809
+  Overall time: 00:00:00.2837791
   Overall resource count: 40201
-  Maximum assertion batch time: 00:00:00.0625232
+  Maximum assertion batch time: 00:00:00.0579595
   Maximum assertion batch resource count: 9335
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0625207
+    Duration: 00:00:00.0579595
     Resource count: 6742
 
     Assertions:
@@ -34,7 +34,7 @@ Results for zeroVector (well-formedness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0622581
+    Duration: 00:00:00.0579355
     Resource count: 6861
 
     Assertions:
@@ -56,7 +56,7 @@ Results for zeroVector (well-formedness)
 
   Assertion batch 3:
     Outcome: Valid
-    Duration: 00:00:00.0622617
+    Duration: 00:00:00.0578972
     Resource count: 8895
 
     Assertions:
@@ -78,7 +78,7 @@ Results for zeroVector (well-formedness)
 
   Assertion batch 4:
     Outcome: Valid
-    Duration: 00:00:00.0625172
+    Duration: 00:00:00.0579075
     Resource count: 9335
 
     Assertions:
@@ -100,7 +100,7 @@ Results for zeroVector (well-formedness)
 
   Assertion batch 5:
     Outcome: Valid
-    Duration: 00:00:00.0625232
+    Duration: 00:00:00.0520794
     Resource count: 8368
 
     Assertions:
@@ -122,14 +122,14 @@ Results for zeroVector (well-formedness)
 
 Results for zeroVector (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.4129756
+  Overall time: 00:00:00.3279330
   Overall resource count: 264597
-  Maximum assertion batch time: 00:00:00.0561924
+  Maximum assertion batch time: 00:00:00.0520824
   Maximum assertion batch resource count: 19593
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0561924
+    Duration: 00:00:00.0520824
     Resource count: 5561
 
     Assertions:
@@ -169,7 +169,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0205045
+    Duration: 00:00:00.0169659
     Resource count: 6484
 
     Assertions:
@@ -209,7 +209,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 3:
     Outcome: Valid
-    Duration: 00:00:00.0193986
+    Duration: 00:00:00.0173714
     Resource count: 8744
 
     Assertions:
@@ -249,7 +249,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 4:
     Outcome: Valid
-    Duration: 00:00:00.0190435
+    Duration: 00:00:00.0178596
     Resource count: 8937
 
     Assertions:
@@ -289,7 +289,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 5:
     Outcome: Valid
-    Duration: 00:00:00.0232937
+    Duration: 00:00:00.0160894
     Resource count: 11741
 
     Assertions:
@@ -329,7 +329,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 6:
     Outcome: Valid
-    Duration: 00:00:00.0199583
+    Duration: 00:00:00.0171841
     Resource count: 13840
 
     Assertions:
@@ -369,7 +369,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 7:
     Outcome: Valid
-    Duration: 00:00:00.0207511
+    Duration: 00:00:00.0167607
     Resource count: 14140
 
     Assertions:
@@ -409,7 +409,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 8:
     Outcome: Valid
-    Duration: 00:00:00.0146569
+    Duration: 00:00:00.0140283
     Resource count: 14254
 
     Assertions:
@@ -449,7 +449,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 9:
     Outcome: Valid
-    Duration: 00:00:00.0292893
+    Duration: 00:00:00.0142710
     Resource count: 14593
 
     Assertions:
@@ -489,7 +489,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 10:
     Outcome: Valid
-    Duration: 00:00:00.0186705
+    Duration: 00:00:00.0219993
     Resource count: 15111
 
     Assertions:
@@ -529,7 +529,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 11:
     Outcome: Valid
-    Duration: 00:00:00.0282912
+    Duration: 00:00:00.0115831
     Resource count: 15304
 
     Assertions:
@@ -569,7 +569,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 12:
     Outcome: Valid
-    Duration: 00:00:00.0110398
+    Duration: 00:00:00.0128958
     Resource count: 15494
 
     Assertions:
@@ -609,7 +609,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 13:
     Outcome: Valid
-    Duration: 00:00:00.0281099
+    Duration: 00:00:00.0184869
     Resource count: 15674
 
     Assertions:
@@ -649,7 +649,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 14:
     Outcome: Valid
-    Duration: 00:00:00.0234073
+    Duration: 00:00:00.0138989
     Resource count: 19593
 
     Assertions:
@@ -690,7 +690,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 15:
     Outcome: Valid
-    Duration: 00:00:00.0123956
+    Duration: 00:00:00.0125412
     Resource count: 13971
 
     Assertions:
@@ -730,7 +730,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 16:
     Outcome: Valid
-    Duration: 00:00:00.0148364
+    Duration: 00:00:00.0128988
     Resource count: 15020
 
     Assertions:
@@ -770,7 +770,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 17:
     Outcome: Valid
-    Duration: 00:00:00.0162378
+    Duration: 00:00:00.0119136
     Resource count: 14799
 
     Assertions:
@@ -810,7 +810,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 18:
     Outcome: Valid
-    Duration: 00:00:00.0141718
+    Duration: 00:00:00.0123611
     Resource count: 14005
 
     Assertions:
@@ -850,7 +850,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 19:
     Outcome: Valid
-    Duration: 00:00:00.0119119
+    Duration: 00:00:00.0090795
     Resource count: 14319
 
     Assertions:
@@ -890,7 +890,7 @@ Results for zeroVector (correctness)
 
   Assertion batch 20:
     Outcome: Valid
-    Duration: 00:00:00.0108151
+    Duration: 00:00:00.0076620
     Resource count: 13013
 
     Assertions:

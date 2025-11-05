@@ -1,18 +1,18 @@
 
-===== dafny run for bug_method_call.dfy (2025-11-05T14:40:10.027Z) =====
+===== dafny run for bug_method_call.dfy (2025-11-05T15:16:09.938Z) =====
 
 Dafny program verifier finished with 3 verified, 0 errors
 
 Results for ret32 (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.0382781
+  Overall time: 00:00:00.0385357
   Overall resource count: 3492
-  Maximum assertion batch time: 00:00:00.0382781
+  Maximum assertion batch time: 00:00:00.0385357
   Maximum assertion batch resource count: 3492
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0382781
+    Duration: 00:00:00.0385357
     Resource count: 3492
 
     Assertions:
@@ -28,14 +28,14 @@ Results for ret32 (correctness)
 
 Results for Main (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.0766000
+  Overall time: 00:00:00.0772364
   Overall resource count: 7842
-  Maximum assertion batch time: 00:00:00.0383221
+  Maximum assertion batch time: 00:00:00.0386189
   Maximum assertion batch resource count: 4488
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0383221
+    Duration: 00:00:00.0386189
     Resource count: 3354
 
     Assertions:
@@ -51,7 +51,7 @@ Results for Main (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0382779
+    Duration: 00:00:00.0386175
     Resource count: 4488
 
     Assertions:

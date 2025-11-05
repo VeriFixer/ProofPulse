@@ -1,18 +1,18 @@
 
-===== dafny run for test_irrelevant_postconditions.dfy (2025-11-05T14:40:18.742Z) =====
+===== dafny run for test_irrelevant_postconditions.dfy (2025-11-05T15:16:18.499Z) =====
 
 Dafny program verifier finished with 3 verified, 0 errors
 
 Results for Abs (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.1458779
+  Overall time: 00:00:00.1386155
   Overall resource count: 16203
-  Maximum assertion batch time: 00:00:00.0486301
+  Maximum assertion batch time: 00:00:00.0462060
   Maximum assertion batch resource count: 5580
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0486204
+    Duration: 00:00:00.0462060
     Resource count: 5122
 
     Assertions:
@@ -30,7 +30,7 @@ Results for Abs (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0486301
+    Duration: 00:00:00.0462050
     Resource count: 5501
 
     Assertions:
@@ -49,7 +49,7 @@ Results for Abs (correctness)
 
   Assertion batch 3:
     Outcome: Valid
-    Duration: 00:00:00.0486274
+    Duration: 00:00:00.0462045
     Resource count: 5580
 
     Assertions:

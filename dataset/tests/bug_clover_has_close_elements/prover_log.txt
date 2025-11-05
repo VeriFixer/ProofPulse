@@ -1,18 +1,18 @@
 
-===== dafny run for bug_clover_has_close_elements.dfy (2025-11-05T14:40:07.516Z) =====
+===== dafny run for bug_clover_has_close_elements.dfy (2025-11-05T15:16:07.255Z) =====
 
 Dafny program verifier finished with 58 verified, 0 errors
 
 Results for has_close_elements (well-formedness)
   Overall outcome: Correct
-  Overall time: 00:00:00.4351446
+  Overall time: 00:00:00.4421774
   Overall resource count: 138599
-  Maximum assertion batch time: 00:00:00.0561053
+  Maximum assertion batch time: 00:00:00.0556668
   Maximum assertion batch resource count: 13865
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0560911
+    Duration: 00:00:00.0556546
     Resource count: 12772
 
     Assertions:
@@ -46,7 +46,7 @@ Results for has_close_elements (well-formedness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0560963
+    Duration: 00:00:00.0556668
     Resource count: 12982
 
     Assertions:
@@ -80,7 +80,7 @@ Results for has_close_elements (well-formedness)
 
   Assertion batch 3:
     Outcome: Valid
-    Duration: 00:00:00.0561053
+    Duration: 00:00:00.0555629
     Resource count: 13760
 
     Assertions:
@@ -114,7 +114,7 @@ Results for has_close_elements (well-formedness)
 
   Assertion batch 4:
     Outcome: Valid
-    Duration: 00:00:00.0560976
+    Duration: 00:00:00.0556638
     Resource count: 13830
 
     Assertions:
@@ -148,7 +148,7 @@ Results for has_close_elements (well-formedness)
 
   Assertion batch 5:
     Outcome: Valid
-    Duration: 00:00:00.0516302
+    Duration: 00:00:00.0482011
     Resource count: 13785
 
     Assertions:
@@ -182,7 +182,7 @@ Results for has_close_elements (well-formedness)
 
   Assertion batch 6:
     Outcome: Valid
-    Duration: 00:00:00.0514902
+    Duration: 00:00:00.0481905
     Resource count: 13865
 
     Assertions:
@@ -216,7 +216,7 @@ Results for has_close_elements (well-formedness)
 
   Assertion batch 7:
     Outcome: Valid
-    Duration: 00:00:00.0127484
+    Duration: 00:00:00.0194970
     Resource count: 9223
 
     Assertions:
@@ -250,7 +250,7 @@ Results for has_close_elements (well-formedness)
 
   Assertion batch 8:
     Outcome: Valid
-    Duration: 00:00:00.0192240
+    Duration: 00:00:00.0201416
     Resource count: 9386
 
     Assertions:
@@ -284,7 +284,7 @@ Results for has_close_elements (well-formedness)
 
   Assertion batch 9:
     Outcome: Valid
-    Duration: 00:00:00.0207332
+    Duration: 00:00:00.0206639
     Resource count: 9692
 
     Assertions:
@@ -318,7 +318,7 @@ Results for has_close_elements (well-formedness)
 
   Assertion batch 10:
     Outcome: Valid
-    Duration: 00:00:00.0182240
+    Duration: 00:00:00.0220256
     Resource count: 9781
 
     Assertions:
@@ -352,7 +352,7 @@ Results for has_close_elements (well-formedness)
 
   Assertion batch 11:
     Outcome: Valid
-    Duration: 00:00:00.0179541
+    Duration: 00:00:00.0204440
     Resource count: 9720
 
     Assertions:
@@ -386,7 +386,7 @@ Results for has_close_elements (well-formedness)
 
   Assertion batch 12:
     Outcome: Valid
-    Duration: 00:00:00.0187502
+    Duration: 00:00:00.0204656
     Resource count: 9803
 
     Assertions:
@@ -420,14 +420,14 @@ Results for has_close_elements (well-formedness)
 
 Results for has_close_elements (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.6992015
+  Overall time: 00:00:00.7242358
   Overall resource count: 665969
-  Maximum assertion batch time: 00:00:00.0222631
+  Maximum assertion batch time: 00:00:00.0215273
   Maximum assertion batch resource count: 26094
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0112383
+    Duration: 00:00:00.0109828
     Resource count: 7088
 
     Assertions:
@@ -496,7 +496,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0118545
+    Duration: 00:00:00.0126452
     Resource count: 7354
 
     Assertions:
@@ -565,7 +565,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 3:
     Outcome: Valid
-    Duration: 00:00:00.0161070
+    Duration: 00:00:00.0151695
     Resource count: 7429
 
     Assertions:
@@ -634,7 +634,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 4:
     Outcome: Valid
-    Duration: 00:00:00.0100668
+    Duration: 00:00:00.0116262
     Resource count: 8123
 
     Assertions:
@@ -703,7 +703,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 5:
     Outcome: Valid
-    Duration: 00:00:00.0211940
+    Duration: 00:00:00.0156976
     Resource count: 11745
 
     Assertions:
@@ -772,7 +772,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 6:
     Outcome: Valid
-    Duration: 00:00:00.0152407
+    Duration: 00:00:00.0126962
     Resource count: 14110
 
     Assertions:
@@ -841,7 +841,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 7:
     Outcome: Valid
-    Duration: 00:00:00.0142571
+    Duration: 00:00:00.0174417
     Resource count: 11243
 
     Assertions:
@@ -910,7 +910,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 8:
     Outcome: Valid
-    Duration: 00:00:00.0134483
+    Duration: 00:00:00.0183758
     Resource count: 11314
 
     Assertions:
@@ -979,7 +979,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 9:
     Outcome: Valid
-    Duration: 00:00:00.0146309
+    Duration: 00:00:00.0135251
     Resource count: 11477
 
     Assertions:
@@ -1048,7 +1048,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 10:
     Outcome: Valid
-    Duration: 00:00:00.0119736
+    Duration: 00:00:00.0141503
     Resource count: 11789
 
     Assertions:
@@ -1117,7 +1117,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 11:
     Outcome: Valid
-    Duration: 00:00:00.0110901
+    Duration: 00:00:00.0145381
     Resource count: 11689
 
     Assertions:
@@ -1186,7 +1186,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 12:
     Outcome: Valid
-    Duration: 00:00:00.0113427
+    Duration: 00:00:00.0110155
     Resource count: 13503
 
     Assertions:
@@ -1255,7 +1255,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 13:
     Outcome: Valid
-    Duration: 00:00:00.0211887
+    Duration: 00:00:00.0198342
     Resource count: 14598
 
     Assertions:
@@ -1324,7 +1324,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 14:
     Outcome: Valid
-    Duration: 00:00:00.0204428
+    Duration: 00:00:00.0174128
     Resource count: 14821
 
     Assertions:
@@ -1393,7 +1393,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 15:
     Outcome: Valid
-    Duration: 00:00:00.0183658
+    Duration: 00:00:00.0198467
     Resource count: 15084
 
     Assertions:
@@ -1462,7 +1462,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 16:
     Outcome: Valid
-    Duration: 00:00:00.0213656
+    Duration: 00:00:00.0180137
     Resource count: 15248
 
     Assertions:
@@ -1531,7 +1531,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 17:
     Outcome: Valid
-    Duration: 00:00:00.0220787
+    Duration: 00:00:00.0214787
     Resource count: 15111
 
     Assertions:
@@ -1600,7 +1600,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 18:
     Outcome: Valid
-    Duration: 00:00:00.0222631
+    Duration: 00:00:00.0215273
     Resource count: 26094
 
     Assertions:
@@ -1670,7 +1670,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 19:
     Outcome: Valid
-    Duration: 00:00:00.0123358
+    Duration: 00:00:00.0192421
     Resource count: 14587
 
     Assertions:
@@ -1739,7 +1739,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 20:
     Outcome: Valid
-    Duration: 00:00:00.0112588
+    Duration: 00:00:00.0092761
     Resource count: 14712
 
     Assertions:
@@ -1808,7 +1808,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 21:
     Outcome: Valid
-    Duration: 00:00:00.0145166
+    Duration: 00:00:00.0172903
     Resource count: 15381
 
     Assertions:
@@ -1877,7 +1877,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 22:
     Outcome: Valid
-    Duration: 00:00:00.0169179
+    Duration: 00:00:00.0162955
     Resource count: 15476
 
     Assertions:
@@ -1946,7 +1946,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 23:
     Outcome: Valid
-    Duration: 00:00:00.0174727
+    Duration: 00:00:00.0178069
     Resource count: 15365
 
     Assertions:
@@ -2015,7 +2015,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 24:
     Outcome: Valid
-    Duration: 00:00:00.0170806
+    Duration: 00:00:00.0175633
     Resource count: 15449
 
     Assertions:
@@ -2084,7 +2084,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 25:
     Outcome: Valid
-    Duration: 00:00:00.0148050
+    Duration: 00:00:00.0119826
     Resource count: 16275
 
     Assertions:
@@ -2153,7 +2153,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 26:
     Outcome: Valid
-    Duration: 00:00:00.0137241
+    Duration: 00:00:00.0208359
     Resource count: 16514
 
     Assertions:
@@ -2222,7 +2222,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 27:
     Outcome: Valid
-    Duration: 00:00:00.0191392
+    Duration: 00:00:00.0177100
     Resource count: 16572
 
     Assertions:
@@ -2292,7 +2292,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 28:
     Outcome: Valid
-    Duration: 00:00:00.0163878
+    Duration: 00:00:00.0177426
     Resource count: 16591
 
     Assertions:
@@ -2361,7 +2361,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 29:
     Outcome: Valid
-    Duration: 00:00:00.0202438
+    Duration: 00:00:00.0193526
     Resource count: 17283
 
     Assertions:
@@ -2431,7 +2431,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 30:
     Outcome: Valid
-    Duration: 00:00:00.0173118
+    Duration: 00:00:00.0178998
     Resource count: 17143
 
     Assertions:
@@ -2500,7 +2500,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 31:
     Outcome: Valid
-    Duration: 00:00:00.0145929
+    Duration: 00:00:00.0143925
     Resource count: 16997
 
     Assertions:
@@ -2569,7 +2569,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 32:
     Outcome: Valid
-    Duration: 00:00:00.0139225
+    Duration: 00:00:00.0201135
     Resource count: 24832
 
     Assertions:
@@ -2639,7 +2639,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 33:
     Outcome: Valid
-    Duration: 00:00:00.0110316
+    Duration: 00:00:00.0111297
     Resource count: 15515
 
     Assertions:
@@ -2708,7 +2708,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 34:
     Outcome: Valid
-    Duration: 00:00:00.0196321
+    Duration: 00:00:00.0122481
     Resource count: 15957
 
     Assertions:
@@ -2777,7 +2777,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 35:
     Outcome: Valid
-    Duration: 00:00:00.0199826
+    Duration: 00:00:00.0140857
     Resource count: 16411
 
     Assertions:
@@ -2846,7 +2846,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 36:
     Outcome: Valid
-    Duration: 00:00:00.0173532
+    Duration: 00:00:00.0194141
     Resource count: 15984
 
     Assertions:
@@ -2915,7 +2915,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 37:
     Outcome: Valid
-    Duration: 00:00:00.0143311
+    Duration: 00:00:00.0190173
     Resource count: 15964
 
     Assertions:
@@ -2984,7 +2984,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 38:
     Outcome: Valid
-    Duration: 00:00:00.0148337
+    Duration: 00:00:00.0149879
     Resource count: 16391
 
     Assertions:
@@ -3053,7 +3053,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 39:
     Outcome: Valid
-    Duration: 00:00:00.0099686
+    Duration: 00:00:00.0104413
     Resource count: 11263
 
     Assertions:
@@ -3122,7 +3122,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 40:
     Outcome: Valid
-    Duration: 00:00:00.0133847
+    Duration: 00:00:00.0131350
     Resource count: 11285
 
     Assertions:
@@ -3191,7 +3191,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 41:
     Outcome: Valid
-    Duration: 00:00:00.0090172
+    Duration: 00:00:00.0153863
     Resource count: 11659
 
     Assertions:
@@ -3260,7 +3260,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 42:
     Outcome: Valid
-    Duration: 00:00:00.0094951
+    Duration: 00:00:00.0162338
     Resource count: 11639
 
     Assertions:
@@ -3329,7 +3329,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 43:
     Outcome: Valid
-    Duration: 00:00:00.0139298
+    Duration: 00:00:00.0149422
     Resource count: 11621
 
     Assertions:
@@ -3398,7 +3398,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 44:
     Outcome: Valid
-    Duration: 00:00:00.0152628
+    Duration: 00:00:00.0144814
     Resource count: 11641
 
     Assertions:
@@ -3467,7 +3467,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 45:
     Outcome: Valid
-    Duration: 00:00:00.0141478
+    Duration: 00:00:00.0155227
     Resource count: 18618
 
     Assertions:
@@ -3536,7 +3536,7 @@ Results for has_close_elements (correctness)
 
   Assertion batch 46:
     Outcome: Valid
-    Duration: 00:00:00.0089730
+    Duration: 00:00:00.0097292
     Resource count: 21024
 
     Assertions:

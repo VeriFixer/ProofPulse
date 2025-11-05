@@ -1,18 +1,18 @@
 
-===== dafny run for test_find_irrelevant_lines_for_proof.dfy (2025-11-05T14:40:17.912Z) =====
+===== dafny run for test_find_irrelevant_lines_for_proof.dfy (2025-11-05T15:16:17.711Z) =====
 
 Dafny program verifier finished with 2 verified, 0 errors
 
 Results for Abs (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.0954780
+  Overall time: 00:00:00.0903764
   Overall resource count: 11686
-  Maximum assertion batch time: 00:00:00.0477399
+  Maximum assertion batch time: 00:00:00.0452029
   Maximum assertion batch resource count: 5868
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0477399
+    Duration: 00:00:00.0451735
     Resource count: 5818
 
     Assertions:
@@ -31,7 +31,7 @@ Results for Abs (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0477381
+    Duration: 00:00:00.0452029
     Resource count: 5868
 
     Assertions:
