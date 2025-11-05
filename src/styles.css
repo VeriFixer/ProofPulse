@@ -8,6 +8,7 @@
   --muted: #4e5865;
   --red : #ff0000;
   --purple: #ee00ff;
+  --yellow: #fffb00;
   --gutter-width: 56px; /* enough for 4 digits + padding */
 }
 
@@ -129,6 +130,12 @@ body {
 .token[data-status="uncovered"] {
   text-decoration: underline;
   text-decoration-color: var(--red);
+  text-decoration-thickness: 2px
+}
+
+.token[data-status="covered-test"] {
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
   text-decoration-thickness: 2px
 }
 
