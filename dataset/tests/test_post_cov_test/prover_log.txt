@@ -1,18 +1,18 @@
 
-===== dafny run for test_post_cov_test.dfy (2025-11-04T09:50:05.579Z) =====
+===== dafny run for test_post_cov_test.dfy (2025-11-05T14:27:02.693Z) =====
 
 Dafny program verifier finished with 1 verified, 0 errors
 
 Results for ret32 (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.0464044
+  Overall time: 00:00:00.0410900
   Overall resource count: 3363
-  Maximum assertion batch time: 00:00:00.0464044
+  Maximum assertion batch time: 00:00:00.0410900
   Maximum assertion batch resource count: 3363
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0464044
+    Duration: 00:00:00.0410900
     Resource count: 3363
 
     Assertions:

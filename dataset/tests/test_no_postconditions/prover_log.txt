@@ -1,18 +1,18 @@
 
-===== dafny run for test_no_postconditions.dfy (2025-11-04T09:50:03.999Z) =====
+===== dafny run for test_no_postconditions.dfy (2025-11-05T14:27:01.214Z) =====
 
 Dafny program verifier finished with 1 verified, 0 errors
 
 Results for Abs (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.0496851
+  Overall time: 00:00:00.0413065
   Overall resource count: 4386
-  Maximum assertion batch time: 00:00:00.0496851
+  Maximum assertion batch time: 00:00:00.0413065
   Maximum assertion batch resource count: 4386
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0496851
+    Duration: 00:00:00.0413065
     Resource count: 4386
 
     Assertions:

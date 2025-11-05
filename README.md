@@ -19,7 +19,10 @@ Code Lines:
 Specification Lines:
 - plain Asserts
   - Covered Complete: if used to proof assertion that are postcondtition
-  - Covered Warning: If used to proof other assertion or itself that need to utilize at least one actual line of code
+  [Before]
+  - Covered Warning: If used to proof other assertion or itself that need to utilize at least one actual line of code (to restrictive)
+  [Now]
+  - Covered Warning: If used to proof other assertion or itself 
   - Uncovered: If used to proof only assertion or itself that do not uses any code lines (likely unecessary specification)
 
 - postconditions

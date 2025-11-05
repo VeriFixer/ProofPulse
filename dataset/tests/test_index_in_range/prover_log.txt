@@ -1,0 +1,931 @@
+
+===== dafny run for test_index_in_range.dfy (2025-11-05T14:26:58.869Z) =====
+
+Dafny program verifier finished with 25 verified, 0 errors
+
+Results for zeroVector (well-formedness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.2951220
+  Overall resource count: 40201
+  Maximum assertion batch time: 00:00:00.0601962
+  Maximum assertion batch resource count: 9335
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0601549
+    Resource count: 6742
+
+    Assertions:
+      test_index_in_range.dfy(2,15): target object is never null
+
+    Proof dependencies:
+      test_index_in_range.dfy(2,13)-(2,15): target object is never null
+
+    Unused by proof:
+      test_index_in_range.dfy(2,25)-(2,28): target object is never null
+      test_index_in_range.dfy(2,13)-(2,28): method ensures clause
+      test_index_in_range.dfy(3,37)-(3,39): target object is never null
+      test_index_in_range.dfy(3,29)-(3,39): method ensures clause
+      test_index_in_range.dfy(3,50)-(3,50): array is never null
+      test_index_in_range.dfy(3,50)-(3,54): index in range
+      test_index_in_range.dfy(3,50)-(3,59): method ensures clause
+      test_index_in_range.dfy(3,29)-(3,59): method ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): method ensures clause
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0601457
+    Resource count: 6861
+
+    Assertions:
+      test_index_in_range.dfy(2,28): target object is never null
+
+    Proof dependencies:
+      test_index_in_range.dfy(2,25)-(2,28): target object is never null
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,15): target object is never null
+      test_index_in_range.dfy(2,13)-(2,28): method ensures clause
+      test_index_in_range.dfy(3,37)-(3,39): target object is never null
+      test_index_in_range.dfy(3,29)-(3,39): method ensures clause
+      test_index_in_range.dfy(3,50)-(3,50): array is never null
+      test_index_in_range.dfy(3,50)-(3,54): index in range
+      test_index_in_range.dfy(3,50)-(3,59): method ensures clause
+      test_index_in_range.dfy(3,29)-(3,59): method ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): method ensures clause
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0601962
+    Resource count: 8895
+
+    Assertions:
+      test_index_in_range.dfy(3,50): array is never null
+
+    Proof dependencies:
+      test_index_in_range.dfy(3,50)-(3,50): array is never null
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,15): target object is never null
+      test_index_in_range.dfy(2,25)-(2,28): target object is never null
+      test_index_in_range.dfy(2,13)-(2,28): method ensures clause
+      test_index_in_range.dfy(3,37)-(3,39): target object is never null
+      test_index_in_range.dfy(3,29)-(3,39): method ensures clause
+      test_index_in_range.dfy(3,50)-(3,54): index in range
+      test_index_in_range.dfy(3,50)-(3,59): method ensures clause
+      test_index_in_range.dfy(3,29)-(3,59): method ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): method ensures clause
+
+  Assertion batch 4:
+    Outcome: Valid
+    Duration: 00:00:00.0601543
+    Resource count: 9335
+
+    Assertions:
+      test_index_in_range.dfy(3,52): index in range
+
+    Proof dependencies:
+      test_index_in_range.dfy(2,13)-(2,28): method ensures clause
+      test_index_in_range.dfy(3,29)-(3,39): method ensures clause
+      test_index_in_range.dfy(3,50)-(3,54): index in range
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,15): target object is never null
+      test_index_in_range.dfy(2,25)-(2,28): target object is never null
+      test_index_in_range.dfy(3,37)-(3,39): target object is never null
+      test_index_in_range.dfy(3,50)-(3,50): array is never null
+      test_index_in_range.dfy(3,50)-(3,59): method ensures clause
+      test_index_in_range.dfy(3,29)-(3,59): method ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): method ensures clause
+
+  Assertion batch 5:
+    Outcome: Valid
+    Duration: 00:00:00.0544709
+    Resource count: 8368
+
+    Assertions:
+      test_index_in_range.dfy(3,39): target object is never null
+
+    Proof dependencies:
+      test_index_in_range.dfy(3,37)-(3,39): target object is never null
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,15): target object is never null
+      test_index_in_range.dfy(2,25)-(2,28): target object is never null
+      test_index_in_range.dfy(2,13)-(2,28): method ensures clause
+      test_index_in_range.dfy(3,29)-(3,39): method ensures clause
+      test_index_in_range.dfy(3,50)-(3,50): array is never null
+      test_index_in_range.dfy(3,50)-(3,54): index in range
+      test_index_in_range.dfy(3,50)-(3,59): method ensures clause
+      test_index_in_range.dfy(3,29)-(3,59): method ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): method ensures clause
+
+Results for zeroVector (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.3285313
+  Overall resource count: 264597
+  Maximum assertion batch time: 00:00:00.0546503
+  Maximum assertion batch resource count: 19593
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0546503
+    Resource count: 5561
+
+    Assertions:
+      test_index_in_range.dfy(6,21): target object is never null
+
+    Proof dependencies:
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0148967
+    Resource count: 6484
+
+    Assertions:
+      test_index_in_range.dfy(6,21): array size is never negative
+
+    Proof dependencies:
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0185940
+    Resource count: 8744
+
+    Assertions:
+      test_index_in_range.dfy(9,21): this loop invariant holds on entry
+
+    Proof dependencies:
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 4:
+    Outcome: Valid
+    Duration: 00:00:00.0179575
+    Resource count: 8937
+
+    Assertions:
+      test_index_in_range.dfy(9,26): this loop invariant holds on entry
+
+    Proof dependencies:
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 5:
+    Outcome: Valid
+    Duration: 00:00:00.0163264
+    Resource count: 11741
+
+    Assertions:
+      test_index_in_range.dfy(10,19): this loop invariant holds on entry
+
+    Proof dependencies:
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 6:
+    Outcome: Valid
+    Duration: 00:00:00.0185545
+    Resource count: 13840
+
+    Assertions:
+      test_index_in_range.dfy(8,17): target object is never null
+
+    Proof dependencies:
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 7:
+    Outcome: Valid
+    Duration: 00:00:00.0191464
+    Resource count: 14140
+
+    Assertions:
+      test_index_in_range.dfy(12,9): array is never null
+
+    Proof dependencies:
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 8:
+    Outcome: Valid
+    Duration: 00:00:00.0166992
+    Resource count: 14254
+
+    Assertions:
+      test_index_in_range.dfy(12,11): index in range
+
+    Proof dependencies:
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 9:
+    Outcome: Valid
+    Duration: 00:00:00.0149212
+    Resource count: 14593
+
+    Assertions:
+      test_index_in_range.dfy(12,11): an array element is in the enclosing context's modifies clause
+
+    Proof dependencies:
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 10:
+    Outcome: Valid
+    Duration: 00:00:00.0124848
+    Resource count: 15111
+
+    Assertions:
+      test_index_in_range.dfy(8,17): decreases expression is bounded below by 0
+
+    Proof dependencies:
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 11:
+    Outcome: Valid
+    Duration: 00:00:00.0147196
+    Resource count: 15304
+
+    Assertions:
+      test_index_in_range.dfy(8,5): loop or recursion terminates
+
+    Proof dependencies:
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 12:
+    Outcome: Valid
+    Duration: 00:00:00.0133975
+    Resource count: 15494
+
+    Assertions:
+      test_index_in_range.dfy(9,21): this loop invariant is maintained by the loop
+
+    Proof dependencies:
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 13:
+    Outcome: Valid
+    Duration: 00:00:00.0184672
+    Resource count: 15674
+
+    Assertions:
+      test_index_in_range.dfy(9,26): this loop invariant is maintained by the loop
+
+    Proof dependencies:
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 14:
+    Outcome: Valid
+    Duration: 00:00:00.0140126
+    Resource count: 19593
+
+    Assertions:
+      test_index_in_range.dfy(10,19): this loop invariant is maintained by the loop
+
+    Proof dependencies:
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 15:
+    Outcome: Valid
+    Duration: 00:00:00.0139097
+    Resource count: 13971
+
+    Assertions:
+      test_index_in_range.dfy(2,22): this postcondition holds
+
+    Proof dependencies:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+
+    Unused by proof:
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 16:
+    Outcome: Valid
+    Duration: 00:00:00.0125920
+    Resource count: 15020
+
+    Assertions:
+      test_index_in_range.dfy(3,13): this postcondition holds
+
+    Proof dependencies:
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 17:
+    Outcome: Valid
+    Duration: 00:00:00.0119813
+    Resource count: 14799
+
+    Assertions:
+      test_index_in_range.dfy(8,17): target object is never null
+
+    Proof dependencies:
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 18:
+    Outcome: Valid
+    Duration: 00:00:00.0099136
+    Resource count: 14005
+
+    Assertions:
+      test_index_in_range.dfy(10,49): array is never null
+
+    Proof dependencies:
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 19:
+    Outcome: Valid
+    Duration: 00:00:00.0087924
+    Resource count: 14319
+
+    Assertions:
+      test_index_in_range.dfy(10,51): index in range
+
+    Proof dependencies:
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 20:
+    Outcome: Valid
+    Duration: 00:00:00.0065144
+    Resource count: 13013
+
+    Assertions:
+      test_index_in_range.dfy(9,31): target object is never null
+
+    Proof dependencies:
+      test_index_in_range.dfy(9,29)-(9,31): target object is never null
+
+    Unused by proof:
+      test_index_in_range.dfy(2,13)-(2,28): ensures clause
+      test_index_in_range.dfy(3,13)-(3,59): ensures clause
+      test_index_in_range.dfy(5,9)-(5,14): assignment (or return)
+      test_index_in_range.dfy(6,19)-(6,21): target object is never null
+      test_index_in_range.dfy(6,19)-(6,21): array size is never negative
+      test_index_in_range.dfy(6,5)-(6,28): assignment (or return)
+      test_index_in_range.dfy(7,9)-(7,15): assignment (or return)
+      test_index_in_range.dfy(9,19)-(9,31): loop invariant
+      test_index_in_range.dfy(9,19)-(9,24): loop invariant always holds
+      test_index_in_range.dfy(9,24)-(9,31): loop invariant always holds
+      test_index_in_range.dfy(10,49)-(10,49): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(10,49)-(10,49): array is never null
+      test_index_in_range.dfy(10,49)-(10,53): index in range
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant
+      test_index_in_range.dfy(10,19)-(10,58): loop invariant always holds
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(8,15)-(8,17): target object is never null
+      test_index_in_range.dfy(12,9)-(12,9): variable 'ex', which is subject to definite-assignment rules, is always initialized here
+      test_index_in_range.dfy(12,9)-(12,9): array is never null
+      test_index_in_range.dfy(12,9)-(12,13): index in range
+      test_index_in_range.dfy(12,9)-(12,13): an array element is in the enclosing context's modifies clause
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(12,9)-(12,19): assignment (or return)
+      test_index_in_range.dfy(13,9)-(13,19): assignment (or return)
+      test_index_in_range.dfy(8,15)-(8,17): decreases expression is bounded below by 0
+      test_index_in_range.dfy(8,5)-(14,5): loop or recursion terminates
+      test_index_in_range.dfy(15,1)-(15,1): out-parameter 'ex', which is subject to definite-assignment rules, is always initialized at this return point
+
+===== end dafny run for test_index_in_range.dfy =====
