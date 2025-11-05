@@ -35,8 +35,8 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::: Name - Real Examples Sucess story clover (modified with redunant code)
 //::: Description - Found things unused specification and code lines
 //::: L1 - CovComplete
-//::: L2 - Uncovered
-//::: L3 - CovTest
+// Lurking bug these two lines
+
 //::: L4 - CovTest
 //::: L5 - CovComplete
 //::: L6 - CovComplete
@@ -45,14 +45,14 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::: L9 - Uncovered
 //::: L10 - CovComplete
 //::: L11 - CovComplete
-//::: L12 - CovComplete
+//::: L12 - Uncovered
 //::: L13 - CovComplete
 //::: L14 - CovComplete
 //::: L15 - CovComplete
 //::: L16 - CovComplete
-//::: L17 - CovComplete
+//::: L17 - Uncovered
 //::: L18 - CovComplete
-//::: L19 - CovComplete
+//::: L19 - Uncovered
 //::: L20 - CovComplete
 //::: L21 - CovComplete
 //::: L22 - CovComplete
@@ -61,7 +61,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::: L25 - CovComplete
 //::: L26 - CovComplete
 //::: L27 - CovComplete
-//::: L28 - CovComplete
+//::: L28 - Uncovered
 //::: L29 - CovComplete
 //::: L30 - CovComplete
 //::: L31 - CovComplete

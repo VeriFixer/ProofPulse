@@ -1,18 +1,18 @@
 
-===== dafny run for bug_allocation.dfy (2025-11-05T14:26:47.424Z) =====
+===== dafny run for bug_allocation.dfy (2025-11-05T14:40:05.648Z) =====
 
 Dafny program verifier finished with 16 verified, 0 errors
 
 Results for append (well-formedness)
   Overall outcome: Correct
-  Overall time: 00:00:00.3513920
+  Overall time: 00:00:00.3376871
   Overall resource count: 55474
-  Maximum assertion batch time: 00:00:00.0578340
+  Maximum assertion batch time: 00:00:00.0562679
   Maximum assertion batch resource count: 9178
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0578340
+    Duration: 00:00:00.0562679
     Resource count: 5079
 
     Assertions:
@@ -34,7 +34,7 @@ Results for append (well-formedness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0578253
+    Duration: 00:00:00.0562505
     Resource count: 7673
 
     Assertions:
@@ -56,7 +56,7 @@ Results for append (well-formedness)
 
   Assertion batch 3:
     Outcome: Valid
-    Duration: 00:00:00.0577867
+    Duration: 00:00:00.0562528
     Resource count: 7788
 
     Assertions:
@@ -78,7 +78,7 @@ Results for append (well-formedness)
 
   Assertion batch 4:
     Outcome: Valid
-    Duration: 00:00:00.0578275
+    Duration: 00:00:00.0522738
     Resource count: 7998
 
     Assertions:
@@ -100,7 +100,7 @@ Results for append (well-formedness)
 
   Assertion batch 5:
     Outcome: Valid
-    Duration: 00:00:00.0520650
+    Duration: 00:00:00.0521825
     Resource count: 8961
 
     Assertions:
@@ -122,7 +122,7 @@ Results for append (well-formedness)
 
   Assertion batch 6:
     Outcome: Valid
-    Duration: 00:00:00.0521760
+    Duration: 00:00:00.0522199
     Resource count: 8797
 
     Assertions:
@@ -144,7 +144,7 @@ Results for append (well-formedness)
 
   Assertion batch 7:
     Outcome: Valid
-    Duration: 00:00:00.0158775
+    Duration: 00:00:00.0122397
     Resource count: 9178
 
     Assertions:
@@ -166,14 +166,14 @@ Results for append (well-formedness)
 
 Results for append (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.1247030
+  Overall time: 00:00:00.1206041
   Overall resource count: 88690
-  Maximum assertion batch time: 00:00:00.0169510
+  Maximum assertion batch time: 00:00:00.0148583
   Maximum assertion batch resource count: 14342
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0112025
+    Duration: 00:00:00.0104577
     Resource count: 5779
 
     Assertions:
@@ -200,7 +200,7 @@ Results for append (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0127647
+    Duration: 00:00:00.0128242
     Resource count: 5902
 
     Assertions:
@@ -227,7 +227,7 @@ Results for append (correctness)
 
   Assertion batch 3:
     Outcome: Valid
-    Duration: 00:00:00.0169510
+    Duration: 00:00:00.0126322
     Resource count: 8071
 
     Assertions:
@@ -254,7 +254,7 @@ Results for append (correctness)
 
   Assertion batch 4:
     Outcome: Valid
-    Duration: 00:00:00.0134725
+    Duration: 00:00:00.0133374
     Resource count: 8829
 
     Assertions:
@@ -281,7 +281,7 @@ Results for append (correctness)
 
   Assertion batch 5:
     Outcome: Valid
-    Duration: 00:00:00.0125060
+    Duration: 00:00:00.0142556
     Resource count: 11307
 
     Assertions:
@@ -308,7 +308,7 @@ Results for append (correctness)
 
   Assertion batch 6:
     Outcome: Valid
-    Duration: 00:00:00.0142413
+    Duration: 00:00:00.0134636
     Resource count: 11250
 
     Assertions:
@@ -335,7 +335,7 @@ Results for append (correctness)
 
   Assertion batch 7:
     Outcome: Valid
-    Duration: 00:00:00.0140533
+    Duration: 00:00:00.0147283
     Resource count: 11354
 
     Assertions:
@@ -362,7 +362,7 @@ Results for append (correctness)
 
   Assertion batch 8:
     Outcome: Valid
-    Duration: 00:00:00.0140663
+    Duration: 00:00:00.0140468
     Resource count: 11856
 
     Assertions:
@@ -389,7 +389,7 @@ Results for append (correctness)
 
   Assertion batch 9:
     Outcome: Valid
-    Duration: 00:00:00.0154454
+    Duration: 00:00:00.0148583
     Resource count: 14342
 
     Assertions:

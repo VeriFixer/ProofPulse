@@ -1,18 +1,18 @@
 
-===== dafny run for bug_assigment_never_covered.dfy (2025-11-05T14:26:48.200Z) =====
+===== dafny run for bug_assigment_never_covered.dfy (2025-11-05T14:40:06.407Z) =====
 
 Dafny program verifier finished with 2 verified, 0 errors
 
 Results for Abs (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.0888658
+  Overall time: 00:00:00.0912901
   Overall resource count: 8001
-  Maximum assertion batch time: 00:00:00.0444331
+  Maximum assertion batch time: 00:00:00.0456451
   Maximum assertion batch resource count: 4107
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0444331
+    Duration: 00:00:00.0456451
     Resource count: 3894
 
     Assertions:
@@ -29,7 +29,7 @@ Results for Abs (correctness)
 
   Assertion batch 2:
     Outcome: Valid
-    Duration: 00:00:00.0444327
+    Duration: 00:00:00.0456450
     Resource count: 4107
 
     Assertions:
