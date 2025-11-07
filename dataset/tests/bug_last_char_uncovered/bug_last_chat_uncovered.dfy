@@ -7,12 +7,16 @@ method Abs(x: int) returns (y: int)
   } else {
     y := Id(x);
   }
-}
+} // This internally is uncovered but now i am ignoring automatic Assertions
 
 function Id<T> (a : T) : T {
     a
 }
 
 //::: Name - Find irrelevant assertions
-//::: Description - Assertion on line 5 should be signaled as uncovered . As it is not used in any proof besides itself. 
-//::: L10 - CovComplete
+//::: Description - Last char internally is uncovered, as Boogey proves by itself the fact that variable is init at the end of function
+//::: L10 - CovTest
+
+// As I am ignoring at the front end is not longer a bug but is here to safe keep
+// Internally appears uncovered that line 10 (but was expected CovCompelte)
+// But now internally I am making all auto assertions as complete 

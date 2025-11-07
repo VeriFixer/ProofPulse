@@ -371,28 +371,31 @@ class Proof {
       token.CovStatus = token.CovStatusInternal;
     }
 
-    // AUTOMATIC ASSERTIONS 
+    // AUTOMATIC ASSERTIONS (always set to Covered)
     //  CovStatusInternal=Complete -> CovStatus=Complete
     //  CovStatusInternal=CovTest -> CovStatus=Complete
-    //  CovStatusInternal=Uncovered -> CovTest  (probably is nothing special but just in case CovTest)
+    //  CovStatusInternal=Uncovered -> CovStatus=Complete
     const allAutoAssertions = allTokensArray.filter(t => t.type == root.TokenType.AssertionAutomatic);
     for(let token of allAutoAssertions){
-      if(token.CovStatusInternal == CovStatus.Uncovered){
-        token.CovStatus = CovStatus.CovTest;
-      } else {
-        token.CovStatus = CovStatus.CovComplete;
-      }
+      token.CovStatus = CovStatus.CovComplete;
     }
-    // Manual Assertion
+    // Manual Assertion (same semantic as internal)
     //  CovStatusInternal=Complete -> CovStatus=Complete
-    //  CovStatusInternal=CovTest -> CovStatus=Uncovered (useuless only used to prove useless assertions)
-    //  CovStatusInternal=Uncovered -> Uncovered (?maybe will pass to CovTest see after)
+    //  CovStatusInternal=CovTest -> Uncovered
+    //  CovStatusInternal=Uncovered -> Uncovered 
+
+    // But this causes a impossibily: Manual assertions are always top 
+    // Therefore they can be proven by themselves if tautologies 
+    // If signalled as CovTest it should be considered uncovered in my view
+    // As it is not used in postcondiitons 
+    // This prenets tatutoliges (and makes to be impossible to have manual assertion flagged as covTest)
+
     const allManualAssertions = allTokensArray.filter(t => t.type == root.TokenType.AssertionManual);
     for(let token of allManualAssertions){
       if(token.CovStatusInternal == CovStatus.CovComplete){
-        token.CovStatus = CovStatus.CovComplete;
+         token.CovStatus = CovStatus.CovComplete;
       } else {
-        token.CovStatus = CovStatus.Uncovered;
+         token.CovStatus = CovStatus.Uncovered;
       }
     }
     // Precondiiton

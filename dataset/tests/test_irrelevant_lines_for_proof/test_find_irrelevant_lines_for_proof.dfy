@@ -32,7 +32,7 @@ function Id<T> (a : T) : T {
 //::: L11 - CovComplete
 //::: L12 - CovComplete
 //::: L13 - CovComplete
-//::: L14 - Uncovered
+//::: L14 - CovComplete
 //::: L15 - CovComplete
 //::: L16 - CovComplete
 //::: L17 - CovComplete

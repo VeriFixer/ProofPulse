@@ -1,37 +1,27 @@
 method Abs(x: int) returns (y: int)
-  ensures x>=0 ==> x==y
-  ensures x<0 ==> x+y==0
 {
-  assert(43 == 43); 
-
   if x < 0 {
-    y := -x;
+    y := -x; // _USECASE_no_postconditions.dfy(4,5)-(4,12): assignment (or return)
   } else {
-    y := Id(x);
+    y := Id(x); // _USECASE_no_postconditions.dfy(6,5)-(6,11): assignment (or return)
   }
-}
+} //Note: As this is the only assertion that is added automatically it is really covered (in other tests with postcondiiton this assertion does not run)
 
 function Id<T> (a : T) : T {
     a
 }
 
-//::: Name - Find irrelevant assertions
-//::: Description - Assertion on line 5 should be signaled as uncovered . As it is not used in any proof besides itself. 
+//::: Name - No postcondition
+//::: Description - Code lines should appear uncovered
 //::: L1 - CovComplete
-//::: L2 - CovTest
-//::: L3 - CovTest
-//::: L4 - CovComplete
-//::: L5 - Uncovered
-//::: L6 - CovComplete
+//::: L2 - CovComplete
+//::: L3 - CovComplete
+//::: L4 - Uncovered
+//::: L5 - CovComplete
+//::: L6 - Uncovered
 //::: L7 - CovComplete
 //::: L8 - CovComplete
 //::: L9 - CovComplete
 //::: L10 - CovComplete
 //::: L11 - CovComplete
-//::: L12 - Uncovered
-//::: L13 - CovComplete
-//::: L14 - CovComplete
-//::: L15 - CovComplete
-//::: L16 - CovComplete
-//::: L17 - CovComplete
-
+//::: L12- CovComplete

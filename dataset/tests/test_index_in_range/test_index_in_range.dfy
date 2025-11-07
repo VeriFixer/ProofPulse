@@ -13,6 +13,8 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
         i := i + 1;
     }
 }
+// Line 9 is cov test as it is only needed for the automatic assertion ex[k] in range on line 10
+// and as none are signalled as directly needed for the outer proof it appears as covTest.
 
 //::: Name - Checking indexes assertions, probably should modify behaviour
 //::: Description - Simple Zero Vector creation to test index accesses
@@ -24,7 +26,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::: L6 - CovComplete
 //::: L7 - CovComplete
 //::: L8 - CovComplete
-//::: L9 - CovComplete
+//::: L9 - CovTest
 //::: L10 - CovComplete
 //::: L11 - CovComplete
 //::: L12 - CovComplete

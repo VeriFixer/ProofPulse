@@ -5,7 +5,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 {
   var b :| b in B && b !in A;
   var B' := B - {b};
-  assert |B| == |B'| + 1; // Assertion not essential for the prove
+  assert |B| == |B'| + 1; 
   if A < B' {
     CardinalitySubsetLt(A, B');
   } else {
@@ -13,9 +13,11 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
   }
 }
 
-// This test is failing a lot for assertion it has two bugs mainly
-// my scripts are not considering 8,3  and 8,3-8,15 the same assertion what is breaking things
-// After that there are as well a lot of other bugs
+// Limitations 
+// Although comenting out assertion 8 still makes verification to pass it really is being 
+// highlighted in the unsat core (even with minimize options, To improve further only with scripts)
+// To even extract more minimal cores possibly. But for now is working
+
 
 //::: Name - Assertion Complete
 //::: Description - Assert Complete when is used to prove a postcondition (therefore it must really be necessary for the prove)

@@ -1,68 +1,28 @@
 
-===== dafny run for test_find_irrelevant_assertions.dfy (2025-11-05T19:33:13.118Z) =====
+===== dafny run for test_no_postconditions.dfy (2025-11-07T13:02:00.414Z) =====
 
-Dafny program verifier finished with 3 verified, 0 errors
+Dafny program verifier finished with 1 verified, 0 errors
 
 Results for Abs (correctness)
   Overall outcome: Correct
-  Overall time: 00:00:00.1190278
-  Overall resource count: 14292
-  Maximum assertion batch time: 00:00:00.0396781
-  Maximum assertion batch resource count: 5553
+  Overall time: 00:00:00.3577221
+  Overall resource count: 4386
+  Maximum assertion batch time: 00:00:00.3577221
+  Maximum assertion batch resource count: 4386
 
   Assertion batch 1:
     Outcome: Valid
-    Duration: 00:00:00.0396734
-    Resource count: 3236
+    Duration: 00:00:00.3577221
+    Resource count: 4386
 
     Assertions:
-      test_find_irrelevant_assertions.dfy(5,3): assertion always holds
+      test_no_postconditions.dfy(8,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
 
     Proof dependencies:
-      test_find_irrelevant_assertions.dfy(5,3)-(5,19): assertion always holds
+      test_no_postconditions.dfy(8,1)-(8,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
 
     Unused by proof:
-      test_find_irrelevant_assertions.dfy(2,20)-(2,23): ensures clause
-      test_find_irrelevant_assertions.dfy(3,19)-(3,24): ensures clause
-      test_find_irrelevant_assertions.dfy(8,5)-(8,12): assignment (or return)
-      test_find_irrelevant_assertions.dfy(10,5)-(10,15): assignment (or return)
-      test_find_irrelevant_assertions.dfy(12,1)-(12,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+      test_no_postconditions.dfy(4,5)-(4,12): assignment (or return)
+      test_no_postconditions.dfy(6,5)-(6,15): assignment (or return)
 
-  Assertion batch 2:
-    Outcome: Valid
-    Duration: 00:00:00.0396763
-    Resource count: 5503
-
-    Assertions:
-      test_find_irrelevant_assertions.dfy(2,21): this postcondition holds
-
-    Proof dependencies:
-      test_find_irrelevant_assertions.dfy(2,20)-(2,23): ensures clause
-      test_find_irrelevant_assertions.dfy(10,5)-(10,15): assignment (or return)
-      test_find_irrelevant_assertions.dfy(14,1)-(16,1): function definition for Id
-
-    Unused by proof:
-      test_find_irrelevant_assertions.dfy(3,19)-(3,24): ensures clause
-      test_find_irrelevant_assertions.dfy(5,3)-(5,19): assertion always holds
-      test_find_irrelevant_assertions.dfy(8,5)-(8,12): assignment (or return)
-      test_find_irrelevant_assertions.dfy(12,1)-(12,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
-
-  Assertion batch 3:
-    Outcome: Valid
-    Duration: 00:00:00.0396781
-    Resource count: 5553
-
-    Assertions:
-      test_find_irrelevant_assertions.dfy(3,22): this postcondition holds
-
-    Proof dependencies:
-      test_find_irrelevant_assertions.dfy(3,19)-(3,24): ensures clause
-      test_find_irrelevant_assertions.dfy(8,5)-(8,12): assignment (or return)
-
-    Unused by proof:
-      test_find_irrelevant_assertions.dfy(2,20)-(2,23): ensures clause
-      test_find_irrelevant_assertions.dfy(5,3)-(5,19): assertion always holds
-      test_find_irrelevant_assertions.dfy(10,5)-(10,15): assignment (or return)
-      test_find_irrelevant_assertions.dfy(12,1)-(12,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
-
-===== end dafny run for test_find_irrelevant_assertions.dfy =====
+===== end dafny run for test_no_postconditions.dfy =====

@@ -1,8 +1,20 @@
 import { createRequire } from 'module';
+
 const require = createRequire(import.meta.url);
-const fs = require('fs');
+
+const os = require("os");
 const path = require("path");
-const { spawnSync } = require("child_process");
+const fs = require('fs');
+import { writeFile } from "fs/promises";
+const { spawn } = require("child_process");
+const fsp = fs.promises;
+
+const DEFAULT_TESTS_ROOT = path.join("dataset", "tests");
+const DAFNY_TIMEOUT_SEC = 1 * 60; 
+
+//const CONCURRENCY = os.cpus().length * 2 ; 
+const CONCURRENCY = os.cpus().length - 1; 
+//const CONCURRENCY = 1; 
 
 import spans from './spans_provider.js'; // default import from CJS module
 const {
@@ -38,27 +50,28 @@ function parse_test(testSource) {
 
 function check_test(name, expected, received) {
     var test_passed = true;
+    var reason = ""
     if(expected.size < 1){
-       console.error("Failed ", name, ": expect comments are empty");
+       reason = `Failed ${name} : expect comments are empty"`;
        test_passed = false;
     }
     for (const [lineNum, expectedStatus] of expected.entries()) {
         if (lineNum < 1 || lineNum > received.length) {
             test_passed = false;
-            console.error(`Failed '${name}' failed: Line ${lineNum} is out of bounds (received has ${received.length} lines).`);
+            reason = `Failed ${name} failed: Line ${lineNum} is out of bounds (received has ${received.length} lines).`;
         }
 
         const actualStatus = received[lineNum - 1];
 
         if (actualStatus !== expectedStatus) {
             test_passed = false;
-            console.error(`Failed '${name}': Line ${lineNum} expected '${expectedStatus}', but got '${actualStatus}'.`);
+            reason = `Failed ${name}: Line ${lineNum} expected '${expectedStatus}', but got '${actualStatus}'.`;
         }
     }
     if(test_passed){
-        console.log("Passed ", name);
+        reason = `Passed ${name}`
     }
-    return test_passed;
+    return [test_passed, reason];
 }
 
 function findDfyFiles(startDir) {
@@ -79,7 +92,7 @@ function findDfyFiles(startDir) {
   return out;
 }
 
-function runDafnyAndAppendLog(srcFilePath) {
+async function runDafnyAndAppendLog(srcFilePath) {
   const dir = path.dirname(srcFilePath);
   const fileName = path.basename(srcFilePath);
   const proverLogPath = path.join(dir, "prover_log.txt");
@@ -93,55 +106,114 @@ function runDafnyAndAppendLog(srcFilePath) {
     "--solver-option", "LOG_FILE=output.smt2",
     "--bprint", "output.bpl",
     "--isolate-assertions",
-    "--allow-warnings", "true"
+    "--allow-warnings", "true",
+    "--verification-time-limit", DAFNY_TIMEOUT_SEC,
+    // Options to perform core minimization note: This does not gurantee that the core is really the minimal possible
+    "--boogie", "/proverOpt:O:smt.core.minimize=true /proverOpt:O:sat.core.minimize=true" 
   ];
+ const child = spawn("dafny", args, { cwd: dir });
 
-  //console.log(`Running: dafny ${args.join(" ")}  (cwd: ${dir})`);
+  let stdout = "", stderr = "";
 
-  // spawnSync with cwd ensures dafny runs from the source file's directory.
-  // We capture stdout/stderr and append them to prover_log.txt.
+  child.stdout?.on("data", (b) => { stdout += b.toString(); });
+  child.stderr?.on("data", (b) => { stderr += b.toString(); });
+
+  const exit = await new Promise((resolve) => {
+    child.on("error", (err) => resolve({ error: err }));
+    child.on("close", (code) => resolve({ code }));
+  });
+
+  const header = `\n===== dafny run for ${fileName} (${new Date().toISOString()}) =====\n`;
+  const footer = `\n===== end dafny run for ${fileName} =====\n`;
+  const logContent = header + (stdout || "") + (stderr || "") + footer;
+
   try {
-    const proc = spawnSync("dafny", args, { cwd: dir, encoding: "utf8", timeout: 10 * 1000 }); // 10 secmin timeout
-    const { status, error, stdout, stderr } = proc;
+    await  writeFile(proverLogPath, logContent, { encoding: "utf8"});
+  } catch (writeErr) {
+    console.error(writeErr)
+    return { ok: false, reason: "append_failed", writeErr };
+  }
 
-    // Compose a header to make logs per-run clear
-    const header = `\n===== dafny run for ${fileName} (${new Date().toISOString()}) =====\n`;
-    const footer = `\n===== end dafny run for ${fileName} =====\n`;
+  if (exit.error) return { ok: false, reason: "spawn_error", error: exit.error, logPath: proverLogPath };
 
-    // Always append whatever we received to prover_log.txt
-    try {
-      fs.appendFileSync(proverLogPath, header, "utf8");
-      if (stdout && stdout.length) fs.appendFileSync(proverLogPath, stdout, "utf8");
-      if (stderr && stderr.length) fs.appendFileSync(proverLogPath, stderr, "utf8");
-      fs.appendFileSync(proverLogPath, footer, "utf8");
-    } catch (writeErr) {
-      console.error(`Failed to append dafny output to ${proverLogPath}:`, writeErr);
-      return { ok: false, reason: "append_failed", writeErr };
-    }
+  return {
+    ok: true,
+    code: exit.code,
+    stdout,
+    stderr,
+    logPath: proverLogPath,
+    note: exit.code !== 0 ? "nonzero_exit" : undefined
+  };
+}
+  
 
-    if (error) {
-      // spawnSync-level error (e.g., command not found)
-      console.error(`Error invoking dafny for ${fileName}:`, error);
-      return { ok: false, reason: "spawn_error", error };
-    }
+async function runTest(srcFile) {
+  const dir = path.dirname(srcFile);
+  const proofFile = path.join(dir, "prover_log.txt");
 
-    if (status !== 0) {
-      // dafny returned non-zero exit code. We still appended output; caller decides what to do.
-      console.warn(`dafny exited with code ${status} for ${fileName}. See ${proverLogPath} for details.`);
-      return { ok: true, code: status, note: "nonzero_exit" };
-    }
-
-    // success
-    return { ok: true, code: status };
+  // Remove existing prover_log.txt if present
+  try {
+    await fsp.unlink(proofFile).catch((e) => {
+      if (e.code !== "ENOENT") throw e;
+    });
   } catch (err) {
-    console.error(`Unexpected error while running dafny on ${srcFilePath}:`, err);
-    return { ok: false, reason: "exception", error: err };
+    return { srcFile, status: "error", reason: "unlink_failed", error: err };
+  }
+
+  // Run Dafny and create prover_log.txt by appending output
+  const dafnyRes = await runDafnyAndAppendLog(srcFile);
+  if (!dafnyRes.ok) {
+    return { srcFile, status: "skipped", reason: "dafny_failed", dafnyRes };
+  }
+
+  // Read source and log
+  let src, log;
+  try {
+    src = await fsp.readFile(srcFile, "utf8");
+  } catch (err) {
+    return { srcFile, status: "error", reason: "read_source_failed", error: err };
+  }
+  try {
+    log = await fsp.readFile(proofFile, "utf8");
+  } catch (err) {
+    return { srcFile, status: "error", reason: "read_log_failed", error: err };
+  }
+
+  // parseProof & parse_test (assumed to be synchronous functions available in scope)
+  let proofTest, parsedTest;
+  try {
+    proofTest = parseProof(src, log);
+  } catch (err) {
+    return { srcFile, status: "error", reason: "parse_proof_failed", error: err };
+  }
+  try {
+    parsedTest = parse_test(src);
+  } catch (err) {
+    return { srcFile, status: "error", reason: "parse_test_failed", error: err };
+  }
+
+  if (!Array.isArray(parsedTest) || parsedTest.length < 2) {
+    return { srcFile, status: "error", reason: "parse_test_return_invalid", parsedTest };
+  }
+
+  const [test_name, testExpectedOut] = parsedTest;
+  if (!(testExpectedOut instanceof Map)) {
+    return { srcFile, status: "error", reason: "expected_not_map", expected: testExpectedOut };
+  }
+
+  const lineStatus = (proofTest && proofTest.lineStatus) || [];
+  try {
+    const  [ok, reason] = check_test(test_name, testExpectedOut, lineStatus); // assumed sync
+    return { srcFile, status: ok ? "passed" : "failed", test_name, reason : reason };
+  } catch (err) {
+    return { srcFile, status: "error", reason: "check_test_exception", error: err };
   }
 }
 
 
-function runAllTests(opts = {}) {
-  const testsRoot = opts.testsRoot || path.join("dataset", "tests");
+
+async function runAllTests(opts = {}) {
+  const testsRoot = opts.testsRoot || DEFAULT_TESTS_ROOT;
   console.log(`Searching for .dfy files under: ${testsRoot}`);
 
   if (!fs.existsSync(testsRoot)) {
@@ -152,137 +224,103 @@ function runAllTests(opts = {}) {
 
   const dfyFiles = findDfyFiles(testsRoot);
   console.log(`Found ${dfyFiles.length} .dfy file(s).`);
- let total = 0;
-  let passed = 0;
-  let failed = 0;
-  let skipped = 0;
-  let dafnyFailures = 0;
+  if (dfyFiles.length === 0) return;
 
-  
+  const concurrency = opts.concurrency || CONCURRENCY;
+  console.log(`Running up to ${concurrency} tests in parallel.`);
 
-  console.log("\n");
-  for (const srcFile of dfyFiles) {
-    total += 1;
+  const results = [];
+  let idx = 0;
 
-    var isBug = srcFile.includes("bug_"); //Bug should fail
+  const workers = new Array(Math.min(concurrency, dfyFiles.length)).fill(0).map(async () => {
+    while (true) {
+      const myIndex = idx++;
+      if (myIndex >= dfyFiles.length) return;
+      const srcFile = dfyFiles[myIndex];
 
-    if(isBug){
-      console.log("\n-------------- SHOULD FAIL ----------------------");
-    } else {
-      console.log("\n-------------- SHOULD PASS -----------------------");
-    }
-    //console.log(`Processing: ${srcFile}`);
+      // optional: print progress
+      console.log(`(pid:${process.pid}) run (${myIndex + 1}/${dfyFiles.length}): ${srcFile}`);
 
-
-    const dir = path.dirname(srcFile);
-    const proofFile = path.join(dir, "prover_log.txt");
-
-    // If proofFile exists delete that file
-    if (fs.existsSync(proofFile)) {
-      fs.unlinkSync(proofFile);
-    }
-    // 1) Run Dafny in that directory and append to prover_log.txt
-    const dafnyRes = runDafnyAndAppendLog(srcFile);
-    if (!dafnyRes.ok) {
-      dafnyFailures += 1;
-      console.error(`Failed to run dafny for ${srcFile} (reason: ${dafnyRes.reason || "unknown"}). Skipping parsing/checking for this file.`);
-      skipped += 1;
-      continue;
-    }
-
-    // 2) Read source and the (newly appended) prover log
-    let src, log;
-    try {
-      src = fs.readFileSync(srcFile, "utf-8");
-    } catch (err) {
-      console.error(`Failed to read source file ${srcFile}:`, err);
-      failed += 1;
-      continue;
-    }
-
-    try {
-      log = fs.readFileSync(proofFile, "utf-8");
-    } catch (err) {
-      console.error(`Failed to read proof file ${proofFile}:`, err);
-      failed += 1;
-      continue;
-    }
-
-    // 3) parseProof & parse_test (assumed available in scope)
-    let proofTest, parsedTest;
-    try {
-      proofTest = parseProof(src, log); // should return { lineStatus: [...] }
-    } catch (err) {
-      console.error(`Error while parsing proof for ${srcFile}:`, err);
-      failed += 1;
-      continue;
-    }
-
-    try {
-      parsedTest = parse_test(src); // expected to return [test_name, testExpectedOut]
-    } catch (err) {
-      console.error(`Error while parsing test metadata from ${srcFile}:`, err);
-      failed += 1;
-      continue;
-    }
-
-    if (!Array.isArray(parsedTest) || parsedTest.length < 2) {
-      console.error(`parse_test did not return [name, expectedMap] for ${srcFile}. Got:`, parsedTest);
-      failed += 1;
-      continue;
-    }
-
-    const [test_name, testExpectedOut] = parsedTest;
-
-    // Validate expected map type
-    if (!(testExpectedOut instanceof Map)) {
-      console.error(
-        `Expected a Map from parse_test for ${srcFile}, but got ${Object.prototype.toString.call(
-          testExpectedOut
-        )}.`
-      );
-      failed += 1;
-      continue;
-    }
-
-    const lineStatus = (proofTest && proofTest.lineStatus) || [];
-
-    try {
-      const ok = check_test(srcFile, testExpectedOut, lineStatus);
+      // decide whether this test is expected to be a bug (optional)
+      const isBug = srcFile.includes("bug_");
+      const res = await runTest(srcFile);
+   
+      if(res.status == "error" || 
+          (isBug && res.status == "passed") ||
+          (!isBug && res.status == "failed")
+      ){
+           console.error(`Test Failed: ${srcFile}. Reasons: ${res.reason}`)
+      }
       
-      if ((ok && !isBug) || (!ok && isBug)) passed += 1;
-      else failed += 1;
-    } catch (err) {
-      console.error(`Exception while checking test for ${srcFile}:`, err);
-      failed += 1;
+
+      results.push({ srcFile, res, isBug });
+    }
+  });
+
+  // wait for all workers to finish
+  await Promise.all(workers);
+
+  // Aggregate results
+  let total = results.length;
+  let passed = 0,
+    failed = 0,
+    skipped = 0,
+    dafnyFailures = 0,
+    errors = 0;
+
+  for (const { srcFile, res, isBug } of results) {
+    if (!res) {
+      errors += 1;
+      console.error(`No result for ${srcFile}`);
+      continue;
+    }
+    switch (res.status) {
+      case "passed":
+        if (!isBug) passed += 1;
+        else failed += 1; // a bug that passed counts as failure
+        break;
+      case "failed":
+        if (isBug) passed += 1; // expected failure
+        else failed += 1;
+        break;
+      case "skipped":
+        skipped += 1;
+        if (res.reason === "dafny_failed") dafnyFailures += 1;
+        break;
+      case "error":
+      default:
+        errors += 1;
+        break;
     }
   }
 
   console.log("\n================== Summary ==================");
-  console.log(`Total .dfy files found: ${total}`);
+  console.log(`Total .dfy files found: ${dfyFiles.length}`);
   console.log(`Passed: ${passed}`);
   console.log(`Failed: ${failed}`);
-  console.log(`Skipped (dafny/spawn/parse issues): ${skipped}`);
+  console.log(`Skipped: ${skipped}`);
   console.log(`Dafny invocation failures: ${dafnyFailures}`);
+  console.log(`Other errors: ${errors}`);
 
-  if (failed > 0 || dafnyFailures > 0) {
+  if (failed > 0 || dafnyFailures > 0 || errors > 0) {
     console.error("One or more tests failed or Dafny runs failed.");
     process.exitCode = 1;
   } else {
     console.log("All tests passed and Dafny runs succeeded.");
+    process.exitCode = 0;
   }
+
+  return { results, summary: { total: dfyFiles.length, passed, failed, skipped, dafnyFailures, errors } };
 }
 
-runAllTests();
 
-//const proofFile = "src/prover_log.txt";
-//const sourceFile = "src/source_code.dfy";
+  (async () => {
+    try {
+      await runAllTests();
+    } catch (err) {
+      console.error("Fatal error running tests:", err);
+      process.exitCode = 2;
+    }
+  })();
 
-//const src = fs.readFileSync(sourceFile, "utf-8");
-//const log = fs.readFileSync(proofFile, "utf-8");
-//
-//const proofTest = parseProof(src, log);
-//const [test_name, testExpectedOut] = parse_test(src);
-//const lineStatus = proofTest.lineStatus;
-//check_test(test_name,testExpectedOut, lineStatus);
-// maybe run assertions etc
+
