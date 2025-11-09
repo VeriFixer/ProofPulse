@@ -26,7 +26,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::: L2 - CovComplete
 //::: L3 - Uncovered
 //::: L4 - CovComplete
-//::: L5 - CovComplete
+// Boogey bug on L5
 //::: L6 - Uncovered
 //::: L7 - CovComplete
 //::: L8 - CovComplete
