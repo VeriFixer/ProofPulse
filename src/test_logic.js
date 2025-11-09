@@ -50,26 +50,26 @@ function parse_test(testSource) {
 
 function check_test(name, expected, received) {
     var test_passed = true;
-    var reason = ""
+    var reason = "\n"
     if(expected.size < 1){
-       reason = `Failed ${name} : expect comments are empty"`;
+       reason = `  Failed ${name} : expect comments are empty"`;
        test_passed = false;
     }
     for (const [lineNum, expectedStatus] of expected.entries()) {
         if (lineNum < 1 || lineNum > received.length) {
             test_passed = false;
-            reason = `Failed ${name} failed: Line ${lineNum} is out of bounds (received has ${received.length} lines).`;
+            reason += `  Failed ${name} failed: Line ${lineNum} is out of bounds (received has ${received.length} lines).\n`;
         }
 
         const actualStatus = received[lineNum - 1];
 
         if (actualStatus !== expectedStatus) {
             test_passed = false;
-            reason = `Failed ${name}: Line ${lineNum} expected '${expectedStatus}', but got '${actualStatus}'.`;
+            reason += `  Failed ${name}: Line ${lineNum} expected '${expectedStatus}', but got '${actualStatus}'.\n`;
         }
     }
     if(test_passed){
-        reason = `Passed ${name}`
+        reason += `  Passed ${name}`
     }
     return [test_passed, reason];
 }
@@ -152,6 +152,7 @@ async function runTest(srcFile) {
   const proofFile = path.join(dir, "prover_log.txt");
 
   // Remove existing prover_log.txt if present
+
   try {
     await fsp.unlink(proofFile).catch((e) => {
       if (e.code !== "ENOENT") throw e;
@@ -181,16 +182,16 @@ async function runTest(srcFile) {
 
   // parseProof & parse_test (assumed to be synchronous functions available in scope)
   let proofTest, parsedTest;
-  try {
+  //try {
     proofTest = parseProof(src, log);
-  } catch (err) {
-    return { srcFile, status: "error", reason: "parse_proof_failed", error: err };
-  }
+  //} catch (err) {
+  //  return { srcFile, status: "error", reason: "parse_proof_failed", error: err };
+  //}
   try {
     parsedTest = parse_test(src);
   } catch (err) {
     return { srcFile, status: "error", reason: "parse_test_failed", error: err };
-  }
+  } 
 
   if (!Array.isArray(parsedTest) || parsedTest.length < 2) {
     return { srcFile, status: "error", reason: "parse_test_return_invalid", parsedTest };

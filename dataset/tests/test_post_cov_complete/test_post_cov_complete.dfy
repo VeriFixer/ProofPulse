@@ -6,6 +6,7 @@ method ret32() returns (x:int)
 
 method Main(){
     var b := ret32();
+    assert(b == 32);
 }
 
 //::: Name - Postcondition complete as it is used on Main

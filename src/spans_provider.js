@@ -64,6 +64,9 @@ class Node {
     this.end = { line: eLine, col: eCol };
 
     this.isTopAssertion = isTopAssertion;
+    if(this.isTopAssertion){
+      this.topAliasNode = null;
+    }
 
     this.CovStatus = root.CovStatus.Uncovered;
     this.CovStatusInternal = root.CovStatus.Uncovered;
@@ -293,8 +296,49 @@ class Proof {
         }  
       } else if (currentTopAssertion != null) {
         if (currentBlock === BlockType.ProofDep) {
+          // Top assertion is registered with only a single carachter even though the actual assertion or postcondition etc
+          // occupies on the proof dependecnies its correct place 
+          // What I should do is change that token when i noticed that i am on the correct token
+          if( (token.start.line <= currentTopAssertion.start.line) && 
+              (currentTopAssertion.start.line <= token.end.line) && 
+              (token.start.col <= currentTopAssertion.start.col) && 
+              (currentTopAssertion.start.col <= token.end.col)) {
+                // Top Assertions retain the alias node that represents itself but with the full range of tokens
+                // This is usefull to get more complex semantics specially when using potcondition and preconditions in
+                // methods function calls
+                currentTopAssertion.topAliasNode = token;
+              }
+        
+
+
+
           // Note addEdge is resilient to repetition of edged
           this.proofGraph.addEdge(currentTopAssertion.id, token.id);
+          // if The current assertion text has something like so
+          //  test_fully_use_postcondition.dfy(7,6)-(7,19): ensures clause at test_fully_use_postcondition.dfy(2,13)-(2,16) from call
+          // I have to parse second part as well and add a connection from test_fully_use_postcondition.dfy(7,6)-(7,19) to test_fully_use_postcondition.dfy(2,13)-(2,16) to 
+       
+           const postcall = /ensures clause at\s+([^\s()]+)\((\d+),(\d+)\)-\((\d+),(\d+)\)/;
+
+           const m = line.match(postcall);
+           //  console.log("AMEN AMEN 2");
+           if(m){
+            const file = m[1].trim();
+            const sLine = parseInt(m[2], 10);
+            const sCol = parseInt(m[3], 10);
+            const eLine = parseInt(m[4], 10);
+            const eCol = parseInt(m[5], 10);
+
+            // Create token if not exists
+            let posttoken = new Node(file, sLine, sCol, eLine, eCol, "Post called externally", isTopAssertion);
+            if (!this.proofGraph.hasNode(posttoken.id)) {
+              this.proofGraph.addNode(posttoken);
+            } else {
+              posttoken = this.proofGraph.getNode(posttoken.id);
+            }
+            // Connect token
+            this.proofGraph.addEdge(token.id, posttoken.id);
+           }
         }
       }
     }
@@ -416,16 +460,22 @@ class Proof {
       const  postneighbors = this.proofGraph.getBFSneighbors(post.id , 1);  
       // If any of its depedncies is not a postcondition and is covered he is CovTest at least
       let anychildIsCovComplete = false;
-      for(let neigh in postneighbors){
-        if(neigh.type != root.TokenType.Postcondition && neigh.CovStatus == neigh.CovComplete){
+      for(let neigh of postneighbors){
+        if(neigh.type != root.TokenType.Postcondition && neigh.CovStatus == CovStatus.CovComplete){
           anychildIsCovComplete = true;
           break;
         }
       }
       let anyParents = false;
-      const postParents = this.proofGraph.getBFSneighbors(post.id, 0);
-      if(postParents.length > 0){
-        anyParents = true;
+      // Alias needed has actual relantionship of use uses alias instead of top not specified range condition
+      const alias = post.topAliasNode;
+      if(alias){
+        const postParents = this.proofGraph.getBFSneighbors(alias.id, 0);
+     
+        if(postParents.length > 1){
+          // one as parent for sure is at minimum the top postcondition (parent of the alias) 
+          anyParents = true;
+        }
       }
       if(anyParents && anychildIsCovComplete){
           post.CovStatus = CovStatus.CovComplete;
