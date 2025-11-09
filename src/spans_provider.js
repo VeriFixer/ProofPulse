@@ -306,7 +306,19 @@ class Proof {
                 // Top Assertions retain the alias node that represents itself but with the full range of tokens
                 // This is usefull to get more complex semantics specially when using potcondition and preconditions in
                 // methods function calls
-                currentTopAssertion.topAliasNode = token;
+
+                
+                if(!currentTopAssertion.topAliasNode){
+                  currentTopAssertion.topAliasNode = token;
+                } else {
+                  // only update if range of the potencially next is bigger than the actual
+                  // Alias tends to be the biggest condition that contains the top token in question 
+                  let rangePoss = token.end.col - token.start.col;
+                  let rangeActual = currentTopAssertion.topAliasNode.end.col - currentTopAssertion.topAliasNode.start.col;
+                  if(rangePoss > rangeActual){
+                     currentTopAssertion.topAliasNode = token;
+                  }
+                }
               }
         
 
@@ -452,12 +464,12 @@ class Proof {
       token.CovStatus = token.CovStatusInternal;
     }
     // Postcondition
-    // CovComplete -> (1) Its direct graph is called by another things. and it uses manualAssetion or codeLines that is marked as CovComplete ()
+    // CovComplete -> (1) Its direct graph is called by another things. and it uses manualAssetion or codeLines that is marked as CovComplete (more general if anything bellow it is marked as covComplete)
     // CovTest     -> It is not called by other methods. But it uses manual assertions or codelines that are marked has CodeComplete or preconditions
     // Uncovered   -> It is not used by any code lines or assertions that are not automatic or preconditions. (It is a axiom basically 1==1)
     // Only for the top ones
     for(let post of allPostconditions){
-      const  postneighbors = this.proofGraph.getBFSneighbors(post.id , 1);  
+      const  postneighbors = this.proofGraph.getBFSneighbors(post.id , 1,1);  
       // If any of its depedncies is not a postcondition and is covered he is CovTest at least
       let anychildIsCovComplete = false;
       for(let neigh of postneighbors){

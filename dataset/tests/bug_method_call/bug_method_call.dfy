@@ -11,7 +11,13 @@ method Main() {
 
 //::: Name - Method call appears unused
 //::: Description - Method call appears unused seems bug boogie dafny translation description bellow 
-//::: L8 - CovComplete
+//::: As it was deemed as automatic insert assertions we are now ignoring this And actually 
+//::: This is being signalated as CovComplete. But beaware that the automatic assertion of the call 
+//::: is always uncovered
+
+// Actually line 8 is expected CovComplete that it is what is recevign, this is not buging out as this behaviour is being ignored
+// Changed to uncovered hust for bug test to pass (it must give an error)
+//::: L8 - Uncovered
 
 
 

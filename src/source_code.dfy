@@ -1,34 +1,34 @@
-method Abs(x: int) returns (y: int)
-  ensures 4 == 4
-  ensures x>=0 ==> x==y
-  ensures x < 0 ==> x+y==0
+method zeroVector(n : array<int>) returns (ex:array<int>)
+    ensures n.Length == ex.Length
+    ensures forall i:int :: 0<= i < n.Length ==> ex[i] == 0
 {
-  if x < 0 {
-    y := -x; // _USECASE_no_postconditions.dfy(4,5)-(4,12): assignment (or return)
-  } else {
-    y :=  Id(x); // _USECASE_no_postconditions.dfy(6,5)-(6,11): assignment (or return)
-  }
+    var z:= 0;
+    ex := new int[n.Length];
+    var i := 0;
+    while(i < n.Length)
+        invariant 0 <= i <= n.Length
+        invariant forall k:int :: 0<= k < i ==> ex[k] == 0
+    {
+        ex[i] := 0;
+        i := i + 1;
+    }
 }
+// Line 9 is cov test as it is only needed for the automatic assertion ex[k] in range on line 10
+// and as none are signalled as directly needed for the outer proof it appears as covTest.
 
-function Id<T> (a : T) : T {
-    a
-}
-
-//::: Name - Find irrelevant postconditions that are not used in the code not needed
-//::: Description - Line 2 should be uncovered as ensures 4==4 does not use anything in the code to prove it
+//::: Name - Checking indexes assertions, probably should modify behaviour
+//::: Description - Simple Zero Vector creation to test index accesses
 //::: L1 - CovComplete
-//::: L2 - Uncovered
+//::: L2 - CovTest
 //::: L3 - CovTest
-//::: L4 - CovTest
+//::: L4 - CovComplete
 //::: L5 - CovComplete
 //::: L6 - CovComplete
 //::: L7 - CovComplete
 //::: L8 - CovComplete
-//::: L9 - CovComplete
+//::: L9 - CovTest
 //::: L10 - CovComplete
 //::: L11 - CovComplete
 //::: L12 - CovComplete
 //::: L13 - CovComplete
 //::: L14 - CovComplete
-//::: L15 - CovComplete
-
