@@ -109,7 +109,8 @@ async function runDafnyAndAppendLog(srcFilePath) {
     "--allow-warnings", "true",
     "--verification-time-limit", DAFNY_TIMEOUT_SEC,
     // Options to perform core minimization note: This does not gurantee that the core is really the minimal possible
-    "--boogie", "/proverOpt:O:smt.core.minimize=true /proverOpt:O:sat.core.minimize=true" 
+    // Need also to pass produce proof to make proof more stable
+    "--boogie", "/proverOpt:O:smt.core.minimize=true /proverOpt:O:sat.core.minimize=true  /proverOpt:C:proof=true" 
   ];
  const child = spawn("dafny", args, { cwd: dir });
 
@@ -240,7 +241,7 @@ async function runAllTests(opts = {}) {
       const srcFile = dfyFiles[myIndex];
 
       // optional: print progress
-      console.log(`(pid:${process.pid}) run (${myIndex + 1}/${dfyFiles.length}): ${srcFile}`);
+      console.log(`run (${myIndex + 1}/${dfyFiles.length}): ${srcFile}`);
 
       // decide whether this test is expected to be a bug (optional)
       const isBug = srcFile.includes("bug_");

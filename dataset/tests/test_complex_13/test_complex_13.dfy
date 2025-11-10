@@ -64,3 +64,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
     }
 }
 
+//::: Name - Sucess story !! found null checks not needed. Line 18 expected covComplete
+//::: Description - Bugs on null checks it seems (4,13)
+//::: L4 - Uncovered
+//::: L13 - Uncovered
+//::: L18 - CovComplete

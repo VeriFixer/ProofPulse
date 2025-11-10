@@ -1,0 +1,3 @@
+unsat
+(:rlimit 12636)
+(aux$$assume$$id20$assume_in_body aux$$assume$$id37 aux$$assert$$id20$maintained)
