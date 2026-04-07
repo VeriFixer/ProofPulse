@@ -1,0 +1,53 @@
+
+===== dafny run for test_fully_use_postcondition.dfy (2026-04-07T16:18:40.794Z) =====
+
+Dafny program verifier finished with 2 verified, 0 errors
+
+Results for ret32 (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.3731157
+  Overall resource count: 2775
+  Maximum assertion batch time: 00:00:00.3731157
+  Maximum assertion batch resource count: 2775
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.3731157
+    Resource count: 2775
+
+    Assertions:
+      test_fully_use_postcondition.dfy(2,14): this postcondition holds
+
+    Proof dependencies:
+      test_fully_use_postcondition.dfy(2,13)-(2,16): ensures clause
+      test_fully_use_postcondition.dfy(4,5)-(4,12): assignment (or return)
+
+    Unused by proof:
+      test_fully_use_postcondition.dfy(5,1)-(5,1): out-parameter 'x', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for Main (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.3206582
+  Overall resource count: 3564
+  Maximum assertion batch time: 00:00:00.3206582
+  Maximum assertion batch resource count: 3564
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.3206582
+    Resource count: 3564
+
+    Assertions:
+      test_fully_use_postcondition.dfy(8,5): assertion always holds
+
+    Proof dependencies:
+      test_fully_use_postcondition.dfy(7,6)-(7,19): ensures clause at test_fully_use_postcondition.dfy(2,13)-(2,16) from call
+      test_fully_use_postcondition.dfy(8,5)-(8,17): assertion always holds
+
+    Unused by proof:
+      test_fully_use_postcondition.dfy(7,6)-(7,19): call
+      test_fully_use_postcondition.dfy(7,6)-(7,19): assignment (or return)
+dafny: Error: Boogie option '' must start with - or /
+Use /help for available options
+
+===== end dafny run for test_fully_use_postcondition.dfy =====
