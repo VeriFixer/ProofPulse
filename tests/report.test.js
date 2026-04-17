@@ -8,7 +8,7 @@ import {
   writeCoverageJSON,
   computeExitCode,
   escapeXml,
-} from './report.js';
+} from '../src/report.js';
 
 // ── Helpers ──
 

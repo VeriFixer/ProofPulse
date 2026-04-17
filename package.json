@@ -2,15 +2,20 @@
   "name": "proofpulse",
   "version": "0.1.0",
   "type": "module",
+  "workspaces": ["packages/*"],
   "scripts": {
+    "build:core": "tsc --project packages/core/tsconfig.json",
+    "build:viewer": "node scripts/build-spans-provider.mjs",
+    "build": "npm run build:core && npm run build:viewer",
     "start": "node src/server.js",
     "test": "node src/cli.js",
-    "test:unit": "node --test src/report.test.js",
-    "test:server": "node --test src/server.test.js",
-    "test:property": "node --test src/server.property.test.js",
-    "test:bundle": "node --test scripts/bundle-viewer.test.js"
+    "test:unit": "node --test tests/report.test.js",
+    "test:server": "node --test tests/server.test.js",
+    "test:property": "node --test tests/server.property.test.js",
+    "test:bundle": "node --test tests/bundle-viewer.test.js"
   },
   "devDependencies": {
+    "esbuild": "^0.25.0",
     "fast-check": "^3.22.0"
   }
 }

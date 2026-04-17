@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { mkdtemp } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { request as httpRequest } from 'node:http';
-import { startServer } from './server.js';
+import { startServer } from '../src/server.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -55,7 +55,7 @@ describe('startServer static file serving', () => {
     assert.equal(res.status, 200);
     assert.equal(res.headers.get('content-type'), 'text/html');
     const body = res.text();
-    const expected = readFileSync(join(__dirname, 'index.html'), 'utf8');
+    const expected = readFileSync(join(__dirname, '..', 'src', 'index.html'), 'utf8');
     assert.equal(body, expected);
   });
 

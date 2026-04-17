@@ -9,16 +9,14 @@ import { writeFile } from "fs/promises";
 const { spawn } = require("child_process");
 const fsp = fs.promises;
 
-const DEFAULT_TESTS_ROOT = path.join("dataset", "tests");
+import { parseProof } from '@proofpulse/core';
 const DAFNY_TIMEOUT_SEC = parseInt(process.env.DAFNY_TIMEOUT_SEC, 10) || 60;
 
 const CONCURRENCY = process.env.CI
   ? Math.max(1, os.cpus().length - 1)
   : os.cpus().length - 1;
 
-// Load spans_provider.js (attaches symbols to globalThis/global)
-require('./spans_provider.js');
-const { parseProof } = global;
+const DEFAULT_TESTS_ROOT = path.join("dataset", "tests");
 
 function parse_test(testSource) {
     var expected_lines = new Map();

@@ -6,7 +6,7 @@ import { mkdtemp } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { request as httpRequest } from 'node:http';
 import fc from 'fast-check';
-import { startServer } from './server.js';
+import { startServer } from '../src/server.js';
 
 /** Raw HTTP GET helper */
 function rawGet(port, path) {

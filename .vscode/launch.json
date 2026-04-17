@@ -13,6 +13,12 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/src/test_logic.js"
+        },
+        {
+            "name": "Run Extension",
+            "type": "extensionHost",
+            "request": "launch",
+            "args": ["--extensionDevelopmentPath=${workspaceFolder}/packages/vscode-extension"]
         }
     ]
 }

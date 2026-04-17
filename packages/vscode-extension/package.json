@@ -1,0 +1,66 @@
+{
+  "name": "proofpulse-vscode",
+  "displayName": "ProofPulse",
+  "description": "Dafny proof coverage analysis for VSCode — inline coverage decorations, gutter marks, and hover diagnostics for proof dependencies.",
+  "version": "0.1.0",
+  "publisher": "proofpulse",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ricostynha/ProofPulse"
+  },
+  "homepage": "https://github.com/ricostynha/ProofPulse#readme",
+  "bugs": {
+    "url": "https://github.com/ricostynha/ProofPulse/issues"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other", "Linters"],
+  "keywords": ["dafny", "proof", "coverage", "verification", "formal methods"],
+  "activationEvents": [
+    "onLanguage:dafny"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "proofpulse.runAnalysis",
+        "title": "ProofPulse: Run Coverage Analysis"
+      }
+    ],
+    "configuration": {
+      "title": "ProofPulse",
+      "properties": {
+        "proofpulse.dafnyPath": {
+          "type": "string",
+          "default": "dafny",
+          "description": "Path to the Dafny executable"
+        },
+        "proofpulse.timeoutSeconds": {
+          "type": "number",
+          "default": 60,
+          "description": "Timeout in seconds for Dafny verification"
+        },
+        "proofpulse.runOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically run coverage analysis when a .dfy file is saved"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@proofpulse/core": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.3.0"
+  },
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "watch": "node esbuild.config.mjs --watch",
+    "package": "npm run build && npx @vscode/vsce package --no-dependencies"
+  }
+}

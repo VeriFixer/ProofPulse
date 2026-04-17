@@ -1,16 +1,36 @@
 # ProofPulse
 
-Dafny proof dependency and coverage analysis tool. Runs Dafny verification on `.dfy` files, compares coverage status against expected annotations, and visualises results in a static web viewer.
+Dafny proof dependency and coverage analysis tool. Parses prover logs into a proof dependency graph, computes coverage status, and visualises results in a web viewer or VSCode extension.
 
-## Quick start (Docker — recommended)
-
-No local Dafny install needed. Docker bundles Node.js 22 + Dafny CLI.
+## Quick start (Docker)
 
 ```bash
-# Build
 docker build -t proofpulse .
+```
+### Web viewer
 
-# Run tests
+```bash
+docker run -p 8080:8080 proofpulse npm start
+# Open http://localhost:8080
+```
+
+Three-column layout: test browser sidebar, editor, detail panel.
+
+- **Browser mode** — lists tests from `dataset/tests/`, click to load coverage
+- **Interactive mode** — paste Dafny code, click "Run Coverage" to analyse on the fly
+
+
+### Analyse a local `.dfy` file
+
+```bash
+docker run -v /path/to/file.dfy:/app/input.dfy proofpulse \
+  dafny verify /app/input.dfy --verification-coverage-report cov
+```
+
+
+### Run tests
+
+```bash
 docker run --name pp-test proofpulse
 
 # Extract reports
@@ -18,156 +38,62 @@ docker cp pp-test:/app/test-results ./test-results
 docker rm pp-test
 ```
 
-Analyse a local `.dfy` file via volume mount:
+## VSCode extension
 
-```bash
-docker run -v /path/to/file.dfy:/app/input.dfy proofpulse \
-  dafny verify /app/input.dfy --verification-coverage-report cov
-```
+Inline coverage analysis for `.dfy` files directly in the editor.
 
-## Local setup (without Docker)
+### Features
 
-Requires Node.js 22+ and Dafny CLI in `PATH`.
+- Gutter decorations — red for uncovered lines, blue for CovTest
+- Inline decorations — per-token coverage coloring
+- Hover diagnostics — status, proof text, type, and all related dependency nodes
+- Command palette: "ProofPulse: Run Coverage Analysis"
+
+### Configuration
+
+| Setting | Default | Description |
+|---|---|---|
+| `proofpulse.dafnyPath` | `"dafny"` | Path to the Dafny executable |
+| `proofpulse.timeoutSeconds` | `60` | Verification timeout in seconds |
+
+### Building and installing
 
 ```bash
 npm install
-npm test
+npm run build -w packages/core
+npm run build -w packages/vscode-extension
 ```
 
-`npm test` runs the full test harness: discovers `.dfy` files under `dataset/tests`, verifies each with Dafny, compares coverage against inline annotations, then writes structured reports to `test-results/`.
+#### Install as a `.vsix` (recommended for real usage)
 
-Exit codes: `0` = all pass, `1` = test failure, `2` = fatal error (e.g. Dafny not found).
-
-## npm scripts
-
-| Script | What it does |
-|---|---|
-| `npm test` | Full Dafny test suite + JUnit XML & coverage JSON reports |
-| `npm start` | Start the interactive coverage viewer server (port 8080) |
-| `npm run test:unit` | Property-based + unit tests for the report module |
-| `npm run test:server` | Unit tests for the backend server |
-| `npm run test:property` | Property-based tests for backend API correctness |
-| `npm run test:bundle` | Unit tests for the static viewer bundling script |
-
-## Test reports
-
-After `npm test` (or Docker run), find these in `test-results/`:
-
-- `junit.xml` — JUnit XML with one `<testcase>` per `.dfy` file (parseable by CI tools)
-- `coverage.json` — per-test coverage distribution (CovComplete/CovTest/Uncovered) + summary
-
-Override output paths via env vars:
+Package the extension into a standard `.vsix` file, then install it like any other extension:
 
 ```bash
-JUNIT_REPORT_PATH=reports/junit.xml COVERAGE_REPORT_PATH=reports/cov.json npm test
+# Package (produces packages/vscode-extension/proofpulse-vscode-0.1.0.vsix)
+npm run package -w packages/vscode-extension
+
+# Install from the command line
+code --install-extension packages/vscode-extension/proofpulse-vscode-0.1.0.vsix
 ```
 
-## CI pipeline
+You can also install via the UI: open VSCode → Extensions sidebar → `...` menu → "Install from VSIX..." → select the `.vsix` file.
 
-GitHub Actions (`.github/workflows/ci.yml`) runs on push/PR to `main`:
+After installing, reload VSCode. The extension is now permanently available — no Extension Development Host needed.
 
-1. Builds the Docker image
-2. Runs `npm test` inside the container
-3. Extracts JUnit XML + coverage JSON
-4. Uploads reports as artifacts
-5. Publishes test results as PR annotations via `dorny/test-reporter`
+To uninstall: Extensions sidebar → find ProofPulse → Uninstall.
 
-Non-zero exit code fails the workflow — use as a required status check to gate merges.
+#### Dev/debug mode (Extension Development Host)
 
-## Web viewer
+For development iteration, press `F5` from the project root. This launches a temporary VSCode window with the extension loaded from source.
 
-### Interactive mode (recommended)
+## Web server configuration
 
-The viewer now ships with a built-in Node.js server that provides a test browser sidebar and interactive Dafny analysis — no manual file copying needed.
-
-```bash
-npm start
-# Open http://localhost:8080
-```
-
-Features:
-- Three-column layout: sidebar, editor, detail panel
-- **Browser mode** — lists all tests from `dataset/tests/`, click to load coverage
-- **Interactive mode** — paste any Dafny code, click "Run Coverage" to analyse on the fly
-- Backend runs `dafny verify` with coverage flags, returns results to the viewer
-- Toggle between modes with the Browser / Interactive buttons
-
-The server accepts a custom port and tests directory:
+The HTTP server (`src/server.js`) accepts a custom port and tests directory:
 
 ```js
-// From code
 import { startServer } from './src/server.js';
-await startServer(3000, 'path/to/tests');
+await startServer(3000, 'path/to/tests', 120); // port, testsRoot, timeoutSec
 ```
-
-### Static setup (no server)
-
-```bash
-# 1. Copy your .dfy file
-cp path/to/your_file.dfy src/source_code.dfy
-
-# 2. Run Dafny verification
-dafny verify src/source_code.dfy \
-  --verification-coverage-report cov \
-  --log-format text \
-  --solver-option LOG_FILE=output.smt2 \
-  --bprint output.bpl \
-  --isolate-assertions \
-  > src/prover_log.txt
-
-# 3. Serve and open
-cd src && python3 -m http.server 8000
-# Open http://localhost:8000/index.html
-```
-
-### Bundle script (local)
-
-Package the viewer + pre-computed analysis into a self-contained static directory:
-
-```bash
-./scripts/bundle-viewer.sh <dfy-file> <output-dir>
-```
-
-Example:
-
-```bash
-./scripts/bundle-viewer.sh dataset/tests/test_assert_cov_complete/test_assert_cov_complete.dfy dist/viewer
-
-# Open the viewer
-cd dist/viewer && python3 -m http.server 8000
-# Then open http://localhost:8000/index.html
-```
-
-The script copies `index.html`, `app.js`, `styles.css`, `spans_provider.js`, the `.dfy` file (as `source_code.dfy`), and `prover_log.txt` from the same directory as the `.dfy` file.
-
-### Bundle and view via Docker
-
-You can run the bundle script and serve the viewer entirely from Docker — no local Dafny or Node needed:
-
-```bash
-# 1. Build the image (if not done already)
-docker build -t proofpulse .
-
-# 2. Bundle a test's viewer output to a local directory
-docker run --rm -v "$(pwd)/dist:/out" proofpulse \
-  bash -c './scripts/bundle-viewer.sh dataset/tests/test_assert_cov_complete/test_assert_cov_complete.dfy /out/viewer'
-
-# 3. Serve locally and open
-cd dist/viewer && python3 -m http.server 8000
-# Open http://localhost:8000/index.html
-```
-
-Or serve directly from Docker:
-
-```bash
-docker run --rm -p 8000:8000 -v "$(pwd)/dist/viewer:/srv" python:3-alpine \
-  python3 -m http.server 8000 --directory /srv
-# Open http://localhost:8000/index.html
-```
-
-If either `source_code.dfy` or `prover_log.txt` can't be loaded at runtime, the viewer shows a descriptive error indicating which file is missing.
-
-## Configuration
 
 | Env var | Default | Description |
 |---|---|---|
@@ -176,40 +102,91 @@ If either `source_code.dfy` or `prover_log.txt` can't be loaded at runtime, the 
 | `JUNIT_REPORT_PATH` | `test-results/junit.xml` | JUnit XML output path |
 | `COVERAGE_REPORT_PATH` | `test-results/coverage.json` | Coverage JSON output path |
 
+## Test reports
+
+After `docker run` (or `npm test`), find in `test-results/`:
+
+- `junit.xml` — one `<testcase>` per `.dfy` file
+- `coverage.json` — per-test coverage distribution + summary
+
+## CI pipeline
+
+GitHub Actions (`.github/workflows/ci.yml`) on push/PR to `main`:
+
+1. Builds Docker image
+2. Runs `npm test`
+3. Extracts JUnit XML + coverage JSON
+4. Uploads reports as artifacts
+5. Publishes test results via `dorny/test-reporter`
+
 ## Bug tests
 
-Test directories prefixed with `bug_` use inverted pass/fail logic: Dafny verification failure = expected (pass), verification success = unexpected (fail). This is reflected correctly in both JUnit XML and coverage JSON reports.
+Test directories prefixed with `bug_` use inverted pass/fail logic: verification failure = expected (pass), verification success = unexpected (fail).
+
+## Core library (`@proofpulse/core`)
+
+Shared TypeScript library used by both the VSCode extension and the web server.
+
+- `parseProof(dafnyCode, proofLog)` — parse prover log into `Proof` with `ProofGraph` and `lineStatus`
+- `runDafny(filePath, options?)` — spawn Dafny verification, return prover log
+- `computeLineStatus(graph, sourceCode)` — per-line worst-case coverage
+- `getNodesByLine`, `getRelatedNodes`, `getNodeInfo` — coverage queries
+- `serializeProofGraph` / `deserializeProofGraph` — canonical JSON round-trip
+- Types: `CovStatus`, `TokenType`, `Node`, `ProofGraph`, `Proof`, `DafnyResult`
 
 ## Project structure
 
 ```
+├── packages/
+│   ├── core/                   # @proofpulse/core — shared TypeScript library
+│   │   ├── src/
+│   │   │   ├── types.ts
+│   │   │   ├── node.ts
+│   │   │   ├── proof-graph.ts
+│   │   │   ├── proof.ts
+│   │   │   ├── coverage.ts
+│   │   │   ├── rendering.ts
+│   │   │   ├── serialization.ts
+│   │   │   ├── dafny-runner.ts
+│   │   │   ├── browser-entry.ts  # Browser IIFE entry (builds spans_provider.js)
+│   │   │   ├── index.ts
+│   │   │   └── __tests__/        # Property-based tests (vitest + fast-check)
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   └── vscode-extension/       # VSCode extension
+│       ├── src/
+│       │   ├── extension.ts
+│       │   ├── commands.ts
+│       │   ├── decorations.ts
+│       │   ├── hover.ts
+│       │   └── config.ts
+│       ├── esbuild.config.mjs
+│       ├── package.json
+│       └── tsconfig.json
 ├── src/
-│   ├── cli.js              # Entry point (npm test)
-│   ├── test_logic.js       # Test harness (discovers + runs .dfy tests)
-│   ├── report.js           # JUnit XML + coverage JSON generation
-│   ├── report.test.js      # Property-based + unit tests
-│   ├── server.js            # Backend HTTP server (API + static files)
-│   ├── server.test.js       # Server unit + integration tests
-│   ├── server.property.test.js # Property-based tests (fast-check)
+│   ├── server.js           # HTTP server
 │   ├── app.js              # Web viewer logic
-│   ├── index.html          # Web viewer page (three-column layout)
-│   ├── styles.css           # Web viewer styles
-│   └── spans_provider.js   # Coverage span parser
+│   ├── index.html          # Web viewer page
+│   ├── styles.css
+│   ├── spans_provider.js   # Built from core (npm run build:viewer)
+│   ├── cli.js              # Test harness entry point
+│   ├── test_logic.js       # Test runner
+│   └── report.js           # JUnit XML + coverage JSON
+├── tests/                  # Unit and property tests
 ├── scripts/
-│   ├── bundle-viewer.sh       # Static viewer bundler
-│   └── bundle-viewer.test.js  # Bundle script tests
+│   ├── build-spans-provider.mjs  # Bundles core → browser IIFE
+│   └── bundle-viewer.sh
 ├── dataset/
-│   ├── tests/              # .dfy test files with expected annotations
-│   └── demo/               # Demo files for presentations
+│   ├── tests/              # .dfy test files
+│   └── demo/               # Demo files
 ├── Dockerfile
-├── .github/workflows/ci.yml
-└── package.json
+└── package.json            # Root workspace (workspaces: ["packages/*"])
 ```
 
 ## Demos
 
-- Small examples showcase: `dataset/demo/_USECASE_demo_showcase_small_examples.dfy`
+- Small examples: `dataset/demo/_USECASE_demo_showcase_small_examples.dfy`
 - Bugs and limitations: `dataset/demo/_USECASE_demo_bugs_limitations.dfy`
 - Verus-to-Dafny translation: `dataset/demo/_USECASE_verus_fib_pow_translation.dfy`
-- Deep write-up bundle: `dataset/demo/test_fully_use_postcondition/`
+- Deep write-up: `dataset/demo/test_fully_use_postcondition/`
 - Demo index: [dataset/demo/README.md](dataset/demo/README.md)

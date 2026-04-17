@@ -68,11 +68,11 @@ function renderPanel(tokenEl, proof) {
     panelBody.innerHTML = '';
 
     panelBody.insertAdjacentHTML('beforeend', `
-    <p><strong>Status:</strong> ${String(token.CovStatus)}</p>
+    <p><strong>Status:</strong> ${String(token.covStatus)}</p>
     <p><strong>Message:</strong> ${String(token.prooftext)}</p>
     <p><strong>Loc:</strong> ${String(id)}</p>
     <p><strong>Kind:</strong> ${String(token.type)}</p>
-    <p><strong>CovInternal:</strong> ${String(token.CovStatusInternal)}</p>
+    <p><strong>CovInternal:</strong> ${String(token.covStatusInternal)}</p>
     `);
 
     const usedByDiv = document.createElement('div'); usedByDiv.className = 'group';
