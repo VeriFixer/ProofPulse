@@ -8,8 +8,22 @@
 </head>
 <body>
   <div class="app">
+    <div class="sidebar" id="sidebar">
+      <div class="mode-toggle">
+        <button id="btn-browser" class="active" aria-pressed="true">Browser</button>
+        <button id="btn-interactive" aria-pressed="false">Interactive</button>
+      </div>
+      <div id="sidebar-content">
+        <div id="test-list"></div>
+        <div id="interactive-panel" style="display:none">
+          <textarea id="code-input" maxlength="100000" placeholder="Paste Dafny code here..." aria-label="Dafny code input"></textarea>
+          <button id="btn-run">Run Coverage</button>
+          <div id="loading-indicator" style="display:none" role="status" aria-live="polite">Analyzing...</div>
+        </div>
+      </div>
+    </div>
     <div class="editor" id="editor">
-      <h2>_USECASE_find_irrelevant_lines_for_proof.dfy (click the underlined token)</h2>
+      <h2 id="editor-title">Select a test or paste code</h2>
 
       <!-- The <pre> will be filled by app.js using HTML produced by your spans-provider script -->
       <pre id="source" aria-label="source code"></pre>

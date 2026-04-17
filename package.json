@@ -1,0 +1,16 @@
+{
+  "name": "proofpulse",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node src/cli.js",
+    "test:unit": "node --test src/report.test.js",
+    "test:server": "node --test src/server.test.js",
+    "test:property": "node --test src/server.property.test.js",
+    "test:bundle": "node --test scripts/bundle-viewer.test.js"
+  },
+  "devDependencies": {
+    "fast-check": "^3.22.0"
+  }
+}

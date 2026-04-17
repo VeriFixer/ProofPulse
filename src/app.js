@@ -1,9 +1,9 @@
-const $ = s => document.querySelector(s);
-const $$ = s => Array.from(document.querySelectorAll(s));
+const dollar = s => document.querySelector(s);
+const dollarAll = s => Array.from(document.querySelectorAll(s));
 
-const pre = $('#source');
-const panelBody = $('#panel-body');
-const panelTitle = $('#panel-title');
+const pre = dollar('#source');
+const panelBody = dollar('#panel-body');
+const panelTitle = dollar('#panel-title');
 
 function escapeHtml(s) {
     return String(s)
@@ -46,7 +46,7 @@ function buildSourceDomFromFragment(fragmentHtml, code, lineStatuses) {
 }
 
 function clearHighlights() {
-    $$('.token').forEach(t => t.classList.remove('selected', 'related'));
+    dollarAll('.token').forEach(t => t.classList.remove('selected', 'related'));
 }
 
 function renderPanel(tokenEl, proof) {
@@ -92,7 +92,7 @@ function renderPanel(tokenEl, proof) {
 
 function attachHandlers(proof) {
   // Make tokens focusable so keyboard navigation still works:
-  $$('.token').forEach(t => t.tabIndex = 0);
+  dollarAll('.token').forEach(t => t.tabIndex = 0);
 
   // Click delegation: choose the deepest .token
   pre.addEventListener('click', e => {
@@ -102,7 +102,7 @@ function attachHandlers(proof) {
   });
 
   // Keyboard: keep per-token keydown so focus + Enter/Space works reliably
-  $$('.token').forEach(t => {
+  dollarAll('.token').forEach(t => {
     t.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -112,35 +112,141 @@ function attachHandlers(proof) {
   });
 }
 
-async function bootstrap() {
-    const proofFile = "prover_log.txt";
-    const sourceFile = "source_code.dfy";
+let currentProof = null;
+let selectedTest = null;
 
-    // Fetch file contents first
-    const [dafnyCode, proofLog] = await Promise.all([
-        fetch(sourceFile).then(r => r.text()),
-        fetch(proofFile).then(r => r.text())
+function clearState() {
+    pre.innerHTML = '';
+    panelBody.innerHTML = '';
+    panelTitle.textContent = 'Select a token';
+    currentProof = null;
+}
+
+async function loadTestList() {
+    const resp = await fetch('/api/tests');
+    const tests = await resp.json();
+    const list = dollar('#test-list');
+    list.innerHTML = '';
+    tests.forEach(name => {
+        const entry = document.createElement('div');
+        entry.className = 'test-entry';
+        entry.textContent = name;
+        entry.addEventListener('click', () => loadTest(name));
+        list.appendChild(entry);
+    });
+}
+
+async function loadTest(name) {
+    clearState();
+    dollar('#editor-title').textContent = name;
+
+    const [source, log] = await Promise.all([
+        fetch(`/api/tests/${encodeURIComponent(name)}/source`).then(r => r.text()),
+        fetch(`/api/tests/${encodeURIComponent(name)}/log`).then(r => r.text()),
     ]);
 
-    // Then pass the actual content strings to parseProof
-    let proof = root.parseProof(dafnyCode, proofLog);
-    
-    const lineStatuses = proof.lineStatus;
-
+    currentProof = window.parseProof(source, log);
+    const lineStatuses = currentProof.lineStatus;
     const src = window.getSourceCode();
-
-    const fragment = window.generateSpansFragment(src, proof);
+    const fragment = window.generateSpansFragment(src, currentProof);
     buildSourceDomFromFragment(fragment, src, lineStatuses);
+    attachHandlers(currentProof);
 
-    attachHandlers(proof);
+    dollarAll('.test-entry').forEach(el => el.classList.remove('active'));
+    const match = dollarAll('.test-entry').find(el => el.textContent === name);
+    if (match) match.classList.add('active');
+    selectedTest = name;
 
     const uncovered = document.querySelector('.token[data-status="uncovered"]');
-    if (uncovered) renderPanel(uncovered, proof);
+    if (uncovered) renderPanel(uncovered, currentProof);
     else {
         const first = document.querySelector('.token');
-        if (first) renderPanel(first, proof);
+        if (first) renderPanel(first, currentProof);
     }
+}
 
+function switchToBrowser() {
+    dollar('#test-list').style.display = '';
+    dollar('#interactive-panel').style.display = 'none';
+    dollar('#btn-browser').classList.add('active');
+    dollar('#btn-interactive').classList.remove('active');
+    dollar('#btn-browser').setAttribute('aria-pressed', 'true');
+    dollar('#btn-interactive').setAttribute('aria-pressed', 'false');
+}
+
+function switchToInteractive() {
+    dollar('#test-list').style.display = 'none';
+    dollar('#interactive-panel').style.display = '';
+    dollar('#btn-interactive').classList.add('active');
+    dollar('#btn-browser').classList.remove('active');
+    dollar('#btn-interactive').setAttribute('aria-pressed', 'true');
+    dollar('#btn-browser').setAttribute('aria-pressed', 'false');
+}
+
+async function runInteractive(code) {
+    const loadingEl = dollar('#loading-indicator');
+    const btnRun = dollar('#btn-run');
+    loadingEl.style.display = '';
+    btnRun.disabled = true;
+
+    try {
+        const resp = await fetch('/api/run', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ code }),
+        });
+        const data = await resp.json();
+
+        if (data.error) {
+            clearState();
+            pre.textContent = data.error + (data.stderr ? '\n' + data.stderr : '');
+            return;
+        }
+
+        clearState();
+        dollar('#editor-title').textContent = 'Interactive run';
+        currentProof = window.parseProof(code, data.log);
+        const lineStatuses = currentProof.lineStatus;
+        const src = window.getSourceCode();
+        const fragment = window.generateSpansFragment(src, currentProof);
+        buildSourceDomFromFragment(fragment, src, lineStatuses);
+        attachHandlers(currentProof);
+
+        const uncovered = document.querySelector('.token[data-status="uncovered"]');
+        if (uncovered) renderPanel(uncovered, currentProof);
+        else {
+            const first = document.querySelector('.token');
+            if (first) renderPanel(first, currentProof);
+        }
+    } catch (err) {
+        clearState();
+        pre.textContent = 'Request failed: ' + err.message;
+    } finally {
+        loadingEl.style.display = 'none';
+        btnRun.disabled = false;
+    }
+}
+
+async function bootstrap() {
+    // Wire mode toggle handlers
+    dollar('#btn-browser').addEventListener('click', switchToBrowser);
+    dollar('#btn-interactive').addEventListener('click', switchToInteractive);
+
+    // Wire run button
+    dollar('#btn-run').addEventListener('click', () => {
+        const code = dollar('#code-input').value;
+        if (code.trim()) runInteractive(code);
+    });
+
+    // Default to browser mode
+    switchToBrowser();
+
+    // Load test list
+    try {
+        await loadTestList();
+    } catch (e) {
+        pre.textContent = 'Failed to load test list: ' + e.message;
+    }
 }
 
 bootstrap();

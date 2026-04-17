@@ -10,16 +10,15 @@ const { spawn } = require("child_process");
 const fsp = fs.promises;
 
 const DEFAULT_TESTS_ROOT = path.join("dataset", "tests");
-const DAFNY_TIMEOUT_SEC = 1 * 60; 
+const DAFNY_TIMEOUT_SEC = parseInt(process.env.DAFNY_TIMEOUT_SEC, 10) || 60;
 
-//const CONCURRENCY = os.cpus().length * 2 ; 
-const CONCURRENCY = os.cpus().length - 1; 
-//const CONCURRENCY = 1; 
+const CONCURRENCY = process.env.CI
+  ? Math.max(1, os.cpus().length - 1)
+  : os.cpus().length - 1;
 
-import spans from './spans_provider.js'; // default import from CJS module
-const {
-    parseProof
-} = spans;
+// Load spans_provider.js (attaches symbols to globalThis/global)
+require('./spans_provider.js');
+const { parseProof } = global;
 
 function parse_test(testSource) {
     var expected_lines = new Map();
@@ -119,10 +118,20 @@ async function runDafnyAndAppendLog(srcFilePath) {
   child.stdout?.on("data", (b) => { stdout += b.toString(); });
   child.stderr?.on("data", (b) => { stderr += b.toString(); });
 
+  const timeoutMs = DAFNY_TIMEOUT_SEC * 1000;
   const exit = await new Promise((resolve) => {
-    child.on("error", (err) => resolve({ error: err }));
-    child.on("close", (code) => resolve({ code }));
+    let timedOut = false;
+    const timer = setTimeout(() => {
+      timedOut = true;
+      child.kill('SIGKILL');
+    }, timeoutMs);
+    child.on("error", (err) => { clearTimeout(timer); resolve({ error: err }); });
+    child.on("close", (code) => { clearTimeout(timer); resolve(timedOut ? { timedOut: true } : { code }); });
   });
+
+  if (exit.timedOut) {
+    return { ok: false, reason: "timeout" };
+  }
 
   const header = `\n===== dafny run for ${fileName} (${new Date().toISOString()}) =====\n`;
   const footer = `\n===== end dafny run for ${fileName} =====\n`;
@@ -165,6 +174,9 @@ async function runTest(srcFile) {
   // Run Dafny and create prover_log.txt by appending output
   const dafnyRes = await runDafnyAndAppendLog(srcFile);
   if (!dafnyRes.ok) {
+    if (dafnyRes.reason === "timeout") {
+      return { srcFile, status: "failed", reason: "timeout" };
+    }
     return { srcFile, status: "skipped", reason: "dafny_failed", dafnyRes };
   }
 
@@ -205,8 +217,8 @@ async function runTest(srcFile) {
 
   const lineStatus = (proofTest && proofTest.lineStatus) || [];
   try {
-    const  [ok, reason] = check_test(test_name, testExpectedOut, lineStatus); // assumed sync
-    return { srcFile, status: ok ? "passed" : "failed", test_name, reason : reason };
+    const  [ok, reason] = check_test(test_name, testExpectedOut, lineStatus);
+    return { srcFile, status: ok ? "passed" : "failed", test_name, reason, lineStatus };
   } catch (err) {
     return { srcFile, status: "error", reason: "check_test_exception", error: err };
   }
@@ -214,14 +226,33 @@ async function runTest(srcFile) {
 
 
 
+function isDafnyAvailable() {
+  const pathEnv = process.env.PATH || '';
+  const dirs = pathEnv.split(path.delimiter);
+  for (const dir of dirs) {
+    const candidate = path.join(dir, 'dafny');
+    try {
+      fs.accessSync(candidate, fs.constants.X_OK);
+      return true;
+    } catch (_) {}
+  }
+  return false;
+}
+
 async function runAllTests(opts = {}) {
   const testsRoot = opts.testsRoot || DEFAULT_TESTS_ROOT;
   console.log(`Searching for .dfy files under: ${testsRoot}`);
 
+  if (!isDafnyAvailable()) {
+    console.error('Dafny CLI not found in PATH');
+    process.exitCode = 2;
+    return { results: [], summary: { total: 0, passed: 0, failed: 0, skipped: 0, dafnyFailures: 0, errors: 0 } };
+  }
+
   if (!fs.existsSync(testsRoot)) {
     console.error(`Folder not found: ${testsRoot}`);
     process.exitCode = 2;
-    return;
+    return { results: [], summary: { total: 0, passed: 0, failed: 0, skipped: 0, dafnyFailures: 0, errors: 0 } };
   }
 
   const dfyFiles = findDfyFiles(testsRoot);
@@ -245,7 +276,13 @@ async function runAllTests(opts = {}) {
 
       // decide whether this test is expected to be a bug (optional)
       const isBug = srcFile.includes("bug_");
+      const startTime = performance.now();
       const res = await runTest(srcFile);
+      const duration = (performance.now() - startTime) / 1000;
+
+      if (res.reason === "timeout") {
+        res.status = "failed";
+      }
    
       if(res.status == "error" || 
           (isBug && res.status == "passed") ||
@@ -254,8 +291,7 @@ async function runAllTests(opts = {}) {
            console.error(`Test Failed: ${srcFile}. Reasons: ${res.reason}`)
       }
       
-
-      results.push({ srcFile, res, isBug });
+      results.push({ srcFile, res, isBug, duration, lineStatus: res.lineStatus || [] });
     }
   });
 
@@ -315,14 +351,6 @@ async function runAllTests(opts = {}) {
   return { results, summary: { total: dfyFiles.length, passed, failed, skipped, dafnyFailures, errors } };
 }
 
-
-  (async () => {
-    try {
-      await runAllTests();
-    } catch (err) {
-      console.error("Fatal error running tests:", err);
-      process.exitCode = 2;
-    }
-  })();
+export { runAllTests };
 
 

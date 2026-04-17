@@ -1,41 +1,112 @@
 # ProofPulse
 
-This project analyzes Dafny proof dependencies and coverage.
+Dafny proof dependency and coverage analysis tool. Runs Dafny verification on `.dfy` files, compares coverage status against expected annotations, and visualises results in a static web viewer.
 
-## Prerequisites
+## Quick start (Docker — recommended)
 
-- Node.js (tested with `v22`)
-- Dafny CLI available in `PATH` (`dafny` command)
-
-Optional (for the web viewer):
-- Python 3 (for a quick local static server)
-
-## Run all tests
-
-From the repository root:
+No local Dafny install needed. Docker bundles Node.js 22 + Dafny CLI.
 
 ```bash
-node src/test_logic.js
+# Build
+docker build -t proofpulse .
+
+# Run tests
+docker run --name pp-test proofpulse
+
+# Extract reports
+docker cp pp-test:/app/test-results ./test-results
+docker rm pp-test
 ```
 
-What this does:
-- Recursively finds `.dfy` files under `dataset/tests`
-- Runs Dafny verification per test file
-- Compares produced coverage status against expected inline test annotations
-
-If Dafny is not installed or not found in `PATH`, tests will be skipped with `dafny_failed`.
-
-## Run the viewer for one specific file
-
-The viewer expects these exact files inside `src`:
-- `src/source_code.dfy`
-- `src/prover_log.txt`
-
-## Shared verification command
-
-Use this exact command after the copy step:
+Analyse a local `.dfy` file via volume mount:
 
 ```bash
+docker run -v /path/to/file.dfy:/app/input.dfy proofpulse \
+  dafny verify /app/input.dfy --verification-coverage-report cov
+```
+
+## Local setup (without Docker)
+
+Requires Node.js 22+ and Dafny CLI in `PATH`.
+
+```bash
+npm install
+npm test
+```
+
+`npm test` runs the full test harness: discovers `.dfy` files under `dataset/tests`, verifies each with Dafny, compares coverage against inline annotations, then writes structured reports to `test-results/`.
+
+Exit codes: `0` = all pass, `1` = test failure, `2` = fatal error (e.g. Dafny not found).
+
+## npm scripts
+
+| Script | What it does |
+|---|---|
+| `npm test` | Full Dafny test suite + JUnit XML & coverage JSON reports |
+| `npm start` | Start the interactive coverage viewer server (port 8080) |
+| `npm run test:unit` | Property-based + unit tests for the report module |
+| `npm run test:server` | Unit tests for the backend server |
+| `npm run test:property` | Property-based tests for backend API correctness |
+| `npm run test:bundle` | Unit tests for the static viewer bundling script |
+
+## Test reports
+
+After `npm test` (or Docker run), find these in `test-results/`:
+
+- `junit.xml` — JUnit XML with one `<testcase>` per `.dfy` file (parseable by CI tools)
+- `coverage.json` — per-test coverage distribution (CovComplete/CovTest/Uncovered) + summary
+
+Override output paths via env vars:
+
+```bash
+JUNIT_REPORT_PATH=reports/junit.xml COVERAGE_REPORT_PATH=reports/cov.json npm test
+```
+
+## CI pipeline
+
+GitHub Actions (`.github/workflows/ci.yml`) runs on push/PR to `main`:
+
+1. Builds the Docker image
+2. Runs `npm test` inside the container
+3. Extracts JUnit XML + coverage JSON
+4. Uploads reports as artifacts
+5. Publishes test results as PR annotations via `dorny/test-reporter`
+
+Non-zero exit code fails the workflow — use as a required status check to gate merges.
+
+## Web viewer
+
+### Interactive mode (recommended)
+
+The viewer now ships with a built-in Node.js server that provides a test browser sidebar and interactive Dafny analysis — no manual file copying needed.
+
+```bash
+npm start
+# Open http://localhost:8080
+```
+
+Features:
+- Three-column layout: sidebar, editor, detail panel
+- **Browser mode** — lists all tests from `dataset/tests/`, click to load coverage
+- **Interactive mode** — paste any Dafny code, click "Run Coverage" to analyse on the fly
+- Backend runs `dafny verify` with coverage flags, returns results to the viewer
+- Toggle between modes with the Browser / Interactive buttons
+
+The server accepts a custom port and tests directory:
+
+```js
+// From code
+import { startServer } from './src/server.js';
+await startServer(3000, 'path/to/tests');
+```
+
+### Static setup (no server)
+
+```bash
+# 1. Copy your .dfy file
+cp path/to/your_file.dfy src/source_code.dfy
+
+# 2. Run Dafny verification
 dafny verify src/source_code.dfy \
   --verification-coverage-report cov \
   --log-format text \
@@ -43,91 +114,102 @@ dafny verify src/source_code.dfy \
   --bprint output.bpl \
   --isolate-assertions \
   > src/prover_log.txt
+
+# 3. Serve and open
+cd src && python3 -m http.server 8000
+# Open http://localhost:8000/index.html
 ```
 
-### 1) Put the target source file in place
+### Bundle script (local)
 
-Copy your Dafny file into:
+Package the viewer + pre-computed analysis into a self-contained static directory:
 
 ```bash
-cp path/to/your_file.dfy src/source_code.dfy
+./scripts/bundle-viewer.sh <dfy-file> <output-dir>
 ```
 
-### 3) Start the web UI
-
-Serve the `src` folder and open it in the browser:
+Example:
 
 ```bash
-cd src
-python3 -m http.server 8000
+./scripts/bundle-viewer.sh dataset/tests/test_assert_cov_complete/test_assert_cov_complete.dfy dist/viewer
+
+# Open the viewer
+cd dist/viewer && python3 -m http.server 8000
+# Then open http://localhost:8000/index.html
 ```
 
-## Demo and write-up references
+The script copies `index.html`, `app.js`, `styles.css`, `spans_provider.js`, the `.dfy` file (as `source_code.dfy`), and `prover_log.txt` from the same directory as the `.dfy` file.
 
-- Demo bundle index: [dataset/demo/README.md](dataset/demo/README.md)
-- Regular demo (small cases): [dataset/demo/_USECASE_demo_showcase_small_examples.dfy](dataset/demo/_USECASE_demo_showcase_small_examples.dfy)
-- Bugs and limitations demo: [dataset/demo/_USECASE_demo_bugs_limitations.dfy](dataset/demo/_USECASE_demo_bugs_limitations.dfy)
-- Verus-to-Dafny translation demo: [dataset/demo/_USECASE_verus_fib_pow_translation.dfy](dataset/demo/_USECASE_verus_fib_pow_translation.dfy)
-- Deep write-up bundle (source, generated files, and write-up): [dataset/demo/test_fully_use_postcondition/](dataset/demo/test_fully_use_postcondition/)
+### Bundle and view via Docker
 
-Then open:
-
-`http://localhost:8000/index.html`
-
-The UI loads `app.js`, reads `source_code.dfy` and `prover_log.txt`, and shows dependency/coverage information.
-
-## Ready-made demo file (multiple small cases)
-
-For presentations, you can use:
-
-- `dataset/demo/_USECASE_demo_showcase_small_examples.dfy`
-
-It includes small examples for:
-- A simple working case
-- Redundant code lines
-- No-contract case
-- Specification lines not using code
-- Irrelevant assertion
-
-Quick run in the viewer:
+You can run the bundle script and serve the viewer entirely from Docker — no local Dafny or Node needed:
 
 ```bash
-cp dataset/demo/_USECASE_demo_showcase_small_examples.dfy src/source_code.dfy
+# 1. Build the image (if not done already)
+docker build -t proofpulse .
+
+# 2. Bundle a test's viewer output to a local directory
+docker run --rm -v "$(pwd)/dist:/out" proofpulse \
+  bash -c './scripts/bundle-viewer.sh dataset/tests/test_assert_cov_complete/test_assert_cov_complete.dfy /out/viewer'
+
+# 3. Serve locally and open
+cd dist/viewer && python3 -m http.server 8000
+# Open http://localhost:8000/index.html
 ```
 
-Then run the shared verification command above and start the web UI.
-
-## Ready-made demo file (bugs and limitations)
-
-For a dedicated bugs/limitations presentation, use:
-
-- `dataset/demo/_USECASE_demo_bugs_limitations.dfy`
-
-This file groups:
-- Known bug-style behaviors (unsat core non-minimality, call/assignment mapping)
-- Known limitations (allocation traceability, no-contract signal, trivial specs)
-- A compact "main difficulties" section for your demo narrative
-
-Quick run in the viewer:
+Or serve directly from Docker:
 
 ```bash
-cp dataset/demo/_USECASE_demo_bugs_limitations.dfy src/source_code.dfy
+docker run --rm -p 8000:8000 -v "$(pwd)/dist/viewer:/srv" python:3-alpine \
+  python3 -m http.server 8000 --directory /srv
+# Open http://localhost:8000/index.html
 ```
 
-Then run the shared verification command above and start the web UI.
+If either `source_code.dfy` or `prover_log.txt` can't be loaded at runtime, the viewer shows a descriptive error indicating which file is missing.
 
-## Ready-made demo file (Verus translation)
+## Configuration
 
-For a cross-language proof demo, use:
+| Env var | Default | Description |
+|---|---|---|
+| `DAFNY_TIMEOUT_SEC` | `60` | Per-test Dafny verification timeout (seconds) |
+| `CI` | — | When set, concurrency scales to `max(1, cpus - 1)` |
+| `JUNIT_REPORT_PATH` | `test-results/junit.xml` | JUnit XML output path |
+| `COVERAGE_REPORT_PATH` | `test-results/coverage.json` | Coverage JSON output path |
 
-- `dataset/demo/_USECASE_verus_fib_pow_translation.dfy`
+## Bug tests
 
-This file shows a Dafny translation of the Verus Fibonacci/power proof, including recursive specs, monotonicity lemmas, the bounded Fibonacci proof, and the runtime loop that mirrors the original proof structure.
+Test directories prefixed with `bug_` use inverted pass/fail logic: Dafny verification failure = expected (pass), verification success = unexpected (fail). This is reflected correctly in both JUnit XML and coverage JSON reports.
 
-Quick run in the viewer:
+## Project structure
 
-```bash
-cp dataset/demo/_USECASE_verus_fib_pow_translation.dfy src/source_code.dfy
+```
+├── src/
+│   ├── cli.js              # Entry point (npm test)
+│   ├── test_logic.js       # Test harness (discovers + runs .dfy tests)
+│   ├── report.js           # JUnit XML + coverage JSON generation
+│   ├── report.test.js      # Property-based + unit tests
+│   ├── server.js            # Backend HTTP server (API + static files)
+│   ├── server.test.js       # Server unit + integration tests
+│   ├── server.property.test.js # Property-based tests (fast-check)
+│   ├── app.js              # Web viewer logic
+│   ├── index.html          # Web viewer page (three-column layout)
+│   ├── styles.css           # Web viewer styles
+│   └── spans_provider.js   # Coverage span parser
+├── scripts/
+│   ├── bundle-viewer.sh       # Static viewer bundler
+│   └── bundle-viewer.test.js  # Bundle script tests
+├── dataset/
+│   ├── tests/              # .dfy test files with expected annotations
+│   └── demo/               # Demo files for presentations
+├── Dockerfile
+├── .github/workflows/ci.yml
+└── package.json
 ```
 
-Then run the shared verification command above and start the web UI.
+## Demos
+
+- Small examples showcase: `dataset/demo/_USECASE_demo_showcase_small_examples.dfy`
+- Bugs and limitations: `dataset/demo/_USECASE_demo_bugs_limitations.dfy`
+- Verus-to-Dafny translation: `dataset/demo/_USECASE_verus_fib_pow_translation.dfy`
+- Deep write-up bundle: `dataset/demo/test_fully_use_postcondition/`
+- Demo index: [dataset/demo/README.md](dataset/demo/README.md)

@@ -173,7 +173,7 @@ datatype Point = Point(x: int, y: int)
 datatype Rectangle = Rectangle(p1: Point, p2: Point)
 
 predicate ValidRectangle(r: Rectangle) {
-  r.p1.x <= r.p2.x && r.p1.y <= r.p2.y
+  r.p1.x <= r.p2.x && r.p1.y <= r.p2.y &&  0 < r.p1.x < 1 && 0 < r.p1.y < 1 && 0 < r.p2.x < 1 && 0 < r.p2.y < 1
 }
 
 predicate PointInsideRectangle(p: Point, r: Rectangle) {
