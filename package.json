@@ -2,7 +2,7 @@
   "name": "proofpulse",
   "version": "0.1.0",
   "type": "module",
-  "workspaces": ["packages/*"],
+  "workspaces": ["packages/*", "evaluation"],
   "scripts": {
     "build:core": "tsc --project packages/core/tsconfig.json",
     "build:viewer": "node scripts/build-spans-provider.mjs",
