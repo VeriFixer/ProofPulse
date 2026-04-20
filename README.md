@@ -183,6 +183,62 @@ Shared TypeScript library used by both the VSCode extension and the web server.
 └── package.json            # Root workspace (workspaces: ["packages/*"])
 ```
 
+## Evaluation Benchmark
+
+Automated benchmark that classifies dafny-synthesis specs as strong/weak using ProofPulse coverage, then compares against the paper's manual oracle.
+
+### Setup
+
+```bash
+# Clone the dafny-synthesis dataset (if not already a submodule)
+git clone https://github.com/Mondego/dafny-synthesis.git
+
+# Install dependencies
+npm install
+npm run build:core
+```
+
+### Run benchmark
+
+```bash
+npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all
+```
+
+### Options
+
+| Flag | Default | Description |
+|---|---|---|
+| `--repo-root <path>` | `dafny-synthesis` | Path to dafny-synthesis repo |
+| `--dafny-path <path>` | `dafny` | Dafny binary |
+| `--timeout <seconds>` | `60` | Per-file verification timeout |
+| `--output <path>` | `benchmark-results.json` | JSON results output |
+| `--dataset <id>` | `RQ3-GPT4` | Dataset: RQ1-GPT4, RQ1-PaLM2, RQ2-GPT4, RQ2-PaLM2, RQ3-GPT4, RQ3-PaLM2, or `all` |
+| `--concurrency <n>` | cpus-1 | Number of parallel Dafny workers (disabled with --verbose) |
+| `--interactive` | off | Step-by-step mode with keypress pause |
+| `--verbose` | off | Print source code, coverage, and oracle for each file (forces sequential) |
+
+### Reproduce paper table (oracle only, no Dafny needed)
+
+```bash
+npx tsx evaluation/src/paper-table.ts --repo-root dafny-synthesis
+```
+
+### Run on all datasets
+
+```bash
+npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all
+```
+
+### Run tests
+
+```bash
+npm test -w evaluation
+```
+
+### Output
+
+Produces a confusion matrix (strong/weak predicted vs oracle) with precision, recall, F1, and accuracy. Results are also written to the JSON output file.
+
 ## Demos
 
 - Small examples: `dataset/demo/_USECASE_demo_showcase_small_examples.dfy`

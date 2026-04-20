@@ -17,3 +17,7 @@ src/spans_provider.js
 
 # Test results
 test-results/
+
+# Evaluation temp files
+.eval-tmp/
+benchmark-results*.json
