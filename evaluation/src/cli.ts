@@ -102,7 +102,7 @@ async function main() {
       concurrency: opts.concurrency,
     });
 
-    const table = formatTable(results.confusionMatrix, results.metrics);
+    const table = formatTable(results.confusionMatrix, results.metrics, results.results);
     console.log("\n" + table);
     console.log(
       `\nSummary: ${results.summary.processed} processed, ${results.summary.errors} errors, ${results.summary.skipped} skipped out of ${results.summary.total} total`

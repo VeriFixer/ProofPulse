@@ -1,89 +1,85 @@
 import { describe, it, expect } from "vitest";
-import { classifySpec } from "../classifier";
+import { classifyPostcondition, classifyPrecondition, classifyInvariant, classifySpec } from "../classifier.js";
 import { TokenType, CovStatus, type NodeData } from "@proofpulse/core";
 
-function makeNode(
-  type: TokenType,
-  covStatus: CovStatus,
-  line = 1
-): NodeData {
+function makeNode(type: TokenType, covStatus: CovStatus, line = 1, prooftext = ""): NodeData {
   return {
-    id: `node-${line}`,
-    file: "test.dfy",
-    start: { line, col: 0 },
-    end: { line, col: 10 },
-    prooftext: "",
-    isTopAssertion: false,
-    type,
-    covStatus,
-    covStatusInternal: covStatus,
+    id: `node-${line}`, file: "test.dfy",
+    start: { line, col: 0 }, end: { line, col: 10 },
+    prooftext, isTopAssertion: false, type, covStatus, covStatusInternal: covStatus,
   };
 }
 
-describe("classifySpec", () => {
-  it("returns weak for empty nodes", () => {
-    expect(classifySpec([])).toBe("weak");
+describe("classifyPostcondition", () => {
+  it("none when no postconditions", () => {
+    expect(classifyPostcondition([makeNode(TokenType.CodeLine, CovStatus.CovComplete)])).toBe("none");
   });
-
-  it("returns weak when no postconditions exist", () => {
-    const nodes = [makeNode(TokenType.CodeLine, CovStatus.CovComplete)];
-    expect(classifySpec(nodes)).toBe("weak");
-  });
-
-  it("returns strong when postconditions covered and body complete", () => {
-    const nodes = [
+  it("strong when post covered and body complete", () => {
+    expect(classifyPostcondition([
       makeNode(TokenType.Postcondition, CovStatus.CovComplete, 1),
       makeNode(TokenType.CodeLine, CovStatus.CovComplete, 2),
-    ];
-    expect(classifySpec(nodes)).toBe("strong");
+    ])).toBe("strong");
   });
-
-  it("returns strong when postcondition has CovTest", () => {
-    const nodes = [
-      makeNode(TokenType.Postcondition, CovStatus.CovTest, 1),
-      makeNode(TokenType.CodeLine, CovStatus.CovComplete, 2),
-    ];
-    expect(classifySpec(nodes)).toBe("strong");
-  });
-
-  it("returns weak when postcondition is uncovered", () => {
-    const nodes = [
+  it("weak when post uncovered", () => {
+    expect(classifyPostcondition([
       makeNode(TokenType.Postcondition, CovStatus.Uncovered, 1),
       makeNode(TokenType.CodeLine, CovStatus.CovComplete, 2),
-    ];
-    expect(classifySpec(nodes)).toBe("weak");
+    ])).toBe("weak");
   });
-
-  it("returns weak when body node is not CovComplete", () => {
-    const nodes = [
-      makeNode(TokenType.Postcondition, CovStatus.CovComplete, 1),
-      makeNode(TokenType.CodeLine, CovStatus.CovTest, 2),
-    ];
-    expect(classifySpec(nodes)).toBe("weak");
-  });
-
-  it("returns weak when body node is uncovered", () => {
-    const nodes = [
-      makeNode(TokenType.Postcondition, CovStatus.CovComplete, 1),
-      makeNode(TokenType.CodeLine, CovStatus.Uncovered, 2),
-    ];
-    expect(classifySpec(nodes)).toBe("weak");
-  });
-
-  it("ignores non-postcondition/codeline node types", () => {
-    const nodes = [
+  it("ignores precondition coverage", () => {
+    expect(classifyPostcondition([
       makeNode(TokenType.Postcondition, CovStatus.CovComplete, 1),
       makeNode(TokenType.Precondition, CovStatus.Uncovered, 2),
-      makeNode(TokenType.AssertionManual, CovStatus.Uncovered, 3),
-    ];
-    // No body nodes, postcondition covered → strong
-    expect(classifySpec(nodes)).toBe("strong");
+    ])).toBe("strong");
   });
+});
 
-  it("returns strong with no body nodes but postconditions covered", () => {
-    const nodes = [
-      makeNode(TokenType.Postcondition, CovStatus.CovTest, 1),
-    ];
-    expect(classifySpec(nodes)).toBe("strong");
+describe("classifyPrecondition", () => {
+  it("none when no preconditions", () => {
+    expect(classifyPrecondition([])).toBe("none");
+  });
+  it("required when all covered", () => {
+    expect(classifyPrecondition([
+      makeNode(TokenType.Precondition, CovStatus.CovComplete, 1),
+    ])).toBe("required");
+  });
+  it("optional when any uncovered", () => {
+    expect(classifyPrecondition([
+      makeNode(TokenType.Precondition, CovStatus.CovComplete, 1),
+      makeNode(TokenType.Precondition, CovStatus.Uncovered, 2),
+    ])).toBe("optional");
+  });
+  it("optional when all uncovered", () => {
+    expect(classifyPrecondition([
+      makeNode(TokenType.Precondition, CovStatus.Uncovered, 1),
+    ])).toBe("optional");
+  });
+});
+
+describe("classifyInvariant", () => {
+  it("none when no invariants", () => {
+    expect(classifyInvariant([])).toBe("none");
+  });
+  it("strong when all invariant nodes covered", () => {
+    expect(classifyInvariant([
+      makeNode(TokenType.CodeLine, CovStatus.CovComplete, 1, "loop invariant always holds"),
+    ])).toBe("strong");
+  });
+  it("weak when any invariant uncovered", () => {
+    expect(classifyInvariant([
+      makeNode(TokenType.CodeLine, CovStatus.CovComplete, 1, "loop invariant always holds"),
+      makeNode(TokenType.CodeLine, CovStatus.Uncovered, 2, "loop invariant always holds"),
+    ])).toBe("weak");
+  });
+});
+
+describe("classifySpec (overall)", () => {
+  it("strong when postcondition strong", () => {
+    expect(classifySpec([
+      makeNode(TokenType.Postcondition, CovStatus.CovComplete, 1),
+    ])).toBe("strong");
+  });
+  it("weak when no postconditions", () => {
+    expect(classifySpec([])).toBe("weak");
   });
 });

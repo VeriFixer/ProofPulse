@@ -13,7 +13,7 @@ describe("parseOracle", () => {
     for (const entry of entries) {
       expect(entry.taskId).toBeTruthy();
       expect(entry.filePath).toBeTruthy();
-      expect(["strong", "weak"]).toContain(entry.label);
+      expect(["strong", "weak", "wrong"]).toContain(entry.label);
       expect(path.isAbsolute(entry.filePath)).toBe(true);
       expect(fs.existsSync(entry.filePath)).toBe(true);
     }

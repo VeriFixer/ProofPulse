@@ -9,11 +9,11 @@ export interface OracleLabels {
 
 export interface OracleEntry {
   taskId: string;
-  filePath: string;         // path to .dfy file (may be temp-written from inline code)
-  label: "strong" | "weak"; // overall postcondition label (strong vs weak/wrong)
+  filePath: string;
+  label: "strong" | "weak" | "wrong";
   labels: OracleLabels;
-  dataset: string;          // e.g. "RQ1-GPT4", "RQ3-PaLM2"
-  dafnyCode: string;        // inline code from JSON
+  dataset: string;
+  dafnyCode: string;
 }
 
 export type DatasetId =
@@ -58,9 +58,10 @@ export function extractLabels(note: string): OracleLabels {
   return labels;
 }
 
-function overallLabel(labels: OracleLabels): "strong" | "weak" | null {
+function overallLabel(labels: OracleLabels): "strong" | "weak" | "wrong" | null {
   if (labels.postcondition === "strong") return "strong";
-  if (labels.postcondition === "weak" || labels.postcondition === "wrong") return "weak";
+  if (labels.postcondition === "weak") return "weak";
+  if (labels.postcondition === "wrong") return "wrong";
   return null;
 }
 

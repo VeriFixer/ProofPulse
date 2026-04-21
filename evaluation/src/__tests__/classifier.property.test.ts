@@ -1,88 +1,68 @@
 import { describe, it, expect } from "vitest";
 import fc from "fast-check";
-import { classifySpec } from "../classifier.js";
-import {
-  TokenType,
-  CovStatus,
-  type NodeData,
-  type SourceLocation,
-} from "@proofpulse/core";
+import { classifyPostcondition, classifyPrecondition, classifyInvariant } from "../classifier.js";
+import { TokenType, CovStatus, type NodeData, type SourceLocation } from "@proofpulse/core";
 
-/**
- * Feature: dafny-synthesis-benchmark, Property 2: Classification correctness
- * Validates: Requirements 3.2, 3.3, 3.5
- */
-
-const allTokenTypes = [
-  TokenType.Undefined,
-  TokenType.Precondition,
-  TokenType.Postcondition,
-  TokenType.AssertionManual,
-  TokenType.AssertionAutomatic,
-  TokenType.CodeLine,
-] as const;
-
-const allCovStatuses = [
-  CovStatus.CovComplete,
-  CovStatus.CovTest,
-  CovStatus.Uncovered,
-] as const;
+const allTokenTypes = Object.values(TokenType);
+const allCovStatuses = Object.values(CovStatus);
 
 const arbTokenType = fc.constantFrom(...allTokenTypes);
 const arbCovStatus = fc.constantFrom(...allCovStatuses);
-
-const arbSourceLocation: fc.Arbitrary<SourceLocation> = fc.record({
-  line: fc.nat({ max: 1000 }),
-  col: fc.nat({ max: 200 }),
-});
+const arbSourceLocation: fc.Arbitrary<SourceLocation> = fc.record({ line: fc.nat({ max: 1000 }), col: fc.nat({ max: 200 }) });
 
 const arbNodeData: fc.Arbitrary<NodeData> = fc.record({
   id: fc.string({ minLength: 1, maxLength: 10 }),
-  file: fc.string({ minLength: 1, maxLength: 20 }),
-  start: arbSourceLocation,
-  end: arbSourceLocation,
-  prooftext: fc.string({ maxLength: 50 }),
+  file: fc.constant("test.dfy"),
+  start: arbSourceLocation, end: arbSourceLocation,
+  prooftext: fc.constantFrom("", "loop invariant always holds", "this postcondition holds"),
   isTopAssertion: fc.boolean(),
   type: arbTokenType,
   covStatus: arbCovStatus,
   covStatusInternal: arbCovStatus,
 });
 
-function expectedClassification(nodes: NodeData[]): "strong" | "weak" {
-  const postconditions = nodes.filter(
-    (n) => n.type === TokenType.Postcondition
-  );
-  const bodyNodes = nodes.filter((n) => n.type === TokenType.CodeLine);
-
-  if (postconditions.length === 0) return "weak";
-
-  const allPostCovered = postconditions.every(
-    (n) =>
-      n.covStatus === CovStatus.CovComplete ||
-      n.covStatus === CovStatus.CovTest
-  );
-  if (!allPostCovered) return "weak";
-
-  const allBodyComplete = bodyNodes.every(
-    (n) => n.covStatus === CovStatus.CovComplete
-  );
-  if (!allBodyComplete) return "weak";
-
-  return "strong";
-}
+function isInv(n: NodeData) { return n.prooftext.includes("loop invariant"); }
 
 describe("Property 2: Classification correctness", () => {
-  it("classifySpec matches strong/weak definition for any NodeData[]", () => {
-    fc.assert(
-      fc.property(
-        fc.array(arbNodeData, { minLength: 0, maxLength: 20 }),
-        (nodes) => {
-          const result = classifySpec(nodes);
-          const expected = expectedClassification(nodes);
-          expect(result).toBe(expected);
-        }
-      ),
-      { numRuns: 100 }
-    );
+  it("classifyPostcondition matches definition", () => {
+    fc.assert(fc.property(
+      fc.array(arbNodeData, { minLength: 0, maxLength: 20 }),
+      (nodes) => {
+        const posts = nodes.filter((n) => n.type === TokenType.Postcondition);
+        const body = nodes.filter((n) => n.type === TokenType.CodeLine && !isInv(n));
+        const result = classifyPostcondition(nodes);
+
+        if (posts.length === 0) { expect(result).toBe("none"); return; }
+        const allPostCov = posts.every((n) => n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest);
+        const allBodyCov = body.every((n) => n.covStatus === CovStatus.CovComplete);
+        expect(result).toBe(allPostCov && allBodyCov ? "strong" : "weak");
+      }
+    ), { numRuns: 100 });
+  });
+
+  it("classifyPrecondition matches definition", () => {
+    fc.assert(fc.property(
+      fc.array(arbNodeData, { minLength: 0, maxLength: 20 }),
+      (nodes) => {
+        const pres = nodes.filter((n) => n.type === TokenType.Precondition);
+        const result = classifyPrecondition(nodes);
+        if (pres.length === 0) { expect(result).toBe("none"); return; }
+        const anyUncov = pres.some((n) => n.covStatus === CovStatus.Uncovered);
+        expect(result).toBe(anyUncov ? "optional" : "required");
+      }
+    ), { numRuns: 100 });
+  });
+
+  it("classifyInvariant matches definition", () => {
+    fc.assert(fc.property(
+      fc.array(arbNodeData, { minLength: 0, maxLength: 20 }),
+      (nodes) => {
+        const invs = nodes.filter((n) => isInv(n));
+        const result = classifyInvariant(nodes);
+        if (invs.length === 0) { expect(result).toBe("none"); return; }
+        const allCov = invs.every((n) => n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest);
+        expect(result).toBe(allCov ? "strong" : "weak");
+      }
+    ), { numRuns: 100 });
   });
 });

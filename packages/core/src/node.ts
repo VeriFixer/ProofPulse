@@ -50,7 +50,7 @@ export class Node {
       this.type = TokenType.Postcondition;
     } else if (this.prooftext.includes("ensures clause")) {
       this.type = TokenType.Postcondition;
-    } else if (this.prooftext.includes("method requires clause")) {
+    } else if (this.prooftext.includes("requires clause")) {
       this.type = TokenType.Precondition;
     } else if (this.prooftext.includes("assertion always holds")) {
       this.type = TokenType.AssertionManual;

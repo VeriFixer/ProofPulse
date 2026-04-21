@@ -10,11 +10,16 @@ import {
 import { parseOracle, type DatasetId, type OracleEntry } from "./oracle-parser.js";
 import {
   classifySpec,
+  classifyAll,
   type ClassificationResult,
+  type CategoryClassification,
 } from "./classifier.js";
 import {
   computeConfusionMatrix,
   computeMetrics,
+  computeCategoryTables,
+  formatTable,
+  formatCategoryTables,
   type ConfusionMatrix,
   type Metrics,
 } from "./reporter.js";
@@ -37,12 +42,19 @@ export interface BenchmarkResults {
   summary: { total: number; processed: number; errors: number; skipped: number };
 }
 
+function isInvariantNode(n: NodeData): boolean {
+  return n.prooftext.includes("loop invariant");
+}
+
 async function processEntry(
   entry: OracleEntry,
   options: BenchmarkOptions,
 ): Promise<ClassificationResult> {
   let classification: "strong" | "weak" | "error";
+  let categories: CategoryClassification = { postcondition: "none", precondition: "none", invariant: "none" };
   let postconditionLines: number[] = [];
+  let preconditionLines: number[] = [];
+  let invariantLines: number[] = [];
   let bodyLines: number[] = [];
   let coverageStatuses: Record<number, CovStatus> = {};
   let errorMsg: string | undefined;
@@ -62,12 +74,19 @@ async function processEntry(
       const nodes = proof.proofGraph.getAllNodes();
 
       classification = classifySpec(nodes as NodeData[]);
+      categories = classifyAll(nodes as NodeData[]);
 
       postconditionLines = nodes
         .filter((n) => n.type === TokenType.Postcondition)
         .map((n) => n.start.line);
+      preconditionLines = nodes
+        .filter((n) => n.type === TokenType.Precondition)
+        .map((n) => n.start.line);
+      invariantLines = nodes
+        .filter((n) => isInvariantNode(n))
+        .map((n) => n.start.line);
       bodyLines = nodes
-        .filter((n) => n.type === TokenType.CodeLine)
+        .filter((n) => n.type === TokenType.CodeLine && !isInvariantNode(n))
         .map((n) => n.start.line);
       for (const n of nodes) {
         coverageStatuses[n.start.line] = n.covStatus;
@@ -82,8 +101,11 @@ async function processEntry(
     taskId: entry.taskId,
     filePath: entry.filePath,
     classification,
+    categories,
     oracleLabel: entry.label,
     postconditionLines,
+    preconditionLines,
+    invariantLines,
     bodyLines,
     coverageStatuses,
     ...(errorMsg ? { error: errorMsg } : {}),
@@ -97,7 +119,6 @@ export async function runBenchmark(
   const entries = parseOracle(options.repoRoot, options.dataset);
   const total = entries.length;
 
-  // Parallel disabled when verbose or interactive (need ordered output)
   const useParallel = !options.verbose && !options.interactive;
   const concurrency = useParallel
     ? (options.concurrency ?? Math.max(1, os.cpus().length - 1))
@@ -116,6 +137,10 @@ export async function runBenchmark(
   const confusionMatrix = computeConfusionMatrix(results);
   const metrics = computeMetrics(confusionMatrix);
   const processed = results.filter((r) => r.classification !== "error").length;
+
+  // Print per-category tables
+  const catTables = computeCategoryTables(results, entries);
+  console.log(formatCategoryTables(catTables));
 
   const benchmarkResults: BenchmarkResults = {
     results,
@@ -151,7 +176,7 @@ async function runParallel(
 
   const workers = Array.from({ length: Math.min(concurrency, entries.length) }, () => worker());
   await Promise.all(workers);
-  console.log(""); // newline after progress
+  console.log("");
   return results;
 }
 
@@ -173,32 +198,12 @@ async function runSequential(
       console.log(`\n${"═".repeat(60)}`);
       console.log(`Task: ${entry.taskId} | File: ${entry.filePath}`);
       console.log(`${"─".repeat(60)}`);
-      try {
-        const src = fs.readFileSync(entry.filePath, "utf-8");
-        console.log(src);
-      } catch { /* skip */ }
+      try { console.log(fs.readFileSync(entry.filePath, "utf-8")); } catch {}
       console.log(`${"─".repeat(60)}`);
-      console.log(`Coverage classification: ${result.classification}`);
-      console.log(`Oracle label:            ${entry.label}`);
-      const catParts: string[] = [];
-      if (entry.labels.postcondition) catParts.push(`post=${entry.labels.postcondition}`);
-      if (entry.labels.invariant) catParts.push(`inv=${entry.labels.invariant}`);
-      if (entry.labels.precondition) catParts.push(`pre=${entry.labels.precondition}`);
-      if (catParts.length > 0)
-        console.log(`Oracle categories:       ${catParts.join(", ")}`);
-      console.log(`Match:                   ${result.classification === entry.label ? "PASS ✓" : "FAIL ✗"}`);
-      if (result.error) console.log(`Error:                   ${result.error}`);
-      if (result.postconditionLines.length > 0)
-        console.log(`Postcondition lines:     ${result.postconditionLines.join(", ")}`);
-      if (result.bodyLines.length > 0)
-        console.log(`Body lines:              ${result.bodyLines.join(", ")}`);
-      if (Object.keys(result.coverageStatuses).length > 0) {
-        const uncovered = Object.entries(result.coverageStatuses)
-          .filter(([, s]) => s !== CovStatus.CovComplete)
-          .map(([l, s]) => `L${l}:${s}`);
-        if (uncovered.length > 0)
-          console.log(`Non-complete lines:      ${uncovered.join(", ")}`);
-      }
+      console.log(`Coverage post=${result.categories.postcondition} pre=${result.categories.precondition} inv=${result.categories.invariant}`);
+      console.log(`Oracle   post=${entry.labels.postcondition ?? "-"} pre=${entry.labels.precondition ?? "-"} inv=${entry.labels.invariant ?? "-"}`);
+      console.log(`Overall: coverage=${result.classification} oracle=${entry.label} ${result.classification === entry.label ? "PASS ✓" : "FAIL ✗"}`);
+      if (result.error) console.log(`Error: ${result.error}`);
       console.log(`${"═".repeat(60)}\n`);
     }
 
@@ -212,7 +217,7 @@ async function runSequential(
           oracleLabel: entry.label,
           pass: result.classification === entry.label,
         });
-      } catch { /* skip */ }
+      } catch {}
     }
   }
 
