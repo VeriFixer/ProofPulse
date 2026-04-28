@@ -24,6 +24,34 @@ import {
   type Metrics,
 } from "./reporter.js";
 
+export interface ComparisonEntry {
+  taskId: string;
+  baselineClassification: string;
+  minimizedClassification: string;
+  changed: boolean;
+  baselineDurationMs: number;
+  minimizedDurationMs: number;
+}
+
+export interface TestComparisonEntry {
+  srcFile: string;
+  baselineStatus: string;
+  minimizedStatus: string;
+  changed: boolean;
+}
+
+export interface ComparisonResults {
+  entries: ComparisonEntry[];
+  changedResults: number;
+  totalEntries: number;
+  addedTimeMs: number;
+  slowdownFactor: number;
+  baselineTotalMs: number;
+  minimizedTotalMs: number;
+  testComparison: TestComparisonEntry[];
+  testChangedCount: number;
+}
+
 export interface BenchmarkOptions {
   dafnyPath?: string;
   timeoutSeconds?: number;
@@ -33,6 +61,8 @@ export interface BenchmarkOptions {
   verbose?: boolean;
   dataset?: DatasetId;
   concurrency?: number;
+  forceMinimization?: boolean;
+  compareMinimization?: boolean;
 }
 
 export interface BenchmarkResults {
@@ -46,10 +76,15 @@ function isInvariantNode(n: NodeData): boolean {
   return n.prooftext.includes("loop invariant");
 }
 
+interface TimedClassificationResult extends ClassificationResult {
+  durationMs: number;
+}
+
 async function processEntry(
   entry: OracleEntry,
   options: BenchmarkOptions,
-): Promise<ClassificationResult> {
+): Promise<TimedClassificationResult> {
+  const startMs = Date.now();
   let classification: "strong" | "weak" | "error";
   let categories: CategoryClassification = { postcondition: "none", precondition: "none", invariant: "none" };
   let postconditionLines: number[] = [];
@@ -63,6 +98,7 @@ async function processEntry(
     const dafnyResult = await runDafny(entry.filePath, {
       dafnyPath: options.dafnyPath,
       timeoutSeconds: options.timeoutSeconds,
+      forceMinimization: options.forceMinimization,
     });
 
     if (dafnyResult.error || dafnyResult.timedOut) {
@@ -97,6 +133,7 @@ async function processEntry(
     errorMsg = (err as Error).message;
   }
 
+  const durationMs = Date.now() - startMs;
   return {
     taskId: entry.taskId,
     filePath: entry.filePath,
@@ -108,6 +145,7 @@ async function processEntry(
     invariantLines,
     bodyLines,
     coverageStatuses,
+    durationMs,
     ...(errorMsg ? { error: errorMsg } : {}),
   };
 }
@@ -124,7 +162,88 @@ export async function runBenchmark(
     ? (options.concurrency ?? Math.max(1, os.cpus().length - 1))
     : 1;
 
-  let results: ClassificationResult[];
+  if (options.compareMinimization) {
+    // Run baseline (no minimization)
+    const baselineOpts = { ...options, forceMinimization: false, compareMinimization: false };
+    const baselineResults = await runEntries(entries, baselineOpts, concurrency, "baseline");
+
+    // Run minimized
+    const minimizedOpts = { ...options, forceMinimization: true, compareMinimization: false };
+    const minimizedResults = await runEntries(entries, minimizedOpts, concurrency, "minimized");
+
+    // Build comparison entries
+    const comparisonEntries: ComparisonEntry[] = baselineResults.map((b, i) => {
+      const m = minimizedResults[i];
+      return {
+        taskId: b.taskId,
+        baselineClassification: b.classification,
+        minimizedClassification: m.classification,
+        changed: b.classification !== m.classification,
+        baselineDurationMs: b.durationMs,
+        minimizedDurationMs: m.durationMs,
+      };
+    });
+
+    const changedResults = comparisonEntries.filter((e) => e.changed).length;
+    const baselineTotalMs = comparisonEntries.reduce((s, e) => s + e.baselineDurationMs, 0);
+    const minimizedTotalMs = comparisonEntries.reduce((s, e) => s + e.minimizedDurationMs, 0);
+    const addedTimeMs = minimizedTotalMs - baselineTotalMs;
+    const slowdownFactor = baselineTotalMs === 0 ? 0 : minimizedTotalMs / baselineTotalMs;
+
+    const comparisonResults: ComparisonResults = {
+      entries: comparisonEntries,
+      changedResults,
+      totalEntries: comparisonEntries.length,
+      addedTimeMs,
+      slowdownFactor,
+      baselineTotalMs,
+      minimizedTotalMs,
+      testComparison: [],
+      testChangedCount: 0,
+    };
+
+    // Run test suite comparison
+    try {
+      const { runAllTests } = await import("../../src/test_logic.js");
+
+      console.log("Running test suite (baseline)...");
+      const baselineTests = await runAllTests({ forceMinimization: false });
+      console.log("Running test suite (minimized)...");
+      const minimizedTests = await runAllTests({ forceMinimization: true });
+
+      if (baselineTests?.results && minimizedTests?.results) {
+        const baselineMap = new Map<string, string>();
+        for (const r of baselineTests.results) {
+          baselineMap.set(r.srcFile, r.res?.status ?? "unknown");
+        }
+
+        for (const m of minimizedTests.results) {
+          const bStatus = baselineMap.get(m.srcFile) ?? "missing";
+          const mStatus = m.res?.status ?? "unknown";
+          const changed = bStatus !== mStatus;
+          comparisonResults.testComparison.push({
+            srcFile: m.srcFile,
+            baselineStatus: bStatus,
+            minimizedStatus: mStatus,
+            changed,
+          });
+        }
+        comparisonResults.testChangedCount = comparisonResults.testComparison.filter((t) => t.changed).length;
+      }
+    } catch (err) {
+      console.warn(`Test suite comparison skipped: ${(err as Error).message}`);
+    }
+
+    // Write comparison results to separate file
+    const comparisonPath = outputPath.replace(/\.json$/, "-comparison.json");
+    fs.writeFileSync(comparisonPath, JSON.stringify(comparisonResults, null, 2));
+    console.log(`Comparison results written to ${comparisonPath}`);
+
+    // Return baseline results as the normal output
+    return buildBenchmarkResults(baselineResults, entries, outputPath);
+  }
+
+  let results: TimedClassificationResult[];
 
   if (concurrency > 1) {
     console.log(`Running ${total} entries with concurrency=${concurrency}...`);
@@ -133,12 +252,37 @@ export async function runBenchmark(
     results = await runSequential(entries, options);
   }
 
+  return buildBenchmarkResults(results, entries, outputPath);
+}
+
+export function computeComparisonMetrics(
+  baselineClassifications: string[],
+  minimizedClassifications: string[],
+  baselineDurations: number[],
+  minimizedDurations: number[],
+): { changedResults: number; addedTimeMs: number; slowdownFactor: number; baselineTotalMs: number; minimizedTotalMs: number } {
+  let changedResults = 0;
+  for (let i = 0; i < baselineClassifications.length; i++) {
+    if (baselineClassifications[i] !== minimizedClassifications[i]) changedResults++;
+  }
+  const baselineTotalMs = baselineDurations.reduce((s, d) => s + d, 0);
+  const minimizedTotalMs = minimizedDurations.reduce((s, d) => s + d, 0);
+  const addedTimeMs = minimizedTotalMs - baselineTotalMs;
+  const slowdownFactor = baselineTotalMs === 0 ? 0 : minimizedTotalMs / baselineTotalMs;
+  return { changedResults, addedTimeMs, slowdownFactor, baselineTotalMs, minimizedTotalMs };
+}
+
+function buildBenchmarkResults(
+  results: TimedClassificationResult[],
+  entries: OracleEntry[],
+  outputPath: string,
+): BenchmarkResults {
+  const total = entries.length;
   const errors = results.filter((r) => r.classification === "error").length;
   const confusionMatrix = computeConfusionMatrix(results);
   const metrics = computeMetrics(confusionMatrix);
   const processed = results.filter((r) => r.classification !== "error").length;
 
-  // Print per-category tables
   const catTables = computeCategoryTables(results, entries);
   console.log(formatCategoryTables(catTables));
 
@@ -155,12 +299,25 @@ export async function runBenchmark(
   return benchmarkResults;
 }
 
+async function runEntries(
+  entries: OracleEntry[],
+  options: BenchmarkOptions,
+  concurrency: number,
+  label: string,
+): Promise<TimedClassificationResult[]> {
+  console.log(`Running ${entries.length} entries (${label})...`);
+  if (concurrency > 1) {
+    return runParallel(entries, options, concurrency);
+  }
+  return runSequential(entries, options);
+}
+
 async function runParallel(
   entries: OracleEntry[],
   options: BenchmarkOptions,
   concurrency: number,
-): Promise<ClassificationResult[]> {
-  const results: ClassificationResult[] = new Array(entries.length);
+): Promise<TimedClassificationResult[]> {
+  const results: TimedClassificationResult[] = new Array(entries.length);
   let completed = 0;
   let idx = 0;
 
@@ -183,9 +340,9 @@ async function runParallel(
 async function runSequential(
   entries: OracleEntry[],
   options: BenchmarkOptions,
-): Promise<ClassificationResult[]> {
+): Promise<TimedClassificationResult[]> {
   const total = entries.length;
-  const results: ClassificationResult[] = [];
+  const results: TimedClassificationResult[] = [];
 
   for (let i = 0; i < entries.length; i++) {
     const entry = entries[i];

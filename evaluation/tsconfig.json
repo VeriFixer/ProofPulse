@@ -9,7 +9,7 @@
     "outDir": "dist",
     "rootDir": "src",
     "paths": {
-      "@proofpulse/core": ["../packages/core/src/index.ts"]
+      "@proofpulse/core": ["../core/src/index.ts"]
     }
   },
   "include": ["src"]

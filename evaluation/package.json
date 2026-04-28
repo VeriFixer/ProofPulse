@@ -8,7 +8,7 @@
     "bench": "tsx src/cli.ts"
   },
   "dependencies": {
-    "@proofpulse/core": "workspace:*"
+    "@proofpulse/core": "*"
   },
   "devDependencies": {
     "fast-check": "^3.23.2",

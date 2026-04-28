@@ -4,11 +4,15 @@ import path from "path";
 export default defineConfig({
   resolve: {
     alias: {
-      "@proofpulse/core": path.resolve(__dirname, "../packages/core/src/index.ts"),
+      "@proofpulse/core": path.resolve(__dirname, "../core/src/index.ts"),
     },
   },
   test: {
-    root: __dirname,
-    include: ["src/**/*.test.ts"],
+    root: path.resolve(__dirname, ".."),
+    include: [
+      "tests/unit/evaluation/**/*.test.ts",
+      "tests/property/evaluation/**/*.test.ts",
+      "tests/integration/evaluation/**/*.test.ts",
+    ],
   },
 });

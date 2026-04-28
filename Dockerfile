@@ -15,13 +15,13 @@ RUN wget -q "https://github.com/dafny-lang/dafny/releases/download/v${DAFNY_VERS
 
 WORKDIR /app
 COPY package.json ./
-COPY packages/core/package.json ./packages/core/
-COPY packages/core/tsconfig.json ./packages/core/
-COPY packages/core/src/ ./packages/core/src/
-COPY packages/vscode-extension/package.json ./packages/vscode-extension/
+COPY core/package.json ./core/
+COPY core/tsconfig.json ./core/
+COPY core/src/ ./core/src/
+COPY vscode_extension/package.json ./vscode_extension/
 RUN npm install --ignore-scripts
-RUN npm run build -w packages/core
-COPY src/ ./src/
+RUN npm run build -w core
+COPY web_viewer/ ./web_viewer/
 COPY dataset/ ./dataset/
 
 CMD ["npm", "test"]

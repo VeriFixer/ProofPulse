@@ -1,0 +1,246 @@
+:root {
+  --bg: #000000;
+  --panel: #171717;
+  --text: #ffffff;
+  --light-blue: #7fd2ff; /* uncovered */
+  --dark-blue: #022054;  /* covered-complete */
+  --median-blue: #405e8d; /* covered-test */
+  --muted: #4e5865;
+  --red : #ff0000;
+  --purple: #ee00ff;
+  --yellow: #fffb00;
+  --gutter-width: 56px; /* enough for 4 digits + padding */
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #071027 0%, #081428 100%);
+  color: var(--text);
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  gap: 12px;
+  padding: 12px;
+  box-sizing: border-box
+}
+
+/* Left editor area */
+.editor {
+  flex: 1;
+  background: var(--panel);
+  border-radius: 10px;
+  padding: 18px;
+  overflow: auto;
+  position: relative
+}
+
+.editor h2 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: var(--light-blue)
+}
+
+/* Source area: each logical line becomes a block */
+#source {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", monospace;
+  color: var(--text);
+  line-height: 1;
+  font-size: 13px;
+  margin: 0;
+  padding: 0px 0;
+}
+
+.line {
+  display: block;
+  position: relative;
+  padding-left: var(--gutter-width);
+  box-sizing: border-box;
+  min-height: 10px;
+  white-space: pre-wrap;
+  line-height: 1;
+}
+
+/* the left gutter that also acts as the colored mark and holds the 4-digit line number */
+.lnum {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--gutter-width);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  box-sizing: border-box;
+  font-family: ui-monospace, "Roboto Mono", monospace;
+  color: var(--text);
+  border-radius: 6px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* map statuses to gutter backgrounds (server-provided data-status on .line) */
+.line[data-status="CovComplete"] > .lnum {
+  background: var(--dark-blue);
+}
+
+.line[data-status="CovTest"] > .lnum {
+  background: var(--median-blue);
+}
+
+.line[data-status="Uncovered"] > .lnum {
+  background: var(--red);
+  color: #022054; /* dark text for readability on light bg */
+}
+
+/* tokens */
+.token {
+  position: relative;
+  display: inline-block;
+  padding: 0 0px;
+  margin: 0 0px;
+  border-radius: 4px;
+  line-height: 1.2; 
+  cursor: pointer;
+  color: rgba(64, 202, 252, 1);
+}
+
+.token:focus {
+  outline: 2px solid rgba(94, 164, 250, 0.06)
+}
+
+/* disable per-token pseudo bar (we now have one per line) */
+.token::before {
+  display: none !important;
+}
+
+.token[data-istop="true"] {
+  text-decoration-color: var(--light-blue);
+  text-decoration-thickness: 4px;
+  color: var(--purple)
+}
+
+/* uncovered underline (still useful to emphasize token-level uncovered) */
+.token[data-status="uncovered"] {
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 2px
+}
+
+.token[data-status="covered-test"] {
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-decoration-thickness: 2px
+}
+
+
+/* selected token */
+.token.selected {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.75)
+}
+
+.token.related {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25)
+}
+
+/* little badge when justification exists */
+.token .badge {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 11px;
+  color: var(--muted)
+}
+
+/* Right panel */
+.panel {
+  width: 520px;
+  background: linear-gradient(180deg, #071426, #0a1830);
+  border-radius: 10px;
+  padding: 18px;
+  box-sizing: border-box;
+  overflow: auto
+}
+
+.panel h3 {
+  margin-top: 0
+}
+
+.deps {
+  margin-top: 8px
+}
+
+.deps .group {
+  margin-bottom: 12px
+}
+
+.deps ul {
+  padding-left: 18px
+}
+
+/* actions */
+.btn {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text)
+}
+
+.btn.small {
+  padding: 4px 8px;
+  font-size: 12px
+}
+
+/* inline comment display */
+.comment {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 8px;
+  border-radius: 6px
+}
+
+/* hint */
+.hint {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px
+}
+
+/* simple graph list styling */
+.graph-node {
+  padding: 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.02);
+  margin: 6px 0
+}
+
+.graph-node .title {
+  font-weight: 600
+}
+
+.graph-node .meta {
+  font-size: 12px;
+  color: var(--muted)
+}
+
+/* small responsive tweaks */
+@media (max-width:900px) {
+  .panel {
+    width: 360px
+  }
+}
+
+

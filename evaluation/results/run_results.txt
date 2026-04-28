@@ -1,0 +1,560 @@
+dafny-synthesis --dataset all
+
+════════════════════════════════════════════════════════════
+Running benchmark: RQ1-GPT4
+════════════════════════════════════════════════════════════
+[oracle-parser] Skipping RQ1-GPT4/task_3: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_19: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_20: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_56: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_66: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_69: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_72: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_79: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_85: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_93: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_113: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_138: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_139: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_143: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_167: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_170: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_234: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_238: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_240: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_242: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_251: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_257: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_262: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_268: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_269: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_279: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_281: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_284: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_295: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_394: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_396: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_399: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_401: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_415: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_430: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_455: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_554: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_555: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_557: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_565: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_591: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_618: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_628: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_747: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_750: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_769: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_792: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_801: no postcondition tag
+[oracle-parser] Skipping RQ1-GPT4/task_808: no postcondition tag
+Running 56 entries with concurrency=15...
+[56/56] completed
+
+Per-Category Results (ProofPulse vs Oracle)
+════════════════════════════════════════════════════════════
+
+Postconditions (positive=Strong, excl. oracle=wrong) (56 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                          36        34
+  Weak                            20        15
+  Wrong (excl.)                    0         7
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive       22        10
+    Pred Negative       12         5
+  Precision: 0.6875  Recall: 0.6471  F1: 0.6667  Acc: 0.5510
+
+Preconditions (positive=Required) (41 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Required                        18        19
+  Optional                        23        22
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive       18         0
+    Pred Negative        1        22
+  Precision: 1.0000  Recall: 0.9474  F1: 0.9730  Acc: 0.9756
+
+Invariants (positive=Strong) (22 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                          14        10
+  Weak/Wrong                       8        12
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive        9         5
+    Pred Negative        1         7
+  Precision: 0.6429  Recall: 0.9000  F1: 0.7500  Acc: 0.7273
+Results written to benchmark-results-RQ1-GPT4.json
+
+Confusion Matrix (Overall Postcondition, excl. oracle=wrong)
+─────────────────────────────────
+                 Oracle Strong  Oracle Weak
+  Pred Strong        22             10
+  Pred Weak          12              5
+
+Oracle=Wrong (excluded, 7 entries):
+  ProofPulse said strong: 4  weak: 3
+
+Metrics
+─────────────────────────────────
+  Precision:  0.6875
+  Recall:     0.6471
+  F1:         0.6667
+  Accuracy:   0.5510
+
+Summary: 56 processed, 0 errors, 0 skipped out of 56 total
+
+════════════════════════════════════════════════════════════
+Running benchmark: RQ1-PaLM2
+════════════════════════════════════════════════════════════
+[oracle-parser] Skipping RQ1-PaLM2/task_2: no postcondition tag
+[oracle-parser] Skipping RQ1-PaLM2/task_161: no postcondition tag
+Running 0 entries with concurrency=15...
+
+
+Per-Category Results (ProofPulse vs Oracle)
+════════════════════════════════════════════════════════════
+
+Postconditions (positive=Strong, excl. oracle=wrong) (0 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                           0         0
+  Weak                             0         0
+  Wrong (excl.)                    0         0
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive        0         0
+    Pred Negative        0         0
+  Precision: 0.0000  Recall: 0.0000  F1: 0.0000  Acc: 0.0000
+
+Preconditions (positive=Required) (0 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Required                         0         0
+  Optional                         0         0
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive        0         0
+    Pred Negative        0         0
+  Precision: 0.0000  Recall: 0.0000  F1: 0.0000  Acc: 0.0000
+
+Invariants (positive=Strong) (0 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                           0         0
+  Weak/Wrong                       0         0
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive        0         0
+    Pred Negative        0         0
+  Precision: 0.0000  Recall: 0.0000  F1: 0.0000  Acc: 0.0000
+Results written to benchmark-results-RQ1-PaLM2.json
+
+Confusion Matrix (Overall Postcondition, excl. oracle=wrong)
+─────────────────────────────────
+                 Oracle Strong  Oracle Weak
+  Pred Strong         0              0
+  Pred Weak           0              0
+
+Metrics
+─────────────────────────────────
+  Precision:  0.0000
+  Recall:     0.0000
+  F1:         0.0000
+  Accuracy:   0.0000
+
+Summary: 0 processed, 0 errors, 0 skipped out of 0 total
+
+════════════════════════════════════════════════════════════
+Running benchmark: RQ2-GPT4
+════════════════════════════════════════════════════════════
+[oracle-parser] Skipping RQ2-GPT4/task_3: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_7: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_56: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_72: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_80: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_82: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_85: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_86: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_89: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_106: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_119: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_133: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_135: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_143: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_170: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_171: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_234: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_257: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_262: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_268: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_269: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_270: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_279: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_282: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_284: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_291: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_295: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_304: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_307: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_308: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_309: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_388: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_394: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_399: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_405: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_406: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_414: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_415: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_420: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_426: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_430: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_436: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_439: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_450: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_452: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_455: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_461: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_476: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_562: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_565: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_574: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_577: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_578: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_587: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_591: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_598: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_604: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_606: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_626: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_637: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_641: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_750: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_763: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_777: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_790: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_799: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_801: no postcondition tag
+[oracle-parser] Skipping RQ2-GPT4/task_808: no postcondition tag
+Running 30 entries with concurrency=15...
+[30/30] completed
+
+Per-Category Results (ProofPulse vs Oracle)
+════════════════════════════════════════════════════════════
+
+Postconditions (positive=Strong, excl. oracle=wrong) (30 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                          18        17
+  Weak                            12        10
+  Wrong (excl.)                    0         3
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive       11         5
+    Pred Negative        6         5
+  Precision: 0.6875  Recall: 0.6471  F1: 0.6667  Acc: 0.5926
+
+Preconditions (positive=Required) (21 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Required                         9        10
+  Optional                        12        11
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive        9         0
+    Pred Negative        1        11
+  Precision: 1.0000  Recall: 0.9000  F1: 0.9474  Acc: 0.9524
+
+Invariants (positive=Strong) (14 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                           8         5
+  Weak/Wrong                       6         9
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive        4         4
+    Pred Negative        1         5
+  Precision: 0.5000  Recall: 0.8000  F1: 0.6154  Acc: 0.6429
+Results written to benchmark-results-RQ2-GPT4.json
+
+Confusion Matrix (Overall Postcondition, excl. oracle=wrong)
+─────────────────────────────────
+                 Oracle Strong  Oracle Weak
+  Pred Strong        11              5
+  Pred Weak           6              5
+
+Oracle=Wrong (excluded, 3 entries):
+  ProofPulse said strong: 2  weak: 1
+
+Metrics
+─────────────────────────────────
+  Precision:  0.6875
+  Recall:     0.6471
+  F1:         0.6667
+  Accuracy:   0.5926
+
+Summary: 30 processed, 0 errors, 0 skipped out of 30 total
+
+════════════════════════════════════════════════════════════
+Running benchmark: RQ2-PaLM2
+════════════════════════════════════════════════════════════
+[oracle-parser] Skipping RQ2-PaLM2/task_17: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_20: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_68: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_80: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_171: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_234: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_257: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_264: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_266: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_270: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_284: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_395: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_428: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_456: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_458: no postcondition tag
+[oracle-parser] Skipping RQ2-PaLM2/task_751: no postcondition tag
+Running 0 entries with concurrency=15...
+
+
+Per-Category Results (ProofPulse vs Oracle)
+════════════════════════════════════════════════════════════
+
+Postconditions (positive=Strong, excl. oracle=wrong) (0 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                           0         0
+  Weak                             0         0
+  Wrong (excl.)                    0         0
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive        0         0
+    Pred Negative        0         0
+  Precision: 0.0000  Recall: 0.0000  F1: 0.0000  Acc: 0.0000
+
+Preconditions (positive=Required) (0 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Required                         0         0
+  Optional                         0         0
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive        0         0
+    Pred Negative        0         0
+  Precision: 0.0000  Recall: 0.0000  F1: 0.0000  Acc: 0.0000
+
+Invariants (positive=Strong) (0 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                           0         0
+  Weak/Wrong                       0         0
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive        0         0
+    Pred Negative        0         0
+  Precision: 0.0000  Recall: 0.0000  F1: 0.0000  Acc: 0.0000
+Results written to benchmark-results-RQ2-PaLM2.json
+
+Confusion Matrix (Overall Postcondition, excl. oracle=wrong)
+─────────────────────────────────
+                 Oracle Strong  Oracle Weak
+  Pred Strong         0              0
+  Pred Weak           0              0
+
+Metrics
+─────────────────────────────────
+  Precision:  0.0000
+  Recall:     0.0000
+  F1:         0.0000
+  Accuracy:   0.0000
+
+Summary: 0 processed, 0 errors, 0 skipped out of 0 total
+
+════════════════════════════════════════════════════════════
+Running benchmark: RQ3-GPT4
+════════════════════════════════════════════════════════════
+[oracle-parser] Skipping RQ3-GPT4/task_57: no postcondition tag
+[oracle-parser] Skipping RQ3-GPT4/task_747: no postcondition tag
+Running 114 entries with concurrency=15...
+[114/114] completed
+
+Per-Category Results (ProofPulse vs Oracle)
+════════════════════════════════════════════════════════════
+
+Postconditions (positive=Strong, excl. oracle=wrong) (114 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                          60       103
+  Weak                            54         3
+  Wrong (excl.)                    0         8
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive       56         0
+    Pred Negative       47         3
+  Precision: 1.0000  Recall: 0.5437  F1: 0.7044  Acc: 0.5566
+
+Preconditions (positive=Required) (74 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Required                        22        36
+  Optional                        52        38
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive       22         0
+    Pred Negative       14        38
+  Precision: 1.0000  Recall: 0.6111  F1: 0.7586  Acc: 0.8108
+
+Invariants (positive=Strong) (53 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                          12        51
+  Weak/Wrong                      41         2
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive       12         0
+    Pred Negative       39         2
+  Precision: 1.0000  Recall: 0.2353  F1: 0.3810  Acc: 0.2642
+Results written to benchmark-results-RQ3-GPT4.json
+
+Confusion Matrix (Overall Postcondition, excl. oracle=wrong)
+─────────────────────────────────
+                 Oracle Strong  Oracle Weak
+  Pred Strong        56              0
+  Pred Weak          47              3
+
+Oracle=Wrong (excluded, 8 entries):
+  ProofPulse said strong: 4  weak: 4
+
+Metrics
+─────────────────────────────────
+  Precision:  1.0000
+  Recall:     0.5437
+  F1:         0.7044
+  Accuracy:   0.5566
+
+Summary: 114 processed, 0 errors, 0 skipped out of 114 total
+
+════════════════════════════════════════════════════════════
+Running benchmark: RQ3-PaLM2
+════════════════════════════════════════════════════════════
+[oracle-parser] Skipping RQ3-PaLM2/task_639: no postcondition tag
+[oracle-parser] Skipping RQ3-PaLM2/task_747: no postcondition tag
+Running 52 entries with concurrency=15...
+[52/52] completed
+
+Per-Category Results (ProofPulse vs Oracle)
+════════════════════════════════════════════════════════════
+
+Postconditions (positive=Strong, excl. oracle=wrong) (52 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                          39        35
+  Weak                            13         3
+  Wrong (excl.)                    0        14
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive       24         3
+    Pred Negative       11         0
+  Precision: 0.8889  Recall: 0.6857  F1: 0.7742  Acc: 0.6316
+
+Preconditions (positive=Required) (35 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Required                         5         6
+  Optional                        30        29
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive        4         1
+    Pred Negative        2        28
+  Precision: 0.8000  Recall: 0.6667  F1: 0.7273  Acc: 0.9143
+
+Invariants (positive=Strong) (13 entries)
+────────────────────────────────────────────────────────────
+  Category                ProofPulse    Oracle
+  ────────────────────────────────────────────
+  Strong                           2        13
+  Weak/Wrong                      11         0
+  None (no nodes)                  0         0
+
+  Confusion Matrix:
+                   Positive  Negative
+    Pred Positive        2         0
+    Pred Negative       11         0
+  Precision: 1.0000  Recall: 0.1538  F1: 0.2667  Acc: 0.1538
+Results written to benchmark-results-RQ3-PaLM2.json
+
+Confusion Matrix (Overall Postcondition, excl. oracle=wrong)
+─────────────────────────────────
+                 Oracle Strong  Oracle Weak
+  Pred Strong        24              3
+  Pred Weak          11              0
+
+Oracle=Wrong (excluded, 14 entries):
+  ProofPulse said strong: 12  weak: 2
+
+Metrics
+─────────────────────────────────
+  Precision:  0.8889
+  Recall:     0.6857
+  F1:         0.7742
+  Accuracy:   0.6316
+
+Summary: 52 processed, 0 errors, 0 skipped out of 52 total

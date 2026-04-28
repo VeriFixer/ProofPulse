@@ -114,4 +114,5 @@ method LimitationAllocation(a: array<int>) returns (c: array<int>)
 {
   c := new int[a.Length];
   c[0] := a[0] + 1;
+  assert(2==2);
 }

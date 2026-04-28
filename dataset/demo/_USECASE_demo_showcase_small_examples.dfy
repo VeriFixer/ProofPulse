@@ -18,11 +18,11 @@ method DemoRedundantLine(x: int) returns (y: int)
   ensures x < 0 ==> x + y == 0
 {
   if x == 0 {
-    y := 0; // Redundant for the final proof obligations in this method.
+    y := 0;  // Redundant for the final proof obligations in this method.
   }
 
   if x < 0 {
-    y := -x;
+    y := -x ;
   } else {
     y := IdDemo(x);
   }
@@ -31,7 +31,7 @@ method DemoRedundantLine(x: int) returns (y: int)
 // 3) No contracts: code lines are expected to be signaled as not contributing to contracts.
 method DemoNoContracts(x: int) returns (y: int)
 {
-  var tmp := x + 1;
+  var tmp := x + 2;
   y := tmp - 1;
 }
 

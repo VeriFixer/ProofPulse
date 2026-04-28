@@ -13,6 +13,8 @@ interface CliArgs {
   verbose: boolean;
   dataset: DatasetId | "all";
   concurrency?: number;
+  forceMinimization: boolean;
+  compareMinimization: boolean;
 }
 
 function parseArgs(argv: string[]): CliArgs {
@@ -21,10 +23,12 @@ function parseArgs(argv: string[]): CliArgs {
     repoRoot: "dafny-synthesis",
     dafnyPath: "dafny",
     timeout: 60,
-    output: "benchmark-results.json",
+    output: "evaluation/results/benchmark-results.json",
     interactive: false,
     verbose: false,
     dataset: "RQ3-GPT4",
+    forceMinimization: false,
+    compareMinimization: false,
   };
 
   for (let i = 0; i < args.length; i++) {
@@ -52,6 +56,12 @@ function parseArgs(argv: string[]): CliArgs {
         break;
       case "--concurrency":
         opts.concurrency = parseInt(args[++i], 10);
+        break;
+      case "--force-core-minimization":
+        opts.forceMinimization = true;
+        break;
+      case "--compare-minimization":
+        opts.compareMinimization = true;
         break;
     }
   }
@@ -91,6 +101,11 @@ async function main() {
       ? opts.output.replace(".json", `-${dsId}.json`)
       : opts.output;
 
+    const outputDir = path.dirname(outputFile);
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+
     const results = await runBenchmark({
       repoRoot,
       dafnyPath: opts.dafnyPath,
@@ -100,6 +115,8 @@ async function main() {
       verbose: opts.verbose,
       dataset: dsId,
       concurrency: opts.concurrency,
+      forceMinimization: opts.forceMinimization,
+      compareMinimization: opts.compareMinimization,
     });
 
     const table = formatTable(results.confusionMatrix, results.metrics, results.results);

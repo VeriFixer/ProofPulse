@@ -7,13 +7,13 @@ dataset/tests/*/prover_log.txt
 node_modules/
 
 # Build outputs
-packages/core/dist/
-packages/core/*.tsbuildinfo
-packages/vscode-extension/dist/
-packages/vscode-extension/*.vsix
+core/dist/
+core/*.tsbuildinfo
+vscode_extension/dist/
+vscode_extension/*.vsix
 
 # Bundled browser file (built from core)
-src/spans_provider.js
+web_viewer/spans_provider.js
 
 # Test results
 test-results/
