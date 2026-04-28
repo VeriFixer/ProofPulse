@@ -92,9 +92,10 @@ export function startServer(port = 8080, coverageData = null) {
  * Compute coverage for a .dfy file. Validates path, runs dafny, reads source.
  * Returns coverage data object or throws with { status, body } for HTTP errors.
  * @param {string} filePath
+ * @param {{ dafnyPath?: string, timeoutSeconds?: number, forceMinimization?: boolean }} [options]
  * @returns {Promise<{ source: string, log: string, error?: string, exitCode?: number }>}
  */
-export async function computeCoverage(filePath) {
+export async function computeCoverage(filePath, options) {
   const resolved = resolve(filePath);
 
   if (!existsSync(resolved)) {
@@ -115,7 +116,7 @@ export async function computeCoverage(filePath) {
 
   let result;
   try {
-    result = await runDafny(resolved);
+    result = await runDafny(resolved, options);
   } catch {
     const err = new Error('dafny not available');
     err.httpStatus = 500;
@@ -145,27 +146,47 @@ export async function computeCoverage(filePath) {
 }
 
 /**
- * Parse --file argument from argv.
+ * Parse CLI arguments from argv.
+ * Supports: --file <path> --dafny-path <path> --timeout <sec> --force-minimization
  * @param {string[]} argv
- * @returns {string|null}
+ * @returns {{ file: string|null, dafnyPath?: string, timeout?: number, forceMinimization?: boolean }}
  */
-function parseFileArg(argv) {
-  const idx = argv.indexOf('--file');
-  if (idx === -1 || idx + 1 >= argv.length) return null;
-  return argv[idx + 1];
+function parseCLIArgs(argv) {
+  const result = { file: null, dafnyPath: undefined, timeout: undefined, forceMinimization: undefined };
+  for (let i = 0; i < argv.length; i++) {
+    switch (argv[i]) {
+      case '--file':
+        result.file = argv[++i] ?? null;
+        break;
+      case '--dafny-path':
+        result.dafnyPath = argv[++i];
+        break;
+      case '--timeout':
+        result.timeout = Number(argv[++i]);
+        break;
+      case '--force-minimization':
+        result.forceMinimization = true;
+        break;
+    }
+  }
+  return result;
 }
 
 // Run directly
 const isMain = process.argv[1] && resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url));
 if (isMain) {
-  const filePath = parseFileArg(process.argv);
-  if (!filePath) {
-    process.stderr.write('Usage: node server.js --file <path.dfy>\n');
+  const args = parseCLIArgs(process.argv);
+  if (!args.file) {
+    process.stderr.write('Usage: node server.js --file <path.dfy> [--dafny-path <path>] [--timeout <sec>] [--force-minimization]\n');
     process.exit(1);
   }
 
   try {
-    const coverageData = await computeCoverage(filePath);
+    const coverageData = await computeCoverage(args.file, {
+      dafnyPath: args.dafnyPath,
+      timeoutSeconds: args.timeout,
+      forceMinimization: args.forceMinimization,
+    });
     await startServer(0, coverageData);
   } catch (err) {
     if (err.httpStatus) {

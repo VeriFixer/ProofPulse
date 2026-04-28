@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
+# Thin shell wrapper that invokes the Python interactive z3 proxy.
+# Required env vars:
+#   PROOFPULSE_Z3_PATH  — path to real z3 binary
+# Optional:
+#   PROOFPULSE_WRAPPER_LOG — path to debug log file
+
 set -euo pipefail
 
-if [ -z "${PROOFPULSE_Z3_PATH:-}" ]; then
-  echo "error: PROOFPULSE_Z3_PATH not set" >&2; exit 2
-fi
-if [ -z "${PROOFPULSE_MINIMIZER_SCRIPT:-}" ]; then
-  echo "error: PROOFPULSE_MINIMIZER_SCRIPT not set" >&2; exit 2
-fi
-
-TMPFILE=$(mktemp /tmp/z3-minimize-XXXXXX.smt2)
-trap 'rm -f "$TMPFILE"' EXIT
-cat > "$TMPFILE"
-python3 "$PROOFPULSE_MINIMIZER_SCRIPT" "$TMPFILE" --z3 "$PROOFPULSE_Z3_PATH" --quiet
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+exec python3 "$SCRIPT_DIR/z3-minimizer-wrapper.py" "$@"

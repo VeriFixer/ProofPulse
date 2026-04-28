@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bug_assigment_never_covered")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acc84e2ad436065da38794a8b1631b6b09cc0de8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53966fa3f06895424cc0d72184ec14eeb7e5b560")]
 [assembly: System.Reflection.AssemblyProductAttribute("bug_assigment_never_covered")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bug_assigment_never_covered")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

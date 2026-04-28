@@ -2,11 +2,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clover_abs", "tmp\Clover_abs.csproj", "{71D29DA4-0E81-1249-EFB3-23D686F000FE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tmp", "tmp", "{673F7596-2BC2-664D-6776-E4576D2AFEE0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dataset", "dataset", "{82CE6C79-4995-14E3-CF4B-C99550C1A4B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clover_abs", "dataset\debugging_coverage\Clover_abs.csproj", "{D89F8C18-80F1-0718-6343-58F1B10644AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clover_abs", "tmp\Clover_abs.csproj", "{71D29DA4-0E81-1249-EFB3-23D686F000FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A7FA90E9-A26A-E598-46E2-A7BF822124B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bug_assigment_never_covered", "dataset\tests\bug_assigment_never_covered\bug_assigment_never_covered.csproj", "{B519C113-9461-2649-4897-045963D9B314}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,18 +22,20 @@ Global
 		{71D29DA4-0E81-1249-EFB3-23D686F000FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71D29DA4-0E81-1249-EFB3-23D686F000FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71D29DA4-0E81-1249-EFB3-23D686F000FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D89F8C18-80F1-0718-6343-58F1B10644AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D89F8C18-80F1-0718-6343-58F1B10644AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D89F8C18-80F1-0718-6343-58F1B10644AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D89F8C18-80F1-0718-6343-58F1B10644AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B519C113-9461-2649-4897-045963D9B314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B519C113-9461-2649-4897-045963D9B314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B519C113-9461-2649-4897-045963D9B314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B519C113-9461-2649-4897-045963D9B314}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D89F8C18-80F1-0718-6343-58F1B10644AD} = {82CE6C79-4995-14E3-CF4B-C99550C1A4B0}
+		{71D29DA4-0E81-1249-EFB3-23D686F000FE} = {673F7596-2BC2-664D-6776-E4576D2AFEE0}
+		{A7FA90E9-A26A-E598-46E2-A7BF822124B3} = {82CE6C79-4995-14E3-CF4B-C99550C1A4B0}
+		{B519C113-9461-2649-4897-045963D9B314} = {A7FA90E9-A26A-E598-46E2-A7BF822124B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4773268E-CCE8-41C5-91A2-44544C694A14}
+		SolutionGuid = {5474AFF6-2335-4250-989A-35A4241A74EC}
 	EndGlobalSection
 EndGlobal

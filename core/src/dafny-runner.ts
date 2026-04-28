@@ -1,11 +1,38 @@
 import { spawn } from "node:child_process";
-import { existsSync } from "node:fs";
-import { mkdtemp, readFile, rm } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { existsSync, readdirSync } from "node:fs";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { dirname, join, resolve } from "node:path";
 import { tmpdir } from "node:os";
 import type { DafnyOptions, DafnyResult } from "./types.js";
 
 const DEFAULT_TIMEOUT_SEC = 60;
+
+/**
+ * Resolve the z3 binary bundled inside a Dafny installation.
+ * Dafny ships z3 at <dafny_dir>/z3/bin/z3-<version>.
+ * Falls back to "z3" on PATH.
+ */
+function resolveZ3Path(dafnyPath: string): string {
+  try {
+    // Resolve symlinks / bare names via which-style lookup isn't needed —
+    // if dafnyPath is absolute we can find z3 next to it.
+    const dafnyDir = dirname(dafnyPath);
+    const z3BinDir = join(dafnyDir, "z3", "bin");
+    if (existsSync(z3BinDir)) {
+      const entries = readdirSync(z3BinDir)
+        .filter((f) => f.startsWith("z3"))
+        .sort()
+        .reverse(); // prefer latest version
+      if (entries.length > 0) {
+        const candidate = join(z3BinDir, entries[0]);
+        if (existsSync(candidate)) return candidate;
+      }
+    }
+  } catch {
+    // fall through
+  }
+  return "z3";
+}
 
 export async function runDafny(
   filePath: string,
@@ -14,37 +41,12 @@ export async function runDafny(
   const dafnyBin = options?.dafnyPath ?? "dafny";
   const timeoutSec = options?.timeoutSeconds ?? DEFAULT_TIMEOUT_SEC;
 
-  // Create temp dir, we run dafny there so coverage/log artifacts stay isolated
+  // Create temp dir — dafny writes coverage/log artifacts here
   let tmpDir: string;
   try {
     tmpDir = await mkdtemp(join(tmpdir(), "proofpulse-"));
   } catch (err) {
     return { log: "", exitCode: -1, error: `failed to create temp dir: ${(err as Error).message}` };
-  }
-
-  let boogieValue =
-    "/proverOpt:O:smt.core.minimize=true /proverOpt:O:sat.core.minimize=true /proverOpt:C:proof=true";
-
-  let spawnEnv: Record<string, string> | undefined;
-
-  if (options?.forceMinimization) {
-    // When bundled: extension.js (__dirname=dist/) or server.js (__dirname=dist/web_viewer/)
-    // Scripts live at dist/scripts/ — try sibling first, then parent
-    const scriptsDir = existsSync(resolve(__dirname, 'scripts'))
-      ? resolve(__dirname, 'scripts')
-      : resolve(__dirname, '..', 'scripts');
-    const wrapperPath = join(scriptsDir, 'z3-minimizer-wrapper.sh');
-    const minimizerPath = join(scriptsDir, 'minimize_unsat_core_trace.py');
-
-    if (!existsSync(wrapperPath)) {
-      return { log: "", exitCode: -1, error: `z3-minimizer-wrapper.sh not found at ${wrapperPath}` };
-    }
-
-    boogieValue += ` /z3exe:${wrapperPath}`;
-    spawnEnv = {
-      PROOFPULSE_Z3_PATH: options.dafnyPath ?? "z3",
-      PROOFPULSE_MINIMIZER_SCRIPT: minimizerPath,
-    };
   }
 
   const args = [
@@ -55,19 +57,73 @@ export async function runDafny(
     "--isolate-assertions",
     "--allow-warnings", "true",
     "--verification-time-limit", String(timeoutSec),
-    "--boogie",
-    boogieValue,
+    "--boogie", "/proverOpt:O:smt.core.minimize=true",
+    "--boogie", "/proverOpt:O:sat.core.minimize=true",
   ];
+
+  let spawnEnv: Record<string, string> | undefined;
+
+  if (options?.forceMinimization) {
+    // Locate scripts directory (bundled at dist/scripts/)
+    const scriptsDir = existsSync(resolve(__dirname, "scripts"))
+      ? resolve(__dirname, "scripts")
+      : resolve(__dirname, "..", "scripts");
+    const wrapperPath = join(scriptsDir, "z3-minimizer-wrapper.sh");
+
+    if (!existsSync(wrapperPath)) {
+      return { log: "", exitCode: -1, error: `z3-minimizer-wrapper.sh not found at ${wrapperPath}` };
+    }
+
+    const z3Path = resolveZ3Path(dafnyBin);
+    const wrapperLog = join(tmpDir, "wrapper.log");
+
+    // --solver-path tells Dafny/Boogie to use our wrapper instead of z3
+    args.push("--solver-path", wrapperPath);
+
+    spawnEnv = {
+      PROOFPULSE_Z3_PATH: z3Path,
+      PROOFPULSE_WRAPPER_LOG: wrapperLog,
+    };
+
+    // Log resolved paths for debugging
+    const debugInfo = [
+      `dafnyBin: ${dafnyBin}`,
+      `z3Path: ${z3Path}`,
+      `wrapperPath: ${wrapperPath}`,
+      `scriptsDir: ${scriptsDir}`,
+    ].join("\n");
+    await writeFile(join(tmpDir, "debug_info.txt"), debugInfo, "utf8").catch(() => {});
+  }
 
   try {
     const result = await spawnDafny(dafnyBin, args, tmpDir, timeoutSec, spawnEnv);
 
+    // Build debug context for error messages
+    let debugContext = "";
+    if (options?.forceMinimization) {
+      try {
+        const wrapperLog = await readFile(join(tmpDir, "wrapper.log"), "utf8").catch(() => "");
+        if (wrapperLog) {
+          debugContext = `\n--- wrapper log ---\n${wrapperLog.slice(-1000)}`;
+        }
+      } catch { /* ignore */ }
+    }
+
     if (result.error) {
-      return { log: "", exitCode: -1, error: result.error };
+      return { log: "", exitCode: -1, error: `${result.error}${debugContext}` };
     }
 
     if (result.timedOut) {
-      return { log: "", exitCode: -1, timedOut: true };
+      return { log: "", exitCode: -1, timedOut: true, error: debugContext ? `timed out${debugContext}` : undefined };
+    }
+
+    // Non-zero exit with stderr → surface the error
+    if (result.exitCode !== 0 && result.stderr) {
+      return {
+        log: "",
+        exitCode: result.exitCode ?? -1,
+        error: `dafny exited ${result.exitCode}: ${result.stderr.slice(0, 500)}${debugContext}`,
+      };
     }
 
     // Read prover_log.txt produced by dafny
@@ -88,6 +144,7 @@ export async function runDafny(
 interface SpawnResult {
   exitCode?: number;
   stdout?: string;
+  stderr?: string;
   timedOut?: boolean;
   error?: string;
 }
@@ -132,7 +189,7 @@ function spawnDafny(
         if (timedOut) {
           resolve({ timedOut: true });
         } else {
-          resolve({ exitCode: code ?? -1, stdout });
+          resolve({ exitCode: code ?? -1, stdout, stderr: stderr || undefined });
         }
       }
     });

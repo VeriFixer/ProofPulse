@@ -13,7 +13,7 @@ export function getRunOnSave(): boolean {
 }
 
 export function getForceMinimization(): boolean {
-  return vscode.workspace.getConfiguration("proofpulse").get<boolean>("forceMinimization", false);
+  return vscode.workspace.getConfiguration("proofpulse").get<boolean>("forceMinimization", true);
 }
 
 export function getDecorationOpacity(): number {

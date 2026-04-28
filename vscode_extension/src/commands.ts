@@ -3,29 +3,67 @@ import { runDafny, parseProof } from "@proofpulse/core";
 import { getDafnyPath, getDecorationOpacity, getForceMinimization, getTimeout } from "./config";
 import { applyDecorations } from "./decorations";
 
+let outputChannel: vscode.OutputChannel | undefined;
+
+function getOutputChannel(): vscode.OutputChannel {
+  if (!outputChannel) {
+    outputChannel = vscode.window.createOutputChannel("ProofPulse");
+  }
+  return outputChannel;
+}
+
+function logInfo(msg: string): void {
+  const ch = getOutputChannel();
+  ch.appendLine(`[${new Date().toISOString()}] ${msg}`);
+}
+
 export async function runAnalysis(editor: vscode.TextEditor, context: vscode.ExtensionContext): Promise<void> {
   const filePath = editor.document.fileName;
   const sourceCode = editor.document.getText();
+  const forceMin = getForceMinimization();
+
+  logInfo(`Running analysis on ${filePath} (forceMinimization=${forceMin})`);
 
   await vscode.window.withProgress(
     { location: vscode.ProgressLocation.Notification, title: "ProofPulse: Running analysis…", cancellable: false },
     async () => {
       try {
+        const dafnyPath = getDafnyPath();
+        const timeout = getTimeout();
+        logInfo(`dafnyPath=${dafnyPath}, timeout=${timeout}`);
+
         const result = await runDafny(filePath, {
-          dafnyPath: getDafnyPath(),
-          timeoutSeconds: getTimeout(),
-          forceMinimization: getForceMinimization(),
+          dafnyPath,
+          timeoutSeconds: timeout,
+          forceMinimization: forceMin,
         });
 
+        logInfo(`dafny exited ${result.exitCode}, timedOut=${result.timedOut ?? false}, error=${result.error ?? "none"}, logLen=${result.log.length}`);
+
         if (result.error) {
-          vscode.window.showErrorMessage(`ProofPulse: ${result.error}`);
+          const ch = getOutputChannel();
+          ch.appendLine(`--- ERROR ---\n${result.error}\n---`);
+          ch.show(true);
+          vscode.window.showErrorMessage(
+            `ProofPulse: analysis failed. See Output → ProofPulse for details.`,
+          );
+          return;
+        }
+
+        if (result.timedOut) {
+          vscode.window.showWarningMessage("ProofPulse: analysis timed out.");
           return;
         }
 
         const proof = parseProof(sourceCode, result.log);
         applyDecorations(editor, proof.lineStatus, proof.proofGraph.getAllNodes(), getDecorationOpacity(), context.extensionPath);
+        logInfo(`Applied decorations: ${proof.lineStatus.length} lines`);
       } catch (err: unknown) {
         const msg = err instanceof Error ? err.message : String(err);
+        logInfo(`Exception: ${msg}`);
+        const ch = getOutputChannel();
+        ch.appendLine(`--- EXCEPTION ---\n${msg}\n---`);
+        ch.show(true);
         vscode.window.showErrorMessage(`ProofPulse: ${msg}`);
       }
     },
@@ -66,7 +104,11 @@ export function registerGetProofReport(context: vscode.ExtensionContext): void {
           "server.js",
         ).fsPath;
 
-        const child = spawn("node", [serverScript, "--file", filePath], {
+        const child = spawn("node", [serverScript, "--file", filePath,
+          ...(getDafnyPath() !== "dafny" ? ["--dafny-path", getDafnyPath()] : []),
+          ...(getTimeout() !== 60 ? ["--timeout", String(getTimeout())] : []),
+          ...(getForceMinimization() ? ["--force-minimization"] : []),
+        ], {
           stdio: "pipe",
           detached: true,
         });

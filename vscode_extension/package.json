@@ -67,7 +67,7 @@
         },
         "proofpulse.forceMinimization": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Enable unsat core minimization for Z3 solver calls"
         },
         "proofpulse.decorationOpacity": {

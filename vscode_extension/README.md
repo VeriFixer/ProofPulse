@@ -22,6 +22,8 @@ Analyses Dafny prover logs and shows proof coverage directly in the editor.
 | `proofpulse.dafnyPath` | `"dafny"` | Path to the Dafny executable |
 | `proofpulse.timeoutSeconds` | `60` | Verification timeout in seconds |
 | `proofpulse.runOnSave` | `true` | Automatically run analysis when a `.dfy` file is saved |
+| `proofpulse.forceMinimization` | `true` | Enable unsat core minimization for Z3 solver calls. Uses an interactive z3 wrapper that intercepts solver queries and minimizes unsat cores. Slower but produces tighter proof dependencies. Requires `python3` on PATH. |
+| `proofpulse.decorationOpacity` | `0.08` | Opacity for line background decorations (`0.0`–`0.5`). Higher values make coverage highlights more visible. |
 
 ## Usage
 
