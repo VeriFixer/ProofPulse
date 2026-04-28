@@ -341,16 +341,16 @@ describe("Property 11: Hover content contains all required node info and neighbo
 
         // Independently compute BFS neighbors
         const bfsNeighbors = graph.getBFSNeighbors(target.id, false, true) ?? [];
-        const expectedIds = bfsNeighbors.map((n) => n.id).sort();
+        const expectedIds = bfsNeighbors.map((r) => r.node.id).sort();
         const actualIds = content.neighbors.map((n) => n.id).sort();
 
         expect(actualIds).toEqual(expectedIds);
 
         // Each neighbor's prooftext is present
-        for (const neighbor of bfsNeighbors) {
-          const found = content.neighbors.find((n) => n.id === neighbor.id);
+        for (const r of bfsNeighbors) {
+          const found = content.neighbors.find((n) => n.id === r.node.id);
           expect(found).toBeDefined();
-          expect(found!.prooftext).toBe(neighbor.prooftext);
+          expect(found!.prooftext).toBe(r.node.prooftext);
         }
       }),
       { numRuns: 200 },

@@ -1,6 +1,11 @@
 import { Node } from "./node.js";
 import { NodeData } from "./types.js";
 
+export interface BFSResult {
+  node: Node;
+  depth: number;
+}
+
 export interface ProofGraphJSON {
   nodes: NodeData[];
   topNodeIds: string[];
@@ -61,34 +66,41 @@ export class ProofGraph {
     key: string,
     isProvedBy: boolean,
     getAll: boolean = false,
-  ): Node[] | null {
+    maxDepth?: number,
+  ): BFSResult[] | null {
     if (!this.hasNode(key)) {
       return null;
     }
 
+    // Negative maxDepth treated as 0 (unlimited)
+    const effectiveMaxDepth = (maxDepth != null && maxDepth > 0) ? maxDepth : 0;
+
     const token = this.getNode(key)!;
-    const neighbors = new Set<Node>();
-    const queue: { node: Node }[] = [{ node: token }];
+    const results: BFSResult[] = [];
+    const queue: { node: Node; depth: number }[] = [{ node: token, depth: 0 }];
     const visited = new Set<string>([token.id]);
 
     while (queue.length > 0) {
-      const { node } = queue.shift()!;
+      const { node, depth } = queue.shift()!;
       let targetSet: Iterable<Node>;
       if (getAll) {
         targetSet = new Set([...node.provedBy, ...node.proves]);
       } else {
         targetSet = isProvedBy ? node.provedBy : node.proves;
       }
+      const nextDepth = depth + 1;
       for (const pred of targetSet) {
         if (visited.has(pred.id)) {
           continue;
         }
         visited.add(pred.id);
-        neighbors.add(pred);
-        queue.push({ node: pred });
+        results.push({ node: pred, depth: nextDepth });
+        if (effectiveMaxDepth === 0 || nextDepth < effectiveMaxDepth) {
+          queue.push({ node: pred, depth: nextDepth });
+        }
       }
     }
-    return [...neighbors];
+    return results;
   }
 
   toJSON(): ProofGraphJSON {

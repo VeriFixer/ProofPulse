@@ -69,6 +69,13 @@
           "type": "boolean",
           "default": false,
           "description": "Enable unsat core minimization for Z3 solver calls"
+        },
+        "proofpulse.decorationOpacity": {
+          "type": "number",
+          "default": 0.08,
+          "minimum": 0.0,
+          "maximum": 0.5,
+          "description": "Opacity for line background decorations (0.0–0.5)"
         }
       }
     }

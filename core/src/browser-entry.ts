@@ -28,8 +28,8 @@ root.generateSpansFragment = function (code: string, proof: Proof): string {
   return generateSpansFragment(code, proof.proofGraph);
 };
 
-root.getDependsOn = function (key: string, proof: Proof): unknown {
-  return getDependsOn(key, proof.proofGraph);
+root.getDependsOn = function (key: string, proof: Proof, maxDepth?: number): unknown {
+  return getDependsOn(key, proof.proofGraph, maxDepth);
 };
 
 root.getSampleLog = function (): unknown {

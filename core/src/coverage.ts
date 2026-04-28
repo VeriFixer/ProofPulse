@@ -38,7 +38,8 @@ export function getNodesByLine(graph: ProofGraph, line: number): Node[] {
 
 /** Return all BFS neighbors (both directions) for a node. null if nodeId not found. */
 export function getRelatedNodes(graph: ProofGraph, nodeId: string): Node[] | null {
-  return graph.getBFSNeighbors(nodeId, false, true);
+  const results = graph.getBFSNeighbors(nodeId, false, true);
+  return results ? results.map((r) => r.node) : null;
 }
 
 /** Return serialized node data, or undefined if not found. */

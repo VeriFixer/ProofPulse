@@ -2,14 +2,17 @@
   --bg: #000000;
   --panel: #171717;
   --text: #ffffff;
-  --light-blue: #7fd2ff; /* uncovered */
-  --dark-blue: #022054;  /* covered-complete */
-  --median-blue: #405e8d; /* covered-test */
+  --color-covcomplete-text: #7fd2ff;
+  --color-covcomplete: #022054;
+  --color-covtest: #405e8d;
   --muted: #4e5865;
-  --red : #ff0000;
-  --purple: #ee00ff;
-  --yellow: #fffb00;
-  --gutter-width: 56px; /* enough for 4 digits + padding */
+  --color-uncovered: #e05555;
+  --color-top-assertion: #ee00ff;
+  --color-covtest-underline: #fffb00;
+  --color-uncovered-text: #e06050;
+  --color-covtest-text: #d4a840;
+  --color-related-bg: rgba(100, 180, 255, 0.12);
+  --gutter-width: 56px;
 }
 
 html,
@@ -42,14 +45,14 @@ body {
 .editor h2 {
   margin: 0 0 12px 0;
   font-size: 16px;
-  color: var(--light-blue)
+  color: var(--color-covcomplete-text)
 }
 
 /* Source area: each logical line becomes a block */
 #source {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", monospace;
   color: var(--text);
-  line-height: 1;
+  line-height: 1.4;
   font-size: 13px;
   margin: 0;
   padding: 0px 0;
@@ -62,7 +65,7 @@ body {
   box-sizing: border-box;
   min-height: 10px;
   white-space: pre-wrap;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 /* the left gutter that also acts as the colored mark and holds the 4-digit line number */
@@ -85,18 +88,18 @@ body {
   background: rgba(255, 255, 255, 0.02);
 }
 
-/* map statuses to gutter backgrounds (server-provided data-status on .line) */
+/* map statuses to gutter backgrounds */
 .line[data-status="CovComplete"] > .lnum {
-  background: var(--dark-blue);
+  background: var(--color-covcomplete);
 }
 
 .line[data-status="CovTest"] > .lnum {
-  background: var(--median-blue);
+  background: var(--color-covtest);
 }
 
 .line[data-status="Uncovered"] > .lnum {
-  background: var(--red);
-  color: #022054; /* dark text for readability on light bg */
+  background: var(--color-uncovered);
+  color: #022054;
 }
 
 /* tokens */
@@ -106,7 +109,7 @@ body {
   padding: 0 0px;
   margin: 0 0px;
   border-radius: 4px;
-  line-height: 1.2; 
+  line-height: 1.4;
   cursor: pointer;
   color: rgba(64, 202, 252, 1);
 }
@@ -121,24 +124,26 @@ body {
 }
 
 .token[data-istop="true"] {
-  text-decoration-color: var(--light-blue);
+  text-decoration-color: var(--color-covcomplete-text);
   text-decoration-thickness: 4px;
-  color: var(--purple)
+  color: var(--color-top-assertion)
 }
 
-/* uncovered underline (still useful to emphasize token-level uncovered) */
+/* uncovered token: red/orange text + red underline */
 .token[data-status="uncovered"] {
   text-decoration: underline;
-  text-decoration-color: var(--red);
-  text-decoration-thickness: 2px
+  text-decoration-color: var(--color-uncovered);
+  text-decoration-thickness: 2px;
+  color: var(--color-uncovered-text)
 }
 
+/* covtest token: amber text + yellow underline */
 .token[data-status="covered-test"] {
   text-decoration: underline;
-  text-decoration-color: var(--yellow);
-  text-decoration-thickness: 2px
+  text-decoration-color: var(--color-covtest-underline);
+  text-decoration-thickness: 2px;
+  color: var(--color-covtest-text)
 }
-
 
 /* selected token */
 .token.selected {
@@ -147,8 +152,8 @@ body {
 }
 
 .token.related {
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25)
+  background: var(--color-related-bg);
+  box-shadow: inset 0 0 0 1px rgba(100, 180, 255, 0.3)
 }
 
 /* little badge when justification exists */
@@ -157,6 +162,18 @@ body {
   margin-left: 6px;
   font-size: 11px;
   color: var(--muted)
+}
+
+/* type badge for dependency panel */
+.type-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  margin-right: 6px;
+  vertical-align: middle;
 }
 
 /* Right panel */
@@ -171,6 +188,39 @@ body {
 
 .panel h3 {
   margin-top: 0
+}
+
+/* depth control */
+.depth-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.depth-control input {
+  width: 50px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 13px;
+}
+
+.depth-control small {
+  color: var(--muted);
+}
+
+/* depth group headers */
+.depth-header {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-covcomplete-text);
+  margin: 10px 0 4px 0;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .deps {
@@ -242,5 +292,3 @@ body {
     width: 360px
   }
 }
-
-

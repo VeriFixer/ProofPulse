@@ -119,8 +119,8 @@ function computeExpected(
     expected.set(post.id, CovStatus.CovComplete);
     const neighbors = graph.getBFSNeighbors(post.id, true, true);
     if (neighbors) {
-      for (const n of neighbors) {
-        expected.set(n.id, CovStatus.CovComplete);
+      for (const r of neighbors) {
+        expected.set(r.node.id, CovStatus.CovComplete);
       }
     }
   }
@@ -133,9 +133,9 @@ function computeExpected(
     expected.set(top.id, CovStatus.CovComplete);
     const neighbors = graph.getBFSNeighbors(top.id, true, true);
     if (neighbors) {
-      for (const n of neighbors) {
-        if (expected.get(n.id) !== CovStatus.CovComplete) {
-          expected.set(n.id, CovStatus.CovTest);
+      for (const r of neighbors) {
+        if (expected.get(r.node.id) !== CovStatus.CovComplete) {
+          expected.set(r.node.id, CovStatus.CovTest);
         }
       }
     }
@@ -348,10 +348,10 @@ function computeExpectedCovStatus(
           const neighbors = graph.getBFSNeighbors(node.id, true, true);
           let anyChildCovComplete = false;
           if (neighbors) {
-            for (const neigh of neighbors) {
+            for (const r of neighbors) {
               if (
-                neigh.type !== TokenType.Postcondition &&
-                neigh.covStatus === CovStatus.CovComplete
+                r.node.type !== TokenType.Postcondition &&
+                r.node.covStatus === CovStatus.CovComplete
               ) {
                 anyChildCovComplete = true;
                 break;
@@ -538,9 +538,9 @@ describe("Property 5: CovStatus follows token-class policies", () => {
             );
             const anyChildCovComplete =
               neighbors?.some(
-                (n) =>
-                  n.type !== TokenType.Postcondition &&
-                  n.covStatus === CovStatus.CovComplete,
+                (r) =>
+                  r.node.type !== TokenType.Postcondition &&
+                  r.node.covStatus === CovStatus.CovComplete,
               ) ?? false;
 
             if (!anyChildCovComplete) {

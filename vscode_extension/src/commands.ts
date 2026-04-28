@@ -1,10 +1,7 @@
 import * as vscode from "vscode";
 import { runDafny, parseProof } from "@proofpulse/core";
-import { getDafnyPath, getForceMinimization, getTimeout } from "./config";
+import { getDafnyPath, getDecorationOpacity, getForceMinimization, getTimeout } from "./config";
 import { applyDecorations } from "./decorations";
-import { ProofPulseHoverProvider } from "./hover";
-
-let hoverDisposable: vscode.Disposable | undefined;
 
 export async function runAnalysis(editor: vscode.TextEditor, context: vscode.ExtensionContext): Promise<void> {
   const filePath = editor.document.fileName;
@@ -26,16 +23,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
         }
 
         const proof = parseProof(sourceCode, result.log);
-        applyDecorations(editor, proof.lineStatus, proof.proofGraph.getAllNodes());
-
-        if (hoverDisposable) {
-          hoverDisposable.dispose();
-        }
-        hoverDisposable = vscode.languages.registerHoverProvider(
-          { scheme: "file", language: "dafny" },
-          new ProofPulseHoverProvider(proof.proofGraph),
-        );
-        context.subscriptions.push(hoverDisposable);
+        applyDecorations(editor, proof.lineStatus, proof.proofGraph.getAllNodes(), getDecorationOpacity(), context.extensionPath);
       } catch (err: unknown) {
         const msg = err instanceof Error ? err.message : String(err);
         vscode.window.showErrorMessage(`ProofPulse: ${msg}`);

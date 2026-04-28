@@ -181,8 +181,8 @@ export class Proof {
       post.covStatusInternal = CovStatus.CovComplete;
       const postneighbors = this.proofGraph.getBFSNeighbors(post.id, true, true);
       if (postneighbors) {
-        for (const neigh of postneighbors) {
-          neigh.covStatusInternal = CovStatus.CovComplete;
+        for (const result of postneighbors) {
+          result.node.covStatusInternal = CovStatus.CovComplete;
         }
       }
     }
@@ -195,9 +195,9 @@ export class Proof {
       top.covStatusInternal = CovStatus.CovComplete;
       const neighbors = this.proofGraph.getBFSNeighbors(top.id, true, true);
       if (neighbors) {
-        for (const neigh of neighbors) {
-          if (neigh.covStatusInternal !== CovStatus.CovComplete) {
-            neigh.covStatusInternal = CovStatus.CovTest;
+        for (const result of neighbors) {
+          if (result.node.covStatusInternal !== CovStatus.CovComplete) {
+            result.node.covStatusInternal = CovStatus.CovTest;
           }
         }
       }
@@ -247,10 +247,10 @@ export class Proof {
       const postneighbors = this.proofGraph.getBFSNeighbors(post.id, true, true);
       let anychildIsCovComplete = false;
       if (postneighbors) {
-        for (const neigh of postneighbors) {
+        for (const result of postneighbors) {
           if (
-            neigh.type !== TokenType.Postcondition &&
-            neigh.covStatus === CovStatus.CovComplete
+            result.node.type !== TokenType.Postcondition &&
+            result.node.covStatus === CovStatus.CovComplete
           ) {
             anychildIsCovComplete = true;
             break;

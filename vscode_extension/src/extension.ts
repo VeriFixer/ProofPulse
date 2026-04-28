@@ -29,6 +29,22 @@ export function activate(context: vscode.ExtensionContext): void {
       }
     }),
   );
+
+  // Run analysis when a .dfy file becomes the active editor (covers open, tab switch)
+  context.subscriptions.push(
+    vscode.window.onDidChangeActiveTextEditor((editor) => {
+      if (!editor) return;
+      if (!editor.document.fileName.endsWith(".dfy")) return;
+      if (!getRunOnSave()) return;
+      runAnalysis(editor, context);
+    }),
+  );
+
+  // Run on the already-active .dfy file at activation time
+  const activeEditor = vscode.window.activeTextEditor;
+  if (activeEditor && activeEditor.document.fileName.endsWith(".dfy") && getRunOnSave()) {
+    runAnalysis(activeEditor, context);
+  }
 }
 
 export function deactivate(): void {

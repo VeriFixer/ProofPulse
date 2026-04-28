@@ -1,5 +1,5 @@
 import { CovStatus } from "./types.js";
-import { ProofGraph } from "./proof-graph.js";
+import { ProofGraph, type BFSResult } from "./proof-graph.js";
 import type { Node } from "./node.js";
 
 function escapeHtml(str: string): string {
@@ -107,7 +107,7 @@ export function generateSpansFragment(code: string, graph: ProofGraph): string {
 }
 
 /** Return all BFS neighbors (both directions) for a node by key. */
-export function getDependsOn(key: string, graph: ProofGraph): Node[] | null {
+export function getDependsOn(key: string, graph: ProofGraph, maxDepth?: number): BFSResult[] | null {
   if (!graph.hasNode(key)) return null;
-  return graph.getBFSNeighbors(key, false, true);
+  return graph.getBFSNeighbors(key, false, true, maxDepth);
 }
