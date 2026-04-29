@@ -1,5 +1,5 @@
 import { strict as assert } from 'node:assert';
-import { test, describe } from 'node:test';
+import { test, describe } from 'vitest';
 import fc from 'fast-check';
 import {
   buildJUnitXML,
@@ -8,22 +8,31 @@ import {
   writeCoverageJSON,
   computeExitCode,
   escapeXml,
-} from '../../../web_viewer/report.js';
+  type TestResult,
+  type TestSummary,
+} from '../../harness/report.js';
 
 // ── Helpers ──
 
+interface ParsedTestCase {
+  name: string;
+  classname: string;
+  time: number;
+  status: string;
+  failureMessage: string;
+  failureText: string;
+}
+
 /** Minimal XML parser: extract testcase elements from JUnit XML */
-function parseTestCases(xml) {
-  const cases = [];
-  // Single-pass: find each <testcase start, then determine if self-closing or has body
+function parseTestCases(xml: string): ParsedTestCase[] {
+  const cases: ParsedTestCase[] = [];
   const re = /<testcase\s+([^>]*?)(\/?>)/g;
-  let m;
+  let m: RegExpExecArray | null;
   while ((m = re.exec(xml)) !== null) {
     const attrs = m[1];
     const closing = m[2];
     let body = '';
     if (closing === '>') {
-      // Find matching </testcase>
       const endIdx = xml.indexOf('</testcase>', re.lastIndex);
       if (endIdx !== -1) {
         body = xml.substring(re.lastIndex, endIdx);
@@ -62,12 +71,12 @@ function parseTestCases(xml) {
   return cases;
 }
 
-function attr(s, name) {
+function attr(s: string, name: string): string {
   const m = new RegExp(`${name}="([^"]*)"`).exec(s);
   return m ? m[1] : '';
 }
 
-function unescapeXml(s) {
+function unescapeXml(s: string): string {
   return s
     .replace(/&apos;/g, "'")
     .replace(/&quot;/g, '"')
@@ -79,10 +88,9 @@ function unescapeXml(s) {
 // ── Arbitraries ──
 
 const statusArb = fc.constantFrom('passed', 'failed', 'skipped', 'error');
-// Avoid XML-hostile chars in names/reasons to keep round-trip clean
 const safeStringArb = fc.stringOf(fc.constantFrom(...'abcdefghijklmnopqrstuvwxyz0123456789_ '.split('')), { minLength: 1, maxLength: 30 });
 
-const testResultArb = fc.record({
+const testResultArb: fc.Arbitrary<TestResult> = fc.record({
   srcFile: safeStringArb.map(s => `dataset/tests/${s.replace(/ /g, '_')}/${s.replace(/ /g, '_')}.dfy`),
   res: fc.record({
     status: statusArb,
@@ -98,13 +106,12 @@ const testResultsArb = fc.array(testResultArb, { minLength: 0, maxLength: 15 });
 
 // ── Property 1: JUnit XML round-trip ──
 
-describe('Feature: ci-spec-driven-development, Property 1: JUnit XML round-trip preserves test results', () => {
+describe('Property 1: JUnit XML round-trip preserves test results', () => {
   test('round-trip: serialize then parse preserves count and statuses', () => {
     fc.assert(
       fc.property(testResultsArb, (results) => {
         const xml = buildJUnitXML(results);
 
-        // Well-formed structure
         assert.ok(xml.includes('<?xml version="1.0"'));
         assert.ok(xml.includes('<testsuites>'));
         assert.ok(xml.includes('<testsuite '));
@@ -117,14 +124,12 @@ describe('Feature: ci-spec-driven-development, Property 1: JUnit XML round-trip 
           const r = results[i];
           const p = parsed[i];
 
-          // Expected effective status after bug inversion
           let expectedStatus = r.res.status;
           if (r.isBug && r.res.status === 'failed') expectedStatus = 'passed';
           if (r.isBug && r.res.status === 'passed') expectedStatus = 'failed';
 
           assert.equal(p.status, expectedStatus, `status mismatch at index ${i}`);
 
-          // Bug test that passed → failure message about unexpected pass
           if (r.isBug && r.res.status === 'passed') {
             assert.ok(p.failureMessage.includes('unexpected pass'), `expected unexpected pass message at ${i}`);
           }
@@ -137,11 +142,10 @@ describe('Feature: ci-spec-driven-development, Property 1: JUnit XML round-trip 
 
 // ── Property 2: Coverage JSON round-trip ──
 
-describe('Feature: ci-spec-driven-development, Property 2: Coverage JSON round-trip preserves test data', () => {
+describe('Property 2: Coverage JSON round-trip preserves test data', () => {
   test('round-trip: serialize then parse preserves summary and coverage distribution', () => {
     fc.assert(
       fc.property(testResultsArb, (results) => {
-        // Build a summary matching the test_logic.js aggregation
         let passed = 0, failed = 0, skipped = 0, errors = 0;
         for (const r of results) {
           switch (r.res.status) {
@@ -151,10 +155,9 @@ describe('Feature: ci-spec-driven-development, Property 2: Coverage JSON round-t
             default: errors++; break;
           }
         }
-        const summary = { total: results.length, passed, failed, skipped, dafnyFailures: 0, errors };
+        const summary: TestSummary = { total: results.length, passed, failed, skipped, dafnyFailures: 0, errors };
 
         const json = buildCoverageJSON(results, summary);
-        // Verify it round-trips through JSON.parse
         const reparsed = JSON.parse(JSON.stringify(json));
 
         assert.equal(reparsed.summary.total, summary.total);
@@ -173,8 +176,7 @@ describe('Feature: ci-spec-driven-development, Property 2: Coverage JSON round-t
           assert.equal(t.status, r.res.status);
           assert.equal(t.isBug, r.isBug);
 
-          // Verify coverage distribution matches lineStatus counts
-          const expectedDist = { CovComplete: 0, CovTest: 0, Uncovered: 0 };
+          const expectedDist: Record<string, number> = { CovComplete: 0, CovTest: 0, Uncovered: 0 };
           for (const s of r.lineStatus || []) {
             if (s in expectedDist) expectedDist[s]++;
           }
@@ -188,7 +190,7 @@ describe('Feature: ci-spec-driven-development, Property 2: Coverage JSON round-t
 
 // ── Property 3: Exit code reflects test outcomes ──
 
-describe('Feature: ci-spec-driven-development, Property 3: Exit code reflects test outcomes', () => {
+describe('Property 3: Exit code reflects test outcomes', () => {
   test('exit code is 0 iff all effective results pass', () => {
     const entryArb = fc.record({
       status: statusArb,
@@ -199,7 +201,6 @@ describe('Feature: ci-spec-driven-development, Property 3: Exit code reflects te
       fc.property(fc.array(entryArb, { minLength: 0, maxLength: 20 }), (entries) => {
         const code = computeExitCode(entries);
 
-        // Manually compute expected
         let allPass = true;
         for (const { status, isBug } of entries) {
           const effectivePass =
@@ -216,11 +217,11 @@ describe('Feature: ci-spec-driven-development, Property 3: Exit code reflects te
   });
 });
 
-// ── Unit tests: bug test inversion and error handling (Task 2.6) ──
+// ── Unit tests: bug test inversion and error handling ──
 
 describe('Bug test inversion in JUnit XML', () => {
   test('bug test with status "passed" → reported as failed with unexpected pass message', () => {
-    const results = [{
+    const results: TestResult[] = [{
       srcFile: 'dataset/tests/bug_example/bug_example.dfy',
       res: { status: 'passed', test_name: 'BugTest' },
       isBug: true,
@@ -235,7 +236,7 @@ describe('Bug test inversion in JUnit XML', () => {
   });
 
   test('bug test with status "failed" → reported as passed', () => {
-    const results = [{
+    const results: TestResult[] = [{
       srcFile: 'dataset/tests/bug_example/bug_example.dfy',
       res: { status: 'failed', reason: 'verification failed', test_name: 'BugTest' },
       isBug: true,
@@ -251,11 +252,10 @@ describe('Bug test inversion in JUnit XML', () => {
 
 describe('Report write failure handling', () => {
   test('writeJUnitXML logs to stderr on write failure, does not throw', async () => {
-    const stderrMessages = [];
+    const stderrMessages: string[] = [];
     const origError = console.error;
-    console.error = (...args) => stderrMessages.push(args.join(' '));
+    console.error = (...args: unknown[]) => stderrMessages.push(args.map(String).join(' '));
     try {
-      // Write to an invalid path
       await writeJUnitXML([], '/nonexistent/dir/report.xml');
       assert.ok(stderrMessages.some(m => m.includes('Failed to write JUnit XML')));
     } finally {
@@ -264,11 +264,11 @@ describe('Report write failure handling', () => {
   });
 
   test('writeCoverageJSON logs to stderr on write failure, does not throw', async () => {
-    const stderrMessages = [];
+    const stderrMessages: string[] = [];
     const origError = console.error;
-    console.error = (...args) => stderrMessages.push(args.join(' '));
+    console.error = (...args: unknown[]) => stderrMessages.push(args.map(String).join(' '));
     try {
-      const summary = { total: 0, passed: 0, failed: 0, skipped: 0, errors: 0 };
+      const summary: TestSummary = { total: 0, passed: 0, failed: 0, skipped: 0, errors: 0 };
       await writeCoverageJSON([], summary, '/nonexistent/dir/coverage.json');
       assert.ok(stderrMessages.some(m => m.includes('Failed to write coverage JSON')));
     } finally {

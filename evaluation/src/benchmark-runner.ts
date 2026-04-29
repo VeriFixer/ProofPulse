@@ -204,7 +204,7 @@ export async function runBenchmark(
 
     // Run test suite comparison
     try {
-      const { runAllTests } = await import("../../src/test_logic.js");
+      const { runAllTests } = await import("../../tests/harness/test_logic.js");
 
       console.log("Running test suite (baseline)...");
       const baselineTests = await runAllTests({ forceMinimization: false });

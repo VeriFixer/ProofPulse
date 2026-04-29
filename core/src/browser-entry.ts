@@ -16,7 +16,7 @@ root.TokenType = TokenType;
 
 root.sampleLog = "";
 root.sourceCode = "";
-root.targetFileName = "_USECASE_find_irrelevant_lines_for_proof.dfy";
+root.targetFileName = "";
 
 root.parseProof = function (dafnyCode: string, proofLog: string): Proof {
   root.sampleLog = proofLog;

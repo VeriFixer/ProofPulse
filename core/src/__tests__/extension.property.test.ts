@@ -104,12 +104,13 @@ const arbNodeSpec = (maxLine: number): fc.Arbitrary<NodeSpec> =>
   }));
 
 function buildNodeFromSpec(spec: NodeSpec, index: number): Node {
+  const offset = index * 100; // large offset to guarantee unique IDs
   const node = new Node(
     FILE,
     spec.startLine,
-    spec.startCol + index, // unique col for unique ID
+    spec.startCol + offset,
     spec.endLine,
-    spec.endCol + index,
+    spec.endCol + offset,
     spec.prooftext,
     false,
   );

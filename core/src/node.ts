@@ -57,12 +57,10 @@ export class Node {
     } else if (
       this.prooftext.includes("index in range") ||
       this.prooftext.includes("target object is never null") ||
-      this.prooftext.includes(
-        "which is subject to definite-assignment rules, is always initialized at this return point",
-      ) ||
-      this.prooftext.includes(
-        "which is subject to definite-assignment rules, is always initialized here",
-      )
+      this.prooftext.includes("which is subject to definite-assignment rules, is always initialized at this return point") ||
+      this.prooftext.includes("which is subject to definite-assignment rules, is always initialized here") || 
+      this.prooftext.includes("decreases expression is bounded below by") ||
+      this.prooftext.includes("value always satisfies the subset constraints of")
     ) {
       this.type = TokenType.AssertionAutomatic;
     } else if (this.isTopAssertion) {

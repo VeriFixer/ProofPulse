@@ -6,10 +6,12 @@
   "scripts": {
     "build:core": "tsc --project core/tsconfig.json",
     "build:viewer": "node web_viewer/build-spans-provider.mjs",
-    "build": "npm run build:core && npm run build:viewer",
+    "build:ext": "npm run build --prefix vscode_extension",
+    "build": "npm run build:core && npm run build:viewer && npm run build:ext",
     "start": "node web_viewer/server.js",
-    "test": "node web_viewer/cli.js",
-    "test:unit": "node --test tests/unit/web_viewer/report.test.js",
+    "test": "npx tsx tests/harness/cli.ts",
+    "test:all": "bash tests/run-all.sh",
+    "test:unit": "vitest --run --config vitest.config.ts tests/unit/",
     "test:server": "node --test tests/unit/web_viewer/server.test.js",
     "test:property": "vitest --run --config vitest.config.ts",
     "test:bundle": "node --test tests/unit/web_viewer/bundle-viewer.test.js"

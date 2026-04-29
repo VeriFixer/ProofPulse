@@ -140,13 +140,29 @@ function statusExplanation(status, type) {
   return 'Fully covered by postcondition proof dependencies.';
 }
 
+function statusColor(status) {
+  if (status === 'Uncovered') return 'var(--color-uncovered-text)';
+  if (status === 'CovTest') return 'var(--color-covtest-text)';
+  return 'var(--color-covcomplete-text)';
+}
+
+function statusDot(status) {
+  return `<span class="status-dot" style="background:${statusColor(status)}"></span>`;
+}
+
+function statusLabel(status) {
+  return `<span class="status-label" style="color:${statusColor(status)}">${status}</span>`;
+}
+
 function renderPanel(tokenEl, proof) {
     currentTokenEl = tokenEl;
     const id = tokenEl.dataset.id;
     const token = proof.proofGraph.getNode(id);
 
-    const displayCode = getNodeDisplayText(token, 40);
-    panelTitle.textContent = `Dependency tracker: ${displayCode}`;
+    const displayCode = getNodeDisplayText(token, 60);
+
+    // Panel title: type badge + code snippet
+    panelTitle.innerHTML = typeBadge(token.type) + `<code class="panel-title-code">${escapeHtml(displayCode)}</code>`;
 
     const results = window.getDependsOn(id, proof, currentDepth) || [];
     const depIds = results.map(r => r.node.id);
@@ -157,17 +173,54 @@ function renderPanel(tokenEl, proof) {
 
     panelBody.innerHTML = '';
 
-    // Engaging summary with colored kind badge and status explanation
-    const statusStyle = token.covStatus === 'Uncovered' ? 'color: var(--color-uncovered-text)' :
-                        token.covStatus === 'CovTest' ? 'color: var(--color-covtest-text)' :
-                        'color: var(--color-covcomplete-text)';
+    // ── Selected token info card ──
+    const card = document.createElement('div');
+    card.className = 'token-card';
 
-    panelBody.insertAdjacentHTML('beforeend', `
-    <p>${typeBadge(token.type)} <strong style="${statusStyle}">${String(token.covStatus)}</strong></p>
-    <p class="hint">${escapeHtml(statusExplanation(token.covStatus, token.type))}</p>
-    <p><strong>Message:</strong> ${escapeHtml(cleanProoftext(token.prooftext))}</p>
-    <p><strong>Loc:</strong> Line ${token.start.line}:${token.start.col} — ${token.end.line}:${token.end.col}</p>
-    `);
+    // Status row: final + internal (if different)
+    const internalStatus = token.covStatusInternal || token.covStatus;
+    let statusHtml = `<div class="token-card-row">${statusDot(token.covStatus)} <strong>Status:</strong> ${statusLabel(token.covStatus)}</div>`;
+    if (internalStatus !== token.covStatus) {
+      statusHtml += `<div class="token-card-row">${statusDot(internalStatus)} <strong>Internal:</strong> ${statusLabel(internalStatus)}</div>`;
+    }
+
+    // Explanation
+    const explanation = statusExplanation(token.covStatus, token.type);
+
+    // Message (proof text)
+    const proofMsg = cleanProoftext(token.prooftext);
+
+    card.innerHTML = statusHtml +
+      `<p class="token-card-hint">${escapeHtml(explanation)}</p>` +
+      (proofMsg ? `<div class="token-card-row"><strong>Message:</strong> <span class="token-card-proof">${escapeHtml(proofMsg)}</span></div>` : '');
+
+    panelBody.appendChild(card);
+
+    // ── Dependencies section ──
+    const depSection = document.createElement('div');
+    depSection.className = 'dep-section';
+
+    // Depth control + dependency count header
+    const depHeader = document.createElement('div');
+    depHeader.className = 'dep-section-header';
+    const totalDeps = results.length;
+    depHeader.innerHTML = `<span class="dep-section-title">Dependencies <span class="dep-count">${totalDeps}</span></span>` +
+      `<div class="depth-control"><label for="depth-input">Depth:</label>` +
+      `<input type="number" id="depth-input" value="${currentDepth}" min="1" />` +
+      `<small>(0 = unlimited)</small></div>`;
+    depSection.appendChild(depHeader);
+
+    // Wire depth input
+    const depthInput = depHeader.querySelector('#depth-input');
+    if (depthInput) {
+      depthInput.addEventListener('input', () => {
+        const val = parseInt(depthInput.value, 10);
+        currentDepth = isNaN(val) ? 2 : val;
+        if (currentTokenEl && proof) {
+          renderPanel(currentTokenEl, proof);
+        }
+      });
+    }
 
     // Group results by depth
     const byDepth = new Map();
@@ -176,35 +229,36 @@ function renderPanel(tokenEl, proof) {
       byDepth.get(r.depth).push(r.node);
     });
 
-    const depsDiv = document.createElement('div');
-    depsDiv.className = 'deps';
-
     const sortedDepths = Array.from(byDepth.keys()).sort((a, b) => a - b);
     sortedDepths.forEach(depth => {
       const nodes = byDepth.get(depth);
       const header = document.createElement('div');
       header.className = 'depth-header';
       header.textContent = `Depth ${depth} (${nodes.length})`;
-      depsDiv.appendChild(header);
+      depSection.appendChild(header);
 
       const ul = document.createElement('ul');
+      ul.className = 'dep-list';
       nodes.forEach(node => {
         const codeText = getNodeDisplayText(node, 60);
         const li = document.createElement('li');
-        li.innerHTML = typeBadge(node.type) +
-          `<code>${escapeHtml(codeText)}</code>` +
-          ` <small>(${escapeHtml(shortLoc(node))})</small>` +
-          (node.prooftext ? ` <small class="hint">${escapeHtml(cleanProoftext(node.prooftext))}</small>` : '');
+        li.className = 'dep-item';
+        li.innerHTML =
+          `<div class="dep-item-main">${statusDot(node.covStatus)}${typeBadge(node.type)}<code class="dep-code">${escapeHtml(codeText)}</code></div>` +
+          (node.prooftext ? `<div class="dep-item-proof">${escapeHtml(cleanProoftext(node.prooftext))}</div>` : '');
         ul.appendChild(li);
       });
-      depsDiv.appendChild(ul);
+      depSection.appendChild(ul);
     });
 
     if (sortedDepths.length === 0) {
-      depsDiv.innerHTML = '<p class="hint">No dependencies found.</p>';
+      const empty = document.createElement('p');
+      empty.className = 'hint';
+      empty.textContent = 'No dependencies found.';
+      depSection.appendChild(empty);
     }
 
-    panelBody.appendChild(depsDiv);
+    panelBody.appendChild(depSection);
   }
 
 function attachHandlers(proof) {
@@ -253,18 +307,6 @@ async function loadCoverage() {
     buildSourceDomFromFragment(fragment, src, lineStatuses);
     attachHandlers(currentProof);
 
-    // Wire depth control
-    const depthInput = document.getElementById('depth-input');
-    if (depthInput) {
-        depthInput.addEventListener('input', () => {
-            const val = parseInt(depthInput.value, 10);
-            currentDepth = isNaN(val) ? 2 : val;
-            if (currentTokenEl && currentProof) {
-                renderPanel(currentTokenEl, currentProof);
-            }
-        });
-    }
-
     const uncovered = document.querySelector('.token[data-status="uncovered"]');
     if (uncovered) renderPanel(uncovered, currentProof);
     else {
@@ -282,3 +324,57 @@ async function bootstrap() {
 }
 
 bootstrap();
+
+// ── Resizable divider ──
+
+(function initDivider() {
+  const divider = document.getElementById('divider');
+  const panel = document.getElementById('panel');
+  const app = document.querySelector('.app');
+  if (!divider || !panel || !app) return;
+
+  let dragging = false;
+  let startX = 0;
+  let startWidth = 0;
+
+  function onPointerDown(e) {
+    e.preventDefault();
+    dragging = true;
+    startX = e.clientX;
+    startWidth = panel.getBoundingClientRect().width;
+    divider.classList.add('dragging');
+    document.body.style.cursor = 'col-resize';
+    document.body.style.userSelect = 'none';
+  }
+
+  function onPointerMove(e) {
+    if (!dragging) return;
+    // Panel is on the right, so dragging left increases its width
+    const delta = startX - e.clientX;
+    const newWidth = Math.max(200, Math.min(startWidth + delta, window.innerWidth - 300));
+    panel.style.width = newWidth + 'px';
+  }
+
+  function onPointerUp() {
+    if (!dragging) return;
+    dragging = false;
+    divider.classList.remove('dragging');
+    document.body.style.cursor = '';
+    document.body.style.userSelect = '';
+  }
+
+  divider.addEventListener('pointerdown', onPointerDown);
+  document.addEventListener('pointermove', onPointerMove);
+  document.addEventListener('pointerup', onPointerUp);
+
+  // Keyboard: left/right arrows to resize
+  divider.addEventListener('keydown', function(e) {
+    const step = 20;
+    const current = panel.getBoundingClientRect().width;
+    if (e.key === 'ArrowLeft') {
+      panel.style.width = Math.min(current + step, window.innerWidth - 300) + 'px';
+    } else if (e.key === 'ArrowRight') {
+      panel.style.width = Math.max(200, current - step) + 'px';
+    }
+  });
+})();

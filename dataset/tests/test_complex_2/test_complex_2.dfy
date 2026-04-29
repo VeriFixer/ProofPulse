@@ -60,6 +60,6 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 
 //::: Name - Some bugs
 //::: Description - Bugs on loop invariants
-//::: L30 - CovComplete
-//::: L31 - CovComplete
-//::: L32 - CovComplete
+//::: L30 - Uncovered
+//::: L31 - Uncovered
+//::: L32 - Uncovered

@@ -173,7 +173,7 @@ datatype Point = Point(x: int, y: int)
 datatype Rectangle = Rectangle(p1: Point, p2: Point)
 
 predicate ValidRectangle(r: Rectangle) {
-  r.p1.x <= r.p2.x && r.p1.y <= r.p2.y &&  0 < r.p1.x < 1 && 0 < r.p1.y < 1 && 0 < r.p2.x < 1 && 0 < r.p2.y < 1
+  r.p1.x <= r.p2.x && r.p1.y <= r.p2.y
 }
 
 predicate PointInsideRectangle(p: Point, r: Rectangle) {
@@ -195,13 +195,11 @@ method BugLurkingAxiomsRectangleWitness(r1: Rectangle, r2: Rectangle) returns (o
   ensures out == RectangleIntersect(r1, r2)
 {
   if r1.p2.x < r2.p1.x || r2.p2.x < r1.p1.x {
-    out := false;
-    return;
+    return false;
   }
 
   if r1.p2.y < r2.p1.y || r2.p2.y < r1.p1.y {
-    out := false;
-    return;
+    return false;
   }
 
   //ghost var witX := Max(r1.p1.x, r2.p1.x);
@@ -212,5 +210,5 @@ method BugLurkingAxiomsRectangleWitness(r1: Rectangle, r2: Rectangle) returns (o
   //assert PointInsideRectangle(wit, r2);
 
   //assert RectangleIntersect(r1, r2);
-  out := true;
+  return true;
 }

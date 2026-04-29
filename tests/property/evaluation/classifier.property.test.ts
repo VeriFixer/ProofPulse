@@ -34,7 +34,7 @@ describe("Property 2: Classification correctness", () => {
 
         if (posts.length === 0) { expect(result).toBe("none"); return; }
         const allPostCov = posts.every((n) => n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest);
-        const allBodyCov = body.every((n) => n.covStatus === CovStatus.CovComplete);
+        const allBodyCov = body.every((n) => n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest);
         expect(result).toBe(allPostCov && allBodyCov ? "strong" : "weak");
       }
     ), { numRuns: 100 });

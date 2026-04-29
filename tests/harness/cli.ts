@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env npx tsx
 import { runAllTests } from './test_logic.js';
 import { writeJUnitXML, writeCoverageJSON } from './report.js';
 import { mkdir } from 'node:fs/promises';
@@ -9,11 +9,10 @@ const COV_PATH = process.env.COVERAGE_REPORT_PATH || 'test-results/coverage.json
 
 try {
   const result = await runAllTests();
-  if (!result) process.exit(0); // no tests found
+  if (!result) process.exit(0);
 
   const { results, summary } = result;
 
-  // Ensure output dirs exist
   await mkdir(dirname(JUNIT_PATH), { recursive: true });
   await mkdir(dirname(COV_PATH), { recursive: true });
 

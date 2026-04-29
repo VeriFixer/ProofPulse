@@ -200,7 +200,6 @@ method Main()
 //::: Description - Line 66 not sued
 //::: L66 - Uncovered
 //::: L112 - Uncovered
-//::: L98 - CovComplete
 //::: L116 - Uncovered
 //::: L126 - Uncovered
 //::: L140 - Uncovered

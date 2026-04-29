@@ -231,5 +231,4 @@ class TwoStacks<T(0)(==)>
 //::: Name - Some sucesses some insucesses
 //::: Description - Some bugs o fix (lne 26 sucess), lots of things to consider
 
-//::: L15 - CovComplete
 //::: L26 - Uncovered

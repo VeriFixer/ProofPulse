@@ -11,8 +11,9 @@ core/                   # @proofpulse/core — TS lib (parseProof, runDafny, cov
 core/scripts/           # z3-minimizer-wrapper.sh, minimize_unsat_core_trace.py
 vscode_extension/       # VSCode extension (gutter + inline decorations, hover, context menu)
 evaluation/             # Benchmark CLI against dafny-synthesis oracle
-web_viewer/             # Web server, viewer, test CLI (test_logic.js)
-tests/                  # All tests (unit/, property/, integration/, test_data/)
+web_viewer/             # Web server + viewer
+tests/                  # All tests (unit/, property/, integration/, harness/, test_data/)
+tests/harness/          # Test harness: cli.ts, test_logic.ts, report.ts
 dataset/tests/          # .dfy test files with expected annotations
 dafny-synthesis/        # Git submodule — benchmark dataset
 ```
@@ -24,7 +25,8 @@ npm run build:core                              # Build core TS → dist/
 npm run build:viewer                            # Bundle spans_provider.js
 npm run test:property                           # Property tests (vitest + fast-check)
 npm test -w evaluation                          # Eval tests (vitest)
-node web_viewer/test_logic.js                   # .dfy regression suite
+node web_viewer/test_logic.js                   # .dfy regression suite (legacy)
+npx tsx tests/harness/cli.ts                    # .dfy regression suite
 node --test tests/unit/web_viewer/server.test.js  # Server unit tests
 npx tsx evaluation/src/cli.ts --dataset all     # Full benchmark
 ```
@@ -51,7 +53,7 @@ When `forceMinimization: true`:
 1. `dafny-runner.ts` appends `/z3exe:<wrapper>` to `--boogie` args
 2. Sets env: `PROOFPULSE_Z3_PATH`, `PROOFPULSE_MINIMIZER_SCRIPT`
 3. Wrapper reads stdin → tempfile → calls `minimize_unsat_core_trace.py --z3 <real_z3> --quiet`
-4. Same pattern in `web_viewer/test_logic.js` (resolves paths from project root)
+4. Same pattern in `tests/harness/test_logic.ts` (resolves paths from project root)
 
 ## Comparison Mode
 

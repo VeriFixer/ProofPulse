@@ -85,7 +85,7 @@ method ComputeFib(n: nat) returns (finb: nat)
   ensures finb <= pow(2, 63)
 {
   if n == 1 {
-    Pow2LessThanU64Max();
+    //Pow2LessThanU64Max();
     PowMonotonic(2, 0, 63);
     assert pow(2, 0) == 1;
     assert 1 <= pow(2, 63);
@@ -106,8 +106,8 @@ method ComputeFib(n: nat) returns (finb: nat)
     invariant fib(idx) <= pow(2, idx)
     decreases n - idx
   {
-    FibBoundByPow2(idx);
-    FibBoundByPow2(idx - 1);
+    //FibBoundByPow2(idx);
+    //FibBoundByPow2(idx - 1);
     PowMonotonic(2, idx, 63);
 
     var save := acc1;

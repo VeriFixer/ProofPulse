@@ -53,10 +53,10 @@ export function createDecorationTypes(opacity: number, extensionPath: string): D
       gutterIconSize: "contain",
     }),
     uncoveredInline: vscode.window.createTextEditorDecorationType({
-      textDecoration: "underline wavy rgba(255, 80, 80, 0.8)",
+      // No particular text decoration apllied for now but can change
     }),
     covTestInline: vscode.window.createTextEditorDecorationType({
-      textDecoration: "underline wavy rgba(80, 160, 255, 0.8)",
+      // No particular text decoration apllied for now but can change
     }),
   };
 }
