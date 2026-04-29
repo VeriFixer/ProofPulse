@@ -67,6 +67,21 @@ npm run test:property   # Property-based tests (vitest + fast-check)
 npm test -w evaluation  # Evaluation benchmark tests
 ```
 
+### Testing with Docker
+
+The Docker image includes Dafny, python3, and all dependencies — no local setup required.
+
+```bash
+# Run the full test suite
+docker build -t proofpulse .
+docker run --rm proofpulse
+
+# Run a specific test command
+docker run --rm proofpulse npm run test:unit
+docker run --rm proofpulse npm run test:property
+docker run --rm proofpulse npm test              # Dafny regression only
+```
+
 ### Test infrastructure
 
 The test harness (`tests/harness/`) discovers `.dfy` files under `dataset/tests/`, runs Dafny verification in isolated temp directories, parses the prover log with `@proofpulse/core`, and compares per-line coverage against `//::: L<line> - <Status>` annotations in the source.
@@ -132,30 +147,9 @@ npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --compare-minimization
 | `--force-core-minimization` | off | Enable unsat core minimization |
 | `--compare-minimization` | off | Run twice (baseline vs minimized), report diffs |
 
-## Project structure
-
-```
-├── core/                       # @proofpulse/core — shared TypeScript library
-│   ├── src/                    # types, node, proof-graph, proof, coverage, rendering, serialization, dafny-runner
-│   └── scripts/                # z3-minimizer-wrapper.sh, minimize_unsat_core_trace.py
-├── vscode_extension/           # VSCode extension
-├── web_viewer/                 # HTTP server + coverage graph viewer
-├── evaluation/                 # Benchmark CLI
-├── tests/
-│   ├── harness/                # Test runner (cli.ts, test_logic.ts, report.ts)
-│   ├── unit/                   # Unit tests
-│   ├── property/               # Property-based tests
-│   ├── integration/            # Integration tests
-│   └── test_data/              # Sample fixtures
-├── dataset/
-│   ├── tests/                  # .dfy test files with expected annotations
-│   └── demo/                   # Demo files
-└── package.json                # Root workspace
-```
 
 ## Demos
 
 - Small examples: `dataset/demo/_USECASE_demo_showcase_small_examples.dfy`
 - Bugs and limitations: `dataset/demo/_USECASE_demo_bugs_limitations.dfy`
-- Verus-to-Dafny translation: `dataset/demo/_USECASE_verus_fib_pow_translation.dfy`
 - Demo index: [dataset/demo/README.md](dataset/demo/README.md)

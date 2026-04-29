@@ -1,0 +1,12 @@
+node_modules/
+.git/
+.eval-tmp/
+test-results/
+benchmark-results*.json
+core/dist/
+core/*.tsbuildinfo
+vscode_extension/dist/
+vscode_extension/*.vsix
+web_viewer/spans_provider.js
+.cmd_out.txt
+.run.sh
