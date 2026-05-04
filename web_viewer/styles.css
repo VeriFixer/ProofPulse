@@ -177,6 +177,18 @@ body {
   vertical-align: middle;
 }
 
+.top-badge {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-top-assertion);
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
 /* Right panel */
 .panel {
   width: 520px;
@@ -295,6 +307,10 @@ body {
 .dep-section {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding-top: 12px;
+}
+
+.dep-section + .dep-section {
+  margin-top: 12px;
 }
 
 .dep-section-header {

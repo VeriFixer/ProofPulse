@@ -17,7 +17,9 @@ method Main() {
 
 // Actually line 8 is expected CovComplete that it is what is recevign, this is not buging out as this behaviour is being ignored
 // Changed to uncovered hust for bug test to pass (it must give an error)
-//::: L8 - Uncovered
+//::: L2 - CovComplete
+//::: L3 - CovTest
+//::: L8 - CovComplete
 
 
 

@@ -5,7 +5,8 @@ const pre = dollar('#source');
 const panelBody = dollar('#panel-body');
 const panelTitle = dollar('#panel-title');
 
-let currentDepth = 2;
+let provedByDepth = 2;
+let provesDepth = 2;
 let currentTokenEl = null;
 
 function escapeHtml(s) {
@@ -154,75 +155,31 @@ function statusLabel(status) {
   return `<span class="status-label" style="color:${statusColor(status)}">${status}</span>`;
 }
 
-function renderPanel(tokenEl, proof) {
-    currentTokenEl = tokenEl;
-    const id = tokenEl.dataset.id;
-    const token = proof.proofGraph.getNode(id);
+function renderDepSection({ title, results, depthValue, depthInputId, onDepthChange, proof }) {
+    const section = document.createElement('div');
+    section.className = 'dep-section';
 
-    const displayCode = getNodeDisplayText(token, 60);
-
-    // Panel title: type badge + code snippet
-    panelTitle.innerHTML = typeBadge(token.type) + `<code class="panel-title-code">${escapeHtml(displayCode)}</code>`;
-
-    const results = window.getDependsOn(id, proof, currentDepth) || [];
-    const depIds = results.map(r => r.node.id);
-
-    clearHighlights();
-    tokenEl.classList.add('selected');
-    depIds.forEach(uid => { const el = document.querySelector(`[data-id="${uid}"]`); if (el) el.classList.add('related'); });
-
-    panelBody.innerHTML = '';
-
-    // ── Selected token info card ──
-    const card = document.createElement('div');
-    card.className = 'token-card';
-
-    // Status row: final + internal (if different)
-    const internalStatus = token.covStatusInternal || token.covStatus;
-    let statusHtml = `<div class="token-card-row">${statusDot(token.covStatus)} <strong>Status:</strong> ${statusLabel(token.covStatus)}</div>`;
-    if (internalStatus !== token.covStatus) {
-      statusHtml += `<div class="token-card-row">${statusDot(internalStatus)} <strong>Internal:</strong> ${statusLabel(internalStatus)}</div>`;
-    }
-
-    // Explanation
-    const explanation = statusExplanation(token.covStatus, token.type);
-
-    // Message (proof text)
-    const proofMsg = cleanProoftext(token.prooftext);
-
-    card.innerHTML = statusHtml +
-      `<p class="token-card-hint">${escapeHtml(explanation)}</p>` +
-      (proofMsg ? `<div class="token-card-row"><strong>Message:</strong> <span class="token-card-proof">${escapeHtml(proofMsg)}</span></div>` : '');
-
-    panelBody.appendChild(card);
-
-    // ── Dependencies section ──
-    const depSection = document.createElement('div');
-    depSection.className = 'dep-section';
-
-    // Depth control + dependency count header
-    const depHeader = document.createElement('div');
-    depHeader.className = 'dep-section-header';
-    const totalDeps = results.length;
-    depHeader.innerHTML = `<span class="dep-section-title">Dependencies <span class="dep-count">${totalDeps}</span></span>` +
-      `<div class="depth-control"><label for="depth-input">Depth:</label>` +
-      `<input type="number" id="depth-input" value="${currentDepth}" min="1" />` +
+    const header = document.createElement('div');
+    header.className = 'dep-section-header';
+    const total = results.length;
+    header.innerHTML = `<span class="dep-section-title">${escapeHtml(title)} <span class="dep-count">${total}</span></span>` +
+      `<div class="depth-control"><label>Depth:</label>` +
+      `<input type="number" class="dep-depth-input" id="${depthInputId}" value="${depthValue}" min="1" />` +
       `<small>(0 = unlimited)</small></div>`;
-    depSection.appendChild(depHeader);
+    section.appendChild(header);
 
-    // Wire depth input
-    const depthInput = depHeader.querySelector('#depth-input');
+    const depthInput = header.querySelector(`#${depthInputId}`);
     if (depthInput) {
       depthInput.addEventListener('input', () => {
         const val = parseInt(depthInput.value, 10);
-        currentDepth = isNaN(val) ? 2 : val;
+        onDepthChange(isNaN(val) ? 2 : val);
         if (currentTokenEl && proof) {
           renderPanel(currentTokenEl, proof);
         }
       });
     }
 
-    // Group results by depth
+    // Group by depth
     const byDepth = new Map();
     results.forEach(r => {
       if (!byDepth.has(r.depth)) byDepth.set(r.depth, []);
@@ -232,10 +189,10 @@ function renderPanel(tokenEl, proof) {
     const sortedDepths = Array.from(byDepth.keys()).sort((a, b) => a - b);
     sortedDepths.forEach(depth => {
       const nodes = byDepth.get(depth);
-      const header = document.createElement('div');
-      header.className = 'depth-header';
-      header.textContent = `Depth ${depth} (${nodes.length})`;
-      depSection.appendChild(header);
+      const dh = document.createElement('div');
+      dh.className = 'depth-header';
+      dh.textContent = `Depth ${depth} (${nodes.length})`;
+      section.appendChild(dh);
 
       const ul = document.createElement('ul');
       ul.className = 'dep-list';
@@ -248,17 +205,84 @@ function renderPanel(tokenEl, proof) {
           (node.prooftext ? `<div class="dep-item-proof">${escapeHtml(cleanProoftext(node.prooftext))}</div>` : '');
         ul.appendChild(li);
       });
-      depSection.appendChild(ul);
+      section.appendChild(ul);
     });
 
     if (sortedDepths.length === 0) {
       const empty = document.createElement('p');
       empty.className = 'hint';
-      empty.textContent = 'No dependencies found.';
-      depSection.appendChild(empty);
+      empty.textContent = `No ${title.toLowerCase()} found.`;
+      section.appendChild(empty);
     }
 
-    panelBody.appendChild(depSection);
+    return section;
+}
+
+function renderPanel(tokenEl, proof) {
+    currentTokenEl = tokenEl;
+    const id = tokenEl.dataset.id;
+    const token = proof.proofGraph.getNode(id);
+
+    const displayCode = getNodeDisplayText(token, 60);
+
+    // Panel title: type badge + top-assertion badge + code snippet
+    const topBadge = token.isTopAssertion
+      ? '<span class="top-badge">⬆ Top</span>'
+      : '';
+    panelTitle.innerHTML = typeBadge(token.type) + topBadge + `<code class="panel-title-code">${escapeHtml(displayCode)}</code>`;
+
+    // Get directional neighbors
+    const provedByResults = window.getProvedBy(id, proof, provedByDepth) || [];
+    const provesResults = window.getProves(id, proof, provesDepth) || [];
+    const allDepIds = [
+      ...provedByResults.map(r => r.node.id),
+      ...provesResults.map(r => r.node.id),
+    ];
+
+    clearHighlights();
+    tokenEl.classList.add('selected');
+    allDepIds.forEach(uid => { const el = document.querySelector(`[data-id="${uid}"]`); if (el) el.classList.add('related'); });
+
+    panelBody.innerHTML = '';
+
+    // ── Selected token info card ──
+    const card = document.createElement('div');
+    card.className = 'token-card';
+
+    const internalStatus = token.covStatusInternal || token.covStatus;
+    let statusHtml = `<div class="token-card-row">${statusDot(token.covStatus)} <strong>Status:</strong> ${statusLabel(token.covStatus)}</div>`;
+    if (internalStatus !== token.covStatus) {
+      statusHtml += `<div class="token-card-row">${statusDot(internalStatus)} <strong>Internal:</strong> ${statusLabel(internalStatus)}</div>`;
+    }
+
+    const explanation = statusExplanation(token.covStatus, token.type);
+    const proofMsg = cleanProoftext(token.prooftext);
+
+    card.innerHTML = statusHtml +
+      `<p class="token-card-hint">${escapeHtml(explanation)}</p>` +
+      (proofMsg ? `<div class="token-card-row"><strong>Message:</strong> <span class="token-card-proof">${escapeHtml(proofMsg)}</span></div>` : '');
+
+    panelBody.appendChild(card);
+
+    // ── Proved By section (things used to prove this node) ──
+    panelBody.appendChild(renderDepSection({
+      title: 'Proved By',
+      results: provedByResults,
+      depthValue: provedByDepth,
+      depthInputId: 'provedby-depth-input',
+      onDepthChange: (v) => { provedByDepth = v; },
+      proof,
+    }));
+
+    // ── Proves section (things that use this node) ──
+    panelBody.appendChild(renderDepSection({
+      title: 'Proves',
+      results: provesResults,
+      depthValue: provesDepth,
+      depthInputId: 'proves-depth-input',
+      onDepthChange: (v) => { provesDepth = v; },
+      proof,
+    }));
   }
 
 function attachHandlers(proof) {

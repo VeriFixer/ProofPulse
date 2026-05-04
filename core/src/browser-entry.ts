@@ -4,7 +4,7 @@
  */
 import { CovStatus, TokenType } from "./types.js";
 import { Proof, parseProof } from "./proof.js";
-import { generateSpansFragment, getDependsOn } from "./rendering.js";
+import { generateSpansFragment, getDependsOn, getProvedBy, getProves } from "./rendering.js";
 
 const root: Record<string, unknown> =
   typeof window !== "undefined" ? (window as unknown as Record<string, unknown>)
@@ -30,6 +30,14 @@ root.generateSpansFragment = function (code: string, proof: Proof): string {
 
 root.getDependsOn = function (key: string, proof: Proof, maxDepth?: number): unknown {
   return getDependsOn(key, proof.proofGraph, maxDepth);
+};
+
+root.getProvedBy = function (key: string, proof: Proof, maxDepth?: number): unknown {
+  return getProvedBy(key, proof.proofGraph, maxDepth);
+};
+
+root.getProves = function (key: string, proof: Proof, maxDepth?: number): unknown {
+  return getProves(key, proof.proofGraph, maxDepth);
 };
 
 root.getSampleLog = function (): unknown {

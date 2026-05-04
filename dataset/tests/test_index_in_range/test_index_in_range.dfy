@@ -13,13 +13,6 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
         i := i + 1;
     }
 }
-// Line 9 is cov test as it is only needed for the automatic assertion ex[k] in range on line 10
-// and as none are signalled as directly needed for the outer proof it appears as covTest.
-// L2 is complete as L2 is necessary fir ensureing correctness of second ensure!
-
-// L3 proably is showing lirking axiom bug Is appearing as Uncovered
-// L6 is the assigment bug but with news that already was reported So it appears Uncovered
-
 //::: Name - Checking indexes assertions, probably should modify behaviour
 //::: Description - Simple Zero Vector creation to test index accesses
 //::: L1 - CovComplete
@@ -30,7 +23,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::: L6 - Uncovered
 //::: L7 - CovComplete
 //::: L8 - CovComplete
-//::: L9 - CovTest
+//::: L9 - CovComplete
 //::: L10 - CovComplete
 //::: L11 - CovComplete
 //::: L12 - CovComplete

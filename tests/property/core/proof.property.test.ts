@@ -111,13 +111,13 @@ function computeExpected(
     expected.set(n.id, CovStatus.Uncovered);
   }
 
-  // Phase 1: Postcondition tops → CovComplete for self + all BFS reachable
+  // Phase 1: Postcondition tops → CovComplete for self + all BFS provedBy reachable
   const postTops = graph
     .getAllTopNodes()
     .filter((t) => t.type === TokenType.Postcondition);
   for (const post of postTops) {
     expected.set(post.id, CovStatus.CovComplete);
-    const neighbors = graph.getBFSNeighbors(post.id, true, true);
+    const neighbors = graph.getBFSNeighbors(post.id, true, false);
     if (neighbors) {
       for (const r of neighbors) {
         expected.set(r.node.id, CovStatus.CovComplete);
@@ -125,17 +125,37 @@ function computeExpected(
     }
   }
 
-  // Phase 2: Non-postcondition tops → self CovComplete, neighbors CovTest (if not already CovComplete)
+  // Phase 2: Non-postcondition tops
+  // - No children → stays Uncovered
+  // - Non-manual → self CovComplete
+  // - Manual → self CovComplete only if any child is already CovComplete
+  // - Children: CovComplete for auto assertion tops, CovTest otherwise (if not already CovComplete)
   const nonPostTops = graph
     .getAllTopNodes()
     .filter((t) => t.type !== TokenType.Postcondition);
   for (const top of nonPostTops) {
-    expected.set(top.id, CovStatus.CovComplete);
-    const neighbors = graph.getBFSNeighbors(top.id, true, true);
+    const neighbors = graph.getBFSNeighbors(top.id, true, false);
+    const hasChildren = neighbors != null && neighbors.length > 0;
+
+    if (!hasChildren) {
+      continue;
+    }
+
+    if (top.type !== TokenType.AssertionManual) {
+      expected.set(top.id, CovStatus.CovComplete);
+    }
+
     if (neighbors) {
       for (const r of neighbors) {
+        if (expected.get(r.node.id) === CovStatus.CovComplete) {
+          expected.set(top.id, CovStatus.CovComplete);
+        }
         if (expected.get(r.node.id) !== CovStatus.CovComplete) {
-          expected.set(r.node.id, CovStatus.CovTest);
+          if (top.type === TokenType.AssertionAutomatic) {
+            expected.set(r.node.id, CovStatus.CovComplete);
+          } else {
+            expected.set(r.node.id, CovStatus.CovTest);
+          }
         }
       }
     }
@@ -360,12 +380,9 @@ function computeExpectedCovStatus(
           }
 
           let anyParents = false;
-          const alias = node.topAliasNode;
-          if (alias) {
-            const postParents = graph.getBFSNeighbors(alias.id, false);
-            if (postParents && postParents.length > 1) {
-              anyParents = true;
-            }
+          const postParents = graph.getBFSNeighbors(node.id, false);
+          if (postParents && postParents.length > 1) {
+            anyParents = true;
           }
 
           if (anyParents && anyChildCovComplete) {

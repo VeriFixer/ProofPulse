@@ -74,6 +74,7 @@ export async function runDafny(
       return { log: "", exitCode: -1, error: `z3-minimizer-wrapper.sh not found at ${wrapperPath}` };
     }
 
+    const pythonBin = options?.pythonPath ?? "python";
     const z3Path = resolveZ3Path(dafnyBin);
     const wrapperLog = join(tmpDir, "wrapper.log");
 
@@ -82,6 +83,7 @@ export async function runDafny(
 
     spawnEnv = {
       PROOFPULSE_Z3_PATH: z3Path,
+      PROOFPULSE_PYTHON_PATH: pythonBin,
       PROOFPULSE_WRAPPER_LOG: wrapperLog,
     };
 

@@ -111,3 +111,15 @@ export function getDependsOn(key: string, graph: ProofGraph, maxDepth?: number):
   if (!graph.hasNode(key)) return null;
   return graph.getBFSNeighbors(key, false, true, maxDepth);
 }
+
+/** Return BFS neighbors in the provedBy direction — things used to prove this node. */
+export function getProvedBy(key: string, graph: ProofGraph, maxDepth?: number): BFSResult[] | null {
+  if (!graph.hasNode(key)) return null;
+  return graph.getBFSNeighbors(key, true, false, maxDepth);
+}
+
+/** Return BFS neighbors in the proves direction — things this node is used to prove. */
+export function getProves(key: string, graph: ProofGraph, maxDepth?: number): BFSResult[] | null {
+  if (!graph.hasNode(key)) return null;
+  return graph.getBFSNeighbors(key, false, false, maxDepth);
+}

@@ -10,6 +10,7 @@ export enum TokenType {
   Postcondition = "Postcondition",
   AssertionManual = "AssertionManual",
   AssertionAutomatic = "AssertionAutomatic",
+  Call = "Call",
   CodeLine = "CodeLine",
 }
 
@@ -39,6 +40,7 @@ export interface DafnyResult {
 
 export interface DafnyOptions {
   dafnyPath?: string;
+  pythonPath?: string;
   timeoutSeconds?: number;
   forceMinimization?: boolean;
 }

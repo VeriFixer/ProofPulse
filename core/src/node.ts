@@ -7,7 +7,6 @@ export class Node {
   end: SourceLocation;
   prooftext: string;
   isTopAssertion: boolean;
-  topAliasNode: Node | null;
   covStatus: CovStatus;
   covStatusInternal: CovStatus;
   type: TokenType;
@@ -29,7 +28,6 @@ export class Node {
     this.end = { line: eLine, col: eCol };
 
     this.isTopAssertion = isTopAssertion;
-    this.topAliasNode = null;
 
     this.covStatus = CovStatus.Uncovered;
     this.covStatusInternal = CovStatus.Uncovered;
@@ -48,6 +46,12 @@ export class Node {
     this.isTopAssertion = isTopAssertion;
     if (this.prooftext.includes("this postcondition holds")) {
       this.type = TokenType.Postcondition;
+    } else if (this.prooftext.includes("precondition always holds")) {
+      this.type = TokenType.Precondition;
+    } else if (this.prooftext.includes("ensures clause at")) {
+      this.type = TokenType.Call;
+    } else if (this.prooftext.includes("requires clause at")) {
+      this.type = TokenType.Call;
     } else if (this.prooftext.includes("ensures clause")) {
       this.type = TokenType.Postcondition;
     } else if (this.prooftext.includes("requires clause")) {
@@ -60,7 +64,9 @@ export class Node {
       this.prooftext.includes("which is subject to definite-assignment rules, is always initialized at this return point") ||
       this.prooftext.includes("which is subject to definite-assignment rules, is always initialized here") || 
       this.prooftext.includes("decreases expression is bounded below by") ||
-      this.prooftext.includes("value always satisfies the subset constraints of")
+      this.prooftext.includes("value always satisfies the subset constraints of") || 
+      this.prooftext.includes("an array element is in the enclosing context's modifies clause") || 
+      this.prooftext.includes("sufficient reads clause to read array element") 
     ) {
       this.type = TokenType.AssertionAutomatic;
     } else if (this.isTopAssertion) {

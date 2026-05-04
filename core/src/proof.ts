@@ -97,27 +97,24 @@ export class Proof {
         }
       } else if (currentTopAssertion != null) {
         if (currentBlock === BlockType.ProofDep) {
-          // Alias detection: if token range contains the top assertion point
+          // Promotion: if proof dep's range contains the top assertion's start point,
+          // the range-node replaces the phantom point-node as the top node.
+          // This handles: manual assertions (same start), ensures clauses (wider range
+          // starting before the postcondition point), requires clauses (same pattern).
           if (
+            token.id !== currentTopAssertion.id &&
             token.start.line <= currentTopAssertion.start.line &&
             currentTopAssertion.start.line <= token.end.line &&
             token.start.col <= currentTopAssertion.start.col &&
             currentTopAssertion.start.col <= token.end.col
           ) {
-            if (!currentTopAssertion.topAliasNode) {
-              currentTopAssertion.topAliasNode = token;
-            } else {
-              const rangePoss = token.end.col - token.start.col;
-              const rangeActual =
-                currentTopAssertion.topAliasNode.end.col -
-                currentTopAssertion.topAliasNode.start.col;
-              if (rangePoss > rangeActual) {
-                currentTopAssertion.topAliasNode = token;
-              }
-            }
+            token.updateIsTopAssertion(true);
+            this.proofGraph.replaceTopNode(currentTopAssertion, token);
+            currentTopAssertion = token;
+            // Don't add an edge from the top to itself — they merged.
+          } else {
+            this.proofGraph.addEdge(currentTopAssertion.id, token.id);
           }
-
-          this.proofGraph.addEdge(currentTopAssertion.id, token.id);
 
           // "ensures clause at" postcall pattern for cross-method postcondition connections
           const postcall =
@@ -139,7 +136,43 @@ export class Proof {
             } else {
               posttoken = this.proofGraph.getNode(posttoken.id)!;
             }
+
+            // A new brnach with only one elemnt has to be created with the call
+            token.isTopAssertion = true;
+            if (!this.proofGraph.hasTopNode(token.id)) {
+              this.proofGraph.addTopNode(token);
+            }
+
             this.proofGraph.addEdge(token.id, posttoken.id);
+          }
+
+          // "requires clause at" precall pattern for cross-method precondition connections
+          const precall =
+            /requires clause at\s+([^\s()]+)\((\d+),(\d+)\)-\((\d+),(\d+)\)/;
+          const prm = line.match(precall);
+          if (prm) {
+            const file = prm[1].trim();
+            const sLine = parseInt(prm[2], 10);
+            const sCol = parseInt(prm[3], 10);
+            const eLine = parseInt(prm[4], 10);
+            const eCol = parseInt(prm[5], 10);
+
+            let pretoken = new Node(
+              file, sLine, sCol, eLine, eCol,
+              "Pre called externally", isTopAssertion,
+            );
+            if (!this.proofGraph.hasNode(pretoken.id)) {
+              this.proofGraph.addNode(pretoken);
+            } else {
+              pretoken = this.proofGraph.getNode(pretoken.id)!;
+            }
+
+            // A new brnach with only one elemnt has to be created with the call
+            token.isTopAssertion = true;
+            if (!this.proofGraph.hasTopNode(token.id)) {
+              this.proofGraph.addTopNode(token);
+            }
+            this.proofGraph.addEdge(token.id, pretoken.id);
           }
         }
       }
@@ -179,7 +212,7 @@ export class Proof {
     );
     for (const post of allPostconditions) {
       post.covStatusInternal = CovStatus.CovComplete;
-      const postneighbors = this.proofGraph.getBFSNeighbors(post.id, true, true);
+      const postneighbors = this.proofGraph.getBFSNeighbors(post.id, true, false);
       if (postneighbors) {
         for (const result of postneighbors) {
           result.node.covStatusInternal = CovStatus.CovComplete;
@@ -187,21 +220,45 @@ export class Proof {
       }
     }
 
-    // CovStatusInternal: BFS from non-postcondition top nodes → CovTest (if not already CovComplete)
     const allTopNotPost = allTopTokensArray.filter(
       (t) => t.type !== TokenType.Postcondition,
     );
+    
+    // All other top nodes are covComplete 
+    // If top is assertion automatic then childs are also complete else childs are covTest
+    // Call and other types are covTest
+    // Exception: No children all stay Uncovered
+
     for (const top of allTopNotPost) {
-      top.covStatusInternal = CovStatus.CovComplete;
-      const neighbors = this.proofGraph.getBFSNeighbors(top.id, true, true);
+      const neighbors = this.proofGraph.getBFSNeighbors(top.id, true, false);
+      const hasChildren = neighbors != null && neighbors.length > 0;
+      if (!hasChildren) {
+        // If not has children is vacuously True stays uncovered
+        continue
+      }
+      if(top.type != TokenType.AssertionManual){
+        // Assertion manual only marked as complete if any cihld of it is marked as complete
+        top.covStatusInternal = CovStatus.CovComplete;
+      }
       if (neighbors) {
         for (const result of neighbors) {
-          if (result.node.covStatusInternal !== CovStatus.CovComplete) {
-            result.node.covStatusInternal = CovStatus.CovTest;
+          if (result.node.covStatusInternal == CovStatus.CovComplete) {
+            top.covStatusInternal = CovStatus.CovComplete;
+          }
+          if(top.type == TokenType.AssertionAutomatic){
+               result.node.covStatusInternal = CovStatus.CovComplete
+               // Dont like the aproach but it seems that is reasonalbe
+               result.node.covStatus = CovStatus.CovComplete
+          } 
+          else if(result.node.covStatusInternal !== CovStatus.CovComplete) {
+               result.node.covStatusInternal = CovStatus.CovTest;    
+            }
           }
         }
       }
-    }
+    
+
+    // PER TOKEN AFTER INTERNAL IS CREATED 
 
     // CovStatus per token class
     const allTokensArray = this.proofGraph.getAllNodes();
@@ -212,14 +269,6 @@ export class Proof {
     );
     for (const token of allCodeLines) {
       token.covStatus = token.covStatusInternal;
-    }
-
-    // AutoAssertions: always CovComplete
-    const allAutoAssertions = allTokensArray.filter(
-      (t) => t.type === TokenType.AssertionAutomatic,
-    );
-    for (const token of allAutoAssertions) {
-      token.covStatus = CovStatus.CovComplete;
     }
 
     // ManualAssertions: CovComplete only if internal is CovComplete, else Uncovered
@@ -234,6 +283,22 @@ export class Proof {
       }
     }
 
+    // AssertionAutomatic: Marked as always CovComplete (even though can sometimes not be)
+    // Tool limitation
+    const allAutomaticAssertions = allTokensArray.filter(
+      (t) => t.type === TokenType.AssertionAutomatic,
+    );
+    for (const token of allAutomaticAssertions) {
+      token.covStatus = CovStatus.CovComplete;
+    }
+
+    const allCall = allTokensArray.filter(
+      (t) => t.type === TokenType.Call,
+    );
+    for (const token of allCall) {
+      token.covStatus = token.covStatusInternal;
+    }
+
     // Preconditions: equal to CovStatusInternal
     const allPreconditions = allTokensArray.filter(
       (t) => t.type === TokenType.Precondition,
@@ -244,7 +309,7 @@ export class Proof {
 
     // Postconditions (top): alias/parent/child policy
     for (const post of allPostconditions) {
-      const postneighbors = this.proofGraph.getBFSNeighbors(post.id, true, true);
+      const postneighbors = this.proofGraph.getBFSNeighbors(post.id, true, false);
       let anychildIsCovComplete = false;
       if (postneighbors) {
         for (const result of postneighbors) {
@@ -259,20 +324,15 @@ export class Proof {
       }
 
       let anyParents = false;
-      const alias = post.topAliasNode;
-      if (alias) {
-        const postParents = this.proofGraph.getBFSNeighbors(alias.id, false);
-        if (postParents && postParents.length > 1) {
-          anyParents = true;
-        }
+      const postParents = this.proofGraph.getBFSNeighbors(post.id, false);
+      if (postParents && postParents.length > 0) {
+        anyParents = true;
       }
 
       if (anyParents && anychildIsCovComplete) {
         post.covStatus = CovStatus.CovComplete;
       } else if (anychildIsCovComplete) {
         post.covStatus = CovStatus.CovTest;
-      } else {
-        post.covStatus = CovStatus.Uncovered;
       }
     }
 

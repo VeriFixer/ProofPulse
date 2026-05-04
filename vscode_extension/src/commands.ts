@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import { runDafny, parseProof } from "@proofpulse/core";
-import { getDafnyPath, getDecorationOpacity, getForceMinimization, getTimeout } from "./config";
+import { getDafnyPath, getDecorationOpacity, getForceMinimization, getPythonPath, getTimeout } from "./config";
 import { applyDecorations } from "./decorations";
 
 let outputChannel: vscode.OutputChannel | undefined;
@@ -34,6 +34,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
 
         const result = await runDafny(filePath, {
           dafnyPath,
+          pythonPath: getPythonPath(),
           timeoutSeconds: timeout,
           forceMinimization: forceMin,
         });
@@ -104,8 +105,9 @@ export function registerGetProofReport(context: vscode.ExtensionContext): void {
           "server.js",
         ).fsPath;
 
-        const child = spawn("node", [serverScript, "--file", filePath,
+        const child = spawn(process.execPath, [serverScript, "--file", filePath,
           ...(getDafnyPath() !== "dafny" ? ["--dafny-path", getDafnyPath()] : []),
+          ...(getPythonPath() !== "python" ? ["--python-path", getPythonPath()] : []),
           ...(getTimeout() !== 60 ? ["--timeout", String(getTimeout())] : []),
           ...(getForceMinimization() ? ["--force-minimization"] : []),
         ], {

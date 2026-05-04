@@ -14,15 +14,17 @@ Analyses Dafny prover logs and shows proof coverage directly in the editor.
 ## Requirements
 
 - [Dafny](https://github.com/dafny-lang/dafny) CLI must be installed and available in your PATH (or configured via `proofpulse.dafnyPath`)
+- [Python 3](https://www.python.org/) must be available as `python` on PATH (or configured via `proofpulse.pythonPath`) — required only when `forceMinimization` is enabled
 
 ## Settings
 
 | Setting | Default | Description |
 |---|---|---|
 | `proofpulse.dafnyPath` | `"dafny"` | Path to the Dafny executable |
+| `proofpulse.pythonPath` | `"python"` | Path to the Python interpreter (needed for Z3 unsat core minimization) |
 | `proofpulse.timeoutSeconds` | `60` | Verification timeout in seconds |
 | `proofpulse.runOnSave` | `true` | Automatically run analysis when a `.dfy` file is saved |
-| `proofpulse.forceMinimization` | `true` | Enable unsat core minimization for Z3 solver calls. Uses an interactive z3 wrapper that intercepts solver queries and minimizes unsat cores. Slower but produces tighter proof dependencies. Requires `python3` on PATH. |
+| `proofpulse.forceMinimization` | `true` | Enable unsat core minimization for Z3 solver calls. Uses an interactive z3 wrapper that intercepts solver queries and minimizes unsat cores. Slower but produces tighter proof dependencies. Requires Python on PATH (or configured via `proofpulse.pythonPath`). |
 | `proofpulse.decorationOpacity` | `0.08` | Opacity for line background decorations (`0.0`–`0.5`). Higher values make coverage highlights more visible. |
 
 ## Usage

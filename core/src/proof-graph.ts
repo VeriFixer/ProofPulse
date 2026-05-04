@@ -45,6 +45,52 @@ export class ProofGraph {
     return this.topNodes.has(id);
   }
 
+  removeTopNode(id: string): void {
+    this.topNodes.delete(id);
+  }
+
+  removeNode(id: string): void {
+    const node = this.nodes.get(id);
+    if (node) {
+      for (const child of node.provedBy) {
+        child.proves.delete(node);
+      }
+      for (const parent of node.proves) {
+        parent.provedBy.delete(node);
+      }
+      this.nodes.delete(id);
+    }
+  }
+
+  /**
+   * Replace oldNode with newNode: transfer all edges, update maps.
+   * The old node is removed from both nodes and topNodes.
+   */
+  replaceTopNode(oldNode: Node, newNode: Node): void {
+    // Transfer edges: anything oldNode proves, newNode now proves
+    for (const parent of oldNode.proves) {
+      parent.provedBy.delete(oldNode);
+      parent.provedBy.add(newNode);
+      newNode.proves.add(parent);
+    }
+    // Transfer edges: anything oldNode is provedBy, newNode now is provedBy
+    for (const child of oldNode.provedBy) {
+      child.proves.delete(oldNode);
+      // Skip self-edge if newNode is already in the child set
+      if (child.id === newNode.id) continue;
+      child.proves.add(newNode);
+      newNode.provedBy.add(child);
+    }
+
+    // Remove old from maps
+    this.nodes.delete(oldNode.id);
+    this.topNodes.delete(oldNode.id);
+
+    // Ensure new is in maps
+    this.nodes.set(newNode.id, newNode);
+    this.topNodes.set(newNode.id, newNode);
+  }
+
   addEdge(fromId: string, toId: string): void {
     const from = this.getNode(fromId);
     const to = this.getNode(toId);
