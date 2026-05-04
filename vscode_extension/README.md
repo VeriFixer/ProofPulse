@@ -13,18 +13,18 @@ Analyses Dafny prover logs and shows proof coverage directly in the editor.
 
 ## Requirements
 
-- [Dafny](https://github.com/dafny-lang/dafny) CLI must be installed and available in your PATH (or configured via `proofpulse.dafnyPath`)
+- [Dafny](https://github.com/dafny-lang/dafny) CLI should be available in your PATH, or the official [Dafny VS Code extension](https://marketplace.visualstudio.com/items?itemName=dafny-lang.ide-vscode) must be installed so ProofPulse can fall back to its bundled Dafny and Z3 binaries
 - [Python 3](https://www.python.org/) must be available as `python` on PATH (or configured via `proofpulse.pythonPath`) — required only when `forceMinimization` is enabled
 
 ## Settings
 
 | Setting | Default | Description |
 |---|---|---|
-| `proofpulse.dafnyPath` | `"dafny"` | Path to the Dafny executable |
+| `proofpulse.dafnyPath` | `"dafny"` | Path to the Dafny executable. When left at the default value, ProofPulse checks PATH first, then the official Dafny VS Code extension bundle, and errors out if neither is available. |
 | `proofpulse.pythonPath` | `"python"` | Path to the Python interpreter (needed for Z3 unsat core minimization) |
 | `proofpulse.timeoutSeconds` | `60` | Verification timeout in seconds |
 | `proofpulse.runOnSave` | `true` | Automatically run analysis when a `.dfy` file is saved |
-| `proofpulse.forceMinimization` | `true` | Enable unsat core minimization for Z3 solver calls. Uses an interactive z3 wrapper that intercepts solver queries and minimizes unsat cores. Slower but produces tighter proof dependencies. Requires Python on PATH (or configured via `proofpulse.pythonPath`). |
+| `proofpulse.forceMinimization` | `true` | Enable unsat core minimization for Z3 solver calls. Uses an interactive z3 wrapper that intercepts solver queries and minimizes unsat cores. Slower but produces tighter proof dependencies. Z3 is resolved from PATH first, then the bundled Dafny extension, and Python is required on PATH (or configured via `proofpulse.pythonPath`). |
 | `proofpulse.decorationOpacity` | `0.08` | Opacity for line background decorations (`0.0`–`0.5`). Higher values make coverage highlights more visible. |
 
 ## Usage

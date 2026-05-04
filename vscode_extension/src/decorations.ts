@@ -46,8 +46,8 @@ export function createDecorationTypes(opacity: number, extensionPath: string): D
     }),
     covTestGutter: vscode.window.createTextEditorDecorationType({
       isWholeLine: true,
-      backgroundColor: `rgba(0, 120, 255, ${opacity})`,
-      overviewRulerColor: "rgba(0, 120, 255, 0.6)",
+      backgroundColor: `rgba(255, 200, 0, ${opacity})`,
+      overviewRulerColor: "rgba(255, 200, 0, 0.6)",
       overviewRulerLane: vscode.OverviewRulerLane.Left,
       gutterIconPath: path.join(extensionPath, "media", "gutter-covtest.svg"),
       gutterIconSize: "contain",
@@ -95,8 +95,8 @@ export function applyDecorations(
   const covTestNodesByLine = new Map<number, Node[]>();
   for (const node of nodes) {
     const map = node.covStatus === CovStatus.Uncovered ? uncoveredNodesByLine
-              : node.covStatus === CovStatus.CovTest ? covTestNodesByLine
-              : null;
+      : node.covStatus === CovStatus.CovTest ? covTestNodesByLine
+        : null;
     if (!map) continue;
     for (let line = node.start.line; line <= node.end.line; line++) {
       const idx = line - 1;
@@ -141,12 +141,11 @@ export function applyDecorations(
       if (lineNodes.length > 0) {
         for (const n of lineNodes) {
           const shortSnippet = nodeSnippet(n);
-
-          hover.appendMarkdown(`🔵 \`${shortSnippet}\` *(Line ${n.start.line}:${n.start.col})*  \n`);
+          hover.appendMarkdown(`🟡 \`${shortSnippet}\` *(Line ${n.start.line}:${n.start.col})*  \n`);
           hover.appendMarkdown(`${covTestExplanation(n.type)}  \n\n`);
         }
       } else {
-        hover.appendMarkdown(`🔵 **CovTest** — covered by test assertions only  \n\n`);
+          hover.appendMarkdown(`🟡 **CovTest** — covered by test assertions only  \n\n`);
       }
 
       hover.appendMarkdown(`---\n`);

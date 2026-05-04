@@ -34,7 +34,8 @@ Or via the UI: Extensions sidebar → `...` → "Install from VSIX..." → selec
 
 | Setting | Default | Description |
 |---|---|---|
-| `proofpulse.dafnyPath` | `"dafny"` | Path to the Dafny executable |
+| `proofpulse.dafnyPath` | `"dafny"` | Path to the Dafny executable. ProofPulse checks PATH first, then the official Dafny VS Code extension bundle, and errors out if neither is available |
+| `proofpulse.pythonPath` | `"python"` | Path to the Python interpreter (for Z3 minimization) |
 | `proofpulse.timeoutSeconds` | `60` | Verification timeout in seconds |
 | `proofpulse.forceMinimization` | `false` | Route Z3 calls through unsat core minimization pipeline |
 
@@ -61,7 +62,7 @@ docker run -p 8080:8080 -v /path/to/file.dfy:/app/input.dfy proofpulse \
 
 ```bash
 npm run test:all        # Run ALL test suites with clear separation
-npm test                # Dafny regression suite only (requires dafny in PATH)
+npm test                # Dafny regression suite only (requires dafny in PATH or the official Dafny VS Code extension)
 npm run test:unit       # Unit tests (vitest)
 npm run test:property   # Property-based tests (vitest + fast-check)
 npm test -w evaluation  # Evaluation benchmark tests
@@ -118,7 +119,7 @@ import { runDafny } from "@proofpulse/core";
 const result = await runDafny("file.dfy", { forceMinimization: true });
 ```
 
-Requires `python3` and `z3` in PATH.
+Requires `python` in PATH (or configure `pythonPath` in options / `proofpulse.pythonPath` in VSCode). Z3 is resolved from PATH first, then the official Dafny VS Code extension bundle, and errors out if neither is available.
 
 ## Evaluation Benchmark
 
@@ -153,3 +154,52 @@ npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --compare-minimization
 - Small examples: `dataset/demo/_USECASE_demo_showcase_small_examples.dfy`
 - Bugs and limitations: `dataset/demo/_USECASE_demo_bugs_limitations.dfy`
 - Demo index: [dataset/demo/README.md](dataset/demo/README.md)
+
+
+## WILL HAVE TO REDO THE LOGIC 
+
+
+Simple Case:
+Post 
+  l 1
+  l 2
+  A 3
+  Pre 1 
+
+A 3 
+  l 6 
+  l 7 
+  l 8
+
+Graph 
+Post -> l 1
+     -> l 2
+     -> l 3
+     -> A 3 -> l 6
+            -> l 7
+            -> l 8 
+     -> Pre 1 
+
+
+Calls case precondiiton 
+
+Post
+  l 1
+  l 2
+  l 3
+
+Call Post (main line) (If this is automatic, and i consider the same as postcondiiotn rip)
+  r 1 
+
+Will have to rethink better this with all example complexity
+
+O principal problema parece sser que apenas devia ver a coverage na direcao que desce do topo para baixo e nao andar com ligacoes intermedias 
+
+It seems that i will have to subdivide assertions automatic in two types
+Calls, and the rest. Calls will allow me to distinchuish these cases of pre/post condiiton only used on calls (directly and easy)
+
+2 improvemnts
+- BFS just down direction (this will catch some bugs for sure)
+- In the vizualization i can also show in two parts divided the botton direction and the top one.
+- 2 types of automtic assertions
+

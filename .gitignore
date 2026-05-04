@@ -15,6 +15,10 @@ vscode_extension/*.vsix
 # Bundled browser file (built from core)
 web_viewer/spans_provider.js
 
+# Generated artifacts (should never be committed)
+web_viewer/prover_log.txt
+web_viewer/source_code.dfy
+
 # Test results
 test-results/
 

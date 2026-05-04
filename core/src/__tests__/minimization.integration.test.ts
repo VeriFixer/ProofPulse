@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { execSync } from "node:child_process";
+import { execFileSync, execSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { resolve, join } from "node:path";
 import { runDafny } from "../dafny-runner.js";
@@ -10,16 +10,29 @@ const MINIMIZER = join(SCRIPTS_DIR, "minimize_unsat_core_trace.py");
 const FIXTURE = resolve(__dirname, "fixtures", "output.smt2.1");
 const TRIVIAL_DFY = resolve(__dirname, "fixtures", "trivial.dfy");
 
-function findZ3(): string | null {
-  try {
-    return execSync("which z3", { encoding: "utf-8" }).trim();
-  } catch {
-    return null;
+function findExecutable(name: string): string | null {
+  const pathEnv = process.env.PATH ?? "";
+  const parts = pathEnv.split(process.platform === "win32" ? ";" : ":");
+  const exts = process.platform === "win32" ? [".exe", ".cmd", ".bat", ""] : [""];
+  for (const p of parts) {
+    if (!p) continue;
+    for (const ext of exts) {
+      try {
+        const candidate = join(p, name + ext);
+        // eslint-disable-next-line node/no-sync
+        const stat = require("fs").statSync(candidate);
+        if (stat && stat.isFile()) return candidate;
+      } catch {
+        // ignore
+      }
+    }
   }
+  return null;
 }
 
-const z3Path = findZ3();
-const describeIfZ3 = z3Path ? describe : describe.skip;
+const z3Path = findExecutable("z3");
+const pythonBin = findExecutable("python") ?? findExecutable("python3");
+const describeIfZ3 = z3Path && pythonBin ? describe : describe.skip;
 
 function isDafnyAvailable(): boolean {
   try {
@@ -35,8 +48,10 @@ const hasDafny = isDafnyAvailable();
 describeIfZ3("minimization integration", () => {
   it("wrapper + real Z3 on fixture: aux$assume$id14 absent from minimized unsat core", () => {
     const input = readFileSync(FIXTURE, "utf-8");
-    const result = execSync(
-      `bash "${WRAPPER}"`,
+    const wrapperPy = join(SCRIPTS_DIR, "z3-minimizer-wrapper.py");
+    const result = execFileSync(
+      pythonBin!,
+      [wrapperPy],
       {
         input,
         encoding: "utf-8",
