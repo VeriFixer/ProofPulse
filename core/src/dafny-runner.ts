@@ -162,33 +162,32 @@ export function resolveDafnyPath(dafnyPath: string): string | undefined {
 
 /**
  * Resolve the z3 binary bundled inside a Dafny installation.
- * Resolve order: PATH first, then next to an absolute Dafny install, then the bundled extension.
+ * Prefer a z3 that ships with the selected Dafny binary to avoid version
+ * mismatches between Dafny/Boogie and an unrelated z3 on PATH.
  */
 export function resolveZ3Path(dafnyPath: string): string | undefined {
-  const pathZ3 = resolveExecutableInPath("z3");
-  if (pathZ3) {
-    return pathZ3;
-  }
-
   try {
-    if (!isAbsolute(dafnyPath)) {
-      return resolveBundledZ3Path();
-    }
-
-    const dafnyDir = dirname(dafnyPath);
-    const z3BinDir = join(dafnyDir, "z3", "bin");
-    if (existsSync(z3BinDir)) {
-      const entries = readdirSync(z3BinDir, { withFileTypes: true })
-        .filter((entry) => entry.isFile() && entry.name.startsWith("z3"))
-        .map((entry) => entry.name)
-        .sort(compareVersionLikePaths);
-      if (entries.length > 0) {
-        const candidate = join(z3BinDir, entries[entries.length - 1]);
-        if (existsSync(candidate)) return candidate;
+    if (isAbsolute(dafnyPath)) {
+      const dafnyDir = dirname(dafnyPath);
+      const z3BinDir = join(dafnyDir, "z3", "bin");
+      if (existsSync(z3BinDir)) {
+        const entries = readdirSync(z3BinDir, { withFileTypes: true })
+          .filter((entry) => entry.isFile() && entry.name.startsWith("z3"))
+          .map((entry) => entry.name)
+          .sort(compareVersionLikePaths);
+        if (entries.length > 0) {
+          const candidate = join(z3BinDir, entries[entries.length - 1]);
+          if (existsSync(candidate)) return candidate;
+        }
       }
     }
   } catch {
     // fall through
+  }
+
+  const pathZ3 = resolveExecutableInPath("z3");
+  if (pathZ3) {
+    return pathZ3;
   }
 
   return resolveBundledZ3Path();
