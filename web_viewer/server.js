@@ -147,12 +147,12 @@ export async function computeCoverage(filePath, options) {
 
 /**
  * Parse CLI arguments from argv.
- * Supports: --file <path> --dafny-path <path> --python-path <path> --timeout <sec> --force-minimization
+ * Supports: --file <path> --dafny-path <path> --timeout <sec> --force-minimization
  * @param {string[]} argv
- * @returns {{ file: string|null, dafnyPath?: string, pythonPath?: string, timeout?: number, forceMinimization?: boolean }}
+ * @returns {{ file: string|null, dafnyPath?: string, timeout?: number, forceMinimization?: boolean }}
  */
 function parseCLIArgs(argv) {
-  const result = { file: null, dafnyPath: undefined, pythonPath: undefined, timeout: undefined, forceMinimization: undefined };
+  const result = { file: null, dafnyPath: undefined, timeout: undefined, forceMinimization: undefined };
   for (let i = 0; i < argv.length; i++) {
     switch (argv[i]) {
       case '--file':
@@ -160,9 +160,6 @@ function parseCLIArgs(argv) {
         break;
       case '--dafny-path':
         result.dafnyPath = argv[++i];
-        break;
-      case '--python-path':
-        result.pythonPath = argv[++i];
         break;
       case '--timeout':
         result.timeout = Number(argv[++i]);
@@ -180,14 +177,13 @@ const isMain = process.argv[1] && resolve(process.argv[1]) === resolve(fileURLTo
 if (isMain) {
   const args = parseCLIArgs(process.argv);
   if (!args.file) {
-    process.stderr.write('Usage: node server.js --file <path.dfy> [--dafny-path <path>] [--python-path <path>] [--timeout <sec>] [--force-minimization]\n');
+    process.stderr.write('Usage: node server.js --file <path.dfy> [--dafny-path <path>] [--timeout <sec>] [--force-minimization]\n');
     process.exit(1);
   }
 
   try {
     const coverageData = await computeCoverage(args.file, {
       dafnyPath: args.dafnyPath,
-      pythonPath: args.pythonPath,
       timeoutSeconds: args.timeout,
       forceMinimization: args.forceMinimization,
     });

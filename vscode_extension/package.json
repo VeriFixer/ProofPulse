@@ -55,11 +55,6 @@
           "default": "dafny",
           "description": "Path to the Dafny executable"
         },
-        "proofpulse.pythonPath": {
-          "type": "string",
-          "default": "python",
-          "description": "Path to the Python interpreter (required for Z3 unsat core minimization)"
-        },
         "proofpulse.timeoutSeconds": {
           "type": "number",
           "default": 60,

@@ -35,7 +35,7 @@ Or via the UI: Extensions sidebar → `...` → "Install from VSIX..." → selec
 | Setting | Default | Description |
 |---|---|---|
 | `proofpulse.dafnyPath` | `"dafny"` | Path to the Dafny executable. ProofPulse checks PATH first, then the official Dafny VS Code extension bundle, and errors out if neither is available |
-| `proofpulse.pythonPath` | `"python"` | Path to the Python interpreter (for Z3 minimization) |
+
 | `proofpulse.timeoutSeconds` | `60` | Verification timeout in seconds |
 | `proofpulse.forceMinimization` | `false` | Route Z3 calls through unsat core minimization pipeline |
 
@@ -70,7 +70,7 @@ npm test -w evaluation  # Evaluation benchmark tests
 
 ### Testing with Docker
 
-The Docker image includes Dafny, python3, and all dependencies — no local setup required.
+The Docker image includes Dafny and all dependencies — no local setup required.
 
 ```bash
 # Run the full test suite
@@ -112,14 +112,14 @@ Shared TypeScript library used by both the VSCode extension and the web viewer.
 
 ### Z3 Core Minimization
 
-When `forceMinimization` is enabled, Z3 calls are routed through `minimize_unsat_core_trace.py` via a shell wrapper, reducing non-minimal unsat cores for more precise proof dependency attribution.
+When `forceMinimization` is enabled, Z3 calls are routed through a Node.js wrapper that intercepts check-sat/get-unsat-core sequences and iteratively minimizes unsat cores for more precise proof dependency attribution.
 
 ```ts
 import { runDafny } from "@proofpulse/core";
 const result = await runDafny("file.dfy", { forceMinimization: true });
 ```
 
-Requires `python` in PATH (or configure `pythonPath` in options / `proofpulse.pythonPath` in VSCode). Z3 is resolved from PATH first, then the official Dafny VS Code extension bundle, and errors out if neither is available.
+No external dependencies required — the minimization pipeline is pure TypeScript. Z3 is resolved from PATH first, then the official Dafny VS Code extension bundle.
 
 ## Evaluation Benchmark
 
