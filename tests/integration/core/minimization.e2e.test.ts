@@ -24,9 +24,8 @@ function findExecutable(name: string): string | null {
 
 const dafnyBin = findExecutable("dafny");
 const z3Bin = findExecutable("z3");
-const pythonBin = findExecutable("python") ?? findExecutable("python3");
 
-const describeIfEnv = dafnyBin && z3Bin && pythonBin ? describe : describe.skip;
+const describeIfEnv = dafnyBin && z3Bin ? describe : describe.skip;
 
 const TRIVIAL_DFY = resolve(__dirname, "..", "..", "test_data", "trivial.dfy");
 

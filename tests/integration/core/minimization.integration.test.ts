@@ -1,12 +1,11 @@
 import { describe, it, expect } from "vitest";
-import { execFileSync } from "node:child_process";
+import { execFileSync, execSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { resolve, join } from "node:path";
 import { runDafny } from "../../../core/src/dafny-runner.js";
 
-const SCRIPTS_DIR = resolve(__dirname, "..", "..", "..", "core", "scripts");
-const WRAPPER = join(SCRIPTS_DIR, "z3-minimizer-wrapper.sh");
-const MINIMIZER = join(SCRIPTS_DIR, "minimize_unsat_core_trace.py");
+const DIST_DIR = resolve(__dirname, "..", "..", "..", "core", "dist", "minimization");
+const WRAPPER_JS = join(DIST_DIR, "wrapper.js");
 const FIXTURE = resolve(__dirname, "..", "..", "test_data", "output.smt2.1");
 const TRIVIAL_DFY = resolve(__dirname, "..", "..", "test_data", "trivial.dfy");
 
@@ -31,8 +30,7 @@ function findExecutable(name: string): string | null {
 }
 
 const z3Path = findExecutable("z3");
-const pythonBin = findExecutable("python") ?? findExecutable("python3");
-const describeIfZ3 = z3Path && pythonBin ? describe : describe.skip;
+const describeIfZ3 = z3Path ? describe : describe.skip;
 
 function isDafnyAvailable(): boolean {
   try {
@@ -48,10 +46,9 @@ const hasDafny = isDafnyAvailable();
 describeIfZ3("minimization integration", () => {
   it("wrapper + real Z3 on fixture: aux$assume$id14 absent from minimized unsat core", () => {
     const input = readFileSync(FIXTURE, "utf-8");
-    const wrapperPy = join(SCRIPTS_DIR, "z3-minimizer-wrapper.py");
     const result = execFileSync(
-      pythonBin!,
-      [wrapperPy],
+      "node",
+      [WRAPPER_JS],
       {
         input,
         encoding: "utf-8",
@@ -59,7 +56,6 @@ describeIfZ3("minimization integration", () => {
         env: {
           ...process.env,
           PROOFPULSE_Z3_PATH: z3Path!,
-          PROOFPULSE_MINIMIZER_SCRIPT: MINIMIZER,
         },
       },
     );

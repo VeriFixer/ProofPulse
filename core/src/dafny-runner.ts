@@ -240,30 +240,26 @@ export async function runDafny(
       return { log: "", exitCode: -1, error: `z3-minimizer-wrapper.sh not found at ${wrapperPath}` };
     }
 
-    const pythonBin = options?.pythonPath ?? "python";
     const z3Path = resolveZ3Path(dafnyBin);
     if (!z3Path) {
       return { log: "", exitCode: -1, error: "Z3 not found in PATH or in the official Dafny VS Code extension bundle" };
     }
     const wrapperLog = join(tmpDir, "wrapper.log");
 
-    // Ensure wrapper is executable. If the bundled .sh lost exec bit (packaging),
-    // create a temporary shim that invokes the Python wrapper directly.
+    // Ensure wrapper is executable
     let effectiveWrapperPath = wrapperPath;
     if (!isExecutableFile(wrapperPath)) {
-      // Try to find the python wrapper next to the .sh file
-      const wrapperPy = join(scriptsDir, "z3-minimizer-wrapper.py");
-      if (existsSync(wrapperPy)) {
-        const shimPath = join(tmpDir, "z3-minimizer-wrapper");
-        const shimContents = `#!/usr/bin/env sh\nexec \"${pythonBin}\" \"${wrapperPy}\" \"$@\"\n`;
-        try {
-          await writeFile(shimPath, shimContents, "utf8");
-          await chmod(shimPath, 0o755);
-          effectiveWrapperPath = shimPath;
-        } catch {
-          // fallback to bundled .sh even if not executable; let spawn errors surface
-          effectiveWrapperPath = wrapperPath;
-        }
+      // Create a temporary shim that invokes the Node.js wrapper directly
+      const shimPath = join(tmpDir, "z3-minimizer-wrapper");
+      const distWrapper = join(scriptsDir, "..", "dist", "minimization", "wrapper.js");
+      const shimContents = `#!/usr/bin/env sh\nexec node "${distWrapper}" "$@"\n`;
+      try {
+        await writeFile(shimPath, shimContents, "utf8");
+        await chmod(shimPath, 0o755);
+        effectiveWrapperPath = shimPath;
+      } catch {
+        // fallback to bundled .sh even if not executable; let spawn errors surface
+        effectiveWrapperPath = wrapperPath;
       }
     }
 
@@ -272,7 +268,6 @@ export async function runDafny(
 
     spawnEnv = {
       PROOFPULSE_Z3_PATH: z3Path,
-      PROOFPULSE_PYTHON_PATH: pythonBin,
       PROOFPULSE_WRAPPER_LOG: wrapperLog,
     };
 

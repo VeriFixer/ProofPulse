@@ -40,7 +40,6 @@ export interface DafnyResult {
 
 export interface DafnyOptions {
   dafnyPath?: string;
-  pythonPath?: string;
   timeoutSeconds?: number;
   forceMinimization?: boolean;
 }

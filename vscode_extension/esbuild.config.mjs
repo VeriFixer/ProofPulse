@@ -1,5 +1,5 @@
 import * as esbuild from "esbuild";
-import { cpSync, mkdirSync, writeFileSync } from "node:fs";
+import { cpSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -55,15 +55,26 @@ function copyAssets() {
   // Declare ESM so Node doesn't warn about module type
   writeFileSync(resolve(webDest, "package.json"), '{"type":"module"}\n');
 
-  // core/scripts/ — dafny-runner resolves via resolve(__dirname, '..', 'scripts')
-  // extension.js: __dirname=dist/ → needs <ext>/scripts/
+  // core/scripts/ — shell shim that invokes node wrapper
+  // extension.js: __dirname=dist/ → needs <ext>/dist/scripts/
   // server.js:    __dirname=dist/web_viewer/ → needs dist/scripts/
   const scriptsSrc = resolve(__dirname, "..", "core", "scripts");
-
-  // Single copy at dist/scripts/ — both extension.js and server.js resolve here
   const scriptsDist = resolve(__dirname, "dist", "scripts");
+
+  // Clean stale scripts dir before copying
+  rmSync(scriptsDist, { recursive: true, force: true });
   mkdirSync(scriptsDist, { recursive: true });
   cpSync(scriptsSrc, scriptsDist, { recursive: true });
+
+  // core/dist/minimization/ — compiled TS wrapper + batch + supporting modules
+  // The shell shim resolves: SCRIPT_DIR/../dist/minimization/wrapper.js
+  const minimizationSrc = resolve(__dirname, "..", "core", "dist", "minimization");
+  const minimizationDist = resolve(__dirname, "dist", "dist", "minimization");
+  mkdirSync(minimizationDist, { recursive: true });
+  cpSync(minimizationSrc, minimizationDist, { recursive: true });
+
+  // Declare ESM for the copied core dist modules (they use import/export)
+  writeFileSync(resolve(__dirname, "dist", "dist", "package.json"), '{"type":"module"}\n');
 }
 
 if (watch) {
