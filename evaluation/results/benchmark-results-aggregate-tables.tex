@@ -1,0 +1,74 @@
+\begin{table}[h]
+  \centering
+  \caption{ProofPulse classification vs.\ oracle across all benchmarks. Precision (P), Recall (R), F1, and Accuracy (Acc) are shown per category. For postconditions, oracle=\textsc{Wrong} entries are excluded from the confusion matrix.}
+  \label{tab:overall-results}
+  \begin{tabular}{lrrrrrrr}
+    \toprule
+    \textbf{Category} & \textbf{TP} & \textbf{FP} & \textbf{FN} & \textbf{TN} & \textbf{P} & \textbf{R} & \textbf{Acc} \\
+    \midrule
+    Postconditions & 113 & 18 & 76 & 13 & 0.86 & 0.60 & 0.57 \\
+    Preconditions  & 53 & 1 & 18 & 99 & 0.98 & 0.75 & 0.89 \\
+    Invariants     & 21 & 9 & 58 & 14 & 0.70 & 0.27 & 0.34 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \caption{Per-dataset breakdown for postconditions (positive=\textsc{Strong}).}
+  \label{tab:postconditions}
+  \begin{tabular}{lrrrrrrrrr}
+    \toprule
+    \textbf{Dataset} & \textbf{N} & \textbf{TP} & \textbf{FP} & \textbf{FN} & \textbf{TN} & \textbf{P} & \textbf{R}  & \textbf{F1} & \textbf{Acc} \\
+    \midrule
+    RQ1-GPT4  & 56  & 22 & 10 & 12 &  5 & 0.69 & 0.65 & 0.67 & 0.55 \\
+    RQ1-PaLM2  & 0  & 0 & 0 & 0 &  0 & 0.00 & 0.00 & 0.00 & 0.00 \\
+    RQ2-GPT4  & 30  & 11 & 5 & 6 &  5 & 0.69 & 0.65 & 0.67 & 0.59 \\
+    RQ2-PaLM2  & 0  & 0 & 0 & 0 &  0 & 0.00 & 0.00 & 0.00 & 0.00 \\
+    RQ3-GPT4  & 114  & 56 & 0 & 47 &  3 & 1.00 & 0.54 & 0.70 & 0.56 \\
+    RQ3-PaLM2  & 52  & 24 & 3 & 11 &  0 & 0.89 & 0.69 & 0.77 & 0.63 \\
+    \midrule
+    \textbf{Combined} & \textbf{220} & \textbf{113} & \textbf{18} & \textbf{76} & \textbf{13} & \textbf{0.86} & \textbf{0.60} & \textbf{0.71} & \textbf{0.57} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \caption{Per-dataset breakdown for preconditions (positive=\textsc{Required}).}
+  \label{tab:preconditions}
+  \begin{tabular}{lrrrrrrrrr}
+    \toprule
+    \textbf{Dataset} & \textbf{N} & \textbf{TP} & \textbf{FP} & \textbf{FN} & \textbf{TN} & \textbf{P} & \textbf{R}  & \textbf{F1} & \textbf{Acc} \\
+    \midrule
+    RQ1-GPT4  & 41  & 18 & 0 & 1 & 22 & 1.00 & 0.95 & 0.97 & 0.98 \\
+    RQ1-PaLM2  & 0  & 0 & 0 & 0 & 0 & 0.00 & 0.00 & 0.00 & 0.00 \\
+    RQ2-GPT4  & 21  & 9 & 0 & 1 & 11 & 1.00 & 0.90 & 0.95 & 0.95 \\
+    RQ2-PaLM2  & 0  & 0 & 0 & 0 & 0 & 0.00 & 0.00 & 0.00 & 0.00 \\
+    RQ3-GPT4  & 74  & 22 & 0 & 14 & 38 & 1.00 & 0.61 & 0.76 & 0.81 \\
+    RQ3-PaLM2  & 35  & 4 & 1 & 2 & 28 & 0.80 & 0.67 & 0.73 & 0.91 \\
+    \midrule
+    \textbf{Combined} & \textbf{171} & \textbf{53} & \textbf{1} & \textbf{18} & \textbf{99} & \textbf{0.98} & \textbf{0.75} & \textbf{0.85} & \textbf{0.89} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \caption{Per-dataset breakdown for invariants (positive=\textsc{Strong}).}
+  \label{tab:invariants}
+  \begin{tabular}{lrrrrrrrrr}
+    \toprule
+    \textbf{Dataset} & \textbf{N} & \textbf{TP} & \textbf{FP} & \textbf{FN} & \textbf{TN} & \textbf{P} & \textbf{R}  & \textbf{F1} & \textbf{Acc} \\
+    \midrule
+    RQ1-GPT4  & 22  & 9 & 5 & 1 & 7 & 0.64 & 0.90 & 0.75 & 0.73 \\
+    RQ1-PaLM2  & 0  & 0 & 0 & 0 & 0 & 0.00 & 0.00 & 0.00 & 0.00 \\
+    RQ2-GPT4  & 14  & 4 & 4 & 1 & 5 & 0.50 & 0.80 & 0.62 & 0.64 \\
+    RQ2-PaLM2  & 0  & 0 & 0 & 0 & 0 & 0.00 & 0.00 & 0.00 & 0.00 \\
+    RQ3-GPT4  & 53  & 6 & 0 & 45 & 2 & 1.00 & 0.12 & 0.21 & 0.15 \\
+    RQ3-PaLM2  & 13  & 2 & 0 & 11 & 0 & 1.00 & 0.15 & 0.27 & 0.15 \\
+    \midrule
+    \textbf{Combined} & \textbf{102} & \textbf{21} & \textbf{9} & \textbf{58} & \textbf{14} & \textbf{0.70} & \textbf{0.27} & \textbf{0.39} & \textbf{0.34} \\
+    \bottomrule
+  \end{tabular}
+\end{table}

@@ -172,3 +172,180 @@ export function formatCategoryTables(tables: CategoryTable[]): string {
   }
   return lines.join("\n");
 }
+
+export interface AggregatedDatasetMetrics {
+  datasetId: string;
+  postconditions: {
+    n: number;
+    tp: number;
+    fp: number;
+    fn: number;
+    tn: number;
+    precision: number;
+    recall: number;
+    f1: number;
+    accuracy: number;
+  };
+  preconditions: {
+    n: number;
+    tp: number;
+    fp: number;
+    fn: number;
+    tn: number;
+    precision: number;
+    recall: number;
+    f1: number;
+    accuracy: number;
+  };
+  invariants: {
+    n: number;
+    tp: number;
+    fp: number;
+    fn: number;
+    tn: number;
+    precision: number;
+    recall: number;
+    f1: number;
+    accuracy: number;
+  };
+}
+
+export function generateAggregateLatexTables(
+  allMetrics: AggregatedDatasetMetrics[],
+): string {
+  const lines: string[] = [];
+
+  // Compute overall totals
+  let postTP = 0, postFP = 0, postFN = 0, postTN = 0;
+  let preTP = 0, preFP = 0, preFN = 0, preTN = 0;
+  let invTP = 0, invFP = 0, invFN = 0, invTN = 0;
+
+  for (const m of allMetrics) {
+    postTP += m.postconditions.tp;
+    postFP += m.postconditions.fp;
+    postFN += m.postconditions.fn;
+    postTN += m.postconditions.tn;
+
+    preTP += m.preconditions.tp;
+    preFP += m.preconditions.fp;
+    preFN += m.preconditions.fn;
+    preTN += m.preconditions.tn;
+
+    invTP += m.invariants.tp;
+    invFP += m.invariants.fp;
+    invFN += m.invariants.fn;
+    invTN += m.invariants.tn;
+  }
+
+  const postMetrics = computeMetrics({ tp: postTP, fp: postFP, fn: postFN, tn: postTN });
+  const preMetrics = computeMetrics({ tp: preTP, fp: preFP, fn: preFN, tn: preTN });
+  const invMetrics = computeMetrics({ tp: invTP, fp: invFP, fn: invFN, tn: invTN });
+
+  // Overall Results Table
+  lines.push("\\begin{table}[h]");
+  lines.push("  \\centering");
+  lines.push(
+    "  \\caption{ProofPulse classification vs.\\ oracle across all benchmarks. Precision (P), Recall (R), F1, and Accuracy (Acc) are shown per category. For postconditions, oracle=\\textsc{Wrong} entries are excluded from the confusion matrix.}"
+  );
+  lines.push("  \\label{tab:overall-results}");
+  lines.push("  \\begin{tabular}{lrrrrrrr}");
+  lines.push("    \\toprule");
+  lines.push(
+    "    \\textbf{Category} & \\textbf{TP} & \\textbf{FP} & \\textbf{FN} & \\textbf{TN} & \\textbf{P} & \\textbf{R} & \\textbf{Acc} \\\\"
+  );
+  lines.push("    \\midrule");
+
+  lines.push(
+    `    Postconditions & ${postTP} & ${postFP} & ${postFN} & ${postTN} & ${postMetrics.precision.toFixed(2)} & ${postMetrics.recall.toFixed(2)} & ${postMetrics.accuracy.toFixed(2)} \\\\`
+  );
+  lines.push(
+    `    Preconditions  & ${preTP} & ${preFP} & ${preFN} & ${preTN} & ${preMetrics.precision.toFixed(2)} & ${preMetrics.recall.toFixed(2)} & ${preMetrics.accuracy.toFixed(2)} \\\\`
+  );
+  lines.push(
+    `    Invariants     & ${invTP} & ${invFP} & ${invFN} & ${invTN} & ${invMetrics.precision.toFixed(2)} & ${invMetrics.recall.toFixed(2)} & ${invMetrics.accuracy.toFixed(2)} \\\\`
+  );
+
+  lines.push("    \\bottomrule");
+  lines.push("  \\end{tabular}");
+  lines.push("\\end{table}");
+  lines.push("");
+
+  // Postconditions Table
+  lines.push("\\begin{table}[h]");
+  lines.push("  \\centering");
+  lines.push("  \\caption{Per-dataset breakdown for postconditions (positive=\\textsc{Strong}).}");
+  lines.push("  \\label{tab:postconditions}");
+  lines.push("  \\begin{tabular}{lrrrrrrrrr}");
+  lines.push("    \\toprule");
+  lines.push(
+    "    \\textbf{Dataset} & \\textbf{N} & \\textbf{TP} & \\textbf{FP} & \\textbf{FN} & \\textbf{TN} & \\textbf{P} & \\textbf{R}  & \\textbf{F1} & \\textbf{Acc} \\\\"
+  );
+  lines.push("    \\midrule");
+  for (const m of allMetrics) {
+    const p = m.postconditions;
+    lines.push(
+      `    ${m.datasetId}  & ${p.n}  & ${p.tp} & ${p.fp} & ${p.fn} &  ${p.tn} & ${p.precision.toFixed(2)} & ${p.recall.toFixed(2)} & ${p.f1.toFixed(2)} & ${p.accuracy.toFixed(2)} \\\\`
+    );
+  }
+  lines.push("    \\midrule");
+  lines.push(
+    `    \\textbf{Combined} & \\textbf{${postTP + postFP + postFN + postTN}} & \\textbf{${postTP}} & \\textbf{${postFP}} & \\textbf{${postFN}} & \\textbf{${postTN}} & \\textbf{${postMetrics.precision.toFixed(2)}} & \\textbf{${postMetrics.recall.toFixed(2)}} & \\textbf{${postMetrics.f1.toFixed(2)}} & \\textbf{${postMetrics.accuracy.toFixed(2)}} \\\\`
+  );
+  lines.push("    \\bottomrule");
+  lines.push("  \\end{tabular}");
+  lines.push("\\end{table}");
+  lines.push("");
+
+  // Preconditions Table
+  lines.push("\\begin{table}[h]");
+  lines.push("  \\centering");
+  lines.push("  \\caption{Per-dataset breakdown for preconditions (positive=\\textsc{Required}).}");
+  lines.push("  \\label{tab:preconditions}");
+  lines.push("  \\begin{tabular}{lrrrrrrrrr}");
+  lines.push("    \\toprule");
+  lines.push(
+    "    \\textbf{Dataset} & \\textbf{N} & \\textbf{TP} & \\textbf{FP} & \\textbf{FN} & \\textbf{TN} & \\textbf{P} & \\textbf{R}  & \\textbf{F1} & \\textbf{Acc} \\\\"
+  );
+  lines.push("    \\midrule");
+  for (const m of allMetrics) {
+    const p = m.preconditions;
+    lines.push(
+      `    ${m.datasetId}  & ${p.n}  & ${p.tp} & ${p.fp} & ${p.fn} & ${p.tn} & ${p.precision.toFixed(2)} & ${p.recall.toFixed(2)} & ${p.f1.toFixed(2)} & ${p.accuracy.toFixed(2)} \\\\`
+    );
+  }
+  lines.push("    \\midrule");
+  lines.push(
+    `    \\textbf{Combined} & \\textbf{${preTP + preFP + preFN + preTN}} & \\textbf{${preTP}} & \\textbf{${preFP}} & \\textbf{${preFN}} & \\textbf{${preTN}} & \\textbf{${preMetrics.precision.toFixed(2)}} & \\textbf{${preMetrics.recall.toFixed(2)}} & \\textbf{${preMetrics.f1.toFixed(2)}} & \\textbf{${preMetrics.accuracy.toFixed(2)}} \\\\`
+  );
+  lines.push("    \\bottomrule");
+  lines.push("  \\end{tabular}");
+  lines.push("\\end{table}");
+  lines.push("");
+
+  // Invariants Table
+  lines.push("\\begin{table}[h]");
+  lines.push("  \\centering");
+  lines.push("  \\caption{Per-dataset breakdown for invariants (positive=\\textsc{Strong}).}");
+  lines.push("  \\label{tab:invariants}");
+  lines.push("  \\begin{tabular}{lrrrrrrrrr}");
+  lines.push("    \\toprule");
+  lines.push(
+    "    \\textbf{Dataset} & \\textbf{N} & \\textbf{TP} & \\textbf{FP} & \\textbf{FN} & \\textbf{TN} & \\textbf{P} & \\textbf{R}  & \\textbf{F1} & \\textbf{Acc} \\\\"
+  );
+  lines.push("    \\midrule");
+  for (const m of allMetrics) {
+    const p = m.invariants;
+    lines.push(
+      `    ${m.datasetId}  & ${p.n}  & ${p.tp} & ${p.fp} & ${p.fn} & ${p.tn} & ${p.precision.toFixed(2)} & ${p.recall.toFixed(2)} & ${p.f1.toFixed(2)} & ${p.accuracy.toFixed(2)} \\\\`
+    );
+  }
+  lines.push("    \\midrule");
+  lines.push(
+    `    \\textbf{Combined} & \\textbf{${invTP + invFP + invFN + invTN}} & \\textbf{${invTP}} & \\textbf{${invFP}} & \\textbf{${invFN}} & \\textbf{${invTN}} & \\textbf{${invMetrics.precision.toFixed(2)}} & \\textbf{${invMetrics.recall.toFixed(2)}} & \\textbf{${invMetrics.f1.toFixed(2)}} & \\textbf{${invMetrics.accuracy.toFixed(2)}} \\\\`
+  );
+  lines.push("    \\bottomrule");
+  lines.push("  \\end{tabular}");
+  lines.push("\\end{table}");
+
+  return lines.join("\n");
+}

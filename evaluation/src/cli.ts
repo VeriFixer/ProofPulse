@@ -1,8 +1,8 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { runBenchmark } from "./benchmark-runner.js";
-import { formatTable } from "./reporter.js";
-import type { DatasetId } from "./oracle-parser.js";
+import { formatTable, computeCategoryTables, generateAggregateLatexTables, type AggregatedDatasetMetrics } from "./reporter.js";
+import { parseOracle, type DatasetId } from "./oracle-parser.js";
 
 interface CliArgs {
   repoRoot: string;
@@ -92,6 +92,8 @@ async function main() {
     ? ALL_DATASETS.map((d) => d.id)
     : [opts.dataset as DatasetId];
 
+  const allAggregatedMetrics: AggregatedDatasetMetrics[] = [];
+
   for (const dsId of datasets) {
     console.log(`\n${"═".repeat(60)}`);
     console.log(`Running benchmark: ${dsId}`);
@@ -124,6 +126,70 @@ async function main() {
     console.log(
       `\nSummary: ${results.summary.processed} processed, ${results.summary.errors} errors, ${results.summary.skipped} skipped out of ${results.summary.total} total`
     );
+
+    // Collect metrics for aggregation when running all datasets
+    if (datasets.length > 1) {
+      const entries = parseOracle(repoRoot, dsId);
+      const catTables = computeCategoryTables(results.results, entries);
+
+      // Extract metrics from category tables
+      const postTable = catTables[0]; // Postconditions
+      const preTable = catTables[1];  // Preconditions
+      const invTable = catTables[2];  // Invariants
+
+      const aggregated: AggregatedDatasetMetrics = {
+        datasetId: dsId,
+        postconditions: {
+          n: postTable.total,
+          tp: postTable.confusionMatrix?.tp ?? 0,
+          fp: postTable.confusionMatrix?.fp ?? 0,
+          fn: postTable.confusionMatrix?.fn ?? 0,
+          tn: postTable.confusionMatrix?.tn ?? 0,
+          precision: postTable.metrics?.precision ?? 0,
+          recall: postTable.metrics?.recall ?? 0,
+          f1: postTable.metrics?.f1 ?? 0,
+          accuracy: postTable.metrics?.accuracy ?? 0,
+        },
+        preconditions: {
+          n: preTable.total,
+          tp: preTable.confusionMatrix?.tp ?? 0,
+          fp: preTable.confusionMatrix?.fp ?? 0,
+          fn: preTable.confusionMatrix?.fn ?? 0,
+          tn: preTable.confusionMatrix?.tn ?? 0,
+          precision: preTable.metrics?.precision ?? 0,
+          recall: preTable.metrics?.recall ?? 0,
+          f1: preTable.metrics?.f1 ?? 0,
+          accuracy: preTable.metrics?.accuracy ?? 0,
+        },
+        invariants: {
+          n: invTable.total,
+          tp: invTable.confusionMatrix?.tp ?? 0,
+          fp: invTable.confusionMatrix?.fp ?? 0,
+          fn: invTable.confusionMatrix?.fn ?? 0,
+          tn: invTable.confusionMatrix?.tn ?? 0,
+          precision: invTable.metrics?.precision ?? 0,
+          recall: invTable.metrics?.recall ?? 0,
+          f1: invTable.metrics?.f1 ?? 0,
+          accuracy: invTable.metrics?.accuracy ?? 0,
+        },
+      };
+
+      allAggregatedMetrics.push(aggregated);
+    }
+  }
+
+  // Generate aggregate LaTeX tables if running all datasets
+  if (datasets.length > 1 && allAggregatedMetrics.length > 0) {
+    console.log(`\n${"═".repeat(60)}`);
+    console.log("Generating Aggregate LaTeX Tables");
+    console.log(`${"═".repeat(60)}`);
+
+    const latexTables = generateAggregateLatexTables(allAggregatedMetrics);
+    const latexFile = opts.output.replace(".json", "-aggregate-tables.tex");
+    fs.writeFileSync(latexFile, latexTables);
+    console.log(`\nAggregate LaTeX tables written to ${latexFile}`);
+    console.log("\nYou can include these tables in your paper using:");
+    console.log(`\\input{${path.relative(".", latexFile)}}`);
   }
 }
 
