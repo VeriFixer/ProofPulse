@@ -149,23 +149,34 @@ export function resolveBundledZ3Path(extensionsRoots = getVscodeExtensionsRoots(
 
 /**
  * Resolve the Dafny executable used for analysis.
- * If the user left the default "dafny" value, we first try PATH and then the bundled launcher from
- * the official Dafny VS Code extension.
+ * Priority: user override → bundled Dafny extension → PATH.
  */
 export function resolveDafnyPath(dafnyPath: string): string | undefined {
   if (dafnyPath !== "dafny") {
     return dafnyPath;
   }
 
-  return resolveExecutableInPath("dafny") ?? resolveBundledDafnyPath();
+  return resolveBundledDafnyPath() ?? resolveExecutableInPath("dafny");
 }
 
 /**
- * Resolve the z3 binary bundled inside a Dafny installation.
- * Prefer a z3 that ships with the selected Dafny binary to avoid version
- * mismatches between Dafny/Boogie and an unrelated z3 on PATH.
+ * Resolve the z3 binary for use with the minimization wrapper.
+ * Priority:
+ *   1. Explicit z3Path override (from options)
+ *   2. z3 sibling to the resolved dafny binary (guaranteed compatible)
+ *   3. z3 from the bundled Dafny VS Code extension
+ *   4. z3 from PATH (may be incompatible — caller should warn)
+ *
+ * Returns { path, fromPath } where fromPath=true means it fell back to PATH z3
+ * (not guaranteed compatible with the resolved dafny).
  */
-export function resolveZ3Path(dafnyPath: string): string | undefined {
+export function resolveZ3PathWithSource(dafnyPath: string, z3Override?: string): { path: string; fromPath: boolean } | undefined {
+  // 1. Explicit override
+  if (z3Override) {
+    return { path: z3Override, fromPath: false };
+  }
+
+  // 2. Sibling z3 of the resolved dafny binary
   try {
     if (isAbsolute(dafnyPath)) {
       const dafnyDir = dirname(dafnyPath);
@@ -177,7 +188,7 @@ export function resolveZ3Path(dafnyPath: string): string | undefined {
           .sort(compareVersionLikePaths);
         if (entries.length > 0) {
           const candidate = join(z3BinDir, entries[entries.length - 1]);
-          if (existsSync(candidate)) return candidate;
+          if (existsSync(candidate)) return { path: candidate, fromPath: false };
         }
       }
     }
@@ -185,12 +196,27 @@ export function resolveZ3Path(dafnyPath: string): string | undefined {
     // fall through
   }
 
-  const pathZ3 = resolveExecutableInPath("z3");
-  if (pathZ3) {
-    return pathZ3;
+  // 3. Bundled Dafny extension z3
+  const bundled = resolveBundledZ3Path();
+  if (bundled) {
+    return { path: bundled, fromPath: false };
   }
 
-  return resolveBundledZ3Path();
+  // 4. PATH z3 (potentially incompatible)
+  const pathZ3 = resolveExecutableInPath("z3");
+  if (pathZ3) {
+    return { path: pathZ3, fromPath: true };
+  }
+
+  return undefined;
+}
+
+/**
+ * @deprecated Use resolveZ3PathWithSource for better compatibility tracking.
+ */
+export function resolveZ3Path(dafnyPath: string): string | undefined {
+  const result = resolveZ3PathWithSource(dafnyPath);
+  return result?.path;
 }
 
 export async function runDafny(
@@ -240,10 +266,19 @@ export async function runDafny(
       return { log: "", exitCode: -1, error: `z3-minimizer-wrapper.sh not found at ${wrapperPath}` };
     }
 
-    const z3Path = resolveZ3Path(dafnyBin);
-    if (!z3Path) {
+    const z3Result = resolveZ3PathWithSource(dafnyBin, options?.z3Path);
+    if (!z3Result) {
       return { log: "", exitCode: -1, error: "Z3 not found in PATH or in the official Dafny VS Code extension bundle" };
     }
+    const z3Path = z3Result.path;
+
+    if (z3Result.fromPath) {
+      options?.onWarning?.(
+        `Z3 resolved from PATH (${z3Path}) — it may be incompatible with the resolved Dafny (${dafnyBin}). ` +
+        `If minimization fails, set proofpulse.z3Path to a z3 version bundled with your Dafny installation.`
+      );
+    }
+
     const wrapperLog = join(tmpDir, "wrapper.log");
 
     // Ensure wrapper is executable

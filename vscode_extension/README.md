@@ -13,16 +13,29 @@ Analyses Dafny prover logs and shows proof coverage directly in the editor.
 
 ## Requirements
 
-- [Dafny](https://github.com/dafny-lang/dafny) CLI should be available in your PATH, or the official [Dafny VS Code extension](https://marketplace.visualstudio.com/items?itemName=dafny-lang.ide-vscode) must be installed so ProofPulse can fall back to its bundled Dafny and Z3 binaries
+- [Dafny](https://github.com/dafny-lang/dafny) — either the official [Dafny VS Code extension](https://marketplace.visualstudio.com/items?itemName=dafny-lang.ide-vscode) (recommended) or the Dafny CLI in PATH
+
+No other external dependencies. The minimization pipeline is pure TypeScript/Node.js.
+
+## Dependency Resolution
+
+ProofPulse needs a Dafny binary and (when minimization is enabled) a compatible Z3 binary. To avoid version mismatches, resolution follows this priority:
+
+**Dafny:** user override (`proofpulse.dafnyPath`) → bundled Dafny VS Code extension → PATH
+
+**Z3:** user override (`proofpulse.z3Path`) → sibling z3 of resolved Dafny → bundled Dafny VS Code extension → PATH (with compatibility warning)
+
+The safest setup is having the official Dafny VS Code extension installed — ProofPulse will find both Dafny and its matching Z3 automatically. If Z3 is only found on PATH (not paired with the resolved Dafny), a warning is logged to the ProofPulse output channel since the versions may be incompatible.
 
 ## Settings
 
 | Setting | Default | Description |
 |---|---|---|
-| `proofpulse.dafnyPath` | `"dafny"` | Path to the Dafny executable. When left at the default value, ProofPulse checks PATH first, then the official Dafny VS Code extension bundle, and errors out if neither is available. |
+| `proofpulse.dafnyPath` | `"dafny"` | Path to the Dafny executable. Leave at default to auto-resolve from the Dafny VS Code extension bundle, then PATH. |
+| `proofpulse.z3Path` | `""` | Path to the Z3 binary (for core minimization). Leave empty to auto-resolve from the Dafny installation. |
 | `proofpulse.timeoutSeconds` | `60` | Verification timeout in seconds |
 | `proofpulse.runOnSave` | `true` | Automatically run analysis when a `.dfy` file is saved |
-| `proofpulse.forceMinimization` | `true` | Enable unsat core minimization for Z3 solver calls. Uses an interactive Node.js wrapper that intercepts solver queries and minimizes unsat cores. Slower but produces tighter proof dependencies. Z3 is resolved from PATH first, then the bundled Dafny extension. |
+| `proofpulse.forceMinimization` | `true` | Enable unsat core minimization. Intercepts Z3 solver queries and minimizes unsat cores for tighter proof dependencies. Slower but more precise. |
 | `proofpulse.decorationOpacity` | `0.08` | Opacity for line background decorations (`0.0`–`0.5`). Higher values make coverage highlights more visible. |
 
 ## Usage

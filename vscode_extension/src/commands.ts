@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import { runDafny, parseProof } from "@proofpulse/core";
-import { getDafnyPath, getDecorationOpacity, getForceMinimization, getTimeout } from "./config";
+import { getDafnyPath, getDecorationOpacity, getForceMinimization, getTimeout, getZ3Path } from "./config";
 import { applyDecorations } from "./decorations";
 
 let outputChannel: vscode.OutputChannel | undefined;
@@ -34,8 +34,10 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
 
         const result = await runDafny(filePath, {
           dafnyPath,
+          z3Path: getZ3Path() || undefined,
           timeoutSeconds: timeout,
           forceMinimization: forceMin,
+          onWarning: (msg) => logInfo(`WARNING: ${msg}`),
         });
 
         logInfo(`dafny exited ${result.exitCode}, timedOut=${result.timedOut ?? false}, error=${result.error ?? "none"}, logLen=${result.log.length}`);

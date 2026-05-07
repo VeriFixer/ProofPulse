@@ -55,6 +55,11 @@
           "default": "dafny",
           "description": "Path to the Dafny executable"
         },
+        "proofpulse.z3Path": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the Z3 binary (for core minimization). Leave empty to auto-resolve from the Dafny installation."
+        },
         "proofpulse.timeoutSeconds": {
           "type": "number",
           "default": 60,

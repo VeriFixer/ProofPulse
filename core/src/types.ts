@@ -40,6 +40,9 @@ export interface DafnyResult {
 
 export interface DafnyOptions {
   dafnyPath?: string;
+  z3Path?: string;
   timeoutSeconds?: number;
   forceMinimization?: boolean;
+  /** Called with warning messages (e.g. potential version incompatibility). */
+  onWarning?: (msg: string) => void;
 }
