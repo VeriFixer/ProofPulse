@@ -72,8 +72,8 @@
         },
         "proofpulse.forceMinimization": {
           "type": "boolean",
-          "default": true,
-          "description": "Enable unsat core minimization for Z3 solver calls"
+          "default": false,
+          "markdownDescription": "Enable unsat core minimization for Z3 solver calls. **Experimental:** tested on Linux (Nobara/Fedora). Not known if well supported on other platforms."
         },
         "proofpulse.decorationOpacity": {
           "type": "number",
