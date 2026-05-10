@@ -1,21 +1,34 @@
-import { spawn } from "node:child_process";
+import { spawn, execFileSync } from "node:child_process";
 import { accessSync, constants as fsConstants, existsSync, readdirSync } from "node:fs";
 import { mkdtemp, readFile, rm, writeFile, chmod } from "node:fs/promises";
 import { delimiter, dirname, isAbsolute, join, resolve } from "node:path";
-import { tmpdir } from "node:os";
+import { homedir, tmpdir, platform } from "node:os";
 import type { DafnyOptions, DafnyResult } from "./types.js";
 
+// ---------------------------------------------------------------------------
+// Constants & helpers
+// ---------------------------------------------------------------------------
+
 const DEFAULT_TIMEOUT_SEC = 60;
+const IS_WIN = platform() === "win32";
+const IS_MAC = platform() === "darwin";
+
+/**
+ * On Windows, normalize the file path to have an uppercase drive letter.
+ * Dafny's CoverageReporter crashes (IndexOutOfRangeException) when the drive
+ * letter casing between the source URI and the report directory differs.
+ */
+function normalizeFilePath(p: string): string {
+  const normalized = resolve(p);
+  if (IS_WIN && /^[a-z]:/.test(normalized)) {
+    return normalized[0].toUpperCase() + normalized.slice(1);
+  }
+  return normalized;
+}
 
 function isExecutableFile(filePath: string): boolean {
-  if (!existsSync(filePath)) {
-    return false;
-  }
-
-  if (process.platform === "win32") {
-    return true;
-  }
-
+  if (!existsSync(filePath)) return false;
+  if (IS_WIN) return true;
   try {
     accessSync(filePath, fsConstants.X_OK);
     return true;
@@ -30,220 +43,287 @@ function compareVersionLikePaths(left: string, right: string): number {
 
 function resolveExecutableInPath(executableName: string): string | undefined {
   const pathEnv = process.env.PATH ?? "";
+  const suffixes = IS_WIN ? ["", ".exe", ".cmd", ".bat"] : [""];
 
   for (const pathEntry of pathEnv.split(delimiter)) {
-    if (!pathEntry) {
-      continue;
-    }
-
-    const candidate = join(pathEntry, executableName);
-    if (isExecutableFile(candidate)) {
-      return candidate;
+    if (!pathEntry) continue;
+    for (const suffix of suffixes) {
+      const candidate = join(pathEntry, executableName + suffix);
+      if (isExecutableFile(candidate)) return candidate;
     }
   }
-
   return undefined;
 }
 
+/**
+ * Run a binary with a single arg (like --version / -version) and return stdout.
+ * Returns undefined on failure. Timeout: 5s.
+ */
+function probeVersion(bin: string, arg: string): string | undefined {
+  try {
+    const out = execFileSync(bin, [arg], { encoding: "utf-8", timeout: 5000, stdio: ["ignore", "pipe", "pipe"] });
+    return out.trim().split("\n")[0];
+  } catch {
+    return undefined;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// VS Code extension roots
+// ---------------------------------------------------------------------------
+
 function getVscodeExtensionsRoots(): string[] {
-  const homeDir = process.env.HOME ?? process.env.USERPROFILE;
-  if (!homeDir) {
-    return [];
+  const home = process.env.HOME ?? process.env.USERPROFILE ?? homedir();
+  if (!home) return [];
+
+  const roots: string[] = [
+    join(home, ".vscode", "extensions"),
+    join(home, ".vscode-server", "extensions"),
+    join(home, ".vscode-remote", "extensions"),
+  ];
+
+  // macOS: VS Code also uses ~/Library/Application Support/Code/User/globalStorage
+  // but extensions are still in ~/.vscode/extensions. However, VS Code Insiders
+  // and Cursor use different directories.
+  if (IS_MAC) {
+    roots.push(join(home, ".vscode-insiders", "extensions"));
+    roots.push(join(home, ".cursor", "extensions"));
+  }
+  if (IS_WIN) {
+    roots.push(join(home, ".vscode-insiders", "extensions"));
+    roots.push(join(home, ".cursor", "extensions"));
   }
 
-  return [
-    join(homeDir, ".vscode", "extensions"),
-    join(homeDir, ".vscode-server", "extensions"),
-    join(homeDir, ".vscode-remote", "extensions"),
-  ].filter((root) => existsSync(root));
+  return roots.filter((root) => existsSync(root));
 }
+
+// ---------------------------------------------------------------------------
+// Bundled Dafny resolution
+// ---------------------------------------------------------------------------
 
 /**
  * Find the Dafny launcher bundled by the official VS Code extension.
- * On Linux this is typically under ~/.vscode/extensions/<ext>/out/resources/<ver>/github/dafny/dafny.
+ * Handles platform differences: dafny (Linux/macOS), dafny.exe (Windows).
  */
 export function resolveBundledDafnyPath(extensionsRoots = getVscodeExtensionsRoots()): string | undefined {
   const candidates: string[] = [];
+  const dafnyNames = IS_WIN ? ["dafny.exe", "Dafny.exe"] : ["dafny", "Dafny"];
 
   for (const extensionsRoot of extensionsRoots) {
-    for (const extensionEntry of readdirSync(extensionsRoot, { withFileTypes: true })) {
-      if (!extensionEntry.isDirectory()) {
-        continue;
-      }
+    let extensionEntries: import("node:fs").Dirent[];
+    try {
+      extensionEntries = readdirSync(extensionsRoot, { withFileTypes: true });
+    } catch { continue; }
+
+    for (const extensionEntry of extensionEntries) {
+      if (!extensionEntry.isDirectory()) continue;
 
       const resourcesRoot = join(extensionsRoot, extensionEntry.name, "out", "resources");
-      if (!existsSync(resourcesRoot)) {
-        continue;
-      }
+      if (!existsSync(resourcesRoot)) continue;
 
-      for (const resourceEntry of readdirSync(resourcesRoot, { withFileTypes: true })) {
-        if (!resourceEntry.isDirectory()) {
-          continue;
-        }
+      let resourceEntries: import("node:fs").Dirent[];
+      try {
+        resourceEntries = readdirSync(resourcesRoot, { withFileTypes: true });
+      } catch { continue; }
 
-        const dafnyLauncher = join(resourcesRoot, resourceEntry.name, "github", "dafny", "dafny");
-        if (isExecutableFile(dafnyLauncher)) {
-          candidates.push(dafnyLauncher);
+      for (const resourceEntry of resourceEntries) {
+        if (!resourceEntry.isDirectory()) continue;
+
+        for (const name of dafnyNames) {
+          const dafnyLauncher = join(resourcesRoot, resourceEntry.name, "github", "dafny", name);
+          if (isExecutableFile(dafnyLauncher)) {
+            candidates.push(dafnyLauncher);
+          }
         }
       }
     }
   }
 
-  if (candidates.length === 0) {
-    return undefined;
-  }
-
+  if (candidates.length === 0) return undefined;
   candidates.sort(compareVersionLikePaths);
   return candidates[candidates.length - 1];
 }
 
+// ---------------------------------------------------------------------------
+// Bundled Z3 resolution
+// ---------------------------------------------------------------------------
+
 /**
  * Find the Z3 binary bundled by the official VS Code extension.
- * The official Dafny extension stores Z3 under <extension>/out/resources/<ver>/github/dafny/z3/bin/z3-<version>.
  */
 export function resolveBundledZ3Path(extensionsRoots = getVscodeExtensionsRoots()): string | undefined {
   const candidates: string[] = [];
 
   for (const extensionsRoot of extensionsRoots) {
-    for (const extensionEntry of readdirSync(extensionsRoot, { withFileTypes: true })) {
-      if (!extensionEntry.isDirectory()) {
-        continue;
-      }
+    let extensionEntries: import("node:fs").Dirent[];
+    try {
+      extensionEntries = readdirSync(extensionsRoot, { withFileTypes: true });
+    } catch { continue; }
+
+    for (const extensionEntry of extensionEntries) {
+      if (!extensionEntry.isDirectory()) continue;
 
       const resourcesRoot = join(extensionsRoot, extensionEntry.name, "out", "resources");
-      if (!existsSync(resourcesRoot)) {
-        continue;
-      }
+      if (!existsSync(resourcesRoot)) continue;
 
-      for (const resourceEntry of readdirSync(resourcesRoot, { withFileTypes: true })) {
-        if (!resourceEntry.isDirectory()) {
-          continue;
-        }
+      let resourceEntries: import("node:fs").Dirent[];
+      try {
+        resourceEntries = readdirSync(resourcesRoot, { withFileTypes: true });
+      } catch { continue; }
+
+      for (const resourceEntry of resourceEntries) {
+        if (!resourceEntry.isDirectory()) continue;
 
         const z3BinDir = join(resourcesRoot, resourceEntry.name, "github", "dafny", "z3", "bin");
-        if (!existsSync(z3BinDir)) {
-          continue;
-        }
+        if (!existsSync(z3BinDir)) continue;
 
-        for (const z3Entry of readdirSync(z3BinDir, { withFileTypes: true })) {
-          if (!z3Entry.isFile()) {
-            continue;
-          }
+        let z3Entries: import("node:fs").Dirent[];
+        try {
+          z3Entries = readdirSync(z3BinDir, { withFileTypes: true });
+        } catch { continue; }
 
-          const candidate = join(z3BinDir, z3Entry.name);
-          if (z3Entry.name.startsWith("z3") && isExecutableFile(candidate)) {
-            candidates.push(candidate);
+        for (const z3Entry of z3Entries) {
+          if (!z3Entry.isFile()) continue;
+          const nameLower = z3Entry.name.toLowerCase();
+          const isZ3 = IS_WIN
+            ? nameLower.startsWith("z3") && nameLower.endsWith(".exe")
+            : nameLower.startsWith("z3");
+          if (isZ3) {
+            const candidate = join(z3BinDir, z3Entry.name);
+            if (isExecutableFile(candidate)) candidates.push(candidate);
           }
         }
       }
     }
   }
 
-  if (candidates.length === 0) {
-    return undefined;
-  }
-
+  if (candidates.length === 0) return undefined;
   candidates.sort(compareVersionLikePaths);
   return candidates[candidates.length - 1];
 }
 
-/**
- * Resolve the Dafny executable used for analysis.
- * Priority: user override → bundled Dafny extension → PATH.
- */
-export function resolveDafnyPath(dafnyPath: string): string | undefined {
-  if (dafnyPath !== "dafny") {
-    return dafnyPath;
-  }
+// ---------------------------------------------------------------------------
+// Public resolution API
+// ---------------------------------------------------------------------------
 
-  return resolveBundledDafnyPath() ?? resolveExecutableInPath("dafny");
+export type ResolveSource = "manual" | "bundled" | "path";
+
+export interface ResolvedPath {
+  path: string;
+  source: ResolveSource;
 }
 
 /**
- * Resolve the z3 binary for use with the minimization wrapper.
- * Priority:
- *   1. Explicit z3Path override (from options)
- *   2. z3 sibling to the resolved dafny binary (guaranteed compatible)
- *   3. z3 from the bundled Dafny VS Code extension
- *   4. z3 from PATH (may be incompatible — caller should warn)
- *
- * Returns { path, fromPath } where fromPath=true means it fell back to PATH z3
- * (not guaranteed compatible with the resolved dafny).
+ * Resolve the Dafny executable.
+ * Priority: user override → bundled Dafny extension → PATH.
  */
-export function resolveZ3PathWithSource(dafnyPath: string, z3Override?: string): { path: string; fromPath: boolean } | undefined {
-  // 1. Explicit override
+export function resolveDafnyPathWithSource(dafnyPath: string): ResolvedPath | undefined {
+  if (dafnyPath !== "dafny") {
+    return { path: dafnyPath, source: "manual" };
+  }
+  const bundled = resolveBundledDafnyPath();
+  if (bundled) return { path: bundled, source: "bundled" };
+
+  const fromPath = resolveExecutableInPath("dafny");
+  if (fromPath) return { path: fromPath, source: "path" };
+
+  return undefined;
+}
+
+/**
+ * Resolve the z3 binary.
+ * Priority: explicit override → sibling of dafny → bundled extension → PATH.
+ */
+export function resolveZ3PathWithSource(dafnyPath: string, z3Override?: string): { path: string; source: ResolveSource } | undefined {
   if (z3Override) {
-    return { path: z3Override, fromPath: false };
+    return { path: z3Override, source: "manual" };
   }
 
-  // 2. Sibling z3 of the resolved dafny binary
+  // Sibling z3 of the resolved dafny binary (guaranteed compatible)
   try {
     if (isAbsolute(dafnyPath)) {
       const dafnyDir = dirname(dafnyPath);
       const z3BinDir = join(dafnyDir, "z3", "bin");
       if (existsSync(z3BinDir)) {
         const entries = readdirSync(z3BinDir, { withFileTypes: true })
-          .filter((entry) => entry.isFile() && entry.name.startsWith("z3"))
+          .filter((entry) => {
+            if (!entry.isFile()) return false;
+            const nameLower = entry.name.toLowerCase();
+            return IS_WIN
+              ? nameLower.startsWith("z3") && nameLower.endsWith(".exe")
+              : nameLower.startsWith("z3");
+          })
           .map((entry) => entry.name)
           .sort(compareVersionLikePaths);
         if (entries.length > 0) {
           const candidate = join(z3BinDir, entries[entries.length - 1]);
-          if (existsSync(candidate)) return { path: candidate, fromPath: false };
+          if (existsSync(candidate)) return { path: candidate, source: "bundled" };
         }
       }
     }
-  } catch {
-    // fall through
-  }
+  } catch { /* fall through */ }
 
-  // 3. Bundled Dafny extension z3
   const bundled = resolveBundledZ3Path();
-  if (bundled) {
-    return { path: bundled, fromPath: false };
-  }
+  if (bundled) return { path: bundled, source: "bundled" };
 
-  // 4. PATH z3 (potentially incompatible)
   const pathZ3 = resolveExecutableInPath("z3");
-  if (pathZ3) {
-    return { path: pathZ3, fromPath: true };
-  }
+  if (pathZ3) return { path: pathZ3, source: "path" };
 
   return undefined;
 }
 
-/**
- * @deprecated Use resolveZ3PathWithSource for better compatibility tracking.
- */
-export function resolveZ3Path(dafnyPath: string): string | undefined {
-  const result = resolveZ3PathWithSource(dafnyPath);
-  return result?.path;
-}
+// ---------------------------------------------------------------------------
+// Main entry point
+// ---------------------------------------------------------------------------
 
 export async function runDafny(
   filePath: string,
   options?: DafnyOptions
 ): Promise<DafnyResult> {
-  const dafnyBin = resolveDafnyPath(options?.dafnyPath ?? "dafny");
-  if (!dafnyBin) {
+  const log = (msg: string) => options?.onWarning?.(msg);
+
+  // --- Resolve Dafny ---
+  log(`[info] platform=${platform()}, arch=${process.arch}, home=${homedir()}`);
+  log(`[info] extension roots searched: ${getVscodeExtensionsRoots().join(", ") || "(none found)"}`);
+
+  const dafnyResult = resolveDafnyPathWithSource(options?.dafnyPath ?? "dafny");
+  if (!dafnyResult) {
     return {
       log: "",
       exitCode: -1,
-      error: "Dafny not found in PATH or in the official Dafny VS Code extension bundle",
+      error: "Dafny not found in PATH or in the official Dafny VS Code extension bundle. " +
+        "Set proofpulse.dafnyPath to the full path of your dafny executable.",
     };
   }
+  const dafnyBin = dafnyResult.path;
+  const dafnySource = dafnyResult.source;
+  log(`[info] Dafny resolved: ${dafnyBin} (source: ${dafnySource})`);
+
+  // Probe dafny version
+  const dafnyVersion = probeVersion(dafnyBin, "--version") ?? probeVersion(dafnyBin, "/version");
+  if (dafnyVersion) {
+    log(`[info] Dafny version: ${dafnyVersion}`);
+  } else {
+    log(`[warn] Could not determine Dafny version — '${dafnyBin} --version' failed. The binary may not be executable or may be corrupted.`);
+  }
+
   const timeoutSec = options?.timeoutSeconds ?? DEFAULT_TIMEOUT_SEC;
 
-  // Create temp dir — dafny writes coverage/log artifacts here
+  // Create temp dir
   let tmpDir: string;
   try {
     tmpDir = await mkdtemp(join(tmpdir(), "proofpulse-"));
+    if (IS_WIN && /^[a-z]:/.test(tmpDir)) {
+      tmpDir = tmpDir[0].toUpperCase() + tmpDir.slice(1);
+    }
   } catch (err) {
     return { log: "", exitCode: -1, error: `failed to create temp dir: ${(err as Error).message}` };
   }
 
+  const normalizedPath = normalizeFilePath(filePath);
   const args = [
     "verify",
-    filePath,
+    normalizedPath,
     "--verification-coverage-report", join(tmpDir, "cov"),
     "--log-format", "text",
     "--isolate-assertions",
@@ -260,45 +340,107 @@ export async function runDafny(
     const scriptsDir = existsSync(resolve(__dirname, "scripts"))
       ? resolve(__dirname, "scripts")
       : resolve(__dirname, "..", "scripts");
+    // On non-Windows, verify the shell wrapper exists (used as a sanity check
+    // that the scripts directory was bundled correctly).
     const wrapperPath = join(scriptsDir, "z3-minimizer-wrapper.sh");
-
-    if (!existsSync(wrapperPath)) {
-      return { log: "", exitCode: -1, error: `z3-minimizer-wrapper.sh not found at ${wrapperPath}` };
+    if (!IS_WIN && !existsSync(wrapperPath)) {
+      return { log: "", exitCode: -1, error: `z3-minimizer-wrapper.sh not found at ${wrapperPath}. Ensure the extension was built correctly.` };
     }
 
+    // --- Resolve Z3 ---
     const z3Result = resolveZ3PathWithSource(dafnyBin, options?.z3Path);
     if (!z3Result) {
-      return { log: "", exitCode: -1, error: "Z3 not found in PATH or in the official Dafny VS Code extension bundle" };
+      return { log: "", exitCode: -1, error: "Z3 not found in PATH or in the official Dafny VS Code extension bundle. " +
+        "Set proofpulse.z3Path to the full path of your z3 executable." };
     }
     const z3Path = z3Result.path;
+    log(`[info] Z3 resolved: ${z3Path} (source: ${z3Result.source})`);
 
-    if (z3Result.fromPath) {
-      options?.onWarning?.(
-        `Z3 resolved from PATH (${z3Path}) — it may be incompatible with the resolved Dafny (${dafnyBin}). ` +
-        `If minimization fails, set proofpulse.z3Path to a z3 version bundled with your Dafny installation.`
+    // Probe z3 version
+    const z3Version = probeVersion(z3Path, "--version") ?? probeVersion(z3Path, "-version");
+    if (z3Version) {
+      log(`[info] Z3 version: ${z3Version}`);
+    } else {
+      log(`[warn] Could not determine Z3 version — '${z3Path} --version' failed. The binary may not be executable or may be corrupted.`);
+    }
+
+    // Warn if dafny and z3 don't come from the same installation
+    if (z3Result.source === "path" && dafnySource !== "path") {
+      log(
+        `[warn] Z3 resolved from PATH (${z3Path}) but Dafny is from ${dafnySource} (${dafnyBin}). ` +
+        `They may be incompatible. Set proofpulse.z3Path to the z3 bundled with your Dafny installation.`
       );
+    } else if (z3Result.source === "manual" && dafnySource === "bundled") {
+      if (!z3Path.includes(dirname(dafnyBin))) {
+        log(
+          `[warn] Z3 (${z3Path}) does not appear to be from the same Dafny installation as ${dafnyBin}. ` +
+          `This may cause version incompatibility issues.`
+        );
+      }
+    } else if (dafnySource === "manual" && z3Result.source === "bundled") {
+      if (!z3Path.includes(dirname(dafnyBin))) {
+        log(
+          `[warn] Dafny was manually set (${dafnyBin}) but Z3 was auto-resolved from a different location (${z3Path}). ` +
+          `Set proofpulse.z3Path to the z3 bundled with your Dafny for guaranteed compatibility.`
+        );
+      }
     }
 
     const wrapperLog = join(tmpDir, "wrapper.log");
 
-    // Ensure wrapper is executable
-    let effectiveWrapperPath = wrapperPath;
-    if (!isExecutableFile(wrapperPath)) {
-      // Create a temporary shim that invokes the Node.js wrapper directly
+    // Build a platform-appropriate wrapper that Dafny/Boogie can spawn as --solver-path.
+    let effectiveWrapperPath: string;
+
+    const distWrapper = resolve(
+      // When running from core/dist/ directly (tests, CLI)
+      existsSync(resolve(__dirname, "minimization", "wrapper.js"))
+        ? resolve(__dirname, "minimization", "wrapper.js")
+        // When bundled in vscode extension: dist/dist/minimization/wrapper.js
+        : existsSync(resolve(__dirname, "dist", "minimization", "wrapper.js"))
+          ? resolve(__dirname, "dist", "minimization", "wrapper.js")
+          // Fallback: relative to scripts dir (matches old .sh layout)
+          : resolve(scriptsDir, "..", "dist", "minimization", "wrapper.js")
+    );
+
+    if (!existsSync(distWrapper)) {
+      return { log: "", exitCode: -1, error: `wrapper.js not found. Searched:\n` +
+        `  ${resolve(__dirname, "minimization", "wrapper.js")}\n` +
+        `  ${resolve(__dirname, "dist", "minimization", "wrapper.js")}\n` +
+        `  ${resolve(scriptsDir, "..", "dist", "minimization", "wrapper.js")}` };
+    }
+
+    // Find a suitable node binary for the wrapper.
+    // process.execPath in VS Code is the Electron binary — it can run JS but
+    // behaves differently with interactive stdin/stdout piping (can hang).
+    // Prefer a real node binary from PATH; fall back to process.execPath.
+    const pathNode = resolveExecutableInPath("node");
+    const nodeBin = pathNode ?? process.execPath;
+    const nodeSource = pathNode ? "PATH" : "process.execPath (Electron)";
+    log(`[info] Node binary for wrapper: ${nodeBin} (source: ${nodeSource})`);
+    log(`[info] Wrapper dist module: ${distWrapper}`);
+
+    if (IS_WIN) {
+      const cmdPath = join(tmpDir, "z3-minimizer-wrapper.cmd");
+      const cmdContents = `@echo off\r\n"${nodeBin}" --no-warnings "${distWrapper}" %*\r\n`;
+      try {
+        await writeFile(cmdPath, cmdContents, "utf8");
+        effectiveWrapperPath = cmdPath;
+      } catch {
+        return { log: "", exitCode: -1, error: `failed to create wrapper .cmd at ${cmdPath}` };
+      }
+    } else {
       const shimPath = join(tmpDir, "z3-minimizer-wrapper");
-      const distWrapper = join(scriptsDir, "..", "dist", "minimization", "wrapper.js");
-      const shimContents = `#!/usr/bin/env sh\nexec node "${distWrapper}" "$@"\n`;
+      const shimContents = `#!/usr/bin/env sh\nexec "${nodeBin}" --no-warnings "${distWrapper}" "$@"\n`;
       try {
         await writeFile(shimPath, shimContents, "utf8");
         await chmod(shimPath, 0o755);
         effectiveWrapperPath = shimPath;
       } catch {
-        // fallback to bundled .sh even if not executable; let spawn errors surface
         effectiveWrapperPath = wrapperPath;
       }
     }
 
-    // --solver-path tells Dafny/Boogie to use our wrapper instead of z3
+    log(`[info] Effective wrapper path: ${effectiveWrapperPath}`);
     args.push("--solver-path", effectiveWrapperPath);
 
     spawnEnv = {
@@ -306,15 +448,21 @@ export async function runDafny(
       PROOFPULSE_WRAPPER_LOG: wrapperLog,
     };
 
-    // Log resolved paths for debugging
+    // Persist debug info for post-mortem
     const debugInfo = [
-      `dafnyBin: ${dafnyBin}`,
-      `z3Path: ${z3Path}`,
-      `wrapperPath: ${wrapperPath}`,
-      `scriptsDir: ${scriptsDir}`,
+      `platform: ${platform()}`,
+      `dafnyBin: ${dafnyBin} (source: ${dafnySource})`,
+      `dafnyVersion: ${dafnyVersion ?? "unknown"}`,
+      `z3Path: ${z3Path} (source: ${z3Result.source})`,
+      `z3Version: ${z3Version ?? "unknown"}`,
+      `nodeBin: ${nodeBin}`,
+      `distWrapper: ${distWrapper}`,
+      `effectiveWrapper: ${effectiveWrapperPath}`,
     ].join("\n");
     await writeFile(join(tmpDir, "debug_info.txt"), debugInfo, "utf8").catch(() => {});
   }
+
+  log(`[info] Spawning: ${dafnyBin} ${args.join(" ")}`);
 
   try {
     const result = await spawnDafny(dafnyBin, args, tmpDir, timeoutSec, spawnEnv);
@@ -323,19 +471,13 @@ export async function runDafny(
     let debugContext = "";
     if (options?.forceMinimization) {
       try {
-        const wrapperLog = await readFile(join(tmpDir, "wrapper.log"), "utf8").catch(() => "");
-        if (wrapperLog) {
-          debugContext = `\n--- wrapper log ---\n${wrapperLog.slice(-1000)}`;
-        }
+        const wl = await readFile(join(tmpDir, "wrapper.log"), "utf8").catch(() => "");
+        if (wl) debugContext = `\n--- wrapper log ---\n${wl.slice(-1000)}`;
       } catch { /* ignore */ }
     }
-
-    // Also include debug_info.txt if present
     try {
-      const debugInfoFile = await readFile(join(tmpDir, "debug_info.txt"), "utf8").catch(() => "");
-      if (debugInfoFile) {
-        debugContext = `${debugContext}\n--- debug_info.txt ---\n${debugInfoFile}`;
-      }
+      const di = await readFile(join(tmpDir, "debug_info.txt"), "utf8").catch(() => "");
+      if (di) debugContext = `${debugContext}\n--- debug_info.txt ---\n${di}`;
     } catch { /* ignore */ }
 
     if (result.error) {
@@ -346,7 +488,6 @@ export async function runDafny(
       return { log: "", exitCode: -1, timedOut: true, error: debugContext ? `timed out${debugContext}` : undefined };
     }
 
-    // Non-zero exit with stderr → surface the error
     if (result.exitCode !== 0 && result.stderr) {
       return {
         log: "",
@@ -356,19 +497,22 @@ export async function runDafny(
     }
 
     // Read prover_log.txt produced by dafny
-    let log = "";
+    let logContent = "";
     try {
-      log = await readFile(join(tmpDir, "prover_log.txt"), "utf8");
+      logContent = await readFile(join(tmpDir, "prover_log.txt"), "utf8");
     } catch {
-      // dafny may not produce log on all runs; fall back to stdout
-      log = result.stdout ?? "";
+      logContent = result.stdout ?? "";
     }
 
-    return { log, exitCode: result.exitCode ?? -1, timedOut: false };
+    return { log: logContent, exitCode: result.exitCode ?? -1, timedOut: false };
   } finally {
     rm(tmpDir, { recursive: true, force: true }).catch(() => {});
   }
 }
+
+// ---------------------------------------------------------------------------
+// Spawn helper
+// ---------------------------------------------------------------------------
 
 interface SpawnResult {
   exitCode?: number;
@@ -406,7 +550,7 @@ function spawnDafny(
       clearTimeout(timer);
       if (!done) {
         done = true;
-        const msg = err.message?.includes("ENOENT") ? "dafny not found" : err.message;
+        const msg = err.message?.includes("ENOENT") ? `binary not found: ${bin}` : err.message;
         resolve({ error: msg });
       }
     });

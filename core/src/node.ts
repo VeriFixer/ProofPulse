@@ -59,8 +59,16 @@ export class Node {
     } else if (this.prooftext.includes("assertion always holds")) {
       this.type = TokenType.AssertionManual;
     } else if (
+      this.prooftext.includes("loop invariant holds on entry") ||
+      this.prooftext.includes("loop invariant is maintained by the loop") ||
+      this.prooftext.includes("loop invariant always holds") ||
+      this.prooftext === "loop invariant"
+    ) {
+      this.type = TokenType.LoopInvariant;
+    } else if (
       this.prooftext.includes("index in range") ||
       this.prooftext.includes("target object is never null") ||
+      this.prooftext.includes("array is never null") ||
       this.prooftext.includes("which is subject to definite-assignment rules, is always initialized at this return point") ||
       this.prooftext.includes("which is subject to definite-assignment rules, is always initialized here") || 
       this.prooftext.includes("decreases expression is bounded below by") ||

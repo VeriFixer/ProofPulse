@@ -10,6 +10,7 @@ export enum TokenType {
   Postcondition = "Postcondition",
   AssertionManual = "AssertionManual",
   AssertionAutomatic = "AssertionAutomatic",
+  LoopInvariant = "LoopInvariant",
   Call = "Call",
   CodeLine = "CodeLine",
 }

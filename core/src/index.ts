@@ -6,5 +6,6 @@ export type { ProofGraphJSON, BFSResult } from "./proof-graph.js";
 export { Proof, parseProof } from "./proof.js";
 export { computeLineStatus, getNodesByLine, getRelatedNodes, getNodeInfo } from "./coverage.js";
 export { serializeProofGraph, deserializeProofGraph } from "./serialization.js";
-export { runDafny } from "./dafny-runner.js";
+export { runDafny, resolveDafnyPathWithSource, resolveZ3PathWithSource } from "./dafny-runner.js";
+export type { ResolveSource, ResolvedPath } from "./dafny-runner.js";
 export { generateSpansFragment, getDependsOn } from "./rendering.js";

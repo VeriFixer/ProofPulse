@@ -2,12 +2,86 @@ import { CovStatus, TokenType } from "./types.js";
 import { Node } from "./node.js";
 import { ProofGraph } from "./proof-graph.js";
 
+export interface SpanEntry {
+  file: string;
+  startLine: number;
+  startCol: number;
+  endLine: number;
+  endCol: number;
+  message: string;
+}
+
+export type SpanMap = SpanEntry[];
+
+export function getMessageClass(message: string): string {
+  if (message === "this postcondition holds") return "postcondition";
+  if (message === "the precondition always holds") return "precondition";
+  if (
+    message === "this loop invariant holds on entry" ||
+    message === "this loop invariant is maintained by the loop"
+  )
+    return "loop-invariant";
+  return "exact";
+}
+
+export function messagesMatch(topMessage: string, rangeMessage: string): boolean {
+  const cls = getMessageClass(topMessage);
+  if (cls === "postcondition") return rangeMessage === "ensures clause";
+  if (cls === "precondition") return rangeMessage.startsWith("requires clause at");
+  if (cls === "loop-invariant") return rangeMessage === "loop invariant always holds";
+  return topMessage.trim() === rangeMessage.trim();
+}
+
+export function isContained(
+  line: number,
+  col: number,
+  sL: number,
+  sC: number,
+  eL: number,
+  eC: number
+): boolean {
+  if (line < sL || line > eL) return false;
+  if (line === sL && col < sC) return false;
+  if (line === eL && col > eC) return false;
+  return true;
+}
+
+export function findTightestSpan(
+  spanMap: SpanMap,
+  file: string,
+  line: number,
+  col: number,
+  topMessage: string
+): SpanEntry | null {
+  let best: SpanEntry | null = null;
+  let bestLines = Infinity;
+  let bestCols = Infinity;
+
+  for (const entry of spanMap) {
+    if (entry.file !== file) continue;
+    if (!isContained(line, col, entry.startLine, entry.startCol, entry.endLine, entry.endCol)) continue;
+    if (!messagesMatch(topMessage, entry.message)) continue;
+
+    const lines = entry.endLine - entry.startLine;
+    const cols = entry.endCol - entry.startCol;
+    if (lines < bestLines || (lines === bestLines && cols < bestCols)) {
+      best = entry;
+      bestLines = lines;
+      bestCols = cols;
+    }
+  }
+
+  return best;
+}
+
 const enum BlockType {
   NoBlock = 0,
   Assertion = 1,
   ProofDep = 2,
   Unused = 3,
 }
+
+export const STRICT_SPAN_MERGE = typeof process !== "undefined" && (process.env?.NODE_ENV === "test" || process.env?.STRICT_SPAN_MERGE === "1");
 
 export class Proof {
   proofGraph: ProofGraph;
@@ -18,6 +92,22 @@ export class Proof {
     this.lineStatus = [];
 
     const lines = proofLog.split(/\r?\n/);
+
+    // Pre-pass: collect all range entries into spanMap
+    const rangeRe = /^ *(.+?)\((\d+),\s*(\d+)\)-\((\d+),\s*(\d+)\):\s*(.+)$/;
+    const spanMap: SpanMap = [];
+    for (let i = 0; i < lines.length; i++) {
+      const m = lines[i].match(rangeRe);
+      if (!m) continue;
+      spanMap.push({
+        file: m[1].trim(),
+        startLine: parseInt(m[2], 10),
+        startCol: parseInt(m[3], 10),
+        endLine: parseInt(m[4], 10),
+        endCol: parseInt(m[5], 10),
+        message: m[6].trim(),
+      });
+    }
 
     let assertionBatch: number | null = null;
     let currentTopAssertion: Node | null = null;
@@ -78,6 +168,49 @@ export class Proof {
         const sCol = parseInt(n[3], 10);
         const proofText = n[4].trim();
         token = new Node(file, sLine, sCol, sLine, sCol, proofText, isTopAssertion);
+
+        // Span promotion: point-only top assertions get promoted to full-range
+        if (isTopAssertion) {
+          const originalPointId = token.id;
+          const match = findTightestSpan(spanMap, file, sLine, sCol, proofText);
+          if (match) {
+            const promotedNode = new Node(match.file, match.startLine, match.startCol, match.endLine, match.endCol, proofText, true);
+            if (this.proofGraph.hasNode(promotedNode.id)) {
+              token = this.proofGraph.getNode(promotedNode.id)!;
+            } else {
+              token = promotedNode;
+            }
+
+            // If the original point node already exists in the graph (added by
+            // a previous iteration, e.g. as a proof dependency), transfer its
+            // edges to the promoted range node and remove the orphan point.
+            if (token.id !== originalPointId && this.proofGraph.hasNode(originalPointId)) {
+              const oldPointNode = this.proofGraph.getNode(originalPointId)!;
+              // Transfer edges: parents that oldPointNode proves
+              for (const parent of oldPointNode.proves) {
+                parent.provedBy.delete(oldPointNode);
+                if (parent.id !== token.id) {
+                  parent.provedBy.add(token);
+                  token.proves.add(parent);
+                }
+              }
+              // Transfer edges: children that prove oldPointNode
+              for (const child of oldPointNode.provedBy) {
+                child.proves.delete(oldPointNode);
+                if (child.id !== token.id) {
+                  child.proves.add(token);
+                  token.provedBy.add(child);
+                }
+              }
+              this.proofGraph.removeNode(originalPointId);
+              if (this.proofGraph.hasTopNode(originalPointId)) {
+                this.proofGraph.removeTopNode(originalPointId);
+              }
+            }
+          } else if (STRICT_SPAN_MERGE) {
+            throw new Error(`STRICT_SPAN_MERGE: no matching span for point ${file}(${sLine},${sCol}): ${proofText}`);
+          }
+        }
       } else {
         continue;
       }
@@ -89,19 +222,55 @@ export class Proof {
       }
 
       if (isTopAssertion) {
-        currentTopAssertion = token;
-        currentTopAssertion.updateIsTopAssertion(isTopAssertion);
+        // Check if an existing top node already contains this point-node's
+        // start position. This handles sub-expression assertion batches that
+        // Dafny emits for parts of a postcondition (e.g. just the `==` in
+        // `ensures 2 == 3`). Instead of creating a duplicate orphan top, we
+        // merge into the existing wider-range top node.
+        let mergedIntoExisting = false;
+        if (token.start.line === token.end.line && token.start.col === token.end.col) {
+          // Point-node: look for an existing top that contains this point
+          for (const existingTop of this.proofGraph.getAllTopNodes()) {
+            if (
+              existingTop.id !== token.id &&
+              existingTop.start.line <= token.start.line &&
+              token.start.line <= existingTop.end.line &&
+              existingTop.start.col <= token.start.col &&
+              token.start.col <= existingTop.end.col
+            ) {
+              // Existing top contains this point — merge into it
+              currentTopAssertion = existingTop;
+              // Remove the orphan point-node from the graph if it was just added
+              if (this.proofGraph.hasNode(token.id) && token.proves.size === 0 && token.provedBy.size === 0) {
+                this.proofGraph.removeNode(token.id);
+              }
+              mergedIntoExisting = true;
+              break;
+            }
+          }
+        }
 
-        if (!this.proofGraph.hasTopNode(token.id)) {
-          this.proofGraph.addTopNode(token);
+        if (!mergedIntoExisting) {
+          currentTopAssertion = token;
+          currentTopAssertion.updateIsTopAssertion(isTopAssertion);
+
+          if (!this.proofGraph.hasTopNode(token.id)) {
+            this.proofGraph.addTopNode(token);
+          }
         }
       } else if (currentTopAssertion != null) {
-        if (currentBlock === BlockType.ProofDep) {
-          // Promotion: if proof dep's range contains the top assertion's start point,
+        if (currentBlock === BlockType.ProofDep || currentBlock === BlockType.Unused) {
+          // Promotion: if the node's range contains the top assertion's start point,
           // the range-node replaces the phantom point-node as the top node.
           // This handles: manual assertions (same start), ensures clauses (wider range
           // starting before the postcondition point), requires clauses (same pattern).
+          // Applied to both ProofDep and Unused blocks — Dafny may place the ensures
+          // clause range in either section (e.g. impossible precondition → Unused).
+          // Skip this promotion if the top was already promoted by span-merge (non-point).
+          const topIsPoint = currentTopAssertion.start.line === currentTopAssertion.end.line &&
+            currentTopAssertion.start.col === currentTopAssertion.end.col;
           if (
+            topIsPoint &&
             token.id !== currentTopAssertion.id &&
             token.start.line <= currentTopAssertion.start.line &&
             currentTopAssertion.start.line <= token.end.line &&
@@ -112,9 +281,14 @@ export class Proof {
             this.proofGraph.replaceTopNode(currentTopAssertion, token);
             currentTopAssertion = token;
             // Don't add an edge from the top to itself — they merged.
-          } else {
+          } else if (currentBlock === BlockType.ProofDep) {
             this.proofGraph.addEdge(currentTopAssertion.id, token.id);
           }
+          // Unused items that don't promote are just added to the graph (already done above)
+          // but NOT connected as proof dependencies.
+        }
+
+        if (currentBlock === BlockType.ProofDep) {
 
           // "ensures clause at" postcall pattern for cross-method postcondition connections
           const postcall =
@@ -236,8 +410,8 @@ export class Proof {
         // If not has children is vacuously True stays uncovered
         continue
       }
-      if(top.type != TokenType.AssertionManual){
-        // Assertion manual only marked as complete if any cihld of it is marked as complete
+      if(top.type != TokenType.AssertionManual && top.type != TokenType.LoopInvariant){
+        // Assertion manual and LoopInvariant only marked as complete if any child of it is marked as complete
         top.covStatusInternal = CovStatus.CovComplete;
       }
       if (neighbors) {
@@ -276,6 +450,18 @@ export class Proof {
       (t) => t.type === TokenType.AssertionManual,
     );
     for (const token of allManualAssertions) {
+      if (token.covStatusInternal === CovStatus.CovComplete) {
+        token.covStatus = CovStatus.CovComplete;
+      } else {
+        token.covStatus = CovStatus.Uncovered;
+      }
+    }
+
+    // LoopInvariants: same as ManualAssertions — CovComplete only if internal is CovComplete, else Uncovered
+    const allLoopInvariants = allTokensArray.filter(
+      (t) => t.type === TokenType.LoopInvariant,
+    );
+    for (const token of allLoopInvariants) {
       if (token.covStatusInternal === CovStatus.CovComplete) {
         token.covStatus = CovStatus.CovComplete;
       } else {

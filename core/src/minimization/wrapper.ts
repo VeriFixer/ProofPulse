@@ -6,7 +6,7 @@
  * sequences to perform unsat-core minimization.
  */
 
-import { spawn, execSync, type ChildProcess } from "node:child_process";
+import { spawn, execFileSync } from "node:child_process";
 import { appendFileSync } from "node:fs";
 import { createStdinReader } from "./stdin-reader.js";
 import {
@@ -153,7 +153,7 @@ export async function main(): Promise<number> {
   // Handle -version: Boogie calls this first
   if (process.argv.includes("-version")) {
     try {
-      const out = execSync(`${Z3_PATH} -version`, { encoding: "utf-8" });
+      const out = execFileSync(Z3_PATH, ["-version"], { encoding: "utf-8", timeout: 5000 });
       process.stdout.write(out);
       return 0;
     } catch (e: unknown) {

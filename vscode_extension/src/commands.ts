@@ -37,7 +37,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
           z3Path: getZ3Path() || undefined,
           timeoutSeconds: timeout,
           forceMinimization: forceMin,
-          onWarning: (msg) => logInfo(`WARNING: ${msg}`),
+          onWarning: (msg) => logInfo(msg),
         });
 
         logInfo(`dafny exited ${result.exitCode}, timedOut=${result.timedOut ?? false}, error=${result.error ?? "none"}, logLen=${result.log.length}`);

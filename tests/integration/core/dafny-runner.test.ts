@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { chmod, mkdir, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { tmpdir } from "node:os";
-import { resolveDafnyPath, resolveZ3Path } from "../../../core/src/dafny-runner.js";
+import { resolveDafnyPathWithSource, resolveZ3PathWithSource } from "../../../core/src/dafny-runner.js";
 
 async function createExecutable(filePath: string): Promise<void> {
   await mkdir(dirname(filePath), { recursive: true });
@@ -26,15 +26,17 @@ describe("Dafny runner path resolution", () => {
       await createExecutable(z3Bin);
 
       vi.stubEnv("PATH", join(root, "bin"));
+      // Prevent bundled VS Code extension lookup from taking priority
+      vi.stubEnv("HOME", join(root, "fakehome"));
 
-      expect(resolveDafnyPath("dafny")).toBe(dafnyBin);
-      expect(resolveZ3Path(dafnyBin)).toBe(z3Bin);
+      expect(resolveDafnyPathWithSource("dafny")?.path).toBe(dafnyBin);
+      expect(resolveZ3PathWithSource(dafnyBin)?.path).toBe(z3Bin);
     } finally {
       await rm(root, { recursive: true, force: true });
     }
   });
 
   it("keeps explicit Dafny paths unchanged", () => {
-    expect(resolveDafnyPath("/opt/dafny/dafny")).toBe("/opt/dafny/dafny");
+    expect(resolveDafnyPathWithSource("/opt/dafny/dafny")).toEqual({ path: "/opt/dafny/dafny", source: "manual" });
   });
 });

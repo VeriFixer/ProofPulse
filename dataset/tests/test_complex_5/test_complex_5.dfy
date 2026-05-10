@@ -84,4 +84,3 @@ method GCD2(a: int, b: int) returns (r: int)
 //::: Name - Bug on line 15 and good find useuless assertions
 //::: Description -
 //::: L29 - Uncovered
-//::: L63 - Uncovered

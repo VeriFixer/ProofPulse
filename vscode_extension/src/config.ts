@@ -13,7 +13,7 @@ export function getRunOnSave(): boolean {
 }
 
 export function getForceMinimization(): boolean {
-  return vscode.workspace.getConfiguration("proofpulse").get<boolean>("forceMinimization", true);
+  return vscode.workspace.getConfiguration("proofpulse").get<boolean>("forceMinimization", false);
 }
 
 export function getZ3Path(): string {

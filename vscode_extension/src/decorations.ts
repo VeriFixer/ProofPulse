@@ -18,6 +18,7 @@ function uncoveredExplanation(type: string): string {
     case "Postcondition": return "Postcondition not proven by any code path.";
     case "Precondition": return "Precondition not used in any proof obligation.";
     case "AssertionManual": return "Manual assertion not covered by proof dependencies.";
+    case "LoopInvariant": return "Loop invariant not covered by proof dependencies.";
     case "CodeLine": return "Code line not contributing to any proof obligation.";
     default: return "Not covered by any proof path.";
   }
@@ -30,6 +31,7 @@ function covTestExplanation(type: string): string {
     case "Precondition": return "Precondition only used in calling tests, unnecessary to prove postconditions.";
     case "CodeLine": return "Code used only by test assertions, not by postcondition proofs.";
     case "AssertionManual": return "Assertion covered only by test paths, not postcondition proofs.";
+    case "LoopInvariant": return "Loop invariant covered only by test paths, not postcondition proofs.";
     default: return "Covered only by test/non-postcondition assertions.";
   }
 }

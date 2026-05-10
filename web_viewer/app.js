@@ -22,6 +22,7 @@ function typeBadge(type) {
     Postcondition: '#ab47bc',
     AssertionManual: '#ff7043',
     AssertionAutomatic: '#66bb6a',
+    LoopInvariant: '#ffa726',
     CodeLine: '#78909c',
     Undefined: '#555',
   };
@@ -125,6 +126,7 @@ function statusExplanation(status, type) {
       case 'Postcondition': return 'Postcondition not proven by any code path.';
       case 'Precondition': return 'Precondition not used in any proof obligation.';
       case 'AssertionManual': return 'Manual assertion not covered by proof dependencies.';
+      case 'LoopInvariant': return 'Loop invariant not covered by proof dependencies.';
       case 'CodeLine': return 'Code line not contributing to any proof obligation.';
       default: return 'Not covered by any proof path.';
     }
