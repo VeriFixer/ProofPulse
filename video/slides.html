@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProofPulse — Tool Demo</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #1a1a2e; color: #eee; }
+
+.slide {
+  width: 100vw; height: 100vh;
+  display: none; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 60px 100px;
+  position: relative;
+}
+.slide.active { display: flex; }
+
+h1 { font-size: 3em; margin-bottom: 0.2em; color: #4fc3f7; }
+h2 { font-size: 2.2em; margin-bottom: 0.5em; color: #4fc3f7; }
+h3 { font-size: 1.5em; margin-bottom: 0.4em; color: #81d4fa; }
+p, li { font-size: 1.3em; line-height: 1.6; }
+ul { list-style: none; padding-left: 0; }
+ul li { margin: 0.4em 0; padding-left: 1.2em; position: relative; }
+ul li::before { content: "▸"; position: absolute; left: 0; color: #4fc3f7; }
+
+.subtitle { font-size: 1.5em; color: #aaa; margin-top: 0.3em; }
+.authors { font-size: 1.1em; color: #888; margin-top: 1em; }
+.institution { font-size: 0.95em; color: #666; margin-top: 0.3em; }
+
+.pipeline { display: flex; align-items: center; gap: 10px; margin: 25px 0; flex-wrap: wrap; }
+.pipeline .box {
+  background: #16213e; border: 2px solid #4fc3f7; border-radius: 10px;
+  padding: 14px 20px; font-size: 1em; text-align: center;
+}
+.pipeline .box.highlight { border-color: #ffeb3b; box-shadow: 0 0 12px rgba(255,235,59,0.3); }
+.pipeline .arrow { font-size: 1.6em; color: #4fc3f7; }
+
+  .status-row { display: flex; gap: 30px; margin: 25px 0; align-items: stretch; flex-wrap: wrap; }
+  .status-box {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 12px 16px; border-radius: 10px; font-size: 1.05em; font-weight: 700;
+    min-width: 200px; max-width: 320px; text-align: center; line-height: 1.15;
+  }
+  .status-box small { display: block; font-weight: 400; font-size: 0.95em; color: #dcdcdc; line-height: 1.25; margin-top: 6px; }
+.status-green { background: rgba(76, 175, 80, 0.2); border: 2px solid #4caf50; }
+.status-blue { background: rgba(255, 235, 59, 0.15); border: 2px solid #ffeb3b; }
+.status-red { background: rgba(244, 67, 54, 0.2); border: 2px solid #f44336; }
+
+.code-block {
+  background: #0d1117; border: 1px solid #333; border-radius: 8px;
+  padding: 18px 24px; font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 1em; line-height: 1.7; margin: 18px 0;
+  /* make code blocks consistent across slides */
+  width: min(780px, 78vw); max-width: 780px; white-space: pre; overflow-x: auto;
+  margin-left: auto; margin-right: auto; min-height: 260px;
+}
+.code-green { color: #4caf50; }
+.code-red { color: #f44336; }
+.code-blue { color: #ffeb3b; }
+.code-gray { color: #666; }
+.code-yellow { color: #ffeb3b; }
+
+.comparison { display: flex; gap: 40px; margin: 20px 0; }
+.comparison > div { flex: 1; }
+.comparison h3 { text-align: center; }
+
+/* Compact styling for slide 3 to free space for the code block */
+#slide3 { padding: 40px 80px; }
+#slide3 h2 { font-size: 1.8em; margin-bottom: 0.2em; }
+#slide3 p { margin-bottom: 8px; font-size: 0.95em; color: #bbb; }
+#slide3 .code-block { min-height: 400px; max-width: 780px; font-size: 1.02em; }
+
+/* Ensure slide 2 right column centers code and uses same block width */
+#slide2 .two-col > div:last-child { display: flex; align-items: center; justify-content: center; }
+#slide2 .two-col .code-block { margin: 0; }
+
+.slide-number {
+  position: absolute; bottom: 20px; right: 40px;
+  font-size: 0.9em; color: #555;
+}
+
+table { border-collapse: collapse; margin: 20px 0; font-size: 1.05em; }
+table th, table td { border: 1px solid #444; padding: 10px 18px; text-align: center; }
+table th { background: #16213e; color: #4fc3f7; }
+table tr:nth-child(even) { background: rgba(255,255,255,0.03); }
+
+.emphasis { color: #ffeb3b; }
+.quote { font-style: italic; color: #aaa; border-left: 3px solid #4fc3f7; padding-left: 16px; margin: 20px 0; font-size: 1.15em; }
+
+.two-col { display: flex; gap: 50px; align-items: flex-start; width: 100%; max-width: 1100px; }
+.two-col > div { flex: 1; }
+
+nav { display: none; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Title -->
+<div class="slide active">
+  <h1>ProofPulse</h1>
+  <p class="subtitle">Interactive Proof Coverage Analysis for Dafny</p>
+  <p class="authors">Álvaro Silva &nbsp;·&nbsp; Alexandra Mendes &nbsp;·&nbsp; Ruben Martins</p>
+  <p class="institution">INESC TEC / U. Porto &nbsp;·&nbsp; Carnegie Mellon University</p>
+  <p style="margin-top: 2em; color: #666; font-size: 1em;">Tool Demonstration</p>
+  <div class="slide-number">1 / 5</div>
+</div>
+
+<!-- SLIDE 2: The False Sense of Security (two-phase transition) -->
+<div class="slide" id="slide2">
+  <h2>The False Sense of Security</h2>
+  <div class="two-col">
+    <div>
+      <ul>
+        <li>Verification proves implementation satisfies the <em>given</em> contract</li>
+        <li>Does <strong>not</strong> ensure the contract is adequate</li>
+        <li>Vacuous proofs → green tick, zero guarantees</li>
+        <li>No feedback on <em>what the proof actually used</em></li>
+      </ul>
+      <p class="quote" style="margin-top: 30px;">"Verified" ≠ well-specified.<br>The developer sees a tick and moves on.</p>
+    </div>
+    <div style="position: relative;">
+      <!-- Phase 1: Code looks normal, Dafny says "Verified" -->
+      <div id="slide2-phase1">
+        <h3 style="margin-bottom: 8px;">Dafny says: <span style="color: #4caf50;">✓ Verified</span></h3>
+        <div class="code-block"><span class="code-gray">method DemoImpossiblePrecondition(a: int)</span>
+<span class="code-gray">    returns (r: int)</span>
+<span class="code-gray">  requires forall t :: t*t + 1 <= t*t</span>
+<span class="code-gray">  ensures 2 == 3</span>
+<span class="code-gray">{</span>
+<span class="code-gray">  var k := a + 1;</span>
+<span class="code-gray">  var m := k * 2;</span>
+<span class="code-gray">  r := m - k;</span>
+<span class="code-gray">}</span></div>
+        <p style="font-size: 1em; color: #4caf50; margin-top: 8px;">✓ No errors. All proof obligations discharged.</p>
+      </div>
+      <!-- Phase 2: ProofPulse reveals the truth -->
+      <div id="slide2-phase2" style="display: none;">
+        <h3 style="margin-bottom: 8px;">ProofPulse reveals: <span style="color: #f44336;">Vacuous Proof</span></h3>
+        <div class="code-block"><span class="code-gray">method DemoImpossiblePrecondition(a: int)</span>
+<span class="code-gray">    returns (r: int)</span>
+<span class="code-green">  requires forall t :: t*t + 1 <= t*t  // CovComplete (!)</span>
+<span class="code-blue">  ensures 2 == 3                       // CovTest ()</span>
+<span class="code-gray">{</span>
+<span class="code-red">  var k := a + 1;                      // Uncovered</span>
+<span class="code-red">  var m := k * 2;                      // Uncovered</span>
+<span class="code-red">  r := m - k;                          // Uncovered</span>
+<span class="code-gray">}</span></div>
+        <p style="font-size: 0.95em; color: #f44336; margin-top: 8px;">
+          Precondition is unsatisfiable → <em>ex falso quodlibet</em>.<br>
+          No code contributes. The postcondition is "proved" from nothing.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">2 / 5</div>
+</div>
+<div class="slide" id="slide3">
+  <h2>Three-Valued Proof Coverage</h2>
+  <p>Refining Tomb & Joshi's binary model into graded proof relevance:</p>
+  <div class="status-row">
+    <div class="status-box status-green">
+      <strong>CovComplete</strong>
+      <small>Contributes to proving a postcondition (spec intent)</small>
+    </div>
+    <div class="status-box status-blue">
+      <strong>CovTest</strong>
+      <small>Postconditions unused by callees, or preconditions used in callers but not needed to prove postcondition</small>
+    </div>
+    <div class="status-box status-red">
+      <strong>Uncovered</strong>
+      <small>No proof obligation depends on it</small>
+    </div>
+  </div>
+  <div class="code-block"><span class="code-gray">method DemoAbs(x: int) returns (y: int)</span>
+<span class="code-blue">  ensures x >= 0 ==> x == y    // CovTest: no caller depends on it</span>
+<span class="code-blue">  ensures x < 0 ==> x + y == 0 // CovTest: no caller depends on it</span>
+<span class="code-gray">{</span>
+<span class="code-gray">  if x == 0 {</span>
+<span class="code-red">    y := 0;                     // Uncovered: redundant for proof</span>
+<span class="code-gray">  }</span>
+<span class="code-gray">  if x < 0 {</span>
+<span class="code-green">    y := -x;                    // CovComplete</span>
+<span class="code-gray">  } else {</span>
+<span class="code-green">    y := IdDemo(x);             // CovComplete</span>
+<span class="code-gray">  }</span>
+<span class="code-gray">}</span></div>
+  <div class="slide-number">3 / 5</div>
+</div>
+
+<!-- SLIDE 4: Architecture -->
+<div class="slide">
+  <h2>Architecture</h2>
+  <div style="margin: 20px 0; text-align: center;">
+    <img src="diagram.drawio.svg" alt="ProofPulse Pipeline Diagram" style="max-width: 95%; max-height: 55vh; border-radius: 8px; background: #fff; padding: 10px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <!-- Fallback if SVG not found -->
+    <div class="pipeline" style="display: none; flex-wrap: wrap; justify-content: center;">
+      <div class="box">Dafny Source<br><small>(.dfy)</small></div>
+      <div class="arrow">→</div>
+      <div class="box">Dafny Verifier<br><small>(Boogie + Z3)</small></div>
+      <div class="arrow">→</div>
+      <div class="box">Prover Log</div>
+      <div class="arrow">→</div>
+      <div class="box highlight">@proofpulse/core<br><small>Parser → Graph → Coverage</small></div>
+      <div class="arrow">→</div>
+      <div class="box" style="border-color: #b85450;">VSCode / Web Viewer</div>
+    </div>
+  </div>
+  <ul style="margin-top: 20px; font-size: 1.1em;">
+    <li>Pure TypeScript — no external deps beyond Dafny + Z3</li>
+    <li>Proof dependency graph: nodes = source spans, edges = "used to discharge"</li>
+    <li>BFS propagation from top-level obligations → type-aware refinement</li>
+  </ul>
+  <div class="slide-number">4 / 5</div>
+</div>
+
+<!-- Live Demonstration slide removed for live demo -->
+
+<!-- Z3 Unsat-Core Minimization slide removed for live demo -->
+
+<!-- SLIDE 5: Closing -->
+<div class="slide">
+  <h2 style="margin-bottom: 0.6em;">Closing</h2>
+  <p class="quote">
+    "Just as a pulse check distinguishes vitality from the mere absence of symptoms, ProofPulse reveals defects in proofs that, while technically passing, remain semantically weak."
+  </p>
+  <ul style="margin-top: 30px;">
+    <li>Open-source — requires only Dafny</li>
+    <li>VSCode extension + interactive web viewer</li>
+  </ul>
+  <p style="margin-top: 35px; font-size: 1.3em; color: #4fc3f7;">
+    github.com/VeriFixer/ProofPulse
+  </p>
+  <div class="slide-number">5 / 5</div>
+</div>
+
+<nav>
+  <button onclick="prev()">← Prev</button>
+  <button onclick="next()">Next →</button>
+</nav>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+let slide2phase = 1; // track phase for slide 2
+
+function show(n) {
+  slides[current].classList.remove('active');
+  current = Math.max(0, Math.min(n, slides.length - 1));
+  slides[current].classList.add('active');
+  // Reset slide2 phase hint visibility
+  if (current === 1) {
+    document.getElementById('slide2-hint').style.opacity = slide2phase === 1 ? '1' : '0';
+  }
+}
+
+function next() {
+  // Special handling: slide 2 has two phases
+  if (current === 1 && slide2phase === 1) {
+    slide2phase = 2;
+    document.getElementById('slide2-phase1').style.display = 'none';
+    document.getElementById('slide2-phase2').style.display = 'block';
+    document.getElementById('slide2-hint').style.opacity = '0';
+    return;
+  }
+  show(current + 1);
+}
+
+function prev() {
+  // Special handling: going back on slide 2 phase 2 → phase 1
+  if (current === 1 && slide2phase === 2) {
+    slide2phase = 1;
+    document.getElementById('slide2-phase1').style.display = 'block';
+    document.getElementById('slide2-phase2').style.display = 'none';
+    document.getElementById('slide2-hint').style.opacity = '1';
+    return;
+  }
+  show(current - 1);
+  // If we land back on slide 2, reset to phase 2 (coming from slide 3)
+  if (current === 1) {
+    slide2phase = 2;
+    document.getElementById('slide2-phase1').style.display = 'none';
+    document.getElementById('slide2-phase2').style.display = 'block';
+    document.getElementById('slide2-hint').style.opacity = '0';
+  }
+}
+
+// Show hint after a short delay when slide 2 is first shown
+const observer = new MutationObserver(() => {
+  if (current === 1 && slide2phase === 1) {
+    setTimeout(() => {
+      document.getElementById('slide2-hint').style.opacity = '1';
+    }, 1500);
+  }
+});
+observer.observe(slides[1], { attributes: true, attributeFilter: ['class'] });
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+  if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+});
+</script>
+</body>
+</html>
