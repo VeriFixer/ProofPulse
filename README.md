@@ -10,7 +10,7 @@ Dafny proof dependency and coverage analysis tool. Parses prover logs into a pro
 ### Prerequisites
 
 - Node.js (≥18)
-- Dafny (in PATH or via the official Dafny VS Code extension)
+- Dafny ≥ 4.0 (in PATH or via the official Dafny VS Code extension)
 
 ### Clone with submodules
 

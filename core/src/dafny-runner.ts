@@ -1,7 +1,7 @@
 import { spawn, execFileSync } from "node:child_process";
 import { accessSync, constants as fsConstants, existsSync, readdirSync } from "node:fs";
 import { mkdtemp, readFile, rm, writeFile, chmod } from "node:fs/promises";
-import { delimiter, dirname, isAbsolute, join, resolve } from "node:path";
+import { basename, delimiter, dirname, isAbsolute, join, resolve } from "node:path";
 import { homedir, tmpdir, platform } from "node:os";
 import { fileURLToPath } from "node:url";
 import type { DafnyOptions, DafnyResult } from "./types.js";
@@ -317,6 +317,15 @@ export async function runDafny(
   const dafnyVersion = probeVersion(dafnyBin, "--version") ?? probeVersion(dafnyBin, "/version");
   if (dafnyVersion) {
     log(`[info] Dafny version: ${dafnyVersion}`);
+    const majorMatch = dafnyVersion.match(/^(\d+)\./);
+    if (majorMatch && parseInt(majorMatch[1], 10) < 4) {
+      return {
+        log: "",
+        exitCode: -1,
+        error: `Dafny ${dafnyVersion} is not supported. ProofPulse requires Dafny 4.x or later. ` +
+          `Update the Dafny VS Code extension or set proofpulse.dafnyPath to a Dafny 4.x binary.`,
+      };
+    }
   } else {
     log(`[warn] Could not determine Dafny version — '${dafnyBin} --version' failed. The binary may not be executable or may be corrupted.`);
   }
@@ -335,9 +344,27 @@ export async function runDafny(
   }
 
   const normalizedPath = normalizeFilePath(filePath);
+
+  // Dafny 4.x CoverageReporter.HtmlReportForFile splits source by Environment.NewLine
+  // (\r\n on Windows). If the file has Unix line endings, the line count mismatches token
+  // positions and causes IndexOutOfRangeException. Work around by copying the file to a
+  // temp path with normalized line endings (and no spaces in the name).
+  let effectivePath = normalizedPath;
+  if (IS_WIN || /\s/.test(normalizedPath)) {
+    const safeName = basename(normalizedPath).replace(/\s+/g, "_");
+    effectivePath = join(tmpDir, safeName);
+    let content = await readFile(normalizedPath, "utf-8");
+    if (IS_WIN) {
+      // Normalize to \r\n so Dafny's CoverageReporter line splitting works correctly
+      content = content.replace(/\r\n/g, "\n").replace(/\n/g, "\r\n");
+    }
+    await writeFile(effectivePath, content, "utf-8");
+    log(`[info] Copied source to ${effectivePath} (line-ending normalization=${IS_WIN})`);
+  }
+
   const args = [
     "verify",
-    normalizedPath,
+    effectivePath,
     "--verification-coverage-report", join(tmpDir, "cov"),
     "--log-format", "text",
     "--isolate-assertions",

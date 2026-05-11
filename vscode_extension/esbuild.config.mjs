@@ -32,15 +32,6 @@ const serverConfig = {
   platform: "node",
   target: "es2022",
   sourcemap: true,
-  banner: {
-    js: [
-      'import { createRequire as __createRequire } from "node:module";',
-      'import { dirname as __banner_dirname } from "node:path";',
-      'import { fileURLToPath as __banner_fileURLToPath } from "node:url";',
-      'const __filename = __banner_fileURLToPath(import.meta.url);',
-      'const __dirname = __banner_dirname(__filename);',
-    ].join("\n"),
-  },
 };
 
 /** Copy static web_viewer assets + core scripts into dist/ */
