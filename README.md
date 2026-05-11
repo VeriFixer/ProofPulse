@@ -2,7 +2,8 @@
 
 Dafny proof dependency and coverage analysis tool. Parses prover logs into a proof dependency graph, computes coverage status, and visualises results in a web viewer or VSCode extension.
 
-**Video demo:** [video.mp4](https://youtube.com/watch?v=video.mp4)
+## Watch the video demo to now more:
+[![Watch the demo](https://img.youtube.com/vi/S8Yzr2twzLs/0.jpg)](https://www.youtube.com/watch?v=8pO3NAodjoQ)
 
 ## Installation
 
