@@ -89,16 +89,30 @@ When `forceMinimization` is enabled, Z3 calls are routed through a Node.js wrapp
 Classifies dafny-synthesis specs as strong/weak using ProofPulse coverage, then compares against the paper's manual oracle.
 
 ```bash
-# Run in bash
+# Run in bash to get evaluation options
 npx tsx evaluation/src/cli.ts -h
 ```
 
 To run the full evaluation:
 
 ```bash
-# Run in bash
+# Run in bash to get evaluation without minimization
 npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all
 ```
+
+This will create this file: 
+ProofPulse/evaluation/results/benchmark-results-aggregate-tables.tex
+With the first table results used on the paper.
+
+```bash
+# Run in bash to get evaluation with minimization
+npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --force-core-minimization
+```
+
+This will create this file: 
+ProofPulse/evaluation/results/benchmark-results-aggregate-tables.tex
+With the first table results used on the paper.
+
 
 These matched the Evaluation results shown on the paper tables.
 
