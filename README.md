@@ -76,7 +76,7 @@ All commands in the sections below (Demo Examples, Evaluation Benchmark, etc.) c
 This repo uses git submodules (e.g. `dafny-synthesis`). Either clone recursively:
 
 ```sh
-git clone --recursive <repo-url>
+git clone --recursive git@github.com:VeriFixer/ProofPulse.git
 ```
 
 Or if already cloned, init submodules:
