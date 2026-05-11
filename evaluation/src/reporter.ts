@@ -349,3 +349,54 @@ export function generateAggregateLatexTables(
 
   return lines.join("\n");
 }
+
+export interface ComparisonAggregateDatum {
+  datasetId: string;
+  total: number;
+  overallChanged: number;
+  postconditionChanged: number;
+  preconditionChanged: number;
+  invariantChanged: number;
+}
+
+export function generateComparisonAggregateLatexTable(
+  data: ComparisonAggregateDatum[],
+): string {
+  const lines: string[] = [];
+
+  // Compute totals
+  let totalN = 0, totalOverall = 0, totalPost = 0, totalPre = 0, totalInv = 0;
+  for (const d of data) {
+    totalN += d.total;
+    totalOverall += d.overallChanged;
+    totalPost += d.postconditionChanged;
+    totalPre += d.preconditionChanged;
+    totalInv += d.invariantChanged;
+  }
+
+  // Per-dataset table
+  lines.push("\\begin{table}[h]");
+  lines.push("  \\centering");
+  lines.push("  \\caption{Classification differences (baseline vs.\\ minimized) per verification condition type and dataset.}");
+  lines.push("  \\label{tab:minimization-comparison}");
+  lines.push("  \\begin{tabular}{lrrrrr}");
+  lines.push("    \\toprule");
+  lines.push("    \\textbf{Dataset} & \\textbf{N} & \\textbf{Overall} & \\textbf{Post.} & \\textbf{Pre.} & \\textbf{Inv.} \\\\");
+  lines.push("    \\midrule");
+
+  for (const d of data) {
+    lines.push(
+      `    ${d.datasetId} & ${d.total} & ${d.overallChanged} & ${d.postconditionChanged} & ${d.preconditionChanged} & ${d.invariantChanged} \\\\`
+    );
+  }
+
+  lines.push("    \\midrule");
+  lines.push(
+    `    \\textbf{Combined} & \\textbf{${totalN}} & \\textbf{${totalOverall}} & \\textbf{${totalPost}} & \\textbf{${totalPre}} & \\textbf{${totalInv}} \\\\`
+  );
+  lines.push("    \\bottomrule");
+  lines.push("  \\end{tabular}");
+  lines.push("\\end{table}");
+
+  return lines.join("\n");
+}

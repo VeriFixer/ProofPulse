@@ -11,6 +11,22 @@ Dafny proof dependency and coverage analysis tool. Parses prover logs into a pro
 - Node.js (≥18)
 - Dafny (in PATH or via the official Dafny VS Code extension)
 
+### Clone with submodules
+
+This repo uses git submodules (e.g. `dafny-synthesis`). Either clone recursively:
+
+```sh
+git clone --recursive <repo-url>
+```
+
+Or if already cloned, init submodules:
+
+```sh
+git submodule update --init --recursive
+```
+
+> **Without this, the evaluation benchmark will exit immediately** because the `dafny-synthesis/` folder won't exist.
+
 ### Build from source
 
 ```sh
@@ -71,6 +87,13 @@ When `forceMinimization` is enabled, Z3 calls are routed through a Node.js wrapp
 ## Evaluation Benchmark
 
 Classifies dafny-synthesis specs as strong/weak using ProofPulse coverage, then compares against the paper's manual oracle.
+
+```bash
+# Run in bash
+npx tsx evaluation/src/cli.ts -h
+```
+
+To run the full evaluation:
 
 ```bash
 # Run in bash

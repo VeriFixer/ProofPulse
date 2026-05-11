@@ -2,7 +2,11 @@
   "name": "proofpulse",
   "version": "0.1.0",
   "type": "module",
-  "workspaces": ["core", "vscode_extension", "evaluation"],
+  "workspaces": [
+    "core",
+    "vscode_extension",
+    "evaluation"
+  ],
   "scripts": {
     "build:core": "tsc --project core/tsconfig.json",
     "build:viewer": "node web_viewer/build-spans-provider.mjs",
@@ -19,5 +23,8 @@
   "devDependencies": {
     "esbuild": "^0.25.0",
     "fast-check": "^3.22.0"
+  },
+  "dependencies": {
+    "rsc": "^1.0.3"
   }
 }

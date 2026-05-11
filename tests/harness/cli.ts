@@ -7,8 +7,10 @@ import { dirname } from 'node:path';
 const JUNIT_PATH = process.env.JUNIT_REPORT_PATH || 'test-results/junit.xml';
 const COV_PATH = process.env.COVERAGE_REPORT_PATH || 'test-results/coverage.json';
 
+const forceMinimization = process.argv.includes('--force-minimization');
+
 try {
-  const result = await runAllTests();
+  const result = await runAllTests({ forceMinimization });
   if (!result) process.exit(0);
 
   const { results, summary } = result;

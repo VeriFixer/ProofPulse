@@ -1,12 +1,8 @@
 import os from 'os';
 import path from 'path';
 import fs from 'fs';
-import { mkdtemp, writeFile, rm } from 'fs/promises';
-import { spawn } from 'child_process';
-import { fileURLToPath } from 'url';
-import { parseProof } from '@proofpulse/core';
+import { parseProof, runDafny as coreRunDafny } from '@proofpulse/core';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const fsp = fs.promises;
 
 const DAFNY_TIMEOUT_SEC = parseInt(process.env.DAFNY_TIMEOUT_SEC ?? '', 10) || 60;
@@ -49,18 +45,6 @@ function elapsed(sec: number): string {
 
 // ── Types ──
 
-interface DafnyResult {
-  ok: boolean;
-  log?: string;
-  reason?: string;
-  code?: number | null;
-  stdout?: string;
-  stderr?: string;
-  note?: string;
-  error?: unknown;
-  writeErr?: unknown;
-}
-
 interface RunTestResult {
   srcFile: string;
   status: string;
@@ -68,7 +52,7 @@ interface RunTestResult {
   reason?: string;
   lineStatus?: string[];
   checkedLines?: number;
-  dafnyRes?: DafnyResult;
+  dafnyRes?: { ok: boolean; reason?: string };
   error?: unknown;
   parsedTest?: unknown;
   expected?: unknown;
@@ -179,120 +163,19 @@ function findDfyFiles(startDir: string): string[] {
   return out;
 }
 
-// ── Dafny runner (temp-dir based) ──
-
-async function runDafnyInTempDir(
-  srcFilePath: string,
-  opts: RunOptions = {},
-): Promise<DafnyResult> {
-  const absSrc = path.resolve(srcFilePath);
-  const fileName = path.basename(srcFilePath);
-
-  // Create isolated temp dir for all dafny artifacts
-  let tmpDir: string;
-  try {
-    tmpDir = await mkdtemp(path.join(os.tmpdir(), 'proofpulse-test-'));
-  } catch (err) {
-    return { ok: false, reason: 'tmpdir_failed', error: err };
-  }
-
-  try {
-    // Copy .dfy into temp dir so dafny can find it with relative name
-    const tmpDfy = path.join(tmpDir, fileName);
-    await fsp.copyFile(absSrc, tmpDfy);
-
-    const args = [
-      'verify',
-      fileName,
-      '--verification-coverage-report', 'cov',
-      '--log-format', 'text',
-      '--solver-option', 'LOG_FILE=output.smt2',
-      '--bprint', 'output.bpl',
-      '--isolate-assertions',
-      '--allow-warnings', 'true',
-      '--verification-time-limit', String(DAFNY_TIMEOUT_SEC),
-    ];
-
-    let boogieValue =
-      '/proverOpt:O:smt.core.minimize=true /proverOpt:O:sat.core.minimize=true  /proverOpt:C:proof=true';
-    const spawnOpts: { cwd: string; env?: NodeJS.ProcessEnv } = { cwd: tmpDir };
-
-    if (opts.forceMinimization) {
-      const projectRoot = path.resolve(__dirname, '../..');
-      const wrapperPath = path.join(projectRoot, 'core', 'scripts', 'z3-minimizer-wrapper.sh');
-      const minimizerPath = path.join(
-        projectRoot,
-        'core',
-        'scripts',
-        'minimize_unsat_core_trace.py',
-      );
-      boogieValue += ` /z3exe:${wrapperPath}`;
-      spawnOpts.env = {
-        ...process.env,
-        PROOFPULSE_Z3_PATH: 'z3',
-        PROOFPULSE_MINIMIZER_SCRIPT: minimizerPath,
-      };
-    }
-
-    args.push('--boogie', boogieValue);
-    const child = spawn('dafny', args, spawnOpts);
-
-    let stdout = '';
-    let stderr = '';
-
-    child.stdout?.on('data', (b: Buffer) => { stdout += b.toString(); });
-    child.stderr?.on('data', (b: Buffer) => { stderr += b.toString(); });
-
-    const timeoutMs = DAFNY_TIMEOUT_SEC * 1000;
-    const exit = await new Promise<{ code?: number | null; error?: Error; timedOut?: boolean }>(
-      resolve => {
-        let timedOut = false;
-        const timer = setTimeout(() => {
-          timedOut = true;
-          child.kill('SIGKILL');
-        }, timeoutMs);
-        child.on('error', (err: Error) => { clearTimeout(timer); resolve({ error: err }); });
-        child.on('close', (code: number | null) => {
-          clearTimeout(timer);
-          resolve(timedOut ? { timedOut: true } : { code });
-        });
-      },
-    );
-
-    if (exit.timedOut) {
-      return { ok: false, reason: 'timeout' };
-    }
-
-    if (exit.error) {
-      return { ok: false, reason: 'spawn_error', error: exit.error };
-    }
-
-    // Build log from stdout/stderr (dafny text log goes to stdout)
-    const logContent = (stdout || '') + (stderr || '');
-
-    return {
-      ok: true,
-      log: logContent,
-      code: exit.code,
-      stdout,
-      stderr,
-      note: exit.code !== 0 ? 'nonzero_exit' : undefined,
-    };
-  } finally {
-    // Always clean up temp dir
-    rm(tmpDir, { recursive: true, force: true }).catch(() => {});
-  }
-}
-
 // ── Single test runner ──
 
 async function runTest(srcFile: string, opts: RunOptions = {}): Promise<RunTestResult> {
-  const dafnyRes = await runDafnyInTempDir(srcFile, opts);
-  if (!dafnyRes.ok) {
-    if (dafnyRes.reason === 'timeout') {
-      return { srcFile, status: 'failed', reason: 'timeout' };
-    }
-    return { srcFile, status: 'skipped', reason: 'dafny_failed', dafnyRes };
+  const dafnyRes = await coreRunDafny(srcFile, {
+    timeoutSeconds: DAFNY_TIMEOUT_SEC,
+    forceMinimization: opts.forceMinimization,
+  });
+
+  if (dafnyRes.timedOut) {
+    return { srcFile, status: 'failed', reason: 'timeout' };
+  }
+  if (dafnyRes.error) {
+    return { srcFile, status: 'skipped', reason: 'dafny_failed', dafnyRes: { ok: false, reason: dafnyRes.error } };
   }
 
   let src: string;

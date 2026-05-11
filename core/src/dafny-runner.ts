@@ -3,11 +3,25 @@ import { accessSync, constants as fsConstants, existsSync, readdirSync } from "n
 import { mkdtemp, readFile, rm, writeFile, chmod } from "node:fs/promises";
 import { delimiter, dirname, isAbsolute, join, resolve } from "node:path";
 import { homedir, tmpdir, platform } from "node:os";
+import { fileURLToPath } from "node:url";
 import type { DafnyOptions, DafnyResult } from "./types.js";
 
 // ---------------------------------------------------------------------------
 // Constants & helpers
 // ---------------------------------------------------------------------------
+
+// Works in both ESM (import.meta.url) and CJS (esbuild bundle provides __dirname)
+const __dirname = (() => {
+  try {
+    if (typeof import.meta?.url === "string" && import.meta.url !== "") {
+      return dirname(fileURLToPath(import.meta.url));
+    }
+  } catch { /* fallback */ }
+  // CJS fallback — esbuild injects __dirname in CJS output
+  return typeof (globalThis as any).__dirname === "string"
+    ? (globalThis as any).__dirname
+    : dirname(typeof __filename === "string" ? __filename : "");
+})();
 
 const DEFAULT_TIMEOUT_SEC = 60;
 const IS_WIN = platform() === "win32";

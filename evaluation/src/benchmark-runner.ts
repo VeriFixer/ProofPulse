@@ -31,6 +31,15 @@ export interface ComparisonEntry {
   changed: boolean;
   baselineDurationMs: number;
   minimizedDurationMs: number;
+  baselineCategories?: CategoryClassification;
+  minimizedCategories?: CategoryClassification;
+}
+
+export interface CategoryComparisonSummary {
+  postconditionChanged: number;
+  preconditionChanged: number;
+  invariantChanged: number;
+  total: number;
 }
 
 export interface TestComparisonEntry {
@@ -181,6 +190,8 @@ export async function runBenchmark(
         changed: b.classification !== m.classification,
         baselineDurationMs: b.durationMs,
         minimizedDurationMs: m.durationMs,
+        baselineCategories: b.categories,
+        minimizedCategories: m.categories,
       };
     });
 
@@ -202,42 +213,14 @@ export async function runBenchmark(
       testChangedCount: 0,
     };
 
-    // Run test suite comparison
-    try {
-      const { runAllTests } = await import("../../tests/harness/test_logic.js");
-
-      console.log("Running test suite (baseline)...");
-      const baselineTests = await runAllTests({ forceMinimization: false });
-      console.log("Running test suite (minimized)...");
-      const minimizedTests = await runAllTests({ forceMinimization: true });
-
-      if (baselineTests?.results && minimizedTests?.results) {
-        const baselineMap = new Map<string, string>();
-        for (const r of baselineTests.results) {
-          baselineMap.set(r.srcFile, r.res?.status ?? "unknown");
-        }
-
-        for (const m of minimizedTests.results) {
-          const bStatus = baselineMap.get(m.srcFile) ?? "missing";
-          const mStatus = m.res?.status ?? "unknown";
-          const changed = bStatus !== mStatus;
-          comparisonResults.testComparison.push({
-            srcFile: m.srcFile,
-            baselineStatus: bStatus,
-            minimizedStatus: mStatus,
-            changed,
-          });
-        }
-        comparisonResults.testChangedCount = comparisonResults.testComparison.filter((t) => t.changed).length;
-      }
-    } catch (err) {
-      console.warn(`Test suite comparison skipped: ${(err as Error).message}`);
-    }
-
     // Write comparison results to separate file
     const comparisonPath = outputPath.replace(/\.json$/, "-comparison.json");
     fs.writeFileSync(comparisonPath, JSON.stringify(comparisonResults, null, 2));
     console.log(`Comparison results written to ${comparisonPath}`);
+
+    // Also write minimized results separately
+    const minimizedOutputPath = outputPath.replace(/\.json$/, "-minimized.json");
+    buildBenchmarkResults(minimizedResults, entries, minimizedOutputPath);
 
     // Return baseline results as the normal output
     return buildBenchmarkResults(baselineResults, entries, outputPath);
@@ -270,6 +253,21 @@ export function computeComparisonMetrics(
   const addedTimeMs = minimizedTotalMs - baselineTotalMs;
   const slowdownFactor = baselineTotalMs === 0 ? 0 : minimizedTotalMs / baselineTotalMs;
   return { changedResults, addedTimeMs, slowdownFactor, baselineTotalMs, minimizedTotalMs };
+}
+
+export function computeCategoryComparisonSummary(entries: ComparisonEntry[]): CategoryComparisonSummary {
+  let postconditionChanged = 0;
+  let preconditionChanged = 0;
+  let invariantChanged = 0;
+
+  for (const e of entries) {
+    if (!e.baselineCategories || !e.minimizedCategories) continue;
+    if (e.baselineCategories.postcondition !== e.minimizedCategories.postcondition) postconditionChanged++;
+    if (e.baselineCategories.precondition !== e.minimizedCategories.precondition) preconditionChanged++;
+    if (e.baselineCategories.invariant !== e.minimizedCategories.invariant) invariantChanged++;
+  }
+
+  return { postconditionChanged, preconditionChanged, invariantChanged, total: entries.length };
 }
 
 function buildBenchmarkResults(
