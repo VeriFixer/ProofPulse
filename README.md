@@ -129,6 +129,45 @@ These matched the Evaluation results shown on the paper tables.
 | `--force-core-minimization` | off | Enable unsat core minimization |
 | `--compare-minimization` | off | Run twice (baseline vs minimized), report diffs |
 
+## Docker Development Environment
+
+Run ProofPulse entirely in Docker with a browser-based VS Code — no local install of Node, Dafny, or extensions needed.
+
+### Build the image
+
+```bash
+git clone --recursive <repo-url>
+cd ProofPulse
+docker build -f Dockerfile.devenv -t proofpulse-dev .
+```
+
+### Run
+
+```bash
+docker run -p 8080:8080 proofpulse-dev
+```
+
+Open `http://localhost:8080` in your browser. You get a full VS Code with:
+- Dafny 4.11 + Z3 ready in PATH
+- ProofPulse extension pre-installed
+- Project fully built (core, web viewer, extension)
+
+> **First launch:** A popup may appear asking to install Dafny 4.11 — accept it.
+
+### Options
+
+| Use case | Command |
+|----------|---------|
+| Password-protected | `docker run -p 8080:8080 -e PASSWORD=secret proofpulse-dev code-server --bind-addr 0.0.0.0:8080 --auth password /home/coder/project` |
+| Mount local files | `docker run -p 8080:8080 -v $(pwd):/home/coder/project proofpulse-dev` |
+| Run tests only (CI) | `docker build -t proofpulse-ci . && docker run proofpulse-ci` |
+
+### Running the evaluation inside Docker
+
+```bash
+docker run proofpulse-dev bash -c "cd /home/coder/project && npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all"
+```
+
 ## Testing
 
 A comprehensive testing framework exists for ProofPulse. See [`CI_TESTING.md`](CI_TESTING.md) for full details on running unit tests, property tests, regression suites, and Docker-based testing.

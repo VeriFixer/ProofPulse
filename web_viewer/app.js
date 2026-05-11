@@ -318,7 +318,7 @@ async function loadCoverage() {
     currentProof = null;
     currentTokenEl = null;
 
-    const resp = await fetch('/api/coverage');
+    const resp = await fetch(new URL('api/coverage', window.location.href));
     const data = await resp.json();
 
     if (data.error) {

@@ -1,0 +1,55 @@
+FROM codercom/code-server:latest
+
+ARG DAFNY_VERSION=4.11.0
+USER root
+
+# System deps
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget unzip libicu-dev ca-certificates python3 curl git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Node.js 22
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+    && apt-get install -y nodejs \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install .NET runtime (required by Dafny language server)
+RUN curl -fsSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0 --runtime dotnet --install-dir /usr/share/dotnet \
+    && ln -s /usr/share/dotnet/dotnet /usr/local/bin/dotnet
+
+# Install Dafny
+RUN wget -q "https://github.com/dafny-lang/dafny/releases/download/v${DAFNY_VERSION}/dafny-${DAFNY_VERSION}-x64-ubuntu-22.04.zip" \
+      -O /tmp/dafny.zip \
+    && unzip -q /tmp/dafny.zip -d /opt \
+    && rm /tmp/dafny.zip \
+    && ln -s /opt/dafny/dafny /usr/local/bin/dafny \
+    && ln -s "$(find /opt/dafny/z3/bin -name 'z3-*' | sort -V | tail -1)" /usr/local/bin/z3
+
+# Copy project
+WORKDIR /home/coder/project
+COPY --chown=coder:coder . .
+
+# Install deps and build everything including .vsix
+RUN npm ci --ignore-scripts \
+    && npm run build:core \
+    && npm run build:viewer \
+    && cd vscode_extension && npm run package && cd ..
+
+# Install extensions as coder user so they persist in the right location
+USER coder
+
+# Install ProofPulse extension
+RUN code-server --install-extension /home/coder/project/vscode_extension/proofpulse-vscode-0.1.0.vsix
+
+# Install Dafny extension from Open VSX (published since v3.4.1)
+RUN code-server --install-extension dafny-lang.ide-vscode
+
+# Configure Dafny extension to use pre-installed Dafny (skip its own download)
+# and configure ProofPulse to point to the correct paths
+RUN mkdir -p /home/coder/.local/share/code-server/User \
+    && printf '{\n  "dafny.compilerPath": "/usr/local/bin/dafny",\n  "dafny.version": "4.11.0",\n  "dafny.preferredVersion": "4.11.0",\n  "proofpulse.dafnyPath": "/usr/local/bin/dafny",\n  "proofpulse.z3Path": "/usr/local/bin/z3"\n}\n' \
+       > /home/coder/.local/share/code-server/User/settings.json
+
+EXPOSE 8080
+
+CMD ["code-server", "--bind-addr", "0.0.0.0:8080", "--auth", "none", "/home/coder/project"]
