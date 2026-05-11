@@ -13,6 +13,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
 
+# Suppress npm update notices
+ENV NPM_CONFIG_UPDATE_NOTIFIER=false
+
 # Install .NET runtime (required by Dafny language server)
 RUN curl -fsSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0 --runtime dotnet --install-dir /usr/share/dotnet \
     && ln -s /usr/share/dotnet/dotnet /usr/local/bin/dotnet
@@ -33,7 +36,8 @@ COPY --chown=coder:coder . .
 RUN npm ci --ignore-scripts \
     && npm run build:core \
     && npm run build:viewer \
-    && cd vscode_extension && npm run package && cd ..
+    && cd vscode_extension && npm run package && cd .. \
+    && chown -R coder:coder /home/coder/project
 
 # Install extensions as coder user so they persist in the right location
 USER coder

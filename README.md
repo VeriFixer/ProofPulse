@@ -7,12 +7,71 @@ Dafny proof dependency and coverage analysis tool. Parses prover logs into a pro
 
 ## Installation
 
-### Prerequisites
+Two installation paths are available. Docker is recommended for artifact reviewers as it avoids platform mismatches.
+
+### Option A: Docker (recommended)
+
+Everything pre-packaged: Node.js, Dafny 4.11, Z3, VS Code with ProofPulse and Dafny extensions.
+
+#### Using the pre-built image
+
+A ready-to-use Docker image is provided as a `.tar.gz` archive (e.g. in the artifact submission):
+
+```bash
+docker load -i proofpulse-dev.tar.gz
+```
+
+#### Building the image yourself
+
+If the pre-built image is not available:
+
+```bash
+git clone --recursive <repo-url>
+cd ProofPulse
+docker build -f Dockerfile.devenv -t proofpulse-dev .
+```
+
+#### Exporting the image as a tar.gz
+
+To generate a portable image archive (e.g. for artifact submission):
+
+```bash
+docker save proofpulse-dev | gzip > proofpulse-dev.tar.gz
+```
+
+#### Starting the environment
+
+Start an interactive session:
+
+```bash
+docker run -it -p 8080:8080 --entrypoint bash proofpulse-dev
+```
+
+From inside the container, launch the browser-based VS Code:
+
+```bash
+code-server --bind-addr 0.0.0.0:8080 --auth none /home/coder/project
+```
+
+Then open `http://localhost:8080` in your browser. You get a full VS Code with:
+- Dafny 4.11 + Z3 ready in PATH
+- ProofPulse extension pre-installed
+- Project fully built (core, web viewer, extension)
+
+> **First launch:** A popup may appear asking to install Dafny 4.11 — accept it. The Dafny extension will download its latest dependencies and after that everything works.
+
+All commands in the sections below (Demo Examples, Evaluation Benchmark, etc.) can be run directly in this shell session.
+
+---
+
+### Option B: Manual installation
+
+#### Prerequisites
 
 - Node.js (≥18)
 - Dafny ≥ 4.0 (in PATH or via the official Dafny VS Code extension)
 
-### Clone with submodules
+#### Clone with submodules
 
 This repo uses git submodules (e.g. `dafny-synthesis`). Either clone recursively:
 
@@ -28,18 +87,16 @@ git submodule update --init --recursive
 
 > **Without this, the evaluation benchmark will exit immediately** because the `dafny-synthesis/` folder won't exist.
 
-### Build from source
+#### Build from source
 
 ```sh
-# Run in bash
 npm install
 npm run build   # builds core + web viewer + VSCode extension
 ```
 
-### VSCode extension
+#### VSCode extension
 
 ```bash
-# Run in bash
 npm run package --prefix vscode_extension
 code --install-extension vscode_extension/proofpulse-vscode-0.1.0.vsix
 ```
@@ -47,6 +104,8 @@ code --install-extension vscode_extension/proofpulse-vscode-0.1.0.vsix
 Or via the UI: Extensions sidebar → `...` → "Install from VSIX..." → select the `.vsix` file. Reload VSCode after installing.
 
 > For more information on the VSCode extension (features, configuration, dev mode), see [`vscode_extension/README.md`](vscode_extension/README.md).
+
+---
 
 ## Demo Examples
 
@@ -62,12 +121,13 @@ The `demo_examples/` folder contains sample Dafny files that showcase ProofPulse
 
 ### Running the examples
 
+Feel free to follow the demo video on the examples displayed on there.
+
 #### With the VSCode extension
 
 1. Open any `.dfy` file from `demo_examples/`
-2. Right-click on any highlighted line (covTest or uncovered)→ **"ProofPulse: Get Proof Report"** (opens web viewer)
+2. Right-click on any highlighted line (covTest or uncovered) → **"ProofPulse: Get Proof Report"** (opens web viewer)
 3. Or use Command Palette: "ProofPulse: Run Coverage Analysis" for gutter decorations
-
 
 > **To see expected outputs for each example, see the [video demo](https://youtube.com/watch?v=video.mp4).**
 
@@ -89,85 +149,23 @@ When `forceMinimization` is enabled, Z3 calls are routed through a Node.js wrapp
 
 Classifies dafny-synthesis specs as strong/weak using ProofPulse coverage, then compares against the paper's manual oracle.
 
-```bash
-# Run in bash to get evaluation options
-npx tsx evaluation/src/cli.ts -h
-```
-
-To run the full evaluation:
+To run the full evaluation (~15 minutes):
 
 ```bash
-# Run in bash to get evaluation without minimization
 npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all
 ```
 
-This will create this file: 
-ProofPulse/evaluation/results/benchmark-results-aggregate-tables.tex
-With the first table results used on the paper.
+This will create this file:
+`./evaluation/results/benchmark-results-aggregate-tables.tex`
+with the first table results used in the paper.
 
 ```bash
-# Run in bash to get evaluation with minimization
+# With minimization
 npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --force-core-minimization
 ```
 
-This will create this file: 
-ProofPulse/evaluation/results/benchmark-results-aggregate-tables.tex
-With the first table results used on the paper.
+This will create this file:
+`./evaluation/results/benchmark-results-aggregate-tables.tex`
+with the first table results used in the paper.
 
-
-These matched the Evaluation results shown on the paper tables.
-
-| Flag | Default | Description |
-|------|---------|-------------|
-| `--repo-root <path>` | `dafny-synthesis` | Path to dafny-synthesis repo |
-| `--dafny-path <path>` | `dafny` | Dafny binary |
-| `--timeout <seconds>` | `60` | Per-file verification timeout |
-| `--output <path>` | `benchmark-results.json` | JSON results output |
-| `--dataset <id>` | `RQ3-GPT4` | Dataset: RQ1-GPT4, RQ1-PaLM2, RQ2-GPT4, RQ2-PaLM2, RQ3-GPT4, RQ3-PaLM2, or `all` |
-| `--concurrency <n>` | cpus-1 | Parallel Dafny workers |
-| `--verbose` | off | Print per-file details (forces sequential) |
-| `--force-core-minimization` | off | Enable unsat core minimization |
-| `--compare-minimization` | off | Run twice (baseline vs minimized), report diffs |
-
-## Docker Development Environment
-
-Run ProofPulse entirely in Docker with a browser-based VS Code — no local install of Node, Dafny, or extensions needed.
-
-### Build the image
-
-```bash
-git clone --recursive <repo-url>
-cd ProofPulse
-docker build -f Dockerfile.devenv -t proofpulse-dev .
-```
-
-### Run
-
-```bash
-docker run -p 8080:8080 proofpulse-dev
-```
-
-Open `http://localhost:8080` in your browser. You get a full VS Code with:
-- Dafny 4.11 + Z3 ready in PATH
-- ProofPulse extension pre-installed
-- Project fully built (core, web viewer, extension)
-
-> **First launch:** A popup may appear asking to install Dafny 4.11 — accept it.
-
-### Options
-
-| Use case | Command |
-|----------|---------|
-| Password-protected | `docker run -p 8080:8080 -e PASSWORD=secret proofpulse-dev code-server --bind-addr 0.0.0.0:8080 --auth password /home/coder/project` |
-| Mount local files | `docker run -p 8080:8080 -v $(pwd):/home/coder/project proofpulse-dev` |
-| Run tests only (CI) | `docker build -t proofpulse-ci . && docker run proofpulse-ci` |
-
-### Running the evaluation inside Docker
-
-```bash
-docker run proofpulse-dev bash -c "cd /home/coder/project && npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all"
-```
-
-## Testing
-
-A comprehensive testing framework exists for ProofPulse. See [`CI_TESTING.md`](CI_TESTING.md) for full details on running unit tests, property tests, regression suites, and Docker-based testing.
+These matched the evaluation results shown in the paper tables.
