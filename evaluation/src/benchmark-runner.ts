@@ -134,7 +134,15 @@ async function processEntry(
         .filter((n) => n.type === TokenType.CodeLine && !isInvariantNode(n))
         .map((n) => n.start.line);
       for (const n of nodes) {
-        coverageStatuses[n.start.line] = n.covStatus;
+        const line = n.start.line;
+        const existing = coverageStatuses[line];
+        if (existing === undefined) {
+          coverageStatuses[line] = n.covStatus;
+        } else if (existing === CovStatus.CovComplete && n.covStatus !== CovStatus.CovComplete) {
+          coverageStatuses[line] = n.covStatus;
+        } else if (existing === CovStatus.CovTest && n.covStatus === CovStatus.Uncovered) {
+          coverageStatuses[line] = n.covStatus;
+        }
       }
     }
   } catch (err) {
