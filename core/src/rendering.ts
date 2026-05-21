@@ -60,9 +60,37 @@ export function generateSpansFragment(code: string, graph: ProofGraph): string {
 
   ranges.sort((a, b) => a.startIndex - b.startIndex || b.endIndex - a.endIndex);
 
+  // Resolve partial overlaps before nesting.
+  // When two ranges overlap partially, the SMALLER range keeps the shared
+  // characters (so a tiny span doesn't lose its only clickable area).
+  // The larger range gets clipped.
+  for (let i = 0; i < ranges.length; i++) {
+    for (let j = i + 1; j < ranges.length; j++) {
+      const a = ranges[i], b = ranges[j];
+      // b starts after a (sorted), check if b starts before a ends but extends past a
+      if (b.startIndex < a.endIndex && b.endIndex > a.endIndex) {
+        // Partial overlap detected. Shared region: [b.startIndex, a.endIndex)
+        const aSize = a.endIndex - a.startIndex;
+        const bSize = b.endIndex - b.startIndex;
+        if (bSize <= aSize) {
+          // b is smaller or equal — b keeps shared chars, clip a's end
+          a.endIndex = b.startIndex;
+        } else {
+          // a is smaller — a keeps shared chars, clip b's start
+          b.startIndex = a.endIndex;
+        }
+      }
+    }
+  }
+
+  // Remove any ranges that became empty after clipping
+  const validRanges = ranges.filter(r => r.startIndex < r.endIndex);
+  // Re-sort after modifications
+  validRanges.sort((a, b) => a.startIndex - b.startIndex || b.endIndex - a.endIndex);
+
   const roots: Range[] = [];
   const stack: Range[] = [];
-  for (const r of ranges) {
+  for (const r of validRanges) {
     while (stack.length && r.startIndex >= stack[stack.length - 1].endIndex) stack.pop();
 
     if (stack.length === 0) {
@@ -74,24 +102,27 @@ export function generateSpansFragment(code: string, graph: ProofGraph): string {
         parent.children.push(r);
         stack.push(r);
       }
-      // partial overlap: skip
+      // After resolution, no partial overlaps should remain
     }
   }
 
-  function renderNode(node: Range): string {
+  function renderNode(node: Range, depth: number): string {
     const { dataId, dataStatus, classes, istopAttr } = tokenAttrs(node.token);
+    const hasChildren = node.children.length > 0;
+    const depthClass = `depth-${depth}`;
+    const parentClass = hasChildren ? " has-children" : "";
     let innerOut = "";
     let cursor = node.startIndex;
-    if (node.children.length) {
+    if (hasChildren) {
       node.children.sort((a, b) => a.startIndex - b.startIndex);
       for (const child of node.children) {
         if (cursor < child.startIndex) innerOut += escapeHtml(code.slice(cursor, child.startIndex));
-        innerOut += renderNode(child);
+        innerOut += renderNode(child, depth + 1);
         cursor = child.endIndex;
       }
     }
     if (cursor < node.endIndex) innerOut += escapeHtml(code.slice(cursor, node.endIndex));
-    return `<span class="${classes}" data-id="${dataId}" ${istopAttr} data-status="${dataStatus}">${innerOut}</span>`;
+    return `<span class="${classes} ${depthClass}${parentClass}" data-id="${dataId}" data-depth="${depth}" ${istopAttr} data-status="${dataStatus}">${innerOut}</span>`;
   }
 
   let out = "";
@@ -99,7 +130,7 @@ export function generateSpansFragment(code: string, graph: ProofGraph): string {
   roots.sort((a, b) => a.startIndex - b.startIndex);
   for (const rootNode of roots) {
     if (cursor < rootNode.startIndex) out += escapeHtml(code.slice(cursor, rootNode.startIndex));
-    out += renderNode(rootNode);
+    out += renderNode(rootNode, 0);
     cursor = rootNode.endIndex;
   }
   if (cursor < code.length) out += escapeHtml(code.slice(cursor));
