@@ -4,6 +4,9 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "proofpulse": "dist/cli.js"
+  },
   "files": [
     "dist/",
     "scripts/"

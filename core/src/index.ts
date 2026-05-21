@@ -9,3 +9,5 @@ export { serializeProofGraph, deserializeProofGraph } from "./serialization.js";
 export { runDafny, resolveDafnyPathWithSource, resolveZ3PathWithSource } from "./dafny-runner.js";
 export type { ResolveSource, ResolvedPath } from "./dafny-runner.js";
 export { generateSpansFragment, getDependsOn } from "./rendering.js";
+export { generateTextReport } from "./report.js";
+export type { ReportOptions } from "./report.js";
