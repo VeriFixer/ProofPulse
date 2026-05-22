@@ -1,0 +1,2555 @@
+{
+  "_comment": "Oracle labels with overrides. 'oracle' = original label from dataset. 'override' = effective label used for evaluation. Edit 'override' when you find oracle errors.",
+  "entries": {
+    "RQ1-GPT4/8": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ1-GPT4/9": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ1-GPT4/14": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/17": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/59": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/80": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/82": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required"
+      }
+    },
+    "RQ1-GPT4/86": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/89": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/95": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ1-GPT4/96": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ1-GPT4/105": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      }
+    },
+    "RQ1-GPT4/126": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      }
+    },
+    "RQ1-GPT4/133": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      }
+    },
+    "RQ1-GPT4/135": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/142": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ1-GPT4/171": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/233": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ1-GPT4/264": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/266": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/271": {
+      "oracle": {
+        "postcondition": "wrong"
+      },
+      "override": {
+        "postcondition": "wrong"
+      }
+    },
+    "RQ1-GPT4/273": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ1-GPT4/276": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ1-GPT4/282": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ1-GPT4/287": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ1-GPT4/292": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ1-GPT4/309": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/312": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/397": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/406": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/414": {
+      "oracle": {
+        "postcondition": "wrong"
+      },
+      "override": {
+        "postcondition": "wrong"
+      }
+    },
+    "RQ1-GPT4/429": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ1-GPT4/432": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required"
+      }
+    },
+    "RQ1-GPT4/436": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ1-GPT4/445": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ1-GPT4/448": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/450": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      }
+    },
+    "RQ1-GPT4/451": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ1-GPT4/452": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/458": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/479": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      }
+    },
+    "RQ1-GPT4/574": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ1-GPT4/577": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      }
+    },
+    "RQ1-GPT4/578": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ1-GPT4/587": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/589": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/606": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/626": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/637": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/641": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ1-GPT4/728": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ1-GPT4/751": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ1-GPT4/762": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/790": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ1-GPT4/804": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ1-GPT4/809": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ2-GPT4/8": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ2-GPT4/14": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ2-GPT4/17": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ2-GPT4/19": {
+      "oracle": {
+        "postcondition": "weak",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "invariant": "weak"
+      }
+    },
+    "RQ2-GPT4/59": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ2-GPT4/66": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      }
+    },
+    "RQ2-GPT4/96": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      }
+    },
+    "RQ2-GPT4/126": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      }
+    },
+    "RQ2-GPT4/233": {
+      "oracle": {
+        "postcondition": "wrong"
+      },
+      "override": {
+        "postcondition": "wrong"
+      }
+    },
+    "RQ2-GPT4/240": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ2-GPT4/264": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ2-GPT4/266": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ2-GPT4/271": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      }
+    },
+    "RQ2-GPT4/273": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ2-GPT4/276": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ2-GPT4/287": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ2-GPT4/292": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ2-GPT4/312": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ2-GPT4/389": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ2-GPT4/397": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ2-GPT4/443": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional",
+        "invariant": "weak"
+      }
+    },
+    "RQ2-GPT4/458": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ2-GPT4/470": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ2-GPT4/586": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required"
+      }
+    },
+    "RQ2-GPT4/728": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ2-GPT4/751": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ2-GPT4/762": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ2-GPT4/792": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ2-GPT4/804": {
+      "oracle": {
+        "postcondition": "wrong"
+      },
+      "override": {
+        "postcondition": "wrong"
+      }
+    },
+    "RQ2-GPT4/809": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/2": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "weak",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/3": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/8": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/14": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/17": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/18": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/59": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/61": {
+      "oracle": {
+        "postcondition": "weak",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "invariant": "weak"
+      }
+    },
+    "RQ3-GPT4/69": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/70": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/79": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/80": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/82": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/85": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/86": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/89": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/94": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/95": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/105": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/106": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/113": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/126": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required",
+        "invariant": "weak"
+      }
+    },
+    "RQ3-GPT4/133": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/135": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/139": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/142": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/143": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/145": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/161": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "weak",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/170": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/171": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/230": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/233": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/234": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/238": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/240": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/242": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/249": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "weak",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/251": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/257": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/261": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/262": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/264": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/266": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/268": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/269": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/273": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/276": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/279": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/282": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/284": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/290": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/292": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/304": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/307": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/309": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/310": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/312": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/396": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/397": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/399": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/401": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/406": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/412": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/414": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/424": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/426": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/430": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/432": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/436": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/445": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/452": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/455": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/457": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/458": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/460": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/461": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/470": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/476": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/554": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/557": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/565": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/572": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/574": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/577": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/578": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/581": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/586": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/587": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/591": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/598": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/603": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/606": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/618": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/622": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/623": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/626": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/637": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/641": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/728": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/750": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/751": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/759": {
+      "oracle": {
+        "postcondition": "wrong"
+      },
+      "override": {
+        "postcondition": "wrong"
+      }
+    },
+    "RQ3-GPT4/762": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-GPT4/769": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/776": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/790": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/792": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/799": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-GPT4/801": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-GPT4/804": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/808": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-GPT4/809": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/3": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/8": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/14": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/17": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/20": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/59": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/79": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-PaLM2/80": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/86": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/89": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/113": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/116": {
+      "oracle": {
+        "postcondition": "wrong"
+      },
+      "override": {
+        "postcondition": "wrong"
+      }
+    },
+    "RQ3-PaLM2/135": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/171": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/230": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/234": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/242": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/257": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-PaLM2/264": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/266": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/268": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/269": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-PaLM2/279": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/282": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/284": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/309": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-PaLM2/310": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/406": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-PaLM2/430": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-PaLM2/432": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/452": {
+      "oracle": {
+        "postcondition": "weak"
+      },
+      "override": {
+        "postcondition": "weak"
+      }
+    },
+    "RQ3-PaLM2/455": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/458": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/461": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-PaLM2/479": {
+      "oracle": {
+        "postcondition": "weak",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "weak",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/554": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/555": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/565": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-PaLM2/581": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/587": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/591": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-PaLM2/618": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/626": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/637": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/641": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/728": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "required",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/762": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional"
+      }
+    },
+    "RQ3-PaLM2/790": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/792": {
+      "oracle": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "precondition": "optional",
+        "invariant": "strong"
+      }
+    },
+    "RQ3-PaLM2/801": {
+      "oracle": {
+        "postcondition": "strong"
+      },
+      "override": {
+        "postcondition": "strong"
+      }
+    },
+    "RQ3-PaLM2/804": {
+      "oracle": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      },
+      "override": {
+        "postcondition": "wrong",
+        "precondition": "required"
+      }
+    },
+    "RQ3-PaLM2/808": {
+      "oracle": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      },
+      "override": {
+        "postcondition": "strong",
+        "invariant": "strong"
+      }
+    }
+  }
+}

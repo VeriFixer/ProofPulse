@@ -1,0 +1,7 @@
+{
+  "name": "classify-divergence",
+  "description": "Classifies a single ProofPulse divergence by root cause. No tools needed — all context provided in prompt.",
+  "prompt": "file://./classify-divergence-prompt.md",
+  "tools": [],
+  "model": "qwen3-coder-next"
+}

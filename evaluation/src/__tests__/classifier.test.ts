@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { classifyPostcondition, classifyPrecondition, classifyInvariant, classifySpec } from "../classifier.js";
-import { TokenType, CovStatus, type NodeData } from "@proofpulse/core";
+import { TokenType, CovStatus, type NodeData, Node, ProofGraph } from "@proofpulse/core";
 
 function makeNode(type: TokenType, covStatus: CovStatus, line = 1, prooftext = ""): NodeData {
   return {
@@ -10,27 +10,54 @@ function makeNode(type: TokenType, covStatus: CovStatus, line = 1, prooftext = "
   };
 }
 
+/** Build a ProofGraph from specs. Postcondition/LoopInvariant types are added as tops. */
+function buildGraph(specs: { type: TokenType; covStatus: CovStatus; line?: number; prooftext?: string; isTop?: boolean }[]): ProofGraph {
+  const graph = new ProofGraph();
+  for (const s of specs) {
+    const line = s.line ?? 1;
+    const prooftext = s.prooftext ?? "";
+    const node = new Node("test.dfy", line, 0, line, 10, prooftext, s.isTop ?? false);
+    node.type = s.type;
+    node.covStatus = s.covStatus;
+    node.covStatusInternal = s.covStatus;
+    if (!graph.hasNode(node.id)) {
+      graph.addNode(node);
+    }
+    if (s.isTop || s.type === TokenType.Postcondition || s.type === TokenType.LoopInvariant) {
+      node.isTopAssertion = true;
+      if (!graph.hasTopNode(node.id)) {
+        graph.addTopNode(node);
+      }
+    }
+  }
+  return graph;
+}
+
 describe("classifyPostcondition", () => {
   it("none when no postconditions", () => {
-    expect(classifyPostcondition([makeNode(TokenType.CodeLine, CovStatus.CovComplete)])).toBe("none");
+    const graph = buildGraph([{ type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 1 }]);
+    expect(classifyPostcondition(graph)).toBe("none");
   });
   it("strong when post covered and body complete", () => {
-    expect(classifyPostcondition([
-      makeNode(TokenType.Postcondition, CovStatus.CovComplete, 1),
-      makeNode(TokenType.CodeLine, CovStatus.CovComplete, 2),
-    ])).toBe("strong");
+    const graph = buildGraph([
+      { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1, prooftext: "this postcondition holds", isTop: true },
+      { type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 2 },
+    ]);
+    expect(classifyPostcondition(graph)).toBe("strong");
   });
   it("weak when post uncovered", () => {
-    expect(classifyPostcondition([
-      makeNode(TokenType.Postcondition, CovStatus.Uncovered, 1),
-      makeNode(TokenType.CodeLine, CovStatus.CovComplete, 2),
-    ])).toBe("weak");
+    const graph = buildGraph([
+      { type: TokenType.Postcondition, covStatus: CovStatus.Uncovered, line: 1, prooftext: "this postcondition holds", isTop: true },
+      { type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 2 },
+    ]);
+    expect(classifyPostcondition(graph)).toBe("weak");
   });
-  it("ignores precondition coverage", () => {
-    expect(classifyPostcondition([
-      makeNode(TokenType.Postcondition, CovStatus.CovComplete, 1),
-      makeNode(TokenType.Precondition, CovStatus.Uncovered, 2),
-    ])).toBe("strong");
+  it("strong when post covered and no scope (tops sufficient)", () => {
+    const graph = buildGraph([
+      { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1, prooftext: "this postcondition holds", isTop: true },
+      { type: TokenType.Precondition, covStatus: CovStatus.Uncovered, line: 2, prooftext: "precondition always holds" },
+    ]);
+    expect(classifyPostcondition(graph)).toBe("strong");
   });
 });
 
@@ -58,28 +85,34 @@ describe("classifyPrecondition", () => {
 
 describe("classifyInvariant", () => {
   it("none when no invariants", () => {
-    expect(classifyInvariant([])).toBe("none");
+    const graph = buildGraph([]);
+    expect(classifyInvariant(graph)).toBe("none");
   });
-  it("strong when all invariant nodes covered", () => {
-    expect(classifyInvariant([
-      makeNode(TokenType.CodeLine, CovStatus.CovComplete, 1, "loop invariant always holds"),
-    ])).toBe("strong");
+  it("strong when all invariant tops covered (no scope)", () => {
+    const graph = buildGraph([
+      { type: TokenType.LoopInvariant, covStatus: CovStatus.CovComplete, line: 1, prooftext: "loop invariant always holds", isTop: true },
+      { type: TokenType.CodeLine, covStatus: CovStatus.Uncovered, line: 2 },
+    ]);
+    // No scope data → classification based on tops only → strong
+    expect(classifyInvariant(graph)).toBe("strong");
   });
-  it("weak when any invariant uncovered", () => {
-    expect(classifyInvariant([
-      makeNode(TokenType.CodeLine, CovStatus.CovComplete, 1, "loop invariant always holds"),
-      makeNode(TokenType.CodeLine, CovStatus.Uncovered, 2, "loop invariant always holds"),
-    ])).toBe("weak");
+  it("weak when invariant top uncovered", () => {
+    const graph = buildGraph([
+      { type: TokenType.LoopInvariant, covStatus: CovStatus.Uncovered, line: 1, prooftext: "loop invariant always holds", isTop: true },
+    ]);
+    expect(classifyInvariant(graph)).toBe("weak");
   });
 });
 
 describe("classifySpec (overall)", () => {
   it("strong when postcondition strong", () => {
-    expect(classifySpec([
-      makeNode(TokenType.Postcondition, CovStatus.CovComplete, 1),
-    ])).toBe("strong");
+    const graph = buildGraph([
+      { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1, prooftext: "this postcondition holds", isTop: true },
+    ]);
+    expect(classifySpec(graph)).toBe("strong");
   });
   it("weak when no postconditions", () => {
-    expect(classifySpec([])).toBe("weak");
+    const graph = buildGraph([]);
+    expect(classifySpec(graph)).toBe("weak");
   });
 });

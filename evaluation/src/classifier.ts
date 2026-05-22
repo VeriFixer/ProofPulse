@@ -1,4 +1,4 @@
-import { type NodeData, TokenType, CovStatus } from "@proofpulse/core";
+import { type ProofGraph, type NodeData, TokenType, CovStatus } from "@proofpulse/core";
 
 export interface CategoryClassification {
   postcondition: "strong" | "weak" | "none";
@@ -20,78 +20,100 @@ export interface ClassificationResult {
   error?: string;
 }
 
-/** Check if a node is a loop invariant by its prooftext. */
-function isInvariantNode(n: NodeData): boolean {
-  return n.prooftext.includes("loop invariant");
-}
-
 /**
- * Postcondition classification (matches paper's "Postconditions" column):
- * Strong iff ≥1 postcondition with CovTest/CovComplete AND all body nodes CovComplete.
- * Ignores precondition coverage state.
+ * Scoped postcondition classification:
+ * Strong iff all postcondition tops are covered AND all nodes in their combined scope are covered.
+ * No fallback — if scope is empty, tops being covered is sufficient.
  */
-export function classifyPostcondition(nodes: NodeData[]): "strong" | "weak" | "none" {
-  const postconditions = nodes.filter((n) => n.type === TokenType.Postcondition);
-  if (postconditions.length === 0) return "none";
+export function classifyPostcondition(graph: ProofGraph): "strong" | "weak" | "none" {
+  const topNodes = graph.getAllTopNodes();
+  const postTops = topNodes.filter(n => n.type === TokenType.Postcondition);
+  if (postTops.length === 0) return "none";
 
-  const bodyNodes = nodes.filter(
-    (n) => n.type === TokenType.CodeLine && !isInvariantNode(n)
-  );
-
-  const allPostCovered = postconditions.every(
-    (n) => n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest
+  // All postcondition tops must be covered
+  const allPostCovered = postTops.every(
+    n => n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest
   );
   if (!allPostCovered) return "weak";
 
-  const allBodyComplete = bodyNodes.every(
-    (n) => n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest
-  );
-  if (!allBodyComplete) return "weak";
+  // Union of all postcondition scopes (BFS deps + scope set)
+  const scopeIds = new Set<string>();
+  for (const top of postTops) {
+    const fullScope = graph.getFullScope(top.id);
+    for (const id of fullScope) scopeIds.add(id);
+  }
+
+  // If scope is empty, tops being covered is sufficient
+  if (scopeIds.size === 0) return "strong";
+
+  // Check all scope nodes are covered
+  for (const id of scopeIds) {
+    const node = graph.getNode(id);
+    if (node && node.covStatus === CovStatus.Uncovered) return "weak";
+  }
 
   return "strong";
 }
 
 /**
- * Precondition classification (matches paper's "Preconditions" column):
- * Required = ALL preconditions are covered (CovComplete/CovTest) → all are used by the proof.
- * Optional = ANY precondition is Uncovered → worst result wins.
+ * Precondition classification unchanged — still takes NodeData[].
  */
 export function classifyPrecondition(nodes: NodeData[]): "required" | "optional" | "none" {
   const preconditions = nodes.filter((n) => n.type === TokenType.Precondition);
   if (preconditions.length === 0) return "none";
 
-  const anyUncovered = preconditions.some(
-    (n) => n.covStatus === CovStatus.Uncovered
+  const allCovered = preconditions.every(
+    (n) => (n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest)
   );
-  return anyUncovered ? "optional" : "required";
+  return allCovered ? "required" : "optional";
 }
 
 /**
- * Invariant classification (matches paper's "Invariants" column):
- * Strong iff all invariant nodes have CovComplete/CovTest.
- * Weak if any invariant is Uncovered.
+ * Scoped invariant classification:
+ * Strong iff all invariant tops are covered AND all nodes in their combined scope are covered.
+ * No fallback — if scope is empty, tops being covered is sufficient.
  */
-export function classifyInvariant(nodes: NodeData[]): "strong" | "weak" | "none" {
-  const invariants = nodes.filter((n) => isInvariantNode(n));
-  if (invariants.length === 0) return "none";
+export function classifyInvariant(graph: ProofGraph): "strong" | "weak" | "none" {
+  const topNodes = graph.getAllTopNodes();
+  const invTops = topNodes.filter(n => n.type === TokenType.LoopInvariant);
+  if (invTops.length === 0) return "none";
 
-  const allCovered = invariants.every(
-    (n) => n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest
+  // All invariant tops must be covered
+  const allInvCovered = invTops.every(
+    n => n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest
   );
-  return allCovered ? "strong" : "weak";
+  if (!allInvCovered) return "weak";
+
+  // Union of all invariant scopes (BFS deps + scope set)
+  const scopeIds = new Set<string>();
+  for (const top of invTops) {
+    const fullScope = graph.getFullScope(top.id);
+    for (const id of fullScope) scopeIds.add(id);
+  }
+
+  // If scope is empty, tops being covered is sufficient
+  if (scopeIds.size === 0) return "strong";
+
+  // Check all scope nodes are covered
+  for (const id of scopeIds) {
+    const node = graph.getNode(id);
+    if (node && node.covStatus === CovStatus.Uncovered) return "weak";
+  }
+
+  return "strong";
 }
 
 /** Overall classification: strong postcondition = strong, else weak. */
-export function classifySpec(nodes: NodeData[]): "strong" | "weak" {
-  const post = classifyPostcondition(nodes);
+export function classifySpec(graph: ProofGraph): "strong" | "weak" {
+  const post = classifyPostcondition(graph);
   return post === "strong" ? "strong" : "weak";
 }
 
 /** Classify all three categories at once. */
-export function classifyAll(nodes: NodeData[]): CategoryClassification {
+export function classifyAll(graph: ProofGraph, nodes: NodeData[]): CategoryClassification {
   return {
-    postcondition: classifyPostcondition(nodes),
+    postcondition: classifyPostcondition(graph),
     precondition: classifyPrecondition(nodes),
-    invariant: classifyInvariant(nodes),
+    invariant: classifyInvariant(graph),
   };
 }

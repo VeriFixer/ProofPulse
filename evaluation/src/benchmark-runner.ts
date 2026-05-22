@@ -1,12 +1,15 @@
 import * as fs from "node:fs";
 import * as os from "node:os";
+import * as path from "node:path";
 import {
   runDafny,
   parseProof,
+  generateTextReport,
   type NodeData,
   TokenType,
   CovStatus,
 } from "@proofpulse/core";
+import { buildLogPath } from "./agent-helpers.js";
 import { parseOracle, type DatasetId, type OracleEntry } from "./oracle-parser.js";
 import {
   classifySpec,
@@ -118,8 +121,8 @@ async function processEntry(
       const proof = parseProof(sourceCode, dafnyResult.log);
       const nodes = proof.proofGraph.getAllNodes();
 
-      classification = classifySpec(nodes as NodeData[]);
-      categories = classifyAll(nodes as NodeData[]);
+      classification = classifySpec(proof.proofGraph);
+      categories = classifyAll(proof.proofGraph, nodes as NodeData[]);
 
       postconditionLines = nodes
         .filter((n) => n.type === TokenType.Postcondition)
@@ -143,6 +146,16 @@ async function processEntry(
         } else if (existing === CovStatus.CovTest && n.covStatus === CovStatus.Uncovered) {
           coverageStatuses[line] = n.covStatus;
         }
+      }
+
+      // Write ProofPulse text report to log store
+      try {
+        const report = generateTextReport(sourceCode, proof);
+        const logFilePath = buildLogPath(entry.dataset, path.basename(entry.filePath));
+        fs.mkdirSync(path.dirname(logFilePath), { recursive: true });
+        fs.writeFileSync(logFilePath, report);
+      } catch {
+        // Log write failure — continue silently
       }
     }
   } catch (err) {

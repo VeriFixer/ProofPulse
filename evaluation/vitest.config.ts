@@ -13,6 +13,7 @@ export default defineConfig({
       "tests/unit/evaluation/**/*.test.ts",
       "tests/property/evaluation/**/*.test.ts",
       "tests/integration/evaluation/**/*.test.ts",
+      "evaluation/src/__tests__/**/*.test.ts",
     ],
   },
 });
