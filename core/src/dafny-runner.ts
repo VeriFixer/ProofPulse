@@ -238,7 +238,7 @@ export function resolveDafnyPathWithSource(dafnyPath: string): ResolvedPath | un
   const bundled = resolveBundledDafnyPath();
   if (bundled) return { path: bundled, source: "bundled" };
 
-  const fromPath = resolveExecutableInPath("dafny");
+  const fromPath = resolveExecutableInPath("dafny") || resolveExecutableInPath("Dafny");
   if (fromPath) return { path: fromPath, source: "path" };
 
   return undefined;

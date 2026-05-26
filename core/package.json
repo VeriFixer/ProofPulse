@@ -19,6 +19,11 @@
     "@types/node": "^22.0.0",
     "fast-check": "^3.23.2",
     "typescript": "^5.9.3",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "@types/js-yaml": "^4.0.5"
+  }
+  ,
+  "dependencies": {
+    "js-yaml": "^4.1.0"
   }
 }

@@ -138,8 +138,33 @@ Shared TypeScript library used by both the VSCode extension and the web viewer.
 - `parseProof(dafnyCode, proofLog)` → `Proof` with `ProofGraph` + `lineStatus`
 - `runDafny(filePath, options?)` → `DafnyResult`
 - `computeLineStatus(graph, sourceCode)` → per-line coverage
+- `generateTextReport(sourceCode, proof, options?)` → YAML report
 - `serializeProofGraph` / `deserializeProofGraph` — JSON round-trip
 - Types: `CovStatus`, `TokenType`, `Node`, `ProofGraph`, `Proof`, `DafnyResult`
+
+### CLI
+
+ProofPulse includes a CLI for running coverage analysis and generating a YAML coverage log:
+
+```bash
+# Default: only uncovered/partial nodes per method
+node core/dist/cli.js <file.dfy> --dafny-path <path-to-dafny> --log
+
+# Verbose: all nodes + proof dependency graph per method
+node core/dist/cli.js <file.dfy> --dafny-path <path-to-dafny> --log-verbose
+
+# With minimization
+node core/dist/cli.js <file.dfy> --dafny-path <path-to-dafny> --minimize --log
+```
+
+Options:
+- `--dafny-path <path>` — Path to Dafny binary (default: `dafny`)
+- `--minimize` — Enable unsat core minimization
+- `--timeout <seconds>` — Verification timeout (default: 60)
+- `--log` — Print YAML log (only methods with uncovered/partial nodes)
+- `--log-verbose` — Print full YAML log (all nodes + proof dependencies per method)
+
+Methods with all nodes fully covered are omitted in default mode.
 
 ### Z3 Core Minimization
 
@@ -169,3 +194,20 @@ This will create this file:
 with the first table results used in the paper.
 
 These matched the evaluation results shown in the paper tables.
+
+### Generating the Divergence Report
+
+After running the evaluation, generate an automated divergence report:
+
+```bash
+npx tsx evaluation/generate-results-md.ts
+```
+
+This produces `results.md` with:
+- Summary confusion matrix (computed from results)
+- Full per-file results table with clickable links to `.dfy` files
+- All divergences grouped by category and direction (FP/FN)
+
+The report reads from `evaluation/results/benchmark-results-{dataset}.json` (or `-minimized.json` fallback).
+
+For a deeper manual analysis of root causes, see [`results_analysis.md`](results_analysis.md).

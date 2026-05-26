@@ -1,7 +1,8 @@
 import os from 'os';
 import path from 'path';
 import fs from 'fs';
-import { parseProof, runDafny as coreRunDafny } from '@proofpulse/core';
+import { parseProof, runDafny as coreRunDafny, DafnyReportParser, applyCoverage } from '@proofpulse/core';
+import YAML from 'js-yaml';
 
 const fsp = fs.promises;
 
@@ -84,6 +85,8 @@ interface RunOptions {
   testsRoot?: string;
   concurrency?: number;
   forceMinimization?: boolean;
+  dafnyPath?: string;
+  updateSnapshots?: boolean;
 }
 
 // ── Test parsing ──
@@ -165,8 +168,192 @@ function findDfyFiles(startDir: string): string[] {
 
 // ── Single test runner ──
 
-async function runTest(srcFile: string, opts: RunOptions = {}): Promise<RunTestResult> {
+function isSnapshotTest(srcFile: string): boolean {
+  return srcFile.includes('snapshot_');
+}
+
+/**
+ * Extract expected YAML from //:: comments in a .dfy file.
+ */
+function extractExpectedYAML(src: string): string | null {
+  const lines = src.split('\n');
+  let inSection = false;
+  const yamlLines: string[] = [];
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (trimmed.match(/^\/\/:: method .+:$/)) {
+      inSection = true;
+      continue;
+    }
+    if (inSection && trimmed.startsWith('//:: ')) {
+      yamlLines.push(trimmed.slice(5));
+    } else if (inSection && trimmed === '//::') {
+      yamlLines.push('');
+    } else if (inSection && !trimmed.startsWith('//::') && trimmed !== '') {
+      break;
+    }
+  }
+
+  return yamlLines.length > 0 ? yamlLines.join('\n') : null;
+}
+
+/**
+ * Run a snapshot test: build graph from Dafny log, compare YAML against
+ * the //:: comments embedded in the .dfy file itself.
+ *
+ * Expected format in .dfy:
+ *   //:: method MethodName:
+ *   //:: version: 1
+ *   //:: nodes:
+ *   //::   - id: ...
+ *
+ * If --update-snapshots is passed and the section is empty or mismatches,
+ * the .dfy file is rewritten with the actual YAML embedded.
+ */
+async function runSnapshotTest(srcFile: string, opts: RunOptions = {}): Promise<RunTestResult> {
   const dafnyRes = await coreRunDafny(srcFile, {
+    dafnyPath: opts.dafnyPath,
+    timeoutSeconds: DAFNY_TIMEOUT_SEC,
+    forceMinimization: opts.forceMinimization,
+  });
+
+  if (dafnyRes.timedOut) {
+    return { srcFile, status: 'failed', reason: 'timeout' };
+  }
+  if (dafnyRes.error) {
+    return { srcFile, status: 'skipped', reason: 'dafny_failed', dafnyRes: { ok: false, reason: dafnyRes.error } };
+  }
+
+  const log = dafnyRes.log ?? '';
+  let src: string;
+  try {
+    src = await fsp.readFile(srcFile, 'utf8');
+  } catch (err) {
+    return { srcFile, status: 'error', reason: 'read_source_failed', error: err };
+  }
+
+  // Build graph
+  const graph = DafnyReportParser.parseAndBuild(log);
+  applyCoverage(graph);
+
+  // Generate YAML, strip non-deterministic extras
+  const rawYaml = graph.toYAML();
+  const parsed = JSON.parse(JSON.stringify(YAML.load(rawYaml)));
+  if (parsed && parsed.nodes) {
+    for (const node of parsed.nodes) {
+      delete node.extras;
+    }
+  }
+  const actualYAML = YAML.dump(parsed);
+
+  // Extract expected YAML from //:: comments in the file
+  const expectedYAML = extractExpectedYAML(src);
+
+  // If no expected YAML or empty section
+  if (!expectedYAML || expectedYAML.trim().length === 0) {
+    if (opts.updateSnapshots) {
+      const updated = embedYAMLInDfy(src, actualYAML);
+      await fsp.writeFile(srcFile, updated, 'utf8');
+      return {
+        srcFile,
+        status: 'passed',
+        test_name: path.basename(srcFile),
+        reason: `  Snapshot written into .dfy file (${parsed?.nodes?.length ?? 0} nodes)`,
+        checkedLines: parsed?.nodes?.length ?? 0,
+      };
+    }
+    return {
+      srcFile,
+      status: 'failed',
+      test_name: path.basename(srcFile),
+      reason: `  No expected YAML in file. Run with --update-snapshots to generate.`,
+      checkedLines: 0,
+    };
+  }
+
+  // Compare structurally (YAML string formatting is non-deterministic)
+  const expectedParsed = JSON.parse(JSON.stringify(YAML.load(expectedYAML)));
+  const actualJSON = JSON.stringify(parsed);
+  const expectedJSON = JSON.stringify(expectedParsed);
+
+  if (actualJSON === expectedJSON) {
+    return {
+      srcFile,
+      status: 'passed',
+      test_name: path.basename(srcFile),
+      reason: `  Snapshot matches (${parsed?.nodes?.length ?? 0} nodes)`,
+      checkedLines: parsed?.nodes?.length ?? 0,
+    };
+  }
+
+  // Mismatch — count node-level diffs for reporting
+  const actualNodes = parsed?.nodes?.length ?? 0;
+  const expectedNodes = expectedParsed?.nodes?.length ?? 0;
+  let diffSummary = `nodes: ${expectedNodes}→${actualNodes}`;
+  if (actualNodes === expectedNodes && parsed?.nodes && expectedParsed?.nodes) {
+    let nodeDiffs = 0;
+    for (let i = 0; i < actualNodes; i++) {
+      if (JSON.stringify(parsed.nodes[i]) !== JSON.stringify(expectedParsed.nodes[i])) nodeDiffs++;
+    }
+    diffSummary = `${nodeDiffs}/${actualNodes} nodes differ`;
+  }
+
+  if (opts.updateSnapshots) {
+    const updated = embedYAMLInDfy(src, actualYAML);
+    await fsp.writeFile(srcFile, updated, 'utf8');
+    return {
+      srcFile,
+      status: 'passed',
+      test_name: path.basename(srcFile),
+      reason: `  Snapshot updated in .dfy file (${diffSummary})`,
+      checkedLines: parsed?.nodes?.length ?? 0,
+    };
+  }
+
+  return {
+    srcFile,
+    status: 'failed',
+    test_name: path.basename(srcFile),
+    reason: `  Snapshot mismatch (${diffSummary}). Update with: npm test -- --update-snapshots`,
+    checkedLines: parsed?.nodes?.length ?? 0,
+  };
+}
+
+/**
+ * Rewrite the .dfy file: keep everything before the `//:: method` header,
+ * then write the header + YAML with //:: prefix on each line.
+ */
+function embedYAMLInDfy(src: string, yaml: string): string {
+  const lines = src.split('\n');
+  // Find the //:: method header line
+  let headerIdx = -1;
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].trim().match(/^\/\/:: method .+:$/)) {
+      headerIdx = i;
+      break;
+    }
+  }
+
+  // Keep everything up to and including the header line
+  const prefix = headerIdx >= 0
+    ? lines.slice(0, headerIdx + 1)
+    : [...lines, '//:: method Graph:'];
+
+  // Embed YAML with //:: prefix
+  const yamlLines = yaml.split('\n').map(l => l === '' ? '//::'  : `//:: ${l}`);
+
+  return [...prefix, ...yamlLines, ''].join('\n');
+}
+
+async function runTest(srcFile: string, opts: RunOptions = {}): Promise<RunTestResult> {
+  // Snapshot tests use graph YAML comparison
+  if (isSnapshotTest(srcFile)) {
+    return runSnapshotTest(srcFile, opts);
+  }
+
+  const dafnyRes = await coreRunDafny(srcFile, {
+    dafnyPath: opts.dafnyPath,
     timeoutSeconds: DAFNY_TIMEOUT_SEC,
     forceMinimization: opts.forceMinimization,
   });
@@ -217,16 +404,29 @@ async function runTest(srcFile: string, opts: RunOptions = {}): Promise<RunTestR
 
 // ── Utilities ──
 
-function isDafnyAvailable(): boolean {
-  const pathEnv = process.env.PATH || '';
-  const dirs = pathEnv.split(path.delimiter);
-  for (const dir of dirs) {
-    const candidate = path.join(dir, 'dafny');
+function isDafnyAvailable(dafnyPath?: string): boolean {
+  // If explicit path provided, check that directly
+  if (dafnyPath) {
     try {
-      fs.accessSync(candidate, fs.constants.X_OK);
+      fs.accessSync(dafnyPath, fs.constants.X_OK);
       return true;
     } catch {
-      // not found in this dir
+      return false;
+    }
+  }
+
+  const pathEnv = process.env.PATH || '';
+  const dirs = pathEnv.split(path.delimiter);
+  const names = ['dafny', 'Dafny'];
+  for (const dir of dirs) {
+    for (const name of names) {
+      const candidate = path.join(dir, name);
+      try {
+        fs.accessSync(candidate, fs.constants.X_OK);
+        return true;
+      } catch {
+        // not found in this dir
+      }
     }
   }
   return false;
@@ -242,10 +442,13 @@ export async function runAllTests(opts: RunOptions = {}): Promise<RunAllTestsRes
   console.log(`${GRAY}${'─'.repeat(50)}${RESET}`);
   console.log(`${DIM}Tests root:${RESET}  ${testsRoot}`);
   console.log(`${DIM}Timeout:${RESET}     ${DAFNY_TIMEOUT_SEC}s per file`);
+  if (opts.dafnyPath) {
+    console.log(`${DIM}Dafny:${RESET}       ${opts.dafnyPath}`);
+  }
 
-  if (!isDafnyAvailable()) {
-    console.error(`\n${RED}✗ Dafny CLI not found in PATH${RESET}`);
-    console.error(`  Install Dafny and ensure it is on your PATH.`);
+  if (!isDafnyAvailable(opts.dafnyPath)) {
+    console.error(`\n${RED}✗ Dafny CLI not found${opts.dafnyPath ? ` at ${opts.dafnyPath}` : ' in PATH'}${RESET}`);
+    console.error(`  Install Dafny and ensure it is on your PATH, or pass --dafny-path <path>.`);
     process.exitCode = 2;
     return {
       results: [],
@@ -262,7 +465,13 @@ export async function runAllTests(opts: RunOptions = {}): Promise<RunAllTestsRes
     };
   }
 
-  const dfyFiles = findDfyFiles(testsRoot);
+  let dfyFiles = findDfyFiles(testsRoot);
+
+  // When updating snapshots, only run snapshot_ tests
+  if (opts.updateSnapshots) {
+    dfyFiles = dfyFiles.filter(f => f.includes('snapshot_'));
+  }
+
   console.log(`${DIM}Files found:${RESET} ${dfyFiles.length} .dfy`);
 
   if (dfyFiles.length === 0) {
@@ -278,6 +487,9 @@ export async function runAllTests(opts: RunOptions = {}): Promise<RunAllTestsRes
   if (opts.forceMinimization) {
     console.log(`${DIM}Minimization:${RESET} ${CYAN}enabled${RESET}`);
   }
+  if (opts.updateSnapshots) {
+    console.log(`${DIM}Snapshots:${RESET}   ${CYAN}update mode${RESET}`);
+  }
   console.log(`${GRAY}${'─'.repeat(50)}${RESET}\n`);
 
   const results: TestRunResult[] = [];
@@ -291,9 +503,9 @@ export async function runAllTests(opts: RunOptions = {}): Promise<RunAllTestsRes
       const srcFile = dfyFiles[myIndex];
       const short = shortPath(srcFile);
 
-      const isBug = srcFile.includes('bug_');
+      const isBug = srcFile.includes('bug_') && !srcFile.includes('snapshot_');
       const testStart = performance.now();
-      const res = await runTest(srcFile, { forceMinimization: opts.forceMinimization });
+      const res = await runTest(srcFile, { forceMinimization: opts.forceMinimization, dafnyPath: opts.dafnyPath, updateSnapshots: opts.updateSnapshots });
       const duration = (performance.now() - testStart) / 1000;
 
       if (res.reason === 'timeout') {
@@ -307,7 +519,8 @@ export async function runAllTests(opts: RunOptions = {}): Promise<RunAllTestsRes
 
       completedCount++;
       const progress = `${GRAY}[${String(completedCount).padStart(3)}/${dfyFiles.length}]${RESET}`;
-      const bugTag = isBug ? ` ${YELLOW}(bug test)${RESET}` : '';
+      const isSnapshot = srcFile.includes('snapshot_');
+      const bugTag = isBug ? ` ${YELLOW}(bug test)${RESET}` : isSnapshot ? ` ${CYAN}(snapshot)${RESET}` : '';
       const timeTag = `${GRAY}${elapsed(duration)}${RESET}`;
       const lineCount = res.checkedLines ?? 0;
       const propsTag = lineCount > 0 ? ` ${DIM}(${lineCount} lines verified)${RESET}` : '';

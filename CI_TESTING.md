@@ -1,13 +1,74 @@
 # CI & Testing
 
-## Test Commands
+## Integration Tests (most critical)
+
+These run the full pipeline: Dafny verification → log parsing → graph building → coverage → line status comparison against expected annotations in `.dfy` files under `dataset/tests/`.
+
+Requires `dafny` in PATH.
 
 ```bash
-npm run test:all        # Run ALL test suites with clear separation
-npm test                # Dafny regression suite only (requires dafny in PATH or the official Dafny VS Code extension)
-npm run test:unit       # Unit tests (vitest)
-npm run test:property   # Property-based tests (vitest + fast-check)
-npm test -w evaluation  # Evaluation benchmark tests
+# Run integration tests (dataset/tests/ annotation checks)
+npm test
+
+# With explicit dafny path
+npm test -- --dafny-path /path/to/dafny
+
+# With minimization enabled
+npm test -- --force-minimization
+```
+
+## Full Pipeline Snapshot Tests
+
+Snapshot tests use `snapshot_` prefixed folders in `dataset/tests/`. They run Dafny, build the proof graph, and compare the YAML output against `//::` comments embedded in the `.dfy` file itself.
+
+```bash
+# Run all tests (integration + snapshots together)
+npm test
+
+# Generate/update snapshot YAML in .dfy files
+npm test -- --update-snapshots
+```
+
+### Adding a new snapshot test
+
+1. Create `dataset/tests/snapshot_<name>/snapshot_<name>.dfy`
+2. Add `//:: method MethodName:` at the end (empty = will be filled on update)
+3. Run `npm test -- --update-snapshots` to generate the YAML into the file
+4. Commit the `.dfy` file with the embedded `//::` YAML
+
+### Format
+
+The expected graph YAML is embedded directly in the `.dfy` file with `//::` prefix on each line:
+
+```dafny
+method Foo() { ... }
+
+//:: method Foo:
+//:: version: 1
+//:: nodes:
+//::   - id: ...
+```
+
+This keeps the expected output co-located with the source, same pattern as `//::: L<line> - <Status>` annotations for line-coverage tests.
+
+---
+
+## All Test Commands
+
+```bash
+npm test                        # Integration + snapshot tests (dataset/tests/)
+npm test -- --update-snapshots  # Same but regenerates snapshot YAML in .dfy files
+npm run test:all                # Run ALL test suites
+npm run test:integration        # Same as npm test
+npm run test:unit               # Unit tests (vitest)
+npm run test:property           # Property-based tests (vitest + fast-check)
+```
+
+### Core module tests (unit + property)
+
+```bash
+cd core
+npx vitest --run
 ```
 
 ## Testing with Docker
@@ -15,21 +76,17 @@ npm test -w evaluation  # Evaluation benchmark tests
 The Docker image includes Dafny and all dependencies — no local setup required.
 
 ```bash
-# Run the full test suite
 docker build -t proofpulse .
-docker run --rm proofpulse
-
-# Run a specific test command
-docker run --rm proofpulse npm run test:unit
-docker run --rm proofpulse npm run test:property
-docker run --rm proofpulse npm test              # Dafny regression only
+docker run --rm proofpulse                       # Full test suite
+docker run --rm proofpulse npm test              # Integration + snapshot tests
+docker run --rm proofpulse npm run test:unit     # Unit tests only
 ```
 
 ## Test Infrastructure
 
-The test harness (`tests/harness/`) discovers `.dfy` files under `dataset/tests/`, runs Dafny verification in isolated temp directories, parses the prover log with `@proofpulse/core`, and compares per-line coverage against `//::: L<line> - <Status>` annotations in the source.
+The test harness (`tests/harness/`) discovers `.dfy` files under `dataset/tests/`, runs Dafny verification, parses the prover log with `@proofpulse/core`, and compares per-line coverage against `//::: L<line> - <Status>` annotations in the source.
 
-Each test runs in its own temp dir — all artifacts are cleaned up automatically. Nothing is written to the source tree.
+Each test runs in its own temp dir — all artifacts are cleaned up automatically.
 
 Reports are written to `test-results/junit.xml` and `test-results/coverage.json`.
 
@@ -41,6 +98,13 @@ Reports are written to `test-results/junit.xml` and `test-results/coverage.json`
 | `CI` | — | Adjusts concurrency |
 | `JUNIT_REPORT_PATH` | `test-results/junit.xml` | JUnit XML output |
 | `COVERAGE_REPORT_PATH` | `test-results/coverage.json` | Coverage JSON output |
+
+## CLI Arguments (test harness)
+
+| Argument | Description |
+|----------|-------------|
+| `--dafny-path <path>` | Explicit path to Dafny binary |
+| `--force-minimization` | Enable unsat core minimization |
 
 ## Bug Tests
 

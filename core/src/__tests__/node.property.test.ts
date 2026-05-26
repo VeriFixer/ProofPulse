@@ -1,14 +1,10 @@
 import { describe, it, expect } from "vitest";
 import * as fc from "fast-check";
-import { Node } from "../node.js";
+import { Node, classifyNodeType } from "../node.js";
 import { TokenType } from "../types.js";
 
 /**
  * Property 3: TokenType assignment matches heuristic
- * Validates: Requirements 3.2
- *
- * For any Node with a given prooftext string, the assigned TokenType SHALL match
- * the heuristic rules defined in updateIsTopAssertion.
  */
 
 const postconditionPatterns = [
@@ -16,7 +12,7 @@ const postconditionPatterns = [
   "ensures clause",
 ] as const;
 
-const preconditionPatterns = ["method requires clause"] as const;
+const preconditionPatterns = ["precondition always holds"] as const;
 
 const assertionManualPatterns = ["assertion always holds"] as const;
 
@@ -38,13 +34,13 @@ function expectedTokenType(
   prooftext: string,
   isTopAssertion: boolean,
 ): TokenType {
-  if (
-    prooftext.includes("this postcondition holds") ||
-    prooftext.includes("ensures clause")
-  ) {
+  if (prooftext.includes("this postcondition holds")) {
     return TokenType.Postcondition;
   }
-  if (prooftext.includes("method requires clause")) {
+  if (prooftext.includes("ensures clause")) {
+    return TokenType.Postcondition;
+  }
+  if (prooftext.includes("precondition always holds")) {
     return TokenType.Precondition;
   }
   if (prooftext.includes("assertion always holds")) {
@@ -68,7 +64,6 @@ function expectedTokenType(
   return TokenType.CodeLine;
 }
 
-/** Generator: prooftext containing a known keyword with random surrounding text */
 const prooftextWithKeyword = fc
   .record({
     keyword: fc.constantFrom(...allKeywordPatterns),
@@ -77,7 +72,6 @@ const prooftextWithKeyword = fc
   })
   .map(({ keyword, prefix, suffix }) => `${prefix}${keyword}${suffix}`);
 
-/** Generator: prooftext guaranteed to contain NO known keywords */
 const prooftextWithoutKeyword = fc
   .string({ minLength: 0, maxLength: 50 })
   .filter((s) => !allKeywordPatterns.some((kw) => s.includes(kw)));
@@ -89,8 +83,8 @@ describe("Property 3: TokenType assignment matches heuristic", () => {
         prooftextWithKeyword,
         fc.boolean(),
         (prooftext, isTopAssertion) => {
-          const node = new Node("test.dfy", 1, 0, 1, 10, prooftext, isTopAssertion);
-          expect(node.type).toBe(expectedTokenType(prooftext, isTopAssertion));
+          const node = new Node("test.dfy", 1, 0, 1, 10, prooftext, "", isTopAssertion);
+          expect(node.getType()).toBe(expectedTokenType(prooftext, isTopAssertion));
         },
       ),
       { numRuns: 200 },
@@ -103,22 +97,22 @@ describe("Property 3: TokenType assignment matches heuristic", () => {
         prooftextWithoutKeyword,
         fc.boolean(),
         (prooftext, isTopAssertion) => {
-          const node = new Node("test.dfy", 1, 0, 1, 10, prooftext, isTopAssertion);
-          expect(node.type).toBe(expectedTokenType(prooftext, isTopAssertion));
+          const node = new Node("test.dfy", 1, 0, 1, 10, prooftext, "", isTopAssertion);
+          expect(node.getType()).toBe(expectedTokenType(prooftext, isTopAssertion));
         },
       ),
       { numRuns: 200 },
     );
   });
 
-  it("assigns correct TokenType for fully random prooftext and isTopAssertion", () => {
+  it("classifyNodeType matches Node constructor classification", () => {
     fc.assert(
       fc.property(
         fc.oneof(prooftextWithKeyword, prooftextWithoutKeyword),
         fc.boolean(),
         (prooftext, isTopAssertion) => {
-          const node = new Node("test.dfy", 1, 0, 1, 10, prooftext, isTopAssertion);
-          expect(node.type).toBe(expectedTokenType(prooftext, isTopAssertion));
+          const node = new Node("test.dfy", 1, 0, 1, 10, prooftext, "", isTopAssertion);
+          expect(node.getType()).toBe(classifyNodeType(prooftext, isTopAssertion));
         },
       ),
       { numRuns: 200 },

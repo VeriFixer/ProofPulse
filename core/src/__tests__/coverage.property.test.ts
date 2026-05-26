@@ -1,26 +1,17 @@
 import { describe, it, expect } from "vitest";
 import * as fc from "fast-check";
-import { computeLineStatus } from "../coverage.js";
+import { computeLineStatus, getNodesByLine } from "../coverage.js";
 import { CovStatus } from "../types.js";
 import { Node } from "../node.js";
 import { ProofGraph } from "../proof-graph.js";
 
 /**
  * Property 6: Line status is worst-case of token statuses
- * Validates: Requirements 4.1
- *
- * For any ProofGraph and source code string, the computed Line_Status for each
- * line SHALL equal the worst-case CovStatus (Uncovered > CovTest > CovComplete)
- * among all nodes whose source span starts on that line, defaulting to
- * CovComplete if no tokens exist on that line.
- *
- * Note: The implementation uses start.line only (not full span range).
  */
 
 const FILE = "test.dfy";
 const COV_STATUSES = [CovStatus.CovComplete, CovStatus.CovTest, CovStatus.Uncovered] as const;
 
-/** Worst-case ordering: Uncovered > CovTest > CovComplete */
 function worstCase(a: CovStatus, b: CovStatus): CovStatus {
   const rank: Record<CovStatus, number> = {
     [CovStatus.CovComplete]: 0,
@@ -30,16 +21,11 @@ function worstCase(a: CovStatus, b: CovStatus): CovStatus {
   return rank[a] >= rank[b] ? a : b;
 }
 
-/** Arbitrary node spec: a start line (1-based) and a covStatus */
 interface NodeSpec {
   startLine: number;
   covStatus: CovStatus;
 }
 
-/**
- * Generator: random number of source lines, random nodes placed on those lines
- * with random covStatus values.
- */
 const arbScenario = fc
   .integer({ min: 1, max: 20 })
   .chain((lineCount) =>
@@ -54,12 +40,10 @@ const arbScenario = fc
       .map((nodes) => ({ lineCount, nodes })),
   );
 
-/** Build a ProofGraph from node specs, setting covStatus directly.
- *  Each node gets a unique column to ensure unique IDs. */
 function buildGraph(specs: NodeSpec[]): ProofGraph {
   const graph = new ProofGraph();
   specs.forEach((spec, i) => {
-    const col = i + 1; // unique col per node → unique id
+    const col = i + 1;
     const node = new Node(
       FILE,
       spec.startLine,
@@ -67,15 +51,15 @@ function buildGraph(specs: NodeSpec[]): ProofGraph {
       spec.startLine,
       col + 5,
       `token ${i}`,
+      "",
       false,
     );
-    node.covStatus = spec.covStatus;
+    node.setCovStatus(spec.covStatus);
     graph.addNode(node);
   });
   return graph;
 }
 
-/** Compute expected line statuses independently. */
 function computeExpected(lineCount: number, specs: NodeSpec[]): CovStatus[] {
   const result = new Array<CovStatus>(lineCount).fill(CovStatus.CovComplete);
   for (const spec of specs) {
@@ -172,18 +156,10 @@ describe("Property 6: Line status is worst-case of token statuses", () => {
   });
 });
 
-
 /**
  * Property 8: getNodesByLine returns exactly span-containing nodes
- * Validates: Requirements 4.4
- *
- * For any ProofGraph and any line number, getNodesByLine SHALL return exactly
- * the nodes where start.line <= line <= end.line.
  */
 
-import { getNodesByLine } from "../coverage.js";
-
-/** Node with a random span: start line <= end line, random columns */
 interface SpanNodeSpec {
   startLine: number;
   endLine: number;
@@ -191,10 +167,6 @@ interface SpanNodeSpec {
   endCol: number;
 }
 
-/**
- * Generator: random nodes with random spans within a line range,
- * plus a random query line to test against.
- */
 const arbSpanScenario = fc
   .integer({ min: 1, max: 30 })
   .chain((maxLine) =>
@@ -229,6 +201,7 @@ function buildSpanGraph(specs: SpanNodeSpec[]): ProofGraph {
       spec.endLine,
       spec.endCol,
       `span token ${i}`,
+      "",
       false,
     );
     graph.addNode(node);
@@ -244,14 +217,12 @@ describe("Property 8: getNodesByLine returns exactly span-containing nodes", () 
         const allNodes = graph.getAllNodes();
         const result = getNodesByLine(graph, queryLine);
 
-        // Expected: filter all nodes whose span contains queryLine
         const expected = allNodes.filter(
           (n) => n.start.line <= queryLine && queryLine <= n.end.line,
         );
 
-        // Compare by sorted IDs for order-independence
-        const resultIds = result.map((n) => n.id).sort();
-        const expectedIds = expected.map((n) => n.id).sort();
+        const resultIds = result.map((n) => n.getId()).sort();
+        const expectedIds = expected.map((n) => n.getId()).sort();
 
         expect(resultIds).toEqual(expectedIds);
       }),
@@ -278,7 +249,6 @@ describe("Property 8: getNodesByLine returns exactly span-containing nodes", () 
         ),
         (specs) => {
           const graph = buildSpanGraph(specs);
-          // Query line 100 is guaranteed outside all spans (max endLine = 10)
           const result = getNodesByLine(graph, 100);
           expect(result).toEqual([]);
         },

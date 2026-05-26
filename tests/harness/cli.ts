@@ -7,10 +7,18 @@ import { dirname } from 'node:path';
 const JUNIT_PATH = process.env.JUNIT_REPORT_PATH || 'test-results/junit.xml';
 const COV_PATH = process.env.COVERAGE_REPORT_PATH || 'test-results/coverage.json';
 
-const forceMinimization = process.argv.includes('--force-minimization');
+const args = process.argv.slice(2);
+const forceMinimization = args.includes('--force-minimization');
+const updateSnapshots = args.includes('--update-snapshots');
+
+let dafnyPath: string | undefined;
+const dafnyIdx = args.indexOf('--dafny-path');
+if (dafnyIdx !== -1 && args[dafnyIdx + 1]) {
+  dafnyPath = args[dafnyIdx + 1];
+}
 
 try {
-  const result = await runAllTests({ forceMinimization });
+  const result = await runAllTests({ forceMinimization, dafnyPath, updateSnapshots });
   if (!result) process.exit(0);
 
   const { results, summary } = result;

@@ -15,6 +15,7 @@
     "start": "node web_viewer/server.js",
     "test": "npx tsx tests/harness/cli.ts",
     "test:all": "bash tests/run-all.sh",
+    "test:integration": "npx tsx tests/harness/cli.ts",
     "test:unit": "vitest --run --config vitest.config.ts tests/unit/",
     "test:server": "node --test tests/unit/web_viewer/server.test.js",
     "test:property": "vitest --run --config vitest.config.ts",

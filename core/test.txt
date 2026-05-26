@@ -1,0 +1,2578 @@
+Running Dafny on: /home/ricostynha/Desktop/ProofPulse/dataset/tests/node_forall_evaluator/node_forall_evaliator.dfy
+
+[warn] [info] platform=linux, arch=x64, home=/home/ricostynha
+[warn] [info] extension roots searched: /home/ricostynha/.vscode/extensions
+[warn] [info] Dafny resolved: /home/ricostynha/.vscode/extensions/dafny-lang.ide-vscode-3.5.4/out/resources/4.11.0/github/dafny/dafny (source: bundled)
+[warn] [info] Dafny version: 4.11.0+fcb2042d6d043a2634f0854338c08feeaaaf4ae2
+[warn] [info] Spawning: /home/ricostynha/.vscode/extensions/dafny-lang.ide-vscode-3.5.4/out/resources/4.11.0/github/dafny/dafny verify /home/ricostynha/Desktop/ProofPulse/dataset/tests/node_forall_evaluator/node_forall_evaliator.dfy --verification-coverage-report /tmp/proofpulse-9HouML/cov --log-format text --isolate-assertions --allow-warnings true --verification-time-limit 120 --boogie /proverOpt:O:smt.core.minimize=true --boogie /proverOpt:O:sat.core.minimize=true
+Dafny verification passed.
+
+=== Dafny Verification Log ===
+
+
+Dafny program verifier finished with 23 verified, 0 errors
+
+Results for AllElementsEqual (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.4815667
+  Overall resource count: 103392
+  Maximum assertion batch time: 00:00:00.1395479
+  Maximum assertion batch resource count: 12749
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.1395479
+    Resource count: 6446
+
+    Assertions:
+      node_forall_evaliator.dfy(7,21): target object is never null
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(7,19)-(7,21): target object is never null
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,26): requires clause
+      node_forall_evaliator.dfy(3,24)-(3,66): ensures clause
+      node_forall_evaliator.dfy(4,25)-(4,66): ensures clause
+      node_forall_evaliator.dfy(6,5)-(6,19): assignment (or return)
+      node_forall_evaliator.dfy(7,14)-(7,14): lower bound does not exceed upper bound
+      node_forall_evaliator.dfy(8,19)-(8,19): variable 'result', which is subject to definite-assignment rules, is always initialized here
+      node_forall_evaliator.dfy(8,57)-(8,57): array is never null
+      node_forall_evaliator.dfy(8,57)-(8,60): index in range
+      node_forall_evaliator.dfy(8,19)-(8,65): loop invariant
+      node_forall_evaliator.dfy(8,30)-(8,65): loop invariant always holds
+      node_forall_evaliator.dfy(10,12)-(10,12): array is never null
+      node_forall_evaliator.dfy(10,12)-(10,15): index in range
+      node_forall_evaliator.dfy(11,13)-(11,28): assignment (or return)
+      node_forall_evaliator.dfy(15,1)-(15,1): out-parameter 'result', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0373408
+    Resource count: 6715
+
+    Assertions:
+      node_forall_evaliator.dfy(7,14): lower bound does not exceed upper bound
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(2,14)-(2,26): requires clause
+      node_forall_evaliator.dfy(7,14)-(7,14): lower bound does not exceed upper bound
+
+    Unused by proof:
+      node_forall_evaliator.dfy(3,24)-(3,66): ensures clause
+      node_forall_evaliator.dfy(4,25)-(4,66): ensures clause
+      node_forall_evaliator.dfy(6,5)-(6,19): assignment (or return)
+      node_forall_evaliator.dfy(7,19)-(7,21): target object is never null
+      node_forall_evaliator.dfy(8,19)-(8,19): variable 'result', which is subject to definite-assignment rules, is always initialized here
+      node_forall_evaliator.dfy(8,57)-(8,57): array is never null
+      node_forall_evaliator.dfy(8,57)-(8,60): index in range
+      node_forall_evaliator.dfy(8,19)-(8,65): loop invariant
+      node_forall_evaliator.dfy(8,30)-(8,65): loop invariant always holds
+      node_forall_evaliator.dfy(10,12)-(10,12): array is never null
+      node_forall_evaliator.dfy(10,12)-(10,15): index in range
+      node_forall_evaliator.dfy(11,13)-(11,28): assignment (or return)
+      node_forall_evaliator.dfy(15,1)-(15,1): out-parameter 'result', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0375178
+    Resource count: 8960
+
+    Assertions:
+      node_forall_evaliator.dfy(8,30): this loop invariant holds on entry
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(8,30)-(8,65): loop invariant always holds
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,26): requires clause
+      node_forall_evaliator.dfy(3,24)-(3,66): ensures clause
+      node_forall_evaliator.dfy(4,25)-(4,66): ensures clause
+      node_forall_evaliator.dfy(6,5)-(6,19): assignment (or return)
+      node_forall_evaliator.dfy(7,19)-(7,21): target object is never null
+      node_forall_evaliator.dfy(7,14)-(7,14): lower bound does not exceed upper bound
+      node_forall_evaliator.dfy(8,19)-(8,19): variable 'result', which is subject to definite-assignment rules, is always initialized here
+      node_forall_evaliator.dfy(8,57)-(8,57): array is never null
+      node_forall_evaliator.dfy(8,57)-(8,60): index in range
+      node_forall_evaliator.dfy(8,19)-(8,65): loop invariant
+      node_forall_evaliator.dfy(10,12)-(10,12): array is never null
+      node_forall_evaliator.dfy(10,12)-(10,15): index in range
+      node_forall_evaliator.dfy(11,13)-(11,28): assignment (or return)
+      node_forall_evaliator.dfy(15,1)-(15,1): out-parameter 'result', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 4:
+    Outcome: Valid
+    Duration: 00:00:00.0383809
+    Resource count: 10691
+
+    Assertions:
+      node_forall_evaliator.dfy(10,12): array is never null
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(10,12)-(10,12): array is never null
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,26): requires clause
+      node_forall_evaliator.dfy(3,24)-(3,66): ensures clause
+      node_forall_evaliator.dfy(4,25)-(4,66): ensures clause
+      node_forall_evaliator.dfy(6,5)-(6,19): assignment (or return)
+      node_forall_evaliator.dfy(7,19)-(7,21): target object is never null
+      node_forall_evaliator.dfy(7,14)-(7,14): lower bound does not exceed upper bound
+      node_forall_evaliator.dfy(8,19)-(8,19): variable 'result', which is subject to definite-assignment rules, is always initialized here
+      node_forall_evaliator.dfy(8,57)-(8,57): array is never null
+      node_forall_evaliator.dfy(8,57)-(8,60): index in range
+      node_forall_evaliator.dfy(8,19)-(8,65): loop invariant
+      node_forall_evaliator.dfy(8,30)-(8,65): loop invariant always holds
+      node_forall_evaliator.dfy(10,12)-(10,15): index in range
+      node_forall_evaliator.dfy(11,13)-(11,28): assignment (or return)
+      node_forall_evaliator.dfy(15,1)-(15,1): out-parameter 'result', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 5:
+    Outcome: Valid
+    Duration: 00:00:00.0389067
+    Resource count: 10824
+
+    Assertions:
+      node_forall_evaliator.dfy(10,13): index in range
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(10,12)-(10,15): index in range
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,26): requires clause
+      node_forall_evaliator.dfy(3,24)-(3,66): ensures clause
+      node_forall_evaliator.dfy(4,25)-(4,66): ensures clause
+      node_forall_evaliator.dfy(6,5)-(6,19): assignment (or return)
+      node_forall_evaliator.dfy(7,19)-(7,21): target object is never null
+      node_forall_evaliator.dfy(7,14)-(7,14): lower bound does not exceed upper bound
+      node_forall_evaliator.dfy(8,19)-(8,19): variable 'result', which is subject to definite-assignment rules, is always initialized here
+      node_forall_evaliator.dfy(8,57)-(8,57): array is never null
+      node_forall_evaliator.dfy(8,57)-(8,60): index in range
+      node_forall_evaliator.dfy(8,19)-(8,65): loop invariant
+      node_forall_evaliator.dfy(8,30)-(8,65): loop invariant always holds
+      node_forall_evaliator.dfy(10,12)-(10,12): array is never null
+      node_forall_evaliator.dfy(11,13)-(11,28): assignment (or return)
+      node_forall_evaliator.dfy(15,1)-(15,1): out-parameter 'result', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 6:
+    Outcome: Valid
+    Duration: 00:00:00.0351649
+    Resource count: 12618
+
+    Assertions:
+      node_forall_evaliator.dfy(8,30): this loop invariant is maintained by the loop
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(8,30)-(8,65): loop invariant always holds
+      node_forall_evaliator.dfy(8,30)-(8,65): loop invariant always holds
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,26): requires clause
+      node_forall_evaliator.dfy(3,24)-(3,66): ensures clause
+      node_forall_evaliator.dfy(4,25)-(4,66): ensures clause
+      node_forall_evaliator.dfy(6,5)-(6,19): assignment (or return)
+      node_forall_evaliator.dfy(7,19)-(7,21): target object is never null
+      node_forall_evaliator.dfy(7,14)-(7,14): lower bound does not exceed upper bound
+      node_forall_evaliator.dfy(8,19)-(8,19): variable 'result', which is subject to definite-assignment rules, is always initialized here
+      node_forall_evaliator.dfy(8,57)-(8,57): array is never null
+      node_forall_evaliator.dfy(8,57)-(8,60): index in range
+      node_forall_evaliator.dfy(8,19)-(8,65): loop invariant
+      node_forall_evaliator.dfy(10,12)-(10,12): array is never null
+      node_forall_evaliator.dfy(10,12)-(10,15): index in range
+      node_forall_evaliator.dfy(11,13)-(11,28): assignment (or return)
+      node_forall_evaliator.dfy(15,1)-(15,1): out-parameter 'result', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 7:
+    Outcome: Valid
+    Duration: 00:00:00.0386629
+    Resource count: 12736
+
+    Assertions:
+      node_forall_evaliator.dfy(3,24): this postcondition holds
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(3,24)-(3,66): ensures clause
+      node_forall_evaliator.dfy(8,30)-(8,65): loop invariant always holds
+      node_forall_evaliator.dfy(11,13)-(11,28): assignment (or return)
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,26): requires clause
+      node_forall_evaliator.dfy(4,25)-(4,66): ensures clause
+      node_forall_evaliator.dfy(6,5)-(6,19): assignment (or return)
+      node_forall_evaliator.dfy(7,19)-(7,21): target object is never null
+      node_forall_evaliator.dfy(7,14)-(7,14): lower bound does not exceed upper bound
+      node_forall_evaliator.dfy(8,19)-(8,19): variable 'result', which is subject to definite-assignment rules, is always initialized here
+      node_forall_evaliator.dfy(8,57)-(8,57): array is never null
+      node_forall_evaliator.dfy(8,57)-(8,60): index in range
+      node_forall_evaliator.dfy(8,19)-(8,65): loop invariant
+      node_forall_evaliator.dfy(10,12)-(10,12): array is never null
+      node_forall_evaliator.dfy(10,12)-(10,15): index in range
+      node_forall_evaliator.dfy(15,1)-(15,1): out-parameter 'result', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 8:
+    Outcome: Valid
+    Duration: 00:00:00.0374043
+    Resource count: 12749
+
+    Assertions:
+      node_forall_evaliator.dfy(4,25): this postcondition holds
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(4,25)-(4,66): ensures clause
+      node_forall_evaliator.dfy(10,12)-(10,15): index in range
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,26): requires clause
+      node_forall_evaliator.dfy(3,24)-(3,66): ensures clause
+      node_forall_evaliator.dfy(6,5)-(6,19): assignment (or return)
+      node_forall_evaliator.dfy(7,19)-(7,21): target object is never null
+      node_forall_evaliator.dfy(7,14)-(7,14): lower bound does not exceed upper bound
+      node_forall_evaliator.dfy(8,19)-(8,19): variable 'result', which is subject to definite-assignment rules, is always initialized here
+      node_forall_evaliator.dfy(8,57)-(8,57): array is never null
+      node_forall_evaliator.dfy(8,57)-(8,60): index in range
+      node_forall_evaliator.dfy(8,19)-(8,65): loop invariant
+      node_forall_evaliator.dfy(8,30)-(8,65): loop invariant always holds
+      node_forall_evaliator.dfy(10,12)-(10,12): array is never null
+      node_forall_evaliator.dfy(11,13)-(11,28): assignment (or return)
+      node_forall_evaliator.dfy(15,1)-(15,1): out-parameter 'result', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 9:
+    Outcome: Valid
+    Duration: 00:00:00.0405616
+    Resource count: 10748
+
+    Assertions:
+      node_forall_evaliator.dfy(8,57): array is never null
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(8,57)-(8,57): array is never null
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,26): requires clause
+      node_forall_evaliator.dfy(3,24)-(3,66): ensures clause
+      node_forall_evaliator.dfy(4,25)-(4,66): ensures clause
+      node_forall_evaliator.dfy(6,5)-(6,19): assignment (or return)
+      node_forall_evaliator.dfy(7,19)-(7,21): target object is never null
+      node_forall_evaliator.dfy(7,14)-(7,14): lower bound does not exceed upper bound
+      node_forall_evaliator.dfy(8,19)-(8,19): variable 'result', which is subject to definite-assignment rules, is always initialized here
+      node_forall_evaliator.dfy(8,57)-(8,60): index in range
+      node_forall_evaliator.dfy(8,19)-(8,65): loop invariant
+      node_forall_evaliator.dfy(8,30)-(8,65): loop invariant always holds
+      node_forall_evaliator.dfy(10,12)-(10,12): array is never null
+      node_forall_evaliator.dfy(10,12)-(10,15): index in range
+      node_forall_evaliator.dfy(11,13)-(11,28): assignment (or return)
+      node_forall_evaliator.dfy(15,1)-(15,1): out-parameter 'result', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 10:
+    Outcome: Valid
+    Duration: 00:00:00.0380789
+    Resource count: 10905
+
+    Assertions:
+      node_forall_evaliator.dfy(8,58): index in range
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(8,57)-(8,60): index in range
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,26): requires clause
+      node_forall_evaliator.dfy(3,24)-(3,66): ensures clause
+      node_forall_evaliator.dfy(4,25)-(4,66): ensures clause
+      node_forall_evaliator.dfy(6,5)-(6,19): assignment (or return)
+      node_forall_evaliator.dfy(7,19)-(7,21): target object is never null
+      node_forall_evaliator.dfy(7,14)-(7,14): lower bound does not exceed upper bound
+      node_forall_evaliator.dfy(8,19)-(8,19): variable 'result', which is subject to definite-assignment rules, is always initialized here
+      node_forall_evaliator.dfy(8,57)-(8,57): array is never null
+      node_forall_evaliator.dfy(8,19)-(8,65): loop invariant
+      node_forall_evaliator.dfy(8,30)-(8,65): loop invariant always holds
+      node_forall_evaliator.dfy(10,12)-(10,12): array is never null
+      node_forall_evaliator.dfy(10,12)-(10,15): index in range
+      node_forall_evaliator.dfy(11,13)-(11,28): assignment (or return)
+      node_forall_evaliator.dfy(15,1)-(15,1): out-parameter 'result', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for AllElementsEqual (well-formedness)
+  Overall outcome: Correct
+  Overall time: 00:00:01.0062135
+  Overall resource count: 67708
+  Maximum assertion batch time: 00:00:00.1456451
+  Maximum assertion batch resource count: 13246
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.1454383
+    Resource count: 4844
+
+    Assertions:
+      node_forall_evaliator.dfy(2,16): target object is never null
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(2,14)-(2,16): target object is never null
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,26): method requires clause
+      node_forall_evaliator.dfy(3,13)-(3,13): method ensures clause
+      node_forall_evaliator.dfy(3,45)-(3,47): target object is never null
+      node_forall_evaliator.dfy(3,36)-(3,47): method ensures clause
+      node_forall_evaliator.dfy(3,58)-(3,58): array is never null
+      node_forall_evaliator.dfy(3,58)-(3,61): index in range
+      node_forall_evaliator.dfy(3,58)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,36)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,24)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,13)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,14): method ensures clause
+      node_forall_evaliator.dfy(4,46)-(4,48): target object is never null
+      node_forall_evaliator.dfy(4,37)-(4,48): method ensures clause
+      node_forall_evaliator.dfy(4,58)-(4,58): array is never null
+      node_forall_evaliator.dfy(4,58)-(4,61): index in range
+      node_forall_evaliator.dfy(4,58)-(4,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,66): method ensures clause
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.1452947
+    Resource count: 12872
+
+    Assertions:
+      node_forall_evaliator.dfy(4,58): array is never null
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(4,58)-(4,58): array is never null
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,16): target object is never null
+      node_forall_evaliator.dfy(2,14)-(2,26): method requires clause
+      node_forall_evaliator.dfy(3,13)-(3,13): method ensures clause
+      node_forall_evaliator.dfy(3,45)-(3,47): target object is never null
+      node_forall_evaliator.dfy(3,36)-(3,47): method ensures clause
+      node_forall_evaliator.dfy(3,58)-(3,58): array is never null
+      node_forall_evaliator.dfy(3,58)-(3,61): index in range
+      node_forall_evaliator.dfy(3,58)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,36)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,24)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,13)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,14): method ensures clause
+      node_forall_evaliator.dfy(4,46)-(4,48): target object is never null
+      node_forall_evaliator.dfy(4,37)-(4,48): method ensures clause
+      node_forall_evaliator.dfy(4,58)-(4,61): index in range
+      node_forall_evaliator.dfy(4,58)-(4,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,66): method ensures clause
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.1455063
+    Resource count: 13246
+
+    Assertions:
+      node_forall_evaliator.dfy(4,59): index in range
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(4,37)-(4,48): method ensures clause
+      node_forall_evaliator.dfy(4,58)-(4,61): index in range
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,16): target object is never null
+      node_forall_evaliator.dfy(2,14)-(2,26): method requires clause
+      node_forall_evaliator.dfy(3,13)-(3,13): method ensures clause
+      node_forall_evaliator.dfy(3,45)-(3,47): target object is never null
+      node_forall_evaliator.dfy(3,36)-(3,47): method ensures clause
+      node_forall_evaliator.dfy(3,58)-(3,58): array is never null
+      node_forall_evaliator.dfy(3,58)-(3,61): index in range
+      node_forall_evaliator.dfy(3,58)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,36)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,24)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,13)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,14): method ensures clause
+      node_forall_evaliator.dfy(4,46)-(4,48): target object is never null
+      node_forall_evaliator.dfy(4,58)-(4,58): array is never null
+      node_forall_evaliator.dfy(4,58)-(4,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,66): method ensures clause
+
+  Assertion batch 4:
+    Outcome: Valid
+    Duration: 00:00:00.1454980
+    Resource count: 12369
+
+    Assertions:
+      node_forall_evaliator.dfy(4,48): target object is never null
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(4,46)-(4,48): target object is never null
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,16): target object is never null
+      node_forall_evaliator.dfy(2,14)-(2,26): method requires clause
+      node_forall_evaliator.dfy(3,13)-(3,13): method ensures clause
+      node_forall_evaliator.dfy(3,45)-(3,47): target object is never null
+      node_forall_evaliator.dfy(3,36)-(3,47): method ensures clause
+      node_forall_evaliator.dfy(3,58)-(3,58): array is never null
+      node_forall_evaliator.dfy(3,58)-(3,61): index in range
+      node_forall_evaliator.dfy(3,58)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,36)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,24)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,13)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,14): method ensures clause
+      node_forall_evaliator.dfy(4,37)-(4,48): method ensures clause
+      node_forall_evaliator.dfy(4,58)-(4,58): array is never null
+      node_forall_evaliator.dfy(4,58)-(4,61): index in range
+      node_forall_evaliator.dfy(4,58)-(4,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,66): method ensures clause
+
+  Assertion batch 5:
+    Outcome: Valid
+    Duration: 00:00:00.1456451
+    Resource count: 8184
+
+    Assertions:
+      node_forall_evaliator.dfy(3,58): array is never null
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(3,58)-(3,58): array is never null
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,16): target object is never null
+      node_forall_evaliator.dfy(2,14)-(2,26): method requires clause
+      node_forall_evaliator.dfy(3,13)-(3,13): method ensures clause
+      node_forall_evaliator.dfy(3,45)-(3,47): target object is never null
+      node_forall_evaliator.dfy(3,36)-(3,47): method ensures clause
+      node_forall_evaliator.dfy(3,58)-(3,61): index in range
+      node_forall_evaliator.dfy(3,58)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,36)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,24)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,13)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,14): method ensures clause
+      node_forall_evaliator.dfy(4,46)-(4,48): target object is never null
+      node_forall_evaliator.dfy(4,37)-(4,48): method ensures clause
+      node_forall_evaliator.dfy(4,58)-(4,58): array is never null
+      node_forall_evaliator.dfy(4,58)-(4,61): index in range
+      node_forall_evaliator.dfy(4,58)-(4,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,66): method ensures clause
+
+  Assertion batch 6:
+    Outcome: Valid
+    Duration: 00:00:00.1393719
+    Resource count: 8515
+
+    Assertions:
+      node_forall_evaliator.dfy(3,59): index in range
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(3,36)-(3,47): method ensures clause
+      node_forall_evaliator.dfy(3,58)-(3,61): index in range
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,16): target object is never null
+      node_forall_evaliator.dfy(2,14)-(2,26): method requires clause
+      node_forall_evaliator.dfy(3,13)-(3,13): method ensures clause
+      node_forall_evaliator.dfy(3,45)-(3,47): target object is never null
+      node_forall_evaliator.dfy(3,58)-(3,58): array is never null
+      node_forall_evaliator.dfy(3,58)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,36)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,24)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,13)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,14): method ensures clause
+      node_forall_evaliator.dfy(4,46)-(4,48): target object is never null
+      node_forall_evaliator.dfy(4,37)-(4,48): method ensures clause
+      node_forall_evaliator.dfy(4,58)-(4,58): array is never null
+      node_forall_evaliator.dfy(4,58)-(4,61): index in range
+      node_forall_evaliator.dfy(4,58)-(4,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,66): method ensures clause
+
+  Assertion batch 7:
+    Outcome: Valid
+    Duration: 00:00:00.1394592
+    Resource count: 7678
+
+    Assertions:
+      node_forall_evaliator.dfy(3,47): target object is never null
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(3,45)-(3,47): target object is never null
+
+    Unused by proof:
+      node_forall_evaliator.dfy(2,14)-(2,16): target object is never null
+      node_forall_evaliator.dfy(2,14)-(2,26): method requires clause
+      node_forall_evaliator.dfy(3,13)-(3,13): method ensures clause
+      node_forall_evaliator.dfy(3,36)-(3,47): method ensures clause
+      node_forall_evaliator.dfy(3,58)-(3,58): array is never null
+      node_forall_evaliator.dfy(3,58)-(3,61): index in range
+      node_forall_evaliator.dfy(3,58)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,36)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,24)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(3,13)-(3,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,14): method ensures clause
+      node_forall_evaliator.dfy(4,46)-(4,48): target object is never null
+      node_forall_evaliator.dfy(4,37)-(4,48): method ensures clause
+      node_forall_evaliator.dfy(4,58)-(4,58): array is never null
+      node_forall_evaliator.dfy(4,58)-(4,61): index in range
+      node_forall_evaliator.dfy(4,58)-(4,66): method ensures clause
+      node_forall_evaliator.dfy(4,13)-(4,66): method ensures clause
+
+Results for Main (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.1831518
+  Overall resource count: 59917
+  Maximum assertion batch time: 00:00:00.0401429
+  Maximum assertion batch resource count: 16033
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0247596
+    Resource count: 5362
+
+    Assertions:
+      node_forall_evaliator.dfy(19,22): array size is never negative
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(19,22)-(19,22): array size is never negative
+
+    Unused by proof:
+      node_forall_evaliator.dfy(19,9)-(19,24): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,5): array is never null
+      node_forall_evaliator.dfy(20,5)-(20,8): index in range
+      node_forall_evaliator.dfy(20,5)-(20,8): an array element is in the enclosing context's modifies clause
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(21,9)-(21,36): call
+      node_forall_evaliator.dfy(21,9)-(21,36): assignment (or return)
+      node_forall_evaliator.dfy(22,5)-(22,22): assertion always holds
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0292282
+    Resource count: 8095
+
+    Assertions:
+      node_forall_evaliator.dfy(20,5): array is never null
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(20,5)-(20,5): array is never null
+
+    Unused by proof:
+      node_forall_evaliator.dfy(19,22)-(19,22): array size is never negative
+      node_forall_evaliator.dfy(19,9)-(19,24): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,8): index in range
+      node_forall_evaliator.dfy(20,5)-(20,8): an array element is in the enclosing context's modifies clause
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(21,9)-(21,36): call
+      node_forall_evaliator.dfy(21,9)-(21,36): assignment (or return)
+      node_forall_evaliator.dfy(22,5)-(22,22): assertion always holds
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0290153
+    Resource count: 8346
+
+    Assertions:
+      node_forall_evaliator.dfy(20,6): index in range
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(20,5)-(20,8): index in range
+
+    Unused by proof:
+      node_forall_evaliator.dfy(19,22)-(19,22): array size is never negative
+      node_forall_evaliator.dfy(19,9)-(19,24): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,5): array is never null
+      node_forall_evaliator.dfy(20,5)-(20,8): an array element is in the enclosing context's modifies clause
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(21,9)-(21,36): call
+      node_forall_evaliator.dfy(21,9)-(21,36): assignment (or return)
+      node_forall_evaliator.dfy(22,5)-(22,22): assertion always holds
+
+  Assertion batch 4:
+    Outcome: Valid
+    Duration: 00:00:00.0294109
+    Resource count: 10846
+
+    Assertions:
+      node_forall_evaliator.dfy(20,6): an array element is in the enclosing context's modifies clause
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(20,5)-(20,8): an array element is in the enclosing context's modifies clause
+
+    Unused by proof:
+      node_forall_evaliator.dfy(19,22)-(19,22): array size is never negative
+      node_forall_evaliator.dfy(19,9)-(19,24): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,5): array is never null
+      node_forall_evaliator.dfy(20,5)-(20,8): index in range
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(21,9)-(21,36): call
+      node_forall_evaliator.dfy(21,9)-(21,36): assignment (or return)
+      node_forall_evaliator.dfy(22,5)-(22,22): assertion always holds
+
+  Assertion batch 5:
+    Outcome: Valid
+    Duration: 00:00:00.0305949
+    Resource count: 11235
+
+    Assertions:
+      node_forall_evaliator.dfy(21,30): the precondition always holds
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(20,5)-(20,8): index in range
+      node_forall_evaliator.dfy(21,9)-(21,36): requires clause at node_forall_evaliator.dfy(2,14)-(2,26) from call
+
+    Unused by proof:
+      node_forall_evaliator.dfy(19,22)-(19,22): array size is never negative
+      node_forall_evaliator.dfy(19,9)-(19,24): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,5): array is never null
+      node_forall_evaliator.dfy(20,5)-(20,8): an array element is in the enclosing context's modifies clause
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(21,9)-(21,36): call
+      node_forall_evaliator.dfy(21,9)-(21,36): assignment (or return)
+      node_forall_evaliator.dfy(22,5)-(22,22): assertion always holds
+
+  Assertion batch 6:
+    Outcome: Valid
+    Duration: 00:00:00.0401429
+    Resource count: 16033
+
+    Assertions:
+      node_forall_evaliator.dfy(22,5): assertion always holds
+
+    Proof dependencies:
+      node_forall_evaliator.dfy(20,5)-(20,8): index in range
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,14): assignment (or return)
+      node_forall_evaliator.dfy(21,9)-(21,36): ensures clause at node_forall_evaliator.dfy(4,25)-(4,66) from call
+      node_forall_evaliator.dfy(22,5)-(22,22): assertion always holds
+
+    Unused by proof:
+      node_forall_evaliator.dfy(19,22)-(19,22): array size is never negative
+      node_forall_evaliator.dfy(19,9)-(19,24): assignment (or return)
+      node_forall_evaliator.dfy(20,5)-(20,5): array is never null
+      node_forall_evaliator.dfy(20,5)-(20,8): an array element is in the enclosing context's modifies clause
+      node_forall_evaliator.dfy(21,9)-(21,36): call
+      node_forall_evaliator.dfy(21,9)-(21,36): assignment (or return)
+
+
+=== Parsing Report ===
+
+
+=== PARSER DEBUG ===
+
+[DEBUG] Batch 1
+[DEBUG] Batch 2
+[DEBUG] Batch 3
+[DEBUG] Batch 4
+[DEBUG] Batch 5
+[DEBUG] Batch 6
+[DEBUG] Batch 7
+[DEBUG] Batch 8
+[DEBUG] Batch 9
+[DEBUG] Batch 10
+[DEBUG] Batch 1
+[DEBUG] Batch 2
+[DEBUG] Batch 3
+[DEBUG] Batch 4
+[DEBUG] Batch 5
+[DEBUG] Batch 6
+[DEBUG] Batch 7
+[DEBUG] Batch 1
+[DEBUG] Batch 2
+[DEBUG] Batch 3
+[DEBUG] Batch 4
+[DEBUG] Batch 5
+[DEBUG] Batch 6
+
+=== END DEBUG ===
+
+Parsed 23 batches:
+
+Batch 1:
+  Method: AllElementsEqual (correctness)
+  Top Assertion: target object is never null
+  Location: node_forall_evaliator.dfy(7,21)
+  Proved by: 1 nodes
+  Unused: 14 nodes
+
+Batch 2:
+  Method: AllElementsEqual (correctness)
+  Top Assertion: lower bound does not exceed upper bound
+  Location: node_forall_evaliator.dfy(7,14)
+  Proved by: 2 nodes
+  Unused: 13 nodes
+
+Batch 3:
+  Method: AllElementsEqual (correctness)
+  Top Assertion: this loop invariant holds on entry
+  Location: node_forall_evaliator.dfy(8,30)
+  Proved by: 1 nodes
+  Unused: 14 nodes
+
+Batch 4:
+  Method: AllElementsEqual (correctness)
+  Top Assertion: array is never null
+  Location: node_forall_evaliator.dfy(10,12)
+  Proved by: 1 nodes
+  Unused: 14 nodes
+
+Batch 5:
+  Method: AllElementsEqual (correctness)
+  Top Assertion: index in range
+  Location: node_forall_evaliator.dfy(10,13)
+  Proved by: 1 nodes
+  Unused: 14 nodes
+
+Batch 6:
+  Method: AllElementsEqual (correctness)
+  Top Assertion: this loop invariant is maintained by the loop
+  Location: node_forall_evaliator.dfy(8,30)
+  Proved by: 2 nodes
+  Unused: 14 nodes
+
+Batch 7:
+  Method: AllElementsEqual (correctness)
+  Top Assertion: this postcondition holds
+  Location: node_forall_evaliator.dfy(3,24)
+  Proved by: 3 nodes
+  Unused: 12 nodes
+
+Batch 8:
+  Method: AllElementsEqual (correctness)
+  Top Assertion: this postcondition holds
+  Location: node_forall_evaliator.dfy(4,25)
+  Proved by: 2 nodes
+  Unused: 13 nodes
+
+Batch 9:
+  Method: AllElementsEqual (correctness)
+  Top Assertion: array is never null
+  Location: node_forall_evaliator.dfy(8,57)
+  Proved by: 1 nodes
+  Unused: 14 nodes
+
+Batch 10:
+  Method: AllElementsEqual (correctness)
+  Top Assertion: index in range
+  Location: node_forall_evaliator.dfy(8,58)
+  Proved by: 1 nodes
+  Unused: 14 nodes
+
+Batch 11:
+  Method: AllElementsEqual (well-formedness)
+  Top Assertion: target object is never null
+  Location: node_forall_evaliator.dfy(2,16)
+  Proved by: 1 nodes
+  Unused: 17 nodes
+
+Batch 12:
+  Method: AllElementsEqual (well-formedness)
+  Top Assertion: array is never null
+  Location: node_forall_evaliator.dfy(4,58)
+  Proved by: 1 nodes
+  Unused: 17 nodes
+
+Batch 13:
+  Method: AllElementsEqual (well-formedness)
+  Top Assertion: index in range
+  Location: node_forall_evaliator.dfy(4,59)
+  Proved by: 2 nodes
+  Unused: 16 nodes
+
+Batch 14:
+  Method: AllElementsEqual (well-formedness)
+  Top Assertion: target object is never null
+  Location: node_forall_evaliator.dfy(4,48)
+  Proved by: 1 nodes
+  Unused: 17 nodes
+
+Batch 15:
+  Method: AllElementsEqual (well-formedness)
+  Top Assertion: array is never null
+  Location: node_forall_evaliator.dfy(3,58)
+  Proved by: 1 nodes
+  Unused: 17 nodes
+
+Batch 16:
+  Method: AllElementsEqual (well-formedness)
+  Top Assertion: index in range
+  Location: node_forall_evaliator.dfy(3,59)
+  Proved by: 2 nodes
+  Unused: 16 nodes
+
+Batch 17:
+  Method: AllElementsEqual (well-formedness)
+  Top Assertion: target object is never null
+  Location: node_forall_evaliator.dfy(3,47)
+  Proved by: 1 nodes
+  Unused: 17 nodes
+
+Batch 18:
+  Method: Main (correctness)
+  Top Assertion: array size is never negative
+  Location: node_forall_evaliator.dfy(19,22)
+  Proved by: 1 nodes
+  Unused: 9 nodes
+
+Batch 19:
+  Method: Main (correctness)
+  Top Assertion: array is never null
+  Location: node_forall_evaliator.dfy(20,5)
+  Proved by: 1 nodes
+  Unused: 9 nodes
+
+Batch 20:
+  Method: Main (correctness)
+  Top Assertion: index in range
+  Location: node_forall_evaliator.dfy(20,6)
+  Proved by: 1 nodes
+  Unused: 9 nodes
+
+Batch 21:
+  Method: Main (correctness)
+  Top Assertion: an array element is in the enclosing context's modifies clause
+  Location: node_forall_evaliator.dfy(20,6)
+  Proved by: 1 nodes
+  Unused: 9 nodes
+
+Batch 22:
+  Method: Main (correctness)
+  Top Assertion: the precondition always holds
+  Location: node_forall_evaliator.dfy(21,30)
+  Proved by: 2 nodes
+  Unused: 9 nodes
+
+Batch 23:
+  Method: Main (correctness)
+  Top Assertion: assertion always holds
+  Location: node_forall_evaliator.dfy(22,5)
+  Proved by: 5 nodes
+  Unused: 6 nodes
+
+=== Building ProofGraph ===
+
+[DEBUG] Batch 1
+[DEBUG] Batch 2
+[DEBUG] Batch 3
+[DEBUG] Batch 4
+[DEBUG] Batch 5
+[DEBUG] Batch 6
+[DEBUG] Batch 7
+[DEBUG] Batch 8
+[DEBUG] Batch 9
+[DEBUG] Batch 10
+[DEBUG] Batch 1
+[DEBUG] Batch 2
+[DEBUG] Batch 3
+[DEBUG] Batch 4
+[DEBUG] Batch 5
+[DEBUG] Batch 6
+[DEBUG] Batch 7
+[DEBUG] Batch 1
+[DEBUG] Batch 2
+[DEBUG] Batch 3
+[DEBUG] Batch 4
+[DEBUG] Batch 5
+[DEBUG] Batch 6
+[DEBUG] Batch 1: top=node_forall_evaliator.dfy|AllElementsEqual|correctness|7,21-7,21|AssertionAutomatic provedBy=1 unusedBy=14
+[DEBUG] Batch 2: top=node_forall_evaliator.dfy|AllElementsEqual|correctness|7,14-7,14|AssertionAutomatic provedBy=2 unusedBy=13
+[DEBUG] Batch 3: top=node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,30|LoopInvariant provedBy=1 unusedBy=14
+[DEBUG] Batch 4: top=node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic provedBy=1 unusedBy=14
+[DEBUG] Batch 5: top=node_forall_evaliator.dfy|AllElementsEqual|correctness|10,13-10,13|AssertionAutomatic provedBy=1 unusedBy=14
+[DEBUG] Batch 6: top=node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,30|LoopInvariant provedBy=2 unusedBy=14
+[DEBUG] Batch 7: top=node_forall_evaliator.dfy|AllElementsEqual|correctness|3,24-3,24|Postcondition provedBy=3 unusedBy=12
+[DEBUG] Batch 8: top=node_forall_evaliator.dfy|AllElementsEqual|correctness|4,25-4,25|Postcondition provedBy=2 unusedBy=13
+[DEBUG] Batch 9: top=node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic provedBy=1 unusedBy=14
+[DEBUG] Batch 10: top=node_forall_evaliator.dfy|AllElementsEqual|correctness|8,58-8,58|AssertionAutomatic provedBy=1 unusedBy=14
+[DEBUG] Batch 1: top=node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,16-2,16|AssertionAutomatic provedBy=1 unusedBy=17
+[DEBUG] Batch 2: top=node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic provedBy=1 unusedBy=17
+[DEBUG] Batch 3: top=node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,59-4,59|AssertionAutomatic provedBy=2 unusedBy=16
+[DEBUG] Batch 4: top=node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,48-4,48|AssertionAutomatic provedBy=1 unusedBy=17
+[DEBUG] Batch 5: top=node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic provedBy=1 unusedBy=17
+[DEBUG] Batch 6: top=node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,59-3,59|AssertionAutomatic provedBy=2 unusedBy=16
+[DEBUG] Batch 7: top=node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,47-3,47|AssertionAutomatic provedBy=1 unusedBy=17
+[DEBUG] Batch 1: top=node_forall_evaliator.dfy|Main|correctness|19,22-19,22|AssertionAutomatic provedBy=1 unusedBy=9
+[DEBUG] Batch 2: top=node_forall_evaliator.dfy|Main|correctness|20,5-20,5|AssertionAutomatic provedBy=1 unusedBy=9
+[DEBUG] Batch 3: top=node_forall_evaliator.dfy|Main|correctness|20,6-20,6|AssertionAutomatic provedBy=1 unusedBy=9
+[DEBUG] Batch 4: top=node_forall_evaliator.dfy|Main|correctness|20,6-20,6|AssertionAutomatic provedBy=1 unusedBy=9
+[DEBUG] Batch 5: top=node_forall_evaliator.dfy|Main|correctness|21,30-21,30|Precondition provedBy=2 unusedBy=9
+[DEBUG] Batch 6: top=node_forall_evaliator.dfy|Main|correctness|22,5-22,5|AssertionManual provedBy=5 unusedBy=6
+Graph built with:
+  - All nodes in internal map
+  - TopNodes linked to proved-by and unused-by nodes
+  - No merging applied
+
+=== ProofGraph as YAML ===
+
+version: 1
+nodes:
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|7,21-7,21|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 7
+      col: 21
+    end:
+      line: 7
+      col: 21
+    prooftext: target object is never null
+    isTopAssertion: true
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 1
+      batchOutcome: Valid
+      batchDuration: '00:00:00.1395479'
+      batchResourceCount: 6446
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 7
+      col: 19
+    end:
+      line: 7
+      col: 21
+    prooftext: target object is never null
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 2
+      col: 14
+    end:
+      line: 2
+      col: 26
+    prooftext: requires clause
+    isTopAssertion: false
+    type: Precondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 24
+    end:
+      line: 3
+      col: 66
+    prooftext: ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 25
+    end:
+      line: 4
+      col: 66
+    prooftext: ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
+    file: node_forall_evaliator.dfy
+    start:
+      line: 6
+      col: 5
+    end:
+      line: 6
+      col: 19
+    prooftext: assignment (or return)
+    isTopAssertion: false
+    type: CodeLine
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
+    file: node_forall_evaliator.dfy
+    start:
+      line: 7
+      col: 14
+    end:
+      line: 7
+      col: 14
+    prooftext: lower bound does not exceed upper bound
+    isTopAssertion: false
+    type: CodeLine
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 8
+      col: 19
+    end:
+      line: 8
+      col: 19
+    prooftext: >-
+      variable 'result', which is subject to definite-assignment rules, is
+      always initialized here
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 8
+      col: 57
+    end:
+      line: 8
+      col: 57
+    prooftext: array is never null
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 8
+      col: 57
+    end:
+      line: 8
+      col: 60
+    prooftext: index in range
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
+    file: node_forall_evaliator.dfy
+    start:
+      line: 8
+      col: 19
+    end:
+      line: 8
+      col: 65
+    prooftext: loop invariant
+    isTopAssertion: false
+    type: LoopInvariant
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
+    file: node_forall_evaliator.dfy
+    start:
+      line: 8
+      col: 30
+    end:
+      line: 8
+      col: 65
+    prooftext: loop invariant always holds
+    isTopAssertion: false
+    type: LoopInvariant
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 10
+      col: 12
+    end:
+      line: 10
+      col: 12
+    prooftext: array is never null
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 10
+      col: 12
+    end:
+      line: 10
+      col: 15
+    prooftext: index in range
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
+    file: node_forall_evaliator.dfy
+    start:
+      line: 11
+      col: 13
+    end:
+      line: 11
+      col: 28
+    prooftext: assignment (or return)
+    isTopAssertion: false
+    type: CodeLine
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 15
+      col: 1
+    end:
+      line: 15
+      col: 1
+    prooftext: >-
+      out-parameter 'result', which is subject to definite-assignment rules, is
+      always initialized at this return point
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|7,14-7,14|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 7
+      col: 14
+    end:
+      line: 7
+      col: 14
+    prooftext: lower bound does not exceed upper bound
+    isTopAssertion: true
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 2
+      batchOutcome: Valid
+      batchDuration: '00:00:00.0373408'
+      batchResourceCount: 6715
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,30|LoopInvariant
+    file: node_forall_evaliator.dfy
+    start:
+      line: 8
+      col: 30
+    end:
+      line: 8
+      col: 30
+    prooftext: this loop invariant holds on entry
+    isTopAssertion: true
+    type: LoopInvariant
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 3
+      batchOutcome: Valid
+      batchDuration: '00:00:00.0375178'
+      batchResourceCount: 8960
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|10,13-10,13|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 10
+      col: 13
+    end:
+      line: 10
+      col: 13
+    prooftext: index in range
+    isTopAssertion: true
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 5
+      batchOutcome: Valid
+      batchDuration: '00:00:00.0389067'
+      batchResourceCount: 10824
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|3,24-3,24|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 24
+    end:
+      line: 3
+      col: 24
+    prooftext: this postcondition holds
+    isTopAssertion: true
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 7
+      batchOutcome: Valid
+      batchDuration: '00:00:00.0386629'
+      batchResourceCount: 12736
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|4,25-4,25|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 25
+    end:
+      line: 4
+      col: 25
+    prooftext: this postcondition holds
+    isTopAssertion: true
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 8
+      batchOutcome: Valid
+      batchDuration: '00:00:00.0374043'
+      batchResourceCount: 12749
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|correctness|8,58-8,58|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 8
+      col: 58
+    end:
+      line: 8
+      col: 58
+    prooftext: index in range
+    isTopAssertion: true
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: correctness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 10
+      batchOutcome: Valid
+      batchDuration: '00:00:00.0380789'
+      batchResourceCount: 10905
+      methodType: correctness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,16-2,16|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 2
+      col: 16
+    end:
+      line: 2
+      col: 16
+    prooftext: target object is never null
+    isTopAssertion: true
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 1
+      batchOutcome: Valid
+      batchDuration: '00:00:00.1454383'
+      batchResourceCount: 4844
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 2
+      col: 14
+    end:
+      line: 2
+      col: 16
+    prooftext: target object is never null
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 2
+      col: 14
+    end:
+      line: 2
+      col: 26
+    prooftext: method requires clause
+    isTopAssertion: false
+    type: Precondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 13
+    end:
+      line: 3
+      col: 13
+    prooftext: method ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 45
+    end:
+      line: 3
+      col: 47
+    prooftext: target object is never null
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 36
+    end:
+      line: 3
+      col: 47
+    prooftext: method ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 58
+    end:
+      line: 3
+      col: 58
+    prooftext: array is never null
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 58
+    end:
+      line: 3
+      col: 61
+    prooftext: index in range
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 58
+    end:
+      line: 3
+      col: 66
+    prooftext: method ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 36
+    end:
+      line: 3
+      col: 66
+    prooftext: method ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 24
+    end:
+      line: 3
+      col: 66
+    prooftext: method ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 13
+    end:
+      line: 3
+      col: 66
+    prooftext: method ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 13
+    end:
+      line: 4
+      col: 14
+    prooftext: method ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 46
+    end:
+      line: 4
+      col: 48
+    prooftext: target object is never null
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 37
+    end:
+      line: 4
+      col: 48
+    prooftext: method ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 58
+    end:
+      line: 4
+      col: 58
+    prooftext: array is never null
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 58
+    end:
+      line: 4
+      col: 61
+    prooftext: index in range
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 58
+    end:
+      line: 4
+      col: 66
+    prooftext: method ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 13
+    end:
+      line: 4
+      col: 66
+    prooftext: method ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,59-4,59|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 59
+    end:
+      line: 4
+      col: 59
+    prooftext: index in range
+    isTopAssertion: true
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 3
+      batchOutcome: Valid
+      batchDuration: '00:00:00.1455063'
+      batchResourceCount: 13246
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,48-4,48|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 48
+    end:
+      line: 4
+      col: 48
+    prooftext: target object is never null
+    isTopAssertion: true
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 4
+      batchOutcome: Valid
+      batchDuration: '00:00:00.1454980'
+      batchResourceCount: 12369
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,59-3,59|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 59
+    end:
+      line: 3
+      col: 59
+    prooftext: index in range
+    isTopAssertion: true
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 6
+      batchOutcome: Valid
+      batchDuration: '00:00:00.1393719'
+      batchResourceCount: 8515
+      methodType: well-formedness
+  - id: >-
+      node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,47-3,47|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 3
+      col: 47
+    end:
+      line: 3
+      col: 47
+    prooftext: target object is never null
+    isTopAssertion: true
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: AllElementsEqual
+    methodType: well-formedness
+    assertionGroup: AllElementsEqual
+    extras:
+      batchIndex: 7
+      batchOutcome: Valid
+      batchDuration: '00:00:00.1394592'
+      batchResourceCount: 7678
+      methodType: well-formedness
+  - id: node_forall_evaliator.dfy|Main|correctness|19,22-19,22|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 19
+      col: 22
+    end:
+      line: 19
+      col: 22
+    prooftext: array size is never negative
+    isTopAssertion: true
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      batchIndex: 1
+      batchOutcome: Valid
+      batchDuration: '00:00:00.0247596'
+      batchResourceCount: 5362
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|19,22-19,22|CodeLine
+    file: node_forall_evaliator.dfy
+    start:
+      line: 19
+      col: 22
+    end:
+      line: 19
+      col: 22
+    prooftext: array size is never negative
+    isTopAssertion: false
+    type: CodeLine
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|19,9-19,24|CodeLine
+    file: node_forall_evaliator.dfy
+    start:
+      line: 19
+      col: 9
+    end:
+      line: 19
+      col: 24
+    prooftext: assignment (or return)
+    isTopAssertion: false
+    type: CodeLine
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|20,5-20,5|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 20
+      col: 5
+    end:
+      line: 20
+      col: 5
+    prooftext: array is never null
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 20
+      col: 5
+    end:
+      line: 20
+      col: 8
+    prooftext: index in range
+    isTopAssertion: false
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|20,5-20,14|CodeLine
+    file: node_forall_evaliator.dfy
+    start:
+      line: 20
+      col: 5
+    end:
+      line: 20
+      col: 14
+    prooftext: assignment (or return)
+    isTopAssertion: false
+    type: CodeLine
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|21,9-21,36|CodeLine
+    file: node_forall_evaliator.dfy
+    start:
+      line: 21
+      col: 9
+    end:
+      line: 21
+      col: 36
+    prooftext: call
+    isTopAssertion: false
+    type: CodeLine
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|22,5-22,22|AssertionManual
+    file: node_forall_evaliator.dfy
+    start:
+      line: 22
+      col: 5
+    end:
+      line: 22
+      col: 22
+    prooftext: assertion always holds
+    isTopAssertion: false
+    type: AssertionManual
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|20,6-20,6|AssertionAutomatic
+    file: node_forall_evaliator.dfy
+    start:
+      line: 20
+      col: 6
+    end:
+      line: 20
+      col: 6
+    prooftext: index in range
+    isTopAssertion: true
+    type: AssertionAutomatic
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      batchIndex: 3
+      batchOutcome: Valid
+      batchDuration: '00:00:00.0290153'
+      batchResourceCount: 8346
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|21,30-21,30|Precondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 21
+      col: 30
+    end:
+      line: 21
+      col: 30
+    prooftext: the precondition always holds
+    isTopAssertion: true
+    type: Precondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      batchIndex: 5
+      batchOutcome: Valid
+      batchDuration: '00:00:00.0305949'
+      batchResourceCount: 11235
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|21,9-21,36|Call
+    file: node_forall_evaliator.dfy
+    start:
+      line: 21
+      col: 9
+    end:
+      line: 21
+      col: 36
+    prooftext: requires clause at node_forall_evaliator.dfy(2,14)-(2,26) from call
+    isTopAssertion: false
+    type: Call
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|2,14-2,26|Precondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 2
+      col: 14
+    end:
+      line: 2
+      col: 26
+    prooftext: requires clause
+    isTopAssertion: false
+    type: Precondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|22,5-22,5|AssertionManual
+    file: node_forall_evaliator.dfy
+    start:
+      line: 22
+      col: 5
+    end:
+      line: 22
+      col: 5
+    prooftext: assertion always holds
+    isTopAssertion: true
+    type: AssertionManual
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      batchIndex: 6
+      batchOutcome: Valid
+      batchDuration: '00:00:00.0401429'
+      batchResourceCount: 16033
+      methodType: correctness
+  - id: node_forall_evaliator.dfy|Main|correctness|4,25-4,66|Postcondition
+    file: node_forall_evaliator.dfy
+    start:
+      line: 4
+      col: 25
+    end:
+      line: 4
+      col: 66
+    prooftext: ensures clause
+    isTopAssertion: false
+    type: Postcondition
+    covStatus: Uncovered
+    covStatusInternal: Uncovered
+    methodName: Main
+    methodType: correctness
+    assertionGroup: Main
+    extras:
+      methodType: correctness
+edges:
+  tops:
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|correctness|7,21-7,21|AssertionAutomatic
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|correctness|7,14-7,14|AssertionAutomatic
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,30|LoopInvariant
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|correctness|10,13-10,13|AssertionAutomatic
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|correctness|3,24-3,24|Postcondition
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|correctness|4,25-4,25|Postcondition
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|correctness|8,58-8,58|AssertionAutomatic
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,16-2,16|AssertionAutomatic
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,59-4,59|AssertionAutomatic
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,48-4,48|AssertionAutomatic
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,59-3,59|AssertionAutomatic
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
+    - id: >-
+        node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,47-3,47|AssertionAutomatic
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
+      proofUnused:
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+        - >-
+          node_forall_evaliator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
+    - id: >-
+        node_forall_evaliator.dfy|Main|correctness|19,22-19,22|AssertionAutomatic
+      provedBy:
+        - node_forall_evaliator.dfy|Main|correctness|19,22-19,22|CodeLine
+      proofUnused:
+        - node_forall_evaliator.dfy|Main|correctness|19,9-19,24|CodeLine
+        - >-
+          node_forall_evaliator.dfy|Main|correctness|20,5-20,5|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
+        - node_forall_evaliator.dfy|Main|correctness|20,5-20,14|CodeLine
+        - node_forall_evaliator.dfy|Main|correctness|21,9-21,36|CodeLine
+        - node_forall_evaliator.dfy|Main|correctness|22,5-22,22|AssertionManual
+    - id: node_forall_evaliator.dfy|Main|correctness|20,6-20,6|AssertionAutomatic
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
+      proofUnused:
+        - node_forall_evaliator.dfy|Main|correctness|19,22-19,22|CodeLine
+        - node_forall_evaliator.dfy|Main|correctness|19,9-19,24|CodeLine
+        - >-
+          node_forall_evaliator.dfy|Main|correctness|20,5-20,5|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
+        - node_forall_evaliator.dfy|Main|correctness|20,5-20,14|CodeLine
+        - node_forall_evaliator.dfy|Main|correctness|21,9-21,36|CodeLine
+        - node_forall_evaliator.dfy|Main|correctness|22,5-22,22|AssertionManual
+    - id: node_forall_evaliator.dfy|Main|correctness|21,30-21,30|Precondition
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
+        - node_forall_evaliator.dfy|Main|correctness|21,9-21,36|Call
+      proofUnused:
+        - node_forall_evaliator.dfy|Main|correctness|19,22-19,22|CodeLine
+        - node_forall_evaliator.dfy|Main|correctness|19,9-19,24|CodeLine
+        - >-
+          node_forall_evaliator.dfy|Main|correctness|20,5-20,5|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
+        - node_forall_evaliator.dfy|Main|correctness|20,5-20,14|CodeLine
+        - node_forall_evaliator.dfy|Main|correctness|21,9-21,36|CodeLine
+        - node_forall_evaliator.dfy|Main|correctness|22,5-22,22|AssertionManual
+    - id: node_forall_evaliator.dfy|Main|correctness|22,5-22,5|AssertionManual
+      provedBy:
+        - >-
+          node_forall_evaliator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
+        - node_forall_evaliator.dfy|Main|correctness|20,5-20,14|CodeLine
+        - node_forall_evaliator.dfy|Main|correctness|21,9-21,36|Call
+        - node_forall_evaliator.dfy|Main|correctness|22,5-22,22|AssertionManual
+      proofUnused:
+        - node_forall_evaliator.dfy|Main|correctness|19,22-19,22|CodeLine
+        - node_forall_evaliator.dfy|Main|correctness|19,9-19,24|CodeLine
+        - >-
+          node_forall_evaliator.dfy|Main|correctness|20,5-20,5|AssertionAutomatic
+        - >-
+          node_forall_evaliator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
+        - node_forall_evaliator.dfy|Main|correctness|21,9-21,36|CodeLine
+  calls:
+    - id: node_forall_evaliator.dfy|Main|correctness|21,9-21,36|Call
+      connections:
+        - node_forall_evaliator.dfy|Main|correctness|2,14-2,26|Precondition
+        - node_forall_evaliator.dfy|Main|correctness|4,25-4,66|Postcondition
+

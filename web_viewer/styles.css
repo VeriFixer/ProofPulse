@@ -115,6 +115,32 @@ body {
   color: rgba(64, 202, 252, 1);
 }
 
+/* ── Matryoshka depth styling ── */
+/* Outer spans (has-children) get extra padding so their "bare" area is clickable */
+.token.has-children {
+  padding: 4px 3px;
+  border: 1px solid rgba(100, 180, 255, 0.15);
+  border-radius: 5px;
+}
+
+.token.depth-0 {
+  padding: 4px 3px;
+}
+
+.token.depth-1 {
+  padding: 2px 2px;
+}
+
+.token.depth-2 {
+  padding: 1px 1px;
+}
+
+/* Nested tokens inside a parent get slightly different bg to show layering */
+.token.has-children > .token {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(100, 180, 255, 0.08);
+}
+
 .token:focus {
   outline: 2px solid rgba(94, 164, 250, 0.06)
 }

@@ -1,6 +1,6 @@
 import { CovStatus } from "./types.js";
-import { ProofGraph, type BFSResult } from "./proof-graph.js";
-import type { Node } from "./node.js";
+import { Node } from "./node.js";
+import { ProofGraph } from "./proof-graph.js";
 
 function escapeHtml(str: string): string {
   return String(str)
@@ -20,12 +20,11 @@ interface Range {
 
 function tokenAttrs(tok: Node): { dataId: string; dataStatus: string; classes: string; istopAttr: string } {
   let statusStr = "";
-  if (tok && tok.covStatus) {
-    if (tok.covStatus === CovStatus.Uncovered) statusStr = "uncovered";
-    else if (tok.covStatus === CovStatus.CovTest) statusStr = "covered-test";
-    else statusStr = "covered-complete";
-  }
-  const dataId = escapeHtml(tok.id);
+  if (tok.getCovStatus() === CovStatus.Uncovered) statusStr = "uncovered";
+  else if (tok.getCovStatus() === CovStatus.CovTest) statusStr = "covered-test";
+  else statusStr = "covered-complete";
+
+  const dataId = escapeHtml(tok.getId());
   const dataStatus = escapeHtml(statusStr);
   const classes = escapeHtml("token");
   const istopAttr = tok.isTopAssertion ? ' data-istop="true"' : "";
@@ -34,7 +33,6 @@ function tokenAttrs(tok: Node): { dataId: string; dataStatus: string; classes: s
 
 /**
  * Generate an HTML fragment with nested <span> elements for each proof token.
- * Pure function — no DOM dependency.
  */
 export function generateSpansFragment(code: string, graph: ProofGraph): string {
   const lines = code.split("\n");
@@ -60,32 +58,23 @@ export function generateSpansFragment(code: string, graph: ProofGraph): string {
 
   ranges.sort((a, b) => a.startIndex - b.startIndex || b.endIndex - a.endIndex);
 
-  // Resolve partial overlaps before nesting.
-  // When two ranges overlap partially, the SMALLER range keeps the shared
-  // characters (so a tiny span doesn't lose its only clickable area).
-  // The larger range gets clipped.
+  // Resolve partial overlaps
   for (let i = 0; i < ranges.length; i++) {
     for (let j = i + 1; j < ranges.length; j++) {
       const a = ranges[i], b = ranges[j];
-      // b starts after a (sorted), check if b starts before a ends but extends past a
       if (b.startIndex < a.endIndex && b.endIndex > a.endIndex) {
-        // Partial overlap detected. Shared region: [b.startIndex, a.endIndex)
         const aSize = a.endIndex - a.startIndex;
         const bSize = b.endIndex - b.startIndex;
         if (bSize <= aSize) {
-          // b is smaller or equal — b keeps shared chars, clip a's end
           a.endIndex = b.startIndex;
         } else {
-          // a is smaller — a keeps shared chars, clip b's start
           b.startIndex = a.endIndex;
         }
       }
     }
   }
 
-  // Remove any ranges that became empty after clipping
   const validRanges = ranges.filter(r => r.startIndex < r.endIndex);
-  // Re-sort after modifications
   validRanges.sort((a, b) => a.startIndex - b.startIndex || b.endIndex - a.endIndex);
 
   const roots: Range[] = [];
@@ -102,7 +91,6 @@ export function generateSpansFragment(code: string, graph: ProofGraph): string {
         parent.children.push(r);
         stack.push(r);
       }
-      // After resolution, no partial overlaps should remain
     }
   }
 
@@ -137,20 +125,37 @@ export function generateSpansFragment(code: string, graph: ProofGraph): string {
   return out;
 }
 
-/** Return all BFS neighbors (both directions) for a node by key. */
-export function getDependsOn(key: string, graph: ProofGraph, maxDepth?: number): BFSResult[] | null {
-  if (!graph.hasNode(key)) return null;
-  return graph.getBFSNeighbors(key, false, true, maxDepth);
+/** Return all nodes that prove a given top node (its provedBy set). */
+export function getDependsOn(key: string, graph: ProofGraph): { node: Node; depth: number }[] | null {
+  const node = graph.getNode(key);
+  if (!node) return null;
+  if ("provedBy" in node) {
+    const provedBy = (node as any).provedBy as Set<Node>;
+    return Array.from(provedBy).map(n => ({ node: n, depth: 1 }));
+  }
+  return [];
 }
 
-/** Return BFS neighbors in the provedBy direction — things used to prove this node. */
-export function getProvedBy(key: string, graph: ProofGraph, maxDepth?: number): BFSResult[] | null {
-  if (!graph.hasNode(key)) return null;
-  return graph.getBFSNeighbors(key, true, false, maxDepth);
+/** Return provedBy nodes for a top node. */
+export function getProvedBy(key: string, graph: ProofGraph): { node: Node; depth: number }[] | null {
+  const node = graph.getNode(key);
+  if (!node) return null;
+  if ("provedBy" in node) {
+    const provedBy = (node as any).provedBy as Set<Node>;
+    return Array.from(provedBy).map(n => ({ node: n, depth: 1 }));
+  }
+  return [];
 }
 
-/** Return BFS neighbors in the proves direction — things this node is used to prove. */
-export function getProves(key: string, graph: ProofGraph, maxDepth?: number): BFSResult[] | null {
-  if (!graph.hasNode(key)) return null;
-  return graph.getBFSNeighbors(key, false, false, maxDepth);
+/** Return top nodes that this node proves (tops where this node is in provedBy). */
+export function getProves(key: string, graph: ProofGraph): { node: Node; depth: number }[] | null {
+  const node = graph.getNode(key);
+  if (!node) return null;
+  const result: { node: Node; depth: number }[] = [];
+  for (const top of graph.getAllTopNodes()) {
+    if (top.provedBy.has(node)) {
+      result.push({ node: top, depth: 1 });
+    }
+  }
+  return result;
 }

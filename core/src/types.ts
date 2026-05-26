@@ -30,6 +30,10 @@ export interface NodeData {
   type: TokenType;
   covStatus: CovStatus;
   covStatusInternal: CovStatus;
+  methodName?: string;
+  methodType?: string;
+  checkType?: string;
+  scope?: string[];
 }
 
 export interface DafnyResult {

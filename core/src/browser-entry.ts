@@ -1,6 +1,5 @@
 /**
- * Browser entry point: attaches core API to window/global
- * so the web viewer (app.js) can use it the same way as the old spans_provider.js.
+ * Browser entry point: attaches core API to window/global.
  */
 import { CovStatus, TokenType } from "./types.js";
 import { Proof, parseProof } from "./proof.js";
@@ -28,16 +27,16 @@ root.generateSpansFragment = function (code: string, proof: Proof): string {
   return generateSpansFragment(code, proof.proofGraph);
 };
 
-root.getDependsOn = function (key: string, proof: Proof, maxDepth?: number): unknown {
-  return getDependsOn(key, proof.proofGraph, maxDepth);
+root.getDependsOn = function (key: string, proof: Proof): unknown {
+  return getDependsOn(key, proof.proofGraph);
 };
 
-root.getProvedBy = function (key: string, proof: Proof, maxDepth?: number): unknown {
-  return getProvedBy(key, proof.proofGraph, maxDepth);
+root.getProvedBy = function (key: string, proof: Proof): unknown {
+  return getProvedBy(key, proof.proofGraph);
 };
 
-root.getProves = function (key: string, proof: Proof, maxDepth?: number): unknown {
-  return getProves(key, proof.proofGraph, maxDepth);
+root.getProves = function (key: string, proof: Proof): unknown {
+  return getProves(key, proof.proofGraph);
 };
 
 root.getSampleLog = function (): unknown {

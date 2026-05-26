@@ -1,17 +1,14 @@
 /**
  * Generate a YAML log of ProofPulse coverage analysis.
  *
- * Default (--log): only nodes that are Uncovered or CovTest. Nothing else.
- * Verbose (--log-verbose): same as default + complete proof dependency graph.
- *
- * Reports per method/function — only methods with flagged nodes are shown.
+ * Default (--log): only nodes that are Uncovered or CovTest.
+ * Verbose (--log-verbose): same + complete proof dependency graph.
  */
 import { CovStatus, TokenType } from "./types.js";
-import type { Node } from "./node.js";
+import type { Node, TopNode } from "./node.js";
 import type { Proof } from "./proof.js";
 
 export interface ReportOptions {
-  /** If true, also include the complete proof dependency graph after the flagged nodes. */
   verbose?: boolean;
 }
 
@@ -28,7 +25,6 @@ function typeLabel(type: TokenType): string {
   }
 }
 
-/** Same wording as the web UI (web_viewer/app.js statusExplanation). */
 function statusExplanation(status: CovStatus, type: TokenType): string {
   if (status === CovStatus.Uncovered) {
     switch (type) {
@@ -95,7 +91,6 @@ function extractMethods(sourceCode: string): MethodBlock[] {
   return methods;
 }
 
-/** Get the source code line for a given line number (1-based). */
 function getSourceLine(lines: string[], lineNum: number): string {
   return (lines[lineNum - 1] || "").trim();
 }
@@ -118,13 +113,12 @@ export function generateTextReport(
   if (methods.length === 0) {
     methods.push({ name: "(file)", startLine: 1, endLine: lines.length });
   }
-  // Per-method flagged nodes
+
   for (const method of methods) {
     const methodNodes = nodes.filter(n => n.start.line >= method.startLine && n.start.line <= method.endLine);
-    const flagged = methodNodes.filter(n => n.covStatus === CovStatus.Uncovered || n.covStatus === CovStatus.CovTest);
+    const flagged = methodNodes.filter(n => n.getCovStatus() === CovStatus.Uncovered || n.getCovStatus() === CovStatus.CovTest);
     if (flagged.length === 0) continue;
 
-    // Deduplicate by line — keep the worst status
     const byLine = new Map<number, Node[]>();
     for (const n of flagged) {
       const l = n.start.line;
@@ -135,52 +129,47 @@ export function generateTextReport(
     out.push("");
     out.push(`${method.name}:`);
     for (const [line, lineNodes] of [...byLine.entries()].sort((a, b) => a[0] - b[0])) {
-      const worst = lineNodes.some(n => n.covStatus === CovStatus.Uncovered) ? CovStatus.Uncovered
+      const worst = lineNodes.some(n => n.getCovStatus() === CovStatus.Uncovered) ? CovStatus.Uncovered
         : CovStatus.CovTest;
       const representative = lineNodes[0];
       const codeLine = getSourceLine(lines, line);
       out.push(`  - line: ${line}`);
-      out.push(`    type: ${typeLabel(representative.type)}`);
+      out.push(`    type: ${typeLabel(representative.getType())}`);
       out.push(`    status: ${worst}`);
       out.push(`    code: ${yamlStr(codeLine)}`);
-      out.push(`    message: ${yamlStr(statusExplanation(worst, representative.type))}`);
+      out.push(`    message: ${yamlStr(statusExplanation(worst, representative.getType()))}`);
     }
   }
 
-  // Verbose: complete proof dependency graph
   if (verbose) {
-    const topNodes = graph.getAllTopNodes().filter(top => {
-      const deps = graph.getBFSNeighbors(top.id, true, false);
-      return deps && deps.length > 0;
-    });
+    const topNodes = graph.getAllTopNodes().filter(top => top.provedBy.size > 0);
 
     if (topNodes.length > 0) {
       out.push("");
       out.push("proof_dependencies:");
       for (const top of topNodes) {
-        const deps = graph.getBFSNeighbors(top.id, true, false);
-        if (!deps || deps.length === 0) continue;
+        if (top.provedBy.size === 0) continue;
         const topCode = getSourceLine(lines, top.start.line);
         out.push(`  - assertion:`);
-        out.push(`      type: ${typeLabel(top.type)}`);
+        out.push(`      type: ${typeLabel(top.getType())}`);
         out.push(`      line: ${top.start.line}`);
-        out.push(`      status: ${top.covStatus}`);
+        out.push(`      status: ${top.getCovStatus()}`);
         out.push(`      code: ${yamlStr(topCode)}`);
         out.push(`      proof_text: ${yamlStr(top.prooftext)}`);
         out.push(`    proved_by:`);
-        for (const dep of deps) {
-          const depCode = getSourceLine(lines, dep.node.start.line);
-          out.push(`      - type: ${typeLabel(dep.node.type)}`);
-          out.push(`        line: ${dep.node.start.line}`);
-          out.push(`        status: ${dep.node.covStatus}`);
+        for (const dep of top.provedBy) {
+          const depCode = getSourceLine(lines, dep.start.line);
+          out.push(`      - type: ${typeLabel(dep.getType())}`);
+          out.push(`        line: ${dep.start.line}`);
+          out.push(`        status: ${dep.getCovStatus()}`);
           out.push(`        code: ${yamlStr(depCode)}`);
-          out.push(`        proof_text: ${yamlStr(dep.node.prooftext)}`);
+          out.push(`        proof_text: ${yamlStr(dep.prooftext)}`);
         }
       }
     }
   }
 
-  if (out.length === 1) {
+  if (out.length === 0) {
     out.push("");
     out.push("# All nodes fully covered — nothing to report.");
   }

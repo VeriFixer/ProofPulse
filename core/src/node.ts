@@ -1,17 +1,19 @@
 import { CovStatus, TokenType, SourceLocation, NodeData } from "./types.js";
 
+
 export class Node {
-  id: string;
   file: string;
   start: SourceLocation;
   end: SourceLocation;
   prooftext: string;
+  assertion_group: string;
+  methodType: string;
   isTopAssertion: boolean;
+
+  private _id: string;
   covStatus: CovStatus;
   covStatusInternal: CovStatus;
   type: TokenType;
-  proves: Set<Node>;
-  provedBy: Set<Node>;
 
   constructor(
     file: string,
@@ -20,102 +22,136 @@ export class Node {
     eLine: number,
     eCol: number,
     prooftext: string,
-    isTopAssertion: boolean,
+    assertion_group: string,
+    isTopAssertion: boolean = false,
+    methodType: string = ""
   ) {
     this.file = file;
     this.prooftext = prooftext;
     this.start = { line: sLine, col: sCol };
     this.end = { line: eLine, col: eCol };
-
+    this.assertion_group = assertion_group;
+    this.methodType = methodType;
     this.isTopAssertion = isTopAssertion;
 
     this.covStatus = CovStatus.Uncovered;
     this.covStatusInternal = CovStatus.Uncovered;
+    this.type = classifyNodeType(this.prooftext, this.isTopAssertion);
 
-    this.type = TokenType.Undefined;
+    const normalizeForId = (s: string) =>
+      s
+        .replace(/\s+/g, " ")
+        .replace(/\|/g, "/")
+        .trim();
 
-    this.id = `${this.file}:${this.start.line},${this.start.col}-${this.end.line},${this.end.col}`;
-
-    this.proves = new Set();
-    this.provedBy = new Set();
-
-    this.updateIsTopAssertion(isTopAssertion);
+    const methodName = normalizeForId(this.assertion_group || "");
+    const methodTypeNorm = normalizeForId(this.methodType || "");
+    const span = `${this.start.line},${this.start.col}-${this.end.line},${this.end.col}`;
+    const assertionType = this.type;
+    this._id = `${this.file}|${methodName}|${methodTypeNorm}|${span}|${assertionType}`;
   }
 
-  updateIsTopAssertion(isTopAssertion: boolean): void {
-    this.isTopAssertion = isTopAssertion;
-    if (this.prooftext.includes("this postcondition holds")) {
-      this.type = TokenType.Postcondition;
-    } else if (this.prooftext.includes("precondition always holds")) {
-      this.type = TokenType.Precondition;
-    } else if (this.prooftext.includes("ensures clause at")) {
-      this.type = TokenType.Call;
-    } else if (this.prooftext.includes("requires clause at")) {
-      this.type = TokenType.Call;
-    } else if (this.prooftext.includes("ensures clause")) {
-      this.type = TokenType.Postcondition;
-    } else if (this.prooftext.includes("requires clause")) {
-      this.type = TokenType.Precondition;
-    } else if (this.prooftext.includes("assertion always holds")) {
-      this.type = TokenType.AssertionManual;
-    } else if (
-      this.prooftext.includes("loop invariant holds on entry") ||
-      this.prooftext.includes("loop invariant is maintained by the loop") ||
-      this.prooftext.includes("loop invariant always holds") ||
-      this.prooftext === "loop invariant"
-    ) {
-      this.type = TokenType.LoopInvariant;
-    } else if (
-      this.prooftext.includes("index in range") ||
-      this.prooftext.includes("target object is never null") ||
-      this.prooftext.includes("array is never null") ||
-      this.prooftext.includes("which is subject to definite-assignment rules, is always initialized at this return point") ||
-      this.prooftext.includes("which is subject to definite-assignment rules, is always initialized here") || 
-      this.prooftext.includes("decreases expression is bounded below by") ||
-      this.prooftext.includes("value always satisfies the subset constraints of") || 
-      this.prooftext.includes("an array element is in the enclosing context's modifies clause") || 
-      this.prooftext.includes("sufficient reads clause to read array element") 
-    ) {
-      this.type = TokenType.AssertionAutomatic;
-    } else if (this.isTopAssertion) {
-      this.type = TokenType.AssertionAutomatic;
-    } else {
-      this.type = TokenType.CodeLine;
-    }
+  get id(): string {
+    return this._id;
   }
 
-  connectTo(target: Node): void {
-    this.provedBy.add(target);
-    target.proves.add(this);
+  getId(): string {
+    return this._id;
   }
 
-  toJSON(): NodeData {
-    return {
-      id: this.id,
-      file: this.file,
-      start: { ...this.start },
-      end: { ...this.end },
-      prooftext: this.prooftext,
-      isTopAssertion: this.isTopAssertion,
-      type: this.type,
-      covStatus: this.covStatus,
-      covStatusInternal: this.covStatusInternal,
-    };
+  getType(): TokenType {
+    return this.type;
   }
 
-  static fromJSON(data: NodeData): Node {
-    const node = new Node(
-      data.file,
-      data.start.line,
-      data.start.col,
-      data.end.line,
-      data.end.col,
-      data.prooftext,
-      data.isTopAssertion,
+  getCovStatus(): CovStatus {
+    return this.covStatus;
+  }
+
+  setCovStatus(s: CovStatus): void {
+    this.covStatus = s;
+  }
+
+  getCovStatusInternal(): CovStatus {
+    return this.covStatusInternal;
+  }
+
+  setCovStatusInternal(s: CovStatus): void {
+    this.covStatusInternal = s;
+  }
+}
+
+export class CallNode extends Node {
+  connections: Set<Node> = new Set();
+
+  addConnection(node: Node): boolean {
+    const before = this.connections.size;
+    this.connections.add(node);
+    return this.connections.size !== before;
+  }
+}
+
+export class TopNode extends Node {
+  connections: Set<Node>;
+  provedBy: Set<Node>;
+  proofUnused: Set<Node>;
+
+  constructor(
+    file: string,
+    sLine: number,
+    sCol: number,
+    eLine: number,
+    eCol: number,
+    prooftext: string,
+    assertion_group: string,
+    methodType: string = "",
+  ) {
+    super(
+      file, sLine, sCol, eLine, eCol, prooftext, assertion_group, true, methodType
     );
-    node.type = data.type;
-    node.covStatus = data.covStatus;
-    node.covStatusInternal = data.covStatusInternal;
-    return node;
+
+    this.connections = new Set();
+    this.provedBy = new Set();
+    this.proofUnused = new Set();
+  }
+}
+
+export function classifyNodeType(prooftext: string, isTopAssertion: boolean): TokenType {
+  if (prooftext.includes("this postcondition holds")) {
+    return TokenType.Postcondition;
+  } else if (prooftext.includes("precondition always holds")) {
+    return TokenType.Precondition;
+  } else if (prooftext.includes("ensures clause at")) {
+    return TokenType.Call;
+  } else if (prooftext.includes("requires clause at")) {
+    return TokenType.Call;
+  } else if (prooftext.includes("ensures clause")) {
+    return TokenType.Postcondition;
+  } else if (prooftext.includes("requires clause")) {
+    return TokenType.Precondition;
+  } else if (prooftext.includes("assertion always holds")) {
+    return TokenType.AssertionManual;
+  } else if (
+    prooftext.includes("loop invariant holds on entry") ||
+    prooftext.includes("loop invariant is maintained by the loop") ||
+    prooftext.includes("loop invariant always holds") ||
+    prooftext === "loop invariant"
+  ) {
+    return TokenType.LoopInvariant;
+  } else if (
+    prooftext.includes("index in range") ||
+    prooftext.includes("target object is never null") ||
+    prooftext.includes("array is never null") ||
+    prooftext.includes("which is subject to definite-assignment rules, is always initialized at this return point") ||
+    prooftext.includes("which is subject to definite-assignment rules, is always initialized here") ||
+    prooftext.includes("decreases expression is bounded below by") ||
+    prooftext.includes("value always satisfies the subset constraints of") ||
+    prooftext.includes("an array element is in the enclosing context's modifies clause") ||
+    prooftext.includes("sufficient reads clause to read array element")
+  ) {
+    return TokenType.AssertionAutomatic;
+  } else if (isTopAssertion) {
+    return TokenType.AssertionAutomatic;
+  } else {
+    return TokenType.CodeLine;
   }
 }

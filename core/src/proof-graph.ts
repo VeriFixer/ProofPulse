@@ -1,28 +1,59 @@
-import { Node } from "./node.js";
-import { NodeData } from "./types.js";
+import YAML from "js-yaml";
+import { Node, CallNode, TopNode } from "./node.js";
+import { NodeData, TokenType, CovStatus } from "./types.js";
 
-export interface BFSResult {
-  node: Node;
-  depth: number;
-}
-
-export interface ProofGraphJSON {
-  nodes: NodeData[];
-  topNodeIds: string[];
-  edges: { from: string; to: string }[];
-}
+type ProofGraphYamlV1 = {
+  version: 1;
+  nodes: Array<
+    NodeData & {
+      assertionGroup?: string;
+      extras?: Record<string, unknown>;
+    }
+  >;
+  edges: {
+    tops: Array<{
+      id: string;
+      provedBy: string[];
+      proofUnused: string[];
+    }>;
+    calls: Array<{
+      id: string;
+      connections: string[];
+    }>;
+  };
+};
 
 export class ProofGraph {
-  private nodes: Map<string, Node>;
-  private topNodes: Map<string, Node>;
-
-  constructor() {
-    this.nodes = new Map();
-    this.topNodes = new Map();
-  }
+  private nodes: Map<string, Node> = new Map();
+  private topNodes: Set<TopNode> = new Set();
+  private callNodes: Set<CallNode> = new Set();
 
   addNode(node: Node): void {
-    this.nodes.set(node.id, node);
+    const id = node.getId();
+    if (this.nodes.has(id)) return;
+
+    this.nodes.set(id, node);
+    if (node instanceof TopNode) this.topNodes.add(node);
+    if (node instanceof CallNode) this.callNodes.add(node);
+  }
+
+  removeNode(id: string): boolean {
+    const node = this.nodes.get(id);
+    if (!node) return false;
+    this.nodes.delete(id);
+    if (node instanceof TopNode) this.topNodes.delete(node);
+    if (node instanceof CallNode) this.callNodes.delete(node);
+
+    for (const c of Array.from(this.callNodes)) {
+      c.connections.delete(node);
+    }
+
+    for (const t of Array.from(this.topNodes)) {
+      t.provedBy.delete(node);
+      t.proofUnused.delete(node);
+    }
+
+    return true;
   }
 
   getNode(id: string): Node | undefined {
@@ -33,148 +64,159 @@ export class ProofGraph {
     return this.nodes.has(id);
   }
 
-  addTopNode(node: Node): void {
-    this.topNodes.set(node.id, node);
-  }
-
-  getTopNode(id: string): Node | undefined {
-    return this.topNodes.get(id);
-  }
-
-  hasTopNode(id: string): boolean {
-    return this.topNodes.has(id);
-  }
-
-  removeTopNode(id: string): void {
-    this.topNodes.delete(id);
-  }
-
-  removeNode(id: string): void {
-    const node = this.nodes.get(id);
-    if (node) {
-      for (const child of node.provedBy) {
-        child.proves.delete(node);
-      }
-      for (const parent of node.proves) {
-        parent.provedBy.delete(node);
-      }
-      this.nodes.delete(id);
-    }
-  }
-
-  /**
-   * Replace oldNode with newNode: transfer all edges, update maps.
-   * The old node is removed from both nodes and topNodes.
-   */
-  replaceTopNode(oldNode: Node, newNode: Node): void {
-    // Transfer edges: anything oldNode proves, newNode now proves
-    for (const parent of oldNode.proves) {
-      parent.provedBy.delete(oldNode);
-      parent.provedBy.add(newNode);
-      newNode.proves.add(parent);
-    }
-    // Transfer edges: anything oldNode is provedBy, newNode now is provedBy
-    for (const child of oldNode.provedBy) {
-      child.proves.delete(oldNode);
-      // Skip self-edge if newNode is already in the child set
-      if (child.id === newNode.id) continue;
-      child.proves.add(newNode);
-      newNode.provedBy.add(child);
-    }
-
-    // Remove old from maps
-    this.nodes.delete(oldNode.id);
-    this.topNodes.delete(oldNode.id);
-
-    // Ensure new is in maps
-    this.nodes.set(newNode.id, newNode);
-    this.topNodes.set(newNode.id, newNode);
-  }
-
-  addEdge(fromId: string, toId: string): void {
-    const from = this.getNode(fromId);
-    const to = this.getNode(toId);
-    if (!from || !to) {
-      throw new Error(`Invalid edge: ${fromId} -> ${toId}`);
-    }
-    from.connectTo(to);
-  }
-
   getAllNodes(): Node[] {
     return Array.from(this.nodes.values());
   }
 
-  getAllTopNodes(): Node[] {
-    return Array.from(this.topNodes.values());
+  getAllTopNodes(): TopNode[] {
+    return Array.from(this.topNodes);
   }
 
-  getBFSNeighbors(
-    key: string,
-    isProvedBy: boolean,
-    getAll: boolean = false,
-    maxDepth?: number,
-  ): BFSResult[] | null {
-    if (!this.hasNode(key)) {
-      return null;
+  getAllCallNodes(): CallNode[] {
+    return Array.from(this.callNodes);
+  }
+
+  findNodesByPredicate(pred: (n: Node) => boolean): Node[] {
+    return Array.from(this.nodes.values()).filter(pred);
+  }
+
+  addTopNode(top: TopNode): void {
+    this.addNode(top);
+  }
+
+  removeTopNode(id: string): boolean {
+    const node = this.getNode(id);
+    if (!node || !(node instanceof TopNode)) return false;
+    return this.removeNode(id);
+  }
+
+  connectCall(callId: string, targetId: string): boolean {
+    const call = this.getNode(callId);
+    const target = this.getNode(targetId);
+    if (!call || !(call instanceof CallNode) || !target) return false;
+    return call.addConnection(target);
+  }
+
+  addProvedBy(topId: string, proverId: string): boolean {
+    const top = this.getNode(topId);
+    const prover = this.getNode(proverId);
+    if (!top || !(top instanceof TopNode) || !prover) return false;
+    top.provedBy.add(prover);
+    return true;
+  }
+
+  markProofUnused(topId: string, nodeId: string): boolean {
+    const top = this.getNode(topId);
+    const node = this.getNode(nodeId);
+    if (!top || !(top instanceof TopNode) || !node) return false;
+    top.proofUnused.add(node);
+    return true;
+  }
+
+  clear(): void {
+    this.nodes.clear();
+    this.topNodes.clear();
+    this.callNodes.clear();
+  }
+
+  toYAML(): string {
+    const nodes: ProofGraphYamlV1["nodes"] = [];
+    for (const node of this.nodes.values()) {
+      const extras: Record<string, unknown> = {};
+      const maybeAny = node as any;
+      for (const k of ["batchIndex", "batchOutcome", "batchDuration", "batchResourceCount"]) {
+        if (maybeAny[k] !== undefined) extras[k] = maybeAny[k];
+      }
+
+      nodes.push({
+        id: node.getId(),
+        file: node.file,
+        start: node.start,
+        end: node.end,
+        prooftext: node.prooftext,
+        isTopAssertion: node.isTopAssertion,
+        type: node.getType(),
+        covStatus: node.getCovStatus(),
+        covStatusInternal: node.getCovStatusInternal(),
+        methodName: node.assertion_group,
+        methodType: node.methodType,
+        assertionGroup: node.assertion_group,
+        extras: Object.keys(extras).length ? extras : undefined,
+      });
     }
 
-    // Negative maxDepth treated as 0 (unlimited)
-    const effectiveMaxDepth = (maxDepth != null && maxDepth > 0) ? maxDepth : 0;
+    const edges: ProofGraphYamlV1["edges"] = {
+      tops: Array.from(this.topNodes).map((t) => ({
+        id: t.getId(),
+        provedBy: Array.from(t.provedBy).map((n) => n.getId()),
+        proofUnused: Array.from(t.proofUnused).map((n) => n.getId()),
+      })),
+      calls: Array.from(this.callNodes).map((c) => ({
+        id: c.getId(),
+        connections: Array.from(c.connections).map((n) => n.getId()),
+      })),
+    };
 
-    const token = this.getNode(key)!;
-    const results: BFSResult[] = [];
-    const queue: { node: Node; depth: number }[] = [{ node: token, depth: 0 }];
-    const visited = new Set<string>([token.id]);
+    const doc: ProofGraphYamlV1 = { version: 1, nodes, edges };
+    return YAML.dump(doc);
+  }
 
-    while (queue.length > 0) {
-      const { node, depth } = queue.shift()!;
-      let targetSet: Iterable<Node>;
-      if (getAll) {
-        targetSet = new Set([...node.provedBy, ...node.proves]);
+  fromYAML(yamlStr: string): void {
+    const data = YAML.load(yamlStr) as ProofGraphYamlV1;
+    if (!data) return;
+    if (typeof data !== "object" || Array.isArray(data) || (data as any).version !== 1) {
+      throw new Error("Unsupported YAML format: expected ProofGraphYamlV1 with version: 1");
+    }
+
+    const list: Array<any> = data.nodes;
+    this.clear();
+
+    const idMap = new Map<string, string>();
+
+    for (const item of list) {
+      const group = item.methodName ?? item.assertionGroup ?? "";
+      const methodType = item.methodType ?? (item.extras?.methodType as string | undefined) ?? "";
+      const isTop = !!item.isTopAssertion;
+      let node: Node;
+      if (isTop) {
+        node = new TopNode(item.file, item.start.line, item.start.col, item.end.line, item.end.col, item.prooftext, group, methodType);
+      } else if (item.type === TokenType.Call) {
+        node = new CallNode(item.file, item.start.line, item.start.col, item.end.line, item.end.col, item.prooftext, group, false, methodType);
       } else {
-        targetSet = isProvedBy ? node.provedBy : node.proves;
+        node = new Node(item.file, item.start.line, item.start.col, item.end.line, item.end.col, item.prooftext, group, !!item.isTopAssertion, methodType);
       }
-      const nextDepth = depth + 1;
-      for (const pred of targetSet) {
-        if (visited.has(pred.id)) {
-          continue;
-        }
-        visited.add(pred.id);
-        results.push({ node: pred, depth: nextDepth });
-        if (effectiveMaxDepth === 0 || nextDepth < effectiveMaxDepth) {
-          queue.push({ node: pred, depth: nextDepth });
-        }
-      }
-    }
-    return results;
-  }
 
-  toJSON(): ProofGraphJSON {
-    const nodes: NodeData[] = this.getAllNodes().map((n) => n.toJSON());
-    const topNodeIds: string[] = this.getAllTopNodes().map((n) => n.id);
-    const edges: { from: string; to: string }[] = [];
-    for (const node of this.getAllNodes()) {
-      for (const child of node.provedBy) {
-        edges.push({ from: node.id, to: child.id });
+      if (item.extras && typeof item.extras === "object") {
+        Object.assign(node as any, item.extras);
       }
-    }
-    return { nodes, topNodeIds, edges };
-  }
 
-  static fromJSON(data: ProofGraphJSON): ProofGraph {
-    const graph = new ProofGraph();
-    for (const nd of data.nodes) {
-      graph.addNode(Node.fromJSON(nd));
+      if (typeof item.id === "string") {
+        idMap.set(item.id, node.getId());
+      }
+
+      node.setCovStatus(item.covStatus ?? CovStatus.Uncovered);
+      node.setCovStatusInternal(item.covStatusInternal ?? CovStatus.Uncovered);
+
+      this.addNode(node);
     }
-    for (const id of data.topNodeIds) {
-      const node = graph.getNode(id);
-      if (node) {
-        graph.addTopNode(node);
+
+    const resolveId = (id: string) => idMap.get(id) ?? id;
+
+    for (const topEdge of data.edges.tops) {
+      const topId = resolveId(topEdge.id);
+      for (const proverId of topEdge.provedBy) {
+        this.addProvedBy(topId, resolveId(proverId));
+      }
+      for (const unusedId of topEdge.proofUnused) {
+        this.markProofUnused(topId, resolveId(unusedId));
       }
     }
-    for (const edge of data.edges) {
-      graph.addEdge(edge.from, edge.to);
+
+    for (const callEdge of data.edges.calls) {
+      const callId = resolveId(callEdge.id);
+      for (const conn of callEdge.connections ?? []) {
+        this.connectCall(callId, resolveId(conn));
+      }
     }
-    return graph;
   }
 }
