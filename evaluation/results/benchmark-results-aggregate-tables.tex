@@ -6,9 +6,9 @@
     \toprule
     \textbf{Category} & \textbf{TP} & \textbf{FP} & \textbf{FN} & \textbf{TN} & \textbf{P} & \textbf{R} & \textbf{Acc} \\
     \midrule
-    Postconditions & 113 & 19 & 76 & 12 & 0.86 & 0.60 & 0.57 \\
-    Preconditions  & 53 & 1 & 18 & 99 & 0.98 & 0.75 & 0.89 \\
-    Invariants     & 19 & 4 & 60 & 19 & 0.83 & 0.24 & 0.37 \\
+    Postconditions & 186 & 24 & 3 & 7 & 0.89 & 0.98 & 0.88 \\
+    Preconditions  & 54 & 0 & 16 & 100 & 1.00 & 0.77 & 0.91 \\
+    Invariants     & 76 & 16 & 3 & 7 & 0.83 & 0.96 & 0.81 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -21,14 +21,14 @@
     \toprule
     \textbf{Dataset} & \textbf{N} & \textbf{TP} & \textbf{FP} & \textbf{FN} & \textbf{TN} & \textbf{P} & \textbf{R}  & \textbf{F1} & \textbf{Acc} \\
     \midrule
-    RQ1-GPT4  & 56  & 22 & 11 & 12 &  4 & 0.67 & 0.65 & 0.66 & 0.53 \\
+    RQ1-GPT4  & 56  & 34 & 14 & 0 &  1 & 0.71 & 1.00 & 0.83 & 0.71 \\
     RQ1-PaLM2  & 0  & 0 & 0 & 0 &  0 & 0.00 & 0.00 & 0.00 & 0.00 \\
-    RQ2-GPT4  & 30  & 11 & 5 & 6 &  5 & 0.69 & 0.65 & 0.67 & 0.59 \\
+    RQ2-GPT4  & 30  & 17 & 5 & 0 &  5 & 0.77 & 1.00 & 0.87 & 0.81 \\
     RQ2-PaLM2  & 0  & 0 & 0 & 0 &  0 & 0.00 & 0.00 & 0.00 & 0.00 \\
-    RQ3-GPT4  & 114  & 56 & 0 & 47 &  3 & 1.00 & 0.54 & 0.70 & 0.56 \\
-    RQ3-PaLM2  & 52  & 24 & 3 & 11 &  0 & 0.89 & 0.69 & 0.77 & 0.63 \\
+    RQ3-GPT4  & 114  & 101 & 2 & 2 &  1 & 0.98 & 0.98 & 0.98 & 0.96 \\
+    RQ3-PaLM2  & 52  & 34 & 3 & 1 &  0 & 0.92 & 0.97 & 0.94 & 0.89 \\
     \midrule
-    \textbf{Combined} & \textbf{220} & \textbf{113} & \textbf{19} & \textbf{76} & \textbf{12} & \textbf{0.86} & \textbf{0.60} & \textbf{0.70} & \textbf{0.57} \\
+    \textbf{Combined} & \textbf{220} & \textbf{186} & \textbf{24} & \textbf{3} & \textbf{7} & \textbf{0.89} & \textbf{0.98} & \textbf{0.93} & \textbf{0.88} \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -41,14 +41,14 @@
     \toprule
     \textbf{Dataset} & \textbf{N} & \textbf{TP} & \textbf{FP} & \textbf{FN} & \textbf{TN} & \textbf{P} & \textbf{R}  & \textbf{F1} & \textbf{Acc} \\
     \midrule
-    RQ1-GPT4  & 41  & 18 & 0 & 1 & 22 & 1.00 & 0.95 & 0.97 & 0.98 \\
+    RQ1-GPT4  & 41  & 16 & 0 & 3 & 22 & 1.00 & 0.84 & 0.91 & 0.93 \\
     RQ1-PaLM2  & 0  & 0 & 0 & 0 & 0 & 0.00 & 0.00 & 0.00 & 0.00 \\
-    RQ2-GPT4  & 21  & 9 & 0 & 1 & 11 & 1.00 & 0.90 & 0.95 & 0.95 \\
+    RQ2-GPT4  & 21  & 6 & 0 & 4 & 11 & 1.00 & 0.60 & 0.75 & 0.81 \\
     RQ2-PaLM2  & 0  & 0 & 0 & 0 & 0 & 0.00 & 0.00 & 0.00 & 0.00 \\
-    RQ3-GPT4  & 74  & 22 & 0 & 14 & 38 & 1.00 & 0.61 & 0.76 & 0.81 \\
-    RQ3-PaLM2  & 35  & 4 & 1 & 2 & 28 & 0.80 & 0.67 & 0.73 & 0.91 \\
+    RQ3-GPT4  & 74  & 27 & 0 & 8 & 38 & 1.00 & 0.77 & 0.87 & 0.89 \\
+    RQ3-PaLM2  & 35  & 5 & 0 & 1 & 29 & 1.00 & 0.83 & 0.91 & 0.97 \\
     \midrule
-    \textbf{Combined} & \textbf{171} & \textbf{53} & \textbf{1} & \textbf{18} & \textbf{99} & \textbf{0.98} & \textbf{0.75} & \textbf{0.85} & \textbf{0.89} \\
+    \textbf{Combined} & \textbf{170} & \textbf{54} & \textbf{0} & \textbf{16} & \textbf{100} & \textbf{1.00} & \textbf{0.77} & \textbf{0.87} & \textbf{0.91} \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -61,14 +61,14 @@
     \toprule
     \textbf{Dataset} & \textbf{N} & \textbf{TP} & \textbf{FP} & \textbf{FN} & \textbf{TN} & \textbf{P} & \textbf{R}  & \textbf{F1} & \textbf{Acc} \\
     \midrule
-    RQ1-GPT4  & 22  & 9 & 2 & 1 & 10 & 0.82 & 0.90 & 0.86 & 0.86 \\
+    RQ1-GPT4  & 22  & 10 & 11 & 0 & 1 & 0.48 & 1.00 & 0.65 & 0.50 \\
     RQ1-PaLM2  & 0  & 0 & 0 & 0 & 0 & 0.00 & 0.00 & 0.00 & 0.00 \\
-    RQ2-GPT4  & 14  & 4 & 2 & 1 & 7 & 0.67 & 0.80 & 0.73 & 0.79 \\
+    RQ2-GPT4  & 14  & 5 & 4 & 0 & 5 & 0.56 & 1.00 & 0.71 & 0.71 \\
     RQ2-PaLM2  & 0  & 0 & 0 & 0 & 0 & 0.00 & 0.00 & 0.00 & 0.00 \\
-    RQ3-GPT4  & 53  & 5 & 0 & 46 & 2 & 1.00 & 0.10 & 0.18 & 0.13 \\
-    RQ3-PaLM2  & 13  & 1 & 0 & 12 & 0 & 1.00 & 0.08 & 0.14 & 0.08 \\
+    RQ3-GPT4  & 53  & 49 & 1 & 2 & 1 & 0.98 & 0.96 & 0.97 & 0.94 \\
+    RQ3-PaLM2  & 13  & 12 & 0 & 1 & 0 & 1.00 & 0.92 & 0.96 & 0.92 \\
     \midrule
-    \textbf{Combined} & \textbf{102} & \textbf{19} & \textbf{4} & \textbf{60} & \textbf{19} & \textbf{0.83} & \textbf{0.24} & \textbf{0.37} & \textbf{0.37} \\
+    \textbf{Combined} & \textbf{102} & \textbf{76} & \textbf{16} & \textbf{3} & \textbf{7} & \textbf{0.83} & \textbf{0.96} & \textbf{0.89} & \textbf{0.81} \\
     \bottomrule
   \end{tabular}
 \end{table}

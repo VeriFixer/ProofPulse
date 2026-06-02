@@ -21,47 +21,43 @@ export interface ClassificationResult {
 }
 
 /**
- * Scoped postcondition classification:
- * Strong iff all postcondition tops are covered AND all nodes in their combined scope are covered.
- * No fallback — if scope is empty, tops being covered is sufficient.
+ * Postcondition classification:
+ * Only consider tops with method-type correctness (skip well-formedness → always strong).
+ * For each correctness postcondition top, collect provedBy ∪ proofUnused nodes.
+ * If any node in that set is Uncovered → weak.
+ * If all covered (CovComplete or CovTest) → strong.
  */
 export function classifyPostcondition(graph: ProofGraph): "strong" | "weak" | "none" {
   const topNodes = graph.getAllTopNodes();
   const postTops = topNodes.filter(n => n.getType() === TokenType.Postcondition);
   if (postTops.length === 0) return "none";
 
-  // All postcondition tops must be covered
-  const allPostCovered = postTops.every(
-    n => n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest
-  );
-  if (!allPostCovered) return "weak";
+  // Only consider correctness (method) type tops
+  const methodTops = postTops.filter(n => !n.methodType.includes("well-formedness"));
+  // If all postcondition tops are well-formedness, classify as strong
+  if (methodTops.length === 0) return "strong";
 
-  // Union of all postcondition scopes (BFS deps + scope set)
-  const scopeIds = new Set<string>();
-  for (const top of postTops) {
-    if (typeof (graph as any).getFullScope === "function") {
-      const fullScope = (graph as any).getFullScope(top.getId());
-      for (const id of fullScope) scopeIds.add(id);
+  // For each method-type top, check if all CodeLine nodes in provedBy ∪ proofUnused are covered
+  for (const top of methodTops) {
+    const deps = new Set([...top.provedBy, ...top.proofUnused]);
+    const codeLineDeps = [...deps].filter(d => d.getType() === TokenType.CodeLine);
+    // Empty code line deps means nothing substantive proves this postcondition → weak
+    if (codeLineDeps.length === 0) return "weak";
+    for (const dep of codeLineDeps) {
+      if (dep.covStatus === CovStatus.Uncovered) return "weak";
     }
-  }
-
-  // If scope is empty, tops being covered is sufficient
-  if (scopeIds.size === 0) return "strong";
-
-  // Check all scope nodes are covered
-  for (const id of scopeIds) {
-    const node = graph.getNode(id);
-    if (node && node.covStatus === CovStatus.Uncovered) return "weak";
   }
 
   return "strong";
 }
 
 /**
- * Precondition classification unchanged — still takes NodeData[].
+ * Precondition classification — only consider correctness methodType (skip well-formedness).
  */
 export function classifyPrecondition(nodes: NodeData[]): "required" | "optional" | "none" {
-  const preconditions = nodes.filter((n) => n.type === TokenType.Precondition);
+  const preconditions = nodes.filter(
+    (n) => n.type === TokenType.Precondition && !(n.methodType ?? "").includes("well-formedness")
+  );
   if (preconditions.length === 0) return "none";
 
   const allCovered = preconditions.every(
@@ -71,37 +67,31 @@ export function classifyPrecondition(nodes: NodeData[]): "required" | "optional"
 }
 
 /**
- * Scoped invariant classification:
- * Strong iff all invariant tops are covered AND all nodes in their combined scope are covered.
- * No fallback — if scope is empty, tops being covered is sufficient.
+ * Invariant classification:
+ * Only consider tops with method-type correctness (skip well-formedness → always strong).
+ * For each correctness invariant top, collect provedBy ∪ proofUnused nodes.
+ * If any node in that set is Uncovered → weak.
+ * If all covered (CovComplete or CovTest) → strong.
  */
 export function classifyInvariant(graph: ProofGraph): "strong" | "weak" | "none" {
   const topNodes = graph.getAllTopNodes();
   const invTops = topNodes.filter(n => n.getType() === TokenType.LoopInvariant);
   if (invTops.length === 0) return "none";
 
-  // All invariant tops must be covered
-  const allInvCovered = invTops.every(
-    n => n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest
-  );
-  if (!allInvCovered) return "weak";
+  // Only consider correctness (method) type tops
+  const methodTops = invTops.filter(n => !n.methodType.includes("well-formedness"));
+  // If all invariant tops are well-formedness, classify as strong
+  if (methodTops.length === 0) return "strong";
 
-  // Union of all invariant scopes (BFS deps + scope set)
-  const scopeIds = new Set<string>();
-  for (const top of invTops) {
-    if (typeof (graph as any).getFullScope === "function") {
-      const fullScope = (graph as any).getFullScope(top.getId());
-      for (const id of fullScope) scopeIds.add(id);
+  // For each method-type top, check if all CodeLine nodes in provedBy ∪ proofUnused are covered
+  for (const top of methodTops) {
+    const deps = new Set([...top.provedBy, ...top.proofUnused]);
+    const codeLineDeps = [...deps].filter(d => d.getType() === TokenType.CodeLine);
+    // Empty code line deps means nothing substantive proves this invariant → weak
+    if (codeLineDeps.length === 0) return "weak";
+    for (const dep of codeLineDeps) {
+      if (dep.covStatus === CovStatus.Uncovered) return "weak";
     }
-  }
-
-  // If scope is empty, tops being covered is sufficient
-  if (scopeIds.size === 0) return "strong";
-
-  // Check all scope nodes are covered
-  for (const id of scopeIds) {
-    const node = graph.getNode(id);
-    if (node && node.covStatus === CovStatus.Uncovered) return "weak";
   }
 
   return "strong";
