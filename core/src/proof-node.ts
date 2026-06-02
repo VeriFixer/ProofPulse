@@ -1,66 +1,95 @@
-import { CovStatus, TokenType, SourceLocation, NodeData } from "./types.js";
+import { CovStatus, TokenType, SourceLocation } from "./types.js";
 
+export interface Roles {
+  isTop: boolean;
+  isCall: boolean;
+  isProvedBy: boolean;
+  isUnused: boolean;
+}
 
-export class Node {
-  file: string;
-  start: SourceLocation;
-  end: SourceLocation;
-  prooftext: string;
-  assertion_group: string;
-  methodType: string;
-  isTopAssertion: boolean;
+export interface TopMeta {
+  batchIndex: number;
+  batchOutcome: string;
+  batchDuration: string;
+  batchResourceCount: number;
+}
 
-  private _id: string;
+export class ProofNode {
+  readonly file: string;
+  readonly start: SourceLocation;
+  readonly end: SourceLocation;
+  readonly methodName: string;
+  readonly methodType: string;
+  readonly locationId: string;
+
+  roles: Roles;
+  prooftexts: string[];
+  topMeta?: TopMeta;
+  provedBy: Set<ProofNode>;
+  proofUnused: Set<ProofNode>;
+  connections: Set<ProofNode>;
+
   covStatus: CovStatus;
   covStatusInternal: CovStatus;
-  type: TokenType;
 
   constructor(
     file: string,
-    sLine: number,
-    sCol: number,
-    eLine: number,
-    eCol: number,
+    start: SourceLocation,
+    end: SourceLocation,
+    methodName: string,
+    methodType: string,
     prooftext: string,
-    assertion_group: string,
-    isTopAssertion: boolean = false,
-    methodType: string = ""
   ) {
     this.file = file;
-    this.prooftext = prooftext;
-    this.start = { line: sLine, col: sCol };
-    this.end = { line: eLine, col: eCol };
-    this.assertion_group = assertion_group;
+    this.start = start;
+    this.end = end;
+    this.methodName = methodName;
     this.methodType = methodType;
-    this.isTopAssertion = isTopAssertion;
+    this.prooftexts = [prooftext];
 
+    this.roles = { isTop: false, isCall: false, isProvedBy: false, isUnused: false };
+    this.provedBy = new Set();
+    this.proofUnused = new Set();
+    this.connections = new Set();
     this.covStatus = CovStatus.Uncovered;
     this.covStatusInternal = CovStatus.Uncovered;
-    this.type = classifyNodeType(this.prooftext, this.isTopAssertion);
 
-    const normalizeForId = (s: string) =>
-      s
-        .replace(/\s+/g, " ")
-        .replace(/\|/g, "/")
-        .trim();
-
-    const methodName = normalizeForId(this.assertion_group || "");
-    const methodTypeNorm = normalizeForId(this.methodType || "");
-    const span = `${this.start.line},${this.start.col}-${this.end.line},${this.end.col}`;
-    const assertionType = this.type;
-    this._id = `${this.file}|${methodName}|${methodTypeNorm}|${span}|${assertionType}`;
-  }
-
-  get id(): string {
-    return this._id;
+    const normalize = (s: string) => s.replace(/\s+/g, " ").replace(/\|/g, "/").trim();
+    const span = `${start.line},${start.col}-${end.line},${end.col}`;
+    this.locationId = `${file}|${normalize(methodName)}|${normalize(methodType)}|${span}`;
   }
 
   getId(): string {
-    return this._id;
+    return this.locationId;
   }
 
   getType(): TokenType {
-    return this.type;
+    return classifyNodeType(this.prooftexts, this.roles.isTop);
+  }
+
+  get type(): TokenType {
+    return this.getType();
+  }
+
+  addRole(role: keyof Roles): void {
+    this.roles[role] = true;
+  }
+
+  addProoftext(text: string): void {
+    this.prooftexts.push(text);
+  }
+
+  // Compatibility with old Node interface
+  get isTopAssertion(): boolean {
+    return this.roles.isTop;
+  }
+
+  get prooftext(): string {
+    return this.prooftexts[0] ?? "";
+  }
+
+  get assertion_group(): string {
+    return this.methodName;
   }
 
   getCovStatus(): CovStatus {
@@ -80,42 +109,20 @@ export class Node {
   }
 }
 
-export class CallNode extends Node {
-  connections: Set<Node> = new Set();
-
-  addConnection(node: Node): boolean {
-    const before = this.connections.size;
-    this.connections.add(node);
-    return this.connections.size !== before;
+export function classifyNodeType(prooftexts: string[], isTopAssertion: boolean): TokenType {
+  // If any prooftext indicates a call clause, classify as Call
+  for (const prooftext of prooftexts) {
+    if (prooftext.includes("ensures clause at") || prooftext.includes("requires clause at")) {
+      return TokenType.Call;
+    }
   }
-}
 
-export class TopNode extends Node {
-  connections: Set<Node>;
-  provedBy: Set<Node>;
-  proofUnused: Set<Node>;
-
-  constructor(
-    file: string,
-    sLine: number,
-    sCol: number,
-    eLine: number,
-    eCol: number,
-    prooftext: string,
-    assertion_group: string,
-    methodType: string = "",
-  ) {
-    super(
-      file, sLine, sCol, eLine, eCol, prooftext, assertion_group, true, methodType
-    );
-
-    this.connections = new Set();
-    this.provedBy = new Set();
-    this.proofUnused = new Set();
+  if (prooftexts.length === 0) {
+    return TokenType.Undefined;
   }
-}
 
-export function classifyNodeType(prooftext: string, isTopAssertion: boolean): TokenType {
+  const prooftext = prooftexts[0];
+  
   if (prooftext.includes("this postcondition holds")) {
     return TokenType.Postcondition;
   } else if (prooftext.includes("precondition always holds")) {

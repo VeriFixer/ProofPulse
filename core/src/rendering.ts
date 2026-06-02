@@ -1,5 +1,5 @@
 import { CovStatus } from "./types.js";
-import { Node } from "./node.js";
+import { ProofNode } from "./proof-node.js";
 import { ProofGraph } from "./proof-graph.js";
 
 function escapeHtml(str: string): string {
@@ -14,11 +14,11 @@ function escapeHtml(str: string): string {
 interface Range {
   startIndex: number;
   endIndex: number;
-  token: Node;
+  token: ProofNode;
   children: Range[];
 }
 
-function tokenAttrs(tok: Node): { dataId: string; dataStatus: string; classes: string; istopAttr: string } {
+function tokenAttrs(tok: ProofNode): { dataId: string; dataStatus: string; classes: string; istopAttr: string } {
   let statusStr = "";
   if (tok.getCovStatus() === CovStatus.Uncovered) statusStr = "uncovered";
   else if (tok.getCovStatus() === CovStatus.CovTest) statusStr = "covered-test";
@@ -126,32 +126,32 @@ export function generateSpansFragment(code: string, graph: ProofGraph): string {
 }
 
 /** Return all nodes that prove a given top node (its provedBy set). */
-export function getDependsOn(key: string, graph: ProofGraph): { node: Node; depth: number }[] | null {
+export function getDependsOn(key: string, graph: ProofGraph): { node: ProofNode; depth: number }[] | null {
   const node = graph.getNode(key);
   if (!node) return null;
   if ("provedBy" in node) {
-    const provedBy = (node as any).provedBy as Set<Node>;
+    const provedBy = (node as any).provedBy as Set<ProofNode>;
     return Array.from(provedBy).map(n => ({ node: n, depth: 1 }));
   }
   return [];
 }
 
 /** Return provedBy nodes for a top node. */
-export function getProvedBy(key: string, graph: ProofGraph): { node: Node; depth: number }[] | null {
+export function getProvedBy(key: string, graph: ProofGraph): { node: ProofNode; depth: number }[] | null {
   const node = graph.getNode(key);
   if (!node) return null;
   if ("provedBy" in node) {
-    const provedBy = (node as any).provedBy as Set<Node>;
+    const provedBy = (node as any).provedBy as Set<ProofNode>;
     return Array.from(provedBy).map(n => ({ node: n, depth: 1 }));
   }
   return [];
 }
 
 /** Return top nodes that this node proves (tops where this node is in provedBy). */
-export function getProves(key: string, graph: ProofGraph): { node: Node; depth: number }[] | null {
+export function getProves(key: string, graph: ProofGraph): { node: ProofNode; depth: number }[] | null {
   const node = graph.getNode(key);
   if (!node) return null;
-  const result: { node: Node; depth: number }[] = [];
+  const result: { node: ProofNode; depth: number }[] = [];
   for (const top of graph.getAllTopNodes()) {
     if (top.provedBy.has(node)) {
       result.push({ node: top, depth: 1 });

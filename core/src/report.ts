@@ -5,7 +5,7 @@
  * Verbose (--log-verbose): same + complete proof dependency graph.
  */
 import { CovStatus, TokenType } from "./types.js";
-import type { Node, TopNode } from "./node.js";
+import type { ProofNode } from "./proof-node.js";
 import type { Proof } from "./proof.js";
 
 export interface ReportOptions {
@@ -119,7 +119,7 @@ export function generateTextReport(
     const flagged = methodNodes.filter(n => n.getCovStatus() === CovStatus.Uncovered || n.getCovStatus() === CovStatus.CovTest);
     if (flagged.length === 0) continue;
 
-    const byLine = new Map<number, Node[]>();
+    const byLine = new Map<number, ProofNode[]>();
     for (const n of flagged) {
       const l = n.start.line;
       if (!byLine.has(l)) byLine.set(l, []);

@@ -2,6 +2,7 @@
  * Browser entry point: attaches core API to window/global.
  */
 import { CovStatus, TokenType } from "./types.js";
+import { ProofNode } from "./proof-node.js";
 import { Proof, parseProof } from "./proof.js";
 import { generateSpansFragment, getDependsOn, getProvedBy, getProves } from "./rendering.js";
 
@@ -37,6 +38,22 @@ root.getProvedBy = function (key: string, proof: Proof): unknown {
 
 root.getProves = function (key: string, proof: Proof): unknown {
   return getProves(key, proof.proofGraph);
+};
+
+root.getUsageCount = function (key: string, proof: Proof): number {
+  return proof.proofGraph.getUsageCount(key);
+};
+
+root.getMethodContexts = function (key: string, proof: Proof): string[] {
+  return proof.proofGraph.getMethodContexts(key);
+};
+
+root.getConnections = function (key: string, proof: Proof): { node: ProofNode; depth: number }[] {
+  return proof.proofGraph.getConnections(key).map(n => ({ node: n, depth: 1 }));
+};
+
+root.getCalledBy = function (key: string, proof: Proof): { node: ProofNode; depth: number }[] {
+  return proof.proofGraph.getCalledBy(key).map(n => ({ node: n, depth: 1 }));
 };
 
 root.getSampleLog = function (): unknown {

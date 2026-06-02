@@ -25,15 +25,13 @@ export interface NodeData {
   file: string;
   start: SourceLocation;
   end: SourceLocation;
-  prooftext: string;
-  isTopAssertion: boolean;
+  prooftexts: string[];
+  roles: { isTop: boolean; isCall: boolean; isProvedBy: boolean; isUnused: boolean };
   type: TokenType;
   covStatus: CovStatus;
   covStatusInternal: CovStatus;
   methodName?: string;
   methodType?: string;
-  checkType?: string;
-  scope?: string[];
 }
 
 export interface DafnyResult {

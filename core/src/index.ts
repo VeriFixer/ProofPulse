@@ -1,6 +1,7 @@
 export { CovStatus, TokenType } from "./types.js";
 export type { SourceLocation, NodeData, DafnyResult, DafnyOptions } from "./types.js";
-export { Node, TopNode, CallNode, classifyNodeType } from "./node.js";
+export { ProofNode, classifyNodeType } from "./proof-node.js";
+export type { Roles, TopMeta } from "./proof-node.js";
 export { ProofGraph } from "./proof-graph.js";
 export { Proof, parseProof } from "./proof.js";
 export { applyCoverage, applyCoverageInternal, applyCoverageSemantic, computeLineStatus, getNodesByLine } from "./coverage.js";
@@ -12,5 +13,5 @@ export { generateTextReport } from "./report.js";
 export type { ReportOptions } from "./report.js";
 export { DafnyReportParser } from "./dafny_report_parser.js";
 export type { ParsedBatch } from "./dafny_report_parser.js";
-export { buildSpanTree, computeSpanTreeLineStatus, computeLineStatusFromTree, minStatus } from "./span-tree.js";
+export { buildSpanTree, computeSpanTreeLineStatus, computeLineStatusFromTree, minStatus, maxStatus } from "./span-tree.js";
 export type { SpanNode } from "./span-tree.js";

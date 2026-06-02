@@ -68,21 +68,34 @@ export function minStatus(a: CovStatus, b: CovStatus): CovStatus {
 }
 
 /**
+ * Best-case status: CovComplete > CovTest > Uncovered.
+ */
+export function maxStatus(a: CovStatus, b: CovStatus): CovStatus {
+  const order: Record<CovStatus, number> = {
+    [CovStatus.Uncovered]: 0,
+    [CovStatus.CovTest]: 1,
+    [CovStatus.CovComplete]: 2,
+  };
+  return order[a] >= order[b] ? a : b;
+}
+
+/**
  * Compute line status from tree roots.
- * Line status = min over root span composite statuses.
+ * Line status = best-case (max) over root span composite statuses.
  */
 export function computeLineStatusFromTree(roots: SpanNode[]): CovStatus {
   if (roots.length === 0) return CovStatus.CovComplete;
 
-  let result: CovStatus = CovStatus.CovComplete;
+  let result: CovStatus = CovStatus.Uncovered;
   for (const root of roots) {
-    result = minStatus(result, root.compositeStatus);
+    result = maxStatus(result, root.compositeStatus);
   }
   return result;
 }
 
 /**
  * Compute per-line coverage status using span-tree algorithm.
+ * Two-level: best-case within same span, worst-case across distinct spans.
  */
 export function computeSpanTreeLineStatus(
   graph: ProofGraph,
@@ -92,27 +105,32 @@ export function computeSpanTreeLineStatus(
   const lineCount = lines.length;
   const result: CovStatus[] = new Array(lineCount).fill(CovStatus.CovComplete);
 
-  const nodesByLine = new Map<number, Array<{ nodeId: string; startCol: number; endCol: number; compositeStatus: CovStatus }>>();
+  // Group by line → span key → best status
+  const lineSpans = new Map<number, Map<string, CovStatus>>();
 
   for (const node of graph.getAllNodes()) {
     const line = node.start.line;
     if (line < 1 || line > lineCount) continue;
-    if (!nodesByLine.has(line)) nodesByLine.set(line, []);
-    const existing = nodesByLine.get(line)!;
-    if (!existing.some((e) => e.nodeId === node.getId())) {
-      existing.push({
-        nodeId: node.getId(),
-        startCol: node.start.col,
-        endCol: node.end.col,
-        compositeStatus: node.getCovStatus(),
-      });
+    const spanKey = `${node.start.line},${node.start.col}-${node.end.line},${node.end.col}`;
+    const idx = line - 1;
+
+    if (!lineSpans.has(idx)) lineSpans.set(idx, new Map());
+    const spans = lineSpans.get(idx)!;
+    const existing = spans.get(spanKey);
+    if (existing === undefined) {
+      spans.set(spanKey, node.getCovStatus());
+    } else {
+      spans.set(spanKey, maxStatus(existing, node.getCovStatus()));
     }
   }
 
-  for (const [line, nodes] of nodesByLine) {
-    const roots = buildSpanTree(nodes);
-    const status = computeLineStatusFromTree(roots);
-    result[line - 1] = status;
+  // Worst-case across distinct spans
+  for (const [idx, spans] of lineSpans) {
+    let lineStatus: CovStatus = CovStatus.CovComplete;
+    for (const spanStatus of spans.values()) {
+      lineStatus = minStatus(lineStatus, spanStatus);
+    }
+    result[idx] = lineStatus;
   }
 
   return result;

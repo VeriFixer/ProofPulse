@@ -1,62 +1,54 @@
 import YAML from "js-yaml";
-import { Node, CallNode, TopNode } from "./node.js";
-import { NodeData, TokenType, CovStatus } from "./types.js";
-
-type ProofGraphYamlV1 = {
-  version: 1;
-  nodes: Array<
-    NodeData & {
-      assertionGroup?: string;
-      extras?: Record<string, unknown>;
-    }
-  >;
-  edges: {
-    tops: Array<{
-      id: string;
-      provedBy: string[];
-      proofUnused: string[];
-    }>;
-    calls: Array<{
-      id: string;
-      connections: string[];
-    }>;
-  };
-};
+import { ProofNode } from "./proof-node.js";
+import { CovStatus, SourceLocation } from "./types.js";
 
 export class ProofGraph {
-  private nodes: Map<string, Node> = new Map();
-  private topNodes: Set<TopNode> = new Set();
-  private callNodes: Set<CallNode> = new Set();
+  private nodes: Map<string, ProofNode> = new Map();
 
-  addNode(node: Node): void {
+  getOrCreate(
+    file: string,
+    start: SourceLocation,
+    end: SourceLocation,
+    methodName: string,
+    methodType: string,
+    prooftext: string,
+  ): ProofNode {
+    const temp = new ProofNode(file, start, end, methodName, methodType, prooftext);
+    const id = temp.getId();
+    const existing = this.nodes.get(id);
+    if (existing) {
+      existing.addProoftext(prooftext);
+      return existing;
+    }
+    this.nodes.set(id, temp);
+    return temp;
+  }
+
+  addNode(node: ProofNode): void {
     const id = node.getId();
-    if (this.nodes.has(id)) return;
-
-    this.nodes.set(id, node);
-    if (node instanceof TopNode) this.topNodes.add(node);
-    if (node instanceof CallNode) this.callNodes.add(node);
+    if (!this.nodes.has(id)) {
+      this.nodes.set(id, node);
+    }
   }
 
-  removeNode(id: string): boolean {
-    const node = this.nodes.get(id);
-    if (!node) return false;
-    this.nodes.delete(id);
-    if (node instanceof TopNode) this.topNodes.delete(node);
-    if (node instanceof CallNode) this.callNodes.delete(node);
-
-    for (const c of Array.from(this.callNodes)) {
-      c.connections.delete(node);
-    }
-
-    for (const t of Array.from(this.topNodes)) {
-      t.provedBy.delete(node);
-      t.proofUnused.delete(node);
-    }
-
-    return true;
+  addTopNode(node: ProofNode): void {
+    this.addNode(node);
+    node.addRole("isTop");
   }
 
-  getNode(id: string): Node | undefined {
+  getAllTopNodes(): ProofNode[] {
+    return Array.from(this.nodes.values()).filter((n) => n.roles.isTop);
+  }
+
+  getAllCallNodes(): ProofNode[] {
+    return Array.from(this.nodes.values()).filter((n) => n.roles.isCall);
+  }
+
+  getAllNodes(): ProofNode[] {
+    return Array.from(this.nodes.values());
+  }
+
+  getNode(id: string): ProofNode | undefined {
     return this.nodes.get(id);
   }
 
@@ -64,158 +56,218 @@ export class ProofGraph {
     return this.nodes.has(id);
   }
 
-  getAllNodes(): Node[] {
-    return Array.from(this.nodes.values());
-  }
-
-  getAllTopNodes(): TopNode[] {
-    return Array.from(this.topNodes);
-  }
-
-  getAllCallNodes(): CallNode[] {
-    return Array.from(this.callNodes);
-  }
-
-  findNodesByPredicate(pred: (n: Node) => boolean): Node[] {
-    return Array.from(this.nodes.values()).filter(pred);
-  }
-
-  addTopNode(top: TopNode): void {
-    this.addNode(top);
-  }
-
-  removeTopNode(id: string): boolean {
-    const node = this.getNode(id);
-    if (!node || !(node instanceof TopNode)) return false;
-    return this.removeNode(id);
-  }
-
-  connectCall(callId: string, targetId: string): boolean {
-    const call = this.getNode(callId);
-    const target = this.getNode(targetId);
-    if (!call || !(call instanceof CallNode) || !target) return false;
-    return call.addConnection(target);
-  }
-
   addProvedBy(topId: string, proverId: string): boolean {
-    const top = this.getNode(topId);
-    const prover = this.getNode(proverId);
-    if (!top || !(top instanceof TopNode) || !prover) return false;
+    if (topId === proverId) return false;
+    const top = this.nodes.get(topId);
+    const prover = this.nodes.get(proverId);
+    if (!top || !prover) return false;
     top.provedBy.add(prover);
     return true;
   }
 
   markProofUnused(topId: string, nodeId: string): boolean {
-    const top = this.getNode(topId);
-    const node = this.getNode(nodeId);
-    if (!top || !(top instanceof TopNode) || !node) return false;
+    const top = this.nodes.get(topId);
+    const node = this.nodes.get(nodeId);
+    if (!top || !node) return false;
     top.proofUnused.add(node);
     return true;
   }
 
+  connectCall(callId: string, targetId: string): boolean {
+    const call = this.nodes.get(callId);
+    const target = this.nodes.get(targetId);
+    if (!call || !target) return false;
+    call.connections.add(target);
+    return true;
+  }
+
+  removeNode(id: string): boolean {
+    const node = this.nodes.get(id);
+    if (!node) return false;
+    this.nodes.delete(id);
+
+    // Clean up references in other nodes' sets
+    for (const n of this.nodes.values()) {
+      n.provedBy.delete(node);
+      n.proofUnused.delete(node);
+      n.connections.delete(node);
+    }
+    return true;
+  }
+
+  findNodesByPredicate(pred: (n: ProofNode) => boolean): ProofNode[] {
+    return Array.from(this.nodes.values()).filter(pred);
+  }
+
+  /** Count how many top assertions reference this node as a prover. */
+  getUsageCount(nodeId: string): number {
+    const node = this.nodes.get(nodeId);
+    if (!node) return 0;
+    let count = 0;
+    for (const top of this.nodes.values()) {
+      if (top.provedBy.has(node)) count++;
+    }
+    return count;
+  }
+
+  /** Return distinct method|type contexts where the same file+span appears. */
+  getMethodContexts(nodeId: string): string[] {
+    const node = this.nodes.get(nodeId);
+    if (!node) return [];
+    const span = `${node.start.line},${node.start.col}-${node.end.line},${node.end.col}`;
+    const contexts: Set<string> = new Set();
+    for (const n of this.nodes.values()) {
+      if (n.file !== node.file) continue;
+      const nSpan = `${n.start.line},${n.start.col}-${n.end.line},${n.end.col}`;
+      if (nSpan === span) {
+        contexts.add(`${n.methodName}|${n.methodType}`);
+      }
+    }
+    return Array.from(contexts);
+  }
+
+  /** Count how many distinct top assertions this node proves. */
+  getTopAssertionCount(nodeId: string): number {
+    return this.getUsageCount(nodeId);
+  }
+
+  /** Return nodes this call node connects to (call targets). */
+  getConnections(nodeId: string): ProofNode[] {
+    const node = this.nodes.get(nodeId);
+    if (!node) return [];
+    return Array.from(node.connections);
+  }
+
+  /** Return call nodes that connect to this node (called by). */
+  getCalledBy(nodeId: string): ProofNode[] {
+    const node = this.nodes.get(nodeId);
+    if (!node) return [];
+    const result: ProofNode[] = [];
+    for (const n of this.nodes.values()) {
+      if (n.connections.has(node)) {
+        result.push(n);
+      }
+    }
+    return result;
+  }
+
   clear(): void {
     this.nodes.clear();
-    this.topNodes.clear();
-    this.callNodes.clear();
   }
 
   toYAML(): string {
-    const nodes: ProofGraphYamlV1["nodes"] = [];
-    for (const node of this.nodes.values()) {
-      const extras: Record<string, unknown> = {};
-      const maybeAny = node as any;
-      for (const k of ["batchIndex", "batchOutcome", "batchDuration", "batchResourceCount"]) {
-        if (maybeAny[k] !== undefined) extras[k] = maybeAny[k];
-      }
+    const nodes = Array.from(this.nodes.values()).map((node) => ({
+      locationId: node.locationId,
+      file: node.file,
+      start: node.start,
+      end: node.end,
+      methodName: node.methodName,
+      methodType: node.methodType,
+      prooftexts: node.prooftexts,
+      roles: { ...node.roles },
+      type: node.getType(),
+      topMeta: node.topMeta ?? null,
+      covStatus: node.covStatus,
+      covStatusInternal: node.covStatusInternal,
+    }));
 
-      nodes.push({
-        id: node.getId(),
-        file: node.file,
-        start: node.start,
-        end: node.end,
-        prooftext: node.prooftext,
-        isTopAssertion: node.isTopAssertion,
-        type: node.getType(),
-        covStatus: node.getCovStatus(),
-        covStatusInternal: node.getCovStatusInternal(),
-        methodName: node.assertion_group,
-        methodType: node.methodType,
-        assertionGroup: node.assertion_group,
-        extras: Object.keys(extras).length ? extras : undefined,
-      });
+    const edges: {
+      provedBy: Array<{ top: string; provers: string[] }>;
+      proofUnused: Array<{ top: string; unused: string[] }>;
+      connections: Array<{ call: string; targets: string[] }>;
+    } = { provedBy: [], proofUnused: [], connections: [] };
+
+    for (const node of this.nodes.values()) {
+      if (node.provedBy.size > 0) {
+        edges.provedBy.push({
+          top: node.locationId,
+          provers: Array.from(node.provedBy).map((n) => n.locationId),
+        });
+      }
+      if (node.proofUnused.size > 0) {
+        edges.proofUnused.push({
+          top: node.locationId,
+          unused: Array.from(node.proofUnused).map((n) => n.locationId),
+        });
+      }
+      if (node.connections.size > 0) {
+        edges.connections.push({
+          call: node.locationId,
+          targets: Array.from(node.connections).map((n) => n.locationId),
+        });
+      }
     }
 
-    const edges: ProofGraphYamlV1["edges"] = {
-      tops: Array.from(this.topNodes).map((t) => ({
-        id: t.getId(),
-        provedBy: Array.from(t.provedBy).map((n) => n.getId()),
-        proofUnused: Array.from(t.proofUnused).map((n) => n.getId()),
-      })),
-      calls: Array.from(this.callNodes).map((c) => ({
-        id: c.getId(),
-        connections: Array.from(c.connections).map((n) => n.getId()),
-      })),
-    };
-
-    const doc: ProofGraphYamlV1 = { version: 1, nodes, edges };
+    const doc = { version: 2, nodes, edges };
     return YAML.dump(doc);
   }
 
   fromYAML(yamlStr: string): void {
-    const data = YAML.load(yamlStr) as ProofGraphYamlV1;
-    if (!data) return;
-    if (typeof data !== "object" || Array.isArray(data) || (data as any).version !== 1) {
-      throw new Error("Unsupported YAML format: expected ProofGraphYamlV1 with version: 1");
+    const data = YAML.load(yamlStr) as any;
+    if (!data || typeof data !== "object" || data.version !== 2) {
+      throw new Error("Unsupported YAML version — only version 2 is supported");
     }
 
-    const list: Array<any> = data.nodes;
     this.clear();
 
-    const idMap = new Map<string, string>();
+    // Reconstruct nodes
+    for (const item of data.nodes) {
+      const node = new ProofNode(
+        item.file,
+        item.start,
+        item.end,
+        item.methodName,
+        item.methodType,
+        item.prooftexts[0] ?? "",
+      );
 
-    for (const item of list) {
-      const group = item.methodName ?? item.assertionGroup ?? "";
-      const methodType = item.methodType ?? (item.extras?.methodType as string | undefined) ?? "";
-      const isTop = !!item.isTopAssertion;
-      let node: Node;
-      if (isTop) {
-        node = new TopNode(item.file, item.start.line, item.start.col, item.end.line, item.end.col, item.prooftext, group, methodType);
-      } else if (item.type === TokenType.Call) {
-        node = new CallNode(item.file, item.start.line, item.start.col, item.end.line, item.end.col, item.prooftext, group, false, methodType);
-      } else {
-        node = new Node(item.file, item.start.line, item.start.col, item.end.line, item.end.col, item.prooftext, group, !!item.isTopAssertion, methodType);
+      // Add remaining prooftexts
+      for (let i = 1; i < item.prooftexts.length; i++) {
+        node.addProoftext(item.prooftexts[i]);
       }
 
-      if (item.extras && typeof item.extras === "object") {
-        Object.assign(node as any, item.extras);
+      // Restore roles
+      if (item.roles) {
+        if (item.roles.isTop) node.addRole("isTop");
+        if (item.roles.isCall) node.addRole("isCall");
+        if (item.roles.isProvedBy) node.addRole("isProvedBy");
+        if (item.roles.isUnused) node.addRole("isUnused");
       }
 
-      if (typeof item.id === "string") {
-        idMap.set(item.id, node.getId());
+      // Restore topMeta
+      if (item.topMeta) {
+        node.topMeta = item.topMeta;
       }
 
+      // Restore coverage status
       node.setCovStatus(item.covStatus ?? CovStatus.Uncovered);
       node.setCovStatusInternal(item.covStatusInternal ?? CovStatus.Uncovered);
 
       this.addNode(node);
     }
 
-    const resolveId = (id: string) => idMap.get(id) ?? id;
-
-    for (const topEdge of data.edges.tops) {
-      const topId = resolveId(topEdge.id);
-      for (const proverId of topEdge.provedBy) {
-        this.addProvedBy(topId, resolveId(proverId));
+    // Reconstruct edges
+    if (data.edges) {
+      if (data.edges.provedBy) {
+        for (const edge of data.edges.provedBy) {
+          for (const proverId of edge.provers) {
+            this.addProvedBy(edge.top, proverId);
+          }
+        }
       }
-      for (const unusedId of topEdge.proofUnused) {
-        this.markProofUnused(topId, resolveId(unusedId));
+      if (data.edges.proofUnused) {
+        for (const edge of data.edges.proofUnused) {
+          for (const unusedId of edge.unused) {
+            this.markProofUnused(edge.top, unusedId);
+          }
+        }
       }
-    }
-
-    for (const callEdge of data.edges.calls) {
-      const callId = resolveId(callEdge.id);
-      for (const conn of callEdge.connections ?? []) {
-        this.connectCall(callId, resolveId(conn));
+      if (data.edges.connections) {
+        for (const edge of data.edges.connections) {
+          for (const targetId of edge.targets) {
+            this.connectCall(edge.call, targetId);
+          }
+        }
       }
     }
   }
