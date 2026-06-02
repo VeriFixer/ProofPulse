@@ -299,7 +299,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9178
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
@@ -369,7 +369,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 5902
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_allocation.dfy|append|correctness|2,12-2,23
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
@@ -553,7 +553,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 8121
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
@@ -662,7 +662,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11608
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_allocation.dfy|append|correctness|25,3-25,19
 //::     file: snapshot_bug_allocation.dfy
 //::     start:

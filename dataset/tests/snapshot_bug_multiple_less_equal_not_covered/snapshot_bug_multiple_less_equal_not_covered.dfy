@@ -276,7 +276,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 10027
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|well-formedness|3,46-3,56
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -736,7 +736,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15413
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|well-formedness|5,44-5,50
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -856,7 +856,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15875
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|well-formedness|5,55-5,61
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -896,7 +896,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 17954
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|well-formedness|5,9-5,62
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -1189,8 +1189,8 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|8,14-8,14
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -1244,7 +1244,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11302
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|9,29-9,31
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -1458,8 +1458,8 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchIndex: 15
 //::       batchOutcome: Valid
 //::       batchResourceCount: 17030
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|10,19-10,41
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -1728,7 +1728,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15170
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|11,46-11,65
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -1782,7 +1782,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16069
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|11,70-11,70
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -1944,7 +1944,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15931
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|11,19-11,76
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -2191,7 +2191,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15985
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|13,22-13,22
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -2353,7 +2353,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16803
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|15,13-15,32
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -2402,8 +2402,8 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|18,25-18,25
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -2511,7 +2511,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15080
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|18,25-18,44
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -2565,7 +2565,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15784
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|18,5-18,45
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -2955,7 +2955,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 10027
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|well-formedness|25,46-25,56
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -3415,7 +3415,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15413
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|well-formedness|27,44-27,50
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -3535,7 +3535,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15875
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|well-formedness|27,55-27,61
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -3575,7 +3575,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 17954
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|well-formedness|27,9-27,62
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -3868,8 +3868,8 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|30,14-30,14
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -3923,7 +3923,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11302
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|31,19-31,24
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -4145,8 +4145,8 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchIndex: 15
 //::       batchOutcome: Valid
 //::       batchResourceCount: 17030
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|33,19-33,41
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -4415,7 +4415,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15053
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|34,46-34,65
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -4469,7 +4469,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15954
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|34,70-34,70
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -4631,7 +4631,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15835
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|34,19-34,76
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -4878,7 +4878,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15985
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|36,22-36,22
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -5040,7 +5040,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16803
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|38,13-38,32
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -5089,8 +5089,8 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|41,25-41,25
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -5198,7 +5198,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15080
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|41,25-41,44
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy
@@ -5252,7 +5252,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15784
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|41,5-41,45
 //::     file: snapshot_bug_multiple_less_equal_not_covered.dfy

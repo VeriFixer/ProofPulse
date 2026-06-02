@@ -532,7 +532,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14806
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_complex_13.dfy|RowColumnProductFrom|well-formedness|13,47-13,50
 //::     file: snapshot_test_complex_13.dfy
@@ -1234,7 +1234,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 8917
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_complex_13.dfy|RowColumnProductFrom|well-formedness|20,16-20,16
 //::     file: snapshot_test_complex_13.dfy
@@ -1384,7 +1384,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12514
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_complex_13.dfy|RowColumnProductFrom|well-formedness|20,24-20,24
 //::     file: snapshot_test_complex_13.dfy
@@ -1434,7 +1434,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12614
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_complex_13.dfy|RowColumnProductFrom|well-formedness|20,76-20,78
 //::     file: snapshot_test_complex_13.dfy
@@ -1742,7 +1742,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 19693
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_complex_13.dfy|RowColumnProductFrom|well-formedness|20,9-20,79
 //::     file: snapshot_test_complex_13.dfy
@@ -2612,7 +2612,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12208
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|well-formedness|28,15-28,15
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -2696,7 +2696,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13154
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|well-formedness|28,49-28,49
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -2738,7 +2738,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13356
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|well-formedness|28,21-28,50
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -2856,7 +2856,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13519
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|well-formedness|28,9-28,50
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -6331,7 +6331,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 21233
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|35,16-35,16
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -6491,7 +6491,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 22434
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|35,19-35,19
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -6651,7 +6651,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 22610
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|35,51-35,51
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -7679,7 +7679,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 22954
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -8565,8 +8565,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -9042,8 +9042,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchIndex: 46
 //::       batchOutcome: Valid
 //::       batchResourceCount: 39789
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|40,28-40,36
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -9932,7 +9932,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 28426
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|42,20-42,20
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -10092,7 +10092,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 29742
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|42,23-42,23
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -10252,7 +10252,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 30304
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|42,55-42,55
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -11280,7 +11280,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 30434
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|41,23-42,61
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -12145,7 +12145,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 32210
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|44,20-44,20
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -12305,7 +12305,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 32500
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|44,22-44,22
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -12465,7 +12465,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 34744
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|44,54-44,54
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -12625,7 +12625,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 32930
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|44,57-44,57
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -13493,7 +13493,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 35223
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -13789,8 +13789,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchIndex: 49
 //::       batchOutcome: Valid
 //::       batchResourceCount: 130406
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -14379,8 +14379,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -16196,8 +16196,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchIndex: 39
 //::       batchOutcome: Valid
 //::       batchResourceCount: 42276
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|49,32-49,40
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -16357,8 +16357,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchIndex: 40
 //::       batchOutcome: Valid
 //::       batchResourceCount: 42378
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|50,68-50,71
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -17086,7 +17086,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 36473
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|51,24-51,24
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -17246,7 +17246,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 39767
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|51,27-51,27
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -17406,7 +17406,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 40107
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|51,59-51,59
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -18434,7 +18434,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 40569
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|50,27-51,65
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -19300,7 +19300,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 40230
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|53,24-53,24
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -19460,7 +19460,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 40306
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|53,26-53,26
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -19620,7 +19620,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 46888
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|53,58-53,58
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -20648,7 +20648,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 45421
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|52,27-53,63
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -21974,7 +21974,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 42729
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,21-55,21
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -22542,7 +22542,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 42748
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,24-55,24
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -22702,7 +22702,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 42806
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,26-55,26
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -22862,7 +22862,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 42816
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,60-55,60
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -23022,7 +23022,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 46481
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,63-55,63
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -23182,7 +23182,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 46619
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,66-55,66
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -23342,7 +23342,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 46293
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -24187,7 +24187,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 43140
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -25487,7 +25487,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 37532
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -25647,7 +25647,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 37617
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -25807,7 +25807,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 37694
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,23
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -25967,7 +25967,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 37791
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,28-57,28
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -26535,7 +26535,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 37888
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,31-57,31
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -26695,7 +26695,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 37997
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,33-57,33
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -26855,7 +26855,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 38098
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,38-57,38
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -27655,7 +27655,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 38777
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,53-57,53
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -28106,8 +28106,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|58,17-58,25
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -28423,7 +28423,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 39909
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|61,13-61,21
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -28739,7 +28739,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 37846
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|63,9-63,17
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -29055,7 +29055,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 29039
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|65,1-65,1
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -29504,8 +29504,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isUnused: false
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|10,1-21,1
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -29526,8 +29526,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isUnused: false
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //:: edges:
 //::   provedBy:
 //::     - top: snapshot_test_complex_13.dfy|RowColumnProduct|well-formedness|7,5-7,48

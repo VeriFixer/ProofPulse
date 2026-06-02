@@ -972,8 +972,8 @@ method testingMethod() {
 //::       batchIndex: 5
 //::       batchOutcome: Valid
 //::       batchResourceCount: 33603
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21
 //::     file: snapshot_bug_big_file_prime_db.dfy
@@ -3073,8 +3073,8 @@ method testingMethod() {
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
@@ -3279,8 +3279,8 @@ method testingMethod() {
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17
 //::     file: snapshot_bug_big_file_prime_db.dfy
@@ -3500,8 +3500,8 @@ method testingMethod() {
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
 //::     file: snapshot_bug_big_file_prime_db.dfy
@@ -5005,8 +5005,8 @@ method testingMethod() {
 //::       batchIndex: 12
 //::       batchOutcome: Valid
 //::       batchResourceCount: 207454
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -5509,8 +5509,8 @@ method testingMethod() {
 //::       batchIndex: 18
 //::       batchOutcome: Valid
 //::       batchResourceCount: 39339
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -6013,8 +6013,8 @@ method testingMethod() {
 //::       batchIndex: 24
 //::       batchOutcome: Valid
 //::       batchResourceCount: 42624
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -6286,7 +6286,7 @@ method testingMethod() {
 //::       batchOutcome: Valid
 //::       batchResourceCount: 44949
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -6366,8 +6366,8 @@ method testingMethod() {
 //::       batchIndex: 26
 //::       batchOutcome: Valid
 //::       batchResourceCount: 374386
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -6619,7 +6619,7 @@ method testingMethod() {
 //::       batchOutcome: Valid
 //::       batchResourceCount: 45103
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -6700,7 +6700,7 @@ method testingMethod() {
 //::       batchOutcome: Valid
 //::       batchResourceCount: 45208
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -6936,8 +6936,8 @@ method testingMethod() {
 //::       batchIndex: 32
 //::       batchOutcome: Valid
 //::       batchResourceCount: 46302
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -7017,8 +7017,8 @@ method testingMethod() {
 //::       batchIndex: 33
 //::       batchOutcome: Valid
 //::       batchResourceCount: 1251902
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -7270,7 +7270,7 @@ method testingMethod() {
 //::       batchOutcome: Valid
 //::       batchResourceCount: 51329
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -7351,7 +7351,7 @@ method testingMethod() {
 //::       batchOutcome: Valid
 //::       batchResourceCount: 51416
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -7584,8 +7584,8 @@ method testingMethod() {
 //::       batchIndex: 39
 //::       batchOutcome: Valid
 //::       batchResourceCount: 52735
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -7665,8 +7665,8 @@ method testingMethod() {
 //::       batchIndex: 40
 //::       batchOutcome: Valid
 //::       batchResourceCount: 113408
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -7918,7 +7918,7 @@ method testingMethod() {
 //::       batchOutcome: Valid
 //::       batchResourceCount: 55224
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -8226,8 +8226,8 @@ method testingMethod() {
 //::       batchIndex: 46
 //::       batchOutcome: Valid
 //::       batchResourceCount: 56978
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -8307,8 +8307,8 @@ method testingMethod() {
 //::       batchIndex: 47
 //::       batchOutcome: Valid
 //::       batchResourceCount: 281423
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -8560,7 +8560,7 @@ method testingMethod() {
 //::       batchOutcome: Valid
 //::       batchResourceCount: 59336
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -8641,7 +8641,7 @@ method testingMethod() {
 //::       batchOutcome: Valid
 //::       batchResourceCount: 59721
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -8853,8 +8853,8 @@ method testingMethod() {
 //::       batchIndex: 53
 //::       batchOutcome: Valid
 //::       batchResourceCount: 60989
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -8934,8 +8934,8 @@ method testingMethod() {
 //::       batchIndex: 54
 //::       batchOutcome: Valid
 //::       batchResourceCount: 100561
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|22,3-26,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -8986,8 +8986,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Precondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|32,14-32,21
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9008,8 +9008,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Precondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|39,3-48,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9042,8 +9042,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Precondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|23,13-23,29
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9085,8 +9085,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|33,13-33,43
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9107,8 +9107,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|41,13-41,53
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9130,8 +9130,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9174,8 +9174,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Precondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|2,1-4,52
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9226,8 +9226,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|54,15-54,58
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9249,8 +9249,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|55,15-55,59
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9271,8 +9271,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|56,15-56,47
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9292,8 +9292,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|42,13-42,57
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9314,8 +9314,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|43,13-43,59
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
@@ -9335,8 +9335,8 @@ method testingMethod() {
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|15,3-19,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:

@@ -52,7 +52,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6409
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16
 //::     file: snapshot_test_assert_cov_complete.dfy
@@ -138,8 +138,8 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18
 //::     file: snapshot_test_assert_cov_complete.dfy

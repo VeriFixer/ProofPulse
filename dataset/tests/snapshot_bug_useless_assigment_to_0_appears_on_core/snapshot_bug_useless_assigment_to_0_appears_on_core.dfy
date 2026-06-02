@@ -258,7 +258,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9363
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_useless_assigment_to_0_appears_on_core.dfy|zeroVector|well-formedness|3,50-3,59
 //::     file: snapshot_bug_useless_assigment_to_0_appears_on_core.dfy
@@ -532,8 +532,8 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_useless_assigment_to_0_appears_on_core.dfy|zeroVector|correctness|6,5-6,28
 //::     file: snapshot_bug_useless_assigment_to_0_appears_on_core.dfy
@@ -614,8 +614,8 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_useless_assigment_to_0_appears_on_core.dfy|zeroVector|correctness|9,19-9,24
 //::     file: snapshot_bug_useless_assigment_to_0_appears_on_core.dfy
@@ -897,7 +897,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13874
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_useless_assigment_to_0_appears_on_core.dfy|zeroVector|correctness|11,49-11,53
 //::     file: snapshot_bug_useless_assigment_to_0_appears_on_core.dfy
@@ -942,7 +942,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14432
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_useless_assigment_to_0_appears_on_core.dfy|zeroVector|correctness|11,19-11,58
 //::     file: snapshot_bug_useless_assigment_to_0_appears_on_core.dfy
@@ -1201,7 +1201,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14348
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_useless_assigment_to_0_appears_on_core.dfy|zeroVector|correctness|13,9-13,13
 //::     file: snapshot_bug_useless_assigment_to_0_appears_on_core.dfy
@@ -1267,7 +1267,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14868
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_useless_assigment_to_0_appears_on_core.dfy|zeroVector|correctness|13,9-13,19
 //::     file: snapshot_bug_useless_assigment_to_0_appears_on_core.dfy
@@ -1327,8 +1327,8 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_useless_assigment_to_0_appears_on_core.dfy|zeroVector|correctness|14,9-14,19
 //::     file: snapshot_bug_useless_assigment_to_0_appears_on_core.dfy
@@ -1414,7 +1414,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15574
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_useless_assigment_to_0_appears_on_core.dfy|zeroVector|correctness|16,1-16,1
 //::     file: snapshot_bug_useless_assigment_to_0_appears_on_core.dfy

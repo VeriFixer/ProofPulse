@@ -17,80 +17,6 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //:: method Graph:
 //:: version: 2
 //:: nodes:
-//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 2
-//::       col: 12
-//::     end:
-//::       line: 2
-//::       col: 12
-//::     methodName: append
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 6742
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 2
-//::       col: 27
-//::     end:
-//::       line: 2
-//::       col: 27
-//::     methodName: append
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 2
-//::       batchOutcome: Valid
-//::       batchResourceCount: 6861
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 2
-//::       col: 12
-//::     end:
-//::       line: 2
-//::       col: 31
-//::     methodName: append
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -336,8 +262,8 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -672,7 +598,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14196
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -723,7 +649,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14772
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -825,7 +751,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14628
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -1144,7 +1070,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14586
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -1223,7 +1149,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15035
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -1398,8 +1324,8 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -1497,7 +1423,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15955
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -1629,7 +1555,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14301
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -1759,7 +1685,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14978
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -1935,6 +1861,80 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
+//::     file: snapshot_test_lurking_axioms.dfy
+//::     start:
+//::       line: 2
+//::       col: 12
+//::     end:
+//::       line: 2
+//::       col: 12
+//::     methodName: append
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6742
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
+//::     file: snapshot_test_lurking_axioms.dfy
+//::     start:
+//::       line: 2
+//::       col: 27
+//::     end:
+//::       line: 2
+//::       col: 27
+//::     methodName: append
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6861
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
+//::     file: snapshot_test_lurking_axioms.dfy
+//::     start:
+//::       line: 2
+//::       col: 12
+//::     end:
+//::       line: 2
+//::       col: 31
+//::     methodName: append
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy:
 //::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
@@ -1982,14 +1982,6 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       provers:
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
 //::   proofUnused:
-//::     - top: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
-//::       unused:
-//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
-//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
-//::     - top: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
-//::       unused:
-//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
-//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
 //::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
 //::       unused:
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
@@ -2546,5 +2538,13 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
+//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
+//::     - top: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
+//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
 //::   connections: []
 //::

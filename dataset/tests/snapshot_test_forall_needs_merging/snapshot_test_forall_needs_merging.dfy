@@ -166,8 +166,8 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_test_forall_needs_merging.dfy|SplitStringIntoChars|correctness|8,20-8,20
 //::     file: snapshot_test_forall_needs_merging.dfy
@@ -400,7 +400,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9479
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_forall_needs_merging.dfy|SplitStringIntoChars|correctness|9,54-9,57
 //::     file: snapshot_test_forall_needs_merging.dfy
@@ -636,8 +636,8 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_test_forall_needs_merging.dfy|SplitStringIntoChars|correctness|13,1-13,1
 //::     file: snapshot_test_forall_needs_merging.dfy
@@ -806,7 +806,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 8821
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_forall_needs_merging.dfy|SplitStringIntoChars|well-formedness|3,42-3,53
 //::     file: snapshot_test_forall_needs_merging.dfy

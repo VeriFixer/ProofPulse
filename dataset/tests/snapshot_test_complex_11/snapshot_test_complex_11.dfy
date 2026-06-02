@@ -43,6 +43,201 @@ function Max(a: seq<int>) : (m: int)
 //:: method Graph:
 //:: version: 2
 //:: nodes:
+//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
+//::     file: snapshot_test_complex_11.dfy
+//::     start:
+//::       line: 2
+//::       col: 14
+//::     end:
+//::       line: 2
+//::       col: 16
+//::     methodName: DifferenceMinMax
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4844
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
+//::     file: snapshot_test_complex_11.dfy
+//::     start:
+//::       line: 2
+//::       col: 14
+//::     end:
+//::       line: 2
+//::       col: 25
+//::     methodName: DifferenceMinMax
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
+//::     file: snapshot_test_complex_11.dfy
+//::     start:
+//::       line: 3
+//::       col: 26
+//::     end:
+//::       line: 3
+//::       col: 26
+//::     methodName: DifferenceMinMax
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6993
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
+//::     file: snapshot_test_complex_11.dfy
+//::     start:
+//::       line: 3
+//::       col: 22
+//::     end:
+//::       line: 3
+//::       col: 31
+//::     methodName: DifferenceMinMax
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - function precondition satisfied
+//::       - function precondition satisfied
+//::       - function precondition satisfied
+//::       - function precondition satisfied
+//::       - function precondition satisfied
+//::       - function precondition satisfied
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12680
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
+//::     file: snapshot_test_complex_11.dfy
+//::     start:
+//::       line: 3
+//::       col: 39
+//::     end:
+//::       line: 3
+//::       col: 39
+//::     methodName: DifferenceMinMax
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12832
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
+//::     file: snapshot_test_complex_11.dfy
+//::     start:
+//::       line: 3
+//::       col: 35
+//::     end:
+//::       line: 3
+//::       col: 44
+//::     methodName: DifferenceMinMax
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - function precondition satisfied
+//::       - function precondition satisfied
+//::       - function precondition satisfied
+//::       - function precondition satisfied
+//::       - function precondition satisfied
+//::       - function precondition satisfied
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13000
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
+//::     file: snapshot_test_complex_11.dfy
+//::     start:
+//::       line: 3
+//::       col: 13
+//::     end:
+//::       line: 3
+//::       col: 45
+//::     methodName: DifferenceMinMax
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|5,19-5,19
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -398,8 +593,8 @@ function Max(a: seq<int>) : (m: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|6,19-6,19
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -545,7 +740,7 @@ function Max(a: seq<int>) : (m: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 8804
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|6,9-6,23
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -613,8 +808,8 @@ function Max(a: seq<int>) : (m: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|7,19-7,21
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -975,8 +1170,8 @@ function Max(a: seq<int>) : (m: int)
 //::       batchIndex: 23
 //::       batchOutcome: Valid
 //::       batchResourceCount: 26475
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|8,24-8,31
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -1175,8 +1370,8 @@ function Max(a: seq<int>) : (m: int)
 //::       batchIndex: 25
 //::       batchOutcome: Valid
 //::       batchResourceCount: 28754
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|10,56-10,56
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -1811,7 +2006,7 @@ function Max(a: seq<int>) : (m: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 25165
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|11,19-11,39
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -2638,8 +2833,8 @@ function Max(a: seq<int>) : (m: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,19
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -2999,8 +3194,8 @@ function Max(a: seq<int>) : (m: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -3437,8 +3632,8 @@ function Max(a: seq<int>) : (m: int)
 //::       batchIndex: 22
 //::       batchOutcome: Valid
 //::       batchResourceCount: 31295
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|21,12-21,12
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -4061,8 +4256,8 @@ function Max(a: seq<int>) : (m: int)
 //::       isUnused: false
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|34,1-41,1
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -4083,203 +4278,8 @@ function Max(a: seq<int>) : (m: int)
 //::       isUnused: false
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
-//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
-//::     file: snapshot_test_complex_11.dfy
-//::     start:
-//::       line: 2
-//::       col: 14
-//::     end:
-//::       line: 2
-//::       col: 16
-//::     methodName: DifferenceMinMax
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 4844
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
-//::     file: snapshot_test_complex_11.dfy
-//::     start:
-//::       line: 2
-//::       col: 14
-//::     end:
-//::       line: 2
-//::       col: 25
-//::     methodName: DifferenceMinMax
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::       - method requires clause
-//::       - method requires clause
-//::       - method requires clause
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
-//::     file: snapshot_test_complex_11.dfy
-//::     start:
-//::       line: 3
-//::       col: 26
-//::     end:
-//::       line: 3
-//::       col: 26
-//::     methodName: DifferenceMinMax
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 2
-//::       batchOutcome: Valid
-//::       batchResourceCount: 6993
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
-//::     file: snapshot_test_complex_11.dfy
-//::     start:
-//::       line: 3
-//::       col: 22
-//::     end:
-//::       line: 3
-//::       col: 31
-//::     methodName: DifferenceMinMax
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - function precondition satisfied
-//::       - function precondition satisfied
-//::       - function precondition satisfied
-//::       - function precondition satisfied
-//::       - function precondition satisfied
-//::       - function precondition satisfied
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 3
-//::       batchOutcome: Valid
-//::       batchResourceCount: 12680
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
-//::     file: snapshot_test_complex_11.dfy
-//::     start:
-//::       line: 3
-//::       col: 39
-//::     end:
-//::       line: 3
-//::       col: 39
-//::     methodName: DifferenceMinMax
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 4
-//::       batchOutcome: Valid
-//::       batchResourceCount: 12832
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
-//::     file: snapshot_test_complex_11.dfy
-//::     start:
-//::       line: 3
-//::       col: 35
-//::     end:
-//::       line: 3
-//::       col: 44
-//::     methodName: DifferenceMinMax
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - function precondition satisfied
-//::       - function precondition satisfied
-//::       - function precondition satisfied
-//::       - function precondition satisfied
-//::       - function precondition satisfied
-//::       - function precondition satisfied
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 5
-//::       batchOutcome: Valid
-//::       batchResourceCount: 13000
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
-//::     file: snapshot_test_complex_11.dfy
-//::     start:
-//::       line: 3
-//::       col: 13
-//::     end:
-//::       line: 3
-//::       col: 45
-//::     methodName: DifferenceMinMax
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|Min|well-formedness|28,22-28,25
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -4452,7 +4452,7 @@ function Max(a: seq<int>) : (m: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 8039
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_11.dfy|Min|well-formedness|30,11-30,11
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -4508,7 +4508,7 @@ function Max(a: seq<int>) : (m: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9893
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_11.dfy|Min|well-formedness|31,37-31,44
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -4544,7 +4544,7 @@ function Max(a: seq<int>) : (m: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 10185
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_11.dfy|Min|well-formedness|31,51-31,51
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -4743,7 +4743,7 @@ function Max(a: seq<int>) : (m: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 8039
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_11.dfy|Max|well-formedness|39,11-39,11
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -4799,7 +4799,7 @@ function Max(a: seq<int>) : (m: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9893
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_11.dfy|Max|well-formedness|40,37-40,44
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -4835,7 +4835,7 @@ function Max(a: seq<int>) : (m: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 10185
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_11.dfy|Max|well-formedness|40,51-40,51
 //::     file: snapshot_test_complex_11.dfy
 //::     start:
@@ -4864,6 +4864,10 @@ function Max(a: seq<int>) : (m: int)
 //::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy:
+//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
+//::       provers:
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
 //::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|3,13-3,45
 //::       provers:
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|11,19-11,39
@@ -4924,10 +4928,6 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|10,19-10,72
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,9-19,39
-//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
-//::       provers:
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
 //::     - top: snapshot_test_complex_11.dfy|Min|well-formedness|30,28-30,37
 //::       provers:
 //::         - snapshot_test_complex_11.dfy|Min|well-formedness|26,14-26,20
@@ -4953,6 +4953,74 @@ function Max(a: seq<int>) : (m: int)
 //::       provers:
 //::         - snapshot_test_complex_11.dfy|Max|well-formedness|39,28-39,37
 //::   proofUnused:
+//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
+//::       unused:
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
+//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
+//::       unused:
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
+//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
+//::       unused:
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
+//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
+//::       unused:
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
+//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
+//::       unused:
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
+//::         - >-
+//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
 //::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|5,19-5,19
 //::       unused:
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|2,14-2,25
@@ -7187,74 +7255,6 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|21,29-21,29
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|22,5-22,28
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|23,1-23,1
-//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
-//::       unused:
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
-//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
-//::       unused:
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
-//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
-//::       unused:
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
-//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
-//::       unused:
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
-//::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,35-3,44
-//::       unused:
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,16
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|2,14-2,25
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,26-3,26
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,22-3,31
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,39-3,39
-//::         - >-
-//::           snapshot_test_complex_11.dfy|DifferenceMinMax|well-formedness|3,13-3,45
 //::     - top: snapshot_test_complex_11.dfy|Min|well-formedness|28,22-28,25
 //::       unused:
 //::         - snapshot_test_complex_11.dfy|Min|well-formedness|26,14-26,20

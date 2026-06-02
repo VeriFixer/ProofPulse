@@ -20,472 +20,6 @@ method AllElementsEqual(a: array<int>, n: int) returns (result: bool)
 //:: method Graph:
 //:: version: 2
 //:: nodes:
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 4
-//::       col: 58
-//::     end:
-//::       line: 4
-//::       col: 58
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 12756
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 2
-//::       col: 14
-//::     end:
-//::       line: 2
-//::       col: 19
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::       - method requires clause
-//::       - method requires clause
-//::       - method requires clause
-//::       - method requires clause
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 3
-//::       col: 13
-//::     end:
-//::       line: 3
-//::       col: 13
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 3
-//::       col: 45
-//::     end:
-//::       line: 3
-//::       col: 47
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 6
-//::       batchOutcome: Valid
-//::       batchResourceCount: 6850
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 3
-//::       col: 36
-//::     end:
-//::       line: 3
-//::       col: 47
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 3
-//::       col: 58
-//::     end:
-//::       line: 3
-//::       col: 58
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 4
-//::       batchOutcome: Valid
-//::       batchResourceCount: 8090
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 3
-//::       col: 58
-//::     end:
-//::       line: 3
-//::       col: 61
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 5
-//::       batchOutcome: Valid
-//::       batchResourceCount: 8415
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 3
-//::       col: 58
-//::     end:
-//::       line: 3
-//::       col: 66
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 3
-//::       col: 36
-//::     end:
-//::       line: 3
-//::       col: 66
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 3
-//::       col: 24
-//::     end:
-//::       line: 3
-//::       col: 66
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 3
-//::       col: 13
-//::     end:
-//::       line: 3
-//::       col: 66
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 4
-//::       col: 13
-//::     end:
-//::       line: 4
-//::       col: 14
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 4
-//::       col: 46
-//::     end:
-//::       line: 4
-//::       col: 48
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 3
-//::       batchOutcome: Valid
-//::       batchResourceCount: 12232
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 4
-//::       col: 37
-//::     end:
-//::       line: 4
-//::       col: 48
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 4
-//::       col: 58
-//::     end:
-//::       line: 4
-//::       col: 61
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 2
-//::       batchOutcome: Valid
-//::       batchResourceCount: 13128
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 4
-//::       col: 58
-//::     end:
-//::       line: 4
-//::       col: 66
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
-//::     file: snapshot_bug_forall.dfy
-//::     start:
-//::       line: 4
-//::       col: 13
-//::     end:
-//::       line: 4
-//::       col: 66
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|correctness|7,19-7,21
 //::     file: snapshot_bug_forall.dfy
 //::     start:
@@ -1263,14 +797,474 @@ method AllElementsEqual(a: array<int>, n: int) returns (result: bool)
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 4
+//::       col: 58
+//::     end:
+//::       line: 4
+//::       col: 58
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12756
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 2
+//::       col: 14
+//::     end:
+//::       line: 2
+//::       col: 19
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 3
+//::       col: 13
+//::     end:
+//::       line: 3
+//::       col: 13
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 3
+//::       col: 45
+//::     end:
+//::       line: 3
+//::       col: 47
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6850
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 3
+//::       col: 36
+//::     end:
+//::       line: 3
+//::       col: 47
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 3
+//::       col: 58
+//::     end:
+//::       line: 3
+//::       col: 58
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8090
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 3
+//::       col: 58
+//::     end:
+//::       line: 3
+//::       col: 61
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8415
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 3
+//::       col: 58
+//::     end:
+//::       line: 3
+//::       col: 66
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 3
+//::       col: 36
+//::     end:
+//::       line: 3
+//::       col: 66
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 3
+//::       col: 24
+//::     end:
+//::       line: 3
+//::       col: 66
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 3
+//::       col: 13
+//::     end:
+//::       line: 3
+//::       col: 66
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 4
+//::       col: 13
+//::     end:
+//::       line: 4
+//::       col: 14
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 4
+//::       col: 46
+//::     end:
+//::       line: 4
+//::       col: 48
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12232
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 4
+//::       col: 37
+//::     end:
+//::       line: 4
+//::       col: 48
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 4
+//::       col: 58
+//::     end:
+//::       line: 4
+//::       col: 61
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13128
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 4
+//::       col: 58
+//::     end:
+//::       line: 4
+//::       col: 66
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     file: snapshot_bug_forall.dfy
+//::     start:
+//::       line: 4
+//::       col: 13
+//::     end:
+//::       line: 4
+//::       col: 66
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy:
-//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
-//::       provers:
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
-//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
-//::       provers:
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
 //::     - top: snapshot_bug_forall.dfy|AllElementsEqual|correctness|3,24-3,66
 //::       provers:
 //::         - snapshot_bug_forall.dfy|AllElementsEqual|correctness|9,30-9,65
@@ -1281,113 +1275,13 @@ method AllElementsEqual(a: array<int>, n: int) returns (result: bool)
 //::     - top: snapshot_bug_forall.dfy|AllElementsEqual|correctness|8,24-8,31
 //::       provers:
 //::         - snapshot_bug_forall.dfy|AllElementsEqual|correctness|7,14-7,14
-//::   proofUnused:
-//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
-//::       unused:
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
-//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
-//::       unused:
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
-//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
-//::       unused:
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
 //::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
-//::       unused:
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
-//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
-//::       unused:
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
+//::       provers:
 //::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
 //::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
-//::       unused:
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
-//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::       provers:
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
+//::   proofUnused:
 //::     - top: snapshot_bug_forall.dfy|AllElementsEqual|correctness|7,19-7,21
 //::       unused:
 //::         - snapshot_bug_forall.dfy|AllElementsEqual|correctness|2,14-2,19
@@ -1625,5 +1519,111 @@ method AllElementsEqual(a: array<int>, n: int) returns (result: bool)
 //::         - snapshot_bug_forall.dfy|AllElementsEqual|correctness|11,12-11,12
 //::         - snapshot_bug_forall.dfy|AllElementsEqual|correctness|12,13-12,28
 //::         - snapshot_bug_forall.dfy|AllElementsEqual|correctness|16,1-16,1
+//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
+//::       unused:
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
+//::       unused:
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
+//::       unused:
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
+//::       unused:
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
+//::       unused:
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,37-4,48
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,61
+//::       unused:
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|2,14-2,19
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,13
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,45-3,47
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,47
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,58
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,61
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,58-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,36-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,24-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|3,13-3,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,14
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,46-4,48
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,58
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,58-4,66
+//::         - snapshot_bug_forall.dfy|AllElementsEqual|well-formedness|4,13-4,66
 //::   connections: []
 //::

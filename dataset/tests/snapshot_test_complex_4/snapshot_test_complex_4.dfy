@@ -302,124 +302,6 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 57
-//::     end:
-//::       line: 33
-//::       col: 59
-//::     methodName: Swap
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 6734
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 14
-//::     end:
-//::       line: 33
-//::       col: 19
-//::     methodName: Swap
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: false
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 36
-//::     end:
-//::       line: 33
-//::       col: 38
-//::     methodName: Swap
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 2
-//::       batchOutcome: Valid
-//::       batchResourceCount: 5401
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 27
-//::     end:
-//::       line: 33
-//::       col: 38
-//::     methodName: Swap
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 48
-//::     end:
-//::       line: 33
-//::       col: 59
-//::     methodName: Swap
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -455,7 +337,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6601
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -719,7 +601,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9077
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -768,7 +650,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9789
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -804,7 +686,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9371
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -920,7 +802,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 10975
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -969,7 +851,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12018
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -1005,7 +887,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11269
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -1041,7 +923,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11358
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -1083,6 +965,124 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 33
+//::       col: 57
+//::     end:
+//::       line: 33
+//::       col: 59
+//::     methodName: Swap
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6734
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 33
+//::       col: 14
+//::     end:
+//::       line: 33
+//::       col: 19
+//::     methodName: Swap
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 33
+//::       col: 36
+//::     end:
+//::       line: 33
+//::       col: 38
+//::     methodName: Swap
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5401
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 33
+//::       col: 27
+//::     end:
+//::       line: 33
+//::       col: 38
+//::     methodName: Swap
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 33
+//::       col: 48
+//::     end:
+//::       line: 33
+//::       col: 59
+//::     methodName: Swap
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -1325,7 +1325,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 3257
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -1853,7 +1853,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 10534
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -2260,8 +2260,8 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -2516,7 +2516,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14376
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -2566,7 +2566,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14957
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -2666,7 +2666,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14758
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -2766,7 +2766,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15059
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -3076,7 +3076,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15171
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -3153,7 +3153,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15727
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -3353,7 +3353,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16090
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -3424,8 +3424,8 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -3521,7 +3521,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 17078
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -3825,7 +3825,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 5329
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,75
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -4198,8 +4198,8 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -4658,7 +4658,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12035
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -4752,7 +4752,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12144
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -5309,7 +5309,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13828
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -5558,8 +5558,8 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -5863,7 +5863,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6951
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -6216,7 +6216,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9737
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -6653,8 +6653,8 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -6989,7 +6989,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14155
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -7040,7 +7040,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14741
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -7193,7 +7193,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14601
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -7512,7 +7512,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14621
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -7591,7 +7591,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15072
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -7817,8 +7817,8 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -7916,7 +7916,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16303
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -8149,7 +8149,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6325
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -8217,7 +8217,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6577
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -8477,7 +8477,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12267
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -8725,8 +8725,8 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -9173,7 +9173,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12685
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -9265,7 +9265,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12794
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -9741,7 +9741,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14496
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -9834,12 +9834,6 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|PlusOne|correctness|20,14-20,19
 //::         - snapshot_test_complex_4.dfy|PlusOne|correctness|23,5-23,13
-//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
-//::       provers:
-//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19
-//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
-//::       provers:
-//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19
 //::     - top: snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
@@ -9875,6 +9869,12 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
 //::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19
+//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19
 //::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18
@@ -10094,16 +10094,6 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     - top: snapshot_test_complex_4.dfy|PlusOne|correctness|21,13-21,17
 //::       unused:
 //::         - snapshot_test_complex_4.dfy|PlusOne|correctness|24,1-24,1
-//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
-//::       unused:
-//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
-//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38
-//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59
-//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
-//::       unused:
-//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38
-//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
-//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59
 //::     - top: snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
 //::       unused:
 //::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
@@ -10285,6 +10275,16 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
 //::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
 //::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59
+//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59
 //::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16
 //::       unused:
 //::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26

@@ -91,7 +91,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6409
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
@@ -174,8 +174,8 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
@@ -469,8 +469,8 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       isUnused: true
 //::     type: Precondition
 //::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
@@ -518,8 +518,8 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
@@ -1921,7 +1921,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12214
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
@@ -2443,8 +2443,8 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
@@ -2810,8 +2810,8 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       batchIndex: 20
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11971
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
@@ -2918,8 +2918,8 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       batchIndex: 21
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15595
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
@@ -2971,8 +2971,8 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       batchIndex: 22
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15902
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
@@ -3106,8 +3106,8 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       isUnused: false
 //::     type: Precondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|5,11-5,19
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
@@ -3128,8 +3128,8 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //:: edges:
 //::   provedBy:
 //::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29

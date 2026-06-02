@@ -115,8 +115,8 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31
 //::     file: snapshot_test_cascading_inequality_invariant.dfy

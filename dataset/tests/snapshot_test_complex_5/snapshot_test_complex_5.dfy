@@ -159,7 +159,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 4837
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|r4|well-formedness|15,13-15,17
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -695,8 +695,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: true
 //::     type: Call
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|24,9-24,24
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -1103,8 +1103,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: true
 //::     type: Call
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|27,9-27,21
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -1171,8 +1171,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 18
 //::       batchOutcome: Valid
 //::       batchResourceCount: 5167
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|28,20-28,20
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -1376,7 +1376,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 5699
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|28,36-28,40
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -1625,7 +1625,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6127
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|29,9-29,26
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -1761,7 +1761,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6232
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|30,23-30,23
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -1829,7 +1829,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6335
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|30,33-30,33
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -1897,7 +1897,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6461
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|30,36-30,36
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -1965,7 +1965,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6551
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|30,9-30,38
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -2032,8 +2032,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 31
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6706
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|31,12-31,12
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -2101,7 +2101,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 6805
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|31,9-31,14
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -2166,8 +2166,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: true
 //::     type: Call
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|32,20-32,20
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -2235,7 +2235,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 7173
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|32,23-32,23
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -2303,7 +2303,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 7323
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|32,9-32,30
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -2370,8 +2370,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 35
 //::       batchOutcome: Valid
 //::       batchResourceCount: 7452
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|33,9-33,15
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -2434,8 +2434,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|34,20-34,20
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -2503,7 +2503,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 7709
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|34,22-34,22
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -2571,7 +2571,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 7754
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|34,28-34,28
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -2991,8 +2991,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: true
 //::     type: Call
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|37,22-37,26
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -3060,7 +3060,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 5166
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|37,9-37,28
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -3690,7 +3690,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12078
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -3758,7 +3758,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12213
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -4152,8 +4152,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|12,13-12,34
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -4173,8 +4173,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|6,13-6,26
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -4195,8 +4195,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|well-formedness|19,17-19,17
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -4222,7 +4222,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 4866
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|well-formedness|18,14-18,18
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -4292,7 +4292,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 5311
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|well-formedness|19,13-19,25
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -4302,6 +4302,124 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       line: 19
 //::       col: 25
 //::     methodName: GCD1
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 46
+//::       col: 17
+//::     end:
+//::       line: 46
+//::       col: 17
+//::     methodName: GCD2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4880
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 44
+//::       col: 14
+//::     end:
+//::       line: 44
+//::       col: 18
+//::     methodName: GCD2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 44
+//::       col: 23
+//::     end:
+//::       line: 44
+//::       col: 28
+//::     methodName: GCD2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 46
+//::       col: 19
+//::     end:
+//::       line: 46
+//::       col: 19
+//::     methodName: GCD2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5376
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 46
+//::       col: 13
+//::     end:
+//::       line: 46
+//::       col: 25
+//::     methodName: GCD2
 //::     methodType: well-formedness
 //::     prooftexts:
 //::       - method ensures clause
@@ -4844,7 +4962,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 4487
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|49,10-49,10
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -5018,8 +5136,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: true
 //::     type: Call
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|51,45-51,45
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -5106,7 +5224,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 5394
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|51,47-51,47
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -5193,7 +5311,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 5575
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|53,43-53,47
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -5280,7 +5398,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 7073
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|53,63-53,63
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -5367,7 +5485,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 7051
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|53,65-53,65
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -5454,7 +5572,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 7153
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|53,75-53,75
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -5541,7 +5659,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 7256
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|53,78-53,82
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -5778,8 +5896,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 4
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9073
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|53,11-53,85
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -5865,8 +5983,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 5
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9126
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|51,9-53,87
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6036,7 +6154,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9126
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|55,45-55,45
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6123,7 +6241,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9224
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|54,5-55,53
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6209,8 +6327,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 6
 //::       batchOutcome: Valid
 //::       batchResourceCount: 10247
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|57,43-57,43
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6297,7 +6415,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 10243
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|57,45-57,45
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6384,7 +6502,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 10347
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|57,20-57,24
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6470,8 +6588,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 7
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11086
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|57,29-57,34
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6557,8 +6675,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 8
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11094
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|57,39-57,51
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6644,8 +6762,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 9
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11462
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|57,9-57,51
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6815,7 +6933,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11738
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|59,61-59,61
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6902,7 +7020,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11596
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|59,63-59,63
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6989,7 +7107,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11692
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|59,73-59,73
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -7076,7 +7194,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11802
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|59,76-59,80
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -7227,7 +7345,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12641
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|58,5-59,84
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -7313,8 +7431,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 10
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13196
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|61,40-61,44
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -7401,7 +7519,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13450
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|61,60-61,60
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -7488,7 +7606,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13342
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|61,62-61,62
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -7575,7 +7693,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13440
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|61,72-61,72
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -7662,7 +7780,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13538
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|61,75-61,79
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -7813,7 +7931,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14381
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|61,56-61,81
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -7899,8 +8017,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 11
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14972
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|61,9-61,81
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8070,7 +8188,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14683
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|63,9-63,14
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8240,7 +8358,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14973
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|65,19-65,19
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8327,7 +8445,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15083
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|64,9-65,26
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8413,8 +8531,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 36
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15582
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|66,9-66,15
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8496,8 +8614,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|68,17-68,17
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8584,7 +8702,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15389
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|68,19-68,19
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8671,7 +8789,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15497
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|68,25-68,25
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8966,8 +9084,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 39
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16063
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|70,12-70,12
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -9054,7 +9172,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14678
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|70,14-70,14
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -9141,7 +9259,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14792
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|70,9-70,16
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -9311,7 +9429,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15444
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|73,43-73,43
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -9398,7 +9516,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15302
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|73,45-73,45
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -9485,7 +9603,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15400
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|73,55-73,55
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -9572,7 +9690,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15512
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|73,58-73,62
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -9723,7 +9841,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16423
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|73,39-73,64
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -9809,8 +9927,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchIndex: 14
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16650
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|73,13-73,64
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -10349,7 +10467,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 18481
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -10436,7 +10554,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 18592
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -10819,7 +10937,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 20284
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -10906,7 +11024,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 20397
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -11472,126 +11590,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: false
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
-//::     file: snapshot_test_complex_5.dfy
-//::     start:
-//::       line: 46
-//::       col: 17
-//::     end:
-//::       line: 46
-//::       col: 17
-//::     methodName: GCD2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - value always satisfies the subset constraints of 'nat'
-//::       - value always satisfies the subset constraints of 'nat'
-//::       - value always satisfies the subset constraints of 'nat'
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 4880
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
-//::     file: snapshot_test_complex_5.dfy
-//::     start:
-//::       line: 44
-//::       col: 14
-//::     end:
-//::       line: 44
-//::       col: 18
-//::     methodName: GCD2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
-//::     file: snapshot_test_complex_5.dfy
-//::     start:
-//::       line: 44
-//::       col: 23
-//::     end:
-//::       line: 44
-//::       col: 28
-//::     methodName: GCD2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
-//::     file: snapshot_test_complex_5.dfy
-//::     start:
-//::       line: 46
-//::       col: 19
-//::     end:
-//::       line: 46
-//::       col: 19
-//::     methodName: GCD2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - value always satisfies the subset constraints of 'nat'
-//::       - value always satisfies the subset constraints of 'nat'
-//::       - value always satisfies the subset constraints of 'nat'
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 2
-//::       batchOutcome: Valid
-//::       batchResourceCount: 5376
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
-//::     file: snapshot_test_complex_5.dfy
-//::     start:
-//::       line: 46
-//::       col: 13
-//::     end:
-//::       line: 46
-//::       col: 25
-//::     methodName: GCD2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy:
 //::     - top: snapshot_test_complex_5.dfy|r4|well-formedness|15,43-15,47
@@ -11731,6 +11731,12 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     - top: snapshot_test_complex_5.dfy|GCD1|well-formedness|19,19-19,19
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|well-formedness|18,23-18,27
+//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
+//::       provers:
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
+//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
+//::       provers:
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|48,8-48,8
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|44,14-44,18
@@ -12009,12 +12015,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|66,9-66,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|76,22-76,26
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
-//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
-//::       provers:
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
-//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
-//::       provers:
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
 //::   proofUnused:
 //::     - top: snapshot_test_complex_5.dfy|r1|well-formedness|6,20-6,20
 //::       unused:
@@ -13809,6 +13809,16 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|well-formedness|18,14-18,18
 //::         - snapshot_test_complex_5.dfy|GCD1|well-formedness|19,17-19,17
 //::         - snapshot_test_complex_5.dfy|GCD1|well-formedness|19,13-19,25
+//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
+//::       unused:
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
+//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
+//::       unused:
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|48,8-48,8
 //::       unused:
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|44,23-44,28
@@ -17705,16 +17715,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|82,1-82,1
-//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
-//::       unused:
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
-//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
-//::       unused:
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
 //::   connections:
 //::     - call: snapshot_test_complex_5.dfy|GCD1|correctness|23,9-23,16
 //::       targets:

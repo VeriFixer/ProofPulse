@@ -1330,7 +1330,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 48926
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.Valid|well-formedness|19,65-19,71
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -1441,7 +1441,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 49695
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.Valid|well-formedness|20,55-20,59
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -1619,7 +1619,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 56224
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.Valid|well-formedness|20,69-20,74
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -1686,7 +1686,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 28909
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.Valid|well-formedness|20,64-20,84
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -1797,7 +1797,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 55402
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.Valid|well-formedness|17,9-21,34
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -4193,7 +4193,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9378
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks._ctor|correctness|31,9-31,29
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -6005,7 +6005,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 29708
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.push1|correctness|47,27-47,27
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -6441,7 +6441,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 35010
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.push1|correctness|49,23-49,27
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -6492,7 +6492,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 37897
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.push1|correctness|49,17-49,28
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -8577,7 +8577,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 29708
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.push2|correctness|70,27-70,27
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -8867,7 +8867,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 32602
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.push2|correctness|71,17-71,38
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -9076,7 +9076,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 35166
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.push2|correctness|72,23-72,27
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -9128,7 +9128,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 38079
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.push2|correctness|72,17-72,28
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -9961,7 +9961,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 32263
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.pop1|well-formedness|83,87-83,114
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -10299,7 +10299,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 28733
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.pop1|correctness|81,18-81,24
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -11602,7 +11602,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 34890
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.pop1|correctness|93,19-93,23
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -11653,7 +11653,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 35064
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.pop1|correctness|93,13-93,24
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -12515,7 +12515,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 32263
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.pop2|well-formedness|101,87-101,114
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -12854,7 +12854,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 28733
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.pop2|correctness|99,18-99,24
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -14091,7 +14091,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 32588
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.pop2|correctness|110,26-110,45
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -14243,7 +14243,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 34965
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.pop2|correctness|111,19-111,23
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -14295,7 +14295,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 35166
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.pop2|correctness|111,13-111,24
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -15017,7 +15017,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 31070
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek1|well-formedness|13,5-22,5
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -15517,7 +15517,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 28734
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek1|well-formedness|118,30-118,45
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -15756,7 +15756,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 33224
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek1|well-formedness|119,54-119,74
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -16702,6 +16702,262 @@ class TwoStacks<T(0)(==)>
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,65-134,74
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 134
+//::       col: 65
+//::     end:
+//::       line: 134
+//::       col: 74
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 32927
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|13,5-22,5
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 13
+//::       col: 5
+//::     end:
+//::       line: 22
+//::       col: 5
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - function definition for Valid
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|132,18-132,24
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 132
+//::       col: 18
+//::     end:
+//::       line: 132
+//::       col: 24
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,17-134,25
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 134
+//::       col: 17
+//::     end:
+//::       line: 134
+//::       col: 25
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|155,5-160,5
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 155
+//::       col: 5
+//::     end:
+//::       line: 160
+//::       col: 5
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - function definition for Empty2
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,17-133,24
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 133
+//::       col: 17
+//::     end:
+//::       line: 133
+//::       col: 24
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,30-133,45
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 133
+//::       col: 30
+//::     end:
+//::       line: 133
+//::       col: 45
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,17-133,45
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 133
+//::       col: 17
+//::     end:
+//::       line: 133
+//::       col: 45
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,31-134,46
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 134
+//::       col: 31
+//::     end:
+//::       line: 134
+//::       col: 46
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,54-134,74
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 134
+//::       col: 54
+//::     end:
+//::       line: 134
+//::       col: 74
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,17-134,74
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 134
+//::       col: 17
+//::     end:
+//::       line: 134
+//::       col: 74
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|135,17-135,23
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 135
+//::       col: 17
+//::     end:
+//::       line: 135
+//::       col: 23
+//::     methodName: TwoStacks.peek2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|correctness|141,24-141,24
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -17277,7 +17533,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 27428
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|correctness|141,24-141,43
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -17556,262 +17812,6 @@ class TwoStacks<T(0)(==)>
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,65-134,74
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 134
-//::       col: 65
-//::     end:
-//::       line: 134
-//::       col: 74
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - index in range
-//::       - index in range
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: false
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 32927
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|13,5-22,5
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 13
-//::       col: 5
-//::     end:
-//::       line: 22
-//::       col: 5
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - function definition for Valid
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: false
-//::     type: CodeLine
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|132,18-132,24
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 132
-//::       col: 18
-//::     end:
-//::       line: 132
-//::       col: 24
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: false
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,17-134,25
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 134
-//::       col: 17
-//::     end:
-//::       line: 134
-//::       col: 25
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: false
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|155,5-160,5
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 155
-//::       col: 5
-//::     end:
-//::       line: 160
-//::       col: 5
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - function definition for Empty2
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: false
-//::     type: CodeLine
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,17-133,24
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 133
-//::       col: 17
-//::     end:
-//::       line: 133
-//::       col: 24
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,30-133,45
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 133
-//::       col: 30
-//::     end:
-//::       line: 133
-//::       col: 45
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,17-133,45
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 133
-//::       col: 17
-//::     end:
-//::       line: 133
-//::       col: 45
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,31-134,46
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 134
-//::       col: 31
-//::     end:
-//::       line: 134
-//::       col: 46
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,54-134,74
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 134
-//::       col: 54
-//::     end:
-//::       line: 134
-//::       col: 74
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,17-134,74
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 134
-//::       col: 17
-//::     end:
-//::       line: 134
-//::       col: 74
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|135,17-135,23
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 135
-//::       col: 17
-//::     end:
-//::       line: 135
-//::       col: 23
-//::     methodName: TwoStacks.peek2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_test_complex_10.dfy|TwoStacks.Empty1|well-formedness|147,18-147,24
 //::     file: snapshot_test_complex_10.dfy
@@ -19049,7 +19049,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 29969
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_complex_10.dfy|TwoStacks.Empty1|well-formedness|149,17-149,38
 //::     file: snapshot_test_complex_10.dfy
@@ -19268,7 +19268,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 29560
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_complex_10.dfy|TwoStacks.Empty2|well-formedness|157,17-157,24
 //::     file: snapshot_test_complex_10.dfy
@@ -19870,7 +19870,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 34289
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search1|well-formedness|13,5-22,5
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -20234,7 +20234,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 32565
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_complex_10.dfy|TwoStacks.search1|well-formedness|165,61-165,70
 //::     file: snapshot_test_complex_10.dfy
@@ -20684,7 +20684,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 30723
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_complex_10.dfy|TwoStacks.search1|well-formedness|165,81-165,89
 //::     file: snapshot_test_complex_10.dfy
@@ -20933,7 +20933,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 36446
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_test_complex_10.dfy|TwoStacks.search1|well-formedness|166,66-166,75
 //::     file: snapshot_test_complex_10.dfy
@@ -22319,8 +22319,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 50
 //::       batchOutcome: Valid
 //::       batchResourceCount: 42380
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search1|correctness|163,18-163,24
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -23761,8 +23761,8 @@ class TwoStacks<T(0)(==)>
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search1|correctness|170,9-170,22
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -24747,7 +24747,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 38587
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search1|correctness|177,23-177,67
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -25919,7 +25919,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 40083
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search1|correctness|172,9-185,9
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -26014,7 +26014,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 40109
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search1|correctness|186,9-186,23
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -26382,6 +26382,231 @@ class TwoStacks<T(0)(==)>
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,61-192,65
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 192
+//::       col: 61
+//::     end:
+//::       line: 192
+//::       col: 65
+//::     methodName: TwoStacks.search3
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 32567
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovTest
+//::   - locationId: >-
+//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,45-192,56
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 192
+//::       col: 45
+//::     end:
+//::       line: 192
+//::       col: 56
+//::     methodName: TwoStacks.search3
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|190,18-190,24
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 190
+//::       col: 18
+//::     end:
+//::       line: 190
+//::       col: 24
+//::     methodName: TwoStacks.search3
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|191,17-191,30
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 191
+//::       col: 17
+//::     end:
+//::       line: 191
+//::       col: 30
+//::     methodName: TwoStacks.search3
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|191,35-191,47
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 191
+//::       col: 35
+//::     end:
+//::       line: 191
+//::       col: 47
+//::     methodName: TwoStacks.search3
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,17-192,29
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 192
+//::       col: 17
+//::     end:
+//::       line: 192
+//::       col: 29
+//::     methodName: TwoStacks.search3
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,61-192,70
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 192
+//::       col: 61
+//::     end:
+//::       line: 192
+//::       col: 70
+//::     methodName: TwoStacks.search3
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,81-192,89
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 192
+//::       col: 81
+//::     end:
+//::       line: 192
+//::       col: 89
+//::     methodName: TwoStacks.search3
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,17-192,89
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 192
+//::       col: 17
+//::     end:
+//::       line: 192
+//::       col: 89
+//::     methodName: TwoStacks.search3
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|194,17-194,23
+//::     file: snapshot_test_complex_10.dfy
+//::     start:
+//::       line: 194
+//::       col: 17
+//::     end:
+//::       line: 194
+//::       col: 23
+//::     methodName: TwoStacks.search3
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|201,23-201,28
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -26671,8 +26896,8 @@ class TwoStacks<T(0)(==)>
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|190,18-190,24
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -31086,8 +31311,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 43
 //::       batchOutcome: Valid
 //::       batchResourceCount: 44084
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|203,23-203,23
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -32062,7 +32287,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 39048
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|204,23-204,75
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -32333,8 +32558,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 45
 //::       batchOutcome: Valid
 //::       batchResourceCount: 51970
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|205,35-205,40
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -32922,7 +33147,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 41581
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|205,23-205,88
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -33488,7 +33713,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 39837
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|207,16-207,41
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -34219,7 +34444,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 41078
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|211,52-211,61
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -34366,7 +34591,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 42205
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|211,17-211,62
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -34512,8 +34737,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 26
 //::       batchOutcome: Valid
 //::       batchResourceCount: 43518
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|212,24-212,24
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -35195,8 +35420,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 48
 //::       batchOutcome: Valid
 //::       batchResourceCount: 45995
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|212,24-212,78
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -35927,7 +36152,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 48121
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|213,91-213,96
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -36367,8 +36592,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 55
 //::       batchOutcome: Valid
 //::       batchResourceCount: 49176
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|214,53-214,57
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -36515,7 +36740,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 49526
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|214,62-214,62
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -36956,7 +37181,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 51214
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|214,17-214,83
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -37102,8 +37327,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 60
 //::       batchOutcome: Valid
 //::       batchResourceCount: 49757
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|215,68-215,72
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -37250,7 +37475,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 51215
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|215,17-215,84
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -37396,8 +37621,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 62
 //::       batchOutcome: Valid
 //::       batchResourceCount: 52035
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|216,37-216,42
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -37985,7 +38210,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 52688
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|216,17-216,97
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -38131,8 +38356,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 67
 //::       batchOutcome: Valid
 //::       batchResourceCount: 53522
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|217,24-217,24
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -39323,7 +39548,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 41396
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|199,9-220,9
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -39470,7 +39695,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 41505
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|222,9-222,23
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -40295,8 +40520,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 69
 //::       batchOutcome: Valid
 //::       batchResourceCount: 43484
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|223,16-223,70
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -41027,7 +41252,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 44518
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|224,83-224,88
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -41321,7 +41546,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 44027
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|224,9-224,99
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -41467,8 +41692,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 76
 //::       batchOutcome: Valid
 //::       batchResourceCount: 47155
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|225,45-225,49
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -42056,7 +42281,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 47423
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|225,9-225,75
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -42202,8 +42427,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 81
 //::       batchOutcome: Valid
 //::       batchResourceCount: 47835
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|226,60-226,64
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -42350,7 +42575,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 48348
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|226,9-226,76
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -42496,8 +42721,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 83
 //::       batchOutcome: Valid
 //::       batchResourceCount: 49483
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|227,29-227,34
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -43085,7 +43310,7 @@ class TwoStacks<T(0)(==)>
 //::       batchOutcome: Valid
 //::       batchResourceCount: 49909
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|227,9-227,89
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -43231,8 +43456,8 @@ class TwoStacks<T(0)(==)>
 //::       batchIndex: 88
 //::       batchOutcome: Valid
 //::       batchResourceCount: 51306
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|228,5-228,5
 //::     file: snapshot_test_complex_10.dfy
 //::     start:
@@ -43669,231 +43894,6 @@ class TwoStacks<T(0)(==)>
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::   - locationId: >-
-//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,61-192,65
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 192
-//::       col: 61
-//::     end:
-//::       line: 192
-//::       col: 65
-//::     methodName: TwoStacks.search3
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - index in range
-//::       - index in range
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: false
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 32567
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: >-
-//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,45-192,56
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 192
-//::       col: 45
-//::     end:
-//::       line: 192
-//::       col: 56
-//::     methodName: TwoStacks.search3
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: false
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: >-
-//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|190,18-190,24
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 190
-//::       col: 18
-//::     end:
-//::       line: 190
-//::       col: 24
-//::     methodName: TwoStacks.search3
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: >-
-//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|191,17-191,30
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 191
-//::       col: 17
-//::     end:
-//::       line: 191
-//::       col: 30
-//::     methodName: TwoStacks.search3
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: >-
-//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|191,35-191,47
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 191
-//::       col: 35
-//::     end:
-//::       line: 191
-//::       col: 47
-//::     methodName: TwoStacks.search3
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: >-
-//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,17-192,29
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 192
-//::       col: 17
-//::     end:
-//::       line: 192
-//::       col: 29
-//::     methodName: TwoStacks.search3
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: >-
-//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,61-192,70
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 192
-//::       col: 61
-//::     end:
-//::       line: 192
-//::       col: 70
-//::     methodName: TwoStacks.search3
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: >-
-//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,81-192,89
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 192
-//::       col: 81
-//::     end:
-//::       line: 192
-//::       col: 89
-//::     methodName: TwoStacks.search3
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: >-
-//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,17-192,89
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 192
-//::       col: 17
-//::     end:
-//::       line: 192
-//::       col: 89
-//::     methodName: TwoStacks.search3
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: >-
-//::       snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|194,17-194,23
-//::     file: snapshot_test_complex_10.dfy
-//::     start:
-//::       line: 194
-//::       col: 17
-//::     end:
-//::       line: 194
-//::       col: 23
-//::     methodName: TwoStacks.search3
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy:
 //::     - top: snapshot_test_complex_10.dfy|TwoStacks.Valid|well-formedness|15,29-15,37
@@ -44250,6 +44250,16 @@ class TwoStacks<T(0)(==)>
 //::     - top: snapshot_test_complex_10.dfy|TwoStacks.peek1|correctness|126,24-126,33
 //::       provers:
 //::         - snapshot_test_complex_10.dfy|TwoStacks.peek1|correctness|117,18-117,24
+//::     - top: >-
+//::         snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,65-134,74
+//::       provers:
+//::         - snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|13,5-22,5
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|132,18-132,24
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,17-134,25
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|155,5-160,5
 //::     - top: snapshot_test_complex_10.dfy|TwoStacks.peek2|correctness|133,30-133,45
 //::       provers:
 //::         - snapshot_test_complex_10.dfy|TwoStacks.peek2|correctness|138,13-138,33
@@ -44274,16 +44284,6 @@ class TwoStacks<T(0)(==)>
 //::     - top: snapshot_test_complex_10.dfy|TwoStacks.peek2|correctness|141,24-141,43
 //::       provers:
 //::         - snapshot_test_complex_10.dfy|TwoStacks.peek2|correctness|132,18-132,24
-//::     - top: >-
-//::         snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,65-134,74
-//::       provers:
-//::         - snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|13,5-22,5
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|132,18-132,24
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,17-134,25
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|155,5-160,5
 //::     - top: >-
 //::         snapshot_test_complex_10.dfy|TwoStacks.Empty1|well-formedness|149,30-149,38
 //::       provers:
@@ -44432,6 +44432,11 @@ class TwoStacks<T(0)(==)>
 //::       provers:
 //::         - >-
 //::           snapshot_test_complex_10.dfy|TwoStacks.search1|correctness|184,13-184,23
+//::     - top: >-
+//::         snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,61-192,65
+//::       provers:
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,45-192,56
 //::     - top: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|201,23-201,28
 //::       provers:
 //::         - >-
@@ -44652,11 +44657,6 @@ class TwoStacks<T(0)(==)>
 //::           snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|205,23-205,88
 //::         - >-
 //::           snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|222,9-222,23
-//::     - top: >-
-//::         snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,61-192,65
-//::       provers:
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,45-192,56
 //::   proofUnused:
 //::     - top: snapshot_test_complex_10.dfy|TwoStacks.Valid|well-formedness|14,20-14,20
 //::       unused:
@@ -50480,6 +50480,23 @@ class TwoStacks<T(0)(==)>
 //::         - snapshot_test_complex_10.dfy|TwoStacks.peek1|correctness|126,13-126,34
 //::         - snapshot_test_complex_10.dfy|TwoStacks.peek1|correctness|127,13-127,32
 //::         - snapshot_test_complex_10.dfy|TwoStacks.peek1|correctness|129,5-129,5
+//::     - top: >-
+//::         snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,65-134,74
+//::       unused:
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,17-133,24
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,30-133,45
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,17-133,45
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,31-134,46
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,54-134,74
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,17-134,74
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|135,17-135,23
 //::     - top: snapshot_test_complex_10.dfy|TwoStacks.peek2|correctness|141,24-141,24
 //::       unused:
 //::         - snapshot_test_complex_10.dfy|TwoStacks.peek2|correctness|132,18-132,24
@@ -50563,23 +50580,6 @@ class TwoStacks<T(0)(==)>
 //::         - snapshot_test_complex_10.dfy|TwoStacks.peek2|correctness|141,13-141,44
 //::         - snapshot_test_complex_10.dfy|TwoStacks.peek2|correctness|142,13-142,32
 //::         - snapshot_test_complex_10.dfy|TwoStacks.peek2|correctness|144,5-144,5
-//::     - top: >-
-//::         snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,65-134,74
-//::       unused:
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,17-133,24
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,30-133,45
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|133,17-133,45
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,31-134,46
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,54-134,74
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|134,17-134,74
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.peek2|well-formedness|135,17-135,23
 //::     - top: >-
 //::         snapshot_test_complex_10.dfy|TwoStacks.Empty1|well-formedness|147,18-147,24
 //::       unused:
@@ -51648,6 +51648,25 @@ class TwoStacks<T(0)(==)>
 //::         - >-
 //::           snapshot_test_complex_10.dfy|TwoStacks.search1|correctness|186,9-186,23
 //::         - snapshot_test_complex_10.dfy|TwoStacks.search1|correctness|187,5-187,5
+//::     - top: >-
+//::         snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,61-192,65
+//::       unused:
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|190,18-190,24
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|191,17-191,30
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|191,35-191,47
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,17-192,29
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,61-192,70
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,81-192,89
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,17-192,89
+//::         - >-
+//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|194,17-194,23
 //::     - top: snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|201,23-201,28
 //::       unused:
 //::         - >-
@@ -62401,24 +62420,5 @@ class TwoStacks<T(0)(==)>
 //::         - >-
 //::           snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|227,71-227,77
 //::         - snapshot_test_complex_10.dfy|TwoStacks.search3|correctness|228,5-228,5
-//::     - top: >-
-//::         snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,61-192,65
-//::       unused:
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|190,18-190,24
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|191,17-191,30
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|191,35-191,47
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,17-192,29
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,61-192,70
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,81-192,89
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|192,17-192,89
-//::         - >-
-//::           snapshot_test_complex_10.dfy|TwoStacks.search3|well-formedness|194,17-194,23
 //::   connections: []
 //::

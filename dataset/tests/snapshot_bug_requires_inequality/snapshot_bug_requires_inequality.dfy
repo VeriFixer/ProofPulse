@@ -12,6 +12,179 @@ method SplitArray(arr: array<int>, L: int) returns (firstPart: seq<int>, secondP
 //:: method Graph:
 //:: version: 2
 //:: nodes:
+//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,29-4,33
+//::     file: snapshot_bug_requires_inequality.dfy
+//::     start:
+//::       line: 4
+//::       col: 29
+//::     end:
+//::       line: 4
+//::       col: 33
+//::     methodName: SplitArray
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12163
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,24-2,28
+//::     file: snapshot_bug_requires_inequality.dfy
+//::     start:
+//::       line: 2
+//::       col: 24
+//::     end:
+//::       line: 2
+//::       col: 28
+//::     methodName: SplitArray
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8687
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,14-2,28
+//::     file: snapshot_bug_requires_inequality.dfy
+//::     start:
+//::       line: 2
+//::       col: 14
+//::     end:
+//::       line: 2
+//::       col: 28
+//::     methodName: SplitArray
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|3,13-3,28
+//::     file: snapshot_bug_requires_inequality.dfy
+//::     start:
+//::       line: 3
+//::       col: 13
+//::     end:
+//::       line: 3
+//::       col: 28
+//::     methodName: SplitArray
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,13-4,42
+//::     file: snapshot_bug_requires_inequality.dfy
+//::     start:
+//::       line: 4
+//::       col: 13
+//::     end:
+//::       line: 4
+//::       col: 42
+//::     methodName: SplitArray
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,39-5,39
+//::     file: snapshot_bug_requires_inequality.dfy
+//::     start:
+//::       line: 5
+//::       col: 39
+//::     end:
+//::       line: 5
+//::       col: 39
+//::     methodName: SplitArray
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12445
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,13-5,45
+//::     file: snapshot_bug_requires_inequality.dfy
+//::     start:
+//::       line: 5
+//::       col: 13
+//::     end:
+//::       line: 5
+//::       col: 45
+//::     methodName: SplitArray
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|correctness|7,18-7,18
 //::     file: snapshot_bug_requires_inequality.dfy
 //::     start:
@@ -309,7 +482,7 @@ method SplitArray(arr: array<int>, L: int) returns (firstPart: seq<int>, secondP
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13425
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|correctness|8,5-8,27
 //::     file: snapshot_bug_requires_inequality.dfy
 //::     start:
@@ -399,179 +572,6 @@ method SplitArray(arr: array<int>, L: int) returns (firstPart: seq<int>, secondP
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,29-4,33
-//::     file: snapshot_bug_requires_inequality.dfy
-//::     start:
-//::       line: 4
-//::       col: 29
-//::     end:
-//::       line: 4
-//::       col: 33
-//::     methodName: SplitArray
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 12163
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,24-2,28
-//::     file: snapshot_bug_requires_inequality.dfy
-//::     start:
-//::       line: 2
-//::       col: 24
-//::     end:
-//::       line: 2
-//::       col: 28
-//::     methodName: SplitArray
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 3
-//::       batchOutcome: Valid
-//::       batchResourceCount: 8687
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,14-2,28
-//::     file: snapshot_bug_requires_inequality.dfy
-//::     start:
-//::       line: 2
-//::       col: 14
-//::     end:
-//::       line: 2
-//::       col: 28
-//::     methodName: SplitArray
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::       - method requires clause
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|3,13-3,28
-//::     file: snapshot_bug_requires_inequality.dfy
-//::     start:
-//::       line: 3
-//::       col: 13
-//::     end:
-//::       line: 3
-//::       col: 28
-//::     methodName: SplitArray
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,13-4,42
-//::     file: snapshot_bug_requires_inequality.dfy
-//::     start:
-//::       line: 4
-//::       col: 13
-//::     end:
-//::       line: 4
-//::       col: 42
-//::     methodName: SplitArray
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,39-5,39
-//::     file: snapshot_bug_requires_inequality.dfy
-//::     start:
-//::       line: 5
-//::       col: 39
-//::     end:
-//::       line: 5
-//::       col: 39
-//::     methodName: SplitArray
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 2
-//::       batchOutcome: Valid
-//::       batchResourceCount: 12445
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,13-5,45
-//::     file: snapshot_bug_requires_inequality.dfy
-//::     start:
-//::       line: 5
-//::       col: 13
-//::     end:
-//::       line: 5
-//::       col: 45
-//::     methodName: SplitArray
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy:
 //::     - top: snapshot_bug_requires_inequality.dfy|SplitArray|correctness|3,13-3,28
@@ -600,6 +600,51 @@ method SplitArray(arr: array<int>, L: int) returns (firstPart: seq<int>, secondP
 //::         - snapshot_bug_requires_inequality.dfy|SplitArray|correctness|2,19-2,28
 //::         - snapshot_bug_requires_inequality.dfy|SplitArray|correctness|7,18-7,25
 //::   proofUnused:
+//::     - top: >-
+//::         snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,29-4,33
+//::       unused:
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,24-2,28
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,14-2,28
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|3,13-3,28
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,13-4,42
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,39-5,39
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,13-5,45
+//::     - top: >-
+//::         snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,24-2,28
+//::       unused:
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,14-2,28
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|3,13-3,28
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,29-4,33
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,13-4,42
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,39-5,39
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,13-5,45
+//::     - top: >-
+//::         snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,39-5,39
+//::       unused:
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,24-2,28
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,14-2,28
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|3,13-3,28
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,29-4,33
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,13-4,42
+//::         - >-
+//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,13-5,45
 //::     - top: snapshot_bug_requires_inequality.dfy|SplitArray|correctness|7,18-7,18
 //::       unused:
 //::         - snapshot_bug_requires_inequality.dfy|SplitArray|correctness|2,14-2,19
@@ -676,50 +721,5 @@ method SplitArray(arr: array<int>, L: int) returns (firstPart: seq<int>, secondP
 //::         - snapshot_bug_requires_inequality.dfy|SplitArray|correctness|8,19-8,19
 //::         - snapshot_bug_requires_inequality.dfy|SplitArray|correctness|8,5-8,27
 //::         - snapshot_bug_requires_inequality.dfy|SplitArray|correctness|9,1-9,1
-//::     - top: >-
-//::         snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,29-4,33
-//::       unused:
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,24-2,28
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,14-2,28
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|3,13-3,28
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,13-4,42
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,39-5,39
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,13-5,45
-//::     - top: >-
-//::         snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,24-2,28
-//::       unused:
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,14-2,28
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|3,13-3,28
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,29-4,33
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,13-4,42
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,39-5,39
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,13-5,45
-//::     - top: >-
-//::         snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,39-5,39
-//::       unused:
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,24-2,28
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|2,14-2,28
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|3,13-3,28
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,29-4,33
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|4,13-4,42
-//::         - >-
-//::           snapshot_bug_requires_inequality.dfy|SplitArray|well-formedness|5,13-5,45
 //::   connections: []
 //::

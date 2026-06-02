@@ -3,20 +3,29 @@ import { ProofNode } from "./proof-node.js";
 import { ProofGraph } from "./proof-graph.js";
 
 /**
+ * Recursively mark a node and all its transitive provedBy dependencies as CovComplete internally.
+ */
+function markCovCompleteRecursive(node: ProofNode, visited: Set<ProofNode> = new Set()): void {
+  if (visited.has(node)) return;
+  visited.add(node);
+  node.setCovStatusInternal(CovStatus.CovComplete);
+  for (const dep of node.provedBy) {
+    markCovCompleteRecursive(dep, visited);
+  }
+}
+
+/**
  * Pass 1: Set covStatusInternal on all nodes.
- * - Postcondition tops + their provedBy → CovComplete
+ * - Postcondition tops + their transitive provedBy → CovComplete
  * - Other tops with provedBy children: propagate CovTest (or CovComplete if child already CovComplete)
  */
 export function applyCoverageInternal(graph: ProofGraph): void {
   const tops = graph.getAllTopNodes();
 
-  // Postcondition tops: mark self + provedBy as CovComplete internally
+  // Postcondition tops: mark self + all transitive provedBy as CovComplete internally
   const postTops = tops.filter(t => t.getType() === TokenType.Postcondition);
   for (const post of postTops) {
-    post.setCovStatusInternal(CovStatus.CovComplete);
-    for (const dep of post.provedBy) {
-      dep.setCovStatusInternal(CovStatus.CovComplete);
-    }
+    markCovCompleteRecursive(post);
   }
 
   // Non-postcondition tops
@@ -24,19 +33,22 @@ export function applyCoverageInternal(graph: ProofGraph): void {
   for (const top of otherTops) {
     if (top.provedBy.size === 0) continue;
 
-    // If not manual assertion or loop invariant, mark top as CovComplete internally
-    if (top.getType() !== TokenType.AssertionManual && top.getType() !== TokenType.LoopInvariant) {
-      top.setCovStatusInternal(CovStatus.CovComplete);
+    // If not manual assertion or loop invariant, and already marked CovComplete
+    // from postcondition chain, keep it. Otherwise leave as-is (will be CovTest).
+    if (top.getType() !== TokenType.AssertionManual && top.getType() !== TokenType.LoopInvariant
+        && top.getCovStatusInternal() !== CovStatus.CovComplete) {
+      top.setCovStatusInternal(CovStatus.CovTest);
     }
 
-    for (const dep of top.provedBy) {
-      if (dep.getCovStatusInternal() === CovStatus.CovComplete) {
-        top.setCovStatusInternal(CovStatus.CovComplete);
-      }
+    const topAlreadyCovered = top.getCovStatusInternal() === CovStatus.CovComplete;
 
+    for (const dep of top.provedBy) {
       if (top.getType() === TokenType.AssertionAutomatic) {
         dep.setCovStatusInternal(CovStatus.CovComplete);
         dep.setCovStatus(CovStatus.CovComplete);
+      } else if (topAlreadyCovered) {
+        // Top is in postcondition proof chain → deps are CovComplete
+        dep.setCovStatusInternal(CovStatus.CovComplete);
       } else if (dep.getCovStatusInternal() !== CovStatus.CovComplete) {
         dep.setCovStatusInternal(CovStatus.CovTest);
       }

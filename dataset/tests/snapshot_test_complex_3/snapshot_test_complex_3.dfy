@@ -152,7 +152,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 8588
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -216,7 +216,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 8776
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -576,8 +576,8 @@ method SelectionSort(a: array<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -1286,7 +1286,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 17984
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -1619,8 +1619,8 @@ method SelectionSort(a: array<int>)
 //::       batchIndex: 37
 //::       batchOutcome: Valid
 //::       batchResourceCount: 59899
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -1798,7 +1798,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 20978
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -1976,7 +1976,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 20636
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -3098,8 +3098,8 @@ method SelectionSort(a: array<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -3723,7 +3723,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 22054
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -3901,7 +3901,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 22247
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -4056,8 +4056,8 @@ method SelectionSort(a: array<int>)
 //::       batchIndex: 21
 //::       batchOutcome: Valid
 //::       batchResourceCount: 55312
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -4700,7 +4700,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 21887
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -4784,8 +4784,8 @@ method SelectionSort(a: array<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -4959,7 +4959,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 23685
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -5048,7 +5048,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 24019
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -5780,7 +5780,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 22055
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -6238,7 +6238,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 22375
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -6412,7 +6412,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 31303
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -6501,7 +6501,7 @@ method SelectionSort(a: array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 32739
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //:: edges:
 //::   provedBy:
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54

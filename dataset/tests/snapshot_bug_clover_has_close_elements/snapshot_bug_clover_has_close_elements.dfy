@@ -276,7 +276,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9235
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -350,7 +350,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9668
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -387,7 +387,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9725
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -424,7 +424,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9627
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -461,7 +461,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9754
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -634,7 +634,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12983
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -745,7 +745,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13060
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -949,8 +949,8 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -1782,7 +1782,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11241
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -1853,7 +1853,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11520
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -1924,7 +1924,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11951
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -1995,7 +1995,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11395
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -2066,7 +2066,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11390
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -2137,7 +2137,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11839
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -2481,8 +2481,8 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -2905,8 +2905,8 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchIndex: 30
 //::       batchOutcome: Valid
 //::       batchResourceCount: 17360
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -3325,7 +3325,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16077
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -3396,7 +3396,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16985
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -3609,7 +3609,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16970
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -4882,7 +4882,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16614
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::     file: snapshot_bug_clover_has_close_elements.dfy
@@ -5091,7 +5091,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14860
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: CovTest
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
 //::     file: snapshot_bug_clover_has_close_elements.dfy

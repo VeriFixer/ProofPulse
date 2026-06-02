@@ -168,8 +168,8 @@ method IsEvenAtIndexEven(lst: seq<int>) returns (result: bool)
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_bug_predicate_body_uncovered.dfy|IsEvenAtIndexEven|correctness|11,19-11,33
 //::     file: snapshot_bug_predicate_body_uncovered.dfy
