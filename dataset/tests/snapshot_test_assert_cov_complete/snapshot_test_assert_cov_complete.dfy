@@ -20,44 +20,10 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 // Line 3 is covcomplete as it is needed and used in its own recursive call
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,9|AssertionAutomatic
-//::     file: snapshot_test_assert_cov_complete.dfy
-//::     start:
-//::       line: 6
-//::       col: 9
-//::     end:
-//::       line: 6
-//::       col: 9
-//::     prooftext: a value exists that satisfies this let-such-that expression
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16|Precondition
-//::     file: snapshot_test_assert_cov_complete.dfy
-//::     start:
-//::       line: 2
-//::       col: 12
-//::     end:
-//::       line: 2
-//::       col: 16
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29|CodeLine
+//::   - locationId: >-
+//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29
 //::     file: snapshot_test_assert_cov_complete.dfy
 //::     start:
 //::       line: 6
@@ -65,16 +31,58 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     end:
 //::       line: 6
 //::       col: 29
-//::     prooftext: a value exists that satisfies this let-such-that expression
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19|Postcondition
+//::     prooftexts:
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6409
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16
+//::     file: snapshot_test_assert_cov_complete.dfy
+//::     start:
+//::       line: 2
+//::       col: 12
+//::     end:
+//::       line: 2
+//::       col: 16
+//::     methodName: CardinalitySubsetLt
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19
 //::     file: snapshot_test_assert_cov_complete.dfy
 //::     start:
 //::       line: 3
@@ -82,16 +90,31 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     end:
 //::       line: 3
 //::       col: 19
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16473
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28
 //::     file: snapshot_test_assert_cov_complete.dfy
 //::     start:
 //::       line: 6
@@ -99,16 +122,26 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     end:
 //::       line: 6
 //::       col: 28
-//::     prooftext: assign-such-that constraint
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18|AssertionAutomatic
+//::     prooftexts:
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: >-
+//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18
 //::     file: snapshot_test_assert_cov_complete.dfy
 //::     start:
 //::       line: 7
@@ -116,18 +149,38 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     end:
 //::       line: 7
 //::       col: 18
-//::     prooftext: >-
-//::       variable 'b', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20
 //::     file: snapshot_test_assert_cov_complete.dfy
 //::     start:
 //::       line: 7
@@ -135,16 +188,26 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     end:
 //::       line: 7
 //::       col: 20
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25|AssertionManual
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25
 //::     file: snapshot_test_assert_cov_complete.dfy
 //::     start:
 //::       line: 8
@@ -152,16 +215,30 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     end:
 //::       line: 8
 //::       col: 25
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
-//::     type: AssertionManual
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|CodeLine
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionManual
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16214
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
 //::     file: snapshot_test_assert_cov_complete.dfy
 //::     start:
 //::       line: 10
@@ -169,16 +246,43 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     end:
 //::       line: 10
 //::       col: 31
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19|AssertionManual
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - call
+//::       - loop or recursion terminates
+//::       - call
+//::       - loop or recursion terminates
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_test_assert_cov_complete.dfy(3,11)-(3,19)
+//::         from call
+//::       - loop or recursion terminates
+//::       - call
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_test_assert_cov_complete.dfy(2,12)-(2,16)
+//::         from call
+//::       - loop or recursion terminates
+//::       - call
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11097
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19
 //::     file: snapshot_test_assert_cov_complete.dfy
 //::     start:
 //::       line: 12
@@ -186,264 +290,155 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     end:
 //::       line: 12
 //::       col: 19
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
+//::     methodName: CardinalitySubsetLt
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionManual
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 20419
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,3|AssertionManual
-//::     file: snapshot_test_assert_cov_complete.dfy
-//::     start:
-//::       line: 8
-//::       col: 3
-//::     end:
-//::       line: 8
-//::       col: 3
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,5|AssertionManual
-//::     file: snapshot_test_assert_cov_complete.dfy
-//::     start:
-//::       line: 12
-//::       col: 5
-//::     end:
-//::       line: 12
-//::       col: 5
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,15-3,15|Postcondition
-//::     file: snapshot_test_assert_cov_complete.dfy
-//::     start:
-//::       line: 3
-//::       col: 15
-//::     end:
-//::       line: 3
-//::       col: 15
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|Call
-//::     file: snapshot_test_assert_cov_complete.dfy
-//::     start:
-//::       line: 10
-//::       col: 5
-//::     end:
-//::       line: 10
-//::       col: 31
-//::     prooftext: >-
-//::       ensures clause at snapshot_test_assert_cov_complete.dfy(3,11)-(3,19) from
-//::       call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,24-10,24|AssertionAutomatic
-//::     file: snapshot_test_assert_cov_complete.dfy
-//::     start:
-//::       line: 10
-//::       col: 24
-//::     end:
-//::       line: 10
-//::       col: 24
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,24-10,24|Precondition
-//::     file: snapshot_test_assert_cov_complete.dfy
-//::     start:
-//::       line: 10
-//::       col: 24
-//::     end:
-//::       line: 10
-//::       col: 24
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,9|AssertionAutomatic
-//::       provedBy:
+//::   provedBy:
+//::     - top: >-
+//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29
+//::       provers:
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16|Precondition
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16
+//::     - top: >-
+//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19
+//::       provers:
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29|CodeLine
-//::       proofUnused:
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19|Postcondition
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18|AssertionAutomatic
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19
+//::     - top: >-
+//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25
+//::       provers:
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25|AssertionManual
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20
+//::     - top: >-
+//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
+//::       provers:
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19|AssertionManual
-//::     - id: >-
-//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,3|AssertionManual
-//::       provedBy:
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20
+//::     - top: >-
+//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19
+//::       provers:
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25|AssertionManual
-//::       proofUnused:
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16|Precondition
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25
+//::   proofUnused:
+//::     - top: >-
+//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29
+//::       unused:
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19|Postcondition
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18|AssertionAutomatic
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19|AssertionManual
-//::     - id: >-
-//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,5|AssertionManual
-//::       provedBy:
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16|Precondition
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19
+//::     - top: >-
+//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19
+//::       unused:
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25|AssertionManual
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19|AssertionManual
-//::       proofUnused:
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19|Postcondition
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
+//::     - top: >-
+//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25
+//::       unused:
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18|AssertionAutomatic
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|CodeLine
-//::     - id: >-
-//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,15-3,15|Postcondition
-//::       provedBy:
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19|Postcondition
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25|AssertionManual
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|Call
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19
+//::     - top: >-
+//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
+//::       unused:
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19|AssertionManual
-//::       proofUnused:
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16|Precondition
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18|AssertionAutomatic
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|CodeLine
-//::     - id: >-
-//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,24-10,24|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|CodeLine
-//::       proofUnused:
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20
+//::     - top: >-
+//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19
+//::       unused:
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16|Precondition
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19|Postcondition
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29|CodeLine
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18|AssertionAutomatic
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
+//::   connections:
+//::     - call: >-
+//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
+//::       targets:
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25|AssertionManual
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19
 //::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|CodeLine
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19|AssertionManual
-//::     - id: >-
-//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,24-10,24|Precondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|Call
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16|Precondition
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19|Postcondition
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29|CodeLine
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28|CodeLine
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,18-7,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20|CodeLine
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25|AssertionManual
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|CodeLine
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19|AssertionManual
-//::   calls:
-//::     - id: >-
-//::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31|Call
-//::       connections:
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19|Postcondition
-//::         - >-
-//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16|Precondition
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|2,12-2,16
 //::

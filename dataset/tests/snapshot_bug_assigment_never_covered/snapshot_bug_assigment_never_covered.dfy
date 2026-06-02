@@ -10,27 +10,9 @@ method Abs(x: int) returns (y: int)
 }
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_bug_assigment_never_covered.dfy|Abs|correctness|2,21-2,21|Postcondition
-//::     file: snapshot_bug_assigment_never_covered.dfy
-//::     start:
-//::       line: 2
-//::       col: 21
-//::     end:
-//::       line: 2
-//::       col: 21
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovComplete
-//::     methodName: Abs
-//::     methodType: correctness
-//::     assertionGroup: Abs
-//::   - id: >-
-//::       snapshot_bug_assigment_never_covered.dfy|Abs|correctness|2,20-2,23|Postcondition
+//::   - locationId: snapshot_bug_assigment_never_covered.dfy|Abs|correctness|2,20-2,23
 //::     file: snapshot_bug_assigment_never_covered.dfy
 //::     start:
 //::       line: 2
@@ -38,48 +20,25 @@ method Abs(x: int) returns (y: int)
 //::     end:
 //::       line: 2
 //::       col: 23
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: Abs
+//::     methodType: correctness
+//::     prooftexts:
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
-//::     covStatus: CovComplete
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4000
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
-//::     methodName: Abs
-//::     methodType: correctness
-//::     assertionGroup: Abs
-//::   - id: >-
-//::       snapshot_bug_assigment_never_covered.dfy|Abs|correctness|3,19-3,24|Postcondition
-//::     file: snapshot_bug_assigment_never_covered.dfy
-//::     start:
-//::       line: 3
-//::       col: 19
-//::     end:
-//::       line: 3
-//::       col: 24
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Abs
-//::     methodType: correctness
-//::     assertionGroup: Abs
-//::   - id: snapshot_bug_assigment_never_covered.dfy|Abs|correctness|6,5-6,12|CodeLine
-//::     file: snapshot_bug_assigment_never_covered.dfy
-//::     start:
-//::       line: 6
-//::       col: 5
-//::     end:
-//::       line: 6
-//::       col: 12
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Abs
-//::     methodType: correctness
-//::     assertionGroup: Abs
-//::   - id: snapshot_bug_assigment_never_covered.dfy|Abs|correctness|8,5-8,11|CodeLine
+//::   - locationId: snapshot_bug_assigment_never_covered.dfy|Abs|correctness|8,5-8,11
 //::     file: snapshot_bug_assigment_never_covered.dfy
 //::     start:
 //::       line: 8
@@ -87,79 +46,112 @@ method Abs(x: int) returns (y: int)
 //::     end:
 //::       line: 8
 //::       col: 11
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: Abs
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: Abs
-//::     methodType: correctness
-//::     assertionGroup: Abs
-//::   - id: >-
-//::       snapshot_bug_assigment_never_covered.dfy|Abs|correctness|10,1-10,1|AssertionAutomatic
-//::     file: snapshot_bug_assigment_never_covered.dfy
-//::     start:
-//::       line: 10
-//::       col: 1
-//::     end:
-//::       line: 10
-//::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'y', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::     methodName: Abs
-//::     methodType: correctness
-//::     assertionGroup: Abs
-//::   - id: >-
-//::       snapshot_bug_assigment_never_covered.dfy|Abs|correctness|3,22-3,22|Postcondition
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_assigment_never_covered.dfy|Abs|correctness|3,19-3,24
 //::     file: snapshot_bug_assigment_never_covered.dfy
 //::     start:
 //::       line: 3
-//::       col: 22
+//::       col: 19
 //::     end:
 //::       line: 3
-//::       col: 22
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
+//::       col: 24
+//::     methodName: Abs
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4222
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_assigment_never_covered.dfy|Abs|correctness|6,5-6,12
+//::     file: snapshot_bug_assigment_never_covered.dfy
+//::     start:
+//::       line: 6
+//::       col: 5
+//::     end:
+//::       line: 6
+//::       col: 12
 //::     methodName: Abs
 //::     methodType: correctness
-//::     assertionGroup: Abs
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_assigment_never_covered.dfy|Abs|correctness|10,1-10,1
+//::     file: snapshot_bug_assigment_never_covered.dfy
+//::     start:
+//::       line: 10
+//::       col: 1
+//::     end:
+//::       line: 10
+//::       col: 1
+//::     methodName: Abs
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'y', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'y', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_bug_assigment_never_covered.dfy|Abs|correctness|2,21-2,21|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_bug_assigment_never_covered.dfy|Abs|correctness|2,20-2,23|Postcondition
-//::       proofUnused:
-//::         - >-
-//::           snapshot_bug_assigment_never_covered.dfy|Abs|correctness|3,19-3,24|Postcondition
-//::         - >-
-//::           snapshot_bug_assigment_never_covered.dfy|Abs|correctness|6,5-6,12|CodeLine
-//::         - >-
-//::           snapshot_bug_assigment_never_covered.dfy|Abs|correctness|8,5-8,11|CodeLine
-//::         - >-
-//::           snapshot_bug_assigment_never_covered.dfy|Abs|correctness|10,1-10,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_assigment_never_covered.dfy|Abs|correctness|3,22-3,22|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_bug_assigment_never_covered.dfy|Abs|correctness|3,19-3,24|Postcondition
-//::         - >-
-//::           snapshot_bug_assigment_never_covered.dfy|Abs|correctness|6,5-6,12|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_bug_assigment_never_covered.dfy|Abs|correctness|2,20-2,23|Postcondition
-//::         - >-
-//::           snapshot_bug_assigment_never_covered.dfy|Abs|correctness|8,5-8,11|CodeLine
-//::         - >-
-//::           snapshot_bug_assigment_never_covered.dfy|Abs|correctness|10,1-10,1|AssertionAutomatic
-//::   calls: []
+//::   provedBy:
+//::     - top: snapshot_bug_assigment_never_covered.dfy|Abs|correctness|2,20-2,23
+//::       provers:
+//::         - snapshot_bug_assigment_never_covered.dfy|Abs|correctness|8,5-8,11
+//::     - top: snapshot_bug_assigment_never_covered.dfy|Abs|correctness|3,19-3,24
+//::       provers:
+//::         - snapshot_bug_assigment_never_covered.dfy|Abs|correctness|6,5-6,12
+//::   proofUnused:
+//::     - top: snapshot_bug_assigment_never_covered.dfy|Abs|correctness|2,20-2,23
+//::       unused:
+//::         - snapshot_bug_assigment_never_covered.dfy|Abs|correctness|3,19-3,24
+//::         - snapshot_bug_assigment_never_covered.dfy|Abs|correctness|6,5-6,12
+//::         - snapshot_bug_assigment_never_covered.dfy|Abs|correctness|10,1-10,1
+//::     - top: snapshot_bug_assigment_never_covered.dfy|Abs|correctness|3,19-3,24
+//::       unused:
+//::         - snapshot_bug_assigment_never_covered.dfy|Abs|correctness|2,20-2,23
+//::         - snapshot_bug_assigment_never_covered.dfy|Abs|correctness|8,5-8,11
+//::         - snapshot_bug_assigment_never_covered.dfy|Abs|correctness|10,1-10,1
+//::   connections: []
 //::

@@ -27,10 +27,9 @@ method SelectionSort(a: array<int>)
 
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 3
@@ -38,16 +37,31 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 3
 //::       col: 51
-//::     prooftext: array is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8290
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 3
@@ -55,16 +69,31 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 3
 //::       col: 40
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40|Postcondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6965
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 3
@@ -72,16 +101,27 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 3
 //::       col: 40
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 3
@@ -89,16 +129,31 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 3
 //::       col: 54
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8588
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 3
@@ -106,16 +161,31 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 3
 //::       col: 59
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8557
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 3
@@ -123,16 +193,31 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 3
 //::       col: 62
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62|Postcondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8776
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 3
@@ -140,16 +225,27 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 3
 //::       col: 62
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 3
@@ -157,16 +253,27 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 3
 //::       col: 62
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 3
@@ -174,16 +281,27 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 3
 //::       col: 62
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: SelectionSort
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 4
@@ -191,16 +309,31 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 4
 //::       col: 20
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12104
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 4
@@ -208,33 +341,40 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 4
 //::       col: 43
-//::     prooftext: array is never null
-//::     isTopAssertion: false
+//::     methodName: SelectionSort
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is always allocated
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is never null
+//::       - array is always allocated
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12306
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43|CodeLine
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 4
-//::       col: 43
-//::     end:
-//::       line: 4
-//::       col: 43
-//::     prooftext: array is always allocated
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49|Postcondition
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 4
@@ -242,83 +382,118 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 4
 //::       col: 49
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: SelectionSort
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,52-3,52|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 3
-//::       col: 52
-//::     end:
-//::       line: 3
-//::       col: 52
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,60-3,60|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 3
-//::       col: 60
-//::     end:
-//::       line: 3
-//::       col: 60
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,40-3,40|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 3
-//::       col: 40
-//::     end:
-//::       line: 3
-//::       col: 40
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: well-formedness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|8,17-8,17|LoopInvariant
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 8
-//::       col: 17
+//::       col: 15
 //::     end:
 //::       line: 8
-//::       col: 17
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
+//::       col: 20
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
+//::     prooftexts:
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 35
+//::       batchOutcome: Valid
+//::       batchResourceCount: 29606
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 6
@@ -326,33 +501,84 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 6
 //::       col: 12
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 8
-//::       col: 15
-//::     end:
-//::       line: 8
-//::       col: 20
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 3
@@ -360,16 +586,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 3
 //::       col: 62
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 48
+//::       batchOutcome: Valid
+//::       batchResourceCount: 18784
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 4
@@ -377,16 +675,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 4
 //::       col: 49
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 49
+//::       batchOutcome: Valid
+//::       batchResourceCount: 17865
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 8
@@ -394,16 +764,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 8
 //::       col: 27
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 65
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15403
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 8
@@ -411,16 +853,84 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 8
 //::       col: 27
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 8
@@ -428,16 +938,89 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 8
 //::       col: 27
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 36
+//::       batchOutcome: Valid
+//::       batchResourceCount: 29410
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 9
@@ -445,16 +1028,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 9
 //::       col: 50
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 64
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16749
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 9
@@ -462,16 +1117,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 9
 //::       col: 61
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 60
+//::       batchOutcome: Valid
+//::       batchResourceCount: 17141
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 9
@@ -479,16 +1206,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 9
 //::       col: 64
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 61
+//::       batchOutcome: Valid
+//::       batchResourceCount: 17984
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 9
@@ -496,16 +1295,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 9
 //::       col: 69
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 62
+//::       batchOutcome: Valid
+//::       batchResourceCount: 17239
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 9
@@ -513,16 +1384,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 9
 //::       col: 72
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 63
+//::       batchOutcome: Valid
+//::       batchResourceCount: 18003
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 9
@@ -530,16 +1473,155 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 9
 //::       col: 72
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 37
+//::       batchOutcome: Valid
+//::       batchResourceCount: 59899
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 10
@@ -547,16 +1629,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 10
 //::       col: 48
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 56
+//::       batchOutcome: Valid
+//::       batchResourceCount: 19276
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 10
@@ -564,16 +1718,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 10
 //::       col: 51
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 57
+//::       batchOutcome: Valid
+//::       batchResourceCount: 20978
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 10
@@ -581,16 +1807,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 10
 //::       col: 56
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 58
+//::       batchOutcome: Valid
+//::       batchResourceCount: 19376
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 10
@@ -598,16 +1896,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 10
 //::       col: 59
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 59
+//::       batchOutcome: Valid
+//::       batchResourceCount: 20636
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 10
@@ -615,16 +1985,155 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 10
 //::       col: 59
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 38
+//::       batchOutcome: Valid
+//::       batchResourceCount: 51751
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 11
@@ -632,16 +2141,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 11
 //::       col: 24
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 50
+//::       batchOutcome: Valid
+//::       batchResourceCount: 20527
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 11
@@ -649,32 +2230,154 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 11
 //::       col: 47
-//::     prooftext: array is never null
-//::     isTopAssertion: false
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is always allocated
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::       - array is never null
+//::       - array is always allocated
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 52
+//::       batchOutcome: Valid
+//::       batchResourceCount: 20747
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 11
-//::       col: 47
-//::     end:
-//::       line: 11
-//::       col: 47
-//::     prooftext: array is always allocated
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 11
@@ -682,16 +2385,155 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 11
 //::       col: 53
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 39
+//::       batchOutcome: Valid
+//::       batchResourceCount: 74219
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 7
@@ -699,15 +2541,286 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 7
 //::       col: 16
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 55
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21056
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 13
@@ -715,16 +2828,279 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 13
 //::       col: 28
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 15
@@ -732,101 +3108,534 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 15
 //::       col: 38
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 15
-//::       col: 17
-//::     end:
-//::       line: 15
-//::       col: 38
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 15
-//::       col: 17
-//::     end:
-//::       line: 15
-//::       col: 22
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 15
-//::       col: 22
-//::     end:
-//::       line: 15
-//::       col: 31
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 15
-//::       col: 31
-//::     end:
-//::       line: 15
-//::       col: 38
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 16
-//::       col: 44
-//::     end:
-//::       line: 16
-//::       col: 44
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 47
+//::       batchOutcome: Valid
+//::       batchResourceCount: 20063
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::     file: snapshot_test_complex_3.dfy
+//::     start:
+//::       line: 15
+//::       col: 17
+//::     end:
+//::       line: 15
+//::       col: 38
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::     file: snapshot_test_complex_3.dfy
+//::     start:
+//::       line: 15
+//::       col: 17
+//::     end:
+//::       line: 15
+//::       col: 22
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 18
+//::       batchOutcome: Valid
+//::       batchResourceCount: 26542
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::     file: snapshot_test_complex_3.dfy
+//::     start:
+//::       line: 15
+//::       col: 22
+//::     end:
+//::       line: 15
+//::       col: 31
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 19
+//::       batchOutcome: Valid
+//::       batchResourceCount: 26519
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::     file: snapshot_test_complex_3.dfy
+//::     start:
+//::       line: 15
+//::       col: 31
+//::     end:
+//::       line: 15
+//::       col: 38
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 20
+//::       batchOutcome: Valid
+//::       batchResourceCount: 23685
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::     file: snapshot_test_complex_3.dfy
+//::     start:
+//::       line: 16
+//::       col: 44
+//::     end:
+//::       line: 16
+//::       col: 44
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 43
+//::       batchOutcome: Valid
+//::       batchResourceCount: 20959
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 16
@@ -834,16 +3643,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 16
 //::       col: 52
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 44
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22054
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 16
@@ -851,16 +3732,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 16
 //::       col: 57
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 45
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21045
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 16
@@ -868,16 +3821,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 16
 //::       col: 60
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 46
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22247
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 16
@@ -885,16 +3910,155 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 16
 //::       col: 60
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 21
+//::       batchOutcome: Valid
+//::       batchResourceCount: 55312
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 14
@@ -902,16 +4066,286 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 14
 //::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 42
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22276
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 18
@@ -919,16 +4353,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 18
 //::       col: 10
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21096
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 18
@@ -936,16 +4442,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 18
 //::       col: 13
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 13
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21327
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 18
@@ -953,16 +4531,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 18
 //::       col: 17
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 14
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21387
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 18
@@ -970,15 +4620,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 18
 //::       col: 25
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 15
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21887
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 19
@@ -986,15 +4709,84 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 19
 //::       col: 20
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 21
@@ -1002,16 +4794,84 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 21
 //::       col: 15
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 14
@@ -1019,15 +4879,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 14
 //::       col: 11
-//::     prooftext: decreases expression is bounded below by 0
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
+//::     prooftexts:
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 16
+//::       batchOutcome: Valid
+//::       batchResourceCount: 23685
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 14
@@ -1035,16 +4968,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 22
 //::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 17
+//::       batchOutcome: Valid
+//::       batchResourceCount: 24019
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 23
@@ -1052,16 +5057,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 23
 //::       col: 5
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 22
+//::       batchOutcome: Valid
+//::       batchResourceCount: 20986
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 23
@@ -1069,16 +5146,154 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 23
 //::       col: 8
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 24
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22049
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 23
@@ -1086,16 +5301,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 23
 //::       col: 11
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 25
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21442
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 23
@@ -1103,16 +5390,220 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 23
 //::       col: 19
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - left-hand sides a[mindex] and a[n] are distinct
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 32
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22874
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 23
@@ -1120,16 +5611,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 23
 //::       col: 24
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 28
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21828
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 23
@@ -1137,15 +5700,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 23
 //::       col: 32
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 29
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22055
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 23
@@ -1153,16 +5789,279 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 23
 //::       col: 39
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 23
@@ -1170,16 +6069,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 23
 //::       col: 35
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 30
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22215
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 23
@@ -1187,31 +6158,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 23
 //::       col: 38
-//::     prooftext: index in range
-//::     isTopAssertion: false
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 31
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22375
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 23
-//::       col: 11
-//::     end:
-//::       line: 23
-//::       col: 19
-//::     prooftext: left-hand sides a[mindex] and a[n] are distinct
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 24
@@ -1219,16 +6247,84 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 24
 //::       col: 13
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 7
@@ -1236,15 +6332,88 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 7
 //::       col: 9
-//::     prooftext: decreases expression is bounded below by 0
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
+//::     prooftexts:
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 33
+//::       batchOutcome: Valid
+//::       batchResourceCount: 31303
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
 //::       line: 7
@@ -1252,4208 +6421,2820 @@ method SelectionSort(a: array<int>)
 //::     end:
 //::       line: 25
 //::       col: 3
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: SelectionSort
 //::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|8,22-8,22|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 8
-//::       col: 22
-//::     end:
-//::       line: 8
-//::       col: 22
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,15|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 9
-//::       col: 15
-//::     end:
-//::       line: 9
-//::       col: 15
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,15|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 10
-//::       col: 15
-//::     end:
-//::       line: 10
-//::       col: 15
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|11,31-11,31|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 11
-//::       col: 31
-//::     end:
-//::       line: 11
-//::       col: 31
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|7,16-7,16|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 7
-//::       col: 16
-//::     end:
-//::       line: 7
-//::       col: 16
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 34
+//::       batchOutcome: Valid
+//::       batchResourceCount: 32739
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|15,19-15,19|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 15
-//::       col: 19
-//::     end:
-//::       line: 15
-//::       col: 19
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|15,29-15,29|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 15
-//::       col: 29
-//::     end:
-//::       line: 15
-//::       col: 29
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|15,33-15,33|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 15
-//::       col: 33
-//::     end:
-//::       line: 15
-//::       col: 33
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,17|LoopInvariant
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 16
-//::       col: 17
-//::     end:
-//::       line: 16
-//::       col: 17
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|14,18-14,18|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 14
-//::       col: 18
-//::     end:
-//::       line: 14
-//::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|18,11-18,11|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 18
-//::       col: 11
-//::     end:
-//::       line: 18
-//::       col: 11
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|18,18-18,18|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 18
-//::       col: 18
-//::     end:
-//::       line: 18
-//::       col: 18
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-14,5|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 14
-//::       col: 5
-//::     end:
-//::       line: 14
-//::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,6-23,6|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 23
-//::       col: 6
-//::     end:
-//::       line: 23
-//::       col: 6
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,12-23,12|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 23
-//::       col: 12
-//::     end:
-//::       line: 23
-//::       col: 12
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,25-23,25|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 23
-//::       col: 25
-//::     end:
-//::       line: 23
-//::       col: 25
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|23,36-23,36|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 23
-//::       col: 36
-//::     end:
-//::       line: 23
-//::       col: 36
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-7,3|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 7
-//::       col: 3
-//::     end:
-//::       line: 7
-//::       col: 3
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|16,45-16,45|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 16
-//::       col: 45
-//::     end:
-//::       line: 16
-//::       col: 45
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|16,58-16,58|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 16
-//::       col: 58
-//::     end:
-//::       line: 16
-//::       col: 58
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|15,38-15,38|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 15
-//::       col: 38
-//::     end:
-//::       line: 15
-//::       col: 38
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,11|Postcondition
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 3
-//::       col: 11
-//::     end:
-//::       line: 3
-//::       col: 11
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|4,27-4,27|Postcondition
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 4
-//::       col: 27
-//::     end:
-//::       line: 4
-//::       col: 27
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|10,49-10,49|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 10
-//::       col: 49
-//::     end:
-//::       line: 10
-//::       col: 49
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|10,57-10,57|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 10
-//::       col: 57
-//::     end:
-//::       line: 10
-//::       col: 57
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|9,62-9,62|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 9
-//::       col: 62
-//::     end:
-//::       line: 9
-//::       col: 62
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|9,70-9,70|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 9
-//::       col: 70
-//::     end:
-//::       line: 9
-//::       col: 70
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|9,50-9,50|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 9
-//::       col: 50
-//::     end:
-//::       line: 9
-//::       col: 50
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
-//::   - id: >-
-//::       snapshot_test_complex_3.dfy|SelectionSort|correctness|8,27-8,27|AssertionAutomatic
-//::     file: snapshot_test_complex_3.dfy
-//::     start:
-//::       line: 8
-//::       col: 27
-//::     end:
-//::       line: 8
-//::       col: 27
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: SelectionSort
-//::     methodType: correctness
-//::     assertionGroup: SelectionSort
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,52-3,52|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,60-3,60|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,40-3,40|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|8,17-8,17|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|8,22-8,22|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,15|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,15|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|11,31-11,31|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|7,16-7,16|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|15,19-15,19|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|15,29-15,29|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|15,33-15,33|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,17|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|14,18-14,18|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|18,11-18,11|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|18,18-18,18|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-14,5|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|23,6-23,6|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|23,12-23,12|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|23,25-23,25|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|23,36-23,36|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-7,3|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|16,45-16,45|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|16,58-16,58|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|15,38-15,38|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,11|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|4,27-4,27|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|10,49-10,49|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|10,57-10,57|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|9,62-9,62|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|9,70-9,70|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|9,50-9,50|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_3.dfy|SelectionSort|correctness|8,27-8,27|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49|Postcondition
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3|CodeLine
-//::   calls: []
+//::   provedBy:
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::   proofUnused:
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,38-3,40
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,40
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,54
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,59-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,51-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,20-4,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,43-4,43
+//::         - snapshot_test_complex_3.dfy|SelectionSort|well-formedness|4,11-4,49
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
+//::       unused:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,69
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,69-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,51
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,56
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,56-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,35
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
+//::   connections: []
 //::

@@ -19,7 +19,7 @@ method Main() {
 // Changed to uncovered hust for bug test to pass (it must give an error)
 //::: L2 - CovComplete
 //::: L3 - CovTest
-//::: L8 - CovComplete
+//::: L8 - CovTest
 
 
 

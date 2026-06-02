@@ -15,10 +15,9 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12|AssertionAutomatic
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 2
@@ -26,33 +25,51 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 2
 //::       col: 12
-//::     prooftext: array is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 2
-//::       col: 27
-//::     end:
-//::       line: 2
-//::       col: 27
-//::     prooftext: array is never null
-//::     isTopAssertion: false
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6742
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
+//::     file: snapshot_test_lurking_axioms.dfy
+//::     start:
+//::       line: 2
+//::       col: 27
+//::     end:
+//::       line: 2
+//::       col: 27
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31|Postcondition
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6861
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 2
@@ -60,33 +77,21 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 2
 //::       col: 31
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|4,18-4,18|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 4
-//::       col: 18
-//::     end:
-//::       line: 4
-//::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 4
@@ -94,16 +99,50 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 4
 //::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4956
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 2
@@ -111,15 +150,50 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 2
 //::       col: 31
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 21
+//::       batchOutcome: Valid
+//::       batchResourceCount: 38194
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 4
@@ -127,15 +201,50 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 4
 //::       col: 25
-//::     prooftext: array size is never negative
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
+//::     prooftexts:
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5865
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 4
@@ -143,15 +252,46 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 4
 //::       col: 27
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 5
@@ -159,16 +299,46 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 5
 //::       col: 12
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 7
@@ -176,86 +346,334 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 7
 //::       col: 27
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
+//::     methodName: append
+//::     methodType: correctness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 7
-//::       col: 15
-//::     end:
-//::       line: 7
-//::       col: 27
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 7
-//::       col: 15
-//::     end:
-//::       line: 7
-//::       col: 20
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 7
-//::       col: 20
-//::     end:
-//::       line: 7
-//::       col: 27
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 8
-//::       col: 40
-//::     end:
-//::       line: 8
-//::       col: 40
-//::     prooftext: >-
-//::       variable 'c', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 27
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13197
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::     file: snapshot_test_lurking_axioms.dfy
+//::     start:
+//::       line: 7
+//::       col: 15
+//::     end:
+//::       line: 7
+//::       col: 27
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::     file: snapshot_test_lurking_axioms.dfy
+//::     start:
+//::       line: 7
+//::       col: 15
+//::     end:
+//::       line: 7
+//::       col: 20
+//::     methodName: append
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 14
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16216
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::     file: snapshot_test_lurking_axioms.dfy
+//::     start:
+//::       line: 7
+//::       col: 20
+//::     end:
+//::       line: 7
+//::       col: 27
+//::     methodName: append
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 15
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16331
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::     file: snapshot_test_lurking_axioms.dfy
+//::     start:
+//::       line: 8
+//::       col: 40
+//::     end:
+//::       line: 8
+//::       col: 40
+//::     methodName: append
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 23
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14196
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 8
@@ -263,16 +681,50 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 8
 //::       col: 44
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 24
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14772
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 8
@@ -280,16 +732,50 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 8
 //::       col: 47
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 25
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14283
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 8
@@ -297,16 +783,50 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 8
 //::       col: 51
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 26
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14628
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 8
@@ -314,16 +834,79 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 8
 //::       col: 51
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 16
+//::       batchOutcome: Valid
+//::       batchResourceCount: 23064
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 6
@@ -331,16 +914,106 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 6
 //::       col: 16
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 22
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15212
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 10
@@ -348,18 +1021,131 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 10
 //::       col: 5
-//::     prooftext: >-
-//::       variable 'c', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14586
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 10
@@ -367,16 +1153,78 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 10
 //::       col: 8
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15035
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 10
@@ -384,16 +1232,50 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 10
 //::       col: 13
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14904
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 10
@@ -401,15 +1283,50 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 10
 //::       col: 16
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 11
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15068
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 10
@@ -417,15 +1334,73 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 10
 //::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 11
@@ -433,15 +1408,46 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 11
 //::       col: 11
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 6
@@ -449,16 +1455,50 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 12
 //::       col: 3
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 13
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15955
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 13
@@ -466,18 +1506,131 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 13
 //::       col: 3
-//::     prooftext: >-
-//::       variable 'c', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 17
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14301
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 13
@@ -485,16 +1638,50 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 13
 //::       col: 7
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 18
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14367
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 13
@@ -502,15 +1689,78 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 13
 //::       col: 13
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 20
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14978
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 13
@@ -518,16 +1768,73 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 13
 //::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: append
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
+//::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
 //::       line: 14
@@ -535,1098 +1842,709 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 14
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'c', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: append
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|4,24-4,24|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 4
-//::       col: 24
-//::     end:
-//::       line: 4
-//::       col: 24
-//::     prooftext: array size is never negative
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|7,17-7,17|LoopInvariant
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 7
-//::       col: 17
-//::     end:
-//::       line: 7
-//::       col: 17
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|7,22-7,22|LoopInvariant
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 7
-//::       col: 22
-//::     end:
-//::       line: 7
-//::       col: 22
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,15|LoopInvariant
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 8
-//::       col: 15
-//::     end:
-//::       line: 8
-//::       col: 15
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|6,16-6,16|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 6
-//::       col: 16
-//::     end:
-//::       line: 6
-//::       col: 16
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|10,6-10,6|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 10
-//::       col: 6
-//::     end:
-//::       line: 10
-//::       col: 6
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|10,14-10,14|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 10
-//::       col: 14
-//::     end:
-//::       line: 10
-//::       col: 14
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|6,3-6,3|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 6
-//::       col: 3
-//::     end:
-//::       line: 6
-//::       col: 3
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|13,7-13,7|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 13
-//::       col: 7
-//::     end:
-//::       line: 13
-//::       col: 7
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|13,4-13,4|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 13
-//::       col: 4
-//::     end:
-//::       line: 13
-//::       col: 4
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|2,24-2,24|Postcondition
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 2
-//::       col: 24
-//::     end:
-//::       line: 2
-//::       col: 24
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|8,41-8,41|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 8
-//::       col: 41
-//::     end:
-//::       line: 8
-//::       col: 41
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|8,48-8,48|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 8
-//::       col: 48
-//::     end:
-//::       line: 8
-//::       col: 48
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_test_lurking_axioms.dfy|append|correctness|7,27-7,27|AssertionAutomatic
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 7
-//::       col: 27
-//::     end:
-//::       line: 7
-//::       col: 27
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31|Postcondition
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|4,18-4,18|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|4,24-4,24|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|7,17-7,17|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|7,22-7,22|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,15|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|6,16-6,16|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|10,6-10,6|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|10,14-10,14|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|6,3-6,3|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|13,7-13,7|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|13,4-13,4|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|2,24-2,24|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|8,41-8,41|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|8,48-8,48|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_lurking_axioms.dfy|append|correctness|7,27-7,27|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31|Postcondition
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18|AssertionAutomatic
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11|CodeLine
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17|CodeLine
-//::         - >-
-//::           snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1|AssertionAutomatic
-//::   calls: []
+//::   provedBy:
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::   proofUnused:
+//::     - top: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
+//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
+//::     - top: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
+//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::       unused:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,18
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,47
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,47-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::   connections: []
 //::

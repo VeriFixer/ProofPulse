@@ -125,27 +125,9 @@ method testingMethod() {
 
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|prime|well-formedness|4,41-4,41|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 4
-//::       col: 41
-//::     end:
-//::       line: 4
-//::       col: 41
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: prime
-//::     methodType: well-formedness
-//::     assertionGroup: prime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|prime|well-formedness|4,39-4,43|CodeLine
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|prime|well-formedness|4,39-4,43
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 4
@@ -153,15 +135,24 @@ method testingMethod() {
 //::     end:
 //::       line: 4
 //::       col: 43
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: prime
 //::     methodType: well-formedness
-//::     assertionGroup: prime
-//::   - id: snapshot_bug_big_file_prime_db.dfy|prime|well-formedness|4,3-4,50|CodeLine
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3776
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|prime|well-formedness|4,3-4,50
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 4
@@ -169,50 +160,21 @@ method testingMethod() {
 //::     end:
 //::       line: 4
 //::       col: 50
-//::     prooftext: function call result
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: prime
 //::     methodType: well-formedness
-//::     assertionGroup: prime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,19-15,19|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 15
-//::       col: 19
-//::     end:
-//::       line: 15
-//::       col: 19
-//::     prooftext: sufficient reads clause to read field
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.Valid
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|CodeLine
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 15
-//::       col: 3
-//::     end:
-//::       line: 19
-//::       col: 3
-//::     prooftext: sufficient reads clause to read field
-//::     isTopAssertion: false
+//::     prooftexts:
+//::       - function call result
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.Valid
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 15
@@ -220,16 +182,89 @@ method testingMethod() {
 //::     end:
 //::       line: 19
 //::       col: 3
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.Valid
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49|CodeLine
+//::     prooftexts:
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - ensures clause
+//::       - loop or recursion terminates
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - function call result
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - ensures clause
+//::       - sufficient reads clause to read field
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - function call result
+//::       - ensures clause
+//::       - sufficient reads clause to read field
+//::       - loop or recursion terminates
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - function call result
+//::       - ensures clause
+//::       - sufficient reads clause to read field
+//::       - loop or recursion terminates
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - function call result
+//::       - ensures clause
+//::       - sufficient reads clause to read field
+//::       - loop or recursion terminates
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - function call result
+//::       - ensures clause
+//::       - sufficient reads clause to read field
+//::       - loop or recursion terminates
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - function call result
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - function call result
+//::       - sufficient reads clause to read field
+//::       - loop or recursion terminates
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - sufficient reads clause to read field
+//::       - loop or recursion terminates
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - function call result
+//::       - ensures clause
+//::       - sufficient reads clause to read field
+//::       - loop or recursion terminates
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - function call result
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 24931
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 18
@@ -237,16 +272,67 @@ method testingMethod() {
 //::     end:
 //::       line: 18
 //::       col: 49
-//::     prooftext: element is in domain
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.Valid
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1|CodeLine
+//::     prooftexts:
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 19849
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,70-18,70
+//::     file: snapshot_bug_big_file_prime_db.dfy
+//::     start:
+//::       line: 18
+//::       col: 70
+//::     end:
+//::       line: 18
+//::       col: 70
+//::     methodName: PrimeMap.Valid
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 19932
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 10
@@ -254,16 +340,43 @@ method testingMethod() {
 //::     end:
 //::       line: 92
 //::       col: 1
-//::     prooftext: sufficient reads clause to read field
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.Valid
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21|CodeLine
+//::     prooftexts:
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 24600
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 18
@@ -271,152 +384,113 @@ method testingMethod() {
 //::     end:
 //::       line: 18
 //::       col: 21
-//::     prooftext: sufficient reads clause to read field
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.Valid
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39|CodeLine
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 18
-//::       col: 39
-//::     end:
-//::       line: 18
-//::       col: 39
-//::     prooftext: sufficient reads clause to read field
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.Valid
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,24-10,24|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 10
-//::       col: 24
-//::     end:
-//::       line: 10
-//::       col: 24
-//::     prooftext: sufficient reads clause to read field
-//::     isTopAssertion: true
+//::     prooftexts:
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 25116
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.Valid
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21|AssertionAutomatic
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 18
+//::       col: 39
+//::     end:
+//::       line: 18
+//::       col: 39
+//::     methodName: PrimeMap.Valid
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::       - sufficient reads clause to read field
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 25223
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,17-25,21
+//::     file: snapshot_bug_big_file_prime_db.dfy
+//::     start:
+//::       line: 25
+//::       col: 17
+//::     end:
+//::       line: 25
 //::       col: 21
-//::     end:
-//::       line: 18
-//::       col: 21
-//::     prooftext: sufficient reads clause to read field
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.Valid
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 18
-//::       col: 39
-//::     end:
-//::       line: 18
-//::       col: 39
-//::     prooftext: sufficient reads clause to read field
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.Valid
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,19-15,19|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 15
-//::       col: 19
-//::     end:
-//::       line: 15
-//::       col: 19
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.Valid
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,47-18,47|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 18
-//::       col: 47
-//::     end:
-//::       line: 18
-//::       col: 47
-//::     prooftext: element is in domain
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.Valid
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.Valid
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|10,24-10,24|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 10
-//::       col: 24
-//::     end:
-//::       line: 10
-//::       col: 24
-//::     prooftext: an object is in the enclosing context's modifies clause
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap._ctor
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap._ctor
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|10,1-92,1|CodeLine
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 10
-//::       col: 1
-//::     end:
-//::       line: 92
-//::       col: 1
-//::     prooftext: an object is in the enclosing context's modifies clause
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::     prooftexts:
+//::       - >-
+//::         value of expression (of type 'map<int, bool>') is always an instance of
+//::         type 'map<nat, bool>'
+//::       - >-
+//::         value of expression (of type 'map<int, bool>') is always an instance of
+//::         type 'map<nat, bool>'
+//::       - >-
+//::         value of expression (of type 'map<int, bool>') is always an instance of
+//::         type 'map<nat, bool>'
+//::       - >-
+//::         value of expression (of type 'map<int, bool>') is always an instance of
+//::         type 'map<nat, bool>'
+//::       - >-
+//::         value of expression (of type 'map<int, bool>') is always an instance of
+//::         type 'map<nat, bool>'
+//::       - >-
+//::         value of expression (of type 'map<int, bool>') is always an instance of
+//::         type 'map<nat, bool>'
+//::       - >-
+//::         value of expression (of type 'map<int, bool>') is always an instance of
+//::         type 'map<nat, bool>'
+//::       - >-
+//::         value of expression (of type 'map<int, bool>') is always an instance of
+//::         type 'map<nat, bool>'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9659
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap._ctor
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap._ctor
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3|Postcondition
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 22
@@ -424,16 +498,68 @@ method testingMethod() {
 //::     end:
 //::       line: 26
 //::       col: 3
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap._ctor
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap._ctor
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,13-23,29|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - this postcondition holds
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - assignment (or return)
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - assignment (or return)
+//::       - this postcondition holds
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - assignment (or return)
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 28505
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,13-23,29
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 23
@@ -441,16 +567,30 @@ method testingMethod() {
 //::     end:
 //::       line: 23
 //::       col: 29
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap._ctor
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap._ctor
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,5-25,22|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 36111
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,5-25,22
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 25
@@ -458,50 +598,57 @@ method testingMethod() {
 //::     end:
 //::       line: 25
 //::       col: 22
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: PrimeMap._ctor
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap._ctor
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap._ctor
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3|CodeLine
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|10,1-92,1
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
-//::       line: 22
-//::       col: 3
+//::       line: 10
+//::       col: 1
 //::     end:
-//::       line: 26
-//::       col: 3
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::       line: 92
+//::       col: 1
+//::     methodName: PrimeMap._ctor
+//::     methodType: correctness
+//::     prooftexts:
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 19773
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap._ctor
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap._ctor
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-22,3|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 22
-//::       col: 3
-//::     end:
-//::       line: 22
-//::       col: 3
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap._ctor
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap._ctor
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|15,3-19,3|CodeLine
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|15,3-19,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 15
@@ -509,50 +656,21 @@ method testingMethod() {
 //::     end:
 //::       line: 19
 //::       col: 3
-//::     prooftext: function definition for Valid
-//::     isTopAssertion: false
+//::     methodName: PrimeMap._ctor
+//::     methodType: correctness
+//::     prooftexts:
+//::       - function definition for Valid
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap._ctor
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap._ctor
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,22-23,22|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 23
-//::       col: 22
-//::     end:
-//::       line: 23
-//::       col: 22
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap._ctor
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap._ctor
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|10,24-10,24|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 10
-//::       col: 24
-//::     end:
-//::       line: 10
-//::       col: 24
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|10,1-92,1|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|10,1-92,1
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 10
@@ -560,16 +678,35 @@ method testingMethod() {
 //::     end:
 //::       line: 92
 //::       col: 1
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertPrime
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3|Precondition
+//::     prooftexts:
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 23570
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 29
@@ -577,16 +714,29 @@ method testingMethod() {
 //::     end:
 //::       line: 36
 //::       col: 3
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.InsertPrime
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|32,14-32,21|Precondition
+//::     prooftexts:
+//::       - method requires clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method requires clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method requires clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|32,14-32,21
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 32
@@ -594,33 +744,23 @@ method testingMethod() {
 //::     end:
 //::       line: 32
 //::       col: 21
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.InsertPrime
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Precondition
-//::     covStatus: Uncovered
+//::     topMeta: null
+//::     covStatus: CovTest
 //::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 29
-//::       col: 3
-//::     end:
-//::       line: 36
-//::       col: 3
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,34|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,34
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 31
@@ -628,16 +768,35 @@ method testingMethod() {
 //::     end:
 //::       line: 31
 //::       col: 34
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::     methodName: PrimeMap.InsertPrime
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 24405
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,43|CodeLine
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,43
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 31
@@ -645,16 +804,35 @@ method testingMethod() {
 //::     end:
 //::       line: 31
 //::       col: 43
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertPrime
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,13-31,53|Postcondition
+//::     prooftexts:
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 25348
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,13-31,53
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 31
@@ -662,16 +840,23 @@ method testingMethod() {
 //::     end:
 //::       line: 31
 //::       col: 53
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.InsertPrime
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|33,13-33,43|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|33,13-33,43
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 33
@@ -679,50 +864,23 @@ method testingMethod() {
 //::     end:
 //::       line: 33
 //::       col: 43
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.InsertPrime
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,34|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 31
-//::       col: 34
-//::     end:
-//::       line: 31
-//::       col: 34
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,43-31,43|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 31
-//::       col: 43
-//::     end:
-//::       line: 31
-//::       col: 43
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5|AssertionAutomatic
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 35
@@ -730,33 +888,31 @@ method testingMethod() {
 //::     end:
 //::       line: 35
 //::       col: 5
-//::     prooftext: an object is in the enclosing context's modifies clause
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertPrime
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5|CodeLine
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 35
-//::       col: 5
-//::     end:
-//::       line: 35
-//::       col: 5
-//::     prooftext: an object is in the enclosing context's modifies clause
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::     prooftexts:
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22531
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3|Precondition
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 29
@@ -764,16 +920,62 @@ method testingMethod() {
 //::     end:
 //::       line: 36
 //::       col: 3
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertPrime
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21|Precondition
+//::     prooftexts:
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 33603
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 32
@@ -781,33 +983,27 @@ method testingMethod() {
 //::     end:
 //::       line: 32
 //::       col: 21
-//::     prooftext: requires clause
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.InsertPrime
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 29
-//::       col: 3
-//::     end:
-//::       line: 36
-//::       col: 3
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,13-31,53|Postcondition
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,13-31,53
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 31
@@ -815,16 +1011,31 @@ method testingMethod() {
 //::     end:
 //::       line: 31
 //::       col: 53
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertPrime
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,13-33,43|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 40276
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,13-33,43
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 33
@@ -832,16 +1043,31 @@ method testingMethod() {
 //::     end:
 //::       line: 33
 //::       col: 43
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertPrime
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 49457
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 35
@@ -849,84 +1075,34 @@ method testingMethod() {
 //::     end:
 //::       line: 35
 //::       col: 36
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.InsertPrime
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,10-29,10|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 29
-//::       col: 10
-//::     end:
-//::       line: 29
-//::       col: 10
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,27-31,27|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 31
-//::       col: 27
-//::     end:
-//::       line: 31
-//::       col: 27
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,22-33,22|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 33
-//::       col: 22
-//::     end:
-//::       line: 33
-//::       col: 22
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertPrime
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertPrime
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|10,24-10,24|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 10
-//::       col: 24
-//::     end:
-//::       line: 10
-//::       col: 24
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|10,1-92,1|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|10,1-92,1
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 10
@@ -934,16 +1110,35 @@ method testingMethod() {
 //::     end:
 //::       line: 92
 //::       col: 1
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3|Precondition
+//::     prooftexts:
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 23316
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 39
@@ -951,33 +1146,29 @@ method testingMethod() {
 //::     end:
 //::       line: 48
 //::       col: 3
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.InsertNumber
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method requires clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method requires clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Precondition
-//::     covStatus: Uncovered
+//::     topMeta: null
+//::     covStatus: CovTest
 //::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 39
-//::       col: 3
-//::     end:
-//::       line: 48
-//::       col: 3
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,34|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,34
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 41
@@ -985,16 +1176,35 @@ method testingMethod() {
 //::     end:
 //::       line: 41
 //::       col: 34
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::     methodName: PrimeMap.InsertNumber
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 24148
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,43|CodeLine
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,43
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 41
@@ -1002,16 +1212,35 @@ method testingMethod() {
 //::     end:
 //::       line: 41
 //::       col: 43
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,13-41,53|Postcondition
+//::     prooftexts:
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 25022
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,13-41,53
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 41
@@ -1019,16 +1248,23 @@ method testingMethod() {
 //::     end:
 //::       line: 41
 //::       col: 53
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|42,13-42,57|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|42,13-42,57
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 42
@@ -1036,16 +1272,23 @@ method testingMethod() {
 //::     end:
 //::       line: 42
 //::       col: 57
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|43,13-43,59|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|43,13-43,59
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 43
@@ -1053,84 +1296,23 @@ method testingMethod() {
 //::     end:
 //::       line: 43
 //::       col: 59
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.InsertNumber
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,34|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 41
-//::       col: 34
-//::     end:
-//::       line: 41
-//::       col: 34
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,43-41,43|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 41
-//::       col: 43
-//::     end:
-//::       line: 41
-//::       col: 43
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,27-46,27|Precondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 46
-//::       col: 27
-//::     end:
-//::       line: 46
-//::       col: 27
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Precondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 39
-//::       col: 3
-//::     end:
-//::       line: 48
-//::       col: 3
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|Call
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 46
@@ -1138,18 +1320,160 @@ method testingMethod() {
 //::     end:
 //::       line: 46
 //::       col: 30
-//::     prooftext: >-
-//::       requires clause at snapshot_bug_big_file_prime_db.dfy(70,3)-(91,3) from
-//::       call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|70,3-91,3|Precondition
+//::     prooftexts:
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(70,3)-(91,3) from
+//::         call
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(70,3)-(91,3) from
+//::         call
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(70,3)-(91,3) from
+//::         call
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(71,16)-(71,21)
+//::         from call
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(72,15)-(72,34) from
+//::         call
+//::       - call
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(72,15)-(72,34) from
+//::         call
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(72,15)-(72,34) from
+//::         call
+//::       - call
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22197
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3
+//::     file: snapshot_bug_big_file_prime_db.dfy
+//::     start:
+//::       line: 39
+//::       col: 3
+//::     end:
+//::       line: 48
+//::       col: 3
+//::     methodName: PrimeMap.InsertNumber
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 36547
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|70,3-91,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 70
@@ -1157,33 +1481,23 @@ method testingMethod() {
 //::     end:
 //::       line: 91
 //::       col: 3
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 39
-//::       col: 3
-//::     end:
-//::       line: 48
-//::       col: 3
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Precondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53|Postcondition
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 41
@@ -1191,16 +1505,36 @@ method testingMethod() {
 //::     end:
 //::       line: 41
 //::       col: 53
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 42940
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 42
@@ -1208,16 +1542,36 @@ method testingMethod() {
 //::     end:
 //::       line: 42
 //::       col: 57
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 11
+//::       batchOutcome: Valid
+//::       batchResourceCount: 53317
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 43
@@ -1225,33 +1579,36 @@ method testingMethod() {
 //::     end:
 //::       line: 43
 //::       col: 59
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.InsertNumber
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 56967
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|CodeLine
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 46
-//::       col: 5
-//::     end:
-//::       line: 46
-//::       col: 30
-//::     prooftext: call
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 47
@@ -1259,35 +1616,93 @@ method testingMethod() {
 //::     end:
 //::       line: 47
 //::       col: 5
-//::     prooftext: an object is in the enclosing context's modifies clause
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 47
-//::       col: 31
-//::     end:
-//::       line: 47
-//::       col: 31
-//::     prooftext: >-
-//::       variable 'prime', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
+//::     prooftexts:
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::       - field is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 25449
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31
+//::     file: snapshot_bug_big_file_prime_db.dfy
+//::     start:
+//::       line: 47
+//::       col: 31
+//::     end:
+//::       line: 47
+//::       col: 31
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'prime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 47
@@ -1295,16 +1710,44 @@ method testingMethod() {
 //::     end:
 //::       line: 47
 //::       col: 37
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|71,16-71,21|Precondition
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|71,16-71,21
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 71
@@ -1312,50 +1755,21 @@ method testingMethod() {
 //::     end:
 //::       line: 71
 //::       col: 21
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 47
-//::       col: 5
-//::     end:
-//::       line: 47
-//::       col: 5
-//::     prooftext: an object is in the enclosing context's modifies clause
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
+//::     prooftexts:
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Precondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,10-39,10|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 39
-//::       col: 10
-//::     end:
-//::       line: 39
-//::       col: 10
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|72,15-72,34|Postcondition
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|72,15-72,34
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 72
@@ -1363,101 +1777,23 @@ method testingMethod() {
 //::     end:
 //::       line: 72
 //::       col: 34
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.InsertNumber
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|15,3-19,3|CodeLine
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 15
-//::       col: 3
-//::     end:
-//::       line: 19
-//::       col: 3
-//::     prooftext: function definition for Valid
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,27-41,27|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 41
-//::       col: 27
-//::     end:
-//::       line: 41
-//::       col: 27
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,22-42,22|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 42
-//::       col: 22
-//::     end:
-//::       line: 42
-//::       col: 22
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,23-43,23|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 43
-//::       col: 23
-//::     end:
-//::       line: 43
-//::       col: 23
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.InsertNumber
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.InsertNumber
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|10,24-10,24|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 10
-//::       col: 24
-//::     end:
-//::       line: 10
-//::       col: 24
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|10,1-92,1|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|10,1-92,1
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 10
@@ -1465,16 +1801,35 @@ method testingMethod() {
 //::     end:
 //::       line: 92
 //::       col: 1
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.IsPrime?
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3|Precondition
+//::     prooftexts:
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 24532
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 52
@@ -1482,33 +1837,29 @@ method testingMethod() {
 //::     end:
 //::       line: 65
 //::       col: 3
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.IsPrime?
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method requires clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method requires clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Precondition
-//::     covStatus: Uncovered
+//::     topMeta: null
+//::     covStatus: CovTest
 //::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 52
-//::       col: 3
-//::     end:
-//::       line: 65
-//::       col: 3
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,36|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,36
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 53
@@ -1516,16 +1867,35 @@ method testingMethod() {
 //::     end:
 //::       line: 53
 //::       col: 36
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::     methodName: PrimeMap.IsPrime?
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 25323
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,45|CodeLine
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,45
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 53
@@ -1533,16 +1903,35 @@ method testingMethod() {
 //::     end:
 //::       line: 53
 //::       col: 45
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.IsPrime?
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,15-53,49|Postcondition
+//::     prooftexts:
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::       - >-
+//::         receiver is always allocated in the state in which its fields are
+//::         accessed
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 26162
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,15-53,49
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 53
@@ -1550,16 +1939,23 @@ method testingMethod() {
 //::     end:
 //::       line: 53
 //::       col: 49
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.IsPrime?
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|54,15-54,58|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|54,15-54,58
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 54
@@ -1567,16 +1963,23 @@ method testingMethod() {
 //::     end:
 //::       line: 54
 //::       col: 58
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.IsPrime?
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|55,15-55,59|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|55,15-55,59
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 55
@@ -1584,16 +1987,23 @@ method testingMethod() {
 //::     end:
 //::       line: 55
 //::       col: 59
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.IsPrime?
 //::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|56,15-56,47|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|56,15-56,47
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 56
@@ -1601,67 +2011,23 @@ method testingMethod() {
 //::     end:
 //::       line: 56
 //::       col: 47
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.IsPrime?
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,36|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 53
-//::       col: 36
-//::     end:
-//::       line: 53
-//::       col: 36
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,45-53,45|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 53
-//::       col: 45
-//::     end:
-//::       line: 53
-//::       col: 45
-//::     prooftext: receiver is always allocated in the state in which its fields are accessed
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: well-formedness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,23-60,23|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 60
-//::       col: 23
-//::     end:
-//::       line: 60
-//::       col: 23
-//::     prooftext: element is in domain
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 60
@@ -1669,16 +2035,49 @@ method testingMethod() {
 //::     end:
 //::       line: 60
 //::       col: 25
-//::     prooftext: element is in domain
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.IsPrime?
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Precondition
+//::     prooftexts:
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 23659
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 52
@@ -1686,33 +2085,169 @@ method testingMethod() {
 //::     end:
 //::       line: 65
 //::       col: 3
-//::     prooftext: requires clause
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.IsPrime?
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - this postcondition holds
+//::       - this postcondition holds
+//::       - this postcondition holds
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Precondition
+//::     topMeta:
+//::       batchIndex: 31
+//::       batchOutcome: Valid
+//::       batchResourceCount: 24476
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 52
-//::       col: 3
-//::     end:
-//::       line: 65
-//::       col: 3
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49|Postcondition
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 53
@@ -1720,16 +2255,53 @@ method testingMethod() {
 //::     end:
 //::       line: 53
 //::       col: 49
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.IsPrime?
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 32
+//::       batchOutcome: Valid
+//::       batchResourceCount: 25351
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 54
@@ -1737,16 +2309,53 @@ method testingMethod() {
 //::     end:
 //::       line: 54
 //::       col: 58
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.IsPrime?
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 33
+//::       batchOutcome: Valid
+//::       batchResourceCount: 27783
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 55
@@ -1754,16 +2363,53 @@ method testingMethod() {
 //::     end:
 //::       line: 55
 //::       col: 59
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.IsPrime?
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 34
+//::       batchOutcome: Valid
+//::       batchResourceCount: 27978
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 56
@@ -1771,16 +2417,53 @@ method testingMethod() {
 //::     end:
 //::       line: 56
 //::       col: 47
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.IsPrime?
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 35
+//::       batchOutcome: Valid
+//::       batchResourceCount: 28016
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 59
@@ -1788,35 +2471,124 @@ method testingMethod() {
 //::     end:
 //::       line: 59
 //::       col: 21
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.IsPrime?
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 59
-//::       col: 7
-//::     end:
-//::       line: 59
-//::       col: 21
-//::     prooftext: >-
-//::       out-parameter 'answer', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 61
@@ -1824,35 +2596,124 @@ method testingMethod() {
 //::     end:
 //::       line: 61
 //::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.IsPrime?
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 61
-//::       col: 7
-//::     end:
-//::       line: 61
-//::       col: 17
-//::     prooftext: >-
-//::       out-parameter 'answer', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 62
@@ -1860,16 +2721,50 @@ method testingMethod() {
 //::     end:
 //::       line: 62
 //::       col: 25
-//::     prooftext: element is in domain
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.IsPrime?
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|CodeLine
+//::     prooftexts:
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::       - element is in domain
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 24018
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 63
@@ -1877,35 +2772,123 @@ method testingMethod() {
 //::     end:
 //::       line: 63
 //::       col: 16
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.IsPrime?
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 63
-//::       col: 7
-//::     end:
-//::       line: 63
-//::       col: 16
-//::     prooftext: >-
-//::       out-parameter 'answer', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3|AssertionAutomatic
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 65
@@ -1913,154 +2896,104 @@ method testingMethod() {
 //::     end:
 //::       line: 65
 //::       col: 3
-//::     prooftext: >-
-//::       out-parameter 'answer', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.IsPrime?
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'answer', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22982
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,23-62,23|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 62
-//::       col: 23
-//::     end:
-//::       line: 62
-//::       col: 23
-//::     prooftext: element is in domain
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,10-52,10|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 52
-//::       col: 10
-//::     end:
-//::       line: 52
-//::       col: 10
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,29-53,29|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 53
-//::       col: 29
-//::     end:
-//::       line: 53
-//::       col: 29
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,43-54,43|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 54
-//::       col: 43
-//::     end:
-//::       line: 54
-//::       col: 43
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,44-55,44|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 55
-//::       col: 44
-//::     end:
-//::       line: 55
-//::       col: 44
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,32-56,32|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 56
-//::       col: 32
-//::     end:
-//::       line: 56
-//::       col: 32
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.IsPrime?
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.IsPrime?
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,19-83,19|LoopInvariant
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 83
-//::       col: 19
-//::     end:
-//::       line: 83
-//::       col: 19
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15|CodeLine
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 77
-//::       col: 9
-//::     end:
-//::       line: 77
-//::       col: 15
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 83
@@ -2068,16 +3001,82 @@ method testingMethod() {
 //::     end:
 //::       line: 83
 //::       col: 22
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3|Precondition
+//::     prooftexts:
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 27204
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
+//::     file: snapshot_bug_big_file_prime_db.dfy
+//::     start:
+//::       line: 77
+//::       col: 9
+//::     end:
+//::       line: 77
+//::       col: 15
+//::     methodName: PrimeMap.testPrimeness
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 70
@@ -2085,16 +3084,32 @@ method testingMethod() {
 //::     end:
 //::       line: 91
 //::       col: 3
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21|Precondition
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 71
@@ -2102,16 +3117,32 @@ method testingMethod() {
 //::     end:
 //::       line: 71
 //::       col: 21
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34|Postcondition
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 72
@@ -2119,16 +3150,37 @@ method testingMethod() {
 //::     end:
 //::       line: 72
 //::       col: 34
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.testPrimeness
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 23398
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 75
@@ -2136,35 +3188,68 @@ method testingMethod() {
 //::     end:
 //::       line: 75
 //::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.testPrimeness
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 75
-//::       col: 5
-//::     end:
-//::       line: 75
-//::       col: 17
-//::     prooftext: >-
-//::       out-parameter 'result', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 78
@@ -2172,16 +3257,32 @@ method testingMethod() {
 //::     end:
 //::       line: 78
 //::       col: 19
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 84
@@ -2189,18 +3290,62 @@ method testingMethod() {
 //::     end:
 //::       line: 84
 //::       col: 17
-//::     prooftext: >-
-//::       variable 'result', which is subject to definite-assignment rules, is
-//::       always initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 25887
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 84
@@ -2208,16 +3353,36 @@ method testingMethod() {
 //::     end:
 //::       line: 84
 //::       col: 64
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70|LoopInvariant
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 11
+//::       batchOutcome: Valid
+//::       batchResourceCount: 26378
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 84
@@ -2225,16 +3390,50 @@ method testingMethod() {
 //::     end:
 //::       line: 84
 //::       col: 70
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14|CodeLine
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 32432
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 86
@@ -2242,16 +3441,36 @@ method testingMethod() {
 //::     end:
 //::       line: 86
 //::       col: 14
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24|CodeLine
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 25938
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 87
@@ -2259,16 +3478,32 @@ method testingMethod() {
 //::     end:
 //::       line: 87
 //::       col: 24
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 89
@@ -2276,16 +3511,32 @@ method testingMethod() {
 //::     end:
 //::       line: 89
 //::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 80
@@ -2293,16 +3544,36 @@ method testingMethod() {
 //::     end:
 //::       line: 80
 //::       col: 15
-//::     prooftext: decreases expression is bounded below by 0
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5|CodeLine
+//::     prooftexts:
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 26782
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 80
@@ -2310,16 +3581,36 @@ method testingMethod() {
 //::     end:
 //::       line: 90
 //::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PrimeMap.testPrimeness
 //::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3|AssertionAutomatic
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 26981
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 91
@@ -2327,52 +3618,62 @@ method testingMethod() {
 //::     end:
 //::       line: 91
 //::       col: 3
-//::     prooftext: >-
-//::       out-parameter 'result', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.testPrimeness
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 25813
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,24-84,24|LoopInvariant
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 84
-//::       col: 24
-//::     end:
-//::       line: 84
-//::       col: 24
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,22-72,22|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 72
-//::       col: 22
-//::     end:
-//::       line: 72
-//::       col: 22
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|2,1-4,52|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|2,1-4,52
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 2
@@ -2380,84 +3681,22 @@ method testingMethod() {
 //::     end:
 //::       line: 4
 //::       col: 52
-//::     prooftext: function definition for prime
-//::     isTopAssertion: false
+//::     methodName: PrimeMap.testPrimeness
+//::     methodType: correctness
+//::     prooftexts:
+//::       - function definition for prime
+//::       - function definition for prime
+//::       - function definition for prime
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,12-86,12|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 86
-//::       col: 12
-//::     end:
-//::       line: 86
-//::       col: 12
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-80,5|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 80
-//::       col: 5
-//::     end:
-//::       line: 80
-//::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,62-84,62|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 84
-//::       col: 62
-//::     end:
-//::       line: 84
-//::       col: 62
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PrimeMap.testPrimeness
-//::     methodType: correctness
-//::     assertionGroup: PrimeMap.testPrimeness
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,59|AssertionManual
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 98
-//::       col: 59
-//::     end:
-//::       line: 98
-//::       col: 59
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 98
@@ -2465,16 +3704,80 @@ method testingMethod() {
 //::     end:
 //::       line: 98
 //::       col: 97
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionManual
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 7936
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 98
@@ -2482,16 +3785,80 @@ method testingMethod() {
 //::     end:
 //::       line: 98
 //::       col: 44
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 57
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4693
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 98
@@ -2499,16 +3866,80 @@ method testingMethod() {
 //::     end:
 //::       line: 98
 //::       col: 91
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 56
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5741
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 98
@@ -2516,16 +3947,76 @@ method testingMethod() {
 //::     end:
 //::       line: 98
 //::       col: 98
-//::     prooftext: assert statement
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::     prooftexts:
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::       - assert statement
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 99
@@ -2533,16 +4024,80 @@ method testingMethod() {
 //::     end:
 //::       line: 99
 //::       col: 15
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 7840
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 99
@@ -2550,16 +4105,80 @@ method testingMethod() {
 //::     end:
 //::       line: 99
 //::       col: 21
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionManual
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9009
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 100
@@ -2567,16 +4186,80 @@ method testingMethod() {
 //::     end:
 //::       line: 100
 //::       col: 42
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 55
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8660
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 100
@@ -2584,16 +4267,80 @@ method testingMethod() {
 //::     end:
 //::       line: 100
 //::       col: 50
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionManual
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9770
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 102
@@ -2601,16 +4348,148 @@ method testingMethod() {
 //::     end:
 //::       line: 102
 //::       col: 27
-//::     prooftext: call
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::     prooftexts:
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - call
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(22,3)-(26,3) from
+//::         call
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(22,3)-(26,3) from
+//::         call
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(22,3)-(26,3) from
+//::         call
+//::       - call
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - call
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - call
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(23,13)-(23,29) from
+//::         call
+//::       - call
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(22,3)-(26,3) from
+//::         call
+//::       - call
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - call
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - call
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 105
@@ -2618,18 +4497,251 @@ method testingMethod() {
 //::     end:
 //::       line: 105
 //::       col: 3
-//::     prooftext: >-
-//::       variable 'pm', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 30640
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 105
@@ -2637,16 +4749,80 @@ method testingMethod() {
 //::     end:
 //::       line: 105
 //::       col: 18
-//::     prooftext: value always satisfies the subset constraints of 'nat'
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 31710
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 105
@@ -2654,16 +4830,184 @@ method testingMethod() {
 //::     end:
 //::       line: 105
 //::       col: 21
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(29,3)-(36,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(29,3)-(36,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(29,3)-(36,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(32,14)-(32,21)
+//::         from call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(32,14)-(32,21)
+//::         from call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(29,3)-(36,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(29,3)-(36,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(29,3)-(36,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(31,13)-(31,53) from
+//::         call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(33,13)-(33,43) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(29,3)-(36,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(29,3)-(36,3) from
+//::         call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(31,13)-(31,53) from
+//::         call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(33,13)-(33,43) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 207454
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 107
@@ -2671,18 +5015,251 @@ method testingMethod() {
 //::     end:
 //::       line: 107
 //::       col: 3
-//::     prooftext: >-
-//::       variable 'pm', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 13
+//::       batchOutcome: Valid
+//::       batchResourceCount: 37917
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 107
@@ -2690,16 +5267,80 @@ method testingMethod() {
 //::     end:
 //::       line: 107
 //::       col: 19
-//::     prooftext: value always satisfies the subset constraints of 'nat'
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 14
+//::       batchOutcome: Valid
+//::       batchResourceCount: 40217
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 107
@@ -2707,16 +5348,170 @@ method testingMethod() {
 //::     end:
 //::       line: 107
 //::       col: 22
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(41,13)-(41,53) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(41,13)-(41,53) from
+//::         call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(42,13)-(42,57) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 18
+//::       batchOutcome: Valid
+//::       batchResourceCount: 39339
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 108
@@ -2724,18 +5519,251 @@ method testingMethod() {
 //::     end:
 //::       line: 108
 //::       col: 3
-//::     prooftext: >-
-//::       variable 'pm', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 19
+//::       batchOutcome: Valid
+//::       batchResourceCount: 41546
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 108
@@ -2743,16 +5771,80 @@ method testingMethod() {
 //::     end:
 //::       line: 108
 //::       col: 19
-//::     prooftext: value always satisfies the subset constraints of 'nat'
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 20
+//::       batchOutcome: Valid
+//::       batchResourceCount: 45268
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 108
@@ -2760,16 +5852,170 @@ method testingMethod() {
 //::     end:
 //::       line: 108
 //::       col: 22
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::     prooftexts:
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(41,13)-(41,53) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(42,13)-(42,57) from
+//::         call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(43,13)-(43,59) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 24
+//::       batchOutcome: Valid
+//::       batchResourceCount: 42624
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 110
@@ -2777,18 +6023,190 @@ method testingMethod() {
 //::     end:
 //::       line: 110
 //::       col: 10
-//::     prooftext: >-
-//::       variable 'pm', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 110
@@ -2796,16 +6214,80 @@ method testingMethod() {
 //::     end:
 //::       line: 110
 //::       col: 13
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 25
+//::       batchOutcome: Valid
+//::       batchResourceCount: 44949
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 110
@@ -2813,16 +6295,80 @@ method testingMethod() {
 //::     end:
 //::       line: 110
 //::       col: 42
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 26
+//::       batchOutcome: Valid
+//::       batchResourceCount: 374386
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 112
@@ -2830,18 +6376,251 @@ method testingMethod() {
 //::     end:
 //::       line: 112
 //::       col: 25
-//::     prooftext: >-
-//::       variable 'pm', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 27
+//::       batchOutcome: Valid
+//::       batchResourceCount: 45103
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 112
@@ -2849,16 +6628,80 @@ method testingMethod() {
 //::     end:
 //::       line: 112
 //::       col: 37
-//::     prooftext: value always satisfies the subset constraints of 'nat'
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 28
+//::       batchOutcome: Valid
+//::       batchResourceCount: 45208
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 112
@@ -2866,16 +6709,236 @@ method testingMethod() {
 //::     end:
 //::       line: 112
 //::       col: 40
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::     prooftexts:
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(53,15)-(53,49) from
+//::         call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(54,15)-(54,58) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(53,15)-(53,49) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(53,15)-(53,49) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(53,15)-(53,49) from
+//::         call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(54,15)-(54,58) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 32
+//::       batchOutcome: Valid
+//::       batchResourceCount: 46302
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 113
@@ -2883,16 +6946,80 @@ method testingMethod() {
 //::     end:
 //::       line: 113
 //::       col: 23
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionManual
+//::     topMeta:
+//::       batchIndex: 33
+//::       batchOutcome: Valid
+//::       batchResourceCount: 1251902
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 115
@@ -2900,18 +7027,251 @@ method testingMethod() {
 //::     end:
 //::       line: 115
 //::       col: 26
-//::     prooftext: >-
-//::       variable 'pm', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 34
+//::       batchOutcome: Valid
+//::       batchResourceCount: 51329
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 115
@@ -2919,16 +7279,80 @@ method testingMethod() {
 //::     end:
 //::       line: 115
 //::       col: 38
-//::     prooftext: value always satisfies the subset constraints of 'nat'
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 35
+//::       batchOutcome: Valid
+//::       batchResourceCount: 51416
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 115
@@ -2936,16 +7360,233 @@ method testingMethod() {
 //::     end:
 //::       line: 115
 //::       col: 41
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::     prooftexts:
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(53,15)-(53,49) from
+//::         call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(55,15)-(55,59) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(53,15)-(53,49) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(55,15)-(55,59) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(53,15)-(53,49) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 39
+//::       batchOutcome: Valid
+//::       batchResourceCount: 52735
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 116
@@ -2953,16 +7594,80 @@ method testingMethod() {
 //::     end:
 //::       line: 116
 //::       col: 23
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 40
+//::       batchOutcome: Valid
+//::       batchResourceCount: 113408
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 118
@@ -2970,18 +7675,251 @@ method testingMethod() {
 //::     end:
 //::       line: 118
 //::       col: 26
-//::     prooftext: >-
-//::       variable 'pm', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 41
+//::       batchOutcome: Valid
+//::       batchResourceCount: 55224
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 118
@@ -2989,16 +7927,80 @@ method testingMethod() {
 //::     end:
 //::       line: 118
 //::       col: 38
-//::     prooftext: value always satisfies the subset constraints of 'nat'
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 42
+//::       batchOutcome: Valid
+//::       batchResourceCount: 63799
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 118
@@ -3006,16 +8008,227 @@ method testingMethod() {
 //::     end:
 //::       line: 118
 //::       col: 42
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::     prooftexts:
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(53,15)-(53,49) from
+//::         call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(56,15)-(56,47) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(53,15)-(53,49) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 46
+//::       batchOutcome: Valid
+//::       batchResourceCount: 56978
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 119
@@ -3023,16 +8236,80 @@ method testingMethod() {
 //::     end:
 //::       line: 119
 //::       col: 28
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 47
+//::       batchOutcome: Valid
+//::       batchResourceCount: 281423
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 121
@@ -3040,18 +8317,251 @@ method testingMethod() {
 //::     end:
 //::       line: 121
 //::       col: 26
-//::     prooftext: >-
-//::       variable 'pm', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::       - >-
+//::         variable 'pm', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 48
+//::       batchOutcome: Valid
+//::       batchResourceCount: 59336
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 121
@@ -3059,16 +8569,80 @@ method testingMethod() {
 //::     end:
 //::       line: 121
 //::       col: 38
-//::     prooftext: value always satisfies the subset constraints of 'nat'
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 49
+//::       batchOutcome: Valid
+//::       batchResourceCount: 59721
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 121
@@ -3076,16 +8650,212 @@ method testingMethod() {
 //::     end:
 //::       line: 121
 //::       col: 41
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
+//::     prooftexts:
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - >-
+//::         requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(53,15)-(53,49) from
+//::         call
+//::       - >-
+//::         ensures clause at snapshot_bug_big_file_prime_db.dfy(54,15)-(54,58) from
+//::         call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::       - call is allowed by context's modifies clause
+//::       - call
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 53
+//::       batchOutcome: Valid
+//::       batchResourceCount: 60989
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 122
@@ -3093,120 +8863,80 @@ method testingMethod() {
 //::     end:
 //::       line: 122
 //::       col: 24
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,13-99,13|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 99
-//::       col: 13
-//::     end:
-//::       line: 99
-//::       col: 13
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 54
+//::       batchOutcome: Valid
+//::       batchResourceCount: 100561
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,3|AssertionManual
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 99
-//::       col: 3
-//::     end:
-//::       line: 99
-//::       col: 3
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,3|AssertionManual
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 100
-//::       col: 3
-//::     end:
-//::       line: 100
-//::       col: 3
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,17-105,17|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 105
-//::       col: 17
-//::     end:
-//::       line: 105
-//::       col: 17
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,17-105,17|Precondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 105
-//::       col: 17
-//::     end:
-//::       line: 105
-//::       col: 17
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|Call
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 102
-//::       col: 7
-//::     end:
-//::       line: 102
-//::       col: 27
-//::     prooftext: >-
-//::       ensures clause at snapshot_bug_big_file_prime_db.dfy(22,3)-(26,3) from
-//::       call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|22,3-26,3|Postcondition
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|22,3-26,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 22
@@ -3214,35 +8944,23 @@ method testingMethod() {
 //::     end:
 //::       line: 26
 //::       col: 3
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|Call
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 105
-//::       col: 3
-//::     end:
-//::       line: 105
-//::       col: 21
-//::     prooftext: >-
-//::       requires clause at snapshot_bug_big_file_prime_db.dfy(29,3)-(36,3) from
-//::       call
-//::     isTopAssertion: false
-//::     type: Call
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|29,3-36,3|Precondition
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|29,3-36,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 29
@@ -3250,16 +8968,27 @@ method testingMethod() {
 //::     end:
 //::       line: 36
 //::       col: 3
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|32,14-32,21|Precondition
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|32,14-32,21
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 32
@@ -3267,103 +8996,21 @@ method testingMethod() {
 //::     end:
 //::       line: 32
 //::       col: 21
-//::     prooftext: requires clause
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
 //::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|2,1-4,52|CodeLine
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 2
-//::       col: 1
-//::     end:
-//::       line: 4
-//::       col: 52
-//::     prooftext: function definition for prime
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,18-107,18|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 107
-//::       col: 18
-//::     end:
-//::       line: 107
-//::       col: 18
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,18-107,18|Precondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 107
-//::       col: 18
-//::     end:
-//::       line: 107
-//::       col: 18
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|29,3-36,3|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 29
-//::       col: 3
-//::     end:
-//::       line: 36
-//::       col: 3
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|Call
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 107
-//::       col: 3
-//::     end:
-//::       line: 107
-//::       col: 22
-//::     prooftext: >-
-//::       requires clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
-//::       call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|39,3-48,3|Precondition
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|39,3-48,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 39
@@ -3371,120 +9018,33 @@ method testingMethod() {
 //::     end:
 //::       line: 48
 //::       col: 3
-//::     prooftext: requires clause
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
 //::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,18-108,18|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 108
-//::       col: 18
-//::     end:
-//::       line: 108
-//::       col: 18
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,18-108,18|Precondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 108
-//::       col: 18
-//::     end:
-//::       line: 108
-//::       col: 18
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|39,3-48,3|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 39
-//::       col: 3
-//::     end:
-//::       line: 48
-//::       col: 3
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|Call
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 108
-//::       col: 3
-//::     end:
-//::       line: 108
-//::       col: 22
-//::     prooftext: >-
-//::       requires clause at snapshot_bug_big_file_prime_db.dfy(39,3)-(48,3) from
-//::       call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,13-110,13|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 110
-//::       col: 13
-//::     end:
-//::       line: 110
-//::       col: 13
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,3|AssertionManual
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 110
-//::       col: 3
-//::     end:
-//::       line: 110
-//::       col: 3
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|23,13-23,29|Postcondition
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|23,13-23,29
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 23
@@ -3492,16 +9052,20 @@ method testingMethod() {
 //::     end:
 //::       line: 23
 //::       col: 29
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|31,13-31,53|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|31,13-31,53
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 31
@@ -3509,16 +9073,21 @@ method testingMethod() {
 //::     end:
 //::       line: 31
 //::       col: 53
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|33,13-33,43|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|33,13-33,43
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 33
@@ -3526,16 +9095,21 @@ method testingMethod() {
 //::     end:
 //::       line: 33
 //::       col: 43
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|41,13-41,53|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|41,13-41,53
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 41
@@ -3543,86 +9117,22 @@ method testingMethod() {
 //::     end:
 //::       line: 41
 //::       col: 53
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
 //::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|43,13-43,59|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 43
-//::       col: 13
-//::     end:
-//::       line: 43
-//::       col: 59
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,36-112,36|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 112
-//::       col: 36
-//::     end:
-//::       line: 112
-//::       col: 36
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,36-112,36|Precondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 112
-//::       col: 36
-//::     end:
-//::       line: 112
-//::       col: 36
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|Call
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 112
-//::       col: 7
-//::     end:
-//::       line: 112
-//::       col: 40
-//::     prooftext: >-
-//::       requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
-//::       call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3|Precondition
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 52
@@ -3630,33 +9140,65 @@ method testingMethod() {
 //::     end:
 //::       line: 65
 //::       col: 3
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,3|AssertionManual
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 113
-//::       col: 3
-//::     end:
-//::       line: 113
-//::       col: 3
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - requires clause
+//::       - ensures clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Precondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|2,1-4,52
+//::     file: snapshot_bug_big_file_prime_db.dfy
+//::     start:
+//::       line: 2
+//::       col: 1
+//::     end:
+//::       line: 4
+//::       col: 52
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|53,15-53,49|Postcondition
+//::     prooftexts:
+//::       - function definition for prime
+//::       - function definition for prime
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|53,15-53,49
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 53
@@ -3664,16 +9206,29 @@ method testingMethod() {
 //::     end:
 //::       line: 53
 //::       col: 49
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|54,15-54,58|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|54,15-54,58
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 54
@@ -3681,103 +9236,22 @@ method testingMethod() {
 //::     end:
 //::       line: 54
 //::       col: 58
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
 //::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,37-115,37|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 115
-//::       col: 37
-//::     end:
-//::       line: 115
-//::       col: 37
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 52
-//::       col: 3
-//::     end:
-//::       line: 65
-//::       col: 3
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,37-115,37|Precondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 115
-//::       col: 37
-//::     end:
-//::       line: 115
-//::       col: 37
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|Call
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 115
-//::       col: 7
-//::     end:
-//::       line: 115
-//::       col: 41
-//::     prooftext: >-
-//::       requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
-//::       call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,3|AssertionManual
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 116
-//::       col: 3
-//::     end:
-//::       line: 116
-//::       col: 3
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|55,15-55,59|Postcondition
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|55,15-55,59
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 55
@@ -3785,103 +9259,21 @@ method testingMethod() {
 //::     end:
 //::       line: 55
 //::       col: 59
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
 //::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,37-118,37|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 118
-//::       col: 37
-//::     end:
-//::       line: 118
-//::       col: 37
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|42,13-42,57|Postcondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 42
-//::       col: 13
-//::     end:
-//::       line: 42
-//::       col: 57
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,37-118,37|Precondition
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 118
-//::       col: 37
-//::     end:
-//::       line: 118
-//::       col: 37
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|Call
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 118
-//::       col: 7
-//::     end:
-//::       line: 118
-//::       col: 42
-//::     prooftext: >-
-//::       requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
-//::       call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,3|AssertionManual
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 119
-//::       col: 3
-//::     end:
-//::       line: 119
-//::       col: 3
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|56,15-56,47|Postcondition
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|56,15-56,47
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 56
@@ -3889,86 +9281,63 @@ method testingMethod() {
 //::     end:
 //::       line: 56
 //::       col: 47
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
 //::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,37-121,37|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 121
-//::       col: 37
-//::     end:
-//::       line: 121
-//::       col: 37
-//::     prooftext: call is allowed by context's modifies clause
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,37-121,37|Precondition
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|42,13-42,57
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
-//::       line: 121
-//::       col: 37
+//::       line: 42
+//::       col: 13
 //::     end:
-//::       line: 121
-//::       col: 37
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
+//::       line: 42
+//::       col: 57
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|Call
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|43,13-43,59
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
-//::       line: 121
-//::       col: 7
+//::       line: 43
+//::       col: 13
 //::     end:
-//::       line: 121
-//::       col: 41
-//::     prooftext: >-
-//::       requires clause at snapshot_bug_big_file_prime_db.dfy(52,3)-(65,3) from
-//::       call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::       line: 43
+//::       col: 59
 //::     methodName: testingMethod
 //::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,3|AssertionManual
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 122
-//::       col: 3
-//::     end:
-//::       line: 122
-//::       col: 3
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
+//::     prooftexts:
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|15,3-19,3|CodeLine
+//::   - locationId: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|15,3-19,3
 //::     file: snapshot_bug_big_file_prime_db.dfy
 //::     start:
 //::       line: 15
@@ -3976,3489 +9345,3828 @@ method testingMethod() {
 //::     end:
 //::       line: 19
 //::       col: 3
-//::     prooftext: function definition for Valid
-//::     isTopAssertion: false
+//::     methodName: testingMethod
+//::     methodType: correctness
+//::     prooftexts:
+//::       - function definition for Valid
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,40-100,40|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 100
-//::       col: 40
-//::     end:
-//::       line: 100
-//::       col: 40
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,89-98,89|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 98
-//::       col: 89
-//::     end:
-//::       line: 98
-//::       col: 89
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
-//::   - id: >-
-//::       snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,42-98,42|AssertionAutomatic
-//::     file: snapshot_bug_big_file_prime_db.dfy
-//::     start:
-//::       line: 98
-//::       col: 42
-//::     end:
-//::       line: 98
-//::       col: 42
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: testingMethod
-//::     methodType: correctness
-//::     assertionGroup: testingMethod
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|prime|well-formedness|4,41-4,41|AssertionAutomatic
-//::       provedBy:
+//::   provedBy:
+//::     - top: snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|prime|well-formedness|4,39-4,43|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,5-25,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|prime|well-formedness|4,3-4,50|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,19-15,19|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|15,3-19,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,13-23,29
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,5-25,22
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,13-31,53
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,13-33,43
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,24-10,24|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,19-15,19|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|2,1-4,52
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,47-18,47|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
+//::     - top: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|10,24-10,24|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
+//::     - top: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|10,1-92,1|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,13-23,29|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
+//::     - top: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,5-25,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-22,3|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,5-25,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|15,3-19,3|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,13-23,29|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,5-25,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,22-23,22|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,13-23,29|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,5-25,22|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
+//::       provers:
+//::         - snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|2,1-4,52
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|10,24-10,24|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|10,1-92,1|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
+//::       provers:
+//::         - snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|2,1-4,52
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|32,14-32,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,34|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,43|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,13-31,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|33,13-33,43|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,34|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,34|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|32,14-32,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,43|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,13-31,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
+//::       provers:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|33,13-33,43|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,43-31,43|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,43|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|32,14-32,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::       provers:
+//::         - snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|15,3-19,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,34|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,13-31,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|33,13-33,43|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,13-31,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
+//::   proofUnused:
+//::     - top: snapshot_bug_big_file_prime_db.dfy|prime|well-formedness|4,39-4,43
+//::       unused:
+//::         - snapshot_bug_big_file_prime_db.dfy|prime|well-formedness|4,3-4,50
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,13-33,43|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,10-29,10|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,70-18,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21|Precondition
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,70-18,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,13-31,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,13-33,43|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,70-18,70
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,27-31,27|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,13-31,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,13-33,43|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,22-33,22|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,70-18,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,13-33,43|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,13-31,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,70-18,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|10,24-10,24|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|10,1-92,1|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,39
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|15,3-19,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,39-18,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,34|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,70-18,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,43|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,13-41,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.Valid|well-formedness|18,21-18,21
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,17-25,21
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|42,13-42,57|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|43,13-43,59|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,34|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,13-23,29
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,34|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,5-25,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|10,1-92,1
+//::     - top: snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,13-23,29
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,43|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,17-25,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,13-41,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,5-25,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|42,13-42,57|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|10,1-92,1
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,13-23,29
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|43,13-43,59|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,43-41,43|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,43|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,17-25,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|10,1-92,1
+//::     - top: snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|10,1-92,1
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|22,3-26,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|23,13-23,29
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,34|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,17-25,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,13-41,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap._ctor|correctness|25,5-25,22
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|10,1-92,1
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|42,13-42,57|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|43,13-43,59|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,27-46,27|Precondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|32,14-32,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|Call
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,43
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,13-31,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|33,13-33,43
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,34
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|32,14-32,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,43
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,13-31,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|33,13-33,43
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,43
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Precondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|29,3-36,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|32,14-32,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,34-31,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|31,13-31,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|well-formedness|33,13-33,43
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,13-31,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,10-39,10|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,13-33,43
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|Call
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,13-31,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|15,3-19,3|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,13-33,43
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,36
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,13-31,53
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,13-33,43
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|33,13-33,43
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|29,3-36,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|32,14-32,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Precondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,27-41,27|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|31,13-31,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertPrime|correctness|35,5-35,5
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|10,1-92,1
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,43
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,13-41,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|42,13-42,57
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|43,13-43,59
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,34
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,22-42,22|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,43
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|Call
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,13-41,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|42,13-42,57
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|43,13-43,59
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,43
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|39,3-48,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,34-41,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|41,13-41,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|42,13-42,57
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,23-43,23|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|well-formedness|43,13-43,59
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|Call
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|10,24-10,24|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|10,1-92,1|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,36|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,45|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|55,15-55,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|56,15-56,47|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,36|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,36|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,45|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|55,15-55,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|56,15-56,47|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,45-53,45|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,45|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|10,1-92,1|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,36|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,5
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|39,3-48,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|55,15-55,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|41,13-41,53
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|56,15-56,47|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,23-60,23|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|42,13-42,57
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|43,13-43,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,31-47,31
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|47,5-47,37
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|10,1-92,1
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,36
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,45
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,15-53,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|54,15-54,58
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|55,15-55,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|56,15-56,47
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,36
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,45
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,23-62,23|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,15-53,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|54,15-54,58
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|55,15-55,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|56,15-56,47
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,45
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|10,1-92,1
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,36-53,36
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|53,15-53,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|54,15-54,58
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|55,15-55,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|well-formedness|56,15-56,47
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,10-52,10|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Precondition
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Precondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,29-53,29|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49|Postcondition
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,43-54,43|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Precondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,44-55,44|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Precondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,32-56,32|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|56,15-56,47|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|52,3-65,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|55,15-55,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|59,7-59,21|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|60,15-60,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|61,7-61,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|62,15-62,25|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|65,3-65,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.IsPrime?|correctness|63,7-63,16|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,19-83,19|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,24-84,24|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,22-72,22|Postcondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|2,1-4,52|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,12-86,12|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-80,5|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,62-84,62|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|70,3-91,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|71,16-71,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|72,15-72,34
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|75,5-75,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|77,9-77,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|78,5-78,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|83,17-83,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70|LoopInvariant
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,60-84,64
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|84,17-84,70
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|86,10-86,14
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|87,9-87,24
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|89,7-89,17
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,15-80,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|91,3-91,3|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,59|AssertionManual
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.testPrimeness|correctness|80,5-90,5
+//::     - top: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,13-99,13|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,3|AssertionManual
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,3|AssertionManual
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,17-105,17|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,17-105,17|Precondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|2,1-4,52|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,18-107,18|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,18-107,18|Precondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|Call
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,18-108,18|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,18-108,18|Precondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|Call
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,13-110,13|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,3|AssertionManual
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|2,1-4,52|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,36-112,36|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,36-112,36|Precondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|Call
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,3|AssertionManual
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|2,1-4,52|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,37-115,37|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,37-115,37|Precondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|Call
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,3|AssertionManual
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|2,1-4,52|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,37-118,37|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,37-118,37|Precondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|Call
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,3|AssertionManual
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,37-121,37|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,37-121,37|Precondition
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|Call
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,3|AssertionManual
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|15,3-19,3|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|Call
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,40-100,40|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,89-98,89|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,42-98,42|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28|AssertionManual
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38|AssertionAutomatic
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|CodeLine
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24|AssertionManual
-//::   calls:
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30|Call
-//::       connections:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|70,3-91,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|71,16-71,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|72,15-72,34|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27|Call
-//::       connections:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|22,3-26,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|23,13-23,29|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21|Call
-//::       connections:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|29,3-36,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|32,14-32,21|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|29,3-36,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|31,13-31,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|33,13-33,43|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22|Call
-//::       connections:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|39,3-48,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|39,3-48,3|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|41,13-41,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|42,13-42,57|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22|Call
-//::       connections:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|39,3-48,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|41,13-41,53|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|43,13-43,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|39,3-48,3|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40|Call
-//::       connections:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
+//::       unused:
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41|Call
-//::       connections:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|55,15-55,59|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42|Call
-//::       connections:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|56,15-56,47|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3|Postcondition
-//::     - id: >-
-//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41|Call
-//::       connections:
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3|Precondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|53,15-53,49|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
 //::         - >-
-//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|54,15-54,58|Postcondition
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
+//::       unused:
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
+//::       unused:
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,3-110,42
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|113,3-113,23
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
+//::     - top: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|122,3-122,24
+//::       unused:
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,39-98,44
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,86-98,91
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,59-98,97
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|98,10-98,98
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,10-99,15
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|99,3-99,21
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,37-100,42
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|100,3-100,50
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,18-105,18
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,19-107,19
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,19-108,19
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,10
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|110,10-110,13
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,25-112,25
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,37-112,37
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,26-115,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,38-115,38
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|116,3-116,23
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,26-118,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,38-118,38
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|119,3-119,28
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,26-121,26
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,38-121,38
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
+//::   connections:
+//::     - call: >-
+//::         snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|46,5-46,30
+//::       targets:
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|70,3-91,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|71,16-71,21
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|PrimeMap.InsertNumber|correctness|72,15-72,34
+//::     - call: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|102,7-102,27
+//::       targets:
+//::         - snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|22,3-26,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|23,13-23,29
+//::     - call: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|105,3-105,21
+//::       targets:
+//::         - snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|29,3-36,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|32,14-32,21
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|31,13-31,53
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|33,13-33,43
+//::     - call: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|107,3-107,22
+//::       targets:
+//::         - snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|39,3-48,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|41,13-41,53
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|42,13-42,57
+//::     - call: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|108,3-108,22
+//::       targets:
+//::         - snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|39,3-48,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|41,13-41,53
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|42,13-42,57
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|43,13-43,59
+//::     - call: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|112,7-112,40
+//::       targets:
+//::         - snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|53,15-53,49
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|54,15-54,58
+//::     - call: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|115,7-115,41
+//::       targets:
+//::         - snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|53,15-53,49
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|55,15-55,59
+//::     - call: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|118,7-118,42
+//::       targets:
+//::         - snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|53,15-53,49
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|56,15-56,47
+//::     - call: >-
+//::         snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|121,7-121,41
+//::       targets:
+//::         - snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|52,3-65,3
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|53,15-53,49
+//::         - >-
+//::           snapshot_bug_big_file_prime_db.dfy|testingMethod|correctness|54,15-54,58
 //::

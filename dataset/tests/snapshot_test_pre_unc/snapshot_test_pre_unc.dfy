@@ -6,25 +6,9 @@ method ret32(a : int) returns (x:int)
 }
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: snapshot_test_pre_unc.dfy|ret32|correctness|3,14-3,14|Postcondition
-//::     file: snapshot_test_pre_unc.dfy
-//::     start:
-//::       line: 3
-//::       col: 14
-//::     end:
-//::       line: 3
-//::       col: 14
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: ret32
-//::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: snapshot_test_pre_unc.dfy|ret32|correctness|3,13-3,21|Postcondition
+//::   - locationId: snapshot_test_pre_unc.dfy|ret32|correctness|3,13-3,21
 //::     file: snapshot_test_pre_unc.dfy
 //::     start:
 //::       line: 3
@@ -32,15 +16,24 @@ method ret32(a : int) returns (x:int)
 //::     end:
 //::       line: 3
 //::       col: 21
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: snapshot_test_pre_unc.dfy|ret32|correctness|5,5-5,16|CodeLine
+//::     prooftexts:
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3484
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_pre_unc.dfy|ret32|correctness|5,5-5,16
 //::     file: snapshot_test_pre_unc.dfy
 //::     start:
 //::       line: 5
@@ -48,15 +41,20 @@ method ret32(a : int) returns (x:int)
 //::     end:
 //::       line: 5
 //::       col: 16
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: snapshot_test_pre_unc.dfy|ret32|correctness|2,14-2,19|Precondition
+//::     prooftexts:
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_pre_unc.dfy|ret32|correctness|2,14-2,19
 //::     file: snapshot_test_pre_unc.dfy
 //::     start:
 //::       line: 2
@@ -64,15 +62,20 @@ method ret32(a : int) returns (x:int)
 //::     end:
 //::       line: 2
 //::       col: 19
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: snapshot_test_pre_unc.dfy|ret32|correctness|6,1-6,1|AssertionAutomatic
+//::     prooftexts:
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_pre_unc.dfy|ret32|correctness|6,1-6,1
 //::     file: snapshot_test_pre_unc.dfy
 //::     start:
 //::       line: 6
@@ -80,24 +83,30 @@ method ret32(a : int) returns (x:int)
 //::     end:
 //::       line: 6
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'x', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'x', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
 //:: edges:
-//::   tops:
-//::     - id: snapshot_test_pre_unc.dfy|ret32|correctness|3,14-3,14|Postcondition
-//::       provedBy:
-//::         - snapshot_test_pre_unc.dfy|ret32|correctness|3,13-3,21|Postcondition
-//::         - snapshot_test_pre_unc.dfy|ret32|correctness|5,5-5,16|CodeLine
-//::       proofUnused:
-//::         - snapshot_test_pre_unc.dfy|ret32|correctness|2,14-2,19|Precondition
-//::         - snapshot_test_pre_unc.dfy|ret32|correctness|6,1-6,1|AssertionAutomatic
-//::   calls: []
+//::   provedBy:
+//::     - top: snapshot_test_pre_unc.dfy|ret32|correctness|3,13-3,21
+//::       provers:
+//::         - snapshot_test_pre_unc.dfy|ret32|correctness|5,5-5,16
+//::   proofUnused:
+//::     - top: snapshot_test_pre_unc.dfy|ret32|correctness|3,13-3,21
+//::       unused:
+//::         - snapshot_test_pre_unc.dfy|ret32|correctness|2,14-2,19
+//::         - snapshot_test_pre_unc.dfy|ret32|correctness|6,1-6,1
+//::   connections: []
 //::

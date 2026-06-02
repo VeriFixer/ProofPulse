@@ -16,61 +16,57 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,44-3,44|AssertionAutomatic
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
-//::       line: 3
-//::       col: 44
+//::       line: 8
+//::       col: 14
 //::     end:
-//::       line: 3
-//::       col: 44
-//::     prooftext: index in range
-//::     isTopAssertion: true
+//::       line: 8
+//::       col: 14
+//::     methodName: ElementWiseDivide
+//::     methodType: correctness
+//::     prooftexts:
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 7469
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37|Precondition
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 3
-//::       col: 26
-//::     end:
-//::       line: 3
-//::       col: 37
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 3
-//::       col: 43
-//::     end:
-//::       line: 3
-//::       col: 46
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23|Precondition
+//::     covStatusInternal: CovTest
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 2
@@ -78,50 +74,42 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 2
 //::       col: 23
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
+//::     methodName: ElementWiseDivide
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Precondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51|Precondition
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 3
-//::       col: 43
-//::     end:
-//::       line: 3
-//::       col: 51
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51|Precondition
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 3
-//::       col: 26
-//::     end:
-//::       line: 3
-//::       col: 51
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51|Precondition
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 3
@@ -129,16 +117,42 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 3
 //::       col: 51
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
+//::     methodName: ElementWiseDivide
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Precondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27|Postcondition
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 4
@@ -146,135 +160,46 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 4
 //::       col: 27
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: ElementWiseDivide
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
-//::     covStatus: CovComplete
+//::     topMeta:
+//::       batchIndex: 15
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10440
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41|Postcondition
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 25
-//::     end:
-//::       line: 5
-//::       col: 41
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 47
-//::     end:
-//::       line: 5
-//::       col: 55
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 60
-//::     end:
-//::       line: 5
-//::       col: 63
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 67
-//::     end:
-//::       line: 5
-//::       col: 70
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70|CodeLine
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 60
-//::     end:
-//::       line: 5
-//::       col: 70
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70|Postcondition
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 47
-//::     end:
-//::       line: 5
-//::       col: 70
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70|Postcondition
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 25
-//::     end:
-//::       line: 5
-//::       col: 70
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70|Postcondition
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 5
@@ -282,186 +207,46 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 5
 //::       col: 70
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: ElementWiseDivide
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,53-5,53|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 53
-//::     end:
-//::       line: 5
-//::       col: 53
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
+//::     topMeta:
+//::       batchIndex: 16
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11868
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,61-5,61|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 61
-//::     end:
-//::       line: 5
-//::       col: 61
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,68-5,68|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 68
-//::     end:
-//::       line: 5
-//::       col: 68
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,65-5,65|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 65
-//::     end:
-//::       line: 5
-//::       col: 65
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: well-formedness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 8
-//::       col: 14
-//::     end:
-//::       line: 8
-//::       col: 14
-//::     prooftext: lower bound does not exceed upper bound
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 8
-//::       col: 14
-//::     end:
-//::       line: 8
-//::       col: 14
-//::     prooftext: lower bound does not exceed upper bound
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 2
-//::       col: 14
-//::     end:
-//::       line: 2
-//::       col: 23
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 3
-//::       col: 14
-//::     end:
-//::       line: 3
-//::       col: 51
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 4
-//::       col: 13
-//::     end:
-//::       line: 4
-//::       col: 27
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 5
-//::       col: 13
-//::     end:
-//::       line: 5
-//::       col: 70
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 7
@@ -469,16 +254,42 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 7
 //::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: ElementWiseDivide
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 9
@@ -486,16 +297,42 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 9
 //::       col: 31
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
+//::     methodName: ElementWiseDivide
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: LoopInvariant
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 9
@@ -503,16 +340,47 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 9
 //::       col: 24
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12701
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 9
@@ -520,16 +388,47 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 9
 //::       col: 31
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 11
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12866
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 10
@@ -537,18 +436,92 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 10
 //::       col: 20
-//::     prooftext: >-
-//::       variable 'result', which is subject to definite-assignment rules, is
-//::       always initialized here
-//::     isTopAssertion: false
+//::     methodName: ElementWiseDivide
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 17
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10278
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 10
@@ -556,16 +529,71 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 10
 //::       col: 31
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
+//::     methodName: ElementWiseDivide
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14488
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 11
@@ -573,18 +601,92 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 11
 //::       col: 46
-//::     prooftext: >-
-//::       variable 'result', which is subject to definite-assignment rules, is
-//::       always initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 18
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10931
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 11
@@ -592,16 +694,46 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 11
 //::       col: 54
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 19
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11316
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 11
@@ -609,16 +741,46 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 11
 //::       col: 62
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 20
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11073
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 11
@@ -626,16 +788,46 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 11
 //::       col: 69
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 21
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11299
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 11
@@ -643,16 +835,46 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 11
 //::       col: 69
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 22
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11525
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 11
@@ -660,16 +882,70 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 11
 //::       col: 69
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 13
+//::       batchOutcome: Valid
+//::       batchResourceCount: 18651
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 13
@@ -677,18 +953,92 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 13
 //::       col: 19
-//::     prooftext: >-
-//::       variable 'result', which is subject to definite-assignment rules, is
-//::       always initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10469
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 13
@@ -696,16 +1046,46 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 13
 //::       col: 32
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10584
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 13
@@ -713,16 +1093,46 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 13
 //::       col: 39
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10983
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 13
@@ -730,16 +1140,46 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 13
 //::       col: 39
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ElementWiseDivide
 //::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11307
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 13
@@ -747,16 +1187,42 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 13
 //::       col: 41
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: ElementWiseDivide
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 15
@@ -764,1132 +1230,1572 @@ method ElementWiseDivide(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::     end:
 //::       line: 15
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'result', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: ElementWiseDivide
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 14
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10274
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,21-9,21|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
-//::       line: 9
-//::       col: 21
+//::       line: 3
+//::       col: 43
 //::     end:
-//::       line: 9
-//::       col: 21
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
+//::       line: 3
+//::       col: 46
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 7301
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37
+//::     file: snapshot_bug_forall_precondition_uncovered.dfy
+//::     start:
+//::       line: 3
+//::       col: 26
+//::     end:
+//::       line: 3
+//::       col: 37
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23
+//::     file: snapshot_bug_forall_precondition_uncovered.dfy
+//::     start:
+//::       line: 2
+//::       col: 14
+//::     end:
+//::       line: 2
+//::       col: 23
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51
+//::     file: snapshot_bug_forall_precondition_uncovered.dfy
+//::     start:
+//::       line: 3
+//::       col: 43
+//::     end:
+//::       line: 3
+//::       col: 51
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,26-9,26|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
-//::       line: 9
+//::       line: 3
 //::       col: 26
 //::     end:
-//::       line: 9
-//::       col: 26
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::       line: 3
+//::       col: 51
 //::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,28-10,28|LoopInvariant
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
-//::       line: 10
-//::       col: 28
+//::       line: 3
+//::       col: 14
 //::     end:
-//::       line: 10
-//::       col: 28
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
+//::       line: 3
+//::       col: 51
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,19|LoopInvariant
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 11
-//::       col: 19
-//::     end:
-//::       line: 11
-//::       col: 19
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,30-13,30|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 13
-//::       col: 30
-//::     end:
-//::       line: 13
-//::       col: 30
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,37-13,37|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 13
-//::       col: 37
-//::     end:
-//::       line: 13
-//::       col: 37
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,34-13,34|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 13
-//::       col: 34
-//::     end:
-//::       line: 13
-//::       col: 34
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,22-4,22|Postcondition
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 4
-//::       col: 22
+//::       col: 13
 //::     end:
 //::       line: 4
-//::       col: 22
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
+//::       col: 27
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
-//::     covStatus: CovTest
+//::     topMeta: null
+//::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41
+//::     file: snapshot_bug_forall_precondition_uncovered.dfy
+//::     start:
+//::       line: 5
+//::       col: 25
+//::     end:
+//::       line: 5
+//::       col: 41
 //::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,13|Postcondition
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55
+//::     file: snapshot_bug_forall_precondition_uncovered.dfy
+//::     start:
+//::       line: 5
+//::       col: 47
+//::     end:
+//::       line: 5
+//::       col: 55
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11192
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63
+//::     file: snapshot_bug_forall_precondition_uncovered.dfy
+//::     start:
+//::       line: 5
+//::       col: 60
+//::     end:
+//::       line: 5
+//::       col: 63
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11084
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70
+//::     file: snapshot_bug_forall_precondition_uncovered.dfy
+//::     start:
+//::       line: 5
+//::       col: 67
+//::     end:
+//::       line: 5
+//::       col: 70
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11271
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70
+//::     file: snapshot_bug_forall_precondition_uncovered.dfy
+//::     start:
+//::       line: 5
+//::       col: 60
+//::     end:
+//::       line: 5
+//::       col: 70
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11795
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70
+//::     file: snapshot_bug_forall_precondition_uncovered.dfy
+//::     start:
+//::       line: 5
+//::       col: 47
+//::     end:
+//::       line: 5
+//::       col: 70
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70
+//::     file: snapshot_bug_forall_precondition_uncovered.dfy
+//::     start:
+//::       line: 5
+//::       col: 25
+//::     end:
+//::       line: 5
+//::       col: 70
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70
 //::     file: snapshot_bug_forall_precondition_uncovered.dfy
 //::     start:
 //::       line: 5
 //::       col: 13
 //::     end:
 //::       line: 5
-//::       col: 13
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
+//::       col: 70
+//::     methodName: ElementWiseDivide
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,52-11,52|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 11
-//::       col: 52
-//::     end:
-//::       line: 11
-//::       col: 52
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,60-11,60|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 11
-//::       col: 60
-//::     end:
-//::       line: 11
-//::       col: 60
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,67-11,67|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 11
-//::       col: 67
-//::     end:
-//::       line: 11
-//::       col: 67
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
-//::   - id: >-
-//::       snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,64-11,64|AssertionAutomatic
-//::     file: snapshot_bug_forall_precondition_uncovered.dfy
-//::     start:
-//::       line: 11
-//::       col: 64
-//::     end:
-//::       line: 11
-//::       col: 64
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ElementWiseDivide
-//::     methodType: correctness
-//::     assertionGroup: ElementWiseDivide
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,44-3,44|AssertionAutomatic
-//::       provedBy:
+//::   provedBy:
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70|Postcondition
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,53-5,53|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70
+//::       provers:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70|Postcondition
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,61-5,61|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70
+//::   proofUnused:
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70|Postcondition
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,68-5,68|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70|Postcondition
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,65-5,65|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70|Postcondition
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,21-9,21|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,26-9,26|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,28-10,28|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,19|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,30-13,30|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,37-13,37|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,34-13,34|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,22-4,22|Postcondition
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,13|Postcondition
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,52-11,52|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,60-11,60|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,67-11,67|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,64-11,64|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51|Precondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70|Postcondition
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|2,14-2,23
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69|LoopInvariant
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|3,14-3,51
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|4,13-4,27
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|5,13-5,70
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39|AssertionAutomatic
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|7,5-7,17
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|8,14-8,14
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41|CodeLine
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,31
 //::         - >-
-//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|15,1-15,1|AssertionAutomatic
-//::   calls: []
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,19-9,24
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|9,24-9,31
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,20-10,20
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|10,19-10,31
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,46
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,46-11,54
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,62
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,66-11,69
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,59-11,69
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|11,19-11,69
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,19-13,19
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,32
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,36-13,39
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,29-13,39
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|correctness|13,9-13,41
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46
+//::       unused:
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,41
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55
+//::       unused:
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63
+//::       unused:
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,67-5,70
+//::       unused:
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,37
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,14-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70
+//::     - top: >-
+//::         snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,70
+//::       unused:
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|2,14-2,23
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,46
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,43-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|3,26-3,51
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|4,13-4,27
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,55
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,60-5,63
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,47-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,25-5,70
+//::         - >-
+//::           snapshot_bug_forall_precondition_uncovered.dfy|ElementWiseDivide|well-formedness|5,13-5,70
+//::   connections: []
 //::

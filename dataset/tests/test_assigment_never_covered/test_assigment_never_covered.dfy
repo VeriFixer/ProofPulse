@@ -10,5 +10,5 @@ method Abs(x: int) returns (y: int)
 }
 
 //::: Name - Bug assigment never covered
-//::: Description - assigment line is never covered bug report already opened for Boogie team
+//::: Description - assigment line is never covered bug report already opened for Boogie team (Fixed on boogie PR)
 //::: L8 - CovComplete

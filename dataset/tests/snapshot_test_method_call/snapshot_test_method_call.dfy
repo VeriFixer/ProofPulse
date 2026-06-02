@@ -129,25 +129,9 @@ method Main() {
 // Bug Boogie->Dafnt passage, or z3 to bogie. Boogie did not consider id1 and id5 covered even though
 // The assertion created by both in z3 aux$$assume$$id1$id5$ensures was covered
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: snapshot_test_method_call.dfy|ret32|correctness|2,14-2,14|Postcondition
-//::     file: snapshot_test_method_call.dfy
-//::     start:
-//::       line: 2
-//::       col: 14
-//::     end:
-//::       line: 2
-//::       col: 14
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: ret32
-//::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: snapshot_test_method_call.dfy|ret32|correctness|2,13-2,16|Postcondition
+//::   - locationId: snapshot_test_method_call.dfy|ret32|correctness|2,13-2,16
 //::     file: snapshot_test_method_call.dfy
 //::     start:
 //::       line: 2
@@ -155,15 +139,24 @@ method Main() {
 //::     end:
 //::       line: 2
 //::       col: 16
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: snapshot_test_method_call.dfy|ret32|correctness|5,5-5,12|CodeLine
+//::     prooftexts:
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3492
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_method_call.dfy|ret32|correctness|5,5-5,12
 //::     file: snapshot_test_method_call.dfy
 //::     start:
 //::       line: 5
@@ -171,15 +164,20 @@ method Main() {
 //::     end:
 //::       line: 5
 //::       col: 12
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: snapshot_test_method_call.dfy|ret32|correctness|3,14-3,17|Precondition
+//::     prooftexts:
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_method_call.dfy|ret32|correctness|3,14-3,17
 //::     file: snapshot_test_method_call.dfy
 //::     start:
 //::       line: 3
@@ -187,15 +185,20 @@ method Main() {
 //::     end:
 //::       line: 3
 //::       col: 17
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: snapshot_test_method_call.dfy|ret32|correctness|6,1-6,1|AssertionAutomatic
+//::     prooftexts:
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_method_call.dfy|ret32|correctness|6,1-6,1
 //::     file: snapshot_test_method_call.dfy
 //::     start:
 //::       line: 6
@@ -203,33 +206,22 @@ method Main() {
 //::     end:
 //::       line: 6
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'x', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: ret32
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'x', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: ret32
-//::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: snapshot_test_method_call.dfy|Main|correctness|8,16-8,16|Precondition
-//::     file: snapshot_test_method_call.dfy
-//::     start:
-//::       line: 8
-//::       col: 16
-//::     end:
-//::       line: 8
-//::       col: 16
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Main
-//::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_test_method_call.dfy|Main|correctness|8,6-8,19|Call
+//::   - locationId: snapshot_test_method_call.dfy|Main|correctness|8,6-8,19
 //::     file: snapshot_test_method_call.dfy
 //::     start:
 //::       line: 8
@@ -237,15 +229,29 @@ method Main() {
 //::     end:
 //::       line: 8
 //::       col: 19
-//::     prooftext: requires clause at snapshot_test_method_call.dfy(3,14)-(3,17) from call
-//::     isTopAssertion: false
+//::     methodName: Main
+//::     methodType: correctness
+//::     prooftexts:
+//::       - the precondition always holds
+//::       - requires clause at snapshot_test_method_call.dfy(3,14)-(3,17) from call
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - ensures clause at snapshot_test_method_call.dfy(2,13)-(2,16) from call
+//::       - call
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Call
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3354
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
-//::     methodName: Main
-//::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_test_method_call.dfy|Main|correctness|3,14-3,17|Precondition
+//::   - locationId: snapshot_test_method_call.dfy|Main|correctness|3,14-3,17
 //::     file: snapshot_test_method_call.dfy
 //::     start:
 //::       line: 3
@@ -253,31 +259,20 @@ method Main() {
 //::     end:
 //::       line: 3
 //::       col: 17
-//::     prooftext: requires clause
-//::     isTopAssertion: false
+//::     methodName: Main
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
 //::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: Main
-//::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_test_method_call.dfy|Main|correctness|8,6-8,19|CodeLine
-//::     file: snapshot_test_method_call.dfy
-//::     start:
-//::       line: 8
-//::       col: 6
-//::     end:
-//::       line: 8
-//::       col: 19
-//::     prooftext: call
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: Main
-//::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_test_method_call.dfy|Main|correctness|9,5-9,17|AssertionManual
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_method_call.dfy|Main|correctness|9,5-9,17
 //::     file: snapshot_test_method_call.dfy
 //::     start:
 //::       line: 9
@@ -285,31 +280,25 @@ method Main() {
 //::     end:
 //::       line: 9
 //::       col: 17
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: Main
 //::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_test_method_call.dfy|Main|correctness|9,5-9,5|AssertionManual
-//::     file: snapshot_test_method_call.dfy
-//::     start:
-//::       line: 9
-//::       col: 5
-//::     end:
-//::       line: 9
-//::       col: 5
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionManual
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4614
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: Main
-//::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_test_method_call.dfy|Main|correctness|2,13-2,16|Postcondition
+//::   - locationId: snapshot_test_method_call.dfy|Main|correctness|2,13-2,16
 //::     file: snapshot_test_method_call.dfy
 //::     start:
 //::       line: 2
@@ -317,42 +306,42 @@ method Main() {
 //::     end:
 //::       line: 2
 //::       col: 16
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Main
 //::     methodType: correctness
-//::     assertionGroup: Main
+//::     prooftexts:
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
 //:: edges:
-//::   tops:
-//::     - id: snapshot_test_method_call.dfy|ret32|correctness|2,14-2,14|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_method_call.dfy|ret32|correctness|2,13-2,16|Postcondition
-//::         - snapshot_test_method_call.dfy|ret32|correctness|5,5-5,12|CodeLine
-//::       proofUnused:
-//::         - snapshot_test_method_call.dfy|ret32|correctness|3,14-3,17|Precondition
-//::         - >-
-//::           snapshot_test_method_call.dfy|ret32|correctness|6,1-6,1|AssertionAutomatic
-//::     - id: snapshot_test_method_call.dfy|Main|correctness|8,16-8,16|Precondition
-//::       provedBy:
-//::         - snapshot_test_method_call.dfy|Main|correctness|8,6-8,19|Call
-//::       proofUnused:
-//::         - snapshot_test_method_call.dfy|Main|correctness|8,6-8,19|CodeLine
-//::         - >-
-//::           snapshot_test_method_call.dfy|Main|correctness|9,5-9,17|AssertionManual
-//::     - id: snapshot_test_method_call.dfy|Main|correctness|9,5-9,5|AssertionManual
-//::       provedBy:
-//::         - snapshot_test_method_call.dfy|Main|correctness|8,6-8,19|Call
-//::         - >-
-//::           snapshot_test_method_call.dfy|Main|correctness|9,5-9,17|AssertionManual
-//::       proofUnused:
-//::         - snapshot_test_method_call.dfy|Main|correctness|8,6-8,19|CodeLine
-//::   calls:
-//::     - id: snapshot_test_method_call.dfy|Main|correctness|8,6-8,19|Call
-//::       connections:
-//::         - snapshot_test_method_call.dfy|Main|correctness|3,14-3,17|Precondition
-//::         - snapshot_test_method_call.dfy|Main|correctness|2,13-2,16|Postcondition
+//::   provedBy:
+//::     - top: snapshot_test_method_call.dfy|ret32|correctness|2,13-2,16
+//::       provers:
+//::         - snapshot_test_method_call.dfy|ret32|correctness|5,5-5,12
+//::     - top: snapshot_test_method_call.dfy|Main|correctness|9,5-9,17
+//::       provers:
+//::         - snapshot_test_method_call.dfy|Main|correctness|8,6-8,19
+//::   proofUnused:
+//::     - top: snapshot_test_method_call.dfy|ret32|correctness|2,13-2,16
+//::       unused:
+//::         - snapshot_test_method_call.dfy|ret32|correctness|3,14-3,17
+//::         - snapshot_test_method_call.dfy|ret32|correctness|6,1-6,1
+//::     - top: snapshot_test_method_call.dfy|Main|correctness|8,6-8,19
+//::       unused:
+//::         - snapshot_test_method_call.dfy|Main|correctness|8,6-8,19
+//::         - snapshot_test_method_call.dfy|Main|correctness|9,5-9,17
+//::     - top: snapshot_test_method_call.dfy|Main|correctness|9,5-9,17
+//::       unused:
+//::         - snapshot_test_method_call.dfy|Main|correctness|8,6-8,19
+//::   connections:
+//::     - call: snapshot_test_method_call.dfy|Main|correctness|8,6-8,19
+//::       targets:
+//::         - snapshot_test_method_call.dfy|Main|correctness|3,14-3,17
+//::         - snapshot_test_method_call.dfy|Main|correctness|2,13-2,16
 //::

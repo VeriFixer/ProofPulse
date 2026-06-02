@@ -11,27 +11,9 @@ method Max(a: int, b: int) returns (max: int)
 
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,17-2,17|Postcondition
-//::     file: snapshot_bug_direct_assignment_no_coverage.dfy
-//::     start:
-//::       line: 2
-//::       col: 17
-//::     end:
-//::       line: 2
-//::       col: 17
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovComplete
-//::     methodName: Max
-//::     methodType: correctness
-//::     assertionGroup: Max
-//::   - id: >-
-//::       snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,13-2,20|Postcondition
+//::   - locationId: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,13-2,20
 //::     file: snapshot_bug_direct_assignment_no_coverage.dfy
 //::     start:
 //::       line: 2
@@ -39,16 +21,72 @@ method Max(a: int, b: int) returns (max: int)
 //::     end:
 //::       line: 2
 //::       col: 20
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Max
 //::     methodType: correctness
-//::     assertionGroup: Max
-//::   - id: >-
-//::       snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,25-2,32|Postcondition
+//::     prooftexts:
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3485
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|6,9-6,17
+//::     file: snapshot_bug_direct_assignment_no_coverage.dfy
+//::     start:
+//::       line: 6
+//::       col: 9
+//::     end:
+//::       line: 6
+//::       col: 17
+//::     methodName: Max
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|8,9-8,17
+//::     file: snapshot_bug_direct_assignment_no_coverage.dfy
+//::     start:
+//::       line: 8
+//::       col: 9
+//::     end:
+//::       line: 8
+//::       col: 17
+//::     methodName: Max
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,25-2,32
 //::     file: snapshot_bug_direct_assignment_no_coverage.dfy
 //::     start:
 //::       line: 2
@@ -56,16 +94,26 @@ method Max(a: int, b: int) returns (max: int)
 //::     end:
 //::       line: 2
 //::       col: 32
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Max
 //::     methodType: correctness
-//::     assertionGroup: Max
-//::   - id: >-
-//::       snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|3,13-3,32|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3665
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|3,13-3,32
 //::     file: snapshot_bug_direct_assignment_no_coverage.dfy
 //::     start:
 //::       line: 3
@@ -73,50 +121,26 @@ method Max(a: int, b: int) returns (max: int)
 //::     end:
 //::       line: 3
 //::       col: 32
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: Max
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
-//::     covStatus: CovComplete
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3795
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
-//::     methodName: Max
-//::     methodType: correctness
-//::     assertionGroup: Max
-//::   - id: >-
-//::       snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|6,9-6,17|CodeLine
-//::     file: snapshot_bug_direct_assignment_no_coverage.dfy
-//::     start:
-//::       line: 6
-//::       col: 9
-//::     end:
-//::       line: 6
-//::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: Max
-//::     methodType: correctness
-//::     assertionGroup: Max
-//::   - id: >-
-//::       snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|8,9-8,17|CodeLine
-//::     file: snapshot_bug_direct_assignment_no_coverage.dfy
-//::     start:
-//::       line: 8
-//::       col: 9
-//::     end:
-//::       line: 8
-//::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: Max
-//::     methodType: correctness
-//::     assertionGroup: Max
-//::   - id: >-
-//::       snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|10,1-10,1|AssertionAutomatic
+//::   - locationId: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|10,1-10,1
 //::     file: snapshot_bug_direct_assignment_no_coverage.dfy
 //::     start:
 //::       line: 10
@@ -124,99 +148,71 @@ method Max(a: int, b: int) returns (max: int)
 //::     end:
 //::       line: 10
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'max', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: Max
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'max', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'max', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'max', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: Max
-//::     methodType: correctness
-//::     assertionGroup: Max
-//::   - id: >-
-//::       snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,29-2,29|Postcondition
-//::     file: snapshot_bug_direct_assignment_no_coverage.dfy
-//::     start:
-//::       line: 2
-//::       col: 29
-//::     end:
-//::       line: 2
-//::       col: 29
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovComplete
-//::     methodName: Max
-//::     methodType: correctness
-//::     assertionGroup: Max
-//::   - id: >-
-//::       snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|3,22-3,22|Postcondition
-//::     file: snapshot_bug_direct_assignment_no_coverage.dfy
-//::     start:
-//::       line: 3
-//::       col: 22
-//::     end:
-//::       line: 3
-//::       col: 22
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovComplete
-//::     methodName: Max
-//::     methodType: correctness
-//::     assertionGroup: Max
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,17-2,17|Postcondition
-//::       provedBy:
+//::   provedBy:
+//::     - top: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,13-2,20
+//::       provers:
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,13-2,20|Postcondition
-//::       proofUnused:
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|6,9-6,17
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,25-2,32|Postcondition
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|8,9-8,17
+//::     - top: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,25-2,32
+//::       provers:
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|3,13-3,32|Postcondition
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,13-2,20
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|6,9-6,17|CodeLine
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|8,9-8,17
+//::     - top: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|3,13-3,32
+//::       provers:
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|8,9-8,17|CodeLine
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|6,9-6,17
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|10,1-10,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,29-2,29|Postcondition
-//::       provedBy:
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|8,9-8,17
+//::   proofUnused:
+//::     - top: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,13-2,20
+//::       unused:
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,13-2,20|Postcondition
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,25-2,32
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,25-2,32|Postcondition
-//::       proofUnused:
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|3,13-3,32
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|3,13-3,32|Postcondition
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|10,1-10,1
+//::     - top: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,25-2,32
+//::       unused:
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|6,9-6,17|CodeLine
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|3,13-3,32
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|8,9-8,17|CodeLine
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|6,9-6,17
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|10,1-10,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|3,22-3,22|Postcondition
-//::       provedBy:
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|10,1-10,1
+//::     - top: snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|3,13-3,32
+//::       unused:
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|3,13-3,32|Postcondition
-//::       proofUnused:
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,13-2,20
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,13-2,20|Postcondition
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,25-2,32
 //::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|2,25-2,32|Postcondition
-//::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|6,9-6,17|CodeLine
-//::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|8,9-8,17|CodeLine
-//::         - >-
-//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|10,1-10,1|AssertionAutomatic
-//::   calls: []
+//::           snapshot_bug_direct_assignment_no_coverage.dfy|Max|correctness|10,1-10,1
+//::   connections: []
 //::

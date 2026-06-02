@@ -10,44 +10,10 @@ method DemoImpossiblePrecondition(a: int)
 
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|4,13-4,13|Postcondition
-//::     file: snapshot_test_impossible_precondition.dfy
-//::     start:
-//::       line: 4
-//::       col: 13
-//::     end:
-//::       line: 4
-//::       col: 13
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: DemoImpossiblePrecondition
-//::     methodType: correctness
-//::     assertionGroup: DemoImpossiblePrecondition
-//::   - id: >-
-//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|3,12-3,37|Precondition
-//::     file: snapshot_test_impossible_precondition.dfy
-//::     start:
-//::       line: 3
-//::       col: 12
-//::     end:
-//::       line: 3
-//::       col: 37
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: DemoImpossiblePrecondition
-//::     methodType: correctness
-//::     assertionGroup: DemoImpossiblePrecondition
-//::   - id: >-
-//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|4,11-4,16|Postcondition
+//::   - locationId: >-
+//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|4,11-4,16
 //::     file: snapshot_test_impossible_precondition.dfy
 //::     start:
 //::       line: 4
@@ -55,16 +21,47 @@ method DemoImpossiblePrecondition(a: int)
 //::     end:
 //::       line: 4
 //::       col: 16
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: DemoImpossiblePrecondition
+//::     methodType: correctness
+//::     prooftexts:
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3974
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|3,12-3,37
+//::     file: snapshot_test_impossible_precondition.dfy
+//::     start:
+//::       line: 3
+//::       col: 12
+//::     end:
+//::       line: 3
+//::       col: 37
 //::     methodName: DemoImpossiblePrecondition
 //::     methodType: correctness
-//::     assertionGroup: DemoImpossiblePrecondition
-//::   - id: >-
-//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|6,7-6,17|CodeLine
+//::     prooftexts:
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|6,7-6,17
 //::     file: snapshot_test_impossible_precondition.dfy
 //::     start:
 //::       line: 6
@@ -72,16 +69,21 @@ method DemoImpossiblePrecondition(a: int)
 //::     end:
 //::       line: 6
 //::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: DemoImpossiblePrecondition
 //::     methodType: correctness
-//::     assertionGroup: DemoImpossiblePrecondition
-//::   - id: >-
-//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|7,7-7,17|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|7,7-7,17
 //::     file: snapshot_test_impossible_precondition.dfy
 //::     start:
 //::       line: 7
@@ -89,16 +91,21 @@ method DemoImpossiblePrecondition(a: int)
 //::     end:
 //::       line: 7
 //::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: DemoImpossiblePrecondition
 //::     methodType: correctness
-//::     assertionGroup: DemoImpossiblePrecondition
-//::   - id: >-
-//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|8,3-8,13|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|8,3-8,13
 //::     file: snapshot_test_impossible_precondition.dfy
 //::     start:
 //::       line: 8
@@ -106,16 +113,21 @@ method DemoImpossiblePrecondition(a: int)
 //::     end:
 //::       line: 8
 //::       col: 13
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: DemoImpossiblePrecondition
 //::     methodType: correctness
-//::     assertionGroup: DemoImpossiblePrecondition
-//::   - id: >-
-//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|9,1-9,1|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|9,1-9,1
 //::     file: snapshot_test_impossible_precondition.dfy
 //::     start:
 //::       line: 9
@@ -123,33 +135,41 @@ method DemoImpossiblePrecondition(a: int)
 //::     end:
 //::       line: 9
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'r', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: DemoImpossiblePrecondition
 //::     methodType: correctness
-//::     assertionGroup: DemoImpossiblePrecondition
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'r', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|4,13-4,13|Postcondition
-//::       provedBy:
+//::   provedBy:
+//::     - top: >-
+//::         snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|4,11-4,16
+//::       provers:
 //::         - >-
-//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|3,12-3,37|Precondition
-//::       proofUnused:
+//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|3,12-3,37
+//::   proofUnused:
+//::     - top: >-
+//::         snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|4,11-4,16
+//::       unused:
 //::         - >-
-//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|4,11-4,16|Postcondition
+//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|4,11-4,16
 //::         - >-
-//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|6,7-6,17|CodeLine
+//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|6,7-6,17
 //::         - >-
-//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|7,7-7,17|CodeLine
+//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|7,7-7,17
 //::         - >-
-//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|8,3-8,13|CodeLine
+//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|8,3-8,13
 //::         - >-
-//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|9,1-9,1|AssertionAutomatic
-//::   calls: []
+//::           snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|9,1-9,1
+//::   connections: []
 //::

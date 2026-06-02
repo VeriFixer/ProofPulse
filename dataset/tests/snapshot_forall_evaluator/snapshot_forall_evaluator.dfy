@@ -24,27 +24,9 @@ method Main()
 }
 
 //:: method AllElementsEqual:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,16-2,16|AssertionAutomatic
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 2
-//::       col: 16
-//::     end:
-//::       line: 2
-//::       col: 16
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 2
@@ -52,16 +34,30 @@ method Main()
 //::     end:
 //::       line: 2
 //::       col: 16
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4844
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 2
@@ -69,16 +65,26 @@ method Main()
 //::     end:
 //::       line: 2
 //::       col: 26
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 3
@@ -86,16 +92,26 @@ method Main()
 //::     end:
 //::       line: 3
 //::       col: 13
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 3
@@ -103,16 +119,30 @@ method Main()
 //::     end:
 //::       line: 3
 //::       col: 47
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 7678
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 3
@@ -120,16 +150,26 @@ method Main()
 //::     end:
 //::       line: 3
 //::       col: 47
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 3
@@ -137,16 +177,30 @@ method Main()
 //::     end:
 //::       line: 3
 //::       col: 58
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8196
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 3
@@ -154,16 +208,30 @@ method Main()
 //::     end:
 //::       line: 3
 //::       col: 61
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8542
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 3
@@ -171,16 +239,26 @@ method Main()
 //::     end:
 //::       line: 3
 //::       col: 66
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 3
@@ -188,16 +266,26 @@ method Main()
 //::     end:
 //::       line: 3
 //::       col: 66
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 3
@@ -205,16 +293,26 @@ method Main()
 //::     end:
 //::       line: 3
 //::       col: 66
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 3
@@ -222,16 +320,26 @@ method Main()
 //::     end:
 //::       line: 3
 //::       col: 66
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 4
@@ -239,16 +347,26 @@ method Main()
 //::     end:
 //::       line: 4
 //::       col: 14
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 4
@@ -256,16 +374,30 @@ method Main()
 //::     end:
 //::       line: 4
 //::       col: 48
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12370
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 4
@@ -273,16 +405,26 @@ method Main()
 //::     end:
 //::       line: 4
 //::       col: 48
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 4
@@ -290,16 +432,30 @@ method Main()
 //::     end:
 //::       line: 4
 //::       col: 58
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12882
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 4
@@ -307,16 +463,30 @@ method Main()
 //::     end:
 //::       line: 4
 //::       col: 61
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13272
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 4
@@ -324,16 +494,26 @@ method Main()
 //::     end:
 //::       line: 4
 //::       col: 66
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 4
@@ -341,101 +521,26 @@ method Main()
 //::     end:
 //::       line: 4
 //::       col: 66
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: AllElementsEqual
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,59-4,59|AssertionAutomatic
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 4
-//::       col: 59
-//::     end:
-//::       line: 4
-//::       col: 59
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,48-4,48|AssertionAutomatic
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 4
-//::       col: 48
-//::     end:
-//::       line: 4
-//::       col: 48
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,59-3,59|AssertionAutomatic
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 3
-//::       col: 59
-//::     end:
-//::       line: 3
-//::       col: 59
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,47-3,47|AssertionAutomatic
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 3
-//::       col: 47
-//::     end:
-//::       line: 3
-//::       col: 47
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: well-formedness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,21-7,21|AssertionAutomatic
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 7
-//::       col: 21
-//::     end:
-//::       line: 7
-//::       col: 21
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 7
@@ -443,16 +548,33 @@ method Main()
 //::     end:
 //::       line: 7
 //::       col: 21
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6446
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 2
@@ -460,16 +582,29 @@ method Main()
 //::     end:
 //::       line: 2
 //::       col: 26
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 3
@@ -477,16 +612,33 @@ method Main()
 //::     end:
 //::       line: 3
 //::       col: 66
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12799
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 4
@@ -494,16 +646,33 @@ method Main()
 //::     end:
 //::       line: 4
 //::       col: 66
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12838
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 6
@@ -511,16 +680,29 @@ method Main()
 //::     end:
 //::       line: 6
 //::       col: 19
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: AllElementsEqual
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: AllElementsEqual
-//::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 7
@@ -528,16 +710,33 @@ method Main()
 //::     end:
 //::       line: 7
 //::       col: 14
-//::     prooftext: lower bound does not exceed upper bound
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::     methodName: AllElementsEqual
+//::     methodType: correctness
+//::     prooftexts:
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6715
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 8
@@ -545,18 +744,49 @@ method Main()
 //::     end:
 //::       line: 8
 //::       col: 19
-//::     prooftext: >-
-//::       variable 'result', which is subject to definite-assignment rules, is
-//::       always initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 8
@@ -564,16 +794,33 @@ method Main()
 //::     end:
 //::       line: 8
 //::       col: 57
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10748
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 8
@@ -581,16 +828,33 @@ method Main()
 //::     end:
 //::       line: 8
 //::       col: 60
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10905
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 8
@@ -598,16 +862,29 @@ method Main()
 //::     end:
 //::       line: 8
 //::       col: 65
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 8
@@ -615,16 +892,35 @@ method Main()
 //::     end:
 //::       line: 8
 //::       col: 65
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12618
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 10
@@ -632,16 +928,33 @@ method Main()
 //::     end:
 //::       line: 10
 //::       col: 12
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10691
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 10
@@ -649,16 +962,33 @@ method Main()
 //::     end:
 //::       line: 10
 //::       col: 15
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10824
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 11
@@ -666,16 +996,29 @@ method Main()
 //::     end:
 //::       line: 11
 //::       col: 28
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: AllElementsEqual
 //::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 15
@@ -683,120 +1026,49 @@ method Main()
 //::     end:
 //::       line: 15
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'result', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: AllElementsEqual
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: AllElementsEqual
-//::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14|AssertionAutomatic
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 7
-//::       col: 14
-//::     end:
-//::       line: 7
-//::       col: 14
-//::     prooftext: lower bound does not exceed upper bound
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,30|LoopInvariant
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 8
-//::       col: 30
-//::     end:
-//::       line: 8
-//::       col: 30
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,13-10,13|AssertionAutomatic
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 10
-//::       col: 13
-//::     end:
-//::       line: 10
-//::       col: 13
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,24|Postcondition
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 3
-//::       col: 24
-//::     end:
-//::       line: 3
-//::       col: 24
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,25|Postcondition
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 4
-//::       col: 25
-//::     end:
-//::       line: 4
-//::       col: 25
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,58-8,58|AssertionAutomatic
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 8
-//::       col: 58
-//::     end:
-//::       line: 8
-//::       col: 58
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: AllElementsEqual
-//::     methodType: correctness
-//::     assertionGroup: AllElementsEqual
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22|AssertionAutomatic
+//::   - locationId: snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 19
@@ -804,31 +1076,29 @@ method Main()
 //::     end:
 //::       line: 19
 //::       col: 22
-//::     prooftext: array size is never negative
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Main
 //::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22|CodeLine
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 19
-//::       col: 22
-//::     end:
-//::       line: 19
-//::       col: 22
-//::     prooftext: array size is never negative
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::     prooftexts:
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5362
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Main
-//::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24|CodeLine
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 19
@@ -836,16 +1106,25 @@ method Main()
 //::     end:
 //::       line: 19
 //::       col: 24
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Main
 //::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 20
@@ -853,16 +1132,29 @@ method Main()
 //::     end:
 //::       line: 20
 //::       col: 5
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: Main
 //::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8267
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 20
@@ -870,15 +1162,36 @@ method Main()
 //::     end:
 //::       line: 20
 //::       col: 8
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Main
 //::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,14|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11063
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,14
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 20
@@ -886,15 +1199,31 @@ method Main()
 //::     end:
 //::       line: 20
 //::       col: 14
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: Main
 //::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 21
@@ -902,15 +1231,37 @@ method Main()
 //::     end:
 //::       line: 21
 //::       col: 36
-//::     prooftext: call
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Main
 //::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22|AssertionManual
+//::     prooftexts:
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - call
+//::       - assignment (or return)
+//::       - the precondition always holds
+//::       - requires clause at snapshot_forall_evaluator.dfy(2,14)-(2,26) from call
+//::       - call
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - ensures clause at snapshot_forall_evaluator.dfy(4,25)-(4,66) from call
+//::       - call
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11410
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 22
@@ -918,64 +1269,29 @@ method Main()
 //::     end:
 //::       line: 22
 //::       col: 22
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
+//::     methodName: Main
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: Main
-//::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: >-
-//::       snapshot_forall_evaluator.dfy|Main|correctness|20,6-20,6|AssertionAutomatic
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 20
-//::       col: 6
-//::     end:
-//::       line: 20
-//::       col: 6
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16495
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: Main
-//::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_forall_evaluator.dfy|Main|correctness|21,30-21,30|Precondition
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 21
-//::       col: 30
-//::     end:
-//::       line: 21
-//::       col: 30
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Main
-//::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36|Call
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 21
-//::       col: 9
-//::     end:
-//::       line: 21
-//::       col: 36
-//::     prooftext: requires clause at snapshot_forall_evaluator.dfy(2,14)-(2,26) from call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
-//::     methodName: Main
-//::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_forall_evaluator.dfy|Main|correctness|2,14-2,26|Precondition
+//::   - locationId: snapshot_forall_evaluator.dfy|Main|correctness|2,14-2,26
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 2
@@ -983,31 +1299,20 @@ method Main()
 //::     end:
 //::       line: 2
 //::       col: 26
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Main
 //::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,5|AssertionManual
-//::     file: snapshot_forall_evaluator.dfy
-//::     start:
-//::       line: 22
-//::       col: 5
-//::     end:
-//::       line: 22
-//::       col: 5
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
+//::     prooftexts:
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Precondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: Main
-//::     methodType: correctness
-//::     assertionGroup: Main
-//::   - id: snapshot_forall_evaluator.dfy|Main|correctness|4,25-4,66|Postcondition
+//::   - locationId: snapshot_forall_evaluator.dfy|Main|correctness|4,25-4,66
 //::     file: snapshot_forall_evaluator.dfy
 //::     start:
 //::       line: 4
@@ -1015,519 +1320,484 @@ method Main()
 //::     end:
 //::       line: 4
 //::       col: 66
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Main
 //::     methodType: correctness
-//::     assertionGroup: Main
+//::     prooftexts:
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,16-2,16|AssertionAutomatic
-//::       provedBy:
+//::   provedBy:
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61
+//::       provers:
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61
+//::       provers:
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
+//::       provers:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
+//::       provers:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14
+//::       provers:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26
+//::     - top: snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5
+//::       provers:
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24
+//::     - top: snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8
+//::       provers:
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24
+//::     - top: snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36
+//::       provers:
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8
+//::     - top: snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22
+//::       provers:
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,14
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36
+//::   proofUnused:
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16
+//::       unused:
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,59-4,59|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47
+//::       unused:
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,48-4,48|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58
+//::       unused:
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61
+//::       unused:
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,59-3,59|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48
+//::       unused:
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,47-3,47|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26|Precondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58
+//::       unused:
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66|Postcondition
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,21-7,21|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,37-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,61
+//::       unused:
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,16
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|2,14-2,26
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,13
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
-//::       proofUnused:
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,47
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,61
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,58-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,13-3,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,58
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,58-4,66
 //::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,30|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
-//::       proofUnused:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,13-10,13|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,24|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,25|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,58-8,58|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26|Precondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66|Postcondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66|Postcondition
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65|LoopInvariant
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65|LoopInvariant
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22|CodeLine
-//::       proofUnused:
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,14|CodeLine
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22|AssertionManual
-//::     - id: >-
-//::         snapshot_forall_evaluator.dfy|Main|correctness|20,6-20,6|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
-//::       proofUnused:
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22|CodeLine
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,14|CodeLine
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22|AssertionManual
-//::     - id: snapshot_forall_evaluator.dfy|Main|correctness|21,30-21,30|Precondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36|Call
-//::       proofUnused:
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22|CodeLine
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,14|CodeLine
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22|AssertionManual
-//::     - id: snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,5|AssertionManual
-//::       provedBy:
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,14|CodeLine
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36|Call
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22|AssertionManual
-//::       proofUnused:
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22|CodeLine
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24|CodeLine
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8|AssertionAutomatic
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36|CodeLine
-//::   calls:
-//::     - id: snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36|Call
-//::       connections:
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|2,14-2,26|Precondition
-//::         - snapshot_forall_evaluator.dfy|Main|correctness|4,25-4,66|Postcondition
+//::           snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|2,14-2,26
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,14-7,14
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
+//::     - top: snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,14
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22
+//::     - top: snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,14
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22
+//::     - top: snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,14
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22
+//::     - top: snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,14
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22
+//::     - top: snapshot_forall_evaluator.dfy|Main|correctness|22,5-22,22
+//::       unused:
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,8
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36
+//::   connections:
+//::     - call: snapshot_forall_evaluator.dfy|Main|correctness|21,9-21,36
+//::       targets:
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|2,14-2,26
+//::         - snapshot_forall_evaluator.dfy|Main|correctness|4,25-4,66
 //::

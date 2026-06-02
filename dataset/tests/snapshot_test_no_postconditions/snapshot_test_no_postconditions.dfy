@@ -13,10 +13,9 @@ function Id<T> (a : T) : T {
 
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_test_no_postconditions.dfy|Abs|correctness|8,1-8,1|AssertionAutomatic
+//::   - locationId: snapshot_test_no_postconditions.dfy|Abs|correctness|8,1-8,1
 //::     file: snapshot_test_no_postconditions.dfy
 //::     start:
 //::       line: 8
@@ -24,17 +23,28 @@ function Id<T> (a : T) : T {
 //::     end:
 //::       line: 8
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'y', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Abs
 //::     methodType: correctness
-//::     assertionGroup: Abs
-//::   - id: snapshot_test_no_postconditions.dfy|Abs|correctness|4,5-4,12|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'y', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'y', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4401
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_no_postconditions.dfy|Abs|correctness|4,5-4,12
 //::     file: snapshot_test_no_postconditions.dfy
 //::     start:
 //::       line: 4
@@ -42,15 +52,20 @@ function Id<T> (a : T) : T {
 //::     end:
 //::       line: 4
 //::       col: 12
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Abs
 //::     methodType: correctness
-//::     assertionGroup: Abs
-//::   - id: snapshot_test_no_postconditions.dfy|Abs|correctness|6,5-6,15|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_no_postconditions.dfy|Abs|correctness|6,5-6,15
 //::     file: snapshot_test_no_postconditions.dfy
 //::     start:
 //::       line: 6
@@ -58,23 +73,25 @@ function Id<T> (a : T) : T {
 //::     end:
 //::       line: 6
 //::       col: 15
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Abs
 //::     methodType: correctness
-//::     assertionGroup: Abs
+//::     prooftexts:
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_test_no_postconditions.dfy|Abs|correctness|8,1-8,1|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_no_postconditions.dfy|Abs|correctness|8,1-8,1|AssertionAutomatic
-//::       proofUnused:
-//::         - snapshot_test_no_postconditions.dfy|Abs|correctness|4,5-4,12|CodeLine
-//::         - snapshot_test_no_postconditions.dfy|Abs|correctness|6,5-6,15|CodeLine
-//::   calls: []
+//::   provedBy: []
+//::   proofUnused:
+//::     - top: snapshot_test_no_postconditions.dfy|Abs|correctness|8,1-8,1
+//::       unused:
+//::         - snapshot_test_no_postconditions.dfy|Abs|correctness|4,5-4,12
+//::         - snapshot_test_no_postconditions.dfy|Abs|correctness|6,5-6,15
+//::   connections: []
 //::

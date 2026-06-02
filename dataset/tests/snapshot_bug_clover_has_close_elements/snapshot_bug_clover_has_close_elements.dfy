@@ -36,27 +36,10 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,95-4,95|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 4
-//::       col: 95
-//::     end:
-//::       line: 4
-//::       col: 95
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 4
@@ -64,16 +47,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 4
 //::       col: 97
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12505
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 2
@@ -81,16 +84,32 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 2
 //::       col: 25
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -98,16 +117,32 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 11
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -115,16 +150,32 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 61
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -132,16 +183,32 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 83
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -149,16 +216,32 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 93
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -166,16 +249,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 111
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9235
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -183,16 +286,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 124
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9399
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -200,16 +323,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 146
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 11
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9668
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -217,16 +360,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 159
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9725
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -234,16 +397,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 175
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9627
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -251,16 +434,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 188
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9754
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -268,16 +471,32 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 193
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -285,16 +504,32 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 193
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 4
@@ -302,16 +537,32 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 4
 //::       col: 12
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 4
@@ -319,16 +570,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 4
 //::       col: 110
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13056
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 4
@@ -336,16 +607,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 4
 //::       col: 132
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12983
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 4
@@ -353,16 +644,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 4
 //::       col: 145
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13017
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 4
@@ -370,16 +681,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 4
 //::       col: 161
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12933
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 4
@@ -387,16 +718,36 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 4
 //::       col: 174
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13060
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 4
@@ -404,16 +755,32 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 4
 //::       col: 189
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 4
@@ -421,237 +788,32 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 4
 //::       col: 189
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: has_close_elements
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,108-4,108|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 4
-//::       col: 108
-//::     end:
-//::       line: 4
-//::       col: 108
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,159-4,159|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 4
-//::       col: 159
-//::     end:
-//::       line: 4
-//::       col: 159
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,172-4,172|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 4
-//::       col: 172
-//::     end:
-//::       line: 4
-//::       col: 172
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,130-4,130|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 4
-//::       col: 130
-//::     end:
-//::       line: 4
-//::       col: 130
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,143-4,143|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 4
-//::       col: 143
-//::     end:
-//::       line: 4
-//::       col: 143
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,109-3,109|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 3
-//::       col: 109
-//::     end:
-//::       line: 3
-//::       col: 109
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,122-3,122|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 3
-//::       col: 122
-//::     end:
-//::       line: 3
-//::       col: 122
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,173-3,173|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 3
-//::       col: 173
-//::     end:
-//::       line: 3
-//::       col: 173
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,186-3,186|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 3
-//::       col: 186
-//::     end:
-//::       line: 3
-//::       col: 186
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,144-3,144|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 3
-//::       col: 144
-//::     end:
-//::       line: 3
-//::       col: 144
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,157-3,157|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 3
-//::       col: 157
-//::     end:
-//::       line: 3
-//::       col: 157
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: well-formedness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,17-11,17|LoopInvariant
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 11
-//::       col: 17
-//::     end:
-//::       line: 11
-//::       col: 17
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 8
-//::       col: 7
-//::     end:
-//::       line: 8
-//::       col: 20
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 11
@@ -659,16 +821,138 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 11
 //::       col: 20
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::     prooftexts:
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 15
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15145
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
+//::     file: snapshot_bug_clover_has_close_elements.dfy
+//::     start:
+//::       line: 8
+//::       col: 7
+//::     end:
+//::       line: 8
+//::       col: 20
+//::     methodName: has_close_elements
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 2
@@ -676,16 +960,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 2
 //::       col: 25
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 3
@@ -693,16 +1027,71 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 3
 //::       col: 193
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 45
+//::       batchOutcome: Valid
+//::       batchResourceCount: 18688
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 4
@@ -710,16 +1099,71 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 4
 //::       col: 180
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 46
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21115
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 7
@@ -727,16 +1171,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 7
 //::       col: 15
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 9
@@ -744,16 +1238,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 9
 //::       col: 18
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 11
@@ -761,16 +1305,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 11
 //::       col: 35
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 11
@@ -778,16 +1372,71 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 11
 //::       col: 35
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 16
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15253
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 12
@@ -795,18 +1444,158 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 12
 //::       col: 16
-//::     prooftext: >-
-//::       variable 'res', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::     prooftexts:
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 12
@@ -814,16 +1603,117 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 12
 //::       col: 16
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 17
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15188
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 13
@@ -831,16 +1721,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 13
 //::       col: 84
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 39
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11241
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 13
@@ -848,16 +1792,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 13
 //::       col: 97
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 40
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11520
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 13
@@ -865,16 +1863,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 13
 //::       col: 119
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 41
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11951
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 13
@@ -882,16 +1934,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 13
 //::       col: 132
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 42
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11395
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 13
@@ -899,16 +2005,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 13
 //::       col: 148
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 43
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11390
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 13
@@ -916,16 +2076,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 13
 //::       col: 161
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 44
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11839
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 13
@@ -933,16 +2147,118 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 13
 //::       col: 167
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 18
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22726
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 10
@@ -950,18 +2266,158 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 10
 //::       col: 29
-//::     prooftext: >-
-//::       variable 'res', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 15
@@ -969,16 +2425,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 15
 //::       col: 23
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: has_close_elements
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 17
@@ -986,16 +2492,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 17
 //::       col: 37
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
+//::     methodName: has_close_elements
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: LoopInvariant
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 17
@@ -1003,16 +2559,72 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 17
 //::       col: 22
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 27
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16699
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 17
@@ -1020,16 +2632,71 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 17
 //::       col: 37
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 28
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16741
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 18
@@ -1037,16 +2704,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 18
 //::       col: 30
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 18
@@ -1054,16 +2771,72 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 18
 //::       col: 22
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 29
+//::       batchOutcome: Valid
+//::       batchResourceCount: 17393
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 18
@@ -1071,16 +2844,71 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 18
 //::       col: 30
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 30
+//::       batchOutcome: Valid
+//::       batchResourceCount: 17360
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 19
@@ -1088,18 +2916,158 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 19
 //::       col: 18
-//::     prooftext: >-
-//::       variable 'res', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
+//::     methodName: has_close_elements
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 19
@@ -1107,16 +3075,117 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 19
 //::       col: 18
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 31
+//::       batchOutcome: Valid
+//::       batchResourceCount: 17235
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 20
@@ -1124,16 +3193,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 20
 //::       col: 67
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 33
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15284
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 20
@@ -1141,16 +3264,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 20
 //::       col: 80
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 34
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16077
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 20
@@ -1158,16 +3335,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 20
 //::       col: 102
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 35
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16985
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 20
@@ -1175,16 +3406,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 20
 //::       col: 117
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 36
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15430
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 20
@@ -1192,16 +3477,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 20
 //::       col: 135
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 37
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15426
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 20
@@ -1209,16 +3548,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 20
 //::       col: 148
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 38
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16970
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 20
@@ -1226,16 +3619,118 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 20
 //::       col: 154
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 32
+//::       batchOutcome: Valid
+//::       batchResourceCount: 23149
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 16
@@ -1243,18 +3738,158 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 16
 //::       col: 26
-//::     prooftext: >-
-//::       variable 'res', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'res', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 23
@@ -1262,16 +3897,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 23
 //::       col: 40
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 19
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14587
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 23
@@ -1279,16 +3968,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 23
 //::       col: 55
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 20
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14712
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 23
@@ -1296,16 +4039,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 23
 //::       col: 79
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 21
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15381
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 23
@@ -1313,16 +4110,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 23
 //::       col: 95
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 22
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15476
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 23
@@ -1330,16 +4181,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 23
 //::       col: 114
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 23
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15365
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 23
@@ -1347,16 +4252,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 23
 //::       col: 129
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 24
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15449
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 23
@@ -1364,16 +4323,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 23
 //::       col: 131
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 25
@@ -1381,16 +4390,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 25
 //::       col: 20
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 26
@@ -1398,18 +4457,158 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 26
 //::       col: 15
-//::     prooftext: >-
-//::       out-parameter 'res', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 28
@@ -1417,16 +4616,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 28
 //::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 29
@@ -1434,16 +4683,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 29
 //::       col: 23
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 16
@@ -1451,16 +4750,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 16
 //::       col: 18
-//::     prooftext: decreases expression is bounded below by 0
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::     prooftexts:
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 25
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16333
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 16
@@ -1468,16 +4821,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 30
 //::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 26
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16614
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 31
@@ -1485,16 +4892,66 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 31
 //::       col: 19
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 10
@@ -1502,16 +4959,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 10
 //::       col: 23
-//::     prooftext: decreases expression is bounded below by 0
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::     prooftexts:
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 13
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14617
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 10
@@ -1519,16 +5030,70 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 32
 //::       col: 3
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: has_close_elements
 //::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 14
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14860
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
 //::     file: snapshot_bug_clover_has_close_elements.dfy
 //::     start:
 //::       line: 33
@@ -1536,4819 +5101,4477 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::     end:
 //::       line: 33
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'res', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: has_close_elements
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'res', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,24-11,24|LoopInvariant
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 11
-//::       col: 24
-//::     end:
-//::       line: 11
-//::       col: 24
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,15|LoopInvariant
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 12
-//::       col: 15
-//::     end:
-//::       line: 12
-//::       col: 15
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,15|LoopInvariant
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 13
-//::       col: 15
-//::     end:
-//::       line: 13
-//::       col: 15
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,19|Postcondition
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 3
-//::       col: 19
-//::     end:
-//::       line: 3
-//::       col: 19
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,21|Postcondition
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 4
-//::       col: 21
-//::     end:
-//::       line: 4
-//::       col: 21
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,19-17,19|LoopInvariant
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 17
-//::       col: 19
-//::     end:
-//::       line: 17
-//::       col: 19
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,26-17,26|LoopInvariant
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 17
-//::       col: 26
-//::     end:
-//::       line: 17
-//::       col: 26
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,19-18,19|LoopInvariant
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 18
-//::       col: 19
-//::     end:
-//::       line: 18
-//::       col: 19
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,27-18,27|LoopInvariant
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 18
-//::       col: 27
-//::     end:
-//::       line: 18
-//::       col: 27
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,17|LoopInvariant
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 19
-//::       col: 17
-//::     end:
-//::       line: 19
-//::       col: 17
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,17|LoopInvariant
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 20
-//::       col: 17
-//::     end:
-//::       line: 20
-//::       col: 17
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,15|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 10
-//::       col: 15
-//::     end:
-//::       line: 10
-//::       col: 15
-//::     prooftext: decreases expression is bounded below by 0
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-10,3|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 10
-//::       col: 3
-//::     end:
-//::       line: 10
-//::       col: 3
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,35-23,35|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 23
-//::       col: 35
-//::     end:
-//::       line: 23
-//::       col: 35
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,51-23,51|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 23
-//::       col: 51
-//::     end:
-//::       line: 23
-//::       col: 51
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,75-23,75|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 23
-//::       col: 75
-//::     end:
-//::       line: 23
-//::       col: 75
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,90-23,90|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 23
-//::       col: 90
-//::     end:
-//::       line: 23
-//::       col: 90
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,109-23,109|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 23
-//::       col: 109
-//::     end:
-//::       line: 23
-//::       col: 109
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,125-23,125|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 23
-//::       col: 125
-//::     end:
-//::       line: 23
-//::       col: 125
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-16,5|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 16
-//::       col: 5
-//::     end:
-//::       line: 16
-//::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,63-20,63|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 20
-//::       col: 63
-//::     end:
-//::       line: 20
-//::       col: 63
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,78-20,78|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 20
-//::       col: 78
-//::     end:
-//::       line: 20
-//::       col: 78
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,100-20,100|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 20
-//::       col: 100
-//::     end:
-//::       line: 20
-//::       col: 100
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,113-20,113|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 20
-//::       col: 113
-//::     end:
-//::       line: 20
-//::       col: 113
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,131-20,131|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 20
-//::       col: 131
-//::     end:
-//::       line: 20
-//::       col: 131
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,146-20,146|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 20
-//::       col: 146
-//::     end:
-//::       line: 20
-//::       col: 146
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,82-13,82|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 13
-//::       col: 82
-//::     end:
-//::       line: 13
-//::       col: 82
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,95-13,95|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 13
-//::       col: 95
-//::     end:
-//::       line: 13
-//::       col: 95
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,117-13,117|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 13
-//::       col: 117
-//::     end:
-//::       line: 13
-//::       col: 117
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,130-13,130|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 13
-//::       col: 130
-//::     end:
-//::       line: 13
-//::       col: 130
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,146-13,146|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 13
-//::       col: 146
-//::     end:
-//::       line: 13
-//::       col: 146
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
-//::   - id: >-
-//::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,159-13,159|AssertionAutomatic
-//::     file: snapshot_bug_clover_has_close_elements.dfy
-//::     start:
-//::       line: 13
-//::       col: 159
-//::     end:
-//::       line: 13
-//::       col: 159
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: has_close_elements
-//::     methodType: correctness
-//::     assertionGroup: has_close_elements
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,95-4,95|AssertionAutomatic
-//::       provedBy:
+//::   provedBy:
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
+//::       provers:
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
+//::       provers:
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
+//::       provers:
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
+//::       provers:
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
+//::       provers:
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
+//::       provers:
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
+//::       provers:
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
+//::       provers:
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
+//::       provers:
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
+//::       provers:
+//::         - >-
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,108-4,108|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
+//::       provers:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
+//::   proofUnused:
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,159-4,159|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,172-4,172|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,130-4,130|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,143-4,143|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,109-3,109|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,122-3,122|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,173-3,173|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,186-3,186|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,144-3,144|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,157-3,157|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,11
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,66-3,83
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,88-3,93
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,115-3,124
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,137-3,146
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,150-3,159
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,166-3,175
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,165-4,174|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,179-3,188
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,98-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189|Postcondition
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,17-11,17|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,88-4,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,123-4,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,136-4,145
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,152-4,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,20-4,189
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,24-11,24|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,15|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,15|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,19|Postcondition
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,21|Postcondition
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,19-17,19|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,26-17,26|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,19-18,19|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,27-18,27|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,17|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,17|LoopInvariant
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,15|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-10,3|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,35-23,35|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,51-23,51|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,75-23,75|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,90-23,90|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,109-23,109|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,125-23,125|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-16,5|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,63-20,63|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,78-20,78|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,100-20,100|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,113-20,113|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,131-20,131|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,146-20,146|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,82-13,82|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,95-13,95|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,117-13,117|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,130-13,130|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,146-13,146|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::     - top: >-
+//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3
+//::       unused:
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,159-13,159|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|2,12-2,25|Precondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|3,19-3,193|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|4,21-4,180|Postcondition
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|7,3-7,15|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|8,7-8,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|9,7-9,18|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,20-11,35|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,16-12,16|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|12,15-12,16|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,152-13,161
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,75-13,84|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,88-13,97|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,110-13,119|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,123-13,132|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,139-13,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|13,15-13,167|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,29-10,29|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|15,9-15,23|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,17-17,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|17,22-17,37|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,17-18,22|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|18,22-18,30|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,18-19,18|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|19,17-19,18|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,56-20,67|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,71-20,80|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,93-20,102|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,106-20,117|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,124-20,135|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,139-20,148|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|20,17-20,154|LoopInvariant
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,26-16,26|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,28-23,40|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,44-23,55|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,68-23,79|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,83-23,95|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,102-23,114|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,118-23,129|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|23,11-23,131|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|25,9-25,20|CodeLine
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|26,9-26,15|AssertionAutomatic
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23
 //::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|28,7-28,17|CodeLine
-//::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|29,7-29,23|CodeLine
-//::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,18-16,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|16,5-30,5|CodeLine
-//::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|31,5-31,19|CodeLine
-//::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,15-10,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|10,3-32,3|CodeLine
-//::         - >-
-//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1|AssertionAutomatic
-//::   calls: []
+//::           snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|33,1-33,1
+//::   connections: []
 //::

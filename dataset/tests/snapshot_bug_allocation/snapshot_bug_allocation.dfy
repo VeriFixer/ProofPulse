@@ -27,27 +27,9 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|2,14-2,14|AssertionAutomatic
-//::     file: snapshot_bug_allocation.dfy
-//::     start:
-//::       line: 2
-//::       col: 14
-//::     end:
-//::       line: 2
-//::       col: 14
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14|AssertionAutomatic
+//::   - locationId: snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 2
@@ -55,15 +37,30 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 2
 //::       col: 14
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23|Precondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5079
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 2
@@ -71,16 +68,26 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 2
 //::       col: 23
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13|AssertionAutomatic
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 3
@@ -88,16 +95,30 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 3
 //::       col: 13
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 7673
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 3
@@ -105,15 +126,30 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 3
 //::       col: 25
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25|Postcondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 7788
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 3
@@ -121,16 +157,26 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 3
 //::       col: 25
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 4
@@ -138,16 +184,30 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 4
 //::       col: 11
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 7998
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 4
@@ -155,16 +215,30 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 4
 //::       col: 14
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8961
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 4
@@ -172,16 +246,30 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 4
 //::       col: 19
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8797
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 4
@@ -189,15 +277,30 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 4
 //::       col: 22
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26|Postcondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9178
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 4
@@ -205,101 +308,26 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 4
 //::       col: 26
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: append
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: append
-//::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|3,13-3,13|AssertionAutomatic
-//::     file: snapshot_bug_allocation.dfy
-//::     start:
-//::       line: 3
-//::       col: 13
-//::     end:
-//::       line: 3
-//::       col: 13
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|3,25-3,25|AssertionAutomatic
-//::     file: snapshot_bug_allocation.dfy
-//::     start:
-//::       line: 3
-//::       col: 25
-//::     end:
-//::       line: 3
-//::       col: 25
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|4,12-4,12|AssertionAutomatic
-//::     file: snapshot_bug_allocation.dfy
-//::     start:
-//::       line: 4
-//::       col: 12
-//::     end:
-//::       line: 4
-//::       col: 12
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|well-formedness|4,20-4,20|AssertionAutomatic
-//::     file: snapshot_bug_allocation.dfy
-//::     start:
-//::       line: 4
-//::       col: 20
-//::     end:
-//::       line: 4
-//::       col: 20
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: well-formedness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|correctness|24,18-24,18|AssertionAutomatic
-//::     file: snapshot_bug_allocation.dfy
-//::     start:
-//::       line: 24
-//::       col: 18
-//::     end:
-//::       line: 24
-//::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|AssertionAutomatic
+//::   - locationId: snapshot_bug_allocation.dfy|append|correctness|24,16-24,18
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 24
@@ -307,15 +335,42 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 24
 //::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_bug_allocation.dfy|append|correctness|2,12-2,23|Precondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - target object is never null
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5902
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|correctness|2,12-2,23
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 2
@@ -323,15 +378,28 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 2
 //::       col: 23
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_bug_allocation.dfy|append|correctness|3,11-3,25|Postcondition
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|correctness|3,11-3,25
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 3
@@ -339,15 +407,32 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 3
 //::       col: 25
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_bug_allocation.dfy|append|correctness|4,11-4,26|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12020
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|correctness|4,11-4,26
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 4
@@ -355,31 +440,32 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 4
 //::       col: 26
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: append
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
-//::     covStatus: CovComplete
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14506
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|CodeLine
-//::     file: snapshot_bug_allocation.dfy
-//::     start:
-//::       line: 24
-//::       col: 16
-//::     end:
-//::       line: 24
-//::       col: 18
-//::     prooftext: array size is never negative
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_bug_allocation.dfy|append|correctness|24,3-24,25|CodeLine
+//::   - locationId: snapshot_bug_allocation.dfy|append|correctness|24,3-24,25
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 24
@@ -387,16 +473,28 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 24
 //::       col: 25
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|correctness|25,3-25,3|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|correctness|25,3-25,3
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 25
@@ -404,18 +502,59 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 25
 //::       col: 3
-//::     prooftext: >-
-//::       variable 'c', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|correctness|25,3-25,6|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8121
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 25
@@ -423,16 +562,42 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 25
 //::       col: 6
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|correctness|25,11-25,11|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11401
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|correctness|25,11-25,11
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 25
@@ -440,16 +605,32 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 25
 //::       col: 11
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|correctness|25,11-25,14|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11278
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_allocation.dfy|append|correctness|25,11-25,14
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 25
@@ -457,15 +638,32 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 25
 //::       col: 14
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_bug_allocation.dfy|append|correctness|25,3-25,19|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11608
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|correctness|25,3-25,19
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 25
@@ -473,16 +671,37 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 25
 //::       col: 19
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: append
 //::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|correctness|26,1-26,1|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_allocation.dfy|append|correctness|26,1-26,1
 //::     file: snapshot_bug_allocation.dfy
 //::     start:
 //::       line: 26
@@ -490,320 +709,230 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     end:
 //::       line: 26
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'c', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: append
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|correctness|25,4-25,4|AssertionAutomatic
-//::     file: snapshot_bug_allocation.dfy
-//::     start:
-//::       line: 25
-//::       col: 4
-//::     end:
-//::       line: 25
-//::       col: 4
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: >-
-//::       snapshot_bug_allocation.dfy|append|correctness|25,12-25,12|AssertionAutomatic
-//::     file: snapshot_bug_allocation.dfy
-//::     start:
-//::       line: 25
-//::       col: 12
-//::     end:
-//::       line: 25
-//::       col: 12
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_bug_allocation.dfy|append|correctness|3,20-3,20|Postcondition
-//::     file: snapshot_bug_allocation.dfy
-//::     start:
-//::       line: 3
-//::       col: 20
-//::     end:
-//::       line: 3
-//::       col: 20
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
-//::   - id: snapshot_bug_allocation.dfy|append|correctness|4,16-4,16|Postcondition
-//::     file: snapshot_bug_allocation.dfy
-//::     start:
-//::       line: 4
-//::       col: 16
-//::     end:
-//::       line: 4
-//::       col: 16
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: append
-//::     methodType: correctness
-//::     assertionGroup: append
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_bug_allocation.dfy|append|well-formedness|2,14-2,14|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23|Precondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25|Postcondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26|Postcondition
-//::     - id: >-
-//::         snapshot_bug_allocation.dfy|append|well-formedness|3,13-3,13|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23|Precondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25|Postcondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26|Postcondition
-//::     - id: >-
-//::         snapshot_bug_allocation.dfy|append|well-formedness|3,25-3,25|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23|Precondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25|Postcondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26|Postcondition
-//::     - id: >-
-//::         snapshot_bug_allocation.dfy|append|well-formedness|4,12-4,12|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23|Precondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25|Postcondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26|Postcondition
-//::     - id: >-
-//::         snapshot_bug_allocation.dfy|append|well-formedness|4,20-4,20|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23|Precondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25|Postcondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26|Postcondition
-//::     - id: >-
-//::         snapshot_bug_allocation.dfy|append|correctness|24,18-24,18|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|AssertionAutomatic
-//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23|Precondition
-//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|CodeLine
-//::       proofUnused:
-//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23|Precondition
-//::         - snapshot_bug_allocation.dfy|append|correctness|3,11-3,25|Postcondition
-//::         - snapshot_bug_allocation.dfy|append|correctness|4,11-4,26|Postcondition
-//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|CodeLine
-//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25|CodeLine
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,6|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,11-25,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,11-25,14|AssertionAutomatic
-//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19|CodeLine
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|26,1-26,1|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_bug_allocation.dfy|append|correctness|25,4-25,4|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23|Precondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,6|AssertionAutomatic
-//::       proofUnused:
-//::         - snapshot_bug_allocation.dfy|append|correctness|3,11-3,25|Postcondition
-//::         - snapshot_bug_allocation.dfy|append|correctness|4,11-4,26|Postcondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|AssertionAutomatic
-//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|CodeLine
-//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25|CodeLine
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,6|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,11-25,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,11-25,14|AssertionAutomatic
-//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19|CodeLine
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|26,1-26,1|AssertionAutomatic
-//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23|Precondition
-//::     - id: >-
-//::         snapshot_bug_allocation.dfy|append|correctness|25,12-25,12|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,6|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,11-25,14|AssertionAutomatic
-//::       proofUnused:
-//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23|Precondition
-//::         - snapshot_bug_allocation.dfy|append|correctness|3,11-3,25|Postcondition
-//::         - snapshot_bug_allocation.dfy|append|correctness|4,11-4,26|Postcondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|AssertionAutomatic
-//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|CodeLine
-//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25|CodeLine
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,6|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,11-25,11|AssertionAutomatic
-//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19|CodeLine
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|26,1-26,1|AssertionAutomatic
-//::     - id: snapshot_bug_allocation.dfy|append|correctness|3,20-3,20|Postcondition
-//::       provedBy:
-//::         - snapshot_bug_allocation.dfy|append|correctness|3,11-3,25|Postcondition
-//::       proofUnused:
-//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23|Precondition
-//::         - snapshot_bug_allocation.dfy|append|correctness|4,11-4,26|Postcondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|AssertionAutomatic
-//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|CodeLine
-//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25|CodeLine
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,6|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,11-25,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,11-25,14|AssertionAutomatic
-//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19|CodeLine
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|26,1-26,1|AssertionAutomatic
-//::     - id: snapshot_bug_allocation.dfy|append|correctness|4,16-4,16|Postcondition
-//::       provedBy:
-//::         - snapshot_bug_allocation.dfy|append|correctness|4,11-4,26|Postcondition
-//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19|CodeLine
-//::       proofUnused:
-//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23|Precondition
-//::         - snapshot_bug_allocation.dfy|append|correctness|3,11-3,25|Postcondition
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|AssertionAutomatic
-//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18|CodeLine
-//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25|CodeLine
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,3|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,3-25,6|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,11-25,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|25,11-25,14|AssertionAutomatic
-//::         - >-
-//::           snapshot_bug_allocation.dfy|append|correctness|26,1-26,1|AssertionAutomatic
-//::   calls: []
+//::   provedBy:
+//::     - top: snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14
+//::       provers:
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25
+//::     - top: snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22
+//::       provers:
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|24,16-24,18
+//::       provers:
+//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|3,11-3,25
+//::       provers:
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|4,11-4,26
+//::       provers:
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|25,3-25,3
+//::       provers:
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
+//::       provers:
+//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|25,11-25,14
+//::       provers:
+//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
+//::   proofUnused:
+//::     - top: snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26
+//::     - top: snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26
+//::     - top: snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26
+//::     - top: snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26
+//::     - top: snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26
+//::     - top: snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,14
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26
+//::     - top: snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,22
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|2,12-2,14
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,13
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,23-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,11
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,19-4,19
+//::         - snapshot_bug_allocation.dfy|append|well-formedness|4,11-4,26
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|24,16-24,18
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|correctness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|correctness|4,11-4,26
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,3
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,11
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,14
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19
+//::         - snapshot_bug_allocation.dfy|append|correctness|26,1-26,1
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|3,11-3,25
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|correctness|4,11-4,26
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,3
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,11
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,14
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19
+//::         - snapshot_bug_allocation.dfy|append|correctness|26,1-26,1
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|4,11-4,26
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|correctness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,3
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,11
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,14
+//::         - snapshot_bug_allocation.dfy|append|correctness|26,1-26,1
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|25,3-25,3
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|correctness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|correctness|4,11-4,26
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,3
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,11
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,14
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19
+//::         - snapshot_bug_allocation.dfy|append|correctness|26,1-26,1
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|correctness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|correctness|4,11-4,26
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,3
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,11
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,14
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19
+//::         - snapshot_bug_allocation.dfy|append|correctness|26,1-26,1
+//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|25,11-25,11
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|correctness|2,12-2,23
+//::         - snapshot_bug_allocation.dfy|append|correctness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|correctness|4,11-4,26
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,3
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,14
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19
+//::         - snapshot_bug_allocation.dfy|append|correctness|26,1-26,1
+//::     - top: snapshot_bug_allocation.dfy|append|correctness|25,11-25,14
+//::       unused:
+//::         - snapshot_bug_allocation.dfy|append|correctness|3,11-3,25
+//::         - snapshot_bug_allocation.dfy|append|correctness|4,11-4,26
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,16-24,18
+//::         - snapshot_bug_allocation.dfy|append|correctness|24,3-24,25
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,3
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,6
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,11-25,11
+//::         - snapshot_bug_allocation.dfy|append|correctness|25,3-25,19
+//::         - snapshot_bug_allocation.dfy|append|correctness|26,1-26,1
+//::   connections: []
 //::

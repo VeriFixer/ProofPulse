@@ -15,8 +15,5 @@ method Main(){
 //::: L2 - CovComplete
 //::: L3 - CovComplete
 //::: L4 - CovComplete
-
-//::: L6 - CovComplete
-//::: L7 - CovComplete
-//::: L8 - CovComplete
-//::: L9 - CovComplete
+//::: L8 - CovTest
+//::: L9 - Uncovered

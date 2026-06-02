@@ -4,10 +4,9 @@ method ret32(a: int) returns (x:int)
 }
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_test_code_line_unc.dfy|ret32|correctness|4,1-4,1|AssertionAutomatic
+//::   - locationId: snapshot_test_code_line_unc.dfy|ret32|correctness|4,1-4,1
 //::     file: snapshot_test_code_line_unc.dfy
 //::     start:
 //::       line: 4
@@ -15,17 +14,28 @@ method ret32(a: int) returns (x:int)
 //::     end:
 //::       line: 4
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'x', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: snapshot_test_code_line_unc.dfy|ret32|correctness|3,5-3,12|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'x', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'x', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3411
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_code_line_unc.dfy|ret32|correctness|3,5-3,12
 //::     file: snapshot_test_code_line_unc.dfy
 //::     start:
 //::       line: 3
@@ -33,22 +43,24 @@ method ret32(a: int) returns (x:int)
 //::     end:
 //::       line: 3
 //::       col: 12
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
+//::     prooftexts:
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_test_code_line_unc.dfy|ret32|correctness|4,1-4,1|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_code_line_unc.dfy|ret32|correctness|4,1-4,1|AssertionAutomatic
-//::       proofUnused:
-//::         - snapshot_test_code_line_unc.dfy|ret32|correctness|3,5-3,12|CodeLine
-//::   calls: []
+//::   provedBy: []
+//::   proofUnused:
+//::     - top: snapshot_test_code_line_unc.dfy|ret32|correctness|4,1-4,1
+//::       unused:
+//::         - snapshot_test_code_line_unc.dfy|ret32|correctness|3,5-3,12
+//::   connections: []
 //::

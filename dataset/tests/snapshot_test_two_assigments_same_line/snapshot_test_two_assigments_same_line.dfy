@@ -6,27 +6,9 @@ method swap(a : int, b:int) returns (c:int, d:int)
 }
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_test_two_assigments_same_line.dfy|swap|correctness|2,19-2,19|Postcondition
-//::     file: snapshot_test_two_assigments_same_line.dfy
-//::     start:
-//::       line: 2
-//::       col: 19
-//::     end:
-//::       line: 2
-//::       col: 19
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: swap
-//::     methodType: correctness
-//::     assertionGroup: swap
-//::   - id: >-
-//::       snapshot_test_two_assigments_same_line.dfy|swap|correctness|2,13-2,22|Postcondition
+//::   - locationId: snapshot_test_two_assigments_same_line.dfy|swap|correctness|2,13-2,22
 //::     file: snapshot_test_two_assigments_same_line.dfy
 //::     start:
 //::       line: 2
@@ -34,16 +16,25 @@ method swap(a : int, b:int) returns (c:int, d:int)
 //::     end:
 //::       line: 2
 //::       col: 22
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: swap
 //::     methodType: correctness
-//::     assertionGroup: swap
-//::   - id: >-
-//::       snapshot_test_two_assigments_same_line.dfy|swap|correctness|5,5-5,23|CodeLine
+//::     prooftexts:
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3408
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_two_assigments_same_line.dfy|swap|correctness|5,5-5,23
 //::     file: snapshot_test_two_assigments_same_line.dfy
 //::     start:
 //::       line: 5
@@ -51,16 +42,27 @@ method swap(a : int, b:int) returns (c:int, d:int)
 //::     end:
 //::       line: 5
 //::       col: 23
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: swap
 //::     methodType: correctness
-//::     assertionGroup: swap
-//::   - id: >-
-//::       snapshot_test_two_assigments_same_line.dfy|swap|correctness|3,13-3,22|Postcondition
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_two_assigments_same_line.dfy|swap|correctness|3,13-3,22
 //::     file: snapshot_test_two_assigments_same_line.dfy
 //::     start:
 //::       line: 3
@@ -68,79 +70,74 @@ method swap(a : int, b:int) returns (c:int, d:int)
 //::     end:
 //::       line: 3
 //::       col: 22
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: swap
 //::     methodType: correctness
-//::     assertionGroup: swap
-//::   - id: >-
-//::       snapshot_test_two_assigments_same_line.dfy|swap|correctness|6,1-6,1|AssertionAutomatic
-//::     file: snapshot_test_two_assigments_same_line.dfy
-//::     start:
-//::       line: 6
-//::       col: 1
-//::     end:
-//::       line: 6
-//::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'c', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::     methodName: swap
-//::     methodType: correctness
-//::     assertionGroup: swap
-//::   - id: >-
-//::       snapshot_test_two_assigments_same_line.dfy|swap|correctness|3,19-3,19|Postcondition
-//::     file: snapshot_test_two_assigments_same_line.dfy
-//::     start:
-//::       line: 3
-//::       col: 19
-//::     end:
-//::       line: 3
-//::       col: 19
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
+//::     prooftexts:
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3597
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_two_assigments_same_line.dfy|swap|correctness|6,1-6,1
+//::     file: snapshot_test_two_assigments_same_line.dfy
+//::     start:
+//::       line: 6
+//::       col: 1
+//::     end:
+//::       line: 6
+//::       col: 1
 //::     methodName: swap
 //::     methodType: correctness
-//::     assertionGroup: swap
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_test_two_assigments_same_line.dfy|swap|correctness|2,19-2,19|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_two_assigments_same_line.dfy|swap|correctness|2,13-2,22|Postcondition
-//::         - >-
-//::           snapshot_test_two_assigments_same_line.dfy|swap|correctness|5,5-5,23|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_two_assigments_same_line.dfy|swap|correctness|3,13-3,22|Postcondition
-//::         - >-
-//::           snapshot_test_two_assigments_same_line.dfy|swap|correctness|5,5-5,23|CodeLine
-//::         - >-
-//::           snapshot_test_two_assigments_same_line.dfy|swap|correctness|6,1-6,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_two_assigments_same_line.dfy|swap|correctness|3,19-3,19|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_two_assigments_same_line.dfy|swap|correctness|3,13-3,22|Postcondition
-//::         - >-
-//::           snapshot_test_two_assigments_same_line.dfy|swap|correctness|5,5-5,23|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_two_assigments_same_line.dfy|swap|correctness|2,13-2,22|Postcondition
-//::         - >-
-//::           snapshot_test_two_assigments_same_line.dfy|swap|correctness|5,5-5,23|CodeLine
-//::         - >-
-//::           snapshot_test_two_assigments_same_line.dfy|swap|correctness|6,1-6,1|AssertionAutomatic
-//::   calls: []
+//::   provedBy:
+//::     - top: snapshot_test_two_assigments_same_line.dfy|swap|correctness|2,13-2,22
+//::       provers:
+//::         - snapshot_test_two_assigments_same_line.dfy|swap|correctness|5,5-5,23
+//::     - top: snapshot_test_two_assigments_same_line.dfy|swap|correctness|3,13-3,22
+//::       provers:
+//::         - snapshot_test_two_assigments_same_line.dfy|swap|correctness|5,5-5,23
+//::   proofUnused:
+//::     - top: snapshot_test_two_assigments_same_line.dfy|swap|correctness|2,13-2,22
+//::       unused:
+//::         - snapshot_test_two_assigments_same_line.dfy|swap|correctness|3,13-3,22
+//::         - snapshot_test_two_assigments_same_line.dfy|swap|correctness|5,5-5,23
+//::         - snapshot_test_two_assigments_same_line.dfy|swap|correctness|6,1-6,1
+//::     - top: snapshot_test_two_assigments_same_line.dfy|swap|correctness|3,13-3,22
+//::       unused:
+//::         - snapshot_test_two_assigments_same_line.dfy|swap|correctness|2,13-2,22
+//::         - snapshot_test_two_assigments_same_line.dfy|swap|correctness|5,5-5,23
+//::         - snapshot_test_two_assigments_same_line.dfy|swap|correctness|6,1-6,1
+//::   connections: []
 //::

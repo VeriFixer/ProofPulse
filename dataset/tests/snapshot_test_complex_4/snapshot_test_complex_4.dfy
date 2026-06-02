@@ -210,25 +210,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: snapshot_test_complex_4.dfy|PlusOne|correctness|21,15-21,15|Postcondition
+//::   - locationId: snapshot_test_complex_4.dfy|PlusOne|correctness|21,13-21,17
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 21
-//::       col: 15
+//::       col: 13
 //::     end:
 //::       line: 21
-//::       col: 15
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
+//::       col: 17
+//::     methodName: PlusOne
+//::     methodType: correctness
+//::     prooftexts:
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
 //::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3624
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
-//::     methodName: PlusOne
-//::     methodType: correctness
-//::     assertionGroup: PlusOne
-//::   - id: snapshot_test_complex_4.dfy|PlusOne|correctness|20,14-20,19|Precondition
+//::   - locationId: snapshot_test_complex_4.dfy|PlusOne|correctness|20,14-20,19
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 20
@@ -236,31 +245,20 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 20
 //::       col: 19
-//::     prooftext: requires clause
-//::     isTopAssertion: false
+//::     methodName: PlusOne
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
 //::     type: Precondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: PlusOne
-//::     methodType: correctness
-//::     assertionGroup: PlusOne
-//::   - id: snapshot_test_complex_4.dfy|PlusOne|correctness|21,13-21,17|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 21
-//::       col: 13
-//::     end:
-//::       line: 21
-//::       col: 17
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: PlusOne
-//::     methodType: correctness
-//::     assertionGroup: PlusOne
-//::   - id: snapshot_test_complex_4.dfy|PlusOne|correctness|23,5-23,13|CodeLine
+//::   - locationId: snapshot_test_complex_4.dfy|PlusOne|correctness|23,5-23,13
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 23
@@ -268,16 +266,20 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 23
 //::       col: 13
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: PlusOne
 //::     methodType: correctness
-//::     assertionGroup: PlusOne
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|PlusOne|correctness|24,1-24,1|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|PlusOne|correctness|24,1-24,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 24
@@ -285,428 +287,22 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 24
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'y', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: PlusOne
 //::     methodType: correctness
-//::     assertionGroup: PlusOne
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 36
-//::       col: 22
-//::     end:
-//::       line: 36
-//::       col: 22
-//::     prooftext: array is never null
-//::     isTopAssertion: true
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'y', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19|Precondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 14
-//::     end:
-//::       line: 33
-//::       col: 19
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32|Precondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 27
-//::     end:
-//::       line: 33
-//::       col: 32
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38|Precondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 32
-//::     end:
-//::       line: 33
-//::       col: 38
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53|Precondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 48
-//::     end:
-//::       line: 33
-//::       col: 53
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59|Precondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 53
-//::     end:
-//::       line: 33
-//::       col: 59
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 36
-//::       col: 22
-//::     end:
-//::       line: 36
-//::       col: 25
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26|CodeLine
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 36
-//::       col: 9
-//::     end:
-//::       line: 36
-//::       col: 26
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 37
-//::       col: 5
-//::     end:
-//::       line: 37
-//::       col: 5
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 37
-//::       col: 5
-//::     end:
-//::       line: 37
-//::       col: 8
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 37
-//::       col: 13
-//::     end:
-//::       line: 37
-//::       col: 13
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 37
-//::       col: 13
-//::     end:
-//::       line: 37
-//::       col: 16
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17|CodeLine
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 37
-//::       col: 5
-//::     end:
-//::       line: 37
-//::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 38
-//::       col: 5
-//::     end:
-//::       line: 38
-//::       col: 5
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 38
-//::       col: 5
-//::     end:
-//::       line: 38
-//::       col: 8
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 38
-//::       col: 13
-//::     end:
-//::       line: 38
-//::       col: 13
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 38
-//::       col: 13
-//::     end:
-//::       line: 38
-//::       col: 16
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17|CodeLine
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 38
-//::       col: 5
-//::     end:
-//::       line: 38
-//::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|correctness|36,23-36,23|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 36
-//::       col: 23
-//::     end:
-//::       line: 36
-//::       col: 23
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|37,6-37,6|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 37
-//::       col: 6
-//::     end:
-//::       line: 37
-//::       col: 6
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|correctness|37,14-37,14|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 37
-//::       col: 14
-//::     end:
-//::       line: 37
-//::       col: 14
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|correctness|38,6-38,6|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 38
-//::       col: 6
-//::     end:
-//::       line: 38
-//::       col: 6
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|correctness|38,14-38,14|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 38
-//::       col: 14
-//::     end:
-//::       line: 38
-//::       col: 14
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: correctness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|well-formedness|33,59-33,59|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 59
-//::     end:
-//::       line: 33
-//::       col: 59
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: well-formedness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19|Precondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 33
-//::       col: 14
-//::     end:
-//::       line: 33
-//::       col: 19
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Swap
-//::     methodType: well-formedness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 33
@@ -714,16 +310,47 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 33
 //::       col: 59
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Swap
 //::     methodType: well-formedness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6734
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 33
+//::       col: 14
+//::     end:
+//::       line: 33
+//::       col: 19
+//::     methodName: Swap
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 33
@@ -731,15 +358,25 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 33
 //::       col: 38
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Swap
 //::     methodType: well-formedness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38|Precondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5401
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 33
@@ -747,15 +384,21 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 33
 //::       col: 38
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Swap
 //::     methodType: well-formedness
-//::     assertionGroup: Swap
-//::   - id: snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59|Precondition
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 33
@@ -763,65 +406,687 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 33
 //::       col: 59
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
+//::     methodName: Swap
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Precondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: Swap
-//::     methodType: well-formedness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Swap|well-formedness|33,38-33,38|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
-//::       line: 33
-//::       col: 38
+//::       line: 36
+//::       col: 22
 //::     end:
-//::       line: 33
-//::       col: 38
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::       line: 36
+//::       col: 22
 //::     methodName: Swap
-//::     methodType: well-formedness
-//::     assertionGroup: Swap
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IntDiv|correctness|52,14-52,14|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 52
-//::       col: 14
-//::     end:
-//::       line: 52
-//::       col: 14
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IntDiv
 //::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18|Precondition
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6601
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
-//::       line: 49
+//::       line: 33
 //::       col: 14
 //::     end:
-//::       line: 49
-//::       col: 18
-//::     prooftext: requires clause
-//::     isTopAssertion: false
+//::       line: 33
+//::       col: 19
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Precondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: IntDiv
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 33
+//::       col: 27
+//::     end:
+//::       line: 33
+//::       col: 32
+//::     methodName: Swap
 //::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16|CodeLine
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 33
+//::       col: 32
+//::     end:
+//::       line: 33
+//::       col: 38
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 33
+//::       col: 48
+//::     end:
+//::       line: 33
+//::       col: 53
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 33
+//::       col: 53
+//::     end:
+//::       line: 33
+//::       col: 59
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 36
+//::       col: 22
+//::     end:
+//::       line: 36
+//::       col: 25
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6975
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 36
+//::       col: 9
+//::     end:
+//::       line: 36
+//::       col: 26
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 37
+//::       col: 5
+//::     end:
+//::       line: 37
+//::       col: 5
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9077
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 37
+//::       col: 5
+//::     end:
+//::       line: 37
+//::       col: 8
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9789
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 37
+//::       col: 13
+//::     end:
+//::       line: 37
+//::       col: 13
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9371
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 37
+//::       col: 13
+//::     end:
+//::       line: 37
+//::       col: 16
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9962
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 37
+//::       col: 5
+//::     end:
+//::       line: 37
+//::       col: 17
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 38
+//::       col: 5
+//::     end:
+//::       line: 38
+//::       col: 5
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10975
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 38
+//::       col: 5
+//::     end:
+//::       line: 38
+//::       col: 8
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12018
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 38
+//::       col: 13
+//::     end:
+//::       line: 38
+//::       col: 13
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 11
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11269
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 38
+//::       col: 13
+//::     end:
+//::       line: 38
+//::       col: 16
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11358
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 38
+//::       col: 5
+//::     end:
+//::       line: 38
+//::       col: 17
+//::     methodName: Swap
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 52
@@ -829,15 +1094,53 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 52
 //::       col: 16
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IntDiv
 //::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26|Postcondition
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 2911
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 49
+//::       col: 14
+//::     end:
+//::       line: 49
+//::       col: 18
+//::     methodName: IntDiv
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 50
@@ -845,15 +1148,28 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 50
 //::       col: 26
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IntDiv
 //::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4902
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 50
@@ -861,15 +1177,28 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 50
 //::       col: 36
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IntDiv
 //::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5085
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 50
@@ -877,15 +1206,28 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 50
 //::       col: 40
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IntDiv
 //::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5498
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 52
@@ -893,15 +1235,69 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 52
 //::       col: 24
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IntDiv
 //::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'r', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'r', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'r', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'r', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'r', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 52
@@ -909,35 +1305,28 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 52
 //::       col: 23
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
+//::     methodName: IntDiv
+//::     methodType: correctness
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3257
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: IntDiv
-//::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 52
-//::       col: 5
-//::     end:
-//::       line: 52
-//::       col: 24
-//::     prooftext: >-
-//::       out-parameter 'd', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::     methodName: IntDiv
-//::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 53
@@ -945,100 +1334,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 53
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'd', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: IntDiv
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'r', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'r', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'r', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'r', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'd', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'r', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: IntDiv
-//::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IntDiv|correctness|52,21-52,21|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 52
-//::       col: 21
-//::     end:
-//::       line: 52
-//::       col: 21
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IntDiv
-//::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: snapshot_test_complex_4.dfy|IntDiv|correctness|50,15-50,15|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 50
-//::       col: 15
-//::     end:
-//::       line: 50
-//::       col: 15
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: IntDiv
-//::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: snapshot_test_complex_4.dfy|IntDiv|correctness|50,33-50,33|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 50
-//::       col: 33
-//::     end:
-//::       line: 50
-//::       col: 33
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: IntDiv
-//::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: snapshot_test_complex_4.dfy|IntDiv|correctness|50,38-50,38|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 50
-//::       col: 38
-//::     end:
-//::       line: 50
-//::       col: 38
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: IntDiv
-//::     methodType: correctness
-//::     assertionGroup: IntDiv
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,16-62,16|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 62
-//::       col: 16
-//::     end:
-//::       line: 62
-//::       col: 16
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 62
@@ -1046,16 +1384,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 62
 //::       col: 16
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5314
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 62
@@ -1063,16 +1419,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 62
 //::       col: 28
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28|Precondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5433
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 62
@@ -1080,16 +1454,30 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 62
 //::       col: 28
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15|AssertionAutomatic
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 63
@@ -1097,16 +1485,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 63
 //::       col: 15
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8213
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 63
@@ -1114,16 +1520,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 63
 //::       col: 27
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27|Postcondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8306
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 63
@@ -1131,16 +1555,30 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 63
 //::       col: 27
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1148,16 +1586,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 38
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38|Postcondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 11
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9139
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1165,16 +1621,30 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 38
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1182,16 +1652,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 49
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9678
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1199,16 +1687,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 52
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10052
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1216,16 +1722,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 57
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9924
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1233,16 +1757,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 60
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10183
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1250,16 +1792,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 64
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10226
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1267,16 +1827,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 67
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67|Postcondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10534
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1284,16 +1862,30 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 67
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1301,16 +1893,30 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 67
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1318,152 +1924,30 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 67
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: ArraySum
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: ArraySum
-//::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,28-62,28|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 62
-//::       col: 28
-//::     end:
-//::       line: 62
-//::       col: 28
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,15-63,15|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 63
-//::       col: 15
-//::     end:
-//::       line: 63
-//::       col: 15
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,27-63,27|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 63
-//::       col: 27
-//::     end:
-//::       line: 63
-//::       col: 27
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,50-64,50|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 64
-//::       col: 50
-//::     end:
-//::       line: 64
-//::       col: 50
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,58-64,58|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 64
-//::       col: 58
-//::     end:
-//::       line: 64
-//::       col: 58
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,65-64,65|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 64
-//::       col: 65
-//::     end:
-//::       line: 64
-//::       col: 65
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,38-64,38|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 64
-//::       col: 38
-//::     end:
-//::       line: 64
-//::       col: 38
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: well-formedness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|66,21-66,21|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 66
-//::       col: 21
-//::     end:
-//::       line: 66
-//::       col: 21
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 66
@@ -1471,15 +1955,76 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 66
 //::       col: 21
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - target object is never null
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6239
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 62
@@ -1487,15 +2032,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 62
 //::       col: 28
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 63
@@ -1503,15 +2078,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 63
 //::       col: 27
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 17
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15022
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 64
@@ -1519,31 +2128,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 64
 //::       col: 67
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: ArraySum
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
-//::     covStatus: CovComplete
+//::     topMeta:
+//::       batchIndex: 18
+//::       batchOutcome: Valid
+//::       batchResourceCount: 17217
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 66
-//::       col: 19
-//::     end:
-//::       line: 66
-//::       col: 21
-//::     prooftext: array size is never negative
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 66
@@ -1551,15 +2178,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 66
 //::       col: 28
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 67
@@ -1567,16 +2224,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 67
 //::       col: 21
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 69
@@ -1584,15 +2270,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 69
 //::       col: 26
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 19
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13717
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 69
@@ -1600,16 +2320,76 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 69
 //::       col: 26
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 15
+//::       batchOutcome: Valid
+//::       batchResourceCount: 17288
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 70
@@ -1617,18 +2397,127 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 70
 //::       col: 52
-//::     prooftext: >-
-//::       variable 'c', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 21
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14376
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 70
@@ -1636,16 +2525,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 70
 //::       col: 55
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 22
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14957
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 70
@@ -1653,16 +2575,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 70
 //::       col: 60
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 23
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14442
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 70
@@ -1670,16 +2625,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 70
 //::       col: 63
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 24
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14758
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 70
@@ -1687,16 +2675,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 70
 //::       col: 67
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 25
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14559
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 70
@@ -1704,15 +2725,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 70
 //::       col: 70
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 26
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15059
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 70
@@ -1720,16 +2775,77 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 70
 //::       col: 70
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 16
+//::       batchOutcome: Valid
+//::       batchResourceCount: 31242
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 68
@@ -1737,16 +2853,103 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 68
 //::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 20
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15696
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 72
@@ -1754,18 +2957,127 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 72
 //::       col: 9
-//::     prooftext: >-
-//::       variable 'c', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'c', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15171
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 72
@@ -1773,16 +3085,76 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 72
 //::       col: 12
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15727
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 72
@@ -1790,16 +3162,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 72
 //::       col: 17
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15575
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 72
@@ -1807,16 +3212,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 72
 //::       col: 20
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15654
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 72
@@ -1824,16 +3262,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 72
 //::       col: 24
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 11
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15812
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 72
@@ -1841,15 +3312,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 72
 //::       col: 27
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16090
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 72
@@ -1857,15 +3362,71 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 72
 //::       col: 28
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 73
@@ -1873,15 +3434,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 73
 //::       col: 19
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 68
@@ -1889,16 +3480,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 74
 //::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ArraySum
 //::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 14
+//::       batchOutcome: Valid
+//::       batchResourceCount: 17078
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 75
@@ -1906,268 +3530,97 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 75
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'c', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: ArraySum
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'c', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|69,21-69,21|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 69
-//::       col: 21
-//::     end:
-//::       line: 69
-//::       col: 21
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,19|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 70
-//::       col: 19
-//::     end:
-//::       line: 70
-//::       col: 19
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|68,18-68,18|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 68
-//::       col: 18
-//::     end:
-//::       line: 68
-//::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|72,10-72,10|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 72
-//::       col: 10
-//::     end:
-//::       line: 72
-//::       col: 10
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|72,18-72,18|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 72
-//::       col: 18
-//::     end:
-//::       line: 72
-//::       col: 18
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|72,25-72,25|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 72
-//::       col: 25
-//::     end:
-//::       line: 72
-//::       col: 25
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-68,5|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 68
-//::       col: 5
-//::     end:
-//::       line: 68
-//::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|63,22-63,22|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 63
-//::       col: 22
-//::     end:
-//::       line: 63
-//::       col: 22
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,9|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 64
-//::       col: 9
-//::     end:
-//::       line: 64
-//::       col: 9
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|69,26-69,26|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 69
-//::       col: 26
-//::     end:
-//::       line: 69
-//::       col: 26
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|70,53-70,53|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 70
-//::       col: 53
-//::     end:
-//::       line: 70
-//::       col: 53
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|70,61-70,61|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 70
-//::       col: 61
-//::     end:
-//::       line: 70
-//::       col: 61
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|ArraySum|correctness|70,68-70,68|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 70
-//::       col: 68
-//::     end:
-//::       line: 70
-//::       col: 68
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ArraySum
-//::     methodType: correctness
-//::     assertionGroup: ArraySum
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Euclid|well-formedness|89,50-89,50|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 89
-//::       col: 50
-//::     end:
-//::       line: 89
-//::       col: 50
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Euclid
-//::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Euclid|well-formedness|89,13-89,19|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 89
-//::       col: 13
-//::     end:
-//::       line: 89
-//::       col: 19
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Euclid
-//::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,52|CodeLine
+//::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,52
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 89
@@ -2175,16 +3628,47 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 89
 //::       col: 52
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Euclid
 //::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Euclid|well-formedness|88,14-88,18|Precondition
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4491
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,13-89,19
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 89
+//::       col: 13
+//::     end:
+//::       line: 89
+//::       col: 19
+//::     methodName: Euclid
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|88,14-88,18
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 88
@@ -2192,16 +3676,21 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 88
 //::       col: 18
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Euclid
 //::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Euclid|well-formedness|88,23-88,27|Precondition
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|88,23-88,27
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 88
@@ -2209,16 +3698,21 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 88
 //::       col: 27
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Euclid
 //::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Euclid|well-formedness|88,32-88,37|Precondition
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|88,32-88,37
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 88
@@ -2226,16 +3720,21 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 88
 //::       col: 37
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Euclid
 //::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Euclid|well-formedness|89,24-89,31|Postcondition
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,24-89,31
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 89
@@ -2243,16 +3742,21 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 89
 //::       col: 31
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Euclid
 //::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Euclid|well-formedness|89,36-89,43|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,36-89,43
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 89
@@ -2260,16 +3764,21 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 89
 //::       col: 43
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Euclid
 //::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,59|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,59
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 89
@@ -2277,15 +3786,21 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 89
 //::       col: 59
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Euclid
 //::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,68|CodeLine
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,68
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 89
@@ -2293,16 +3808,25 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 89
 //::       col: 68
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Euclid
 //::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,75|Postcondition
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5329
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,75
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 89
@@ -2310,33 +3834,21 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 89
 //::       col: 75
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: Euclid
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: Euclid
-//::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Euclid|well-formedness|89,66-89,66|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 89
-//::       col: 66
-//::     end:
-//::       line: 89
-//::       col: 66
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Euclid
-//::     methodType: well-formedness
-//::     assertionGroup: Euclid
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 100
@@ -2344,16 +3856,28 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 100
 //::       col: 67
-//::     prooftext: array is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: well-formedness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,54-100,56|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 7917
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,54-100,56
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 100
@@ -2361,16 +3885,28 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 100
 //::       col: 56
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: well-formedness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,72|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6663
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,72
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 100
@@ -2378,16 +3914,28 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 100
 //::       col: 72
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: well-formedness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,77|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8057
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,77
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 100
@@ -2395,16 +3943,28 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 100
 //::       col: 77
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: IsSorted
 //::     methodType: well-formedness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,80|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8172
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,80
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 100
@@ -2412,16 +3972,28 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 100
 //::       col: 80
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: well-formedness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,13-100,80|Postcondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8297
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,13-100,80
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 100
@@ -2429,84 +4001,24 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 100
 //::       col: 80
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: IsSorted
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: IsSorted
-//::     methodType: well-formedness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,68-100,68|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 100
-//::       col: 68
-//::     end:
-//::       line: 100
-//::       col: 68
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: well-formedness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,78-100,78|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 100
-//::       col: 78
-//::     end:
-//::       line: 100
-//::       col: 78
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: well-formedness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,56-100,56|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 100
-//::       col: 56
-//::     end:
-//::       line: 100
-//::       col: 56
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: well-formedness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|104,11-104,11|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 104
-//::       col: 11
-//::     end:
-//::       line: 104
-//::       col: 11
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 104
@@ -2514,16 +4026,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 104
 //::       col: 11
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5594
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 100
@@ -2531,15 +4073,48 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 100
 //::       col: 80
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 23
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9840
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 102
@@ -2547,15 +4122,42 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 102
 //::       col: 21
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 103
@@ -2563,16 +4165,42 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 103
 //::       col: 21
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 106
@@ -2580,18 +4208,88 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 106
 //::       col: 15
-//::     prooftext: >-
-//::       out-parameter 'isSorted', which is subject to definite-assignment rules,
-//::       is always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 111
@@ -2599,16 +4297,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 111
 //::       col: 36
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
+//::     methodName: IsSorted
+//::     methodType: correctness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 16
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10721
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 111
@@ -2616,16 +4344,42 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 111
 //::       col: 36
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 111
@@ -2633,16 +4387,48 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 111
 //::       col: 29
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 13
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14091
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 111
@@ -2650,16 +4436,47 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 111
 //::       col: 36
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
+//::     methodName: IsSorted
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 14
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14372
 //::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 112
@@ -2667,18 +4484,88 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 112
 //::       col: 23
-//::     prooftext: >-
-//::       variable 'isSorted', which is subject to definite-assignment rules, is
-//::       always initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isSorted', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 112
@@ -2686,16 +4573,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 112
 //::       col: 69
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 17
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11662
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 112
@@ -2703,16 +4620,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 112
 //::       col: 74
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 18
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12035
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 112
@@ -2720,16 +4667,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 112
 //::       col: 79
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 19
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11775
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 112
@@ -2737,16 +4714,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 112
 //::       col: 82
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 20
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12144
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 112
@@ -2754,16 +4761,71 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 112
 //::       col: 82
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 15
+//::       batchOutcome: Valid
+//::       batchResourceCount: 18100
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 110
@@ -2771,16 +4833,94 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 110
 //::       col: 22
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 21
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12814
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 114
@@ -2788,16 +4928,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 114
 //::       col: 16
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12090
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 114
@@ -2805,16 +4975,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 114
 //::       col: 21
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12234
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 114
@@ -2822,16 +5022,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 114
 //::       col: 25
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12344
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 114
@@ -2839,50 +5069,158 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 114
 //::       col: 28
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 116
-//::       col: 17
-//::     end:
-//::       line: 116
-//::       col: 29
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 116
-//::       col: 17
-//::     end:
-//::       line: 116
-//::       col: 29
-//::     prooftext: >-
-//::       out-parameter 'isSorted', which is subject to definite-assignment rules,
-//::       is always initialized at this return point
-//::     isTopAssertion: false
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12478
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 116
+//::       col: 17
+//::     end:
+//::       line: 116
+//::       col: 29
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - assignment (or return)
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 118
@@ -2890,15 +5228,42 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 118
 //::       col: 21
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 110
@@ -2906,16 +5271,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 119
 //::       col: 9
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsSorted
 //::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13828
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 121
@@ -2923,321 +5318,88 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 121
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'isSorted', which is subject to definite-assignment rules,
-//::       is always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: IsSorted
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isSorted', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|111,26-111,26|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 111
-//::       col: 26
-//::     end:
-//::       line: 111
-//::       col: 26
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|111,31-111,31|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 111
-//::       col: 31
-//::     end:
-//::       line: 111
-//::       col: 31
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|112,32-112,32|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 112
-//::       col: 32
-//::     end:
-//::       line: 112
-//::       col: 32
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|110,22-110,22|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 110
-//::       col: 22
-//::     end:
-//::       line: 110
-//::       col: 22
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|100,22-100,22|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 100
-//::       col: 22
-//::     end:
-//::       line: 100
-//::       col: 22
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|114,17-114,17|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 114
-//::       col: 17
-//::     end:
-//::       line: 114
-//::       col: 17
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|114,26-114,26|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 114
-//::       col: 26
-//::     end:
-//::       line: 114
-//::       col: 26
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-110,9|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 110
-//::       col: 9
-//::     end:
-//::       line: 110
-//::       col: 9
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|111,36-111,36|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 111
-//::       col: 36
-//::     end:
-//::       line: 111
-//::       col: 36
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|112,70-112,70|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 112
-//::       col: 70
-//::     end:
-//::       line: 112
-//::       col: 70
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsSorted|correctness|112,80-112,80|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 112
-//::       col: 80
-//::     end:
-//::       line: 112
-//::       col: 80
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsSorted
-//::     methodType: correctness
-//::     assertionGroup: IsSorted
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,71-130,71|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 130
-//::       col: 71
-//::     end:
-//::       line: 130
-//::       col: 71
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsPrime
-//::     methodType: well-formedness
-//::     assertionGroup: IsPrime
-//::   - id: snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,69-130,73|CodeLine
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 130
-//::       col: 69
-//::     end:
-//::       line: 130
-//::       col: 73
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsPrime
-//::     methodType: well-formedness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|well-formedness|129,14-129,18|Precondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 129
-//::       col: 14
-//::     end:
-//::       line: 129
-//::       col: 18
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: IsPrime
-//::     methodType: well-formedness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,13-130,79|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 130
-//::       col: 13
-//::     end:
-//::       line: 130
-//::       col: 79
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: IsPrime
-//::     methodType: well-formedness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|correctness|141,31-141,31|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 141
-//::       col: 31
-//::     end:
-//::       line: 141
-//::       col: 31
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsPrime
-//::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20|CodeLine
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 133
-//::       col: 5
-//::     end:
-//::       line: 133
-//::       col: 20
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsPrime
-//::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25|CodeLine
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 138
-//::       col: 13
-//::     end:
-//::       line: 138
-//::       col: 25
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
-//::     methodName: IsPrime
-//::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78|LoopInvariant
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 141
@@ -3245,15 +5407,93 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 141
 //::       col: 78
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsPrime
 //::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18|Precondition
+//::     prooftexts:
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8414
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 133
+//::       col: 5
+//::     end:
+//::       line: 133
+//::       col: 20
+//::     methodName: IsPrime
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 138
+//::       col: 13
+//::     end:
+//::       line: 138
+//::       col: 25
+//::     methodName: IsPrime
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 129
@@ -3261,16 +5501,26 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 129
 //::       col: 18
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: IsPrime
 //::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79|Postcondition
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 130
@@ -3278,15 +5528,30 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 130
 //::       col: 79
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsPrime
 //::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10011
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 136
@@ -3294,16 +5559,26 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 136
 //::       col: 25
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsPrime
 //::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 141
@@ -3311,17 +5586,40 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 141
 //::       col: 23
-//::     prooftext: >-
-//::       variable 'isPrime', which is subject to definite-assignment rules, is
-//::       always initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: IsPrime
 //::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         variable 'isPrime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isPrime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isPrime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isPrime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isPrime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isPrime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'isPrime', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 141
@@ -3329,15 +5627,30 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 141
 //::       col: 73
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsPrime
 //::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21|CodeLine
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5826
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 144
@@ -3345,15 +5658,30 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 144
 //::       col: 21
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsPrime
 //::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33|CodeLine
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6006
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 146
@@ -3361,15 +5689,26 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 146
 //::       col: 33
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsPrime
 //::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 149
@@ -3377,16 +5716,26 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 149
 //::       col: 23
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsPrime
 //::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 140
@@ -3394,15 +5743,30 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 140
 //::       col: 20
-//::     prooftext: decreases expression is bounded below by 0
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: IsPrime
 //::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9|CodeLine
+//::     prooftexts:
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6798
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 140
@@ -3410,16 +5774,30 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 150
 //::       col: 9
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: IsPrime
 //::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1|AssertionAutomatic
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6951
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 153
@@ -3427,103 +5805,107 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 153
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'isPrime', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: IsPrime
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'isPrime', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isPrime', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isPrime', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isPrime', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isPrime', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isPrime', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'isPrime', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: IsPrime
-//::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|correctness|144,19-144,19|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 144
-//::       col: 19
-//::     end:
-//::       line: 144
-//::       col: 19
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsPrime
-//::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-140,9|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 140
-//::       col: 9
-//::     end:
-//::       line: 140
-//::       col: 9
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsPrime
-//::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|correctness|130,21-130,21|Postcondition
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,69-130,73
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 130
-//::       col: 21
+//::       col: 69
 //::     end:
 //::       line: 130
-//::       col: 21
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
+//::       col: 73
 //::     methodName: IsPrime
-//::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|IsPrime|correctness|141,71-141,71|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 141
-//::       col: 71
-//::     end:
-//::       line: 141
-//::       col: 71
-//::     prooftext: divisor is always non-zero.
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: IsPrime
-//::     methodType: correctness
-//::     assertionGroup: IsPrime
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|163,18-163,18|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 163
-//::       col: 18
-//::     end:
-//::       line: 163
-//::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18|AssertionAutomatic
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4786
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|well-formedness|129,14-129,18
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 129
+//::       col: 14
+//::     end:
+//::       line: 129
+//::       col: 18
+//::     methodName: IsPrime
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,13-130,79
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 130
+//::       col: 13
+//::     end:
+//::       line: 130
+//::       col: 79
+//::     methodName: IsPrime
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 163
@@ -3531,16 +5913,31 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 163
 //::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6742
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 163
@@ -3548,16 +5945,31 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 163
 //::       col: 30
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30|Postcondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6861
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 163
@@ -3565,16 +5977,27 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 163
 //::       col: 30
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 164
@@ -3582,16 +6005,31 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 164
 //::       col: 42
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42|Postcondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8368
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 164
@@ -3599,16 +6037,27 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 164
 //::       col: 42
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53|AssertionAutomatic
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 164
@@ -3616,16 +6065,31 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 164
 //::       col: 53
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8907
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 164
@@ -3633,16 +6097,31 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 164
 //::       col: 56
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9253
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 164
@@ -3650,16 +6129,31 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 164
 //::       col: 61
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9153
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 164
@@ -3667,16 +6161,31 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 164
 //::       col: 71
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9264
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 164
@@ -3684,16 +6193,31 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 164
 //::       col: 81
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81|Postcondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9737
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 164
@@ -3701,16 +6225,27 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 164
 //::       col: 81
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 164
@@ -3718,16 +6253,27 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 164
 //::       col: 81
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 164
@@ -3735,16 +6281,27 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 164
 //::       col: 81
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Reverse
 //::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23|Postcondition
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 165
@@ -3752,118 +6309,27 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 165
 //::       col: 23
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: Reverse
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: Reverse
-//::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|163,30-163,30|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 163
-//::       col: 30
-//::     end:
-//::       line: 163
-//::       col: 30
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,54-164,54|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 164
-//::       col: 54
-//::     end:
-//::       line: 164
-//::       col: 54
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,71-164,71|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 164
-//::       col: 71
-//::     end:
-//::       line: 164
-//::       col: 71
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,65-164,65|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 164
-//::       col: 65
-//::     end:
-//::       line: 164
-//::       col: 65
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|well-formedness|164,42-164,42|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 164
-//::       col: 42
-//::     end:
-//::       line: 164
-//::       col: 42
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: well-formedness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|167,23-167,23|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 167
-//::       col: 23
-//::     end:
-//::       line: 167
-//::       col: 23
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 167
@@ -3871,16 +6337,78 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 167
 //::       col: 23
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - array size is never negative
+//::       - target object is never null
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::       - target object is never null
+//::       - array size is never negative
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5863
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 163
@@ -3888,16 +6416,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 163
 //::       col: 30
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 18
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14398
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 164
@@ -3905,16 +6467,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 164
 //::       col: 81
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 19
+//::       batchOutcome: Valid
+//::       batchResourceCount: 18430
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 165
@@ -3922,31 +6518,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 165
 //::       col: 23
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: Reverse
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
-//::     covStatus: CovComplete
+//::     topMeta:
+//::       batchIndex: 20
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15318
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 167
-//::       col: 21
-//::     end:
-//::       line: 167
-//::       col: 23
-//::     prooftext: array size is never negative
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 167
@@ -3954,15 +6569,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 167
 //::       col: 30
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 168
@@ -3970,16 +6616,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 168
 //::       col: 21
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 170
@@ -3987,86 +6663,334 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 170
 //::       col: 31
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
+//::     methodName: Reverse
+//::     methodType: correctness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 170
-//::       col: 19
-//::     end:
-//::       line: 170
-//::       col: 31
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 170
-//::       col: 19
-//::     end:
-//::       line: 170
-//::       col: 24
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 170
-//::       col: 24
-//::     end:
-//::       line: 170
-//::       col: 31
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 171
-//::       col: 52
-//::     end:
-//::       line: 171
-//::       col: 52
-//::     prooftext: >-
-//::       variable 'aRev', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 27
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13151
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 170
+//::       col: 19
+//::     end:
+//::       line: 170
+//::       col: 31
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 170
+//::       col: 19
+//::     end:
+//::       line: 170
+//::       col: 24
+//::     methodName: Reverse
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 15
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16568
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 170
+//::       col: 24
+//::     end:
+//::       line: 170
+//::       col: 31
+//::     methodName: Reverse
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 16
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16671
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 171
+//::       col: 52
+//::     end:
+//::       line: 171
+//::       col: 52
+//::     methodName: Reverse
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 22
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14155
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 171
@@ -4074,16 +6998,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 171
 //::       col: 58
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 23
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14741
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 171
@@ -4091,16 +7049,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 171
 //::       col: 63
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 24
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14242
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 171
@@ -4108,16 +7100,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 171
 //::       col: 67
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 25
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14355
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 171
@@ -4125,16 +7151,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 171
 //::       col: 77
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 26
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14601
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 171
@@ -4142,16 +7202,79 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 171
 //::       col: 77
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 17
+//::       batchOutcome: Valid
+//::       batchResourceCount: 24029
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 169
@@ -4159,16 +7282,106 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 169
 //::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 21
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15241
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 173
@@ -4176,18 +7389,131 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 173
 //::       col: 9
-//::     prooftext: >-
-//::       variable 'aRev', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::       - >-
+//::         variable 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14621
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 173
@@ -4195,16 +7521,78 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 173
 //::       col: 15
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::       - index in range
+//::       - array location is in the enclosing context's modifies clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15072
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 173
@@ -4212,16 +7600,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 173
 //::       col: 20
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14943
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 173
@@ -4229,16 +7651,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 173
 //::       col: 24
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 11
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15127
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 173
@@ -4246,15 +7702,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 173
 //::       col: 34
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15290
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 173
@@ -4262,15 +7753,73 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 173
 //::       col: 35
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 174
@@ -4278,15 +7827,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 174
 //::       col: 19
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 169
@@ -4294,16 +7874,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 175
 //::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: Reverse
 //::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 14
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16303
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 176
@@ -4311,273 +7925,100 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 176
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'aRev', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: Reverse
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'aRev', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|170,21-170,21|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 170
-//::       col: 21
-//::     end:
-//::       line: 170
-//::       col: 21
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|170,26-170,26|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 170
-//::       col: 26
-//::     end:
-//::       line: 170
-//::       col: 26
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,19|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 171
-//::       col: 19
-//::     end:
-//::       line: 171
-//::       col: 19
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|169,18-169,18|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 169
-//::       col: 18
-//::     end:
-//::       line: 169
-//::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|173,13-173,13|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 173
-//::       col: 13
-//::     end:
-//::       line: 173
-//::       col: 13
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|173,24-173,24|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 173
-//::       col: 24
-//::     end:
-//::       line: 173
-//::       col: 24
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|173,21-173,21|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 173
-//::       col: 21
-//::     end:
-//::       line: 173
-//::       col: 21
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|169,5-169,5|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 169
-//::       col: 5
-//::     end:
-//::       line: 169
-//::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|163,25-163,25|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 163
-//::       col: 25
-//::     end:
-//::       line: 163
-//::       col: 25
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,13|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 164
-//::       col: 13
-//::     end:
-//::       line: 164
-//::       col: 13
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,13|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 165
-//::       col: 13
-//::     end:
-//::       line: 165
-//::       col: 13
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|171,56-171,56|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 171
-//::       col: 56
-//::     end:
-//::       line: 171
-//::       col: 56
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|171,67-171,67|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 171
-//::       col: 67
-//::     end:
-//::       line: 171
-//::       col: 67
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|171,64-171,64|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 171
-//::       col: 64
-//::     end:
-//::       line: 171
-//::       col: 64
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|Reverse|correctness|170,31-170,31|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 170
-//::       col: 31
-//::     end:
-//::       line: 170
-//::       col: 31
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: Reverse
-//::     methodType: correctness
-//::     assertionGroup: Reverse
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 186
@@ -4585,16 +8026,33 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 186
 //::       col: 53
-//::     prooftext: array is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6145
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 186
@@ -4602,16 +8060,33 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 186
 //::       col: 42
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42|Precondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4896
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 186
@@ -4619,16 +8094,29 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 186
 //::       col: 42
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58|AssertionAutomatic
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 186
@@ -4636,16 +8124,33 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 186
 //::       col: 58
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6325
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 186
@@ -4653,16 +8158,33 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 186
 //::       col: 63
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6421
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 186
@@ -4670,16 +8192,33 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 186
 //::       col: 66
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66|Precondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6577
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 186
@@ -4687,16 +8226,29 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 186
 //::       col: 66
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66|Precondition
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 186
@@ -4704,16 +8256,29 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 186
 //::       col: 66
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66|Precondition
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 186
@@ -4721,16 +8286,29 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 186
 //::       col: 66
-//::     prooftext: method requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54|AssertionAutomatic
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 187
@@ -4738,16 +8316,33 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 187
 //::       col: 54
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11463
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 187
@@ -4755,16 +8350,33 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 187
 //::       col: 65
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11806
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 187
@@ -4772,16 +8384,33 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 187
 //::       col: 70
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13023
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 187
@@ -4789,16 +8418,33 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 187
 //::       col: 75
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12051
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 187
@@ -4806,16 +8452,33 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 187
 //::       col: 78
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78|Postcondition
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12267
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 187
@@ -4823,135 +8486,29 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 187
 //::       col: 78
-//::     prooftext: method ensures clause
-//::     isTopAssertion: false
+//::     methodName: NoDups
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: Postcondition
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: NoDups
-//::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,54-186,54|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 186
-//::       col: 54
-//::     end:
-//::       line: 186
-//::       col: 54
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,64-186,64|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 186
-//::       col: 64
-//::     end:
-//::       line: 186
-//::       col: 64
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|187,66-187,66|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 187
-//::       col: 66
-//::     end:
-//::       line: 187
-//::       col: 66
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|187,76-187,76|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 187
-//::       col: 76
-//::     end:
-//::       line: 187
-//::       col: 76
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|187,54-187,54|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 187
-//::       col: 54
-//::     end:
-//::       line: 187
-//::       col: 54
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|well-formedness|186,42-186,42|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 186
-//::       col: 42
-//::     end:
-//::       line: 186
-//::       col: 42
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: well-formedness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|192,11-192,11|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 192
-//::       col: 11
-//::     end:
-//::       line: 192
-//::       col: 11
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 192
@@ -4959,15 +8516,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 192
 //::       col: 11
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8921
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 186
@@ -4975,15 +8562,41 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 186
 //::       col: 66
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 187
@@ -4991,15 +8604,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 187
 //::       col: 78
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 22
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10507
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 189
@@ -5007,15 +8651,41 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 189
 //::       col: 19
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 190
@@ -5023,16 +8693,41 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 190
 //::       col: 21
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 194
@@ -5040,18 +8735,85 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 194
 //::       col: 15
-//::     prooftext: >-
-//::       out-parameter 'noDups', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 198
@@ -5059,15 +8821,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 198
 //::       col: 31
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
+//::     methodName: NoDups
+//::     methodType: correctness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 16
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11385
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 198
@@ -5075,15 +8867,41 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 198
 //::       col: 31
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 198
@@ -5091,15 +8909,47 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 198
 //::       col: 24
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14759
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 198
@@ -5107,16 +8957,46 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 198
 //::       col: 31
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
+//::     methodName: NoDups
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 13
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15040
 //::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 199
@@ -5124,18 +9004,85 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 199
 //::       col: 19
-//::     prooftext: >-
-//::       variable 'noDups', which is subject to definite-assignment rules, is
-//::       always initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'noDups', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 199
@@ -5143,16 +9090,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 199
 //::       col: 64
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 17
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12308
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 199
@@ -5160,16 +9136,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 199
 //::       col: 69
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 18
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12685
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 199
@@ -5177,16 +9182,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 199
 //::       col: 74
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 19
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12421
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 199
@@ -5194,15 +9228,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 199
 //::       col: 77
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 20
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12794
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 199
@@ -5210,16 +9274,69 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 199
 //::       col: 77
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 14
+//::       batchOutcome: Valid
+//::       batchResourceCount: 20642
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 197
@@ -5227,16 +9344,91 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 197
 //::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::       - target object is never null
+//::       - target object is never null
+//::       - decreases expression is bounded below by 0
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 21
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13467
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 201
@@ -5244,16 +9436,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 201
 //::       col: 13
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12768
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 201
@@ -5261,16 +9482,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 201
 //::       col: 18
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12912
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 201
@@ -5278,16 +9528,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 201
 //::       col: 23
-//::     prooftext: array is never null
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13022
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 201
@@ -5295,15 +9574,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 201
 //::       col: 26
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13156
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 203
@@ -5311,15 +9620,41 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 203
 //::       col: 28
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 206
@@ -5327,15 +9662,41 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 206
 //::       col: 19
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 197
@@ -5343,16 +9704,45 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 207
 //::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: NoDups
 //::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 11
+//::       batchOutcome: Valid
+//::       batchResourceCount: 14496
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
 //::       line: 208
@@ -5360,4358 +9750,3075 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     end:
 //::       line: 208
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'noDups', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: NoDups
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'noDups', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|198,21-198,21|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 198
-//::       col: 21
-//::     end:
-//::       line: 198
-//::       col: 21
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|198,26-198,26|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 198
-//::       col: 26
-//::     end:
-//::       line: 198
-//::       col: 26
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|199,26-199,26|LoopInvariant
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 199
-//::       col: 26
-//::     end:
-//::       line: 199
-//::       col: 26
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|197,18-197,18|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 197
-//::       col: 18
-//::     end:
-//::       line: 197
-//::       col: 18
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|201,14-201,14|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 201
-//::       col: 14
-//::     end:
-//::       line: 201
-//::       col: 14
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|201,24-201,24|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 201
-//::       col: 24
-//::     end:
-//::       line: 201
-//::       col: 24
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|197,5-197,5|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 197
-//::       col: 5
-//::     end:
-//::       line: 197
-//::       col: 5
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: snapshot_test_complex_4.dfy|NoDups|correctness|187,20-187,20|Postcondition
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 187
-//::       col: 20
-//::     end:
-//::       line: 187
-//::       col: 20
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|198,31-198,31|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 198
-//::       col: 31
-//::     end:
-//::       line: 198
-//::       col: 31
-//::     prooftext: target object is never null
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|199,65-199,65|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 199
-//::       col: 65
-//::     end:
-//::       line: 199
-//::       col: 65
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
-//::   - id: >-
-//::       snapshot_test_complex_4.dfy|NoDups|correctness|199,75-199,75|AssertionAutomatic
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 199
-//::       col: 75
-//::     end:
-//::       line: 199
-//::       col: 75
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: NoDups
-//::     methodType: correctness
-//::     assertionGroup: NoDups
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|PlusOne|correctness|21,15-21,15|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|PlusOne|correctness|20,14-20,19|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|PlusOne|correctness|21,13-21,17|Postcondition
-//::         - snapshot_test_complex_4.dfy|PlusOne|correctness|23,5-23,13|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|PlusOne|correctness|24,1-24,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22|AssertionAutomatic
-//::       proofUnused:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Swap|correctness|36,23-36,23|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25|AssertionAutomatic
-//::       proofUnused:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Swap|correctness|37,6-37,6|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8|AssertionAutomatic
-//::       proofUnused:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17|CodeLine
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Swap|correctness|37,14-37,14|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16|AssertionAutomatic
-//::       proofUnused:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Swap|correctness|38,6-38,6|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8|AssertionAutomatic
-//::       proofUnused:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17|CodeLine
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Swap|correctness|38,14-38,14|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16|AssertionAutomatic
-//::       proofUnused:
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53|Precondition
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Swap|well-formedness|33,59-33,59|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59|Precondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Swap|well-formedness|33,38-33,38|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59|Precondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IntDiv|correctness|52,14-52,14|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18|Precondition
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40|Postcondition
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|CodeLine
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IntDiv|correctness|52,21-52,21|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16|CodeLine
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40|Postcondition
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1|AssertionAutomatic
-//::     - id: snapshot_test_complex_4.dfy|IntDiv|correctness|50,15-50,15|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26|Postcondition
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|CodeLine
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40|Postcondition
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1|AssertionAutomatic
-//::     - id: snapshot_test_complex_4.dfy|IntDiv|correctness|50,33-50,33|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36|Postcondition
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|CodeLine
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40|Postcondition
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|CodeLine
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1|AssertionAutomatic
-//::     - id: snapshot_test_complex_4.dfy|IntDiv|correctness|50,38-50,38|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40|Postcondition
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|CodeLine
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36|Postcondition
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|CodeLine
-//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,16-62,16|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,28-62,28|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,15-63,15|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,27-63,27|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,50-64,50|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,58-64,58|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,65-64,65|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,38-64,38|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|66,21-66,21|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|69,21-69,21|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,19|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|68,18-68,18|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|72,10-72,10|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|72,18-72,18|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|72,25-72,25|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-68,5|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|63,22-63,22|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::     - id: snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,9|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|69,26-69,26|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|70,53-70,53|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|70,61-70,61|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|ArraySum|correctness|70,68-70,68|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Euclid|well-formedness|89,50-89,50|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,13-89,19|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,52|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|88,14-88,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|88,23-88,27|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|88,32-88,37|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,24-89,31|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,36-89,43|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,59|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,68|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,75|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Euclid|well-formedness|89,66-89,66|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,52|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,68|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|88,14-88,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|88,23-88,27|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|88,32-88,37|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,13-89,19|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,24-89,31|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,36-89,43|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,59|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,75|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,54-100,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,80|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,13-100,80|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,68-100,68|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,72|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,54-100,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,80|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,13-100,80|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,78-100,78|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,80|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,54-100,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,13-100,80|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,56-100,56|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,54-100,56|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,72|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,80|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,13-100,80|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|104,11-104,11|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|111,26-111,26|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|111,31-111,31|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|112,32-112,32|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|110,22-110,22|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|100,22-100,22|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::       proofUnused:
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|114,17-114,17|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|114,26-114,26|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-110,9|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|111,36-111,36|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|112,70-112,70|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsSorted|correctness|112,80-112,80|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,71-130,71|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,69-130,73|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|well-formedness|129,14-129,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,13-130,79|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsPrime|correctness|141,31-141,31|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsPrime|correctness|144,19-144,19|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-140,9|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsPrime|correctness|130,21-130,21|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18|Precondition
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|IsPrime|correctness|141,71-141,71|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79|Postcondition
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33|CodeLine
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|well-formedness|163,18-163,18|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|well-formedness|163,30-163,30|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|well-formedness|164,54-164,54|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|well-formedness|164,71-164,71|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|well-formedness|164,65-164,65|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|well-formedness|164,42-164,42|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|167,23-167,23|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|170,21-170,21|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|170,26-170,26|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,19|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|169,18-169,18|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|173,13-173,13|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|173,24-173,24|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|173,21-173,21|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|169,5-169,5|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|163,25-163,25|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,13|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,13|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|171,56-171,56|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|171,67-171,67|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|171,64-171,64|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|Reverse|correctness|170,31-170,31|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|well-formedness|186,54-186,54|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|well-formedness|186,64-186,64|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|well-formedness|187,66-187,66|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|well-formedness|187,76-187,76|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|well-formedness|187,54-187,54|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|well-formedness|186,42-186,42|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78|Postcondition
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|192,11-192,11|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|198,21-198,21|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|198,26-198,26|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|199,26-199,26|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|197,18-197,18|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|201,14-201,14|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|201,24-201,24|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|197,5-197,5|AssertionAutomatic
-//::       provedBy:
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|187,20-187,20|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|198,31-198,31|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|199,65-199,65|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_4.dfy|NoDups|correctness|199,75-199,75|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77|AssertionAutomatic
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66|Precondition
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78|Postcondition
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26|AssertionAutomatic
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19|CodeLine
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5|CodeLine
-//::         - >-
-//::           snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1|AssertionAutomatic
-//::   calls: []
+//::   provedBy:
+//::     - top: snapshot_test_complex_4.dfy|PlusOne|correctness|21,13-21,17
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|PlusOne|correctness|20,14-20,19
+//::         - snapshot_test_complex_4.dfy|PlusOne|correctness|23,5-23,13
+//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19
+//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,14-33,19
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18
+//::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16
+//::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16
+//::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16
+//::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::     - top: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,52
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,13-89,19
+//::     - top: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,68
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,52
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
+//::     - top: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42
+//::     - top: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::   proofUnused:
+//::     - top: snapshot_test_complex_4.dfy|PlusOne|correctness|21,13-21,17
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|PlusOne|correctness|24,1-24,1
+//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59
+//::     - top: snapshot_test_complex_4.dfy|Swap|well-formedness|33,36-33,38
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,27-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,57-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|well-formedness|33,48-33,59
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,32-33,38
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,25
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::     - top: snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,16
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,14-33,19
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,27-33,32
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,48-33,53
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|33,53-33,59
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,22-36,22
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|36,9-36,26
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,13-37,16
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|37,5-37,17
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,5
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,8
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,13-38,13
+//::         - snapshot_test_complex_4.dfy|Swap|correctness|38,5-38,17
+//::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|52,12-52,16
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1
+//::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1
+//::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1
+//::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1
+//::     - top: snapshot_test_complex_4.dfy|IntDiv|correctness|52,19-52,23
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|49,14-49,18
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,13-50,26
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,31-50,36
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|50,36-50,40
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|52,5-52,24
+//::         - snapshot_test_complex_4.dfy|IntDiv|correctness|53,1-53,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,67
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,14-62,16
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|62,26-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,15
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,25-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,36-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,38
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,49
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,57-64,57
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,64-64,64
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,49-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,19-66,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,24-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,55
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,60
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,60-70,63
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
+//::     - top: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,52
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|88,14-88,18
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|88,23-88,27
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|88,32-88,37
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,24-89,31
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,36-89,43
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,59
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,68
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,75
+//::     - top: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,68
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|88,14-88,18
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|88,23-88,27
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|88,32-88,37
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,13-89,19
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,24-89,31
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,36-89,43
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,59
+//::         - snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,75
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,54-100,56
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,72
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,77
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,13-100,80
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,54-100,56
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,72
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,77
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,13-100,80
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,72
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,54-100,56
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,77
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,13-100,80
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,77
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,54-100,56
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,72
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,13-100,80
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,80
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,54-100,56
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,72
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,77-100,77
+//::         - snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,13-100,80
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,11
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,69-130,73
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsPrime|well-formedness|129,14-129,18
+//::         - snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,13-130,79
+//::     - top: snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23
+//::     - top: snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23
+//::     - top: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23
+//::     - top: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23
+//::     - top: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23
+//::     - top: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23
+//::     - top: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,56
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23
+//::     - top: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,81
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,40-164,42
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,53
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,61-164,61
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,66-164,71
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,53-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|165,13-165,23
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,29-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,58
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,63
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,70
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
+//::     - top: snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,78
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,40-186,42
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,53
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,58
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,63
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,63-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,53-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,32-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,52-187,54
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,65-187,65
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,75-187,75
+//::         - snapshot_test_complex_4.dfy|NoDups|well-formedness|187,13-187,78
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
+//::   connections: []
 //::

@@ -60,44 +60,9 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,9|AssertionAutomatic
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 8
-//::       col: 9
-//::     end:
-//::       line: 8
-//::       col: 9
-//::     prooftext: a value exists that satisfies this let-such-that expression
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16|Precondition
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 4
-//::       col: 12
-//::     end:
-//::       line: 4
-//::       col: 16
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29|CodeLine
+//::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 8
@@ -105,16 +70,56 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 8
 //::       col: 29
-//::     prooftext: a value exists that satisfies this let-such-that expression
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19|Postcondition
+//::     prooftexts:
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6409
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16
+//::     file: snapshot_test_complex_2.dfy
+//::     start:
+//::       line: 4
+//::       col: 12
+//::     end:
+//::       line: 4
+//::       col: 16
+//::     methodName: CardinalitySubsetLt
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 5
@@ -122,16 +127,30 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 5
 //::       col: 19
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16473
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 8
@@ -139,16 +158,25 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 8
 //::       col: 28
-//::     prooftext: assign-such-that constraint
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18|AssertionAutomatic
+//::     prooftexts:
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 9
@@ -156,18 +184,37 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 9
 //::       col: 18
-//::     prooftext: >-
-//::       variable 'b', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'b', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 9
@@ -175,16 +222,25 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 9
 //::       col: 20
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25|AssertionManual
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 10
@@ -192,16 +248,29 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 10
 //::       col: 25
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
-//::     type: AssertionManual
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|CodeLine
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionManual
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 16214
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 12
@@ -209,16 +278,38 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 12
 //::       col: 31
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: CardinalitySubsetLt
 //::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19|AssertionManual
+//::     prooftexts:
+//::       - loop or recursion terminates
+//::       - call
+//::       - loop or recursion terminates
+//::       - call
+//::       - loop or recursion terminates
+//::       - call
+//::       - ensures clause at snapshot_test_complex_2.dfy(5,11)-(5,19) from call
+//::       - loop or recursion terminates
+//::       - call
+//::       - loop or recursion terminates
+//::       - loop or recursion terminates
+//::       - call
+//::       - the precondition always holds
+//::       - requires clause at snapshot_test_complex_2.dfy(4,12)-(4,16) from call
+//::       - loop or recursion terminates
+//::       - call
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11097
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 14
@@ -226,133 +317,112 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 14
 //::       col: 19
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
+//::     methodName: CardinalitySubsetLt
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionManual
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 20419
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,3|AssertionManual
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 10
-//::       col: 3
-//::     end:
-//::       line: 10
-//::       col: 3
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,5|AssertionManual
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 14
-//::       col: 5
-//::     end:
-//::       line: 14
-//::       col: 5
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,15-5,15|Postcondition
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 5
-//::       col: 15
-//::     end:
-//::       line: 5
-//::       col: 15
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|Call
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 12
-//::       col: 5
-//::     end:
-//::       line: 12
-//::       col: 31
-//::     prooftext: ensures clause at snapshot_test_complex_2.dfy(5,11)-(5,19) from call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,24-12,24|AssertionAutomatic
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 12
-//::       col: 24
-//::     end:
-//::       line: 12
-//::       col: 24
-//::     prooftext: loop or recursion terminates
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,24-12,24|Precondition
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 12
-//::       col: 24
-//::     end:
-//::       line: 12
-//::       col: 24
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: CardinalitySubsetLt
-//::     methodType: correctness
-//::     assertionGroup: CardinalitySubsetLt
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|29,21-29,21|LoopInvariant
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 29
-//::       col: 21
+//::       col: 15
 //::     end:
 //::       line: 29
-//::       col: 21
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::       col: 30
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
+//::     prooftexts:
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 11
+//::       batchOutcome: Valid
+//::       batchResourceCount: 19456
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 19
@@ -360,15 +430,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 19
 //::       col: 18
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 23
@@ -376,31 +479,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 23
 //::       col: 13
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: strategy
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 29
-//::       col: 15
-//::     end:
-//::       line: 29
-//::       col: 30
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 19
@@ -408,15 +528,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 19
 //::       col: 34
-//::     prooftext: requires clause
-//::     isTopAssertion: false
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 20
@@ -424,15 +577,52 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 20
 //::       col: 26
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: strategy
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Postcondition
-//::     covStatus: CovComplete
+//::     topMeta:
+//::       batchIndex: 24
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15052
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 24
@@ -440,15 +630,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 24
 //::       col: 14
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 25
@@ -456,15 +679,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 25
 //::       col: 14
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 26
@@ -472,16 +728,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 26
 //::       col: 22
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: strategy
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 29
@@ -489,18 +777,112 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 29
 //::       col: 15
-//::     prooftext: >-
-//::       variable 'count', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 26
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9888
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 30
@@ -508,17 +890,112 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 30
 //::       col: 15
-//::     prooftext: >-
-//::       variable 'count', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
+//::     prooftexts:
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 27
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10121
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 30
@@ -526,15 +1003,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 30
 //::       col: 40
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 30
@@ -542,15 +1052,54 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 30
 //::       col: 40
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 12
+//::       batchOutcome: Valid
+//::       batchResourceCount: 19438
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 31
@@ -558,15 +1107,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 31
 //::       col: 51
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 31
@@ -574,15 +1156,55 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 31
 //::       col: 27
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 13
+//::       batchOutcome: Valid
+//::       batchResourceCount: 20556
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 31
@@ -590,15 +1212,54 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 31
 //::       col: 36
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 14
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21687
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 31
@@ -606,15 +1267,54 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 31
 //::       col: 46
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 15
+//::       batchOutcome: Valid
+//::       batchResourceCount: 22018
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 31
@@ -622,16 +1322,55 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 31
 //::       col: 51
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
+//::     methodName: strategy
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 16
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21643
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 32
@@ -639,18 +1378,112 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 32
 //::       col: 37
-//::     prooftext: >-
-//::       variable 'count', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 29
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11778
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 32
@@ -658,17 +1491,112 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 32
 //::       col: 59
-//::     prooftext: >-
-//::       variable 'count', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
+//::     prooftexts:
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 28
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11774
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 32
@@ -676,15 +1604,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 32
 //::       col: 59
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 32
@@ -692,15 +1653,54 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 32
 //::       col: 45
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 17
+//::       batchOutcome: Valid
+//::       batchResourceCount: 28966
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 32
@@ -708,16 +1708,55 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 32
 //::       col: 59
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 18
+//::       batchOutcome: Valid
+//::       batchResourceCount: 21437
+//::     covStatus: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 28
@@ -725,17 +1764,112 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 28
 //::       col: 9
-//::     prooftext: >-
-//::       variable 'count', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10927
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 35
@@ -743,15 +1877,52 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 35
 //::       col: 20
-//::     prooftext: a value exists that satisfies this let-such-that expression
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
+//::     prooftexts:
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::       - a value exists that satisfies this let-such-that expression
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12214
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 35
@@ -759,16 +1930,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 35
 //::       col: 19
-//::     prooftext: assign-such-that constraint
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
+//::     prooftexts:
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::       - assign-such-that constraint
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 36
@@ -776,17 +1979,106 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 36
 //::       col: 15
-//::     prooftext: >-
-//::       variable 'p', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 36
@@ -794,16 +2086,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 36
 //::       col: 17
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 38
@@ -811,17 +2135,106 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 38
 //::       col: 8
-//::     prooftext: >-
-//::       variable 'p', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 40
@@ -829,16 +2242,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 40
 //::       col: 24
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 41
@@ -846,17 +2291,112 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 41
 //::       col: 18
-//::     prooftext: >-
-//::       variable 'count', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'count', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 19
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15737
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 41
@@ -864,16 +2404,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 41
 //::       col: 27
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: strategy
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 44
@@ -881,18 +2453,106 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 44
 //::       col: 10
-//::     prooftext: >-
-//::       variable 'p', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
+//::     prooftexts:
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 45
@@ -900,17 +2560,106 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 45
 //::       col: 19
-//::     prooftext: >-
-//::       variable 'p', which is subject to definite-assignment rules, is always
-//::       initialized here
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
+//::     prooftexts:
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::       - >-
+//::         variable 'p', which is subject to definite-assignment rules, is always
+//::         initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 45
@@ -918,15 +2667,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 45
 //::       col: 21
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 46
@@ -934,15 +2716,48 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 46
 //::       col: 23
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 51
@@ -950,15 +2765,54 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 51
 //::       col: 28
-//::     prooftext: call
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
+//::     prooftexts:
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - the precondition always holds
+//::       - requires clause at snapshot_test_complex_2.dfy(4,12)-(4,16) from call
+//::       - call
+//::       - ensures clause at snapshot_test_complex_2.dfy(5,11)-(5,19) from call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     topMeta:
+//::       batchIndex: 20
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11971
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 54
@@ -966,229 +2820,273 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 54
 //::       col: 30
-//::     prooftext: call
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 56
-//::       col: 3
-//::     end:
-//::       line: 56
-//::       col: 16
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 58
-//::       col: 3
-//::     end:
-//::       line: 58
-//::       col: 16
-//::     prooftext: assertion always holds
-//::     isTopAssertion: false
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 59
-//::       col: 1
-//::     end:
-//::       line: 59
-//::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'count', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|30,37-30,37|LoopInvariant
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 30
-//::       col: 37
-//::     end:
-//::       line: 30
-//::       col: 37
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|31,23-31,23|LoopInvariant
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 31
-//::       col: 23
-//::     end:
-//::       line: 31
-//::       col: 23
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|31,34-31,34|LoopInvariant
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 31
-//::       col: 34
-//::     end:
-//::       line: 31
-//::       col: 34
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|31,43-31,43|LoopInvariant
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 31
-//::       col: 43
-//::     end:
-//::       line: 31
-//::       col: 43
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|31,48-31,48|LoopInvariant
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 31
-//::       col: 48
-//::     end:
-//::       line: 31
-//::       col: 48
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|32,34-32,34|LoopInvariant
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 32
-//::       col: 34
-//::     end:
-//::       line: 32
-//::       col: 34
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|32,56-32,56|LoopInvariant
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 32
-//::       col: 56
-//::     end:
-//::       line: 32
-//::       col: 56
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: >-
-//::       snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,11|AssertionAutomatic
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 35
-//::       col: 11
-//::     end:
-//::       line: 35
-//::       col: 11
-//::     prooftext: a value exists that satisfies this let-such-that expression
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|51,22-51,22|Precondition
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 51
-//::       col: 22
-//::     end:
-//::       line: 51
-//::       col: 22
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|Call
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 51
-//::       col: 3
-//::     end:
-//::       line: 51
-//::       col: 28
-//::     prooftext: requires clause at snapshot_test_complex_2.dfy(4,12)-(4,16) from call
-//::     isTopAssertion: false
+//::     prooftexts:
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - ensures clause at snapshot_test_complex_2.dfy(5,11)-(5,19) from call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - the precondition always holds
+//::       - requires clause at snapshot_test_complex_2.dfy(4,12)-(4,16) from call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::       - call
+//::     roles:
+//::       isTop: true
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: Call
+//::     topMeta:
+//::       batchIndex: 25
+//::       batchOutcome: Valid
+//::       batchResourceCount: 12478
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::     file: snapshot_test_complex_2.dfy
+//::     start:
+//::       line: 56
+//::       col: 3
+//::     end:
+//::       line: 56
+//::       col: 16
 //::     methodName: strategy
 //::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|4,12-4,16|Precondition
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionManual
+//::     topMeta:
+//::       batchIndex: 21
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15595
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::     file: snapshot_test_complex_2.dfy
+//::     start:
+//::       line: 58
+//::       col: 3
+//::     end:
+//::       line: 58
+//::       col: 16
+//::     methodName: strategy
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionManual
+//::     topMeta:
+//::       batchIndex: 22
+//::       batchOutcome: Valid
+//::       batchResourceCount: 15902
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     file: snapshot_test_complex_2.dfy
+//::     start:
+//::       line: 59
+//::       col: 1
+//::     end:
+//::       line: 59
+//::       col: 1
+//::     methodName: strategy
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::       - >-
+//::         out-parameter 'count', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 23
+//::       batchOutcome: Valid
+//::       batchResourceCount: 13939
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|4,12-4,16
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 4
@@ -1196,31 +3094,21 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 4
 //::       col: 16
-//::     prooftext: requires clause
-//::     isTopAssertion: false
+//::     methodName: strategy
+//::     methodType: correctness
+//::     prooftexts:
+//::       - requires clause
+//::       - requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
 //::     type: Precondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,3|AssertionManual
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 56
-//::       col: 3
-//::     end:
-//::       line: 56
-//::       col: 3
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|5,11-5,19|Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|5,11-5,19
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
 //::       line: 5
@@ -1228,1275 +3116,1022 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     end:
 //::       line: 5
 //::       col: 19
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
+//::     methodName: strategy
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
 //::     type: Postcondition
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|Call
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 54
-//::       col: 5
-//::     end:
-//::       line: 54
-//::       col: 30
-//::     prooftext: ensures clause at snapshot_test_complex_2.dfy(5,11)-(5,19) from call
-//::     isTopAssertion: false
-//::     type: Call
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,3|AssertionManual
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 58
-//::       col: 3
-//::     end:
-//::       line: 58
-//::       col: 3
-//::     prooftext: assertion always holds
-//::     isTopAssertion: true
-//::     type: AssertionManual
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|20,17-20,17|Postcondition
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 20
-//::       col: 17
-//::     end:
-//::       line: 20
-//::       col: 17
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
-//::   - id: snapshot_test_complex_2.dfy|strategy|correctness|54,24-54,24|Precondition
-//::     file: snapshot_test_complex_2.dfy
-//::     start:
-//::       line: 54
-//::       col: 24
-//::     end:
-//::       line: 54
-//::       col: 24
-//::     prooftext: the precondition always holds
-//::     isTopAssertion: true
-//::     type: Precondition
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: strategy
-//::     methodType: correctness
-//::     assertionGroup: strategy
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,9|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19|Postcondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19|AssertionManual
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,3|AssertionManual
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25|AssertionManual
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19|Postcondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19|AssertionManual
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,5|AssertionManual
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19|AssertionManual
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19|Postcondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,15-5,15|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19|Postcondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|Call
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19|AssertionManual
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,24-12,24|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19|Postcondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19|AssertionManual
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,24-12,24|Precondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|Call
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19|Postcondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19|AssertionManual
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|29,21-29,21|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|30,37-30,37|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|31,23-31,23|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|31,34-31,34|LoopInvariant
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|31,43-31,43|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|31,48-31,48|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|32,34-32,34|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|32,56-32,56|LoopInvariant
-//::       provedBy:
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,11|AssertionAutomatic
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|51,22-51,22|Precondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|Call
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,3|AssertionManual
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|Call
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|Call
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,3|AssertionManual
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|20,17-20,17|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|strategy|correctness|54,24-54,24|Precondition
-//::       provedBy:
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|Call
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26|Postcondition
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59|LoopInvariant
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19|AssertionAutomatic
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|CodeLine
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|CodeLine
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16|AssertionManual
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1|AssertionAutomatic
-//::   calls:
-//::     - id: >-
-//::         snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31|Call
-//::       connections:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19|Postcondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16|Precondition
-//::     - id: snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28|Call
-//::       connections:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|4,12-4,16|Precondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|5,11-5,19|Postcondition
-//::     - id: snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30|Call
-//::       connections:
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|5,11-5,19|Postcondition
-//::         - >-
-//::           snapshot_test_complex_2.dfy|strategy|correctness|4,12-4,16|Precondition
+//::   provedBy:
+//::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16
+//::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19
+//::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20
+//::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20
+//::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::       provers:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::   proofUnused:
+//::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19
+//::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
+//::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19
+//::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20
+//::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::     - top: snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::       unused:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,15-36,15
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|38,8-38,8
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,18-41,18
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|44,10-44,10
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,19-45,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|46,9-46,23
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
+//::   connections:
+//::     - call: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
+//::       targets:
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16
+//::     - call: snapshot_test_complex_2.dfy|strategy|correctness|51,3-51,28
+//::       targets:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|4,12-4,16
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|5,11-5,19
+//::     - call: snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
+//::       targets:
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|5,11-5,19
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|4,12-4,16
 //::

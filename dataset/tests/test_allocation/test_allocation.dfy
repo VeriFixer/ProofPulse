@@ -27,5 +27,5 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 
 
 //::: Name - Allocation never covered
-//::: Description - Allocation generates an havoc assigment in Boogie (that makes it never be covered)
+//::: Description - Allocation generates an havoc assigment in Boogie (that makes it never be covered) (this was fixed on boogie by our PR)
 //::: L24 - CovComplete

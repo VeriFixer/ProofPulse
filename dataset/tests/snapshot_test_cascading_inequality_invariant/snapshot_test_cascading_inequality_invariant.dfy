@@ -14,10 +14,10 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 }
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14|AssertionAutomatic
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 5
@@ -25,33 +25,34 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 5
 //::       col: 14
-//::     prooftext: lower bound does not exceed upper bound
-//::     isTopAssertion: true
+//::     methodName: ContainsK
+//::     methodType: correctness
+//::     prooftexts:
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::       - lower bound does not exceed upper bound
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6512
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14|CodeLine
-//::     file: snapshot_test_cascading_inequality_invariant.dfy
-//::     start:
-//::       line: 5
-//::       col: 14
-//::     end:
-//::       line: 5
-//::       col: 14
-//::     prooftext: lower bound does not exceed upper bound
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30|Postcondition
+//::     covStatusInternal: CovTest
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 2
@@ -59,16 +60,34 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 2
 //::       col: 30
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ContainsK
 //::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20|CodeLine
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - ensures clause
+//::       - this postcondition holds
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 9
+//::       batchOutcome: Valid
+//::       batchResourceCount: 11270
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 4
@@ -76,16 +95,30 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 4
 //::       col: 20
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: ContainsK
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 6
@@ -93,16 +126,30 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 6
 //::       col: 31
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
+//::     methodName: ContainsK
+//::     methodType: correctness
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: LoopInvariant
+//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24|LoopInvariant
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 6
@@ -110,16 +157,35 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 6
 //::       col: 24
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: ContainsK
 //::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31|LoopInvariant
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 6
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9422
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 6
@@ -127,16 +193,35 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 6
 //::       col: 31
-//::     prooftext: loop invariant always holds
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
 //::     methodName: ContainsK
 //::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 7
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9587
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 7
@@ -144,18 +229,50 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 7
 //::       col: 19
-//::     prooftext: >-
-//::       variable 'result', which is subject to definite-assignment rules, is
-//::       always initialized here
-//::     isTopAssertion: false
+//::     methodName: ContainsK
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::       - >-
+//::         variable 'result', which is subject to definite-assignment rules, is
+//::         always initialized here
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61|AssertionAutomatic
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 7
@@ -163,16 +280,34 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 7
 //::       col: 61
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ContainsK
 //::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67|LoopInvariant
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 10
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9381
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 7
@@ -180,16 +315,46 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 7
 //::       col: 67
-//::     prooftext: loop invariant
-//::     isTopAssertion: false
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ContainsK
 //::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15|AssertionAutomatic
+//::     prooftexts:
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant holds on entry
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - this loop invariant is maintained by the loop
+//::       - loop invariant always holds
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant always holds
+//::       - loop invariant
+//::       - loop invariant
+//::       - loop invariant always holds
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: LoopInvariant
+//::     topMeta:
+//::       batchIndex: 8
+//::       batchOutcome: Valid
+//::       batchResourceCount: 10745
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 9
@@ -197,16 +362,34 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 9
 //::       col: 15
-//::     prooftext: index in range
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ContainsK
 //::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27|CodeLine
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8852
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 10
@@ -214,16 +397,30 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 10
 //::       col: 27
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
+//::     methodName: ContainsK
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
 //::     type: CodeLine
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1|AssertionAutomatic
+//::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
 //::       line: 14
@@ -231,323 +428,242 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     end:
 //::       line: 14
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'result', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
+//::     methodName: ContainsK
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::       - >-
+//::         out-parameter 'result', which is subject to definite-assignment rules,
+//::         is always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
 //::     type: AssertionAutomatic
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,21-6,21|LoopInvariant
-//::     file: snapshot_test_cascading_inequality_invariant.dfy
-//::     start:
-//::       line: 6
-//::       col: 21
-//::     end:
-//::       line: 6
-//::       col: 21
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,26-6,26|LoopInvariant
-//::     file: snapshot_test_cascading_inequality_invariant.dfy
-//::     start:
-//::       line: 6
-//::       col: 26
-//::     end:
-//::       line: 6
-//::       col: 26
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,26-7,26|LoopInvariant
-//::     file: snapshot_test_cascading_inequality_invariant.dfy
-//::     start:
-//::       line: 7
-//::       col: 26
-//::     end:
-//::       line: 7
-//::       col: 26
-//::     prooftext: this loop invariant holds on entry
-//::     isTopAssertion: true
-//::     type: LoopInvariant
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,13-9,13|AssertionAutomatic
-//::     file: snapshot_test_cascading_inequality_invariant.dfy
-//::     start:
-//::       line: 9
-//::       col: 13
-//::     end:
-//::       line: 9
-//::       col: 13
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,20-2,20|Postcondition
-//::     file: snapshot_test_cascading_inequality_invariant.dfy
-//::     start:
-//::       line: 2
-//::       col: 20
-//::     end:
-//::       line: 2
-//::       col: 20
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
-//::   - id: >-
-//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,59-7,59|AssertionAutomatic
-//::     file: snapshot_test_cascading_inequality_invariant.dfy
-//::     start:
-//::       line: 7
-//::       col: 59
-//::     end:
-//::       line: 7
-//::       col: 59
-//::     prooftext: index in range
-//::     isTopAssertion: true
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::     methodName: ContainsK
-//::     methodType: correctness
-//::     assertionGroup: ContainsK
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14|AssertionAutomatic
-//::       provedBy:
+//::   provedBy:
+//::     - top: >-
+//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30
+//::       provers:
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14|CodeLine
-//::       proofUnused:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30|Postcondition
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
+//::     - top: >-
+//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31
+//::       provers:
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14
+//::     - top: >-
+//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
+//::       provers:
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20
+//::   proofUnused:
+//::     - top: >-
+//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14
+//::       unused:
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,21-6,21|LoopInvariant
-//::       provedBy:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24|LoopInvariant
-//::       proofUnused:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30|Postcondition
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
+//::     - top: >-
+//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30
+//::       unused:
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,26-6,26|LoopInvariant
-//::       provedBy:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
+//::     - top: >-
+//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24
+//::       unused:
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31|LoopInvariant
-//::       proofUnused:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30|Postcondition
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
+//::     - top: >-
+//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31
+//::       unused:
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14|CodeLine
-//::     - id: >-
-//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,26-7,26|LoopInvariant
-//::       provedBy:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67|LoopInvariant
-//::       proofUnused:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30|Postcondition
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14
+//::     - top: >-
+//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61
+//::       unused:
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20|CodeLine
-//::     - id: >-
-//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,13-9,13|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30|Postcondition
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
+//::     - top: >-
+//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
+//::       unused:
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,20-2,20|Postcondition
-//::       provedBy:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30|Postcondition
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27|CodeLine
-//::       proofUnused:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20
+//::     - top: >-
+//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15
+//::       unused:
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61|AssertionAutomatic
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67|LoopInvariant
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1|AssertionAutomatic
-//::     - id: >-
-//::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,59-7,59|AssertionAutomatic
-//::       provedBy:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61|AssertionAutomatic
-//::       proofUnused:
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|2,13-2,30|Postcondition
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,58-7,61
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14|CodeLine
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
 //::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,19-6,24|LoopInvariant
-//::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31|LoopInvariant
-//::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,19|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67|LoopInvariant
-//::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15|AssertionAutomatic
-//::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27|CodeLine
-//::         - >-
-//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1|AssertionAutomatic
-//::   calls: []
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
+//::   connections: []
 //::

@@ -5,27 +5,9 @@ method ret32(a: int) returns (x:int)
 }
 
 //:: method Graph:
-//:: version: 1
+//:: version: 2
 //:: nodes:
-//::   - id: >-
-//::       snapshot_test_code_line_cov_complete.dfy|ret32|correctness|2,14-2,14|Postcondition
-//::     file: snapshot_test_code_line_cov_complete.dfy
-//::     start:
-//::       line: 2
-//::       col: 14
-//::     end:
-//::       line: 2
-//::       col: 14
-//::     prooftext: this postcondition holds
-//::     isTopAssertion: true
-//::     type: Postcondition
-//::     covStatus: CovTest
-//::     covStatusInternal: CovComplete
-//::     methodName: ret32
-//::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: >-
-//::       snapshot_test_code_line_cov_complete.dfy|ret32|correctness|2,13-2,16|Postcondition
+//::   - locationId: snapshot_test_code_line_cov_complete.dfy|ret32|correctness|2,13-2,16
 //::     file: snapshot_test_code_line_cov_complete.dfy
 //::     start:
 //::       line: 2
@@ -33,16 +15,24 @@ method ret32(a: int) returns (x:int)
 //::     end:
 //::       line: 2
 //::       col: 16
-//::     prooftext: ensures clause
-//::     isTopAssertion: false
-//::     type: Postcondition
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: >-
-//::       snapshot_test_code_line_cov_complete.dfy|ret32|correctness|4,5-4,12|CodeLine
+//::     prooftexts:
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 3363
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_code_line_cov_complete.dfy|ret32|correctness|4,5-4,12
 //::     file: snapshot_test_code_line_cov_complete.dfy
 //::     start:
 //::       line: 4
@@ -50,16 +40,20 @@ method ret32(a: int) returns (x:int)
 //::     end:
 //::       line: 4
 //::       col: 12
-//::     prooftext: assignment (or return)
-//::     isTopAssertion: false
-//::     type: CodeLine
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
-//::   - id: >-
-//::       snapshot_test_code_line_cov_complete.dfy|ret32|correctness|5,1-5,1|AssertionAutomatic
+//::     prooftexts:
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: CodeLine
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_code_line_cov_complete.dfy|ret32|correctness|5,1-5,1
 //::     file: snapshot_test_code_line_cov_complete.dfy
 //::     start:
 //::       line: 5
@@ -67,27 +61,29 @@ method ret32(a: int) returns (x:int)
 //::     end:
 //::       line: 5
 //::       col: 1
-//::     prooftext: >-
-//::       out-parameter 'x', which is subject to definite-assignment rules, is
-//::       always initialized at this return point
-//::     isTopAssertion: false
-//::     type: AssertionAutomatic
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
 //::     methodName: ret32
 //::     methodType: correctness
-//::     assertionGroup: ret32
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'x', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
 //:: edges:
-//::   tops:
-//::     - id: >-
-//::         snapshot_test_code_line_cov_complete.dfy|ret32|correctness|2,14-2,14|Postcondition
-//::       provedBy:
-//::         - >-
-//::           snapshot_test_code_line_cov_complete.dfy|ret32|correctness|2,13-2,16|Postcondition
-//::         - >-
-//::           snapshot_test_code_line_cov_complete.dfy|ret32|correctness|4,5-4,12|CodeLine
-//::       proofUnused:
-//::         - >-
-//::           snapshot_test_code_line_cov_complete.dfy|ret32|correctness|5,1-5,1|AssertionAutomatic
-//::   calls: []
+//::   provedBy:
+//::     - top: snapshot_test_code_line_cov_complete.dfy|ret32|correctness|2,13-2,16
+//::       provers:
+//::         - snapshot_test_code_line_cov_complete.dfy|ret32|correctness|4,5-4,12
+//::   proofUnused:
+//::     - top: snapshot_test_code_line_cov_complete.dfy|ret32|correctness|2,13-2,16
+//::       unused:
+//::         - snapshot_test_code_line_cov_complete.dfy|ret32|correctness|5,1-5,1
+//::   connections: []
 //::
