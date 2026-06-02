@@ -381,8 +381,8 @@
         "invariant": "strong"
       },
       "override": {
-        "postcondition": "strong",
-        "invariant": "strong"
+        "postcondition": "weak",
+        "invariant": "weak"
       }
     },
     "RQ1-GPT4/452": {

@@ -44,7 +44,7 @@ export function classifyPostcondition(graph: ProofGraph): "strong" | "weak" | "n
     // Empty code line deps means nothing substantive proves this postcondition → weak
     if (codeLineDeps.length === 0) return "weak";
     for (const dep of codeLineDeps) {
-      if (dep.covStatus === CovStatus.Uncovered) return "weak";
+      if (dep.covStatus === CovStatus.Uncovered || dep.covStatus == CovStatus.CovTest) return "weak";
     }
   }
 
@@ -90,7 +90,7 @@ export function classifyInvariant(graph: ProofGraph): "strong" | "weak" | "none"
     // Empty code line deps means nothing substantive proves this invariant → weak
     if (codeLineDeps.length === 0) return "weak";
     for (const dep of codeLineDeps) {
-      if (dep.covStatus === CovStatus.Uncovered) return "weak";
+      if (dep.covStatus === CovStatus.Uncovered || dep.covStatus == CovStatus.CovTest) return "weak";
     }
   }
 
