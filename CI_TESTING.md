@@ -109,3 +109,9 @@ Reports are written to `test-results/junit.xml` and `test-results/coverage.json`
 ## Bug Tests
 
 Directories prefixed with `bug_` use inverted logic — verification failure is the expected (passing) outcome.
+
+# Actual full command
+ npm test -- --dafny-path /home/ricostynha/Desktop/proof_pulse_custom_dafny_boogie/dafny_proofpulse/Binaries/Dafny --force-minimization --update-snapshots
+
+
+ npm test -- --dafny-path /home/ricostynha/Desktop/proof_pulse_custom_dafny_boogie/dafny_proofpulse/Binaries/Dafny --force-minimization

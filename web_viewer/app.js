@@ -236,9 +236,13 @@ function renderPanel(tokenEl, proof) {
     // Get directional neighbors
     const provedByResults = window.getProvedBy(id, proof, provedByDepth) || [];
     const provesResults = window.getProves(id, proof, provesDepth) || [];
+    const callTargets = window.getConnections ? window.getConnections(id, proof) : [];
+    const calledBy = window.getCalledBy ? window.getCalledBy(id, proof) : [];
     const allDepIds = [
       ...provedByResults.map(r => r.node.id),
       ...provesResults.map(r => r.node.id),
+      ...callTargets.map(r => r.node.id),
+      ...calledBy.map(r => r.node.id),
     ];
 
     clearHighlights();
@@ -260,7 +264,13 @@ function renderPanel(tokenEl, proof) {
     const explanation = statusExplanation(token.covStatus, token.type);
     const proofMsg = cleanProoftext(token.prooftext);
 
+    const usageCount = window.getUsageCount ? window.getUsageCount(id, proof) : 0;
+    const methodContexts = window.getMethodContexts ? window.getMethodContexts(id, proof) : [];
+
     card.innerHTML = statusHtml +
+      `<div class="token-card-row"><strong>Method:</strong> ${escapeHtml(token.methodName || '—')} <span class="token-card-method-type">(${escapeHtml(token.methodType || '—')})</span></div>` +
+      `<div class="token-card-row"><strong>Proves:</strong> ${usageCount} top assertion${usageCount !== 1 ? 's' : ''} · <strong>Contexts:</strong> ${methodContexts.length}</div>` +
+      (methodContexts.length > 1 ? `<div class="token-card-row token-card-contexts"><small>${methodContexts.map(c => escapeHtml(c)).join(', ')}</small></div>` : '') +
       `<p class="token-card-hint">${escapeHtml(explanation)}</p>` +
       (proofMsg ? `<div class="token-card-row"><strong>Message:</strong> <span class="token-card-proof">${escapeHtml(proofMsg)}</span></div>` : '');
 
@@ -285,6 +295,36 @@ function renderPanel(tokenEl, proof) {
       onDepthChange: (v) => { provesDepth = v; },
       proof,
     }));
+
+    // ── Calls section (call connections: targets + called by) ──
+    const callResults = [
+      ...callTargets.map(r => ({ node: r.node, depth: 1, label: '→ calls' })),
+      ...calledBy.map(r => ({ node: r.node, depth: 1, label: '← called by' })),
+    ];
+
+    if (callResults.length > 0) {
+      const callSection = document.createElement('div');
+      callSection.className = 'dep-section';
+
+      const callHeader = document.createElement('div');
+      callHeader.className = 'dep-section-header';
+      callHeader.innerHTML = `<span class="dep-section-title">Calls <span class="dep-count">${callResults.length}</span></span>`;
+      callSection.appendChild(callHeader);
+
+      const callUl = document.createElement('ul');
+      callUl.className = 'dep-list';
+      callResults.forEach(r => {
+        const codeText = getNodeDisplayText(r.node, 60);
+        const li = document.createElement('li');
+        li.className = 'dep-item';
+        li.innerHTML =
+          `<div class="dep-item-main">${statusDot(r.node.covStatus)}${typeBadge(r.node.type)}<code class="dep-code">${escapeHtml(codeText)}</code></div>` +
+          `<div class="dep-item-proof"><small>${r.label}</small></div>`;
+        callUl.appendChild(li);
+      });
+      callSection.appendChild(callUl);
+      panelBody.appendChild(callSection);
+    }
   }
 
 function attachHandlers(proof) {

@@ -3,6 +3,30 @@ dataset/tests/*/output*
 dataset/tests/*/cov/
 dataset/tests/*/prover_log.txt
 
+# Only keep .dfy files in dataset/tests
+dataset/tests/**/*.cs
+dataset/tests/**/*.csproj
+dataset/tests/**/*.dll
+dataset/tests/**/*.pdb
+dataset/tests/**/*.json
+dataset/tests/**/*.cache
+dataset/tests/**/*.txt
+dataset/tests/**/*.md
+dataset/tests/**/*.smt2
+dataset/tests/**/*.html
+dataset/tests/**/*.css
+dataset/tests/**/*.editorconfig
+dataset/tests/**/*.sln
+dataset/tests/**/obj/
+dataset/tests/**/bin/
+dataset/tests/**/-log-text/
+dataset/tests/**/--log-text/
+dataset/tests/**/*.deps.json
+
+# Temp/generated dirs
+2026-*/
+cov/
+
 # Dependencies
 node_modules/
 

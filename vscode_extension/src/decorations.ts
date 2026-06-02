@@ -1,6 +1,6 @@
 import * as path from "node:path";
 import * as vscode from "vscode";
-import { CovStatus, Node } from "@proofpulse/core";
+import { CovStatus, ProofNode } from "@proofpulse/core";
 
 interface DecorationTypes {
   uncoveredGutter: vscode.TextEditorDecorationType;
@@ -66,7 +66,7 @@ export function createDecorationTypes(opacity: number, extensionPath: string): D
 export function applyDecorations(
   editor: vscode.TextEditor,
   lineStatus: CovStatus[],
-  nodes: Node[],
+  nodes: ProofNode[],
   opacity: number,
   extensionPath: string,
 ): void {
@@ -78,7 +78,7 @@ export function applyDecorations(
   const doc = editor.document;
 
   /** Extract a readable code snippet for a node. Falls back to full line if range is too small. */
-  function nodeSnippet(n: Node): string {
+  function nodeSnippet(n: ProofNode): string {
     const startLine = Math.max(0, n.start.line - 1);
     const endLine = Math.max(0, n.end.line - 1);
     const startCol = Math.max(0, n.start.col - 1);
@@ -93,8 +93,8 @@ export function applyDecorations(
   }
 
   // Build maps: line index (0-based) → nodes on that line, by status
-  const uncoveredNodesByLine = new Map<number, Node[]>();
-  const covTestNodesByLine = new Map<number, Node[]>();
+  const uncoveredNodesByLine = new Map<number, ProofNode[]>();
+  const covTestNodesByLine = new Map<number, ProofNode[]>();
   for (const node of nodes) {
     const map = node.covStatus === CovStatus.Uncovered ? uncoveredNodesByLine
       : node.covStatus === CovStatus.CovTest ? covTestNodesByLine
@@ -124,7 +124,7 @@ export function applyDecorations(
         const shortSnippet = nodeSnippet(n);
 
         hover.appendMarkdown(`🔴 \`${shortSnippet}\` *(Line ${n.start.line}:${n.start.col})*  \n`);
-        hover.appendMarkdown(`${uncoveredExplanation(n.type)}  \n\n`);
+        hover.appendMarkdown(`${uncoveredExplanation(n.getType())}  \n\n`);
       }
 
       hover.appendMarkdown(`---\n`);
@@ -144,7 +144,7 @@ export function applyDecorations(
         for (const n of lineNodes) {
           const shortSnippet = nodeSnippet(n);
           hover.appendMarkdown(`🟡 \`${shortSnippet}\` *(Line ${n.start.line}:${n.start.col})*  \n`);
-          hover.appendMarkdown(`${covTestExplanation(n.type)}  \n\n`);
+          hover.appendMarkdown(`${covTestExplanation(n.getType())}  \n\n`);
         }
       } else {
           hover.appendMarkdown(`🟡 **CovTest** — covered by test assertions only  \n\n`);
@@ -198,7 +198,7 @@ function disposeCurrentTypes(): void {
   }
 }
 
-function nodeToRange(node: Node): vscode.Range {
+function nodeToRange(node: ProofNode): vscode.Range {
   return new vscode.Range(
     node.start.line, node.start.col,
     node.end.line, node.end.col,
