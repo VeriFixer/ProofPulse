@@ -828,7 +828,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_test_forall_needs_merging.dfy|SplitStringIntoChars|well-formedness|3,25-3,53
@@ -851,7 +851,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_test_forall_needs_merging.dfy|SplitStringIntoChars|well-formedness|3,13-3,53

@@ -224,7 +224,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,20
 //::     file: snapshot_test_complex_5.dfy
@@ -4302,124 +4302,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       line: 19
 //::       col: 25
 //::     methodName: GCD1
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
-//::     file: snapshot_test_complex_5.dfy
-//::     start:
-//::       line: 46
-//::       col: 17
-//::     end:
-//::       line: 46
-//::       col: 17
-//::     methodName: GCD2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - value always satisfies the subset constraints of 'nat'
-//::       - value always satisfies the subset constraints of 'nat'
-//::       - value always satisfies the subset constraints of 'nat'
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 4880
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
-//::     file: snapshot_test_complex_5.dfy
-//::     start:
-//::       line: 44
-//::       col: 14
-//::     end:
-//::       line: 44
-//::       col: 18
-//::     methodName: GCD2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
-//::     file: snapshot_test_complex_5.dfy
-//::     start:
-//::       line: 44
-//::       col: 23
-//::     end:
-//::       line: 44
-//::       col: 28
-//::     methodName: GCD2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
-//::     file: snapshot_test_complex_5.dfy
-//::     start:
-//::       line: 46
-//::       col: 19
-//::     end:
-//::       line: 46
-//::       col: 19
-//::     methodName: GCD2
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - value always satisfies the subset constraints of 'nat'
-//::       - value always satisfies the subset constraints of 'nat'
-//::       - value always satisfies the subset constraints of 'nat'
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 2
-//::       batchOutcome: Valid
-//::       batchResourceCount: 5376
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
-//::     file: snapshot_test_complex_5.dfy
-//::     start:
-//::       line: 46
-//::       col: 13
-//::     end:
-//::       line: 46
-//::       col: 25
-//::     methodName: GCD2
 //::     methodType: well-formedness
 //::     prooftexts:
 //::       - method ensures clause
@@ -11592,6 +11474,124 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 46
+//::       col: 17
+//::     end:
+//::       line: 46
+//::       col: 17
+//::     methodName: GCD2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4880
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 44
+//::       col: 14
+//::     end:
+//::       line: 44
+//::       col: 18
+//::     methodName: GCD2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 44
+//::       col: 23
+//::     end:
+//::       line: 44
+//::       col: 28
+//::     methodName: GCD2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 46
+//::       col: 19
+//::     end:
+//::       line: 46
+//::       col: 19
+//::     methodName: GCD2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::       - value always satisfies the subset constraints of 'nat'
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 5376
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 46
+//::       col: 13
+//::     end:
+//::       line: 46
+//::       col: 25
+//::     methodName: GCD2
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy:
 //::     - top: snapshot_test_complex_5.dfy|r4|well-formedness|15,43-15,47
@@ -11731,12 +11731,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     - top: snapshot_test_complex_5.dfy|GCD1|well-formedness|19,19-19,19
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|well-formedness|18,23-18,27
-//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
-//::       provers:
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
-//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
-//::       provers:
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|48,8-48,8
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|44,14-44,18
@@ -12015,6 +12009,12 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|66,9-66,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|76,22-76,26
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
+//::       provers:
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
+//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
+//::       provers:
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
 //::   proofUnused:
 //::     - top: snapshot_test_complex_5.dfy|r1|well-formedness|6,20-6,20
 //::       unused:
@@ -13809,16 +13809,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|well-formedness|18,14-18,18
 //::         - snapshot_test_complex_5.dfy|GCD1|well-formedness|19,17-19,17
 //::         - snapshot_test_complex_5.dfy|GCD1|well-formedness|19,13-19,25
-//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
-//::       unused:
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
-//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
-//::       unused:
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
-//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|48,8-48,8
 //::       unused:
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|44,23-44,28
@@ -17715,6 +17705,16 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|82,1-82,1
+//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
+//::       unused:
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,23-44,28
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
+//::     - top: snapshot_test_complex_5.dfy|GCD2|well-formedness|46,19-46,19
+//::       unused:
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|44,14-44,18
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,17-46,17
+//::         - snapshot_test_complex_5.dfy|GCD2|well-formedness|46,13-46,25
 //::   connections:
 //::     - call: snapshot_test_complex_5.dfy|GCD1|correctness|23,9-23,16
 //::       targets:

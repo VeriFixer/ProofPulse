@@ -283,7 +283,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_useless_assigment_to_0_appears_on_core.dfy|zeroVector|well-formedness|3,29-3,59
@@ -309,7 +309,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_useless_assigment_to_0_appears_on_core.dfy|zeroVector|well-formedness|3,13-3,59

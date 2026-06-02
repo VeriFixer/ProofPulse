@@ -243,7 +243,7 @@ method SelectionSort(a: array<int>)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,25-3,62
 //::     file: snapshot_test_complex_3.dfy
@@ -271,7 +271,7 @@ method SelectionSort(a: array<int>)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|well-formedness|3,11-3,62
 //::     file: snapshot_test_complex_3.dfy

@@ -1883,7 +1883,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,27-64,67
 //::     file: snapshot_test_complex_4.dfy
@@ -1914,7 +1914,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|well-formedness|64,9-64,67
 //::     file: snapshot_test_complex_4.dfy
@@ -3754,7 +3754,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,36-89,43
 //::     file: snapshot_test_complex_4.dfy
@@ -3776,7 +3776,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,48-89,59
 //::     file: snapshot_test_complex_4.dfy
@@ -3798,7 +3798,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|Euclid|well-formedness|89,64-89,68
 //::     file: snapshot_test_complex_4.dfy
@@ -3846,7 +3846,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|well-formedness|100,67-100,67
 //::     file: snapshot_test_complex_4.dfy
@@ -5399,6 +5399,73 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,69-130,73
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 130
+//::       col: 69
+//::     end:
+//::       line: 130
+//::       col: 73
+//::     methodName: IsPrime
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - divisor is always non-zero
+//::       - divisor is always non-zero
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4786
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|well-formedness|129,14-129,18
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 129
+//::       col: 14
+//::     end:
+//::       line: 129
+//::       col: 18
+//::     methodName: IsPrime
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,13-130,79
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 130
+//::       col: 13
+//::     end:
+//::       line: 130
+//::       col: 79
+//::     methodName: IsPrime
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -5838,73 +5905,6 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,69-130,73
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 130
-//::       col: 69
-//::     end:
-//::       line: 130
-//::       col: 73
-//::     methodName: IsPrime
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - divisor is always non-zero
-//::       - divisor is always non-zero
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: false
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 4786
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|well-formedness|129,14-129,18
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 129
-//::       col: 14
-//::     end:
-//::       line: 129
-//::       col: 18
-//::     methodName: IsPrime
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,13-130,79
-//::     file: snapshot_test_complex_4.dfy
-//::     start:
-//::       line: 130
-//::       col: 13
-//::     end:
-//::       line: 130
-//::       col: 79
-//::     methodName: IsPrime
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -6243,7 +6243,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,31-164,81
 //::     file: snapshot_test_complex_4.dfy
@@ -6271,7 +6271,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|well-formedness|164,13-164,81
 //::     file: snapshot_test_complex_4.dfy
@@ -11507,6 +11507,10 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,69-130,73
+//::       unused:
+//::         - snapshot_test_complex_4.dfy|IsPrime|well-formedness|129,14-129,18
+//::         - snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,13-130,79
 //::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
 //::       unused:
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|129,14-129,18
@@ -11594,10 +11598,6 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
-//::     - top: snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,69-130,73
-//::       unused:
-//::         - snapshot_test_complex_4.dfy|IsPrime|well-formedness|129,14-129,18
-//::         - snapshot_test_complex_4.dfy|IsPrime|well-formedness|130,13-130,79
 //::     - top: snapshot_test_complex_4.dfy|Reverse|well-formedness|163,13-163,18
 //::       unused:
 //::         - snapshot_test_complex_4.dfy|Reverse|well-formedness|163,28-163,30

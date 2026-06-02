@@ -2911,7 +2911,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|well-formedness|27,13-28,50
 //::     file: snapshot_test_complex_13.dfy

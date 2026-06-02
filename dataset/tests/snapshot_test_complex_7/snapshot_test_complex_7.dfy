@@ -11722,7 +11722,7 @@ class Secret{
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|well-formedness|56,17-56,27
 //::     file: snapshot_test_complex_7.dfy

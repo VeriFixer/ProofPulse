@@ -19,6 +19,276 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //:: method Graph:
 //:: version: 2
 //:: nodes:
+//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
+//::     file: snapshot_bug_lurking_axioms.dfy
+//::     start:
+//::       line: 2
+//::       col: 13
+//::     end:
+//::       line: 2
+//::       col: 15
+//::     methodName: zeroVector
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6742
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
+//::     file: snapshot_bug_lurking_axioms.dfy
+//::     start:
+//::       line: 2
+//::       col: 25
+//::     end:
+//::       line: 2
+//::       col: 28
+//::     methodName: zeroVector
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 6861
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,28
+//::     file: snapshot_bug_lurking_axioms.dfy
+//::     start:
+//::       line: 2
+//::       col: 13
+//::     end:
+//::       line: 2
+//::       col: 28
+//::     methodName: zeroVector
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
+//::     file: snapshot_bug_lurking_axioms.dfy
+//::     start:
+//::       line: 3
+//::       col: 37
+//::     end:
+//::       line: 3
+//::       col: 39
+//::     methodName: zeroVector
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::       - target object is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 5
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8368
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,39
+//::     file: snapshot_bug_lurking_axioms.dfy
+//::     start:
+//::       line: 3
+//::       col: 29
+//::     end:
+//::       line: 3
+//::       col: 39
+//::     methodName: zeroVector
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
+//::     file: snapshot_bug_lurking_axioms.dfy
+//::     start:
+//::       line: 3
+//::       col: 50
+//::     end:
+//::       line: 3
+//::       col: 50
+//::     methodName: zeroVector
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::       - array is never null
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 8907
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
+//::     file: snapshot_bug_lurking_axioms.dfy
+//::     start:
+//::       line: 3
+//::       col: 50
+//::     end:
+//::       line: 3
+//::       col: 54
+//::     methodName: zeroVector
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 4
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9363
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
+//::     file: snapshot_bug_lurking_axioms.dfy
+//::     start:
+//::       line: 3
+//::       col: 50
+//::     end:
+//::       line: 3
+//::       col: 59
+//::     methodName: zeroVector
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
+//::     file: snapshot_bug_lurking_axioms.dfy
+//::     start:
+//::       line: 3
+//::       col: 29
+//::     end:
+//::       line: 3
+//::       col: 59
+//::     methodName: zeroVector
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
+//::     file: snapshot_bug_lurking_axioms.dfy
+//::     start:
+//::       line: 3
+//::       col: 13
+//::     end:
+//::       line: 3
+//::       col: 59
+//::     methodName: zeroVector
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|correctness|6,19-6,21
 //::     file: snapshot_bug_lurking_axioms.dfy
 //::     start:
@@ -1159,278 +1429,12 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
-//::     file: snapshot_bug_lurking_axioms.dfy
-//::     start:
-//::       line: 2
-//::       col: 13
-//::     end:
-//::       line: 2
-//::       col: 15
-//::     methodName: zeroVector
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 6742
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
-//::     file: snapshot_bug_lurking_axioms.dfy
-//::     start:
-//::       line: 2
-//::       col: 25
-//::     end:
-//::       line: 2
-//::       col: 28
-//::     methodName: zeroVector
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 2
-//::       batchOutcome: Valid
-//::       batchResourceCount: 6861
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,28
-//::     file: snapshot_bug_lurking_axioms.dfy
-//::     start:
-//::       line: 2
-//::       col: 13
-//::     end:
-//::       line: 2
-//::       col: 28
-//::     methodName: zeroVector
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
-//::     file: snapshot_bug_lurking_axioms.dfy
-//::     start:
-//::       line: 3
-//::       col: 37
-//::     end:
-//::       line: 3
-//::       col: 39
-//::     methodName: zeroVector
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::       - target object is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 5
-//::       batchOutcome: Valid
-//::       batchResourceCount: 8368
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,39
-//::     file: snapshot_bug_lurking_axioms.dfy
-//::     start:
-//::       line: 3
-//::       col: 29
-//::     end:
-//::       line: 3
-//::       col: 39
-//::     methodName: zeroVector
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
-//::     file: snapshot_bug_lurking_axioms.dfy
-//::     start:
-//::       line: 3
-//::       col: 50
-//::     end:
-//::       line: 3
-//::       col: 50
-//::     methodName: zeroVector
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 3
-//::       batchOutcome: Valid
-//::       batchResourceCount: 8907
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
-//::     file: snapshot_bug_lurking_axioms.dfy
-//::     start:
-//::       line: 3
-//::       col: 50
-//::     end:
-//::       line: 3
-//::       col: 54
-//::     methodName: zeroVector
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 4
-//::       batchOutcome: Valid
-//::       batchResourceCount: 9363
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
-//::     file: snapshot_bug_lurking_axioms.dfy
-//::     start:
-//::       line: 3
-//::       col: 50
-//::     end:
-//::       line: 3
-//::       col: 59
-//::     methodName: zeroVector
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
-//::     file: snapshot_bug_lurking_axioms.dfy
-//::     start:
-//::       line: 3
-//::       col: 29
-//::     end:
-//::       line: 3
-//::       col: 59
-//::     methodName: zeroVector
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
-//::     file: snapshot_bug_lurking_axioms.dfy
-//::     start:
-//::       line: 3
-//::       col: 13
-//::     end:
-//::       line: 3
-//::       col: 59
-//::     methodName: zeroVector
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy:
+//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
+//::       provers:
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,28
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,39
 //::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|correctness|2,13-2,28
 //::       provers:
 //::         - snapshot_bug_lurking_axioms.dfy|zeroVector|correctness|6,5-6,28
@@ -1469,11 +1473,60 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|correctness|8,5-14,5
 //::       provers:
 //::         - snapshot_bug_lurking_axioms.dfy|zeroVector|correctness|13,9-13,19
-//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
-//::       provers:
+//::   proofUnused:
+//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
+//::       unused:
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,28
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,39
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
+//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
+//::       unused:
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,28
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,39
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
+//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
+//::       unused:
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
 //::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,28
 //::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,39
-//::   proofUnused:
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
+//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
+//::       unused:
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,28
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,39
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
+//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
+//::       unused:
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
+//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
 //::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|correctness|6,19-6,21
 //::       unused:
 //::         - snapshot_bug_lurking_axioms.dfy|zeroVector|correctness|2,13-2,28
@@ -1746,58 +1799,5 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_bug_lurking_axioms.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_bug_lurking_axioms.dfy|zeroVector|correctness|12,9-12,19
 //::         - snapshot_bug_lurking_axioms.dfy|zeroVector|correctness|15,1-15,1
-//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
-//::       unused:
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,28
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,39
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
-//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
-//::       unused:
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,28
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,39
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
-//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
-//::       unused:
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,28
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,39
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
-//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
-//::       unused:
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,28
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,39
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
-//::     - top: snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,54
-//::       unused:
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,13-2,15
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|2,25-2,28
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,37-3,39
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,50
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,50-3,59
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,29-3,59
-//::         - snapshot_bug_lurking_axioms.dfy|zeroVector|well-formedness|3,13-3,59
 //::   connections: []
 //::

@@ -212,5 +212,4 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::: Description -
 //::: L36 - Uncovered
 //::: L37 - Uncovered
-//::: L64 - Uncovered
 //::: L129 - Uncovered

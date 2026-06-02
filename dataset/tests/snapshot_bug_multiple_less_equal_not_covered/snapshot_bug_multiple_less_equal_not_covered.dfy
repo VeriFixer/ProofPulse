@@ -615,7 +615,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|well-formedness|5,31-5,33
@@ -931,7 +931,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst|correctness|8,19-8,21
@@ -3294,7 +3294,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|well-formedness|27,31-27,33
@@ -3610,7 +3610,7 @@ method MinSecondValueFirst1(s: array<seq<int>>) returns (firstOfMinSecond: int)
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_multiple_less_equal_not_covered.dfy|MinSecondValueFirst1|correctness|30,19-30,21

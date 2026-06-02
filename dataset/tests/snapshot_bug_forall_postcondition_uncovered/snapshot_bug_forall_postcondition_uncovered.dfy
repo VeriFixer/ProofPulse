@@ -18,6 +18,234 @@ method AddLists(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //:: version: 2
 //:: nodes:
 //::   - locationId: >-
+//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,55
+//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
+//::     start:
+//::       line: 4
+//::       col: 47
+//::     end:
+//::       line: 4
+//::       col: 55
+//::     methodName: AddLists
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9140
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,41
+//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
+//::     start:
+//::       line: 4
+//::       col: 25
+//::     end:
+//::       line: 4
+//::       col: 41
+//::     methodName: AddLists
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|2,14-2,23
+//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
+//::     start:
+//::       line: 2
+//::       col: 14
+//::     end:
+//::       line: 2
+//::       col: 23
+//::     methodName: AddLists
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method requires clause
+//::       - method requires clause
+//::       - method requires clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Precondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|3,13-3,27
+//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
+//::     start:
+//::       line: 3
+//::       col: 13
+//::     end:
+//::       line: 3
+//::       col: 27
+//::     methodName: AddLists
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,60-4,63
+//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
+//::     start:
+//::       line: 4
+//::       col: 60
+//::     end:
+//::       line: 4
+//::       col: 63
+//::     methodName: AddLists
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 2
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9343
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,67-4,70
+//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
+//::     start:
+//::       line: 4
+//::       col: 67
+//::     end:
+//::       line: 4
+//::       col: 70
+//::     methodName: AddLists
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::       - index in range
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     topMeta:
+//::       batchIndex: 3
+//::       batchOutcome: Valid
+//::       batchResourceCount: 9584
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,70
+//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
+//::     start:
+//::       line: 4
+//::       col: 47
+//::     end:
+//::       line: 4
+//::       col: 70
+//::     methodName: AddLists
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,70
+//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
+//::     start:
+//::       line: 4
+//::       col: 25
+//::     end:
+//::       line: 4
+//::       col: 70
+//::     methodName: AddLists
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
+//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,13-4,70
+//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
+//::     start:
+//::       line: 4
+//::       col: 13
+//::     end:
+//::       line: 4
+//::       col: 70
+//::     methodName: AddLists
+//::     methodType: well-formedness
+//::     prooftexts:
+//::       - method ensures clause
+//::       - method ensures clause
+//::       - method ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: >-
 //::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|correctness|7,14-7,14
 //::     file: snapshot_bug_forall_postcondition_uncovered.dfy
 //::     start:
@@ -1116,236 +1344,31 @@ method AddLists(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::       batchResourceCount: 9744
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::   - locationId: >-
-//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,55
-//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
-//::     start:
-//::       line: 4
-//::       col: 47
-//::     end:
-//::       line: 4
-//::       col: 55
-//::     methodName: AddLists
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: false
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 9140
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: >-
-//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,41
-//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
-//::     start:
-//::       line: 4
-//::       col: 25
-//::     end:
-//::       line: 4
-//::       col: 41
-//::     methodName: AddLists
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: >-
-//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|2,14-2,23
-//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
-//::     start:
-//::       line: 2
-//::       col: 14
-//::     end:
-//::       line: 2
-//::       col: 23
-//::     methodName: AddLists
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method requires clause
-//::       - method requires clause
-//::       - method requires clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Precondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: >-
-//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|3,13-3,27
-//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
-//::     start:
-//::       line: 3
-//::       col: 13
-//::     end:
-//::       line: 3
-//::       col: 27
-//::     methodName: AddLists
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: >-
-//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,60-4,63
-//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
-//::     start:
-//::       line: 4
-//::       col: 60
-//::     end:
-//::       line: 4
-//::       col: 63
-//::     methodName: AddLists
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 2
-//::       batchOutcome: Valid
-//::       batchResourceCount: 9343
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: >-
-//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,67-4,70
-//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
-//::     start:
-//::       line: 4
-//::       col: 67
-//::     end:
-//::       line: 4
-//::       col: 70
-//::     methodName: AddLists
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::       - index in range
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 3
-//::       batchOutcome: Valid
-//::       batchResourceCount: 9584
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
-//::   - locationId: >-
-//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,70
-//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
-//::     start:
-//::       line: 4
-//::       col: 47
-//::     end:
-//::       line: 4
-//::       col: 70
-//::     methodName: AddLists
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: >-
-//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,70
-//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
-//::     start:
-//::       line: 4
-//::       col: 25
-//::     end:
-//::       line: 4
-//::       col: 70
-//::     methodName: AddLists
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: >-
-//::       snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,13-4,70
-//::     file: snapshot_bug_forall_postcondition_uncovered.dfy
-//::     start:
-//::       line: 4
-//::       col: 13
-//::     end:
-//::       line: 4
-//::       col: 70
-//::     methodName: AddLists
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy:
+//::     - top: >-
+//::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,55
+//::       provers:
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,41
+//::     - top: >-
+//::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,60-4,63
+//::       provers:
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|3,13-3,27
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,41
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,55
+//::     - top: >-
+//::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,67-4,70
+//::       provers:
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|2,14-2,23
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,55
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,60-4,63
 //::     - top: >-
 //::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|correctness|3,13-3,27
 //::       provers:
@@ -1394,30 +1417,50 @@ method AddLists(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::       provers:
 //::         - >-
 //::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|correctness|2,14-2,23
+//::   proofUnused:
 //::     - top: >-
 //::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,55
-//::       provers:
+//::       unused:
 //::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,41
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|2,14-2,23
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|3,13-3,27
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,60-4,63
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,67-4,70
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,70
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,70
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,13-4,70
 //::     - top: >-
 //::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,60-4,63
-//::       provers:
+//::       unused:
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|2,14-2,23
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,67-4,70
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,70
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,70
+//::         - >-
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,13-4,70
+//::     - top: >-
+//::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,67-4,70
+//::       unused:
 //::         - >-
 //::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|3,13-3,27
 //::         - >-
 //::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,41
 //::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,55
-//::     - top: >-
-//::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,67-4,70
-//::       provers:
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,70
 //::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|2,14-2,23
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,70
 //::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,55
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,60-4,63
-//::   proofUnused:
+//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,13-4,70
 //::     - top: >-
 //::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|correctness|7,14-7,14
 //::       unused:
@@ -2074,48 +2117,5 @@ method AddLists(a: seq<int>, b: seq<int>) returns (result: seq<int>)
 //::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|correctness|12,36-12,39
 //::         - >-
 //::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|correctness|12,9-12,41
-//::     - top: >-
-//::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,55
-//::       unused:
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|2,14-2,23
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|3,13-3,27
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,60-4,63
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,67-4,70
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,70
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,70
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,13-4,70
-//::     - top: >-
-//::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,60-4,63
-//::       unused:
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|2,14-2,23
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,67-4,70
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,70
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,70
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,13-4,70
-//::     - top: >-
-//::         snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,67-4,70
-//::       unused:
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|3,13-3,27
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,41
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,47-4,70
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,25-4,70
-//::         - >-
-//::           snapshot_bug_forall_postcondition_uncovered.dfy|AddLists|well-formedness|4,13-4,70
 //::   connections: []
 //::

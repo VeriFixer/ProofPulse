@@ -139,7 +139,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,44-3,61
@@ -238,7 +238,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,102-3,111
@@ -493,7 +493,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|3,11-3,193
@@ -526,7 +526,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,12
@@ -559,7 +559,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,101-4,110
@@ -777,7 +777,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|well-formedness|4,11-4,189
@@ -810,7 +810,7 @@ method has_close_elements(numbers: seq<real>, threshold: real) returns (res: boo
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
 //::       snapshot_bug_clover_has_close_elements.dfy|has_close_elements|correctness|11,15-11,20

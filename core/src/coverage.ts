@@ -6,7 +6,6 @@ import { ProofGraph } from "./proof-graph.js";
  * Pass 1: Set covStatusInternal on all nodes.
  * - Postcondition tops + their provedBy → CovComplete
  * - Other tops with provedBy children: propagate CovTest (or CovComplete if child already CovComplete)
- * - AssertionAutomatic tops: children get CovComplete
  */
 export function applyCoverageInternal(graph: ProofGraph): void {
   const tops = graph.getAllTopNodes();
@@ -138,8 +137,35 @@ export function applyCoverageSemantic(graph: ProofGraph): void {
   //   CovComplete → proved by real code AND is a connection target (used in a call)
   //   CovTest → proved by real code but not used in a call
   //   Uncovered → not proved by real code (only itself or nothing)
+  //
+  // Special case: well-formedness ensures clauses that don't share a span with
+  // another node are always considered covered (they are Dafny-internal checks,
+  // not user proof obligations).
+
+  // Build a span→node map to detect shared spans (excluding methodType from key)
+  const rawSpanToNodes = new Map<string, ProofNode[]>();
+  for (const node of allNodes) {
+    const rawSpan = `${node.file}|${node.start.line},${node.start.col}-${node.end.line},${node.end.col}`;
+    const list = rawSpanToNodes.get(rawSpan);
+    if (list) list.push(node);
+    else rawSpanToNodes.set(rawSpan, [node]);
+  }
+
   for (const node of allNodes) {
     if (node.getType() === TokenType.Postcondition) {
+      // Well-formedness ensures clause: treat as covered unless another node
+      // shares the exact same span (in that case fall through to normal logic)
+      if (node.methodType.includes("well-formedness")) {
+        const rawSpan = `${node.file}|${node.start.line},${node.start.col}-${node.end.line},${node.end.col}`;
+        const siblings = rawSpanToNodes.get(rawSpan) ?? [];
+        const hasSharedSpan = siblings.some(s => s !== node);
+        if (!hasSharedSpan) {
+          node.setCovStatus(CovStatus.CovComplete);
+          continue;
+        }
+        // Has shared span → fall through to normal classification
+      }
+
       // Check if proved by real code: provedBy has nodes other than itself
       let hasRealProver = false;
       if (node.roles.isTop) {

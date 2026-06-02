@@ -109,7 +109,7 @@ method Main()
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,45-3,47
 //::     file: snapshot_forall_evaluator.dfy
@@ -256,7 +256,7 @@ method Main()
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,36-3,66
 //::     file: snapshot_forall_evaluator.dfy
@@ -283,7 +283,7 @@ method Main()
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|3,24-3,66
 //::     file: snapshot_forall_evaluator.dfy
@@ -337,7 +337,7 @@ method Main()
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,14
 //::     file: snapshot_forall_evaluator.dfy
@@ -364,7 +364,7 @@ method Main()
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,46-4,48
 //::     file: snapshot_forall_evaluator.dfy
@@ -511,7 +511,7 @@ method Main()
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|well-formedness|4,13-4,66
 //::     file: snapshot_forall_evaluator.dfy
@@ -538,7 +538,7 @@ method Main()
 //::       isUnused: true
 //::     type: Postcondition
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|7,19-7,21
 //::     file: snapshot_forall_evaluator.dfy
