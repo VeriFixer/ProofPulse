@@ -1,18 +1,14 @@
 import { describe, it, expect } from "vitest";
 import * as fc from "fast-check";
-import { Node } from "../../../core/src/node.js";
+import { ProofNode } from "../../../core/src/proof-node.js";
 import { ProofGraph } from "../../../core/src/proof-graph.js";
-import {
-  serializeProofGraph,
-  deserializeProofGraph,
-} from "../../../core/src/serialization.js";
 
 /**
- * Property 1: ProofGraph JSON round-trip
- * Validates: Requirements 1.4, 3.7
+ * Property 1: ProofGraph YAML round-trip
+ * Validates: Requirements 7.1, 7.2, 7.3
  *
- * For any valid ProofGraph, serializing to JSON then deserializing
- * then re-serializing SHALL produce identical JSON output.
+ * For any valid ProofGraph, serializing to YAML then deserializing
+ * then re-serializing SHALL produce identical YAML output.
  */
 
 /** Generator: random file name */
@@ -27,7 +23,7 @@ const arbCol = fc.integer({ min: 0, max: 120 });
 /** Generator: random prooftext (avoid keyword collisions for simplicity) */
 const arbProoftext = fc.string({ minLength: 1, maxLength: 30 });
 
-/** Generator: a single Node */
+/** Generator: a single ProofNode params */
 const arbNodeParams = fc.record({
   file: arbFileName,
   sLine: arbLine,
@@ -35,10 +31,10 @@ const arbNodeParams = fc.record({
   eLine: arbLine,
   eCol: arbCol,
   prooftext: arbProoftext,
-  isTopAssertion: fc.boolean(),
+  isTop: fc.boolean(),
 });
 
-/** Generator: a valid ProofGraph with random nodes, top nodes, and edges */
+/** Generator: a valid ProofGraph with random nodes and edges */
 const arbProofGraph = fc
   .record({
     nodeParams: fc.array(arbNodeParams, { minLength: 1, maxLength: 15 }),
@@ -56,13 +52,8 @@ const arbProofGraph = fc
     }
     const nodeCount = uniqueParams.length;
 
-    // Generate which nodes are top nodes and random edges between existing nodes
     return fc
       .record({
-        topIndices: fc.array(fc.integer({ min: 0, max: nodeCount - 1 }), {
-          minLength: 0,
-          maxLength: nodeCount,
-        }),
         edges: fc.array(
           fc.record({
             from: fc.integer({ min: 0, max: nodeCount - 1 }),
@@ -71,40 +62,36 @@ const arbProofGraph = fc
           { minLength: 0, maxLength: nodeCount * 2 },
         ),
       })
-      .map(({ topIndices, edges }) => {
+      .map(({ edges }) => {
         const graph = new ProofGraph();
 
-        // Add nodes
-        const nodes: Node[] = uniqueParams.map(
+        const nodes: ProofNode[] = uniqueParams.map(
           (p) =>
-            new Node(
+            new ProofNode(
               p.file,
-              p.sLine,
-              p.sCol,
-              p.eLine,
-              p.eCol,
+              { line: p.sLine, col: p.sCol },
+              { line: p.eLine, col: p.eCol },
+              "",
+              "",
               p.prooftext,
-              p.isTopAssertion,
             ),
         );
+
         for (const node of nodes) {
           graph.addNode(node);
+          if (uniqueParams[nodes.indexOf(node)].isTop) {
+            node.addRole("isTop");
+          }
         }
 
-        // Add top nodes (deduplicated)
-        const topSet = new Set(topIndices);
-        for (const idx of topSet) {
-          graph.addTopNode(nodes[idx]);
-        }
-
-        // Add edges (skip self-loops, deduplicate)
+        // Add provedBy edges (skip self-loops)
         const edgeSet = new Set<string>();
         for (const e of edges) {
           if (e.from !== e.to) {
             const key = `${e.from}-${e.to}`;
             if (!edgeSet.has(key)) {
               edgeSet.add(key);
-              graph.addEdge(nodes[e.from].id, nodes[e.to].id);
+              graph.addProvedBy(nodes[e.from].getId(), nodes[e.to].getId());
             }
           }
         }
@@ -113,14 +100,15 @@ const arbProofGraph = fc
       });
   });
 
-describe("Property 1: ProofGraph JSON round-trip", () => {
-  it("serialize → deserialize → re-serialize produces identical JSON", () => {
+describe("Property 1: ProofGraph YAML round-trip", () => {
+  it("serialize → deserialize → re-serialize produces identical YAML", () => {
     fc.assert(
       fc.property(arbProofGraph, (graph) => {
-        const json1 = serializeProofGraph(graph);
-        const restored = deserializeProofGraph(json1);
-        const json2 = serializeProofGraph(restored);
-        expect(json2).toBe(json1);
+        const yaml1 = graph.toYAML();
+        const restored = new ProofGraph();
+        restored.fromYAML(yaml1);
+        const yaml2 = restored.toYAML();
+        expect(yaml2).toBe(yaml1);
       }),
       { numRuns: 200 },
     );

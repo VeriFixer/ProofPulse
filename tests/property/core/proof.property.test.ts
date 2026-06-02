@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import * as fc from "fast-check";
 import { parseProof } from "../../../core/src/proof.js";
 import { CovStatus, TokenType } from "../../../core/src/types.js";
-import { Node } from "../../../core/src/node.js";
+import { ProofNode } from "../../../core/src/proof-node.js";
 import { ProofGraph } from "../../../core/src/proof-graph.js";
 
 /**
@@ -108,54 +108,40 @@ function computeExpected(
 ): Map<string, CovStatus> {
   const expected = new Map<string, CovStatus>();
   for (const n of graph.getAllNodes()) {
-    expected.set(n.id, CovStatus.Uncovered);
+    expected.set(n.getId(), CovStatus.Uncovered);
   }
 
-  // Phase 1: Postcondition tops → CovComplete for self + all BFS provedBy reachable
+  // Phase 1: Postcondition tops → CovComplete for self + all provedBy
   const postTops = graph
     .getAllTopNodes()
-    .filter((t) => t.type === TokenType.Postcondition);
+    .filter((t) => t.getType() === TokenType.Postcondition);
   for (const post of postTops) {
-    expected.set(post.id, CovStatus.CovComplete);
-    const neighbors = graph.getBFSNeighbors(post.id, true, false);
-    if (neighbors) {
-      for (const r of neighbors) {
-        expected.set(r.node.id, CovStatus.CovComplete);
-      }
+    expected.set(post.getId(), CovStatus.CovComplete);
+    for (const dep of post.provedBy) {
+      expected.set(dep.getId(), CovStatus.CovComplete);
     }
   }
 
   // Phase 2: Non-postcondition tops
-  // - No children → stays Uncovered
-  // - Non-manual → self CovComplete
-  // - Manual → self CovComplete only if any child is already CovComplete
-  // - Children: CovComplete for auto assertion tops, CovTest otherwise (if not already CovComplete)
   const nonPostTops = graph
     .getAllTopNodes()
-    .filter((t) => t.type !== TokenType.Postcondition);
+    .filter((t) => t.getType() !== TokenType.Postcondition);
   for (const top of nonPostTops) {
-    const neighbors = graph.getBFSNeighbors(top.id, true, false);
-    const hasChildren = neighbors != null && neighbors.length > 0;
+    if (top.provedBy.size === 0) continue;
 
-    if (!hasChildren) {
-      continue;
+    if (top.getType() !== TokenType.AssertionManual) {
+      expected.set(top.getId(), CovStatus.CovComplete);
     }
 
-    if (top.type !== TokenType.AssertionManual) {
-      expected.set(top.id, CovStatus.CovComplete);
-    }
-
-    if (neighbors) {
-      for (const r of neighbors) {
-        if (expected.get(r.node.id) === CovStatus.CovComplete) {
-          expected.set(top.id, CovStatus.CovComplete);
-        }
-        if (expected.get(r.node.id) !== CovStatus.CovComplete) {
-          if (top.type === TokenType.AssertionAutomatic) {
-            expected.set(r.node.id, CovStatus.CovComplete);
-          } else {
-            expected.set(r.node.id, CovStatus.CovTest);
-          }
+    for (const dep of top.provedBy) {
+      if (expected.get(dep.getId()) === CovStatus.CovComplete) {
+        expected.set(top.getId(), CovStatus.CovComplete);
+      }
+      if (expected.get(dep.getId()) !== CovStatus.CovComplete) {
+        if (top.getType() === TokenType.AssertionAutomatic) {
+          expected.set(dep.getId(), CovStatus.CovComplete);
+        } else {
+          expected.set(dep.getId(), CovStatus.CovTest);
         }
       }
     }
@@ -187,7 +173,7 @@ describe("Property 4: CovStatusInternal follows BFS reachability from top assert
 
         // Verify every node
         for (const node of proof.proofGraph.getAllNodes()) {
-          const exp = expected.get(node.id);
+          const exp = expected.get(node.getId());
           expect(node.covStatusInternal).toBe(exp);
         }
 
@@ -336,16 +322,16 @@ function computeExpectedCovStatus(
   const result = new Map<string, CovStatus>();
 
   for (const node of graph.getAllNodes()) {
-    switch (node.type) {
+    switch (node.getType()) {
       case TokenType.AssertionAutomatic:
         // Always CovComplete
-        result.set(node.id, CovStatus.CovComplete);
+        result.set(node.getId(), CovStatus.CovComplete);
         break;
 
       case TokenType.AssertionManual:
         // CovComplete only if internal is CovComplete, else Uncovered
         result.set(
-          node.id,
+          node.getId(),
           node.covStatusInternal === CovStatus.CovComplete
             ? CovStatus.CovComplete
             : CovStatus.Uncovered,
@@ -354,52 +340,41 @@ function computeExpectedCovStatus(
 
       case TokenType.CodeLine:
         // Equals CovStatusInternal
-        result.set(node.id, node.covStatusInternal);
+        result.set(node.getId(), node.covStatusInternal);
         break;
 
       case TokenType.Precondition:
         // Equals CovStatusInternal
-        result.set(node.id, node.covStatusInternal);
+        result.set(node.getId(), node.covStatusInternal);
         break;
 
       case TokenType.Postcondition:
-        if (node.isTopAssertion) {
-          // Top postcondition: alias/parent/child policy
-          const neighbors = graph.getBFSNeighbors(node.id, true, true);
+        if (node.roles.isTop) {
+          // Top postcondition: check if any provedBy child is CovComplete
           let anyChildCovComplete = false;
-          if (neighbors) {
-            for (const r of neighbors) {
-              if (
-                r.node.type !== TokenType.Postcondition &&
-                r.node.covStatus === CovStatus.CovComplete
-              ) {
-                anyChildCovComplete = true;
-                break;
-              }
+          for (const dep of node.provedBy) {
+            if (
+              dep.getType() !== TokenType.Postcondition &&
+              dep.getCovStatus() === CovStatus.CovComplete
+            ) {
+              anyChildCovComplete = true;
+              break;
             }
           }
 
-          let anyParents = false;
-          const postParents = graph.getBFSNeighbors(node.id, false);
-          if (postParents && postParents.length > 1) {
-            anyParents = true;
-          }
-
-          if (anyParents && anyChildCovComplete) {
-            result.set(node.id, CovStatus.CovComplete);
-          } else if (anyChildCovComplete) {
-            result.set(node.id, CovStatus.CovTest);
+          if (anyChildCovComplete) {
+            result.set(node.getId(), CovStatus.CovTest);
           } else {
-            result.set(node.id, CovStatus.Uncovered);
+            result.set(node.getId(), CovStatus.Uncovered);
           }
         } else {
           // Non-top postcondition: equals CovStatusInternal
-          result.set(node.id, node.covStatusInternal);
+          result.set(node.getId(), node.covStatusInternal);
         }
         break;
 
       default:
-        result.set(node.id, node.covStatusInternal);
+        result.set(node.getId(), node.covStatusInternal);
         break;
     }
   }
@@ -430,7 +405,7 @@ describe("Property 5: CovStatus follows token-class policies", () => {
 
         // Verify every node's covStatus
         for (const node of proof.proofGraph.getAllNodes()) {
-          const exp = expected.get(node.id);
+          const exp = expected.get(node.getId());
           expect(node.covStatus).toBe(exp);
         }
       }),
@@ -456,7 +431,7 @@ describe("Property 5: CovStatus follows token-class policies", () => {
         const proof = parseProof(sourceCode, log);
 
         for (const node of proof.proofGraph.getAllNodes()) {
-          if (node.type === TokenType.AssertionAutomatic) {
+          if (node.getType() === TokenType.AssertionAutomatic) {
             expect(node.covStatus).toBe(CovStatus.CovComplete);
           }
         }
@@ -483,7 +458,7 @@ describe("Property 5: CovStatus follows token-class policies", () => {
         const proof = parseProof(sourceCode, log);
 
         for (const node of proof.proofGraph.getAllNodes()) {
-          if (node.type === TokenType.AssertionManual) {
+          if (node.getType() === TokenType.AssertionManual) {
             if (node.covStatusInternal === CovStatus.CovComplete) {
               expect(node.covStatus).toBe(CovStatus.CovComplete);
             } else {
@@ -515,8 +490,8 @@ describe("Property 5: CovStatus follows token-class policies", () => {
 
         for (const node of proof.proofGraph.getAllNodes()) {
           if (
-            node.type === TokenType.CodeLine ||
-            node.type === TokenType.Precondition
+            node.getType() === TokenType.CodeLine ||
+            node.getType() === TokenType.Precondition
           ) {
             expect(node.covStatus).toBe(node.covStatusInternal);
           }
@@ -545,20 +520,19 @@ describe("Property 5: CovStatus follows token-class policies", () => {
 
         for (const node of proof.proofGraph.getAllNodes()) {
           if (
-            node.type === TokenType.Postcondition &&
-            node.isTopAssertion
+            node.getType() === TokenType.Postcondition &&
+            node.roles.isTop
           ) {
-            const neighbors = proof.proofGraph.getBFSNeighbors(
-              node.id,
-              true,
-              true,
-            );
-            const anyChildCovComplete =
-              neighbors?.some(
-                (r) =>
-                  r.node.type !== TokenType.Postcondition &&
-                  r.node.covStatus === CovStatus.CovComplete,
-              ) ?? false;
+            let anyChildCovComplete = false;
+            for (const dep of node.provedBy) {
+              if (
+                dep.getType() !== TokenType.Postcondition &&
+                dep.getCovStatus() === CovStatus.CovComplete
+              ) {
+                anyChildCovComplete = true;
+                break;
+              }
+            }
 
             if (!anyChildCovComplete) {
               expect(node.covStatus).toBe(CovStatus.Uncovered);
@@ -589,8 +563,8 @@ describe("Property 5: CovStatus follows token-class policies", () => {
 
         for (const node of proof.proofGraph.getAllNodes()) {
           if (
-            node.type === TokenType.Postcondition &&
-            !node.isTopAssertion
+            node.getType() === TokenType.Postcondition &&
+            !node.roles.isTop
           ) {
             expect(node.covStatus).toBe(node.covStatusInternal);
           }

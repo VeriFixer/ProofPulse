@@ -2,43 +2,51 @@ import { describe, it, expect } from "vitest";
 import * as fc from "fast-check";
 import { computeLineStatus } from "../../../core/src/coverage.js";
 import { CovStatus } from "../../../core/src/types.js";
-import { Node } from "../../../core/src/node.js";
+import { ProofNode } from "../../../core/src/proof-node.js";
 import { ProofGraph } from "../../../core/src/proof-graph.js";
 
 /**
- * Property 6: Line status is worst-case of token statuses
+ * Property 6: Line status uses two-level aggregation
  * Validates: Requirements 4.1
  *
- * For any ProofGraph and source code string, the computed Line_Status for each
- * line SHALL equal the worst-case CovStatus (Uncovered > CovTest > CovComplete)
- * among all nodes whose source span starts on that line, defaulting to
- * CovComplete if no tokens exist on that line.
- *
- * Note: The implementation uses start.line only (not full span range).
+ * 1. Group nodes by exact span (start,col-end,col)
+ * 2. Within same span: best-case (CovComplete > CovTest > Uncovered)
+ * 3. Across distinct spans on same line: worst-case (Uncovered > CovTest > CovComplete)
+ * 4. Default CovComplete for lines with no tokens.
  */
 
 const FILE = "test.dfy";
 const COV_STATUSES = [CovStatus.CovComplete, CovStatus.CovTest, CovStatus.Uncovered] as const;
 
-/** Worst-case ordering: Uncovered > CovTest > CovComplete */
-function worstCase(a: CovStatus, b: CovStatus): CovStatus {
+function bestCase(a: CovStatus, b: CovStatus): CovStatus {
   const rank: Record<CovStatus, number> = {
-    [CovStatus.CovComplete]: 0,
+    [CovStatus.CovComplete]: 2,
     [CovStatus.CovTest]: 1,
-    [CovStatus.Uncovered]: 2,
+    [CovStatus.Uncovered]: 0,
   };
   return rank[a] >= rank[b] ? a : b;
 }
 
-/** Arbitrary node spec: a start line (1-based) and a covStatus */
+function worstCase(a: CovStatus, b: CovStatus): CovStatus {
+  const rank: Record<CovStatus, number> = {
+    [CovStatus.CovComplete]: 2,
+    [CovStatus.CovTest]: 1,
+    [CovStatus.Uncovered]: 0,
+  };
+  return rank[a] <= rank[b] ? a : b;
+}
+
+/** Node spec with explicit span columns for testing two-level logic. */
 interface NodeSpec {
   startLine: number;
+  startCol: number;
+  endCol: number;
   covStatus: CovStatus;
 }
 
 /**
- * Generator: random number of source lines, random nodes placed on those lines
- * with random covStatus values.
+ * Generator: nodes with explicit spans. Some share spans (same col range),
+ * some have distinct spans on the same line.
  */
 const arbScenario = fc
   .integer({ min: 1, max: 20 })
@@ -47,6 +55,8 @@ const arbScenario = fc
       .array(
         fc.record({
           startLine: fc.integer({ min: 1, max: lineCount }),
+          startCol: fc.integer({ min: 1, max: 10 }),
+          endCol: fc.integer({ min: 11, max: 20 }),
           covStatus: fc.constantFrom(...COV_STATUSES),
         }),
         { minLength: 0, maxLength: 15 },
@@ -54,41 +64,57 @@ const arbScenario = fc
       .map((nodes) => ({ lineCount, nodes })),
   );
 
-/** Build a ProofGraph from node specs, setting covStatus directly.
- *  Each node gets a unique column to ensure unique IDs. */
+/** Build a ProofGraph from node specs with explicit columns. */
 function buildGraph(specs: NodeSpec[]): ProofGraph {
   const graph = new ProofGraph();
   specs.forEach((spec, i) => {
-    const col = i + 1; // unique col per node → unique id
-    const node = new Node(
+    const node = new ProofNode(
       FILE,
-      spec.startLine,
-      col,
-      spec.startLine,
-      col + 5,
+      { line: spec.startLine, col: spec.startCol },
+      { line: spec.startLine, col: spec.endCol },
+      `method_${i}`,
+      "",
       `token ${i}`,
-      false,
     );
-    node.covStatus = spec.covStatus;
+    node.setCovStatus(spec.covStatus);
     graph.addNode(node);
   });
   return graph;
 }
 
-/** Compute expected line statuses independently. */
+/** Compute expected using two-level logic independently. */
 function computeExpected(lineCount: number, specs: NodeSpec[]): CovStatus[] {
   const result = new Array<CovStatus>(lineCount).fill(CovStatus.CovComplete);
+
+  // Group by line → span → statuses
+  const lineSpans = new Map<number, Map<string, CovStatus>>();
   for (const spec of specs) {
     const idx = Math.max(0, spec.startLine - 1);
-    if (idx < lineCount) {
-      result[idx] = worstCase(result[idx], spec.covStatus);
+    if (idx >= lineCount) continue;
+    const spanKey = `${spec.startLine},${spec.startCol}-${spec.startLine},${spec.endCol}`;
+    if (!lineSpans.has(idx)) lineSpans.set(idx, new Map());
+    const spans = lineSpans.get(idx)!;
+    const existing = spans.get(spanKey);
+    if (existing === undefined) {
+      spans.set(spanKey, spec.covStatus);
+    } else {
+      spans.set(spanKey, bestCase(existing, spec.covStatus));
     }
   }
+
+  for (const [idx, spans] of lineSpans) {
+    let lineStatus: CovStatus = CovStatus.CovComplete;
+    for (const spanStatus of spans.values()) {
+      lineStatus = worstCase(lineStatus, spanStatus);
+    }
+    result[idx] = lineStatus;
+  }
+
   return result;
 }
 
-describe("Property 6: Line status is worst-case of token statuses", () => {
-  it("computeLineStatus matches independent worst-case computation for all generated scenarios", () => {
+describe("Property 6: Line status uses two-level span aggregation", () => {
+  it("computeLineStatus matches independent two-level computation for all generated scenarios", () => {
     fc.assert(
       fc.property(arbScenario, ({ lineCount, nodes }) => {
         const sourceCode = Array.from(
@@ -128,7 +154,7 @@ describe("Property 6: Line status is worst-case of token statuses", () => {
     );
   });
 
-  it("a single Uncovered node on a line makes that line Uncovered regardless of other nodes", () => {
+  it("same span with mixed statuses picks best-case; distinct uncovered span makes line uncovered", () => {
     fc.assert(
       fc.property(
         fc.integer({ min: 1, max: 10 }).chain((lineCount) =>
@@ -137,24 +163,24 @@ describe("Property 6: Line status is worst-case of token statuses", () => {
             .chain((targetLine) =>
               fc
                 .array(fc.constantFrom(...COV_STATUSES), {
-                  minLength: 0,
+                  minLength: 1,
                   maxLength: 5,
                 })
-                .map((otherStatuses) => ({
+                .map((sameSpanStatuses) => ({
                   lineCount,
                   targetLine,
-                  otherStatuses,
+                  sameSpanStatuses,
                 })),
             ),
         ),
-        ({ lineCount, targetLine, otherStatuses }) => {
-          const specs: NodeSpec[] = [
-            { startLine: targetLine, covStatus: CovStatus.Uncovered },
-            ...otherStatuses.map((s) => ({
-              startLine: targetLine,
-              covStatus: s,
-            })),
-          ];
+        ({ lineCount, targetLine, sameSpanStatuses }) => {
+          // All nodes share the same span (col 3-8)
+          const specs: NodeSpec[] = sameSpanStatuses.map((s) => ({
+            startLine: targetLine,
+            startCol: 3,
+            endCol: 8,
+            covStatus: s,
+          }));
 
           const sourceCode = Array.from(
             { length: lineCount },
@@ -164,11 +190,33 @@ describe("Property 6: Line status is worst-case of token statuses", () => {
           const graph = buildGraph(specs);
           const actual = computeLineStatus(graph, sourceCode);
 
-          expect(actual[targetLine - 1]).toBe(CovStatus.Uncovered);
+          // Same span → best-case
+          let expected: CovStatus = CovStatus.Uncovered;
+          for (const s of sameSpanStatuses) {
+            expected = bestCase(expected, s);
+          }
+          expect(actual[targetLine - 1]).toBe(expected);
         },
       ),
       { numRuns: 100 },
     );
+  });
+
+  it("distinct uncovered span on a line overrides other covered spans", () => {
+    // Two distinct spans: one CovComplete, one Uncovered → line is Uncovered
+    const sourceCode = "line 1\nline 2";
+    const graph = new ProofGraph();
+
+    const n1 = new ProofNode(FILE, { line: 1, col: 1 }, { line: 1, col: 5 }, "m1", "", "t1");
+    n1.setCovStatus(CovStatus.CovComplete);
+    graph.addNode(n1);
+
+    const n2 = new ProofNode(FILE, { line: 1, col: 6 }, { line: 1, col: 10 }, "m2", "", "t2");
+    n2.setCovStatus(CovStatus.Uncovered);
+    graph.addNode(n2);
+
+    const actual = computeLineStatus(graph, sourceCode);
+    expect(actual[0]).toBe(CovStatus.Uncovered);
   });
 });
 
@@ -222,14 +270,13 @@ const arbSpanScenario = fc
 function buildSpanGraph(specs: SpanNodeSpec[]): ProofGraph {
   const graph = new ProofGraph();
   specs.forEach((spec, i) => {
-    const node = new Node(
+    const node = new ProofNode(
       FILE,
-      spec.startLine,
-      spec.startCol,
-      spec.endLine,
-      spec.endCol,
+      { line: spec.startLine, col: spec.startCol },
+      { line: spec.endLine, col: spec.endCol },
+      "",
+      "",
       `span token ${i}`,
-      false,
     );
     graph.addNode(node);
   });
@@ -250,8 +297,8 @@ describe("Property 8: getNodesByLine returns exactly span-containing nodes", () 
         );
 
         // Compare by sorted IDs for order-independence
-        const resultIds = result.map((n) => n.id).sort();
-        const expectedIds = expected.map((n) => n.id).sort();
+        const resultIds = result.map((n) => n.getId()).sort();
+        const expectedIds = expected.map((n) => n.getId()).sort();
 
         expect(resultIds).toEqual(expectedIds);
       }),

@@ -1,7 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { DafnyReportParser } from "../dafny_report_parser.js";
 import { ProofGraph } from "../proof-graph.js";
-import { TopNode } from "../node.js";
 
 describe("DafnyReportParser", () => {
   const SAMPLE_LOG = `
@@ -81,7 +80,7 @@ Results for AllElementsEqual (correctness)
   it("toYAML produces valid YAML that can be re-parsed", () => {
     const graph = DafnyReportParser.parseAndBuild(SAMPLE_LOG);
     const yaml = graph.toYAML();
-    expect(yaml).toContain("version: 1");
+    expect(yaml).toContain("version: 2");
     expect(yaml).toContain("this postcondition holds");
 
     // Round-trip

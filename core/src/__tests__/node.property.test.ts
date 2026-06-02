@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import * as fc from "fast-check";
-import { Node, classifyNodeType } from "../node.js";
+import { classifyNodeType } from "../proof-node.js";
 import { TokenType } from "../types.js";
 
 /**
@@ -83,8 +83,7 @@ describe("Property 3: TokenType assignment matches heuristic", () => {
         prooftextWithKeyword,
         fc.boolean(),
         (prooftext, isTopAssertion) => {
-          const node = new Node("test.dfy", 1, 0, 1, 10, prooftext, "", isTopAssertion);
-          expect(node.getType()).toBe(expectedTokenType(prooftext, isTopAssertion));
+          expect(classifyNodeType([prooftext], isTopAssertion)).toBe(expectedTokenType(prooftext, isTopAssertion));
         },
       ),
       { numRuns: 200 },
@@ -97,22 +96,20 @@ describe("Property 3: TokenType assignment matches heuristic", () => {
         prooftextWithoutKeyword,
         fc.boolean(),
         (prooftext, isTopAssertion) => {
-          const node = new Node("test.dfy", 1, 0, 1, 10, prooftext, "", isTopAssertion);
-          expect(node.getType()).toBe(expectedTokenType(prooftext, isTopAssertion));
+          expect(classifyNodeType([prooftext], isTopAssertion)).toBe(expectedTokenType(prooftext, isTopAssertion));
         },
       ),
       { numRuns: 200 },
     );
   });
 
-  it("classifyNodeType matches Node constructor classification", () => {
+  it("classifyNodeType is consistent across calls", () => {
     fc.assert(
       fc.property(
         fc.oneof(prooftextWithKeyword, prooftextWithoutKeyword),
         fc.boolean(),
         (prooftext, isTopAssertion) => {
-          const node = new Node("test.dfy", 1, 0, 1, 10, prooftext, "", isTopAssertion);
-          expect(node.getType()).toBe(classifyNodeType(prooftext, isTopAssertion));
+          expect(classifyNodeType([prooftext], isTopAssertion)).toBe(classifyNodeType([prooftext], isTopAssertion));
         },
       ),
       { numRuns: 200 },

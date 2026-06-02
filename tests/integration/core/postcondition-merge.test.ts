@@ -54,13 +54,13 @@ describe("Postcondition sub-expression merging", () => {
 
     // The sub-expression point-node (4,13)-(4,13) should NOT exist as a separate node
     const subExprNode = allNodes.find(
-      (n) => n.id === "test.dfy:4,13-4,13",
+      (n) => n.locationId === "test.dfy:4,13-4,13",
     );
     expect(subExprNode).toBeUndefined();
 
     // There should be exactly one postcondition top node for line 4
     const postTops = topNodes.filter(
-      (n) => n.type === TokenType.Postcondition && n.start.line === 4,
+      (n) => n.getType() === TokenType.Postcondition && n.start.line === 4,
     );
     expect(postTops.length).toBe(1);
 
@@ -122,7 +122,7 @@ describe("Postcondition sub-expression merging", () => {
 
     // Should have exactly one postcondition top for line 4
     const postTops = topNodes.filter(
-      (n) => n.type === TokenType.Postcondition && n.start.line === 4,
+      (n) => n.getType() === TokenType.Postcondition && n.start.line === 4,
     );
     expect(postTops.length).toBe(1);
     expect(postTops[0].id).toBe("test.dfy:4,11-4,17");
@@ -149,7 +149,7 @@ describe("Postcondition sub-expression merging", () => {
 
     // Should have exactly one postcondition top for line 4
     const postTops = topNodes.filter(
-      (n) => n.type === TokenType.Postcondition && n.start.line === 4,
+      (n) => n.getType() === TokenType.Postcondition && n.start.line === 4,
     );
     expect(postTops.length).toBe(1);
     expect(postTops[0].id).toBe("test.dfy:4,11-4,17");
@@ -195,7 +195,7 @@ describe("Postcondition sub-expression merging", () => {
 
     // Should have at most one postcondition top for line 4
     const postTops = line4Tops.filter(
-      (n) => n.type === TokenType.Postcondition,
+      (n) => n.getType() === TokenType.Postcondition,
     );
     expect(postTops.length).toBe(1);
   });
@@ -236,7 +236,7 @@ describe("Postcondition sub-expression merging", () => {
 
     // The point-node (4,13)-(4,13) should NOT be a separate top
     const postTops = topNodes.filter(
-      (n) => n.type === TokenType.Postcondition && n.start.line === 4,
+      (n) => n.getType() === TokenType.Postcondition && n.start.line === 4,
     );
 
     // Line 4 should not be Uncovered
@@ -289,7 +289,7 @@ describe("Postcondition sub-expression merging", () => {
 
     // The ensures clause range should have promoted to be the top node
     const postTops = topNodes.filter(
-      (n) => n.type === TokenType.Postcondition && n.start.line === 4,
+      (n) => n.getType() === TokenType.Postcondition && n.start.line === 4,
     );
     expect(postTops.length).toBe(1);
     expect(postTops[0].id).toBe("test.dfy:4,11-4,16");

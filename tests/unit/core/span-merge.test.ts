@@ -167,7 +167,7 @@ describe("Span merge integration (strict mode)", () => {
     const proof = parseProof("", log);
     const topNodes = proof.proofGraph.getAllTopNodes();
     expect(topNodes.length).toBe(1);
-    expect(topNodes[0].id).toBe("test.dfy:3,11-3,19");
+    expect(topNodes[0].locationId).toBe("test.dfy|||3,11-3,19");
     expect(topNodes[0].prooftext).toBe("this postcondition holds");
   });
 
@@ -183,7 +183,7 @@ describe("Span merge integration (strict mode)", () => {
     const proof = parseProof("", log);
     const topNodes = proof.proofGraph.getAllTopNodes();
     expect(topNodes.length).toBe(1);
-    expect(topNodes[0].id).toBe("test.dfy:10,5-10,31");
+    expect(topNodes[0].locationId).toBe("test.dfy|||10,5-10,31");
   });
 
   it("loop invariant point promoted to loop invariant always holds range", () => {
@@ -198,7 +198,7 @@ describe("Span merge integration (strict mode)", () => {
     const proof = parseProof("", log);
     const topNodes = proof.proofGraph.getAllTopNodes();
     expect(topNodes.length).toBe(1);
-    expect(topNodes[0].id).toBe("test.dfy:29,15-29,30");
+    expect(topNodes[0].locationId).toBe("test.dfy|||29,15-29,30");
   });
 
   it("exact match: assertion always holds", () => {
@@ -213,7 +213,7 @@ describe("Span merge integration (strict mode)", () => {
     const proof = parseProof("", log);
     const topNodes = proof.proofGraph.getAllTopNodes();
     expect(topNodes.length).toBe(1);
-    expect(topNodes[0].id).toBe("test.dfy:8,3-8,25");
+    expect(topNodes[0].locationId).toBe("test.dfy|||8,3-8,25");
   });
 
   it("throws in strict mode when no matching span exists", () => {
@@ -240,7 +240,7 @@ describe("Span merge integration (strict mode)", () => {
     const proof = parseProof("", log);
     const topNodes = proof.proofGraph.getAllTopNodes();
     expect(topNodes.length).toBe(1);
-    expect(topNodes[0].id).toBe("test.dfy:3,11-3,19");
+    expect(topNodes[0].locationId).toBe("test.dfy|||3,11-3,19");
   });
 });
 
@@ -260,9 +260,9 @@ describe("Loop invariant classification from real prover logs", () => {
     const proof = parseProof("", log);
     const topNodes = proof.proofGraph.getAllTopNodes();
     expect(topNodes.length).toBe(1);
-    expect(topNodes[0].type).toBe(TokenType.LoopInvariant);
+    expect(topNodes[0].getType()).toBe(TokenType.LoopInvariant);
     // Should be promoted to range
-    expect(topNodes[0].id).toBe("test_index_in_range.dfy:10,19-10,58");
+    expect(topNodes[0].locationId).toBe("test_index_in_range.dfy|||10,19-10,58");
   });
 
   it("simple loop invariant (0 <= i <= n.Length) classifies as LoopInvariant", () => {
@@ -278,7 +278,7 @@ describe("Loop invariant classification from real prover logs", () => {
     const proof = parseProof("", log);
     const topNodes = proof.proofGraph.getAllTopNodes();
     expect(topNodes.length).toBe(1);
-    expect(topNodes[0].type).toBe(TokenType.LoopInvariant);
+    expect(topNodes[0].getType()).toBe(TokenType.LoopInvariant);
   });
 
   it("loop invariant maintained by loop classifies as LoopInvariant", () => {
@@ -292,7 +292,7 @@ describe("Loop invariant classification from real prover logs", () => {
 
     const proof = parseProof("", log);
     const topNodes = proof.proofGraph.getAllTopNodes();
-    expect(topNodes[0].type).toBe(TokenType.LoopInvariant);
+    expect(topNodes[0].getType()).toBe(TokenType.LoopInvariant);
   });
 
   it("range node with message 'loop invariant always holds' classifies as LoopInvariant when top", () => {
@@ -307,7 +307,7 @@ describe("Loop invariant classification from real prover logs", () => {
 
     const proof = parseProof("", log);
     const topNodes = proof.proofGraph.getAllTopNodes();
-    expect(topNodes[0].type).toBe(TokenType.LoopInvariant);
+    expect(topNodes[0].getType()).toBe(TokenType.LoopInvariant);
   });
 
   it("'array is never null' classifies as AssertionAutomatic", () => {
@@ -321,7 +321,7 @@ describe("Loop invariant classification from real prover logs", () => {
 
     const proof = parseProof("", log);
     const topNodes = proof.proofGraph.getAllTopNodes();
-    expect(topNodes[0].type).toBe(TokenType.AssertionAutomatic);
+    expect(topNodes[0].getType()).toBe(TokenType.AssertionAutomatic);
   });
 
   it("range node with prooftext 'loop invariant' promoted to top classifies as LoopInvariant", () => {
@@ -341,7 +341,7 @@ describe("Loop invariant classification from real prover logs", () => {
     // The promoted top should be LoopInvariant
     const topNodes = proof.proofGraph.getAllTopNodes();
     expect(topNodes.length).toBe(1);
-    expect(topNodes[0].type).toBe(TokenType.LoopInvariant);
+    expect(topNodes[0].getType()).toBe(TokenType.LoopInvariant);
   });
 
   it("standalone range node with exact prooftext 'loop invariant' as top classifies as LoopInvariant", () => {
@@ -356,6 +356,6 @@ describe("Loop invariant classification from real prover logs", () => {
 
     const proof = parseProof("", log);
     const topNodes = proof.proofGraph.getAllTopNodes();
-    expect(topNodes[0].type).toBe(TokenType.LoopInvariant);
+    expect(topNodes[0].getType()).toBe(TokenType.LoopInvariant);
   });
 });

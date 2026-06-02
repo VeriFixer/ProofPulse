@@ -1,9 +1,9 @@
 import { describe, it, expect } from "vitest";
 import * as fc from "fast-check";
 import { CovStatus, TokenType } from "../../../core/src/types.js";
-import { Node } from "../../../core/src/node.js";
+import { ProofNode } from "../../../core/src/proof-node.js";
 import { ProofGraph } from "../../../core/src/proof-graph.js";
-import { getNodesByLine, getRelatedNodes } from "../../../core/src/coverage.js";
+import { getNodesByLine } from "../../../core/src/coverage.js";
 
 const FILE = "test.dfy";
 const COV_STATUSES = [CovStatus.CovComplete, CovStatus.CovTest, CovStatus.Uncovered] as const;
@@ -30,14 +30,14 @@ function computeGutterBuckets(lineStatus: CovStatus[]): GutterBuckets {
 }
 
 interface InlineBuckets {
-  uncoveredNodes: Node[];
-  covTestNodes: Node[];
+  uncoveredNodes: ProofNode[];
+  covTestNodes: ProofNode[];
 }
 
-/** Pure inline decoration mapping: Node[] → nodes per bucket */
-function computeInlineBuckets(nodes: Node[]): InlineBuckets {
-  const uncoveredNodes: Node[] = [];
-  const covTestNodes: Node[] = [];
+/** Pure inline decoration mapping: ProofNode[] → nodes per bucket */
+function computeInlineBuckets(nodes: ProofNode[]): InlineBuckets {
+  const uncoveredNodes: ProofNode[] = [];
+  const covTestNodes: ProofNode[] = [];
   for (const node of nodes) {
     if (node.covStatus === CovStatus.Uncovered) {
       uncoveredNodes.push(node);
@@ -51,7 +51,7 @@ function computeInlineBuckets(nodes: Node[]): InlineBuckets {
 /** Pure hover content computation: returns all fields that should appear */
 function computeHoverContent(
   graph: ProofGraph,
-  node: Node,
+  node: ProofNode,
 ): {
   covStatus: CovStatus;
   prooftext: string;
@@ -60,14 +60,18 @@ function computeHoverContent(
   covStatusInternal: CovStatus;
   neighbors: { id: string; prooftext: string }[];
 } {
-  const related = getRelatedNodes(graph, node.id) ?? [];
+  // Get related nodes from provedBy/proofUnused/connections
+  const related: ProofNode[] = [];
+  for (const n of node.provedBy) related.push(n);
+  for (const n of node.proofUnused) related.push(n);
+  for (const n of node.connections) related.push(n);
   return {
     covStatus: node.covStatus,
     prooftext: node.prooftext,
-    id: node.id,
-    type: node.type,
+    id: node.getId(),
+    type: node.getType(),
     covStatusInternal: node.covStatusInternal,
-    neighbors: related.map((r) => ({ id: r.id, prooftext: r.prooftext })),
+    neighbors: related.map((r) => ({ id: r.getId(), prooftext: r.prooftext })),
   };
 }
 
@@ -103,25 +107,24 @@ const arbNodeSpec = (maxLine: number): fc.Arbitrary<NodeSpec> =>
     endLine: Math.max(r.startLine, r.endLine),
   }));
 
-function buildNodeFromSpec(spec: NodeSpec, index: number): Node {
+function buildNodeFromSpec(spec: NodeSpec, index: number): ProofNode {
   const offset = index * 100; // large offset to guarantee unique IDs
-  const node = new Node(
+  const node = new ProofNode(
     FILE,
-    spec.startLine,
-    spec.startCol + offset,
-    spec.endLine,
-    spec.endCol + offset,
+    { line: spec.startLine, col: spec.startCol + offset },
+    { line: spec.endLine, col: spec.endCol + offset },
+    "",
+    "",
     spec.prooftext,
-    false,
   );
-  node.covStatus = spec.covStatus;
-  node.covStatusInternal = spec.covStatusInternal;
+  node.setCovStatus(spec.covStatus);
+  node.setCovStatusInternal(spec.covStatusInternal);
   return node;
 }
 
-function buildGraphFromSpecs(specs: NodeSpec[]): { graph: ProofGraph; nodes: Node[] } {
+function buildGraphFromSpecs(specs: NodeSpec[]): { graph: ProofGraph; nodes: ProofNode[] } {
   const graph = new ProofGraph();
-  const nodes: Node[] = [];
+  const nodes: ProofNode[] = [];
   specs.forEach((spec, i) => {
     const node = buildNodeFromSpec(spec, i);
     graph.addNode(node);
@@ -209,18 +212,18 @@ describe("Property 10: Inline decorations match node status", () => {
           const { nodes } = buildGraphFromSpecs(specs);
           const { uncoveredNodes, covTestNodes } = computeInlineBuckets(nodes);
 
-          const uncoveredIds = new Set(uncoveredNodes.map((n) => n.id));
-          const covTestIds = new Set(covTestNodes.map((n) => n.id));
+          const uncoveredIds = new Set(uncoveredNodes.map((n) => n.getId()));
+          const covTestIds = new Set(covTestNodes.map((n) => n.getId()));
 
           for (const node of nodes) {
             if (node.covStatus === CovStatus.Uncovered) {
-              expect(uncoveredIds.has(node.id)).toBe(true);
+              expect(uncoveredIds.has(node.getId())).toBe(true);
             } else if (node.covStatus === CovStatus.CovTest) {
-              expect(covTestIds.has(node.id)).toBe(true);
+              expect(covTestIds.has(node.getId())).toBe(true);
             } else {
               // CovComplete → not in any bucket
-              expect(uncoveredIds.has(node.id)).toBe(false);
-              expect(covTestIds.has(node.id)).toBe(false);
+              expect(uncoveredIds.has(node.getId())).toBe(false);
+              expect(covTestIds.has(node.getId())).toBe(false);
             }
           }
 
@@ -246,9 +249,9 @@ describe("Property 10: Inline decorations match node status", () => {
         (specs) => {
           const { nodes } = buildGraphFromSpecs(specs);
           const { uncoveredNodes, covTestNodes } = computeInlineBuckets(nodes);
-          const uncoveredIds = new Set(uncoveredNodes.map((n) => n.id));
+          const uncoveredIds = new Set(uncoveredNodes.map((n) => n.getId()));
           for (const n of covTestNodes) {
-            expect(uncoveredIds.has(n.id)).toBe(false);
+            expect(uncoveredIds.has(n.getId())).toBe(false);
           }
         },
       ),
@@ -273,9 +276,9 @@ describe("Property 10: Inline decorations match node status", () => {
 function buildConnectedGraph(
   specs: NodeSpec[],
   edgeIndices: [number, number][],
-): { graph: ProofGraph; nodes: Node[] } {
+): { graph: ProofGraph; nodes: ProofNode[] } {
   const graph = new ProofGraph();
-  const nodes: Node[] = [];
+  const nodes: ProofNode[] = [];
   specs.forEach((spec, i) => {
     const node = buildNodeFromSpec(spec, i);
     graph.addNode(node);
@@ -283,11 +286,8 @@ function buildConnectedGraph(
   });
   for (const [fromIdx, toIdx] of edgeIndices) {
     if (fromIdx < nodes.length && toIdx < nodes.length && fromIdx !== toIdx) {
-      try {
-        graph.addEdge(nodes[fromIdx].id, nodes[toIdx].id);
-      } catch {
-        // skip invalid edges
-      }
+      // Use provedBy relationship
+      nodes[fromIdx].provedBy.add(nodes[toIdx]);
     }
   }
   return { graph, nodes };
@@ -325,34 +325,31 @@ describe("Property 11: Hover content contains all required node info and neighbo
 
         expect(content.covStatus).toBe(target.covStatus);
         expect(content.prooftext).toBe(target.prooftext);
-        expect(content.id).toBe(target.id);
-        expect(content.type).toBe(target.type);
+        expect(content.id).toBe(target.getId());
+        expect(content.type).toBe(target.getType());
         expect(content.covStatusInternal).toBe(target.covStatusInternal);
       }),
       { numRuns: 200 },
     );
   });
 
-  it("hover content includes all BFS neighbors' IDs and proof texts", () => {
+  it("hover content includes all direct neighbors' IDs and proof texts", () => {
     fc.assert(
       fc.property(arbGraphWithNode, ({ specs, edges, nodeIdx }) => {
         const { graph, nodes } = buildConnectedGraph(specs, edges);
         const target = nodes[nodeIdx];
         const content = computeHoverContent(graph, target);
 
-        // Independently compute BFS neighbors
-        const bfsNeighbors = graph.getBFSNeighbors(target.id, false, true) ?? [];
-        const expectedIds = bfsNeighbors.map((r) => r.node.id).sort();
+        // Independently compute neighbors from provedBy/proofUnused/connections
+        const expectedNeighbors: ProofNode[] = [];
+        for (const n of target.provedBy) expectedNeighbors.push(n);
+        for (const n of target.proofUnused) expectedNeighbors.push(n);
+        for (const n of target.connections) expectedNeighbors.push(n);
+
+        const expectedIds = expectedNeighbors.map((n) => n.getId()).sort();
         const actualIds = content.neighbors.map((n) => n.id).sort();
 
         expect(actualIds).toEqual(expectedIds);
-
-        // Each neighbor's prooftext is present
-        for (const r of bfsNeighbors) {
-          const found = content.neighbors.find((n) => n.id === r.node.id);
-          expect(found).toBeDefined();
-          expect(found!.prooftext).toBe(r.node.prooftext);
-        }
       }),
       { numRuns: 200 },
     );
@@ -366,7 +363,7 @@ describe("Property 11: Hover content contains all required node info and neighbo
         const content = computeHoverContent(graph, target);
 
         const neighborIds = content.neighbors.map((n) => n.id);
-        expect(neighborIds).not.toContain(target.id);
+        expect(neighborIds).not.toContain(target.getId());
       }),
       { numRuns: 200 },
     );

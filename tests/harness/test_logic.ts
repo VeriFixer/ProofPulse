@@ -199,6 +199,45 @@ function extractExpectedYAML(src: string): string | null {
 }
 
 /**
+ * Normalize a parsed snapshot object for order-independent comparison.
+ * Sorts nodes by locationId and edge arrays by their key fields.
+ * Strips non-deterministic fields (batchDuration) from topMeta.
+ */
+function normalizeSnapshot(obj: any): void {
+  if (!obj) return;
+  if (Array.isArray(obj.nodes)) {
+    obj.nodes.sort((a: any, b: any) => (a.locationId ?? '').localeCompare(b.locationId ?? ''));
+    for (const node of obj.nodes) {
+      if (Array.isArray(node.prooftexts)) node.prooftexts.sort();
+      // Strip non-deterministic timing data
+      if (node.topMeta) {
+        delete node.topMeta.batchDuration;
+      }
+    }
+  }
+  if (obj.edges) {
+    if (Array.isArray(obj.edges.provedBy)) {
+      obj.edges.provedBy.sort((a: any, b: any) => (a.top ?? '').localeCompare(b.top ?? ''));
+      for (const e of obj.edges.provedBy) {
+        if (Array.isArray(e.provers)) e.provers.sort();
+      }
+    }
+    if (Array.isArray(obj.edges.proofUnused)) {
+      obj.edges.proofUnused.sort((a: any, b: any) => (a.top ?? '').localeCompare(b.top ?? ''));
+      for (const e of obj.edges.proofUnused) {
+        if (Array.isArray(e.unused)) e.unused.sort();
+      }
+    }
+    if (Array.isArray(obj.edges.connections)) {
+      obj.edges.connections.sort((a: any, b: any) => (a.call ?? '').localeCompare(b.call ?? ''));
+      for (const e of obj.edges.connections) {
+        if (Array.isArray(e.targets)) e.targets.sort();
+      }
+    }
+  }
+}
+
+/**
  * Run a snapshot test: build graph from Dafny log, compare YAML against
  * the //:: comments embedded in the .dfy file itself.
  *
@@ -243,6 +282,10 @@ async function runSnapshotTest(srcFile: string, opts: RunOptions = {}): Promise<
   if (parsed && parsed.nodes) {
     for (const node of parsed.nodes) {
       delete node.extras;
+      // batchDuration is timing data — non-deterministic across runs
+      if (node.topMeta) {
+        delete node.topMeta.batchDuration;
+      }
     }
   }
   const actualYAML = YAML.dump(parsed);
@@ -274,6 +317,11 @@ async function runSnapshotTest(srcFile: string, opts: RunOptions = {}): Promise<
 
   // Compare structurally (YAML string formatting is non-deterministic)
   const expectedParsed = JSON.parse(JSON.stringify(YAML.load(expectedYAML)));
+
+  // Normalize both sides: sort nodes by locationId, sort edge arrays
+  normalizeSnapshot(parsed);
+  normalizeSnapshot(expectedParsed);
+
   const actualJSON = JSON.stringify(parsed);
   const expectedJSON = JSON.stringify(expectedParsed);
 

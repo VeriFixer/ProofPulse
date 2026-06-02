@@ -1,13 +1,26 @@
 import { describe, it, expect } from "vitest";
 import { classifyPostcondition, classifyPrecondition, classifyInvariant, classifySpec } from "../../../evaluation/src/classifier.js";
-import { TokenType, CovStatus, type NodeData, Node, ProofGraph } from "@proofpulse/core";
+import { TokenType, CovStatus, type NodeData, ProofNode, ProofGraph } from "@proofpulse/core";
 
 function makeNode(type: TokenType, covStatus: CovStatus, line = 1, prooftext = ""): NodeData {
   return {
     id: `node-${line}`, file: "test.dfy",
     start: { line, col: 0 }, end: { line, col: 10 },
-    prooftext, isTopAssertion: false, type, covStatus, covStatusInternal: covStatus,
+    prooftexts: [prooftext], roles: { isTop: false, isCall: false, isProvedBy: false, isUnused: false }, type, covStatus, covStatusInternal: covStatus,
   };
+}
+
+/** Map TokenType to a prooftext that classifyNodeType will resolve correctly. */
+function prooftextForType(type: TokenType): string {
+  switch (type) {
+    case TokenType.Postcondition: return "this postcondition holds";
+    case TokenType.Precondition: return "precondition always holds";
+    case TokenType.LoopInvariant: return "loop invariant always holds";
+    case TokenType.Call: return "ensures clause at foo(1,1)-(1,5)";
+    case TokenType.AssertionManual: return "assertion always holds";
+    case TokenType.AssertionAutomatic: return "index in range";
+    default: return "some code line";
+  }
 }
 
 /** Build a ProofGraph from NodeData specs. Nodes with isTopAssertion or Postcondition/LoopInvariant type are added as tops. */
@@ -15,20 +28,16 @@ function buildGraph(specs: { type: TokenType; covStatus: CovStatus; line?: numbe
   const graph = new ProofGraph();
   for (const s of specs) {
     const line = s.line ?? 1;
-    const prooftext = s.prooftext ?? "";
-    const node = new Node("test.dfy", line, 0, line, 10, prooftext, s.isTop ?? false);
-    // Override type and covStatus
-    node.type = s.type;
+    const prooftext = s.prooftext || prooftextForType(s.type);
+    const node = new ProofNode("test.dfy", { line, col: 0 }, { line, col: 10 }, "", "", prooftext);
     node.covStatus = s.covStatus;
     node.covStatusInternal = s.covStatus;
-    if (!graph.hasNode(node.id)) {
+    if (!graph.hasNode(node.getId())) {
       graph.addNode(node);
     }
     if (s.isTop || s.type === TokenType.Postcondition || s.type === TokenType.LoopInvariant) {
-      node.isTopAssertion = true;
-      if (!graph.hasTopNode(node.id)) {
-        graph.addTopNode(node);
-      }
+      node.addRole("isTop");
+      graph.addTopNode(node);
     }
   }
   return graph;

@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import fc from "fast-check";
 import { classifyPostcondition, classifyPrecondition, classifyInvariant } from "../../../evaluation/src/classifier.js";
-import { TokenType, CovStatus, type NodeData, type SourceLocation, Node, ProofGraph } from "@proofpulse/core";
+import { TokenType, CovStatus, type NodeData, type SourceLocation, ProofNode, ProofGraph } from "@proofpulse/core";
 
 const allTokenTypes = Object.values(TokenType);
 const allCovStatuses = Object.values(CovStatus);
@@ -14,27 +14,39 @@ const arbNodeData: fc.Arbitrary<NodeData> = fc.record({
   id: fc.string({ minLength: 1, maxLength: 10 }),
   file: fc.constant("test.dfy"),
   start: arbSourceLocation, end: arbSourceLocation,
-  prooftext: fc.constantFrom("", "loop invariant always holds", "this postcondition holds"),
-  isTopAssertion: fc.boolean(),
+  prooftexts: fc.array(fc.constantFrom("", "loop invariant always holds", "this postcondition holds"), { minLength: 1, maxLength: 3 }),
+  roles: fc.record({ isTop: fc.boolean(), isCall: fc.boolean(), isProvedBy: fc.boolean(), isUnused: fc.boolean() }),
   type: arbTokenType,
   covStatus: arbCovStatus,
   covStatusInternal: arbCovStatus,
 });
 
-function isInv(n: { prooftext: string }) { return n.prooftext.includes("loop invariant"); }
+/** Map TokenType to a prooftext that classifyNodeType will resolve correctly. */
+function prooftextForType(type: TokenType): string {
+  switch (type) {
+    case TokenType.Postcondition: return "this postcondition holds";
+    case TokenType.Precondition: return "precondition always holds";
+    case TokenType.LoopInvariant: return "loop invariant always holds";
+    case TokenType.Call: return "ensures clause at foo(1,1)-(1,5)";
+    case TokenType.AssertionManual: return "assertion always holds";
+    case TokenType.AssertionAutomatic: return "index in range";
+    default: return "some code line";
+  }
+}
 
 /** Build a ProofGraph from NodeData-like specs for property testing. */
 function buildGraphFromSpecs(specs: { type: TokenType; covStatus: CovStatus; line: number; col?: number; prooftext: string; isTop: boolean }[]): ProofGraph {
   const graph = new ProofGraph();
   for (const s of specs) {
     const col = s.col ?? 0;
-    const node = new Node("test.dfy", s.line, col, s.line, col + 10, s.prooftext, s.isTop);
-    node.type = s.type;
+    const prooftext = prooftextForType(s.type);
+    const node = new ProofNode("test.dfy", { line: s.line, col }, { line: s.line, col: col + 10 }, "", "", prooftext);
     node.covStatus = s.covStatus;
     node.covStatusInternal = s.covStatus;
-    if (!graph.hasNode(node.id)) {
+    if (!graph.hasNode(node.getId())) {
       graph.addNode(node);
       if (s.isTop) {
+        node.addRole("isTop");
         graph.addTopNode(node);
       }
     }

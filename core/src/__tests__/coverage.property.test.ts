@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import * as fc from "fast-check";
 import { computeLineStatus, getNodesByLine } from "../coverage.js";
 import { CovStatus } from "../types.js";
-import { Node } from "../node.js";
+import { ProofNode } from "../proof-node.js";
 import { ProofGraph } from "../proof-graph.js";
 
 /**
@@ -44,15 +44,13 @@ function buildGraph(specs: NodeSpec[]): ProofGraph {
   const graph = new ProofGraph();
   specs.forEach((spec, i) => {
     const col = i + 1;
-    const node = new Node(
+    const node = new ProofNode(
       FILE,
-      spec.startLine,
-      col,
-      spec.startLine,
-      col + 5,
-      `token ${i}`,
+      { line: spec.startLine, col },
+      { line: spec.startLine, col: col + 5 },
       "",
-      false,
+      "",
+      `token ${i}`,
     );
     node.setCovStatus(spec.covStatus);
     graph.addNode(node);
@@ -194,15 +192,13 @@ const arbSpanScenario = fc
 function buildSpanGraph(specs: SpanNodeSpec[]): ProofGraph {
   const graph = new ProofGraph();
   specs.forEach((spec, i) => {
-    const node = new Node(
+    const node = new ProofNode(
       FILE,
-      spec.startLine,
-      spec.startCol,
-      spec.endLine,
-      spec.endCol,
-      `span token ${i}`,
+      { line: spec.startLine, col: spec.startCol },
+      { line: spec.endLine, col: spec.endCol },
       "",
-      false,
+      "",
+      `span token ${i}`,
     );
     graph.addNode(node);
   });
