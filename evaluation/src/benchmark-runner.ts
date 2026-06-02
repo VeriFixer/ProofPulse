@@ -85,7 +85,7 @@ export interface BenchmarkResults {
 }
 
 function isInvariantNode(n: NodeData): boolean {
-  return n.prooftext.includes("loop invariant");
+  return (n.prooftexts[0] ?? "").includes("loop invariant");
 }
 
 interface TimedClassificationResult extends ClassificationResult {

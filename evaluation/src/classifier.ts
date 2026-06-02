@@ -27,7 +27,7 @@ export interface ClassificationResult {
  */
 export function classifyPostcondition(graph: ProofGraph): "strong" | "weak" | "none" {
   const topNodes = graph.getAllTopNodes();
-  const postTops = topNodes.filter(n => n.type === TokenType.Postcondition);
+  const postTops = topNodes.filter(n => n.getType() === TokenType.Postcondition);
   if (postTops.length === 0) return "none";
 
   // All postcondition tops must be covered
@@ -39,8 +39,10 @@ export function classifyPostcondition(graph: ProofGraph): "strong" | "weak" | "n
   // Union of all postcondition scopes (BFS deps + scope set)
   const scopeIds = new Set<string>();
   for (const top of postTops) {
-    const fullScope = graph.getFullScope(top.id);
-    for (const id of fullScope) scopeIds.add(id);
+    if (typeof (graph as any).getFullScope === "function") {
+      const fullScope = (graph as any).getFullScope(top.getId());
+      for (const id of fullScope) scopeIds.add(id);
+    }
   }
 
   // If scope is empty, tops being covered is sufficient
@@ -75,7 +77,7 @@ export function classifyPrecondition(nodes: NodeData[]): "required" | "optional"
  */
 export function classifyInvariant(graph: ProofGraph): "strong" | "weak" | "none" {
   const topNodes = graph.getAllTopNodes();
-  const invTops = topNodes.filter(n => n.type === TokenType.LoopInvariant);
+  const invTops = topNodes.filter(n => n.getType() === TokenType.LoopInvariant);
   if (invTops.length === 0) return "none";
 
   // All invariant tops must be covered
@@ -87,8 +89,10 @@ export function classifyInvariant(graph: ProofGraph): "strong" | "weak" | "none"
   // Union of all invariant scopes (BFS deps + scope set)
   const scopeIds = new Set<string>();
   for (const top of invTops) {
-    const fullScope = graph.getFullScope(top.id);
-    for (const id of fullScope) scopeIds.add(id);
+    if (typeof (graph as any).getFullScope === "function") {
+      const fullScope = (graph as any).getFullScope(top.getId());
+      for (const id of fullScope) scopeIds.add(id);
+    }
   }
 
   // If scope is empty, tops being covered is sufficient
