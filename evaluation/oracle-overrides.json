@@ -339,7 +339,7 @@
       },
       "override": {
         "postcondition": "strong",
-        "precondition": "optional",
+        "precondition": "required",
         "invariant": "strong"
       }
     },

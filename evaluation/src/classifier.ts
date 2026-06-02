@@ -60,10 +60,10 @@ export function classifyPrecondition(nodes: NodeData[]): "required" | "optional"
   );
   if (preconditions.length === 0) return "none";
 
-  const allCovered = preconditions.every(
-    (n) => (n.covStatus === CovStatus.CovComplete || n.covStatus === CovStatus.CovTest)
+  const allUncovered = preconditions.every(
+    (n) => (n.covStatus === CovStatus.Uncovered)
   );
-  return allCovered ? "required" : "optional";
+  return allUncovered ? "optional" : "required";
 }
 
 /**

@@ -186,7 +186,7 @@ with the first table results used in the paper.
 
 ```bash
 # With minimization
-npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --force-core-minimization
+npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --force-core-minimization --dafny-path /path/to/dafny/binary
 ```
 
 This will create this file:
