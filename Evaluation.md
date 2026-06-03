@@ -24,6 +24,9 @@ npx tsx evaluation/src/cli.ts --dataset all --force-core-minimization
 
 # Compare baseline vs minimized
 npx tsx evaluation/src/cli.ts --dataset all --compare-minimization
+
+# With abstract interpretation disabled
+npx tsx evaluation/src/cli.ts --dataset all --no-abstract-interpretation
 ```
 
 ### Using a Custom Dafny Binary
@@ -54,6 +57,7 @@ The custom binary at `/home/ricostynha/Desktop/proof_pulse_custom_dafny_boogie/d
 | `--verbose` | off | Print per-file details (forces sequential) |
 | `--interactive` | off | Step-through mode |
 | `--force-core-minimization` | off | Enable unsat core minimization |
+| `--no-abstract-interpretation` | off | Disable Dafny's abstract interpretation pass |
 | `--compare-minimization` | off | Run baseline + minimized, report diffs |
 
 ## What to Expect

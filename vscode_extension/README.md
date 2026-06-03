@@ -37,6 +37,7 @@ If problemns persist manually configuration of paths to dafny and a compatible z
 | `proofpulse.timeoutSeconds` | `60` | Verification timeout in seconds |
 | `proofpulse.runOnSave` | `true` | Automatically run analysis when a `.dfy` file is saved |
 | `proofpulse.forceMinimization` | `false` | **Experimental.** Enable unsat core minimization. Intercepts Z3 solver queries and minimizes unsat cores for tighter proof dependencies. Slower but more precise. Tested on Linux (Nobara/Fedora); not known if well supported on other platforms. |
+| `proofpulse.noAbstractInterpretation` | `false` | Disable Dafny's abstract interpretation pass (`--no-abstract-interpretation`). Can improve coverage precision for certain proof patterns by preventing Dafny from inferring facts automatically. |
 | `proofpulse.decorationOpacity` | `0.08` | Opacity for line background decorations (`0.0`–`0.5`). Higher values make coverage highlights more visible. |
 
 ## Usage

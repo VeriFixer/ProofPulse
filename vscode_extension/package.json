@@ -75,6 +75,11 @@
           "default": false,
           "markdownDescription": "Enable unsat core minimization for Z3 solver calls. **Experimental:** tested on Linux (Nobara/Fedora). Not known if well supported on other platforms."
         },
+        "proofpulse.noAbstractInterpretation": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disable Dafny's abstract interpretation pass (--no-abstract-interpretation)"
+        },
         "proofpulse.decorationOpacity": {
           "type": "number",
           "default": 0.08,

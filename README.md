@@ -155,11 +155,15 @@ node core/dist/cli.js <file.dfy> --dafny-path <path-to-dafny> --log-verbose
 
 # With minimization
 node core/dist/cli.js <file.dfy> --dafny-path <path-to-dafny> --minimize --log
+
+# With abstract interpretation disabled
+node core/dist/cli.js <file.dfy> --dafny-path <path-to-dafny> --no-abstract-interpretation --log
 ```
 
 Options:
 - `--dafny-path <path>` — Path to Dafny binary (default: `dafny`)
 - `--minimize` — Enable unsat core minimization
+- `--no-abstract-interpretation` — Disable Dafny's abstract interpretation pass
 - `--timeout <seconds>` — Verification timeout (default: 60)
 - `--log` — Print YAML log (only methods with uncovered/partial nodes)
 - `--log-verbose` — Print full YAML log (all nodes + proof dependencies per method)
@@ -187,6 +191,9 @@ with the first table results used in the paper.
 ```bash
 # With minimization
 npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --force-core-minimization --dafny-path /path/to/dafny/binary
+
+# With abstract interpretation disabled
+npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --no-abstract-interpretation
 ```
 
 This will create this file:

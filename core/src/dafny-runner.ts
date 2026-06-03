@@ -374,6 +374,10 @@ export async function runDafny(
     "--boogie", "/proverOpt:O:sat.core.minimize=true",
   ];
 
+  if (options?.noAbstractInterpretation) {
+    args.push("--no-abstract-interpretation");
+  }
+
   let spawnEnv: Record<string, string> | undefined;
 
   if (options?.forceMinimization) {

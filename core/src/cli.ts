@@ -8,6 +8,7 @@
  * Options:
  *   --dafny-path <path>   Path to Dafny binary (default: "dafny")
  *   --minimize            Enable unsat core minimization
+ *   --no-abstract-interpretation  Disable abstract interpretation
  *   --timeout <seconds>   Verification timeout (default: 60)
  *   --log                 Print YAML report (only uncovered/partial nodes)
  *   --log-verbose         Print full YAML report (all nodes + proof dependencies)
@@ -28,6 +29,7 @@ Usage:
 Options:
   --dafny-path <path>   Path to Dafny binary (default: "dafny")
   --minimize            Enable unsat core minimization
+  --no-abstract-interpretation  Disable abstract interpretation
   --timeout <seconds>   Verification timeout (default: 60)
   --log                 Print YAML report (only uncovered/partial nodes)
   --log-verbose         Print full YAML report (all nodes + proof dependencies)
@@ -46,6 +48,7 @@ async function main() {
   let filePath = "";
   let dafnyPath = "dafny";
   let minimize = false;
+  let noAbstractInterpretation = false;
   let timeout = 60;
   let logMode: "none" | "default" | "verbose" = "none";
 
@@ -56,6 +59,9 @@ async function main() {
         break;
       case "--minimize":
         minimize = true;
+        break;
+      case "--no-abstract-interpretation":
+        noAbstractInterpretation = true;
         break;
       case "--timeout":
         timeout = parseInt(args[++i], 10);
@@ -86,6 +92,7 @@ async function main() {
   const result = await runDafny(filePath, {
     dafnyPath,
     forceMinimization: minimize,
+    noAbstractInterpretation,
     timeoutSeconds: timeout,
   });
 

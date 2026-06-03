@@ -15,6 +15,7 @@ interface CliArgs {
   concurrency?: number;
   forceMinimization: boolean;
   compareMinimization: boolean;
+  noAbstractInterpretation: boolean;
 }
 
 function printHelp(): void {
@@ -32,6 +33,7 @@ Options:
   --dataset <id>                Dataset: RQ1-GPT4, RQ1-PaLM2, RQ2-GPT4, RQ2-PaLM2, RQ3-GPT4, RQ3-PaLM2, or "all" (default: "RQ3-GPT4")
   --concurrency <n>             Parallel Dafny workers (default: cpus-1)
   --force-core-minimization     Enable unsat core minimization
+  --no-abstract-interpretation  Disable Dafny abstract interpretation
   --compare-minimization        Run twice (baseline vs minimized), report diffs
 `.trim());
 }
@@ -48,6 +50,7 @@ function parseArgs(argv: string[]): CliArgs {
     dataset: "RQ3-GPT4",
     forceMinimization: false,
     compareMinimization: false,
+    noAbstractInterpretation: false,
   };
 
   for (let i = 0; i < args.length; i++) {
@@ -83,6 +86,9 @@ function parseArgs(argv: string[]): CliArgs {
         break;
       case "--force-core-minimization":
         opts.forceMinimization = true;
+        break;
+      case "--no-abstract-interpretation":
+        opts.noAbstractInterpretation = true;
         break;
       case "--compare-minimization":
         opts.compareMinimization = true;
@@ -156,6 +162,7 @@ async function main() {
       concurrency: opts.concurrency,
       forceMinimization: opts.forceMinimization,
       compareMinimization: opts.compareMinimization,
+      noAbstractInterpretation: opts.noAbstractInterpretation,
     });
 
     const table = formatTable(results.confusionMatrix, results.metrics, results.results);
@@ -319,6 +326,7 @@ async function main() {
 
   // Print minimization status
   console.log(`\nMinimization: ${opts.forceMinimization ? "ENABLED (--force-core-minimization)" : "DISABLED"}`);
+  console.log(`Abstract interpretation: ${opts.noAbstractInterpretation ? "DISABLED (--no-abstract-interpretation)" : "ENABLED (default)"}`);
   console.log(`Compare minimization: ${opts.compareMinimization ? "ENABLED (--compare-minimization)" : "DISABLED"}`);
 
   // Print output locations

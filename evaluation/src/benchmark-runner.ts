@@ -75,6 +75,7 @@ export interface BenchmarkOptions {
   concurrency?: number;
   forceMinimization?: boolean;
   compareMinimization?: boolean;
+  noAbstractInterpretation?: boolean;
 }
 
 export interface BenchmarkResults {
@@ -111,6 +112,7 @@ async function processEntry(
       dafnyPath: options.dafnyPath,
       timeoutSeconds: options.timeoutSeconds,
       forceMinimization: options.forceMinimization,
+      noAbstractInterpretation: options.noAbstractInterpretation,
     });
 
     if (dafnyResult.error || dafnyResult.timedOut) {

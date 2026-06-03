@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import { runDafny, parseProof } from "@proofpulse/core";
-import { getDafnyPath, getDecorationOpacity, getForceMinimization, getTimeout, getZ3Path } from "./config";
+import { getDafnyPath, getDecorationOpacity, getForceMinimization, getNoAbstractInterpretation, getTimeout, getZ3Path } from "./config";
 import { applyDecorations } from "./decorations";
 
 let outputChannel: vscode.OutputChannel | undefined;
@@ -37,6 +37,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
           z3Path: getZ3Path() || undefined,
           timeoutSeconds: timeout,
           forceMinimization: forceMin,
+          noAbstractInterpretation: getNoAbstractInterpretation(),
           onWarning: (msg) => logInfo(msg),
         });
 
@@ -110,6 +111,7 @@ export function registerGetProofReport(context: vscode.ExtensionContext): void {
           ...(getDafnyPath() !== "dafny" ? ["--dafny-path", getDafnyPath()] : []),
           ...(getTimeout() !== 60 ? ["--timeout", String(getTimeout())] : []),
           ...(getForceMinimization() ? ["--force-minimization"] : []),
+          ...(getNoAbstractInterpretation() ? ["--no-abstract-interpretation"] : []),
         ], {
           stdio: "pipe",
           detached: true,

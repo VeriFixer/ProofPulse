@@ -46,6 +46,8 @@ export interface DafnyOptions {
   z3Path?: string;
   timeoutSeconds?: number;
   forceMinimization?: boolean;
+  /** Disable Dafny's abstract interpretation pass (--no-abstract-interpretation). */
+  noAbstractInterpretation?: boolean;
   /** Called with warning messages (e.g. potential version incompatibility). */
   onWarning?: (msg: string) => void;
 }

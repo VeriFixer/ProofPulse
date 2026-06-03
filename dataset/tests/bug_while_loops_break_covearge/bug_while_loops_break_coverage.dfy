@@ -5,6 +5,7 @@ method bugTest(n: int) returns (count: int)
   count := 18542; 
   var i := 12;
   while (i  <= n)
+    invariant count >= 18542
   {
     count := count + 35;
     i := i + 23;
