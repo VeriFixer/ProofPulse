@@ -42,5 +42,4 @@ function Max(a: seq<int>) : (m: int)
 
 //::: Name - No sucess story here two bugs to fix
 //::: Description - Some bugs o fix
-//::: L30 - Uncovered
-//::: L31 - Uncovered
+//::: L8 - Uncovered

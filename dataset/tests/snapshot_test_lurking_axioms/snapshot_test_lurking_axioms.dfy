@@ -1861,80 +1861,6 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 2
-//::       col: 12
-//::     end:
-//::       line: 2
-//::       col: 12
-//::     methodName: append
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 1
-//::       batchOutcome: Valid
-//::       batchResourceCount: 6742
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 2
-//::       col: 27
-//::     end:
-//::       line: 2
-//::       col: 27
-//::     methodName: append
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - array is never null
-//::       - array is never null
-//::       - array is never null
-//::     roles:
-//::       isTop: true
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: AssertionAutomatic
-//::     topMeta:
-//::       batchIndex: 2
-//::       batchOutcome: Valid
-//::       batchResourceCount: 6861
-//::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
-//::     file: snapshot_test_lurking_axioms.dfy
-//::     start:
-//::       line: 2
-//::       col: 12
-//::     end:
-//::       line: 2
-//::       col: 31
-//::     methodName: append
-//::     methodType: well-formedness
-//::     prooftexts:
-//::       - method ensures clause
-//::       - method ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy:
 //::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
@@ -2538,13 +2464,5 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
-//::     - top: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
-//::       unused:
-//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
-//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
-//::     - top: snapshot_test_lurking_axioms.dfy|append|well-formedness|2,27-2,27
-//::       unused:
-//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,12
-//::         - snapshot_test_lurking_axioms.dfy|append|well-formedness|2,12-2,31
 //::   connections: []
 //::

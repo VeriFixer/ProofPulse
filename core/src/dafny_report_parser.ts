@@ -174,6 +174,9 @@ export class DafnyReportParser {
     };
 
     for (const batch of batches) {
+      // Skip well-formedness batches — only correctness is relevant
+      if (batch.methodType !== "correctness") continue;
+
       const topInfo = batch.topAssertion;
 
       // Top assertion node
