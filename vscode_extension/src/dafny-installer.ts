@@ -8,13 +8,16 @@ import { execSync } from "child_process";
 /** GitHub release zip URL for each platform */
 const RELEASE_URLS: Record<string, string> = {
   "linux-x64": "https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-x64-ubuntu-22.04.zip",
-  // Future: "darwin-arm64": "...", "win32-x64": "..."
+  "darwin-arm64": "https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-arm64-macos-14.zip",
+  "win32-x64": "https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-x64-windows-2022.zip",
 };
 
 function getPlatformKey(): string | undefined {
   const platform = process.platform;
   const arch = process.arch;
   if (platform === "linux" && arch === "x64") return "linux-x64";
+  if (platform === "darwin" && arch === "arm64") return "darwin-arm64";
+  if (platform === "win32" && arch === "x64") return "win32-x64";
   return undefined;
 }
 
@@ -25,7 +28,8 @@ export function getInstallDir(context: vscode.ExtensionContext): string {
 
 /** Path to the dafny binary inside our managed install */
 export function getBundledDafnyPath(context: vscode.ExtensionContext): string {
-  return path.join(getInstallDir(context), "dafny", "dafny");
+  const bin = process.platform === "win32" ? "dafny.exe" : "dafny";
+  return path.join(getInstallDir(context), "dafny", bin);
 }
 
 /** Check if bundled Dafny is already installed and executable */
@@ -129,21 +133,30 @@ export async function installDafny(context: vscode.ExtensionContext): Promise<st
 
         // Extract
         progress.report({ message: "Extracting Dafny…", increment: 10 });
-        try {
-          execSync(`unzip -qo "${zipPath}" -d "${installDir}"`, { stdio: "ignore" });
-        } catch {
+        if (process.platform === "win32") {
           execSync(
-            `python3 -c "import zipfile; zipfile.ZipFile('${zipPath}').extractall('${installDir}')"`,
+            `powershell -NoProfile -Command "Expand-Archive -Force -Path '${zipPath}' -DestinationPath '${installDir}'"`,
             { stdio: "ignore" }
           );
+        } else {
+          try {
+            execSync(`unzip -qo "${zipPath}" -d "${installDir}"`, { stdio: "ignore" });
+          } catch {
+            execSync(
+              `python3 -c "import zipfile; zipfile.ZipFile('${zipPath}').extractall('${installDir}')"`,
+              { stdio: "ignore" }
+            );
+          }
         }
 
         // Cleanup
         fs.unlinkSync(zipPath);
 
-        // Ensure executable
+        // Ensure executable (not needed on Windows)
         const bin = getBundledDafnyPath(context);
-        fs.chmodSync(bin, 0o755);
+        if (process.platform !== "win32") {
+          fs.chmodSync(bin, 0o755);
+        }
 
         progress.report({ message: "Dafny ready ✓", increment: 10 });
         vscode.window.showInformationMessage("ProofPulse: Custom Dafny 4.11.1 installed and ready.");
