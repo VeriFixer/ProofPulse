@@ -43,7 +43,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5152
+//::       batchResourceCount: 5122
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|3,20-3,23
@@ -70,7 +70,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5534
+//::       batchResourceCount: 5501
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|4,19-4,24
@@ -97,7 +97,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5618
+//::       batchResourceCount: 5580
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|7,5-7,12

@@ -73,7 +73,7 @@ function resolveExecutableInPath(executableName: string): string | undefined {
  * Run a binary with a single arg (like --version / -version) and return stdout.
  * Returns undefined on failure. Timeout: 5s.
  */
-function probeVersion(bin: string, arg: string): string | undefined {
+export function probeVersion(bin: string, arg: string): string | undefined {
   try {
     const out = execFileSync(bin, [arg], { encoding: "utf-8", timeout: 5000, stdio: ["ignore", "pipe", "pipe"] });
     return out.trim().split("\n")[0];

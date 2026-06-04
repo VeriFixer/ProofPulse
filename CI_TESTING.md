@@ -56,12 +56,15 @@ This keeps the expected output co-located with the source, same pattern as `//::
 ## All Test Commands
 
 ```bash
-npm test                        # Integration + snapshot tests (dataset/tests/)
-npm test -- --update-snapshots  # Same but regenerates snapshot YAML in .dfy files
-npm run test:all                # Run ALL test suites
-npm run test:integration        # Same as npm test
-npm run test:unit               # Unit tests (vitest)
-npm run test:property           # Property-based tests (vitest + fast-check)
+npm test                                  # Integration + snapshot tests (dataset/tests/)
+npm test -- --help                        # Show all CLI options
+npm test -- --update-snapshots            # Regenerate snapshot YAML in .dfy files
+npm test -- --no-abstract-interpretation  # Run with abstract interpretation disabled
+npm test -- --force-minimization          # Run with unsat core minimization
+npm run test:all                          # Run ALL test suites
+npm run test:integration                  # Same as npm test
+npm run test:unit                         # Unit tests (vitest)
+npm run test:property                     # Property-based tests (vitest + fast-check)
 ```
 
 ### Core module tests (unit + property)
@@ -76,10 +79,10 @@ npx vitest --run
 The Docker image includes Dafny and all dependencies — no local setup required.
 
 ```bash
-docker build -t proofpulse .
-docker run --rm proofpulse                       # Full test suite
-docker run --rm proofpulse npm test              # Integration + snapshot tests
-docker run --rm proofpulse npm run test:unit     # Unit tests only
+docker build -f Dockerfile.ci -t proofpulse .
+docker run --rm --tmpfs /tmp:rw,exec,size=1g proofpulse                       # Full test suite
+docker run --rm --tmpfs /tmp:rw,exec,size=1g proofpulse npm test              # Integration + snapshot tests
+docker run --rm --tmpfs /tmp:rw,exec,size=1g proofpulse npm run test:unit     # Unit tests only
 ```
 
 ## Test Infrastructure
@@ -105,6 +108,15 @@ Reports are written to `test-results/junit.xml` and `test-results/coverage.json`
 |----------|-------------|
 | `--dafny-path <path>` | Explicit path to Dafny binary |
 | `--force-minimization` | Enable unsat core minimization |
+| `--no-abstract-interpretation` | Disable Dafny's abstract interpretation pass |
+| `--update-snapshots` | Regenerate snapshot YAML in .dfy files |
+| `-h, --help` | Show help with all available options |
+
+### Show help
+
+```bash
+npm test -- --help
+```
 
 ## Bug Tests
 

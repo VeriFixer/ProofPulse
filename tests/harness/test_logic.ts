@@ -1,16 +1,16 @@
 import os from 'os';
 import path from 'path';
 import fs from 'fs';
-import { parseProof, runDafny as coreRunDafny, DafnyReportParser, applyCoverage } from '@proofpulse/core';
+import { parseProof, runDafny as coreRunDafny, DafnyReportParser, applyCoverage, resolveDafnyPathWithSource, resolveZ3PathWithSource, probeVersion } from '@proofpulse/core';
 import YAML from 'js-yaml';
 
 const fsp = fs.promises;
 
 const DAFNY_TIMEOUT_SEC = parseInt(process.env.DAFNY_TIMEOUT_SEC ?? '', 10) || 60;
 
-const CONCURRENCY = process.env.CI
-  ? Math.max(1, os.cpus().length - 1)
-  : os.cpus().length - 1;
+const CONCURRENCY = process.env.CONCURRENCY
+  ? Math.max(1, parseInt(process.env.CONCURRENCY, 10))
+  : Math.max(1, os.cpus().length - 1);
 
 const DEFAULT_TESTS_ROOT = path.join('dataset', 'tests');
 
@@ -485,17 +485,30 @@ function isDafnyAvailable(dafnyPath?: string): boolean {
 
 // ── Main entry ──
 
+function probeVersionShort(bin: string): string {
+  const v = probeVersion(bin, '--version') ?? probeVersion(bin, '-version');
+  if (!v) return 'unknown';
+  const m = v.match(/(\d+\.\d+[\.\d]*)/);
+  return m ? m[1] : v.split('\n')[0];
+}
+
 export async function runAllTests(opts: RunOptions = {}): Promise<RunAllTestsResult> {
   const testsRoot = opts.testsRoot || DEFAULT_TESTS_ROOT;
   const startTime = performance.now();
+
+  const dafnyResolved = resolveDafnyPathWithSource(opts.dafnyPath ?? 'dafny');
+  const dafnyBin = dafnyResolved?.path ?? opts.dafnyPath ?? 'dafny';
+  const z3Resolved = dafnyResolved ? resolveZ3PathWithSource(dafnyBin) : undefined;
+  const z3Bin = z3Resolved?.path ?? 'z3';
+  const dafnyVersion = probeVersionShort(dafnyBin);
+  const z3Version = probeVersionShort(z3Bin);
 
   console.log(`\n${BOLD}${CYAN}ProofPulse Test Runner${RESET}`);
   console.log(`${GRAY}${'─'.repeat(50)}${RESET}`);
   console.log(`${DIM}Tests root:${RESET}  ${testsRoot}`);
   console.log(`${DIM}Timeout:${RESET}     ${DAFNY_TIMEOUT_SEC}s per file`);
-  if (opts.dafnyPath) {
-    console.log(`${DIM}Dafny:${RESET}       ${opts.dafnyPath}`);
-  }
+  console.log(`${DIM}Dafny:${RESET}       ${dafnyBin} ${GRAY}(${dafnyVersion})${RESET}`);
+  console.log(`${DIM}Z3:${RESET}          ${z3Bin} ${GRAY}(${z3Version})${RESET}`);
 
   if (!isDafnyAvailable(opts.dafnyPath)) {
     console.error(`\n${RED}✗ Dafny CLI not found${opts.dafnyPath ? ` at ${opts.dafnyPath}` : ' in PATH'}${RESET}`);
@@ -583,11 +596,15 @@ export async function runAllTests(opts: RunOptions = {}): Promise<RunAllTestsRes
 
       if (
         res.status === 'error' ||
+        res.status === 'skipped' ||
         (isBug && res.status === 'passed') ||
         (!isBug && res.status === 'failed')
       ) {
         const reason = res.reason || 'unknown';
         console.error(`         ${RED}└─ ${reason}${RESET}`);
+        if (res.dafnyRes && !res.dafnyRes.ok) {
+          console.error(`         ${RED}   ${res.dafnyRes.reason}${RESET}`);
+        }
       }
 
       results.push({ srcFile, res, isBug, duration, lineStatus: res.lineStatus || [] });

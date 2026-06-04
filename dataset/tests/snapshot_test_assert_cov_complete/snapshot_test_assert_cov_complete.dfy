@@ -50,7 +50,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6473
+//::       batchResourceCount: 6377
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: >-
@@ -110,7 +110,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16552
+//::       batchResourceCount: 16378
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -234,7 +234,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16199
+//::       batchResourceCount: 14886
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -278,7 +278,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11167
+//::       batchResourceCount: 10947
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -309,7 +309,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20740
+//::       batchResourceCount: 16476
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //:: edges:

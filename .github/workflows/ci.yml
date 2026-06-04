@@ -6,17 +6,26 @@ on:
   pull_request:
     branches: [main]
 
+env:
+  # Point this to your custom Dafny build zip (from your fork's GH release).
+  # Once your PR is merged upstream, remove this and use DAFNY_VERSION instead.
+  DAFNY_ZIP_URL: "https://github.com/nicefiction/dafny/releases/download/v4.11.0-proofpulse/dafny-4.11.0-x64-ubuntu-22.04.zip"
+  # DAFNY_VERSION: "4.11.0"
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: true
 
-      - name: Build Docker image
-        run: docker build --tag proofpulse-ci .
+      - name: Build CI image
+        run: |
+          docker build \
+            --build-arg DAFNY_ZIP_URL="${DAFNY_ZIP_URL}" \
+            -f Dockerfile.ci \
+            -t proofpulse-ci .
 
-      - name: Run full test suite
-        run: docker run --rm -e CI=true proofpulse-ci
+      - name: Run tests
+        run: docker run --rm --tmpfs /tmp:rw,exec,size=1g proofpulse-ci

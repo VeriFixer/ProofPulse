@@ -255,7 +255,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 38
 //::       batchOutcome: Valid
-//::       batchResourceCount: 26916
+//::       batchResourceCount: 26798
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|5,19-5,22
@@ -831,7 +831,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 49
 //::       batchOutcome: Valid
-//::       batchResourceCount: 17998
+//::       batchResourceCount: 17978
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|8,19-8,31
@@ -974,7 +974,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 23
 //::       batchOutcome: Valid
-//::       batchResourceCount: 27285
+//::       batchResourceCount: 24125
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|8,24-8,31
@@ -1048,7 +1048,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
-//::       batchResourceCount: 27413
+//::       batchResourceCount: 24226
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|9,19-9,29
@@ -1172,7 +1172,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
-//::       batchResourceCount: 29949
+//::       batchResourceCount: 29913
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|10,56-10,56
@@ -1245,7 +1245,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 45
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19208
+//::       batchResourceCount: 19171
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|10,56-10,59
@@ -1318,7 +1318,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 46
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19446
+//::       batchResourceCount: 19385
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|10,64-10,64
@@ -1391,7 +1391,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 47
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19642
+//::       batchResourceCount: 19562
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|10,64-10,67
@@ -1464,7 +1464,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 48
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19998
+//::       batchResourceCount: 19898
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|10,19-10,72
@@ -1588,7 +1588,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 26
 //::       batchOutcome: Valid
-//::       batchResourceCount: 100110
+//::       batchResourceCount: 122891
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|11,33-11,33
@@ -1661,7 +1661,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 39
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20710
+//::       batchResourceCount: 20603
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|11,33-11,38
@@ -1734,7 +1734,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 40
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20825
+//::       batchResourceCount: 20718
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|11,29-11,39
@@ -1807,7 +1807,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 41
 //::       batchOutcome: Valid
-//::       batchResourceCount: 25030
+//::       batchResourceCount: 23641
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|11,19-11,39
@@ -1931,7 +1931,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 27
 //::       batchOutcome: Valid
-//::       batchResourceCount: 83329
+//::       batchResourceCount: 64647
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|12,33-12,33
@@ -2004,7 +2004,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 42
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22775
+//::       batchResourceCount: 22944
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|12,33-12,38
@@ -2077,7 +2077,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 43
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22894
+//::       batchResourceCount: 23056
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|12,29-12,39
@@ -2150,7 +2150,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 44
 //::       batchOutcome: Valid
-//::       batchResourceCount: 25779
+//::       batchResourceCount: 24272
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|12,19-12,39
@@ -2274,7 +2274,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 28
 //::       batchOutcome: Valid
-//::       batchResourceCount: 123802
+//::       batchResourceCount: 77452
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,12
@@ -2347,7 +2347,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19990
+//::       batchResourceCount: 19924
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,15
@@ -2420,7 +2420,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20149
+//::       batchResourceCount: 20087
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|15,23-15,23
@@ -2493,7 +2493,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 31
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20730
+//::       batchResourceCount: 20670
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|15,23-15,26
@@ -2566,7 +2566,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 32
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20854
+//::       batchResourceCount: 20794
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|15,13-15,27
@@ -2708,7 +2708,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20702
+//::       batchResourceCount: 20642
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,22
@@ -2781,7 +2781,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20826
+//::       batchResourceCount: 20766
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
@@ -2854,7 +2854,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20971
+//::       batchResourceCount: 20911
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
@@ -2927,7 +2927,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 30
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21086
+//::       batchResourceCount: 21026
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
@@ -3069,7 +3069,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22094
+//::       batchResourceCount: 21954
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
@@ -3142,7 +3142,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22257
+//::       batchResourceCount: 22137
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -3215,7 +3215,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
-//::       batchResourceCount: 35424
+//::       batchResourceCount: 24532
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,33-19,33
@@ -3288,7 +3288,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22203
+//::       batchResourceCount: 22101
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,33-19,38
@@ -3361,7 +3361,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22314
+//::       batchResourceCount: 22209
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,9-19,39
@@ -3434,7 +3434,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 22
 //::       batchOutcome: Valid
-//::       batchResourceCount: 52141
+//::       batchResourceCount: 40800
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|21,12-21,12
@@ -3507,7 +3507,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 33
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19633
+//::       batchResourceCount: 19571
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|21,16-21,18
@@ -3580,7 +3580,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 34
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19866
+//::       batchResourceCount: 19802
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|21,12-21,24
@@ -3653,7 +3653,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 35
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19892
+//::       batchResourceCount: 19828
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|21,29-21,29
@@ -3726,7 +3726,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 36
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19866
+//::       batchResourceCount: 19802
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|21,5-21,34
@@ -3799,7 +3799,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 37
 //::       batchOutcome: Valid
-//::       batchResourceCount: 28501
+//::       batchResourceCount: 31189
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|22,5-22,28

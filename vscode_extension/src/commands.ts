@@ -56,7 +56,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
     { location: vscode.ProgressLocation.Notification, title: "ProofPulse: Running analysis…", cancellable: false },
     async () => {
       try {
-        const dafnyPath = getDafnyPath();
+        const dafnyPath = getDafnyPath(context);
         const timeout = getTimeout();
         logInfo(`dafnyPath=${dafnyPath}, timeout=${timeout}`);
 
@@ -180,7 +180,7 @@ export function registerGetProofReport(context: vscode.ExtensionContext): void {
         ).fsPath;
 
         const child = spawn(process.execPath, [serverScript, "--file", filePath,
-          ...(getDafnyPath() !== "dafny" ? ["--dafny-path", getDafnyPath()] : []),
+          ...(getDafnyPath(context) !== "dafny" ? ["--dafny-path", getDafnyPath(context)] : []),
           ...(getTimeout() !== 60 ? ["--timeout", String(getTimeout())] : []),
           ...(getForceMinimization() ? ["--force-minimization"] : []),
           ...(getNoAbstractInterpretation() ? ["--no-abstract-interpretation"] : []),

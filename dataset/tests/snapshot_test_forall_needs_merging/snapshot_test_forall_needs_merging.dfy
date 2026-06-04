@@ -52,7 +52,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6681
+//::       batchResourceCount: 6645
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -91,7 +91,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9111
+//::       batchResourceCount: 9019
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -130,7 +130,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9957
+//::       batchResourceCount: 9865
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -234,7 +234,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 8627
+//::       batchResourceCount: 8535
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -289,7 +289,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11912
+//::       batchResourceCount: 11822
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -358,7 +358,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9510
+//::       batchResourceCount: 9418
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -397,7 +397,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9888
+//::       batchResourceCount: 9796
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: >-
@@ -436,7 +436,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9707
+//::       batchResourceCount: 9615
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -491,7 +491,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14624
+//::       batchResourceCount: 14799
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -560,7 +560,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9177
+//::       batchResourceCount: 9085
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -599,7 +599,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9387
+//::       batchResourceCount: 9295
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -703,7 +703,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 8957
+//::       batchResourceCount: 8865
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //:: edges:

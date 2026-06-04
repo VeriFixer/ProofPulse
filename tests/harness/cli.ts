@@ -24,7 +24,7 @@ Options:
 
 Environment variables:
   DAFNY_TIMEOUT_SEC              Per-file verification timeout (default: 60)
-  CI                             Adjusts concurrency
+  CONCURRENCY                    Number of parallel workers (default: cpu_count - 1)
   JUNIT_REPORT_PATH              JUnit XML output path (default: test-results/junit.xml)
   COVERAGE_REPORT_PATH           Coverage JSON output path (default: test-results/coverage.json)
 

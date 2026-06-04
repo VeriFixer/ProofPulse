@@ -6,7 +6,7 @@ export { ProofGraph } from "./proof-graph.js";
 export { Proof, parseProof } from "./proof.js";
 export { applyCoverage, applyCoverageInternal, applyCoverageSemantic, computeLineStatus, getNodesByLine } from "./coverage.js";
 export { serializeProofGraph, deserializeProofGraph } from "./serialization.js";
-export { runDafny, resolveDafnyPathWithSource, resolveZ3PathWithSource } from "./dafny-runner.js";
+export { runDafny, resolveDafnyPathWithSource, resolveZ3PathWithSource, probeVersion } from "./dafny-runner.js";
 export type { ResolveSource, ResolvedPath } from "./dafny-runner.js";
 export { generateSpansFragment, getDependsOn, getProvedBy, getProves } from "./rendering.js";
 export { generateTextReport } from "./report.js";

@@ -2,6 +2,7 @@ import * as vscode from "vscode";
 import { registerRunAnalysis, registerGetProofReport, runAnalysis } from "./commands";
 import { clearDecorations } from "./decorations";
 import { getRunOnSave } from "./config";
+import { needsInstall, installDafny } from "./dafny-installer";
 
 export function activate(context: vscode.ExtensionContext): void {
   registerRunAnalysis(context);
@@ -40,10 +41,23 @@ export function activate(context: vscode.ExtensionContext): void {
     }),
   );
 
-  // Run on the already-active .dfy file at activation time
-  const activeEditor = vscode.window.activeTextEditor;
-  if (activeEditor && activeEditor.document.fileName.endsWith(".dfy") && getRunOnSave()) {
-    runAnalysis(activeEditor, context);
+  // Auto-install Dafny if not available, then run initial analysis
+  if (needsInstall(context)) {
+    installDafny(context).then((binPath) => {
+      if (binPath) {
+        // Trigger analysis on active .dfy file after install
+        const editor = vscode.window.activeTextEditor;
+        if (editor && editor.document.fileName.endsWith(".dfy") && getRunOnSave()) {
+          runAnalysis(editor, context);
+        }
+      }
+    });
+  } else {
+    // Run on the already-active .dfy file at activation time
+    const activeEditor = vscode.window.activeTextEditor;
+    if (activeEditor && activeEditor.document.fileName.endsWith(".dfy") && getRunOnSave()) {
+      runAnalysis(activeEditor, context);
+    }
   }
 }
 

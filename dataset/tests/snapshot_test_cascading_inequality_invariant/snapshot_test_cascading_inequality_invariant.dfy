@@ -48,7 +48,7 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6548
+//::       batchResourceCount: 6512
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -83,7 +83,7 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12029
+//::       batchResourceCount: 12068
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -181,7 +181,7 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9778
+//::       batchResourceCount: 9722
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -217,7 +217,7 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9834
+//::       batchResourceCount: 9778
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -303,7 +303,7 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9756
+//::       batchResourceCount: 9683
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -350,7 +350,7 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11579
+//::       batchResourceCount: 11526
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -385,7 +385,7 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9299
+//::       batchResourceCount: 9243
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-

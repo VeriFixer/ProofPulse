@@ -1,7 +1,27 @@
 import * as vscode from "vscode";
+import { isBundledInstalled, getBundledDafnyPath } from "./dafny-installer";
 
-export function getDafnyPath(): string {
-  return vscode.workspace.getConfiguration("proofpulse").get<string>("dafnyPath", "dafny");
+/**
+ * Resolve dafny path. Priority:
+ * 1. If useCustomDafny=true → use customDafnyPath (or "dafny" if empty)
+ * 2. Otherwise → bundled ProofPulse install
+ */
+export function getDafnyPath(context?: vscode.ExtensionContext): string {
+  const cfg = vscode.workspace.getConfiguration("proofpulse");
+  const useCustom = cfg.get<boolean>("useCustomDafny", false);
+
+  if (useCustom) {
+    const custom = cfg.get<string>("customDafnyPath", "")?.trim();
+    return custom || "dafny"; // empty means "search PATH"
+  }
+
+  // Default: use bundled
+  if (context && isBundledInstalled(context)) {
+    return getBundledDafnyPath(context);
+  }
+
+  // Bundled not yet installed — return "dafny" as fallback (installer will handle it)
+  return "dafny";
 }
 
 export function getTimeout(): number {

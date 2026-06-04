@@ -295,7 +295,7 @@ method Main() {
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 4634
+//::       batchResourceCount: 4614
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_method_call.dfy|Main|correctness|2,13-2,16

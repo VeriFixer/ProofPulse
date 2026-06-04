@@ -1,6 +1,7 @@
 FROM codercom/code-server:latest
 
-ARG DAFNY_VERSION=4.11.0
+# Custom ProofPulse Dafny build (4.11.1 + --no-abstract-interpretation + {:id} passification fix)
+ARG DAFNY_ZIP_URL="https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-x64-ubuntu-22.04.zip"
 USER root
 
 # System deps
@@ -16,17 +17,21 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
 # Suppress npm update notices
 ENV NPM_CONFIG_UPDATE_NOTIFIER=false
 
-# Install .NET runtime (required by Dafny language server)
-RUN curl -fsSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0 --runtime dotnet --install-dir /usr/share/dotnet \
-    && ln -s /usr/share/dotnet/dotnet /usr/local/bin/dotnet
-
-# Install Dafny
-RUN wget -q "https://github.com/dafny-lang/dafny/releases/download/v${DAFNY_VERSION}/dafny-${DAFNY_VERSION}-x64-ubuntu-22.04.zip" \
-      -O /tmp/dafny.zip \
+# Install Dafny (custom ProofPulse build) — zip is self-contained (includes .NET runtime)
+RUN wget -q "$DAFNY_ZIP_URL" -O /tmp/dafny.zip \
     && unzip -q /tmp/dafny.zip -d /opt \
     && rm /tmp/dafny.zip \
-    && ln -s /opt/dafny/dafny /usr/local/bin/dafny \
-    && ln -s "$(find /opt/dafny/z3/bin -name 'z3-*' | sort -V | tail -1)" /usr/local/bin/z3
+    && ln -s /opt/dafny/dafny /usr/local/bin/dafny
+
+# Install Z3 4.12.1 explicitly (Dafny-recommended version)
+RUN wget -q "https://github.com/Z3Prover/z3/releases/download/z3-4.12.1/z3-4.12.1-x64-glibc-2.35.zip" -O /tmp/z3.zip \
+    && unzip -q /tmp/z3.zip -d /tmp/z3-extract \
+    && cp /tmp/z3-extract/z3-4.12.1-x64-glibc-2.35/bin/z3 /usr/local/bin/z3 \
+    && chmod +x /usr/local/bin/z3 \
+    && rm -rf /tmp/z3.zip /tmp/z3-extract
+
+# Sanity-check both binaries work at build time
+RUN dafny --version && z3 --version
 
 # Copy project
 WORKDIR /home/coder/project
@@ -51,7 +56,7 @@ RUN code-server --install-extension dafny-lang.ide-vscode
 # Configure Dafny extension to use pre-installed Dafny (skip its own download)
 # and configure ProofPulse to point to the correct paths
 RUN mkdir -p /home/coder/.local/share/code-server/User \
-    && printf '{\n  "dafny.compilerPath": "/usr/local/bin/dafny",\n  "dafny.version": "4.11.0",\n  "dafny.preferredVersion": "4.11.0",\n  "proofpulse.dafnyPath": "/usr/local/bin/dafny",\n  "proofpulse.z3Path": "/usr/local/bin/z3"\n}\n' \
+    && printf '{\n  "dafny.compilerPath": "/usr/local/bin/dafny",\n  "dafny.version": "4.11.1",\n  "dafny.preferredVersion": "4.11.1",\n  "proofpulse.dafnyPath": "/usr/local/bin/dafny",\n  "proofpulse.z3Path": "/usr/local/bin/z3"\n}\n' \
        > /home/coder/.local/share/code-server/User/settings.json
 
 EXPOSE 8080

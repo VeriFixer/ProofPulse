@@ -1,0 +1,59 @@
+FROM ubuntu:24.04
+
+# Custom ProofPulse Dafny build (4.11.1 + --no-abstract-interpretation + {:id} passification fix)
+# Override with --build-arg DAFNY_ZIP_URL=<url> for other builds
+ARG DAFNY_ZIP_URL="https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-x64-ubuntu-22.04.zip"
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget unzip libicu-dev ca-certificates python3 curl git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Node.js 22
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+    && apt-get install -y nodejs \
+    && rm -rf /var/lib/apt/lists/*
+
+# Suppress npm update notices
+ENV NPM_CONFIG_UPDATE_NOTIFIER=false
+
+# Install Dafny from zip URL
+RUN echo "Installing Dafny from: $DAFNY_ZIP_URL" \
+    && wget -q "$DAFNY_ZIP_URL" -O /tmp/dafny.zip \
+    && unzip -q /tmp/dafny.zip -d /opt \
+    && rm /tmp/dafny.zip \
+    && ln -s /opt/dafny/dafny /usr/local/bin/dafny
+
+# Install Z3 4.12.1 explicitly (Dafny-recommended version)
+RUN wget -q "https://github.com/Z3Prover/z3/releases/download/z3-4.12.1/z3-4.12.1-x64-glibc-2.35.zip" -O /tmp/z3.zip \
+    && unzip -q /tmp/z3.zip -d /tmp/z3-extract \
+    && cp /tmp/z3-extract/z3-4.12.1-x64-glibc-2.35/bin/z3 /usr/local/bin/z3 \
+    && chmod +x /usr/local/bin/z3 \
+    && rm -rf /tmp/z3.zip /tmp/z3-extract
+
+# Sanity-check both binaries work at build time
+RUN dafny --version && z3 --version
+
+WORKDIR /app
+
+COPY package.json package-lock.json vitest.config.ts ./
+COPY core/package.json core/tsconfig.json ./core/
+COPY evaluation/package.json ./evaluation/
+COPY vscode_extension/package.json ./vscode_extension/
+
+RUN npm ci --ignore-scripts
+
+COPY core/src/ ./core/src/
+COPY core/scripts/ ./core/scripts/
+COPY web_viewer/ ./web_viewer/
+RUN npm run build:core
+RUN npm run build:viewer
+
+COPY tests/ ./tests/
+COPY dataset/ ./dataset/
+COPY dafny-synthesis/ ./dafny-synthesis/
+
+ENV DAFNY_TIMEOUT_SEC=120
+
+CMD ["npm", "test", "--", "--dafny-path", "/usr/local/bin/dafny", "--force-minimization", "--no-abstract-interpretation"]

@@ -122,7 +122,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14161
+//::       batchResourceCount: 14121
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|3,13-3,59
@@ -166,7 +166,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15331
+//::       batchResourceCount: 15291
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|5,9-5,14
@@ -330,7 +330,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13151
+//::       batchResourceCount: 13111
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|9,19-9,31
@@ -416,7 +416,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16006
+//::       batchResourceCount: 15966
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|9,24-9,31
@@ -461,7 +461,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16104
+//::       batchResourceCount: 16064
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,49
@@ -565,7 +565,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14158
+//::       batchResourceCount: 14108
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,53
@@ -609,7 +609,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14744
+//::       batchResourceCount: 14669
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
@@ -675,7 +675,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20751
+//::       batchResourceCount: 20676
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
@@ -761,7 +761,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14975
+//::       batchResourceCount: 14890
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
@@ -865,7 +865,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14336
+//::       batchResourceCount: 14296
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
@@ -930,7 +930,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15050
+//::       batchResourceCount: 15010
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1074,7 +1074,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15739
+//::       batchResourceCount: 15699
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|15,1-15,1
