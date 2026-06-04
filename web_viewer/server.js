@@ -1,11 +1,57 @@
 import { createServer } from 'node:http';
-import { readFile as fsReadFile } from 'node:fs/promises';
+import { readFile as fsReadFile, writeFile, mkdir, rename } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import { join, extname, resolve, dirname } from 'node:path';
+import { join, extname, resolve, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
+import { homedir } from 'node:os';
 import { runDafny } from '@proofpulse/core';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// --- Cache helpers (inlined from result-cache.ts for ESM compat) ---
+const CACHE_DIR = join(homedir(), '.proofpulse', 'cache');
+
+function fileHash(filePath) {
+  const absolute = resolve(filePath);
+  return createHash('sha256').update(absolute).digest('hex');
+}
+
+/** Cache path: {minimized|normal}_{filename}_{hash}.json */
+function getCachePath(filePath, minimized) {
+  const hash = fileHash(filePath);
+  const name = basename(filePath);
+  const prefix = minimized ? 'minimized' : 'normal';
+  return join(CACHE_DIR, `${prefix}_${name}_${hash}.json`);
+}
+
+/** Read cache: checks minimized first, then normal. */
+async function readCache(filePath) {
+  try {
+    const raw = await fsReadFile(getCachePath(filePath, true), 'utf8');
+    return JSON.parse(raw);
+  } catch { /* miss */ }
+  try {
+    const raw = await fsReadFile(getCachePath(filePath, false), 'utf8');
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+async function writeCache(filePath, source, log, minimized) {
+  const cachePath = getCachePath(filePath, minimized);
+  const data = { source, log, minimized, timestamp: Date.now(), filePath };
+  try {
+    await mkdir(dirname(cachePath), { recursive: true });
+    const tmp = cachePath + '.tmp';
+    await writeFile(tmp, JSON.stringify(data), 'utf8');
+    await rename(tmp, cachePath);
+  } catch {
+    // Cache write failure is non-fatal
+  }
+}
+// --- End cache helpers ---
 
 const MIME_TYPES = {
   '.html': 'text/html',
@@ -89,11 +135,11 @@ export function startServer(port = 8080, coverageData = null) {
 }
 
 /**
- * Compute coverage for a .dfy file. Validates path, runs dafny, reads source.
+ * Compute coverage for a .dfy file. Checks cache first, falls back to runDafny.
  * Returns coverage data object or throws with { status, body } for HTTP errors.
  * @param {string} filePath
  * @param {{ dafnyPath?: string, timeoutSeconds?: number, forceMinimization?: boolean }} [options]
- * @returns {Promise<{ source: string, log: string, error?: string, exitCode?: number }>}
+ * @returns {Promise<{ source: string, log: string, fromCache: boolean, cacheTimestamp?: number, minimized?: boolean, error?: string, exitCode?: number }>}
  */
 export async function computeCoverage(filePath, options) {
   const resolved = resolve(filePath);
@@ -112,6 +158,19 @@ export async function computeCoverage(filePath, options) {
     throw err;
   }
 
+  // Check cache first
+  const cached = await readCache(resolved);
+  if (cached) {
+    return {
+      source: cached.source,
+      log: cached.log,
+      fromCache: true,
+      cacheTimestamp: cached.timestamp,
+      minimized: cached.minimized,
+    };
+  }
+
+  // Cache miss — run dafny
   const source = await fsReadFile(resolved, 'utf8');
 
   let result;
@@ -138,9 +197,13 @@ export async function computeCoverage(filePath, options) {
     throw err;
   }
 
-  const coverage = { source, log: result.log };
+  const coverage = { source, log: result.log, fromCache: false };
   if (result.error) coverage.error = result.error;
   if (result.exitCode !== undefined && result.exitCode !== 0) coverage.exitCode = result.exitCode;
+
+  // Write cache (non-blocking, non-fatal)
+  const minimized = !!(options && options.forceMinimization);
+  await writeCache(resolved, source, result.log, minimized);
 
   return coverage;
 }

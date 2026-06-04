@@ -510,7 +510,97 @@ export async function runDafny(
   log(`[info] Spawning: ${dafnyBin} ${args.join(" ")}`);
 
   try {
-    const result = await spawnDafny(dafnyBin, args, tmpDir, timeoutSec, spawnEnv);
+    // Two-phase progressive run: Phase_1 (normal) → callback → Phase_2 (minimization)
+    if (options?.forceMinimization && options?.onPreliminaryResult) {
+      // Phase_1: build args WITHOUT --solver-path (remove last two elements added above)
+      const phase1Args = args.filter((_, i, arr) => !(arr[i - 1] === "--solver-path" || (arr[i] === "--solver-path")));
+      log(`[info] Phase_1 (normal): ${dafnyBin} ${phase1Args.join(" ")}`);
+
+      const phase1Result = await spawnDafny(dafnyBin, phase1Args, tmpDir, timeoutSec, undefined, options.signal);
+
+      if (phase1Result.error) {
+        return { log: "", exitCode: -1, error: phase1Result.error };
+      }
+      if (phase1Result.timedOut) {
+        return { log: "", exitCode: -1, timedOut: true };
+      }
+      if (phase1Result.exitCode !== 0 && phase1Result.stderr) {
+        return {
+          log: "",
+          exitCode: phase1Result.exitCode ?? -1,
+          error: `dafny exited ${phase1Result.exitCode}: ${phase1Result.stderr.slice(0, 500)}`,
+        };
+      }
+
+      // Read Phase_1 prover log and fire callback
+      let phase1Log = "";
+      try {
+        phase1Log = await readFile(join(tmpDir, "prover_log.txt"), "utf8");
+      } catch {
+        phase1Log = phase1Result.stdout ?? "";
+      }
+      options.onPreliminaryResult({ log: phase1Log, exitCode: phase1Result.exitCode ?? 0, timedOut: false });
+
+      // Check abort between phases
+      if (options.signal?.aborted) {
+        return { log: "", exitCode: -1, error: "aborted" };
+      }
+
+      // Phase_2: minimization run (with --solver-path and spawnEnv) in fresh tmpDir
+      let tmpDir2: string;
+      try {
+        tmpDir2 = await mkdtemp(join(tmpdir(), "proofpulse-"));
+        if (IS_WIN && /^[a-z]:/.test(tmpDir2)) {
+          tmpDir2 = tmpDir2[0].toUpperCase() + tmpDir2.slice(1);
+        }
+      } catch (err) {
+        return { log: "", exitCode: -1, error: `failed to create temp dir for phase2: ${(err as Error).message}` };
+      }
+
+      log(`[info] Phase_2 (minimization): ${dafnyBin} ${args.join(" ")}`);
+      try {
+        const phase2Result = await spawnDafny(dafnyBin, args, tmpDir2, timeoutSec, spawnEnv, options.signal);
+
+        // Build debug context
+        let debugContext = "";
+        try {
+          const wl = await readFile(join(tmpDir2, "wrapper.log"), "utf8").catch(() => "");
+          if (wl) debugContext = `\n--- wrapper log ---\n${wl.slice(-1000)}`;
+        } catch { /* ignore */ }
+        try {
+          const di = await readFile(join(tmpDir, "debug_info.txt"), "utf8").catch(() => "");
+          if (di) debugContext = `${debugContext}\n--- debug_info.txt ---\n${di}`;
+        } catch { /* ignore */ }
+
+        if (phase2Result.error) {
+          return { log: "", exitCode: -1, error: `${phase2Result.error}${debugContext}` };
+        }
+        if (phase2Result.timedOut) {
+          return { log: "", exitCode: -1, timedOut: true, error: debugContext ? `timed out${debugContext}` : undefined };
+        }
+        if (phase2Result.exitCode !== 0 && phase2Result.stderr) {
+          return {
+            log: "",
+            exitCode: phase2Result.exitCode ?? -1,
+            error: `dafny exited ${phase2Result.exitCode}: ${phase2Result.stderr.slice(0, 500)}${debugContext}`,
+          };
+        }
+
+        let phase2Log = "";
+        try {
+          phase2Log = await readFile(join(tmpDir2, "prover_log.txt"), "utf8");
+        } catch {
+          phase2Log = phase2Result.stdout ?? "";
+        }
+
+        return { log: phase2Log, exitCode: phase2Result.exitCode ?? -1, timedOut: false };
+      } finally {
+        rm(tmpDir2, { recursive: true, force: true }).catch(() => {});
+      }
+    }
+
+    // Single-phase path (existing behavior): !forceMinimization or !onPreliminaryResult
+    const result = await spawnDafny(dafnyBin, args, tmpDir, timeoutSec, spawnEnv, options?.signal);
 
     // Build debug context for error messages
     let debugContext = "";
@@ -572,8 +662,13 @@ function spawnDafny(
   args: string[],
   cwd: string,
   timeoutSec: number,
-  extraEnv?: Record<string, string>
+  extraEnv?: Record<string, string>,
+  signal?: AbortSignal
 ): Promise<SpawnResult> {
+  if (signal?.aborted) {
+    return Promise.resolve({ error: "aborted" });
+  }
+
   return new Promise((resolve) => {
     let stdout = "";
     let stderr = "";
@@ -581,6 +676,8 @@ function spawnDafny(
 
     const env = extraEnv ? { ...process.env, ...extraEnv } : undefined;
     const child = spawn(bin, args, { cwd, env });
+
+    signal?.addEventListener("abort", () => { child.kill("SIGKILL"); }, { once: true });
 
     let timedOut = false;
     const timer = setTimeout(() => {
@@ -604,7 +701,9 @@ function spawnDafny(
       clearTimeout(timer);
       if (!done) {
         done = true;
-        if (timedOut) {
+        if (signal?.aborted) {
+          resolve({ exitCode: -1, error: "aborted" });
+        } else if (timedOut) {
           resolve({ timedOut: true });
         } else {
           resolve({ exitCode: code ?? -1, stdout, stderr: stderr || undefined });

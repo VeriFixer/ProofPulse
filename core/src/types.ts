@@ -50,4 +50,8 @@ export interface DafnyOptions {
   noAbstractInterpretation?: boolean;
   /** Called with warning messages (e.g. potential version incompatibility). */
   onWarning?: (msg: string) => void;
+  /** AbortSignal for cancelling the run. */
+  signal?: AbortSignal;
+  /** Callback fired with Phase 1 (normal) result before minimization begins. */
+  onPreliminaryResult?: (result: DafnyResult) => void;
 }
