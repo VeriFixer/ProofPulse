@@ -410,7 +410,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 8669
+//::       batchResourceCount: 8689
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,8
@@ -603,7 +603,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11503
+//::       batchResourceCount: 11523
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,11-4,11
@@ -711,7 +711,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11483
+//::       batchResourceCount: 11503
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,11-4,14
@@ -989,7 +989,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15238
+//::       batchResourceCount: 15258
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,17-4,17
@@ -1097,7 +1097,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12061
+//::       batchResourceCount: 12081
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,17-4,20
@@ -1460,7 +1460,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 22
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15586
+//::       batchResourceCount: 15606
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,23-4,23
@@ -1568,7 +1568,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12639
+//::       batchResourceCount: 12659
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,23-4,26
@@ -2016,7 +2016,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16096
+//::       batchResourceCount: 16116
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,29-4,29
@@ -2124,7 +2124,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13217
+//::       batchResourceCount: 13237
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,29-4,32
@@ -2657,7 +2657,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16686
+//::       batchResourceCount: 16706
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,35-4,35
@@ -2765,7 +2765,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13795
+//::       batchResourceCount: 13815
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,35-4,38
@@ -3383,7 +3383,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 34
 //::       batchOutcome: Valid
-//::       batchResourceCount: 17599
+//::       batchResourceCount: 17619
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,54
@@ -4519,7 +4519,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 35
 //::       batchOutcome: Valid
-//::       batchResourceCount: 18688
+//::       batchResourceCount: 18708
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|5,9-5,24
@@ -4731,7 +4731,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 36
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19810
+//::       batchResourceCount: 19849
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,8
@@ -4924,7 +4924,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 38
 //::       batchOutcome: Valid
-//::       batchResourceCount: 27100
+//::       batchResourceCount: 27272
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|6,11-6,11
@@ -5032,7 +5032,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 39
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20214
+//::       batchResourceCount: 20254
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|6,11-6,14
@@ -5310,7 +5310,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 45
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21592
+//::       batchResourceCount: 21631
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|6,17-6,17
@@ -5418,7 +5418,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 42
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20597
+//::       batchResourceCount: 20637
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|6,17-6,20
@@ -5781,7 +5781,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 47
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22081
+//::       batchResourceCount: 22120
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,32
@@ -7125,7 +7125,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 83
 //::       batchOutcome: Valid
-//::       batchResourceCount: 23733
+//::       batchResourceCount: 23773
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|13,45-13,48
@@ -7233,7 +7233,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 84
 //::       batchOutcome: Valid
-//::       batchResourceCount: 28395
+//::       batchResourceCount: 28432
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|13,5-13,55
@@ -7341,7 +7341,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 48
 //::       batchOutcome: Valid
-//::       batchResourceCount: 109014
+//::       batchResourceCount: 107559
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|14,50-14,50
@@ -7449,7 +7449,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 81
 //::       batchOutcome: Valid
-//::       batchResourceCount: 25117
+//::       batchResourceCount: 25157
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|14,50-14,53
@@ -7557,7 +7557,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 82
 //::       batchOutcome: Valid
-//::       batchResourceCount: 35829
+//::       batchResourceCount: 36064
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|14,5-14,70
@@ -7665,7 +7665,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 49
 //::       batchOutcome: Valid
-//::       batchResourceCount: 36738
+//::       batchResourceCount: 36979
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|17,40-17,42
@@ -7773,7 +7773,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 80
 //::       batchOutcome: Valid
-//::       batchResourceCount: 26187
+//::       batchResourceCount: 26227
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|17,52-17,52
@@ -7881,7 +7881,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 78
 //::       batchOutcome: Valid
-//::       batchResourceCount: 26421
+//::       batchResourceCount: 26461
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|17,52-17,55
@@ -7989,7 +7989,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 79
 //::       batchOutcome: Valid
-//::       batchResourceCount: 37142
+//::       batchResourceCount: 37383
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|17,5-17,79
@@ -8097,7 +8097,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 50
 //::       batchOutcome: Valid
-//::       batchResourceCount: 94292
+//::       batchResourceCount: 93139
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|21,12-21,12
@@ -8205,7 +8205,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 51
 //::       batchOutcome: Valid
-//::       batchResourceCount: 28396
+//::       batchResourceCount: 28436
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|21,12-21,15
@@ -8313,7 +8313,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 52
 //::       batchOutcome: Valid
-//::       batchResourceCount: 28488
+//::       batchResourceCount: 28528
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|21,5-21,22
@@ -8421,7 +8421,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 53
 //::       batchOutcome: Valid
-//::       batchResourceCount: 87163
+//::       batchResourceCount: 85974
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|23,42-23,44
@@ -8529,7 +8529,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 77
 //::       batchOutcome: Valid
-//::       batchResourceCount: 28713
+//::       batchResourceCount: 28753
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|23,54-23,54
@@ -8637,7 +8637,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 75
 //::       batchOutcome: Valid
-//::       batchResourceCount: 28963
+//::       batchResourceCount: 29003
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|23,54-23,57
@@ -8745,7 +8745,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 76
 //::       batchOutcome: Valid
-//::       batchResourceCount: 40643
+//::       batchResourceCount: 40890
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|23,5-23,82
@@ -8853,7 +8853,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 54
 //::       batchOutcome: Valid
-//::       batchResourceCount: 78756
+//::       batchResourceCount: 69774
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,12
@@ -8961,7 +8961,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 55
 //::       batchOutcome: Valid
-//::       batchResourceCount: 30836
+//::       batchResourceCount: 30876
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,15
@@ -9069,7 +9069,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 56
 //::       batchOutcome: Valid
-//::       batchResourceCount: 30930
+//::       batchResourceCount: 30970
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,25
@@ -9177,7 +9177,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 73
 //::       batchOutcome: Valid
-//::       batchResourceCount: 31022
+//::       batchResourceCount: 31062
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
@@ -9285,7 +9285,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 74
 //::       batchOutcome: Valid
-//::       batchResourceCount: 31108
+//::       batchResourceCount: 31148
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
@@ -9393,7 +9393,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 57
 //::       batchOutcome: Valid
-//::       batchResourceCount: 71689
+//::       batchResourceCount: 72098
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
@@ -9501,7 +9501,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 58
 //::       batchOutcome: Valid
-//::       batchResourceCount: 89626
+//::       batchResourceCount: 79135
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
@@ -9606,8 +9606,8 @@ class Secret{
 //::       isUnused: true
 //::     type: CodeLine
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::     file: snapshot_test_complex_7.dfy
 //::     start:
@@ -9713,7 +9713,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 72
 //::       batchOutcome: Valid
-//::       batchResourceCount: 31858
+//::       batchResourceCount: 31898
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
@@ -9821,7 +9821,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 70
 //::       batchOutcome: Valid
-//::       batchResourceCount: 32361
+//::       batchResourceCount: 32401
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -9929,9 +9929,9 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 71
 //::       batchOutcome: Valid
-//::       batchResourceCount: 45923
+//::       batchResourceCount: 46254
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovTest
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|28,71-28,71
 //::     file: snapshot_test_complex_7.dfy
 //::     start:
@@ -10037,7 +10037,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 68
 //::       batchOutcome: Valid
-//::       batchResourceCount: 32885
+//::       batchResourceCount: 32925
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|28,71-28,74
@@ -10145,9 +10145,9 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 69
 //::       batchOutcome: Valid
-//::       batchResourceCount: 45862
+//::       batchResourceCount: 46123
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovTest
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|28,5-28,81
 //::     file: snapshot_test_complex_7.dfy
 //::     start:
@@ -10253,7 +10253,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 59
 //::       batchOutcome: Valid
-//::       batchResourceCount: 50282
+//::       batchResourceCount: 50409
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|31,54-31,56
@@ -10361,7 +10361,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 67
 //::       batchOutcome: Valid
-//::       batchResourceCount: 34821
+//::       batchResourceCount: 34861
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|31,66-31,66
@@ -10469,7 +10469,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 65
 //::       batchOutcome: Valid
-//::       batchResourceCount: 35189
+//::       batchResourceCount: 35229
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|31,66-31,69
@@ -10577,9 +10577,9 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 66
 //::       batchOutcome: Valid
-//::       batchResourceCount: 50814
+//::       batchResourceCount: 51078
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovTest
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|31,79-31,79
 //::     file: snapshot_test_complex_7.dfy
 //::     start:
@@ -10685,7 +10685,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 63
 //::       batchOutcome: Valid
-//::       batchResourceCount: 35755
+//::       batchResourceCount: 35795
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|31,79-31,82
@@ -10793,7 +10793,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 64
 //::       batchOutcome: Valid
-//::       batchResourceCount: 50311
+//::       batchResourceCount: 50676
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|31,92-31,92
@@ -10901,7 +10901,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 61
 //::       batchOutcome: Valid
-//::       batchResourceCount: 36269
+//::       batchResourceCount: 36309
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|31,92-31,95
@@ -11009,7 +11009,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 62
 //::       batchOutcome: Valid
-//::       batchResourceCount: 51285
+//::       batchResourceCount: 51799
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|31,5-31,103
@@ -11117,7 +11117,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 60
 //::       batchOutcome: Valid
-//::       batchResourceCount: 172083
+//::       batchResourceCount: 171799
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Init|correctness|47,9-47,9
@@ -11259,7 +11259,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13665
+//::       batchResourceCount: 13754
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Init|correctness|45,13-45,22
@@ -11289,7 +11289,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13436
+//::       batchResourceCount: 13502
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Init|correctness|47,9-47,23
@@ -11537,7 +11537,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12544
+//::       batchResourceCount: 12565
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,35-56,44
@@ -11569,8 +11569,8 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13506
-//::     covStatus: CovComplete
+//::       batchResourceCount: 13550
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,17-58,27
 //::     file: snapshot_test_complex_7.dfy
@@ -11601,7 +11601,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13719
+//::       batchResourceCount: 13780
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,36-58,45
@@ -11633,7 +11633,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13570
+//::       batchResourceCount: 13599
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|59,13-59,35
@@ -11665,7 +11665,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15033
+//::       batchResourceCount: 15088
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|59,40-59,51
@@ -12011,7 +12011,6 @@ class Secret{
 //::       - call
 //::       - assignment (or return)
 //::       - ensures clause at snapshot_test_complex_7.dfy(43,13)-(43,23) from call
-//::       - ensures clause at snapshot_test_complex_7.dfy(45,13)-(45,22) from call
 //::       - call is allowed by context's modifies clause
 //::       - call
 //::       - assignment (or return)
@@ -12047,7 +12046,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
-//::       batchResourceCount: 10528
+//::       batchResourceCount: 10548
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,21
@@ -12244,7 +12243,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12836
+//::       batchResourceCount: 12876
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
@@ -12287,7 +12286,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13331
+//::       batchResourceCount: 13371
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
@@ -12330,7 +12329,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13481
+//::       batchResourceCount: 13521
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
@@ -12489,7 +12488,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12999
+//::       batchResourceCount: 13039
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
@@ -12532,7 +12531,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13313
+//::       batchResourceCount: 13353
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|79,21-79,21
@@ -12632,7 +12631,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13438
+//::       batchResourceCount: 13478
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
@@ -12714,7 +12713,6 @@ class Secret{
 //::       - assignment (or return)
 //::       - assignment (or return)
 //::       - ensures clause at snapshot_test_complex_7.dfy(56,17)-(56,27) from call
-//::       - ensures clause at snapshot_test_complex_7.dfy(56,35)-(56,44) from call
 //::       - ensures clause at snapshot_test_complex_7.dfy(58,36)-(58,45) from call
 //::       - call is allowed by context's modifies clause
 //::       - call
@@ -12741,7 +12739,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15055
+//::       batchResourceCount: 15095
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
@@ -12784,7 +12782,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21116
+//::       batchResourceCount: 20979
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
@@ -12827,7 +12825,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 18599
+//::       batchResourceCount: 18659
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
@@ -12966,7 +12964,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 17583
+//::       batchResourceCount: 17643
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
@@ -13071,7 +13069,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19467
+//::       batchResourceCount: 19527
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
@@ -13114,7 +13112,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 26825
+//::       batchResourceCount: 26634
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
@@ -13157,7 +13155,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
-//::       batchResourceCount: 24126
+//::       batchResourceCount: 24240
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
@@ -13309,29 +13307,6 @@ class Secret{
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
-//::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|45,13-45,22
-//::     file: snapshot_test_complex_7.dfy
-//::     start:
-//::       line: 45
-//::       col: 13
-//::     end:
-//::       line: 45
-//::       col: 22
-//::     methodName: Secret.Main
-//::     methodType: correctness
-//::     prooftexts:
-//::       - ensures clause
-//::       - ensures clause
-//::       - ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: false
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|58,17-58,27
 //::     file: snapshot_test_complex_7.dfy
 //::     start:
@@ -13353,6 +13328,28 @@ class Secret{
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|45,13-45,22
+//::     file: snapshot_test_complex_7.dfy
+//::     start:
+//::       line: 45
+//::       col: 13
+//::     end:
+//::       line: 45
+//::       col: 22
+//::     methodName: Secret.Main
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|59,13-59,35
 //::     file: snapshot_test_complex_7.dfy
 //::     start:
@@ -13410,27 +13407,6 @@ class Secret{
 //::     methodType: correctness
 //::     prooftexts:
 //::       - ensures clause
-//::       - ensures clause
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: false
-//::     type: Postcondition
-//::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
-//::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|56,35-56,44
-//::     file: snapshot_test_complex_7.dfy
-//::     start:
-//::       line: 56
-//::       col: 35
-//::     end:
-//::       line: 56
-//::       col: 44
-//::     methodName: Secret.Main
-//::     methodType: correctness
-//::     prooftexts:
 //::       - ensures clause
 //::     roles:
 //::       isTop: false
@@ -13506,7 +13482,6 @@ class Secret{
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,8
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|5,9-5,24
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|3,9-3,24
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,54
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|6,11-6,11
 //::       provers:
@@ -13579,8 +13554,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,5
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|23,5-23,82
 //::       provers:
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,8
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,54
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|4,35-4,38
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|9,9-9,19
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|21,5-21,22
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,12
@@ -13609,15 +13583,9 @@ class Secret{
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,5
-//::     - top: snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
-//::       provers:
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|28,71-28,71
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,5
-//::     - top: snapshot_test_complex_7.dfy|Q1|correctness|28,71-28,74
-//::       provers:
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|28,5-28,81
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,35-4,38
@@ -13628,9 +13596,6 @@ class Secret{
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|31,66-31,66
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,5
-//::     - top: snapshot_test_complex_7.dfy|Q1|correctness|31,66-31,69
-//::       provers:
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|31,79-31,79
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,5
@@ -13639,14 +13604,10 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,5
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|31,5-31,103
 //::       provers:
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,54
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|5,9-5,24
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,32
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|21,5-21,22
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::     - top: snapshot_test_complex_7.dfy|Secret.Init|correctness|43,13-43,23
 //::       provers:
-//::         - snapshot_test_complex_7.dfy|Secret.Init|correctness|48,9-48,19
 //::         - snapshot_test_complex_7.dfy|Secret.Init|correctness|49,9-49,20
 //::     - top: snapshot_test_complex_7.dfy|Secret.Init|correctness|44,13-44,22
 //::       provers:
@@ -13655,7 +13616,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Init|correctness|49,9-49,20
 //::     - top: snapshot_test_complex_7.dfy|Secret.Init|correctness|45,13-45,22
 //::       provers:
-//::         - snapshot_test_complex_7.dfy|Secret.Init|correctness|47,9-47,23
 //::         - snapshot_test_complex_7.dfy|Secret.Init|correctness|48,9-48,19
 //::         - snapshot_test_complex_7.dfy|Secret.Init|correctness|49,9-49,20
 //::     - top: snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,17-56,27
@@ -13664,14 +13624,11 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::     - top: snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,35-56,44
 //::       provers:
-//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,17-56,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
-//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::     - top: snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,17-58,27
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
-//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|64,13-64,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::     - top: snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,36-58,45
@@ -13726,13 +13683,11 @@ class Secret{
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::   proofUnused:
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|3,22-3,22
@@ -15176,6 +15131,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,29-4,32
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,35-4,35
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,35-4,38
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,54
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|5,22-5,22
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,5
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,8
@@ -15622,6 +15578,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,29-4,32
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,35-4,35
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,35-4,38
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,54
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|5,22-5,22
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,5
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,8
@@ -15812,6 +15769,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,29-4,32
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,35-4,35
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,35-4,38
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|4,5-4,54
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|5,22-5,22
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,5
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,8
@@ -16679,6 +16637,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,71-28,71
@@ -16807,6 +16766,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17063,6 +17023,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17358,6 +17319,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,11-6,14
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,17-6,17
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,17-6,20
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,32
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|8,9-8,19
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|9,9-9,19
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|13,45-13,45
@@ -17372,6 +17334,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|17,5-17,79
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|21,12-21,12
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|21,12-21,15
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|21,5-21,22
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|23,42-23,44
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|23,54-23,54
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|23,54-23,57
@@ -17382,6 +17345,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17498,12 +17462,14 @@ class Secret{
 //::     - top: snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,35-56,44
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|54,14-54,23
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,17-56,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,17-58,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,36-58,45
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|59,13-59,35
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|59,40-59,51
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,13
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|64,13-64,27
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,9
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|71,9-71,25
@@ -17517,6 +17483,8 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|59,13-59,35
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|59,40-59,51
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,13
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|64,13-64,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,9
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|71,9-71,25
@@ -17543,6 +17511,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,36-58,45
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|59,40-59,51
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,13
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|64,13-64,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,9
@@ -17840,6 +17809,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
+//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
@@ -17859,6 +17829,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
+//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
@@ -17878,7 +17849,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|59,13-59,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|59,40-59,51
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|56,17-56,27
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|56,35-56,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|58,36-58,45
 //::     - call: snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::       targets:

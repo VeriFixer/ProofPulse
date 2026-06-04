@@ -89,7 +89,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6409
+//::       batchResourceCount: 6473
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16
@@ -147,7 +147,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16473
+//::       batchResourceCount: 16552
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28
@@ -267,7 +267,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16214
+//::       batchResourceCount: 16199
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
@@ -306,7 +306,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11097
+//::       batchResourceCount: 11167
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19
@@ -336,7 +336,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20419
+//::       batchResourceCount: 20740
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
@@ -419,7 +419,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19456
+//::       batchResourceCount: 19536
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
@@ -619,7 +619,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15052
+//::       batchResourceCount: 15238
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
@@ -879,7 +879,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 26
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9888
+//::       batchResourceCount: 10024
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,15
@@ -992,7 +992,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 27
 //::       batchOutcome: Valid
-//::       batchResourceCount: 10121
+//::       batchResourceCount: 10228
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
@@ -1096,7 +1096,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19438
+//::       batchResourceCount: 19616
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
@@ -1191,7 +1191,6 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       - loop invariant always holds
 //::       - loop invariant always holds
 //::       - loop invariant always holds
-//::       - loop invariant always holds
 //::     roles:
 //::       isTop: true
 //::       isCall: false
@@ -1201,7 +1200,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20556
+//::       batchResourceCount: 20715
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
@@ -1256,9 +1255,9 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21687
+//::       batchResourceCount: 21862
 //::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
 //::     file: snapshot_test_complex_2.dfy
 //::     start:
@@ -1311,7 +1310,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22018
+//::       batchResourceCount: 22246
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
@@ -1357,7 +1356,6 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       - loop invariant always holds
 //::       - loop invariant always holds
 //::       - loop invariant always holds
-//::       - loop invariant always holds
 //::     roles:
 //::       isTop: true
 //::       isCall: false
@@ -1367,7 +1365,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21643
+//::       batchResourceCount: 21849
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
@@ -1480,7 +1478,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11778
+//::       batchResourceCount: 11885
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
@@ -1593,7 +1591,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 28
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11774
+//::       batchResourceCount: 11881
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|32,15-32,59
@@ -1697,7 +1695,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 28966
+//::       batchResourceCount: 30496
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
@@ -1719,7 +1717,6 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::       - loop invariant always holds
 //::       - loop invariant always holds
 //::       - this loop invariant holds on entry
-//::       - loop invariant always holds
 //::       - loop invariant always holds
 //::       - loop invariant always holds
 //::       - loop invariant always holds
@@ -1753,7 +1750,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21437
+//::       batchResourceCount: 21616
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|28,9-28,9
@@ -1866,7 +1863,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 10927
+//::       batchResourceCount: 10993
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|35,11-35,20
@@ -1919,7 +1916,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12214
+//::       batchResourceCount: 12332
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
@@ -2393,7 +2390,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15737
+//::       batchResourceCount: 15748
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|41,9-41,27
@@ -2809,7 +2806,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11971
+//::       batchResourceCount: 12099
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|54,5-54,30
@@ -2864,7 +2861,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12478
+//::       batchResourceCount: 12610
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
@@ -2917,7 +2914,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15595
+//::       batchResourceCount: 15825
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
@@ -2970,7 +2967,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 22
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15902
+//::       batchResourceCount: 16088
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
@@ -3083,7 +3080,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::     topMeta:
 //::       batchIndex: 23
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13939
+//::       batchResourceCount: 14045
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_2.dfy|strategy|correctness|4,12-4,16
@@ -3137,7 +3134,6 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16
 //::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19
 //::       provers:
-//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|14,5-14,19
@@ -3154,7 +3150,6 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|4,12-4,16
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20
-//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25
 //::     - top: snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
 //::       provers:
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
@@ -3169,40 +3164,28 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
 //::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
 //::       provers:
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
 //::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
 //::       provers:
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
 //::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
 //::       provers:
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
 //::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
 //::       provers:
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|35,14-35,19
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|36,5-36,17
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
 //::     - top: snapshot_test_complex_2.dfy|strategy|correctness|32,30-32,45
 //::       provers:
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|40,9-40,24
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|45,9-45,21
@@ -3249,6 +3232,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,12-8,28
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,7-9,20
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
 //::     - top: snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25
 //::       unused:
@@ -3274,6 +3258,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|5,11-5,19
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|8,9-8,29
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|9,18-9,18
+//::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|10,3-10,25
 //::         - snapshot_test_complex_2.dfy|CardinalitySubsetLt|correctness|12,5-12,31
 //::     - top: snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
 //::       unused:
@@ -3487,6 +3472,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
@@ -3520,11 +3506,13 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
 //::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
 //::       unused:
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
@@ -3532,6 +3520,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|30,15-30,40
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
@@ -3564,6 +3553,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
@@ -3597,7 +3587,6 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
 //::     - top: snapshot_test_complex_2.dfy|strategy|correctness|31,46-31,51
 //::       unused:
@@ -3605,6 +3594,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|19,23-19,34
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|20,11-20,26
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|23,3-23,13
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,15
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|29,15-29,30
@@ -3613,6 +3603,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|30,29-30,40
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,51
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|31,15-31,27
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|31,32-31,36
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|31,41-31,46
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|32,59-32,59
@@ -3637,7 +3628,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
-//::         - snapshot_test_complex_2.dfy|strategy|correctness|25,7-25,14
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|24,7-24,14
 //::     - top: snapshot_test_complex_2.dfy|strategy|correctness|32,37-32,37
 //::       unused:
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18
@@ -3760,6 +3751,7 @@ method strategy<T>(P: set<T>, Special: T) returns (count: int)
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|56,3-56,16
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|58,3-58,16
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|59,1-59,1
+//::         - snapshot_test_complex_2.dfy|strategy|correctness|26,7-26,22
 //::     - top: snapshot_test_complex_2.dfy|strategy|correctness|32,52-32,59
 //::       unused:
 //::         - snapshot_test_complex_2.dfy|strategy|correctness|19,12-19,18

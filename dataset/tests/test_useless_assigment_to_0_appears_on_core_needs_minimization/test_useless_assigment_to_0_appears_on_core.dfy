@@ -2,7 +2,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
     ensures n.Length == ex.Length
     ensures forall i:int :: 0<= i < n.Length ==> ex[i] == 0
 {
-    var z:= 0 ;  // If z equals 0 this line appears covered, if equals something differn appears uncovered! (covering line 9 ! weird) 
+    var z:= 0;  // If z equals 0 this line appears covered, if equals something differn appears uncovered! (covering line 9 ! weird) 
     ex := new int[n.Length];
     var i := 0;
     while(i < n.Length)

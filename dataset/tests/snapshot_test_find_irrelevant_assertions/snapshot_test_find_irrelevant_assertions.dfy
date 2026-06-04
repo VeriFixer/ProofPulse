@@ -71,7 +71,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5534
+//::       batchResourceCount: 5536
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|3,19-3,24

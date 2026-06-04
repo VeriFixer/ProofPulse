@@ -8,8 +8,39 @@ const JUNIT_PATH = process.env.JUNIT_REPORT_PATH || 'test-results/junit.xml';
 const COV_PATH = process.env.COVERAGE_REPORT_PATH || 'test-results/coverage.json';
 
 const args = process.argv.slice(2);
+
+if (args.includes('--help') || args.includes('-h')) {
+  console.log(`
+ProofPulse Test Harness
+
+Usage: npm test -- [options]
+
+Options:
+  --dafny-path <path>            Path to Dafny binary (default: dafny in PATH)
+  --force-minimization           Enable unsat core minimization
+  --no-abstract-interpretation   Disable Dafny's abstract interpretation pass
+  --update-snapshots             Regenerate snapshot YAML in .dfy files
+  -h, --help                     Show this help message
+
+Environment variables:
+  DAFNY_TIMEOUT_SEC              Per-file verification timeout (default: 60)
+  CI                             Adjusts concurrency
+  JUNIT_REPORT_PATH              JUnit XML output path (default: test-results/junit.xml)
+  COVERAGE_REPORT_PATH           Coverage JSON output path (default: test-results/coverage.json)
+
+Examples:
+  npm test
+  npm test -- --dafny-path /path/to/dafny --force-minimization
+  npm test -- --no-abstract-interpretation
+  npm test -- --update-snapshots
+  npm test -- --help
+`.trim());
+  process.exit(0);
+}
+
 const forceMinimization = args.includes('--force-minimization');
 const updateSnapshots = args.includes('--update-snapshots');
+const noAbstractInterpretation = args.includes('--no-abstract-interpretation');
 
 let dafnyPath: string | undefined;
 const dafnyIdx = args.indexOf('--dafny-path');
@@ -18,7 +49,7 @@ if (dafnyIdx !== -1 && args[dafnyIdx + 1]) {
 }
 
 try {
-  const result = await runAllTests({ forceMinimization, dafnyPath, updateSnapshots });
+  const result = await runAllTests({ forceMinimization, dafnyPath, updateSnapshots, noAbstractInterpretation });
   if (!result) process.exit(0);
 
   const { results, summary } = result;

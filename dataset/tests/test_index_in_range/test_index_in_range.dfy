@@ -16,5 +16,4 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 }
 //::: Name - Checking indexes assertions, probably should modify behaviour
 //::: Description - Simple Zero Vector creation to test index accesses
-//::: L9 - Uncovered
 //::: L13 - CovComplete

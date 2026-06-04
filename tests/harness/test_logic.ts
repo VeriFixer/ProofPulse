@@ -87,6 +87,7 @@ interface RunOptions {
   forceMinimization?: boolean;
   dafnyPath?: string;
   updateSnapshots?: boolean;
+  noAbstractInterpretation?: boolean;
 }
 
 // ── Test parsing ──
@@ -255,6 +256,7 @@ async function runSnapshotTest(srcFile: string, opts: RunOptions = {}): Promise<
     dafnyPath: opts.dafnyPath,
     timeoutSeconds: DAFNY_TIMEOUT_SEC,
     forceMinimization: opts.forceMinimization,
+    noAbstractInterpretation: opts.noAbstractInterpretation,
   });
 
   if (dafnyRes.timedOut) {
@@ -404,6 +406,7 @@ async function runTest(srcFile: string, opts: RunOptions = {}): Promise<RunTestR
     dafnyPath: opts.dafnyPath,
     timeoutSeconds: DAFNY_TIMEOUT_SEC,
     forceMinimization: opts.forceMinimization,
+    noAbstractInterpretation: opts.noAbstractInterpretation,
   });
 
   if (dafnyRes.timedOut) {
@@ -535,6 +538,9 @@ export async function runAllTests(opts: RunOptions = {}): Promise<RunAllTestsRes
   if (opts.forceMinimization) {
     console.log(`${DIM}Minimization:${RESET} ${CYAN}enabled${RESET}`);
   }
+  if (opts.noAbstractInterpretation) {
+    console.log(`${DIM}Abstract interp:${RESET} ${CYAN}disabled${RESET}`);
+  }
   if (opts.updateSnapshots) {
     console.log(`${DIM}Snapshots:${RESET}   ${CYAN}update mode${RESET}`);
   }
@@ -553,7 +559,7 @@ export async function runAllTests(opts: RunOptions = {}): Promise<RunAllTestsRes
 
       const isBug = srcFile.includes('bug_') && !srcFile.includes('snapshot_');
       const testStart = performance.now();
-      const res = await runTest(srcFile, { forceMinimization: opts.forceMinimization, dafnyPath: opts.dafnyPath, updateSnapshots: opts.updateSnapshots });
+      const res = await runTest(srcFile, { forceMinimization: opts.forceMinimization, dafnyPath: opts.dafnyPath, updateSnapshots: opts.updateSnapshots, noAbstractInterpretation: opts.noAbstractInterpretation });
       const duration = (performance.now() - testStart) / 1000;
 
       if (res.reason === 'timeout') {

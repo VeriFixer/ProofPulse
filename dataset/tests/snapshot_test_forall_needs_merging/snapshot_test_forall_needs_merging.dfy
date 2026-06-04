@@ -52,7 +52,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6645
+//::       batchResourceCount: 6681
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -91,7 +91,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9028
+//::       batchResourceCount: 9111
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -130,7 +130,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9765
+//::       batchResourceCount: 9957
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -234,7 +234,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 8545
+//::       batchResourceCount: 8627
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -265,7 +265,6 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       - loop invariant always holds
 //::       - loop invariant
 //::       - loop invariant always holds
-//::       - loop invariant always holds
 //::       - loop invariant
 //::       - loop invariant
 //::       - loop invariant always holds
@@ -290,7 +289,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11678
+//::       batchResourceCount: 11912
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -359,7 +358,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9176
+//::       batchResourceCount: 9510
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -398,7 +397,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9479
+//::       batchResourceCount: 9888
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: >-
@@ -437,7 +436,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9318
+//::       batchResourceCount: 9707
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -492,7 +491,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13836
+//::       batchResourceCount: 14624
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -561,7 +560,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9018
+//::       batchResourceCount: 9177
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -600,7 +599,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9139
+//::       batchResourceCount: 9387
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -704,7 +703,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 8880
+//::       batchResourceCount: 8957
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //:: edges:
@@ -734,8 +733,6 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::     - top: >-
 //::         snapshot_test_forall_needs_merging.dfy|SplitStringIntoChars|correctness|9,19-9,57
 //::       provers:
-//::         - >-
-//::           snapshot_test_forall_needs_merging.dfy|SplitStringIntoChars|correctness|5,5-5,12
 //::         - >-
 //::           snapshot_test_forall_needs_merging.dfy|SplitStringIntoChars|correctness|8,19-8,26
 //::         - >-

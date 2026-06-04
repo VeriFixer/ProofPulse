@@ -103,7 +103,7 @@ method Main() {
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 4460
+//::       batchResourceCount: 4480
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_fully_use_postcondition.dfy|Main|correctness|7,6-7,19

@@ -219,7 +219,7 @@ class TwoStacks<T(0)(==)>
             n := n + 1;
         }
         
-        position := -1;
+        position := -1; 
         assert position >= 1 ==> exists i::0 <= i < |s2| && s2[i] == Element;
         assert forall i:: data.Length - |s2| < i< data.Length-1 ==> data[i] == s2[data.Length-i-1];
         assert forall i:: 0 <= i < |s2| ==> s2[i] == data[data.Length-i-1];

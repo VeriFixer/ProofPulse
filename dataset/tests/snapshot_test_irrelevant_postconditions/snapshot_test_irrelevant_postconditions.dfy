@@ -70,7 +70,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5532
+//::       batchResourceCount: 5534
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|4,19-4,24

@@ -104,7 +104,7 @@ method Main(){
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 4398
+//::       batchResourceCount: 4418
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_post_cov_complete.dfy|Main|correctness|8,9-8,21

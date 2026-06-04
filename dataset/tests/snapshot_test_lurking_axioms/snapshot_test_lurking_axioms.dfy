@@ -116,7 +116,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
-//::       batchResourceCount: 38194
+//::       batchResourceCount: 38619
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|4,16-4,25
@@ -412,9 +412,9 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16216
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
+//::       batchResourceCount: 16459
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -464,7 +464,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16331
+//::       batchResourceCount: 16569
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
@@ -829,7 +829,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 23064
+//::       batchResourceCount: 22704
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|6,14-6,16
@@ -1068,7 +1068,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14586
+//::       batchResourceCount: 14526
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
@@ -1147,9 +1147,9 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15035
+//::       batchResourceCount: 15233
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovTest
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -1198,7 +1198,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14904
+//::       batchResourceCount: 14984
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
@@ -1249,9 +1249,9 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15068
+//::       batchResourceCount: 15116
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -1421,7 +1421,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15955
+//::       batchResourceCount: 16204
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,3
@@ -1553,7 +1553,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14301
+//::       batchResourceCount: 14305
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|13,5-13,7
@@ -1683,7 +1683,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14978
+//::       batchResourceCount: 14982
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
@@ -1889,7 +1889,6 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|8,15-8,51
 //::       provers:
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,17
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
 //::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,5
@@ -1898,6 +1897,10 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
 //::       provers:
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|4,3-4,27
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
+//::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,16
+//::       provers:
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|10,5-10,8
 //::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|6,3-12,3
 //::       provers:
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|11,5-11,11
@@ -2277,7 +2280,6 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|5,7-5,12
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,25-7,27
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,27
-//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,20-7,27
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,44
@@ -2297,6 +2299,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,13
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|13,3-13,17
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|14,1-14,1
+//::         - snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
 //::     - top: snapshot_test_lurking_axioms.dfy|append|correctness|10,13-10,13
 //::       unused:
 //::         - snapshot_test_lurking_axioms.dfy|append|correctness|2,12-2,31
