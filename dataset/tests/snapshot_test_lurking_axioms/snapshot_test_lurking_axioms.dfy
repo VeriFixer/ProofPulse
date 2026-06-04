@@ -62,6 +62,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -113,6 +114,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
@@ -164,6 +166,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
@@ -214,6 +217,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 7
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -261,6 +265,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -309,6 +314,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 27
 //::       batchOutcome: Valid
@@ -359,6 +365,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -409,6 +416,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
@@ -461,6 +469,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
@@ -593,6 +602,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 23
 //::       batchOutcome: Valid
@@ -644,6 +654,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
@@ -695,6 +706,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
@@ -746,6 +758,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 26
 //::       batchOutcome: Valid
@@ -826,6 +839,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
@@ -933,6 +947,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 22
 //::       batchOutcome: Valid
@@ -1065,6 +1080,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
@@ -1144,6 +1160,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
@@ -1195,6 +1212,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
@@ -1246,6 +1264,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
@@ -1323,6 +1342,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -1370,6 +1390,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 4
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -1418,6 +1439,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
@@ -1550,6 +1572,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
@@ -1601,6 +1624,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
@@ -1680,6 +1704,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
@@ -1757,6 +1782,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -1858,6 +1884,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered

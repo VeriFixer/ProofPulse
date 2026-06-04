@@ -49,6 +49,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -88,6 +89,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
@@ -127,6 +129,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
@@ -165,6 +168,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -231,6 +235,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
@@ -286,6 +291,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 3
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
@@ -355,6 +361,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
@@ -394,6 +401,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
@@ -433,6 +441,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
@@ -488,6 +497,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
@@ -557,6 +567,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
@@ -596,6 +607,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
@@ -634,6 +646,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -700,6 +713,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid

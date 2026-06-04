@@ -32,6 +32,7 @@ method DemoImpossiblePrecondition(a: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -57,6 +58,7 @@ method DemoImpossiblePrecondition(a: int)
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: Precondition
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -79,6 +81,7 @@ method DemoImpossiblePrecondition(a: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -101,6 +104,7 @@ method DemoImpossiblePrecondition(a: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -123,6 +127,7 @@ method DemoImpossiblePrecondition(a: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -147,6 +152,7 @@ method DemoImpossiblePrecondition(a: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered

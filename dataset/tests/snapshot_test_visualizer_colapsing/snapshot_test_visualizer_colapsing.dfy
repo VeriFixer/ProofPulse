@@ -26,6 +26,7 @@ method Abs(x: int) returns (y: int)
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -50,6 +51,7 @@ method Abs(x: int) returns (y: int)
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: Precondition
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -74,6 +76,7 @@ method Abs(x: int) returns (y: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -95,6 +98,7 @@ method Abs(x: int) returns (y: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -118,6 +122,7 @@ method Abs(x: int) returns (y: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered

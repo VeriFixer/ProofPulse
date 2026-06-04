@@ -79,10 +79,10 @@ npx vitest --run
 The Docker image includes Dafny and all dependencies — no local setup required.
 
 ```bash
-docker build -f Dockerfile.ci -t proofpulse .
-docker run --rm --tmpfs /tmp:rw,exec,size=1g proofpulse                       # Full test suite
-docker run --rm --tmpfs /tmp:rw,exec,size=1g proofpulse npm test              # Integration + snapshot tests
-docker run --rm --tmpfs /tmp:rw,exec,size=1g proofpulse npm run test:unit     # Unit tests only
+docker build -f Dockerfile.ci -t proofpulse-ci .
+docker run --rm --tmpfs /tmp:rw,exec,size=1g proofpulse-ci                       # Full test suite
+docker run --rm --tmpfs /tmp:rw,exec,size=1g proofpulse-ci npm test              # Integration + snapshot tests
+docker run --rm --tmpfs /tmp:rw,exec,size=1g proofpulse-ci npm run test:unit     # Unit tests only
 ```
 
 ## Test Infrastructure
@@ -127,3 +127,9 @@ Directories prefixed with `bug_` use inverted logic — verification failure is 
 
 
  npm test -- --dafny-path /home/ricostynha/Desktop/proof_pulse_custom_dafny_boogie/dafny_proofpulse/Binaries/Dafny --force-minimization
+
+ # Update the snapshots
+
+ docker run --rm -v $(pwd)/dataset:/app/dataset proofpulse-ci \
+  npm test -- --dafny-path /usr/local/bin/dafny \
+  --force-minimization --no-abstract-interpretation --update-snapshots

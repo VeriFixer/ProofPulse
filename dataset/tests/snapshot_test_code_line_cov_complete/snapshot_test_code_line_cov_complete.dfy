@@ -26,6 +26,7 @@ method ret32(a: int) returns (x:int)
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -50,6 +51,7 @@ method ret32(a: int) returns (x:int)
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -73,6 +75,7 @@ method ret32(a: int) returns (x:int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered

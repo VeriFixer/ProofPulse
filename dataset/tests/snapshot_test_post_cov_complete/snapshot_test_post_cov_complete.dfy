@@ -32,6 +32,7 @@ method Main(){
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -56,6 +57,7 @@ method Main(){
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -79,6 +81,7 @@ method Main(){
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -101,6 +104,7 @@ method Main(){
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -129,6 +133,7 @@ method Main(){
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
@@ -150,6 +155,7 @@ method Main(){
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest

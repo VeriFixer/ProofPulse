@@ -41,6 +41,7 @@ function Id<T> (a : T) : T {
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -68,6 +69,7 @@ function Id<T> (a : T) : T {
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
@@ -95,6 +97,7 @@ function Id<T> (a : T) : T {
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
@@ -121,6 +124,7 @@ function Id<T> (a : T) : T {
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -144,6 +148,7 @@ function Id<T> (a : T) : T {
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -173,6 +178,7 @@ function Id<T> (a : T) : T {
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -194,6 +200,7 @@ function Id<T> (a : T) : T {
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete

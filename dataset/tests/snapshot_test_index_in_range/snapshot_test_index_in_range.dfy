@@ -75,6 +75,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
@@ -119,6 +120,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
@@ -163,6 +165,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
@@ -206,6 +209,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -246,6 +250,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 5
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -286,6 +291,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -327,6 +333,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
@@ -370,6 +377,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -413,6 +421,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
@@ -458,6 +467,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
@@ -562,6 +572,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
@@ -606,6 +617,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
@@ -672,6 +684,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
@@ -758,6 +771,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
@@ -862,6 +876,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
@@ -927,6 +942,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
@@ -990,6 +1006,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -1030,6 +1047,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 4
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -1071,6 +1089,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
@@ -1154,6 +1173,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered

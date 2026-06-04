@@ -195,6 +195,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -302,6 +303,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 10
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -407,6 +409,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 10
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
@@ -600,6 +603,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
@@ -708,6 +712,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
@@ -986,6 +991,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
@@ -1094,6 +1100,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
@@ -1457,6 +1464,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 22
 //::       batchOutcome: Valid
@@ -1565,6 +1573,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
@@ -2013,6 +2022,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
@@ -2121,6 +2131,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
@@ -2654,6 +2665,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
@@ -2762,6 +2774,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
@@ -3380,6 +3393,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 4
 //::     topMeta:
 //::       batchIndex: 34
 //::       batchOutcome: Valid
@@ -4411,6 +4425,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 4
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -4516,6 +4531,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 35
 //::       batchOutcome: Valid
@@ -4623,6 +4639,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 8
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -4728,6 +4745,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 4
 //::     topMeta:
 //::       batchIndex: 36
 //::       batchOutcome: Valid
@@ -4921,6 +4939,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 38
 //::       batchOutcome: Valid
@@ -5029,6 +5048,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 39
 //::       batchOutcome: Valid
@@ -5307,6 +5327,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 45
 //::       batchOutcome: Valid
@@ -5415,6 +5436,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 42
 //::       batchOutcome: Valid
@@ -5778,6 +5800,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 47
 //::       batchOutcome: Valid
@@ -6305,6 +6328,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 4
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
@@ -6661,6 +6685,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 6
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -7017,6 +7042,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
@@ -7122,6 +7148,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 83
 //::       batchOutcome: Valid
@@ -7230,6 +7257,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 84
 //::       batchOutcome: Valid
@@ -7338,6 +7366,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 3
 //::     topMeta:
 //::       batchIndex: 48
 //::       batchOutcome: Valid
@@ -7446,6 +7475,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 81
 //::       batchOutcome: Valid
@@ -7554,6 +7584,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 82
 //::       batchOutcome: Valid
@@ -7662,6 +7693,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 49
 //::       batchOutcome: Valid
@@ -7770,6 +7802,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 80
 //::       batchOutcome: Valid
@@ -7878,6 +7911,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 78
 //::       batchOutcome: Valid
@@ -7986,6 +8020,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 79
 //::       batchOutcome: Valid
@@ -8094,6 +8129,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 50
 //::       batchOutcome: Valid
@@ -8202,6 +8238,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 3
 //::     topMeta:
 //::       batchIndex: 51
 //::       batchOutcome: Valid
@@ -8310,6 +8347,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 52
 //::       batchOutcome: Valid
@@ -8418,6 +8456,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 53
 //::       batchOutcome: Valid
@@ -8526,6 +8565,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 77
 //::       batchOutcome: Valid
@@ -8634,6 +8674,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 75
 //::       batchOutcome: Valid
@@ -8742,6 +8783,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 76
 //::       batchOutcome: Valid
@@ -8850,6 +8892,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 54
 //::       batchOutcome: Valid
@@ -8958,6 +9001,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 3
 //::     topMeta:
 //::       batchIndex: 55
 //::       batchOutcome: Valid
@@ -9066,6 +9110,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 56
 //::       batchOutcome: Valid
@@ -9174,6 +9219,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 73
 //::       batchOutcome: Valid
@@ -9282,6 +9328,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 74
 //::       batchOutcome: Valid
@@ -9390,6 +9437,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 57
 //::       batchOutcome: Valid
@@ -9498,6 +9546,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 58
 //::       batchOutcome: Valid
@@ -9605,6 +9654,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
@@ -9710,6 +9760,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 72
 //::       batchOutcome: Valid
@@ -9818,6 +9869,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 70
 //::       batchOutcome: Valid
@@ -9926,6 +9978,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 71
 //::       batchOutcome: Valid
@@ -10034,6 +10087,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 68
 //::       batchOutcome: Valid
@@ -10142,6 +10196,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 69
 //::       batchOutcome: Valid
@@ -10250,6 +10305,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 59
 //::       batchOutcome: Valid
@@ -10358,6 +10414,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 67
 //::       batchOutcome: Valid
@@ -10466,6 +10523,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 65
 //::       batchOutcome: Valid
@@ -10574,6 +10632,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 66
 //::       batchOutcome: Valid
@@ -10682,6 +10741,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 63
 //::       batchOutcome: Valid
@@ -10790,6 +10850,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 64
 //::       batchOutcome: Valid
@@ -10898,6 +10959,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 61
 //::       batchOutcome: Valid
@@ -11006,6 +11068,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 62
 //::       batchOutcome: Valid
@@ -11114,6 +11177,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 60
 //::       batchOutcome: Valid
@@ -11144,6 +11208,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -11173,6 +11238,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: Uncovered
@@ -11199,6 +11265,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: Uncovered
@@ -11226,6 +11293,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
@@ -11256,6 +11324,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
@@ -11286,6 +11355,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
@@ -11321,6 +11391,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -11348,6 +11419,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
@@ -11383,6 +11455,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -11410,6 +11483,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
@@ -11445,6 +11519,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -11474,6 +11549,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -11505,6 +11581,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -11534,6 +11611,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
@@ -11566,6 +11644,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
@@ -11598,6 +11677,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
@@ -11630,6 +11710,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
@@ -11662,6 +11743,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
@@ -11694,6 +11776,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
@@ -11726,6 +11809,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
@@ -11765,6 +11849,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -11793,6 +11878,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -11821,6 +11907,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -11857,6 +11944,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 5
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -11885,6 +11973,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -11953,6 +12042,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -12043,6 +12133,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 12
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
@@ -12180,6 +12271,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -12240,6 +12332,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
@@ -12283,6 +12376,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
@@ -12326,6 +12420,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
@@ -12368,6 +12463,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -12445,6 +12541,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -12485,6 +12582,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
@@ -12528,6 +12626,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
@@ -12628,6 +12727,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
@@ -12736,6 +12836,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 4
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
@@ -12779,6 +12880,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
@@ -12822,6 +12924,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
@@ -12864,6 +12967,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
@@ -12961,6 +13065,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
@@ -13066,6 +13171,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
@@ -13109,6 +13215,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
@@ -13152,6 +13259,7 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
@@ -13194,6 +13302,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -13215,6 +13324,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Precondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -13236,6 +13346,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Precondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -13261,6 +13372,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -13282,6 +13394,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -13304,6 +13417,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Precondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
@@ -13325,6 +13439,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
@@ -13347,6 +13462,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -13370,6 +13486,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
@@ -13392,6 +13509,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
@@ -13414,6 +13532,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
@@ -13435,6 +13554,7 @@ class Secret{
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest

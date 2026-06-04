@@ -147,6 +147,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 4
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -216,6 +217,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 10
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -282,6 +284,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 4
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -349,6 +352,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
@@ -417,6 +421,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 39
 //::       batchOutcome: Valid
@@ -485,6 +490,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 40
 //::       batchOutcome: Valid
@@ -553,6 +559,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -756,6 +763,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 44
 //::       batchOutcome: Valid
@@ -824,6 +832,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 4
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
@@ -892,6 +901,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 7
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
@@ -961,6 +971,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -1026,6 +1037,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
@@ -1094,6 +1106,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
@@ -1162,6 +1175,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
@@ -1230,6 +1244,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
@@ -1343,6 +1358,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 23
 //::       batchOutcome: Valid
@@ -1411,6 +1427,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
@@ -1479,6 +1496,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
@@ -1547,6 +1565,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 26
 //::       batchOutcome: Valid
@@ -1615,6 +1634,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 27
 //::       batchOutcome: Valid
@@ -1683,6 +1703,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 28
 //::       batchOutcome: Valid
@@ -1751,6 +1772,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
@@ -1819,6 +1841,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 30
 //::       batchOutcome: Valid
@@ -1887,6 +1910,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 31
 //::       batchOutcome: Valid
@@ -1955,6 +1979,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 32
 //::       batchOutcome: Valid
@@ -2024,6 +2049,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -2089,6 +2115,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 33
 //::       batchOutcome: Valid
@@ -2157,6 +2184,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 34
 //::       batchOutcome: Valid
@@ -2225,6 +2253,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 35
 //::       batchOutcome: Valid
@@ -2292,6 +2321,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -2357,6 +2387,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 36
 //::       batchOutcome: Valid
@@ -2425,6 +2456,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 37
 //::       batchOutcome: Valid
@@ -2580,6 +2612,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -2645,6 +2678,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 38
 //::       batchOutcome: Valid
@@ -2713,6 +2747,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
@@ -2781,6 +2816,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
@@ -2849,6 +2885,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -2914,6 +2951,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
@@ -3120,6 +3158,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
@@ -3188,6 +3227,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
@@ -3256,6 +3296,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
@@ -3411,6 +3452,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -3476,6 +3518,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
@@ -3544,6 +3587,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
@@ -3612,6 +3656,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
@@ -3767,6 +3812,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -3832,6 +3878,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
@@ -3987,6 +4034,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -4010,6 +4058,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -4031,6 +4080,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -4053,6 +4103,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -4137,6 +4188,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 5
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -4225,6 +4277,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -4309,6 +4362,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -4394,6 +4448,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 26
 //::       batchOutcome: Valid
@@ -4481,6 +4536,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
@@ -4565,6 +4621,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
@@ -4652,6 +4709,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
@@ -4741,6 +4799,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
@@ -4825,6 +4884,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 62
 //::       batchOutcome: Valid
@@ -4912,6 +4972,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 63
 //::       batchOutcome: Valid
@@ -4999,6 +5060,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 61
 //::       batchOutcome: Valid
@@ -5086,6 +5148,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 56
 //::       batchOutcome: Valid
@@ -5173,6 +5236,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 57
 //::       batchOutcome: Valid
@@ -5260,6 +5324,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 58
 //::       batchOutcome: Valid
@@ -5411,6 +5476,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 60
 //::       batchOutcome: Valid
@@ -5498,6 +5564,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
@@ -5585,6 +5652,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
@@ -5671,6 +5739,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
@@ -5755,6 +5824,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 54
 //::       batchOutcome: Valid
@@ -5842,6 +5912,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 55
 //::       batchOutcome: Valid
@@ -5929,6 +6000,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
@@ -6016,6 +6088,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 52
 //::       batchOutcome: Valid
@@ -6103,6 +6176,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 53
 //::       batchOutcome: Valid
@@ -6190,6 +6264,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
@@ -6277,6 +6352,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
@@ -6364,6 +6440,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
@@ -6450,6 +6527,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
@@ -6534,6 +6612,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 51
 //::       batchOutcome: Valid
@@ -6621,6 +6700,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 46
 //::       batchOutcome: Valid
@@ -6708,6 +6788,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 47
 //::       batchOutcome: Valid
@@ -6795,6 +6876,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 48
 //::       batchOutcome: Valid
@@ -6946,6 +7028,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 50
 //::       batchOutcome: Valid
@@ -7033,6 +7116,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
@@ -7120,6 +7204,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 45
 //::       batchOutcome: Valid
@@ -7207,6 +7292,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 40
 //::       batchOutcome: Valid
@@ -7294,6 +7380,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 41
 //::       batchOutcome: Valid
@@ -7381,6 +7468,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 42
 //::       batchOutcome: Valid
@@ -7532,6 +7620,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 44
 //::       batchOutcome: Valid
@@ -7619,6 +7708,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
@@ -7705,6 +7795,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -7789,6 +7880,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 33
 //::       batchOutcome: Valid
@@ -7876,6 +7968,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -7960,6 +8053,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 34
 //::       batchOutcome: Valid
@@ -8047,6 +8141,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 35
 //::       batchOutcome: Valid
@@ -8134,6 +8229,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 36
 //::       batchOutcome: Valid
@@ -8220,6 +8316,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -8304,6 +8401,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 37
 //::       batchOutcome: Valid
@@ -8391,6 +8489,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 38
 //::       batchOutcome: Valid
@@ -8603,6 +8702,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -8687,6 +8787,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 39
 //::       batchOutcome: Valid
@@ -8774,6 +8875,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
@@ -8861,6 +8963,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
@@ -8949,6 +9052,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -9033,6 +9137,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 32
 //::       batchOutcome: Valid
@@ -9120,6 +9225,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 27
 //::       batchOutcome: Valid
@@ -9207,6 +9313,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 28
 //::       batchOutcome: Valid
@@ -9294,6 +9401,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
@@ -9445,6 +9553,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 31
 //::       batchOutcome: Valid
@@ -9532,6 +9641,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
@@ -9618,6 +9728,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -9702,6 +9813,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
@@ -9985,6 +10097,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
@@ -10072,6 +10185,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
@@ -10159,6 +10273,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
@@ -10371,6 +10486,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -10455,6 +10571,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 22
 //::       batchOutcome: Valid
@@ -10542,6 +10659,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 23
 //::       batchOutcome: Valid
@@ -10629,6 +10747,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
@@ -10841,6 +10960,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -10925,6 +11045,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
@@ -11137,6 +11258,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -11159,6 +11281,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
@@ -11184,6 +11307,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: false
 //::       isUnused: false
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest

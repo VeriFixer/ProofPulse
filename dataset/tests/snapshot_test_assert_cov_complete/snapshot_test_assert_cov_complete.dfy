@@ -47,6 +47,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -78,6 +79,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -107,6 +109,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
@@ -137,6 +140,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -176,6 +180,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -203,6 +208,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -231,6 +237,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
@@ -275,6 +282,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
@@ -306,6 +314,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid

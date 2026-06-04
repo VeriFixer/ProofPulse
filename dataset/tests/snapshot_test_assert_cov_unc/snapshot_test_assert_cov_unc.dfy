@@ -25,6 +25,7 @@ method ret32(a: int)
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: AssertionManual
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid

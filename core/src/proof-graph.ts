@@ -166,6 +166,7 @@ export class ProofGraph {
       prooftexts: node.prooftexts,
       roles: { ...node.roles },
       type: node.getType(),
+      usedByNumber : this.getTopAssertionCount(node.getId()),
       topMeta: node.topMeta ?? null,
       covStatus: node.covStatus,
       covStatusInternal: node.covStatusInternal,

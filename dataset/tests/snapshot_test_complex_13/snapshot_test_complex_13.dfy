@@ -358,6 +358,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
@@ -517,6 +518,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -673,6 +675,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -829,6 +832,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 8
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -986,6 +990,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 120
 //::       batchOutcome: Valid
@@ -1146,6 +1151,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 121
 //::       batchOutcome: Valid
@@ -1306,6 +1312,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 122
 //::       batchOutcome: Valid
@@ -1466,6 +1473,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 123
 //::       batchOutcome: Valid
@@ -1763,6 +1771,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
@@ -1922,6 +1931,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 20
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -2078,6 +2088,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -2235,6 +2246,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 136
 //::       batchOutcome: Valid
@@ -2394,6 +2406,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -2553,6 +2566,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 3
 //::     topMeta:
 //::       batchIndex: 94
 //::       batchOutcome: Valid
@@ -2714,6 +2728,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 95
 //::       batchOutcome: Valid
@@ -2874,6 +2889,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 135
 //::       batchOutcome: Valid
@@ -3442,6 +3458,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 125
 //::       batchOutcome: Valid
@@ -3602,6 +3619,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 126
 //::       batchOutcome: Valid
@@ -3762,6 +3780,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 127
 //::       batchOutcome: Valid
@@ -3922,6 +3941,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 128
 //::       batchOutcome: Valid
@@ -4082,6 +4102,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 129
 //::       batchOutcome: Valid
@@ -4790,6 +4811,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 134
 //::       batchOutcome: Valid
@@ -5087,6 +5109,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 96
 //::       batchOutcome: Valid
@@ -5521,6 +5544,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 124
 //::       batchOutcome: Valid
@@ -5680,6 +5704,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -5837,6 +5862,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 119
 //::       batchOutcome: Valid
@@ -5996,6 +6022,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -6155,6 +6182,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 46
 //::       batchOutcome: Valid
@@ -6316,6 +6344,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 47
 //::       batchOutcome: Valid
@@ -6476,6 +6505,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 118
 //::       batchOutcome: Valid
@@ -7044,6 +7074,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 108
 //::       batchOutcome: Valid
@@ -7204,6 +7235,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 109
 //::       batchOutcome: Valid
@@ -7364,6 +7396,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 110
 //::       batchOutcome: Valid
@@ -7524,6 +7557,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 111
 //::       batchOutcome: Valid
@@ -7684,6 +7718,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 112
 //::       batchOutcome: Valid
@@ -8392,6 +8427,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 117
 //::       batchOutcome: Valid
@@ -8689,6 +8725,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 48
 //::       batchOutcome: Valid
@@ -9257,6 +9294,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 98
 //::       batchOutcome: Valid
@@ -9417,6 +9455,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 99
 //::       batchOutcome: Valid
@@ -9577,6 +9616,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 100
 //::       batchOutcome: Valid
@@ -9737,6 +9777,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 101
 //::       batchOutcome: Valid
@@ -9897,6 +9938,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 102
 //::       batchOutcome: Valid
@@ -10605,6 +10647,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 107
 //::       batchOutcome: Valid
@@ -10902,6 +10945,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 49
 //::       batchOutcome: Valid
@@ -11336,6 +11380,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 97
 //::       batchOutcome: Valid
@@ -11495,6 +11540,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -12060,6 +12106,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 5
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
@@ -12220,6 +12267,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 8
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
@@ -12380,6 +12428,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 6
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
@@ -12540,6 +12589,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
@@ -12835,6 +12885,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -12992,6 +13043,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 91
 //::       batchOutcome: Valid
@@ -13151,6 +13203,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -13310,6 +13363,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 39
 //::       batchOutcome: Valid
@@ -13471,6 +13525,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 40
 //::       batchOutcome: Valid
@@ -13631,6 +13686,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 90
 //::       batchOutcome: Valid
@@ -14199,6 +14255,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 80
 //::       batchOutcome: Valid
@@ -14359,6 +14416,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 81
 //::       batchOutcome: Valid
@@ -14519,6 +14577,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 82
 //::       batchOutcome: Valid
@@ -14679,6 +14738,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 83
 //::       batchOutcome: Valid
@@ -14839,6 +14899,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 84
 //::       batchOutcome: Valid
@@ -15547,6 +15608,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 89
 //::       batchOutcome: Valid
@@ -15845,6 +15907,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 41
 //::       batchOutcome: Valid
@@ -16413,6 +16476,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 70
 //::       batchOutcome: Valid
@@ -16573,6 +16637,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 71
 //::       batchOutcome: Valid
@@ -16733,6 +16798,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 72
 //::       batchOutcome: Valid
@@ -16893,6 +16959,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 73
 //::       batchOutcome: Valid
@@ -17053,6 +17120,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 74
 //::       batchOutcome: Valid
@@ -17761,6 +17829,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 79
 //::       batchOutcome: Valid
@@ -18059,6 +18128,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 42
 //::       batchOutcome: Valid
@@ -18219,6 +18289,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 50
 //::       batchOutcome: Valid
@@ -18379,6 +18450,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 51
 //::       batchOutcome: Valid
@@ -19087,6 +19159,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 56
 //::       batchOutcome: Valid
@@ -19655,6 +19728,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 57
 //::       batchOutcome: Valid
@@ -19815,6 +19889,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 58
 //::       batchOutcome: Valid
@@ -19975,6 +20050,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 59
 //::       batchOutcome: Valid
@@ -20135,6 +20211,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 60
 //::       batchOutcome: Valid
@@ -20295,6 +20372,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 61
 //::       batchOutcome: Valid
@@ -20455,6 +20533,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 62
 //::       batchOutcome: Valid
@@ -21300,6 +21379,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 68
 //::       batchOutcome: Valid
@@ -21598,6 +21678,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 43
 //::       batchOutcome: Valid
@@ -22032,6 +22113,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 69
 //::       batchOutcome: Valid
@@ -22600,6 +22682,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
@@ -22760,6 +22843,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
@@ -22920,6 +23004,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 26
 //::       batchOutcome: Valid
@@ -23080,6 +23165,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 27
 //::       batchOutcome: Valid
@@ -23648,6 +23734,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 28
 //::       batchOutcome: Valid
@@ -23808,6 +23895,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
@@ -23968,6 +24056,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 30
 //::       batchOutcome: Valid
@@ -24128,6 +24217,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 31
 //::       batchOutcome: Valid
@@ -24288,6 +24378,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 32
 //::       batchOutcome: Valid
@@ -24448,6 +24539,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 33
 //::       batchOutcome: Valid
@@ -24608,6 +24700,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 34
 //::       batchOutcome: Valid
@@ -24768,6 +24861,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 35
 //::       batchOutcome: Valid
@@ -24928,6 +25022,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 36
 //::       batchOutcome: Valid
@@ -25223,6 +25318,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -25379,6 +25475,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 4
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -25536,6 +25633,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 38
 //::       batchOutcome: Valid
@@ -25695,6 +25793,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 4
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -25852,6 +25951,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 45
 //::       batchOutcome: Valid
@@ -26011,6 +26111,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 4
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -26168,6 +26269,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 93
 //::       batchOutcome: Valid
@@ -26599,6 +26701,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -26620,6 +26723,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -26642,6 +26746,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: CodeLine
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete

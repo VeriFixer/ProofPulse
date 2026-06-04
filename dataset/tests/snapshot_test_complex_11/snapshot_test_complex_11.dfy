@@ -110,6 +110,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
@@ -182,6 +183,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Precondition
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -252,6 +254,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 38
 //::       batchOutcome: Valid
@@ -325,6 +328,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
@@ -397,6 +401,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -467,6 +472,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
@@ -540,6 +546,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
@@ -612,6 +619,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -682,6 +690,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
@@ -755,6 +764,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
@@ -828,6 +838,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 49
 //::       batchOutcome: Valid
@@ -900,6 +911,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
@@ -971,6 +983,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 23
 //::       batchOutcome: Valid
@@ -1045,6 +1058,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
@@ -1169,6 +1183,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
@@ -1242,6 +1257,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 45
 //::       batchOutcome: Valid
@@ -1315,6 +1331,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 46
 //::       batchOutcome: Valid
@@ -1388,6 +1405,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 47
 //::       batchOutcome: Valid
@@ -1461,6 +1479,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 48
 //::       batchOutcome: Valid
@@ -1585,6 +1604,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 26
 //::       batchOutcome: Valid
@@ -1658,6 +1678,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 39
 //::       batchOutcome: Valid
@@ -1731,6 +1752,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 40
 //::       batchOutcome: Valid
@@ -1804,6 +1826,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 41
 //::       batchOutcome: Valid
@@ -1928,6 +1951,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 27
 //::       batchOutcome: Valid
@@ -2001,6 +2025,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 42
 //::       batchOutcome: Valid
@@ -2074,6 +2099,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 43
 //::       batchOutcome: Valid
@@ -2147,6 +2173,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 44
 //::       batchOutcome: Valid
@@ -2271,6 +2298,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 28
 //::       batchOutcome: Valid
@@ -2344,6 +2372,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
@@ -2417,6 +2446,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
@@ -2490,6 +2520,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 31
 //::       batchOutcome: Valid
@@ -2563,6 +2594,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 32
 //::       batchOutcome: Valid
@@ -2635,6 +2667,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -2705,6 +2738,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
@@ -2778,6 +2812,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
@@ -2851,6 +2886,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
@@ -2924,6 +2960,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 30
 //::       batchOutcome: Valid
@@ -2996,6 +3033,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -3066,6 +3104,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
@@ -3139,6 +3178,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
@@ -3212,6 +3252,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
@@ -3285,6 +3326,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
@@ -3358,6 +3400,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
@@ -3431,6 +3474,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 22
 //::       batchOutcome: Valid
@@ -3504,6 +3548,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 33
 //::       batchOutcome: Valid
@@ -3577,6 +3622,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 34
 //::       batchOutcome: Valid
@@ -3650,6 +3696,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 35
 //::       batchOutcome: Valid
@@ -3723,6 +3770,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 36
 //::       batchOutcome: Valid
@@ -3796,6 +3844,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 37
 //::       batchOutcome: Valid
@@ -3868,6 +3917,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -4035,6 +4085,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: AssertionAutomatic
+//::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
@@ -4057,6 +4108,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -4079,6 +4131,7 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: false
 //::     type: CodeLine
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
