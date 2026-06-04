@@ -9,7 +9,7 @@ on:
 env:
   # Point this to your custom Dafny build zip (from your fork's GH release).
   # Once your PR is merged upstream, remove this and use DAFNY_VERSION instead.
-  DAFNY_ZIP_URL: "https://github.com/nicefiction/dafny/releases/download/v4.11.0-proofpulse/dafny-4.11.0-x64-ubuntu-22.04.zip"
+  DAFNY_ZIP_URL: "https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-x64-ubuntu-22.04.zip"
   # DAFNY_VERSION: "4.11.0"
 
 jobs:
