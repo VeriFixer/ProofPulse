@@ -16,6 +16,7 @@ interface CliArgs {
   forceMinimization: boolean;
   compareMinimization: boolean;
   noAbstractInterpretation: boolean;
+  file?: string;  // Single-file mode: classify one .dfy file, output JSON to stdout
 }
 
 function printHelp(): void {
@@ -24,6 +25,7 @@ Usage: npx tsx evaluation/src/cli.ts [options]
 
 Options:
   -h, --help                    Show this help message
+  --file <path>                 Single-file mode: classify one .dfy file, output JSON to stdout
   --repo-root <path>            Path to dafny-synthesis repo (default: "dafny-synthesis")
   --dafny-path <path>           Dafny binary path (default: "dafny")
   --timeout <seconds>           Per-file verification timeout (default: 60)
@@ -93,6 +95,9 @@ function parseArgs(argv: string[]): CliArgs {
       case "--compare-minimization":
         opts.compareMinimization = true;
         break;
+      case "--file":
+        opts.file = args[++i];
+        break;
     }
   }
   return opts;
@@ -101,6 +106,44 @@ function parseArgs(argv: string[]): CliArgs {
 async function main() {
   const opts = parseArgs(process.argv);
 
+  // ── Single-file mode: classify one file, output JSON to stdout ──
+  if (opts.file) {
+    const filePath = path.resolve(opts.file);
+    if (!fs.existsSync(filePath)) {
+      console.log(JSON.stringify({ classification: "error", categories: { postcondition: "none", precondition: "none", invariant: "none" }, error: `file not found: ${filePath}` }));
+      process.exit(1);
+    }
+
+    const { runDafny, parseProof } = await import("@proofpulse/core");
+    const { classifySpec, classifyAll } = await import("./classifier.js");
+
+    try {
+      const dafnyResult = await runDafny(filePath, {
+        dafnyPath: opts.dafnyPath,
+        timeoutSeconds: opts.timeout,
+        forceMinimization: opts.forceMinimization,
+        noAbstractInterpretation: opts.noAbstractInterpretation,
+      });
+
+      if (dafnyResult.error || dafnyResult.timedOut) {
+        console.log(JSON.stringify({ classification: "error", categories: { postcondition: "none", precondition: "none", invariant: "none" }, error: dafnyResult.error ?? "timeout", timedOut: !!dafnyResult.timedOut }));
+        process.exit(0);
+      }
+
+      const sourceCode = fs.readFileSync(filePath, "utf-8");
+      const proof = parseProof(sourceCode, dafnyResult.log);
+      const nodes = proof.proofGraph.getAllNodes();
+      const classification = classifySpec(proof.proofGraph);
+      const categories = classifyAll(proof.proofGraph, nodes as any);
+
+      console.log(JSON.stringify({ classification, categories }));
+    } catch (err: any) {
+      console.log(JSON.stringify({ classification: "error", categories: { postcondition: "none", precondition: "none", invariant: "none" }, error: err.message ?? String(err) }));
+    }
+    process.exit(0);
+  }
+
+  // ── Batch mode (original behavior) ──
   const repoRoot = path.resolve(opts.repoRoot);
   if (!fs.existsSync(repoRoot)) {
     console.error(
