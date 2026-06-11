@@ -33,6 +33,7 @@ Options:
   --timeout <seconds>   Verification timeout (default: 60)
   --log                 Print YAML report (only uncovered/partial nodes)
   --log-verbose         Print full YAML report (all nodes + proof dependencies)
+  --generate-yaml <path>  Write full YAML to file (can be combined with --log-verbose)
   -h, --help            Show help
 `.trim());
 }
@@ -51,6 +52,7 @@ async function main() {
   let noAbstractInterpretation = false;
   let timeout = 60;
   let logMode: "none" | "default" | "verbose" = "none";
+  let generateYamlPath: string | null = null;
 
   for (let i = 0; i < args.length; i++) {
     switch (args[i]) {
@@ -71,6 +73,9 @@ async function main() {
         break;
       case "--log-verbose":
         logMode = "verbose";
+        break;
+      case "--generate-yaml":
+        generateYamlPath = args[++i];
         break;
       default:
         if (!args[i].startsWith("-")) {
@@ -108,6 +113,15 @@ async function main() {
 
   const sourceCode = fs.readFileSync(filePath, "utf-8");
   const proof = parseProof(sourceCode, result.log);
+
+  if (generateYamlPath) {
+    try {
+      fs.writeFileSync(generateYamlPath, proof.proofGraph.toYAML());
+    } catch (err) {
+      console.error(`Error writing YAML to ${generateYamlPath}: ${(err as Error).message}`);
+      process.exit(1);
+    }
+  }
 
   // Default: always print the report (--log or --log-verbose just controls verbosity)
   // If neither flag given, print default (compact) report
