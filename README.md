@@ -1,173 +1,129 @@
-# ProofPulse
+# ProofPulse Artifact Evaluation README
 
-Dafny proof dependency and coverage analysis tool. Parses prover logs into a proof dependency graph, computes coverage status, and visualizes results in a web viewer or VSCode extension.
+**Paper title:** TBD
 
-## Watch the video demo to know more:
-[![Watch the demo](https://img.youtube.com/vi/S8Yzr2twzLs/0.jpg)](https://www.youtube.com/watch?v=8pO3NAodjoQ)
+**Paper link:** TBD
 
-## Installation
+**Artifact badge(s):** Available, Reusable, Functional
 
-Two installation paths are available. Docker is recommended for artifact reviewers as it avoids platform mismatches.
+## Getting Started
 
-### Option A: Docker (recommended)
+ProofPulse is a Dafny proof-dependency and coverage analysis tool. It parses prover logs, builds a proof graph, computes line-level coverage, and shows the result in a browser viewer or the VS Code extension.
 
-Everything pre-packaged: Node.js, Dafny 4.11, Z3, VS Code with ProofPulse and Dafny extensions.
+### What is included
 
-#### Using the pre-built image
+* `core/` shared TypeScript library for parsing, proof graphs, coverage, and Dafny execution
+* `evaluation/` benchmark runner, oracle handling, and results generation
+* `demo_examples/` small Dafny files for smoke testing and exploration
+* `dataset/` benchmark and debugging inputs
+* `web_viewer/` browser-based visualization
+* `vscode_extension/` editor integration
 
-A ready-to-use Docker image is provided as a `.tar.gz` archive (e.g. in the artifact submission):
+### Requirements
+
+* Docker is the recommended review path.
+* If you do not use Docker, you need Node.js 18 or newer, Dafny 4.x, and Z3 for minimization.
+* Linux is the primary target; x86-64 and ARM64 are supported.
+* No GPU is required.
+* Allow roughly 10 GB of disk space for the repository and build artifacts.
+
+### Installation
+
+#### Recommended: Docker
+
+1. Load the provided image archive.
 
 ```bash
 docker load -i proofpulse-dev.tar.gz
 ```
 
-#### Building the image yourself
-
-If the pre-built image is not available:
-
-```bash
-git clone --recursive <repo-url>
-cd ProofPulse
-docker build -f Dockerfile.devenv -t proofpulse-dev .
-```
-
-#### Exporting the image as a tar.gz
-
-To generate a portable image archive (e.g. for artifact submission):
-
-```bash
-docker save proofpulse-dev | gzip > proofpulse-dev.tar.gz
-```
-
-#### Starting the environment
-
-Start an interactive session:
+2. Start the container.
 
 ```bash
 docker run -it -p 8080:8080 --entrypoint bash proofpulse-dev
 ```
 
-If an error message appears saying that the port is in use try a free one changing:
-8080:8080 for a free port (For instances 8081:8080 if it is free)
+Note: If the port 8080:8080 is already in use, try a different port like 8081:8080
 
-From inside the container, launch the browser-based VS Code:
+### Smoke Test
+
+
+Run a bundled demo file and confirm that ProofPulse produces a coverage report.
+
+```bash
+node core/dist/cli.js demo_examples/C_cylinder_volume.dfy --dafny-path dafny --log
+```
+
+Expected result:
+
+* The command completes successfully.
+* The output contains a coverage report with covered and uncovered elements.
+* Dafny verification runs for the demo input.
+
+## Step-by-Step Instructions
+
+The artifact supports the following paper claims:
+
+* ProofPulse can analyze Dafny proofs and expose proof coverage on real examples.
+* ProofPulse can reproduce the benchmark evaluation over the `dafny-synthesis` datasets.
+* Unsat-core minimization changes the resulting coverage attribution and evaluation counts.
+
+This artifact is documented, consistent, complete, and exercisable, and it includes appropriate verification and validation evidence through the smoke test, demo workflow, and benchmark workflow. Those qualities satisfy ACM's Functional badge criteria, while the archival packaging and the surrounding documentation support the Available and Reusable badges as well.
+
+### 1. Reproduce the demo behavior
+Inside docker:
+1. Launch the browser-based VS Code environment.
 
 ```bash
 code-server --bind-addr 0.0.0.0:8080 --auth none /home/coder/project
 ```
+2. Open `http://localhost:8080` in your browser.
 
-Then open `http://localhost:8080` in your browser. You get a full VS Code with:
-- Dafny 4.11 + Z3 ready in PATH
-- ProofPulse extension pre-installed
-- Project fully built (core, web viewer, extension)
+Note: You may need to trust the workspace (lower-left corner) before the VS Code environment starts. An internet connection is required the first time, as the bundled ProofPulse extension follows the standard Dafny extension packaging and automatically downloads its binary release on first use, matching the behavior of the official Dafny extension.
 
-> **First launch:** A popup may appear asking to install Dafny 4.11 — accept it. The Dafny extension will download its latest dependencies and after that everything works.
-You may need to select bottom left corner to open on trusted mode for the extensions to run.
-All commands in the sections below (Demo Examples, Evaluation Benchmark, etc.) can be run directly in this shell session.
+3. Open one of the files under `demo_examples/`.
 
----
+Now you can follow what is done on the video of the extension for the rest of the examples:
+[![Watch the demo](https://img.youtube.com/vi/S8Yzr2twzLs/0.jpg)](https://www.youtube.com/watch?v=8pO3NAodjoQ)
 
-### Option B: Manual installation
-
-#### Prerequisites
-
-- Node.js (≥18)
-- Dafny ≥ 4.0 (in PATH or via the official Dafny VS Code extension)
-
-#### Clone with submodules
-
-This repo uses git submodules (e.g. `dafny-synthesis`). Either clone recursively:
-
-```sh
-git clone --recursive git@github.com:VeriFixer/ProofPulse.git
+Note: Figure 1 of the paper corresponds to demo_examples/C_cylinder_volume.dfy. Feel free to comment out line
+```
+var a := CylinderVolume(3.0,4.0);
+```
+To test the paper claim:
+```txt
+"Figure 1. If line 8 were commented out, the precondition would
+instead be classified as Uncovered, since it would neither be
+exercised by callers nor required to prove the postcondition"Figure 1. If line 8 were commented out, the precondition would
+instead be classified as Uncovered, since it would neither be
+exercised by callers nor required to prove the postcondition"
 ```
 
-Or if already cloned, init submodules:
+The precondition will be marked uncovered so red.
 
-```sh
-git submodule update --init --recursive
-```
+Note: Figure 3 of the paper corresponds to demo_examples/A_vacuous_proof.dfy
 
-> **Without this, the evaluation benchmark will exit immediately** because the `dafny-synthesis/` folder won't exist.
+Following the video you can open the webUI by hovering any component and then click on: "Click to Generate Proof Coverage Report"
 
-#### Build from source
+### 2. Reproduce the Tables
 
-```sh
-npm install
-npm run build   # builds core + web viewer + VSCode extension
-```
-
-#### VSCode extension
-
-```bash
-npm run package --prefix vscode_extension
-code --install-extension vscode_extension/proofpulse-vscode-0.1.0.vsix
-```
-
-Or via the UI: Extensions sidebar → `...` → "Install from VSIX..." → select the `.vsix` file. Reload VSCode after installing.
-
-> For more information on the VSCode extension (features, configuration, dev mode), see [`vscode_extension/README.md`](vscode_extension/README.md).
-
----
-
-## Demo Examples
-
-The `demo_examples/` folder contains sample Dafny files that showcase ProofPulse capabilities:
-
-| File | Description |
-|------|-------------|
-| `A_vacuous_proof.dfy` | Vacuous proof detection |
-| `B_demo.dfy` | General coverage demo |
-| `C_cylinder_volume.dfy` | Numeric proof coverage |
-| `D_core_minimization.dfy` | Unsat core minimization |
-| `E_limitations.dfy` | Known limitations |
-
-### Running the examples
-
-Feel free to follow the demo video on the examples displayed on there.
-
-#### With the VSCode extension
-
-1. Open any `.dfy` file from `demo_examples/`
-2. Right-click on any highlighted line (covTest or uncovered) → **"ProofPulse: Get Proof Report"** (opens web viewer)
-3. Or use Command Palette: "ProofPulse: Run Coverage Analysis" for gutter decorations
-
-> **To see expected outputs for each example, see the [video demo](https://youtube.com/watch?v=video.mp4).**
-
-Note: This version is more recent than the version on the Video that accomplishes to have the E_limitations.dfy fixed, by using a custom version of Dafny and Boogie. (that were already accepted on main github dafny and boogie but still are not on the latest official releases)
-
-## Core library (`@proofpulse/core`)
-
-Shared TypeScript library used by both the VSCode extension and the web viewer.
-
-- `parseProof(dafnyCode, proofLog)` → `Proof` with `ProofGraph` + `lineStatus`
-- `runDafny(filePath, options?)` → `DafnyResult`
-- `computeLineStatus(graph, sourceCode)` → per-line coverage
-- `generateTextReport(sourceCode, proof, options?)` → YAML report
-- `serializeProofGraph` / `deserializeProofGraph` — JSON round-trip
-- Types: `CovStatus`, `TokenType`, `Node`, `ProofGraph`, `Proof`, `DafnyResult`
-
-
-### Z3 Core Minimization
-
-When `forceMinimization` is enabled, Z3 calls are routed through a Node.js wrapper that iteratively minimizes unsat cores for more precise proof dependency attribution.
-
-## Evaluation Benchmark
-
-Classifies dafny-synthesis specs as strong/weak using ProofPulse coverage, then compares against the paper's manual oracle.
-
-To run the full evaluation (~15 minutes):
+1. Run the benchmark.
 
 ```bash
 npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --no-abstract-interpretation
+```
+
+2. Generate the paper-style results report.
+
+```bash
 npx tsx evaluation/generate-results-md.ts
 ```
-This will generate file results.md 
-The table on top of that document is the following (that the info was inserted on Table 1, Cfg Base on paper)
+
+3. Inspect `results.md` and confirm that it contains the per-category precision, recall, and accuracy numbers on top.
 ```bash
 head -n 12 results.md
 ```
-Expected table
+Should produce results:
 ```txt
 | Category | TP | FP | FN | TN | P | R | Acc |
 |----------|----|----|----|----|------|------|------|
@@ -176,19 +132,27 @@ Expected table
 | Invariants | 77 | 13 | 0 | 11 | 0.86 | 1.00 | 0.87 |
 ```
 
-Repeat the same with minimization
+These correspond to the values of Table 1, Cfg Base.
+
+### 3. Reproduce the benchmark with minimization
+
+1. Run the benchmark with unsat-core minimization enabled.
+
 ```bash
-# With minimization
 npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --force-core-minimization --no-abstract-interpretation
+```
+
+2. Regenerate the report.
+
+```bash
 npx tsx evaluation/generate-results-md.ts
 ```
 
-This will generate file results.md 
-The table on top of that document is the following (that the info was inserted on Table 1, Cfg Min on paper)
+3. Inspect `results.md` and confirm that it contains the per-category precision, recall, and accuracy numbers on top.
 ```bash
-head -n 12 results.md 
+head -n 12 results.md
 ```
-Expected table
+Should produce results:
 ```txt
 | Category | TP | FP | FN | TN | P | R | Acc |
 |----------|----|----|----|----|------|------|------|
@@ -196,33 +160,10 @@ Expected table
 | Preconditions | 63 | 0 | 6 | 98 | 1.00 | 0.91 | 0.96 |
 | Invariants | 77 | 10 | 0 | 13 | 0.89 | 1.00 | 0.90 |
 ```
-### CLI
 
-ProofPulse includes a CLI for running coverage analysis and generating a YAML coverage log:
+These correspond to the values of Table 1, Cfg Min.
 
-```bash
-# Default: only uncovered/partial nodes per method
-node core/dist/cli.js <file.dfy> --dafny-path <path-to-dafny> --log
+# Other notes
 
-# Verbose: all nodes + proof dependency graph per method
-node core/dist/cli.js <file.dfy> --dafny-path <path-to-dafny> --log-verbose
-
-# With minimization
-node core/dist/cli.js <file.dfy> --dafny-path <path-to-dafny> --minimize --log
-
-# With abstract interpretation disabled
-node core/dist/cli.js <file.dfy> --dafny-path <path-to-dafny> --no-abstract-interpretation --log
-```
-
-Options:
-- `--dafny-path <path>` — Path to Dafny binary (default: `dafny`)
-- `--minimize` — Enable unsat core minimization
-- `--no-abstract-interpretation` — Disable Dafny's abstract interpretation pass
-- `--timeout <seconds>` — Verification timeout (default: 60)
-- `--log` — Print YAML log (only methods with uncovered/partial nodes)
-- `--log-verbose` — Print full YAML log (all nodes + proof dependencies per method)
-
-Example that can be run on docker:
-```shell
-node core/dist/cli.js  demo_examples/C_cylinder_volume.dfy  
-```
+Feel free to see also the main README_main.md (that is the regular README of the project).
+That has more informations on using and installing Proofpulse outside docker.

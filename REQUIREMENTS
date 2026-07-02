@@ -1,0 +1,21 @@
+ProofPulse artifact Package in Docker:
+FROM codercom/code-server:latest (the full Dockerfile is available for inspection in Dockerfile.ci)
+
+Tested on Architecture:
+* x86-64 and ARM64
+
+Operating system:
+* Linux is the primary supported platform (that was tested)
+* The Docker-based review path is recommended for the most reliable evaluation (and should work on other platformns)
+
+Software requirements:
+* Docker 24 or newer for the recommended review workflow
+* All other dependencies are listed under the DockerFile
+
+Hardware requirements:
+* No GPU required
+* At least 8 GB RAM recommended
+* At least 10 GB free disk space recommended (For the docker image)
+
+Network requirements:
+* An internet connection is required the first time the bundled ProofPulse extension and Dafny assets are loaded, because the artifact follows the standard VS Code extension packaging model for Dafny.

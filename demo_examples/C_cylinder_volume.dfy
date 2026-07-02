@@ -5,3 +5,7 @@ method CylinderVolume(radius :real, height: real)
 {
   volume := 3.14 * radius * radius * height;
 }
+
+method main(){
+  var a := CylinderVolume(3.0,4.0);
+}
