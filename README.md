@@ -1,6 +1,6 @@
 # ProofPulse
 
-Dafny proof dependency and coverage analysis tool. Parses prover logs into a proof dependency graph, computes coverage status, and visualises results in a web viewer or VSCode extension.
+Dafny proof dependency and coverage analysis tool. Parses prover logs into a proof dependency graph, computes coverage status, and visualizes results in a web viewer or VSCode extension.
 
 ## Watch the video demo to know more:
 [![Watch the demo](https://img.youtube.com/vi/S8Yzr2twzLs/0.jpg)](https://www.youtube.com/watch?v=8pO3NAodjoQ)
@@ -47,6 +47,9 @@ Start an interactive session:
 docker run -it -p 8080:8080 --entrypoint bash proofpulse-dev
 ```
 
+If an error message appears saying that the port is in use try a free one changing:
+8080:8080 for a free port (For instances 8081:8080 if it is free)
+
 From inside the container, launch the browser-based VS Code:
 
 ```bash
@@ -59,7 +62,7 @@ Then open `http://localhost:8080` in your browser. You get a full VS Code with:
 - Project fully built (core, web viewer, extension)
 
 > **First launch:** A popup may appear asking to install Dafny 4.11 — accept it. The Dafny extension will download its latest dependencies and after that everything works.
-
+You may need to select bottom left corner to open on trusted mode for the extensions to run.
 All commands in the sections below (Demo Examples, Evaluation Benchmark, etc.) can be run directly in this shell session.
 
 ---
@@ -131,6 +134,8 @@ Feel free to follow the demo video on the examples displayed on there.
 
 > **To see expected outputs for each example, see the [video demo](https://youtube.com/watch?v=video.mp4).**
 
+Note: This version is more recent than the version on the Video that accomplishes to have the E_limitations.dfy fixed, by using a custom version of Dafny and Boogie. (that were already accepted on main github dafny and boogie but still are not on the latest official releases)
+
 ## Core library (`@proofpulse/core`)
 
 Shared TypeScript library used by both the VSCode extension and the web viewer.
@@ -142,6 +147,55 @@ Shared TypeScript library used by both the VSCode extension and the web viewer.
 - `serializeProofGraph` / `deserializeProofGraph` — JSON round-trip
 - Types: `CovStatus`, `TokenType`, `Node`, `ProofGraph`, `Proof`, `DafnyResult`
 
+
+### Z3 Core Minimization
+
+When `forceMinimization` is enabled, Z3 calls are routed through a Node.js wrapper that iteratively minimizes unsat cores for more precise proof dependency attribution.
+
+## Evaluation Benchmark
+
+Classifies dafny-synthesis specs as strong/weak using ProofPulse coverage, then compares against the paper's manual oracle.
+
+To run the full evaluation (~15 minutes):
+
+```bash
+npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --no-abstract-interpretation
+npx tsx evaluation/generate-results-md.ts
+```
+This will generate file results.md 
+The table on top of that document is the following (that the info was inserted on Table 1, Cfg Base on paper)
+```bash
+head -n 12 results.md
+```
+Expected table
+```txt
+| Category | TP | FP | FN | TN | P | R | Acc |
+|----------|----|----|----|----|------|------|------|
+| Postconditions | 184 | 24 | 0 | 11 | 0.88 | 1.00 | 0.89 |
+| Preconditions | 63 | 3 | 7 | 96 | 0.95 | 0.90 | 0.94 |
+| Invariants | 77 | 13 | 0 | 11 | 0.86 | 1.00 | 0.87 |
+```
+
+Repeat the same with minimization
+```bash
+# With minimization
+npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --force-core-minimization --no-abstract-interpretation
+npx tsx evaluation/generate-results-md.ts
+```
+
+This will generate file results.md 
+The table on top of that document is the following (that the info was inserted on Table 1, Cfg Min on paper)
+```bash
+head -n 12 results.md 
+```
+Expected table
+```txt
+| Category | TP | FP | FN | TN | P | R | Acc |
+|----------|----|----|----|----|------|------|------|
+| Postconditions | 184 | 21 | 0 | 13 | 0.90 | 1.00 | 0.90 |
+| Preconditions | 63 | 0 | 6 | 98 | 1.00 | 0.91 | 0.96 |
+| Invariants | 77 | 10 | 0 | 13 | 0.89 | 1.00 | 0.90 |
+```
 ### CLI
 
 ProofPulse includes a CLI for running coverage analysis and generating a YAML coverage log:
@@ -168,54 +222,7 @@ Options:
 - `--log` — Print YAML log (only methods with uncovered/partial nodes)
 - `--log-verbose` — Print full YAML log (all nodes + proof dependencies per method)
 
-Methods with all nodes fully covered are omitted in default mode.
-
-### Z3 Core Minimization
-
-When `forceMinimization` is enabled, Z3 calls are routed through a Node.js wrapper that iteratively minimizes unsat cores for more precise proof dependency attribution.
-
-## Evaluation Benchmark
-
-Classifies dafny-synthesis specs as strong/weak using ProofPulse coverage, then compares against the paper's manual oracle.
-
-To run the full evaluation (~15 minutes):
-
-```bash
-npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all
+Example that can be run on docker:
+```shell
+node core/dist/cli.js  demo_examples/C_cylinder_volume.dfy  
 ```
-
-This will create this file:
-`./evaluation/results/benchmark-results-aggregate-tables.tex`
-with the first table results used in the paper.
-
-```bash
-# With minimization
-npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --force-core-minimization --dafny-path /path/to/dafny/binary
-
-# With abstract interpretation disabled
-npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --no-abstract-interpretation
-```
-
-This will create this file:
-`./evaluation/results/benchmark-results-aggregate-tables.tex`
-with the first table results used in the paper.
-
-These matched the evaluation results shown in the paper tables.
-
-### Generating the Divergence Report
-
-After running the evaluation, generate an automated divergence report:
-
-```bash
-npx tsx evaluation/generate-results-md.ts
-```
-
-This produces `results.md` with:
-- Summary confusion matrix (computed from results)
-- Full per-file results table with clickable links to `.dfy` files
-- All divergences grouped by category and direction (FP/FN)
-
-The report reads from `evaluation/results/benchmark-results-{dataset}.json` (or `-minimized.json` fallback).
-
-For a deeper manual analysis of root causes, see [`results_analysis.md`](results_analysis.md).
-
