@@ -8,6 +8,8 @@ ProofPulse: Interactive Proof Coverage Analysis for Dafny
 
 https://ase26-tools-datasets.hotcrp.com/doc/ase26-tools-datasets-paper18.pdf
 
+Note: The paper submitted for the Artifact Evaluation track contains updated results compared to the accepted version. These results will be incorporated into the camera-ready paper. Therefore, it is best to use the paper submitted to the Artifact Evaluation track, as its results match the provided artifact.
+
 ## 3. Purpose
 
 ProofPulse is a Dafny proof-dependency and coverage analysis tool. It parses prover logs, constructs a proof graph, computes line-level coverage, and presents the result in a browser viewer and a VS Code extension. The artifact supports the paper’s claims about proof coverage analysis, diagnosis of weak proofs, and the effect of unsat-core minimization on coverage attribution.
