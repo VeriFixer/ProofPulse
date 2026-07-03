@@ -2,15 +2,11 @@
 
 ## 1. Paper title
 
-**TBD:** ProofPulse
-
-Replace this placeholder with the exact accepted paper title before submission.
+ProofPulse: Interactive Proof Coverage Analysis for Dafny
 
 ## 2. Link to the accepted paper
 
-**TBD:** add the accepted-paper URL or DOI here.
-
-The paper should be accessible to reviewers during artifact evaluation.
+https://ase26-tools-datasets.hotcrp.com/doc/ase26-tools-datasets-paper18.pdf
 
 ## 3. Purpose
 
@@ -20,9 +16,9 @@ ProofPulse is a Dafny proof-dependency and coverage analysis tool. It parses pro
 
 The artifact is being submitted for the following badges:
 
-* **Available**: the artifact is packaged for archival distribution and intended for public DOI-based hosting.
-* **Reusable**: the repository includes the executable toolchain, benchmark scripts, demo inputs, and documentation needed to understand and repurpose the artifact.
-* **Functional**: the artifact is documented, consistent, complete, exercisable, and includes verification and validation evidence through the smoke test, demo workflow, and benchmark workflow.
+* **Available**: the artifact is hosted on a public archival repository with a DOI. The source is also publicly accessible on GitHub (https://github.com/VeriFixer/ProofPulse) under an open-source license.
+* **Reusable**: the artifact is structured for repurposing beyond paper reproduction. The core analysis library (`@proofpulse/core`) is a standalone npm package with a clean public API, usable as a library or via CLI on any Dafny program. The architecture is modular (log parser, proof graph, coverage engine) and documented so that each component can be extended or replaced independently. The analysis pipeline is language-agnostic at the graph level — any verification-aware language producing a compatible log format can reuse the coverage engine without modification. The repository includes a full test suite with annotated oracles and YAML snapshot tests, a CI pipeline for automated regression checking, demo examples, benchmark scripts, and a web viewer — all enabling reviewers and future researchers to understand, modify, and extend the tool.
+* **Functional**: the artifact is documented (README with getting-started and step-by-step instructions), consistent (results match the paper tables), complete (all paper claims are reproducible), and exercisable (Docker image with smoke test completing in under 10 minutes). It includes verification and validation evidence: a 60+ case test suite under `dataset/tests/` with per-line coverage oracles and full proof-graph snapshot assertions, executed automatically via GitHub Actions CI on every commit.
 
 ## 5. Technology
 
