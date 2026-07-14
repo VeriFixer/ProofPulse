@@ -34,7 +34,7 @@ The artifact is being submitted for the following badges:
 ### Hardware and software requirements
 
 * Operating system: Linux is the primary target.
-* Architectures: x86-64 and ARM64 are supported.
+* Architectures: x86-64 was tested.
 * GPU: not required.
 * Docker 24 or newer is recommended for the review workflow.
 * At least 8 GB RAM and roughly 10 GB of free disk space are recommended.

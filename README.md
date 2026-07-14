@@ -87,7 +87,7 @@ code-server --bind-addr 0.0.0.0:8080 --auth none /home/coder/project
 ```
 2. Open `http://localhost:8080` in your browser. (or change by the port that was free for you instead of 8080 when lauching docker)
 
-3. Open any of the files under  `demo_examples/` in the VS Code window in your browser. You will see both Dafny and ProofPulse running. ProofPulse colors lines based on their verification coverage status.
+Note: A pop-up may appear in the browser-based VS Code asking you to trust the folder and allow the extensions to run. If ProofPulse does not start after accepting, you may need to enable the extension manually. Open the **Extensions** view in VS Code, search for **ProofPulse**, select it, and click **Enable**.
 
 END OF SMOKE TEST
 
@@ -135,7 +135,7 @@ Following the video you can open the webUI by hovering any component and then cl
 
 ### 2. Reproduce the Tables
 
-1. Run the benchmark.
+1. Run the benchmark. (5-15 minutes)
 
 ```bash
 npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --no-abstract-interpretation
@@ -164,7 +164,7 @@ These correspond to the values of Table 1, Cfg Base.
 
 ### 3. Reproduce the benchmark with minimization
 
-1. Run the benchmark with unsat-core minimization enabled.
+1. Run the benchmark with unsat-core minimization enabled. (5-15 minutes)
 
 ```bash
 npx tsx evaluation/src/cli.ts --repo-root dafny-synthesis --dataset all --force-core-minimization --no-abstract-interpretation
@@ -193,12 +193,8 @@ These correspond to the values of Table 1, Cfg Min.
 
 ---
 
+For usage and installation instructions outside Docker, see [README_main.md](README_main.md).
 This concludes the paper reproducibility steps. The sections below provide additional context on the tool's architecture, extensibility, and validation infrastructure.
-
-For usage and installation instructions outside Docker, see [README_main.md](README_main.md).
-s concludes the paper reproducibility steps. The sections below provide additional context on the tool's architecture, extensibility, and validation infrastructure.
-
-For usage and installation instructions outside Docker, see [README_main.md](README_main.md).
 
 ## Architecture and Extensibility
 
