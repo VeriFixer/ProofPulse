@@ -89,6 +89,8 @@ code-server --bind-addr 0.0.0.0:8080 --auth none /home/coder/project
 
 Note: A pop-up may appear in the browser-based VS Code asking you to trust the folder and allow the extensions to run. If ProofPulse does not start after accepting, you may need to enable the extension manually. Open the **Extensions** view in VS Code, search for **ProofPulse**, select it, and click **Enable**.
 
+3. Open any of the files under  `demo_examples/` in the VS Code window in your browser. You will see both Dafny and ProofPulse running. ProofPulse colors lines based on their verification coverage status.
+
 END OF SMOKE TEST
 
 ## Step-by-Step Instructions
