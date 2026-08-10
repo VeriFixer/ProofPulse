@@ -118,25 +118,38 @@ async function main() {
     const { classifySpec, classifyAll } = await import("./classifier.js");
 
     try {
+      const dafnyStart = Date.now();
       const dafnyResult = await runDafny(filePath, {
         dafnyPath: opts.dafnyPath,
         timeoutSeconds: opts.timeout,
         forceMinimization: opts.forceMinimization,
         noAbstractInterpretation: opts.noAbstractInterpretation,
       });
+      const dafnySeconds = (Date.now() - dafnyStart) / 1000;
 
       if (dafnyResult.error || dafnyResult.timedOut) {
-        console.log(JSON.stringify({ classification: "error", categories: { postcondition: "none", precondition: "none", invariant: "none" }, error: dafnyResult.error ?? "timeout", timedOut: !!dafnyResult.timedOut }));
+        console.log(JSON.stringify({ classification: "error", categories: { postcondition: "none", precondition: "none", invariant: "none" }, error: dafnyResult.error ?? "timeout", timedOut: !!dafnyResult.timedOut, timing: { dafny_seconds: dafnySeconds } }));
         process.exit(0);
       }
 
       const sourceCode = fs.readFileSync(filePath, "utf-8");
+
+      const parseStart = Date.now();
       const proof = parseProof(sourceCode, dafnyResult.log);
       const nodes = proof.proofGraph.getAllNodes();
+      const parseSeconds = (Date.now() - parseStart) / 1000;
+
+      const classifyStart = Date.now();
       const classification = classifySpec(proof.proofGraph);
       const categories = classifyAll(proof.proofGraph, nodes as any);
+      const classifySeconds = (Date.now() - classifyStart) / 1000;
 
-      console.log(JSON.stringify({ classification, categories }));
+      // Step timing, so the Python side can show where time goes per file
+      // (the dafny verify/coverage run dominates in practice) without
+      // needing to instrument the subprocess boundary from outside.
+      const timing = { dafny_seconds: dafnySeconds, parse_seconds: parseSeconds, classify_seconds: classifySeconds };
+
+      console.log(JSON.stringify({ classification, categories, timing }));
     } catch (err: any) {
       console.log(JSON.stringify({ classification: "error", categories: { postcondition: "none", precondition: "none", invariant: "none" }, error: err.message ?? String(err) }));
     }
