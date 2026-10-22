@@ -1,6 +1,17 @@
 import * as vscode from "vscode";
-import { runDafny, parseProof } from "@proofpulse/core";
-import { getDafnyPath, getDecorationOpacity, getForceMinimization, getNoAbstractInterpretation, getTimeout, getZ3Path } from "./config";
+import {
+  analyzeReport,
+  assertNever,
+  BackendOptions,
+  BackendRun,
+  DEFAULT_DAFNY_COMMAND,
+  RunStatus,
+  SolverKind,
+  VerifierBackend,
+  VerifierId,
+} from "@proofpulse/core";
+import { getDafnyPath, getDecorationOpacity, getForceMinimization, getNoAbstractInterpretation, getSolverPath, getTimeout, getZ3Path } from "./config";
+import { backendForDocument, backendForPath, supportedExtensionsLabel } from "./backends";
 import { applyDecorations } from "./decorations";
 import { startNewSession, isSessionCurrent } from "./run-session";
 import { writeCache, invalidateCache } from "./result-cache";
@@ -39,41 +50,57 @@ function hideStatusBar(): void {
   }
 }
 
+/** Options for a backend run, from the user's settings. */
+function backendOptions(backend: VerifierBackend, context: vscode.ExtensionContext): BackendOptions {
+  const solverPath = getSolverPath();
+  const minimizationSolverPath = getZ3Path() || undefined;
+  return {
+    toolPath: getDafnyPath(context),
+    timeoutSeconds: getTimeout(),
+    ...(solverPath ? { solver: { kind: SolverKind.Z3, path: solverPath } } : {}),
+    ...(getForceMinimization()
+      ? { minimization: minimizationSolverPath ? { solver: { kind: SolverKind.Z3, path: minimizationSolverPath } } : {} }
+      : {}),
+    ...(backend.id === VerifierId.Dafny
+      ? { backendOptions: { backend: VerifierId.Dafny, noAbstractInterpretation: getNoAbstractInterpretation() } }
+      : {}),
+  };
+}
+
 export async function runAnalysis(editor: vscode.TextEditor, context: vscode.ExtensionContext): Promise<void> {
   const filePath = editor.document.fileName;
   const sourceCode = editor.document.getText();
   const forceMin = getForceMinimization();
+  const backend = backendForDocument(editor.document);
+  if (!backend) return;
 
   const session = startNewSession(filePath);
 
   // Invalidate existing cache for this file (source changed)
   invalidateCache(filePath).catch(() => {});
 
-  logInfo(`Running analysis on ${filePath} (forceMinimization=${forceMin}, session=${session.id})`);
-  showStatusBar("Running...");
+  logInfo(`Running ${backend.displayName} analysis on ${filePath} (forceMinimization=${forceMin}, session=${session.id})`);
+  showStatusBar(`${backend.displayName} — Running...`);
 
   await vscode.window.withProgress(
     { location: vscode.ProgressLocation.Notification, title: "ProofPulse: Running analysis…", cancellable: false },
     async () => {
       try {
-        const dafnyPath = getDafnyPath(context);
-        const timeout = getTimeout();
-        logInfo(`dafnyPath=${dafnyPath}, timeout=${timeout}`);
+        const options = backendOptions(backend, context);
+        const dafnyPath = options.toolPath ?? DEFAULT_DAFNY_COMMAND;
+        const timeout = options.timeoutSeconds ?? getTimeout();
+        logInfo(`toolPath=${dafnyPath}, timeout=${timeout}`);
 
-        const result = await runDafny(filePath, {
-          dafnyPath,
-          z3Path: getZ3Path() || undefined,
-          timeoutSeconds: timeout,
-          forceMinimization: forceMin,
-          noAbstractInterpretation: getNoAbstractInterpretation(),
+        const result: BackendRun = await backend.run(filePath, {
+          ...options,
           onWarning: (msg) => logInfo(msg),
           signal: session.abortController.signal,
-          onPreliminaryResult: (prelimResult) => {
-            if (!isSessionCurrent(session)) return;
-            const proof = parseProof(sourceCode, prelimResult.log);
+          onPreliminaryResult: (prelim) => {
+            if (!isSessionCurrent(session) || prelim.status !== RunStatus.Completed || !prelim.report) return;
+            const proof = analyzeReport(sourceCode, prelim.report);
             applyDecorations(editor, proof.lineStatus, proof.proofGraph.getAllNodes(), getDecorationOpacity(), context.extensionPath);
             logInfo(`Applied preliminary decorations: ${proof.lineStatus.length} lines`);
-            showStatusBar("Preliminary ✓ — Minimizing...");
+            showStatusBar(`${backend.displayName} — Preliminary ✓ — Minimizing...`);
           },
         });
 
@@ -83,32 +110,35 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
           return;
         }
 
-        logInfo(`dafny exited ${result.exitCode}, timedOut=${result.timedOut ?? false}, error=${result.error ?? "none"}, logLen=${result.log.length}`);
+        const rawLog = result.rawLog ?? "";
+        logInfo(`${backend.displayName} exited ${result.exitCode}, status=${result.status}, error=${result.errorMessage ?? "none"}, logLen=${rawLog.length}`);
 
-        if (result.error === "aborted") {
-          logInfo(`Session ${session.id} was aborted, silently discarding`);
-          hideStatusBar();
-          return;
+        switch (result.status) {
+          case RunStatus.Completed:
+            break;
+          case RunStatus.Aborted:
+            logInfo(`Session ${session.id} was aborted, silently discarding`);
+            hideStatusBar();
+            return;
+          case RunStatus.Failed: {
+            hideStatusBar();
+            const ch = getOutputChannel();
+            ch.appendLine(`--- ERROR ---\n${result.errorMessage}\n---`);
+            ch.show(true);
+            vscode.window.showErrorMessage(
+              `ProofPulse: analysis failed. See Output → ProofPulse for details.`,
+            );
+            return;
+          }
+          case RunStatus.TimedOut:
+            hideStatusBar();
+            vscode.window.showWarningMessage("ProofPulse: analysis timed out.");
+            return;
+          default:
+            assertNever(result.status, "run status");
         }
 
-        if (result.error) {
-          hideStatusBar();
-          const ch = getOutputChannel();
-          ch.appendLine(`--- ERROR ---\n${result.error}\n---`);
-          ch.show(true);
-          vscode.window.showErrorMessage(
-            `ProofPulse: analysis failed. See Output → ProofPulse for details.`,
-          );
-          return;
-        }
-
-        if (result.timedOut) {
-          hideStatusBar();
-          vscode.window.showWarningMessage("ProofPulse: analysis timed out.");
-          return;
-        }
-
-        const proof = parseProof(sourceCode, result.log);
+        const proof = analyzeReport(sourceCode, result.report!);
         applyDecorations(editor, proof.lineStatus, proof.proofGraph.getAllNodes(), getDecorationOpacity(), context.extensionPath);
         logInfo(`Applied decorations: ${proof.lineStatus.length} lines`);
         hideStatusBar();
@@ -121,7 +151,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
             ...(getNoAbstractInterpretation() ? ["--no-abstract-interpretation"] : []),
           ];
           const command = cmdParts.map(p => p.includes(" ") ? `"${p}"` : p).join(" ");
-          await writeCache(filePath, sourceCode, result.log, forceMin, command);
+          await writeCache(filePath, sourceCode, rawLog, forceMin, command);
           logInfo(`Cache written for ${filePath}`);
         } catch (cacheErr: unknown) {
           const cacheMsg = cacheErr instanceof Error ? cacheErr.message : String(cacheErr);
@@ -131,10 +161,6 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
         hideStatusBar();
         if (!isSessionCurrent(session)) return;
         const msg = err instanceof Error ? err.message : String(err);
-        if (msg === "aborted" || msg.includes("aborted")) {
-          logInfo(`Session ${session.id} aborted (exception), silently discarding`);
-          return;
-        }
         logInfo(`Exception: ${msg}`);
         const ch = getOutputChannel();
         ch.appendLine(`--- EXCEPTION ---\n${msg}\n---`);
@@ -148,8 +174,8 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
 export function registerRunAnalysis(context: vscode.ExtensionContext): void {
   const disposable = vscode.commands.registerCommand("proofpulse.runAnalysis", async () => {
     const editor = vscode.window.activeTextEditor;
-    if (!editor || !editor.document.fileName.endsWith(".dfy")) {
-      vscode.window.showWarningMessage("ProofPulse: Open a .dfy file first.");
+    if (!editor || !backendForDocument(editor.document)) {
+      vscode.window.showWarningMessage(`ProofPulse: Open a ${supportedExtensionsLabel()} file first.`);
       return;
     }
     await runAnalysis(editor, context);
@@ -165,8 +191,8 @@ export function registerGetProofReport(context: vscode.ExtensionContext): void {
       const filePath =
         uri?.fsPath ?? vscode.window.activeTextEditor?.document.fileName;
 
-      if (!filePath || !filePath.endsWith(".dfy")) {
-        vscode.window.showWarningMessage("ProofPulse: Select a .dfy file.");
+      if (!filePath || !backendForPath(filePath)) {
+        vscode.window.showWarningMessage(`ProofPulse: Select a ${supportedExtensionsLabel()} file.`);
         return;
       }
 
@@ -180,7 +206,7 @@ export function registerGetProofReport(context: vscode.ExtensionContext): void {
         ).fsPath;
 
         const child = spawn(process.execPath, [serverScript, "--file", filePath,
-          ...(getDafnyPath(context) !== "dafny" ? ["--dafny-path", getDafnyPath(context)] : []),
+          ...(getDafnyPath(context) !== DEFAULT_DAFNY_COMMAND ? ["--dafny-path", getDafnyPath(context)] : []),
           ...(getTimeout() !== 60 ? ["--timeout", String(getTimeout())] : []),
           ...(getForceMinimization() ? ["--force-minimization"] : []),
           ...(getNoAbstractInterpretation() ? ["--no-abstract-interpretation"] : []),

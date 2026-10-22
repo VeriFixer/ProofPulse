@@ -2,6 +2,8 @@ import { describe, it, expect } from "vitest";
 import * as fc from "fast-check";
 import { ProofNode } from "../../../core/src/proof-node.js";
 import { ProofGraph } from "../../../core/src/proof-graph.js";
+import { UnitKind } from "../../../core/src/report/coverage-report.js";
+import { dafnyMessageKind } from "../../../core/src/backends/dafny/messages.js";
 
 /**
  * Property 1: ProofGraph YAML round-trip
@@ -72,8 +74,9 @@ const arbProofGraph = fc
               { line: p.sLine, col: p.sCol },
               { line: p.eLine, col: p.eCol },
               "",
-              "",
+              UnitKind.Correctness,
               p.prooftext,
+              dafnyMessageKind(p.prooftext),
             ),
         );
 

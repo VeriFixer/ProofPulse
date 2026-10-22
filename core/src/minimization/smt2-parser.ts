@@ -9,6 +9,45 @@ export class SMT2Error extends Error {
   }
 }
 
+/** SMT-LIB command names the minimizer recognises (values are the SMT-LIB keywords). */
+export enum SmtCommand {
+  Assert = "assert",
+  CheckSat = "check-sat",
+  CheckSatAssuming = "check-sat-assuming",
+  GetUnsatCore = "get-unsat-core",
+  GetModel = "get-model",
+  GetAssignment = "get-assignment",
+  GetValue = "get-value",
+  GetProof = "get-proof",
+  GetInfo = "get-info",
+  Echo = "echo",
+  Push = "push",
+  Pop = "pop",
+  Reset = "reset",
+  SetOption = "set-option",
+  SetInfo = "set-info",
+  SetLogic = "set-logic",
+  DeclareFun = "declare-fun",
+  DeclareSort = "declare-sort",
+  DeclareConst = "declare-const",
+  DeclareDatatypes = "declare-datatypes",
+  DefineFun = "define-fun",
+  DefineSort = "define-sort",
+}
+
+/** Commands that produce solver output (forwarded and answered one by one). */
+export const SMT_QUERY_COMMANDS: ReadonlySet<string> = new Set<string>([
+  SmtCommand.CheckSat,
+  SmtCommand.CheckSatAssuming,
+  SmtCommand.GetUnsatCore,
+  SmtCommand.GetModel,
+  SmtCommand.GetAssignment,
+  SmtCommand.GetValue,
+  SmtCommand.GetProof,
+  SmtCommand.GetInfo,
+  SmtCommand.Echo,
+]);
+
 export interface Command {
   text: string;
   head: string | null;
@@ -126,7 +165,7 @@ export function firstHead(expr: string): string | null {
  * Extract :named label from assert command.
  */
 export function extractNamedLabel(assertCmd: string): string | null {
-  if (firstHead(assertCmd) !== "assert") {
+  if (firstHead(assertCmd) !== SmtCommand.Assert) {
     return null;
   }
   const m = assertCmd.match(/:named\s+([^\s()]+)/s);
@@ -137,7 +176,7 @@ export function extractNamedLabel(assertCmd: string): string | null {
  * Parse int arg from command like "(push 1)".
  * Throws SMT2Error if form doesn't match.
  */
-export function parsePositiveIntCommand(expr: string, expectedHead: string): number {
+export function parsePositiveIntCommand(expr: string, expectedHead: SmtCommand): number {
   const escaped = expectedHead.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const re = new RegExp(`^\\(\\s*${escaped}\\s+(\\d+)\\s*\\)$`);
   const m = expr.trim().match(re);

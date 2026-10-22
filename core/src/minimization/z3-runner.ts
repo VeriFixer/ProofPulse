@@ -17,6 +17,13 @@ export interface Z3Result {
 }
 
 const CORE_MARKER = "__UNSAT_CORE_MARKER__";
+/** Result of a check-sat. */
+export enum SolverStatus {
+  Sat = "sat",
+  Unsat = "unsat",
+  Unknown = "unknown",
+}
+
 const STATUS_RE = /(?:^|\n)(sat|unsat|unknown)\s*$/m;
 
 /**
@@ -79,12 +86,12 @@ export async function runZ3(
  * Parse solver status (sat/unsat/unknown) from z3 stdout.
  * Throws SMT2Error if not found.
  */
-export function parseStatus(stdout: string): string {
+export function parseStatus(stdout: string): SolverStatus {
   const m = STATUS_RE.exec(stdout);
   if (!m) {
     throw new SMT2Error(`Could not find solver status in output:\n${stdout}`);
   }
-  return m[1];
+  return m[1] as SolverStatus;
 }
 
 /**

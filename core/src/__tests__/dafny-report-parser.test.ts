@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { DafnyReportParser } from "../dafny_report_parser.js";
+import { DafnyReportParser } from "../backends/dafny/log-parser.js";
 import { ProofGraph } from "../proof-graph.js";
 
 describe("DafnyReportParser", () => {

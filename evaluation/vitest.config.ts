@@ -10,8 +10,6 @@ export default defineConfig({
   test: {
     root: path.resolve(__dirname, ".."),
     include: [
-      "tests/unit/evaluation/**/*.test.ts",
-      "tests/property/evaluation/**/*.test.ts",
       "tests/integration/evaluation/**/*.test.ts",
       "evaluation/src/__tests__/**/*.test.ts",
     ],

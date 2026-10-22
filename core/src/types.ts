@@ -1,3 +1,5 @@
+import type { UnitKind } from "./report/coverage-report.js";
+
 export enum CovStatus {
   CovComplete = "CovComplete",
   CovTest = "CovTest",
@@ -13,6 +15,9 @@ export enum TokenType {
   LoopInvariant = "LoopInvariant",
   Call = "Call",
   CodeLine = "CodeLine",
+  Assume = "Assume",
+  Axiom = "Axiom",
+  Lemma = "Lemma",
 }
 
 export interface SourceLocation {
@@ -31,27 +36,5 @@ export interface NodeData {
   covStatus: CovStatus;
   covStatusInternal: CovStatus;
   methodName?: string;
-  methodType?: string;
-}
-
-export interface DafnyResult {
-  log: string;
-  exitCode: number;
-  timedOut?: boolean;
-  error?: string;
-}
-
-export interface DafnyOptions {
-  dafnyPath?: string;
-  z3Path?: string;
-  timeoutSeconds?: number;
-  forceMinimization?: boolean;
-  /** Disable Dafny's abstract interpretation pass (--no-abstract-interpretation). */
-  noAbstractInterpretation?: boolean;
-  /** Called with warning messages (e.g. potential version incompatibility). */
-  onWarning?: (msg: string) => void;
-  /** AbortSignal for cancelling the run. */
-  signal?: AbortSignal;
-  /** Callback fired with Phase 1 (normal) result before minimization begins. */
-  onPreliminaryResult?: (result: DafnyResult) => void;
+  methodType?: UnitKind;
 }

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import * as fc from "fast-check";
-import { ProofNode, classifyNodeType } from "../../../core/src/proof-node.js";
+import { classifyNodeType } from "../../../core/src/backends/dafny/messages.js";
 import { TokenType } from "../../../core/src/types.js";
 
 /**

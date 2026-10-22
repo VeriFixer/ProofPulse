@@ -1,6 +1,10 @@
 import { CovStatus, TokenType } from "./types.js";
 import { ProofNode } from "./proof-node.js";
 import { ProofGraph } from "./proof-graph.js";
+import { UnitKind } from "./report/coverage-report.js";
+
+/** Facts a proof can use (not obligations): their final status is how they were used. */
+const USED_FACT_TYPES: ReadonlySet<TokenType> = new Set([TokenType.Call, TokenType.Assume, TokenType.Axiom, TokenType.Lemma]);
 
 /**
  * Recursively mark a node and all its transitive provedBy dependencies as CovComplete internally.
@@ -119,9 +123,9 @@ export function applyCoverageSemantic(graph: ProofGraph): void {
     }
   }
 
-  // Call: covStatus = covStatusInternal
+  // Calls, assumptions, axioms, lemmas: covStatus = covStatusInternal
   for (const node of allNodes) {
-    if (node.getType() === TokenType.Call) {
+    if (USED_FACT_TYPES.has(node.getType())) {
       node.setCovStatus(node.getCovStatusInternal());
     }
   }
@@ -151,7 +155,7 @@ export function applyCoverageSemantic(graph: ProofGraph): void {
   //   Uncovered → not proved by real code (only itself or nothing)
   //
   // Special case: well-formedness ensures clauses that don't share a span with
-  // another node are always considered covered (they are Dafny-internal checks,
+  // another node are always considered covered (they are verifier-internal checks,
   // not user proof obligations).
 
   // Build a span→node map to detect shared spans (excluding methodType from key)
@@ -167,7 +171,7 @@ export function applyCoverageSemantic(graph: ProofGraph): void {
     if (node.getType() === TokenType.Postcondition) {
       // Well-formedness ensures clause: treat as covered unless another node
       // shares the exact same span (in that case fall through to normal logic)
-      if (node.methodType.includes("well-formedness")) {
+      if (node.methodType === UnitKind.WellFormedness) {
         const rawSpan = `${node.file}|${node.start.line},${node.start.col}-${node.end.line},${node.end.col}`;
         const siblings = rawSpanToNodes.get(rawSpan) ?? [];
         const hasSharedSpan = siblings.some(s => s !== node);

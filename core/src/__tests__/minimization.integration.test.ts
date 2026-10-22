@@ -2,7 +2,8 @@ import { describe, it, expect } from "vitest";
 import { execFileSync, execSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { resolve, join } from "node:path";
-import { runDafny } from "../dafny-runner.js";
+import { runDafny } from "../backends/dafny/runner.js";
+import { RunStatus } from "../backends/backend.js";
 
 const DIST_DIR = resolve(__dirname, "..", "..", "dist", "minimization");
 const WRAPPER_JS = join(DIST_DIR, "wrapper.js");
@@ -63,12 +64,12 @@ describeIfZ3("minimization integration", () => {
     expect(result).not.toMatch(/aux\$assume\$id14/);
   });
 
-  it.skipIf(!hasDafny)("runDafny with forceMinimization: true on trivial .dfy completes without error", async () => {
+  it.skipIf(!hasDafny)("runDafny with minimization on trivial .dfy completes without error", async () => {
     const result = await runDafny(TRIVIAL_DFY, {
-      forceMinimization: true,
+      minimization: {},
       timeoutSeconds: 120,
     });
-    expect(result.error).toBeUndefined();
-    expect(result.timedOut).toBeFalsy();
+    expect(result.errorMessage).toBeUndefined();
+    expect(result.status).toBe(RunStatus.Completed);
   }, 180_000);
 });

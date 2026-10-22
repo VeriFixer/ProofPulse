@@ -6,6 +6,7 @@ import {
   generateSummary,
   type AgentClassificationResult,
 } from "../agent-helpers.js";
+import { ErrorDirection, RootCause, SpecCategory } from "../types.js";
 
 // --- validateClassificationResult edge cases ---
 
@@ -13,11 +14,11 @@ describe("validateClassificationResult", () => {
   const validObj: AgentClassificationResult = {
     dataset: "RQ1-GPT4",
     taskId: "126",
-    category: "postcondition",
-    direction: "FP",
+    category: SpecCategory.Postcondition,
+    direction: ErrorDirection.FalsePositive,
     predicted: "strong",
     oracle: "weak",
-    rootCause: "quantifier_not_tracked",
+    rootCause: RootCause.QuantifierNotTracked,
     explanation: "quantifier not tracked by coverage model",
     confidence: 0.85,
     oracleError: false,

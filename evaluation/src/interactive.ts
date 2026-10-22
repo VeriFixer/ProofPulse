@@ -1,8 +1,10 @@
+import type { Classification, OracleLabel } from "./types.js";
+
 export interface InteractiveStep {
   filePath: string;
   coverageJson: object;
-  classification: "strong" | "weak" | "error";
-  oracleLabel: "strong" | "weak";
+  classification: Classification;
+  oracleLabel: OracleLabel;
   pass: boolean;
 }
 

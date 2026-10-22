@@ -1,9 +1,15 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import * as path from "node:path";
 import * as fs from "node:fs";
 import { parseOracle, parseAllOracles } from "../oracle-parser.js";
+import { OracleLabel } from "../types.js";
 
 const REPO_ROOT = path.resolve(__dirname, "../../../dafny-synthesis");
+
+// Suppress noisy "[oracle-parser] Skipping ..." warnings during tests
+let warnSpy: ReturnType<typeof vi.spyOn>;
+beforeEach(() => { warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {}); });
+afterEach(() => { warnSpy.mockRestore(); });
 
 describe("parseOracle", () => {
   it("returns entries with valid structure", () => {
@@ -13,24 +19,24 @@ describe("parseOracle", () => {
     for (const entry of entries) {
       expect(entry.taskId).toBeTruthy();
       expect(entry.filePath).toBeTruthy();
-      expect(["strong", "weak", "wrong"]).toContain(entry.label);
+      expect(Object.values(OracleLabel)).toContain(entry.label);
       expect(path.isAbsolute(entry.filePath)).toBe(true);
       expect(fs.existsSync(entry.filePath)).toBe(true);
     }
   });
 
-  it("RQ3-GPT4 has strong and weak entries", () => {
+  it("RQ3-GPT4 matches paper: ~103 strong, ≥3 weak postconditions", () => {
     const entries = parseOracle(REPO_ROOT, "RQ3-GPT4");
-    const strong = entries.filter((e) => e.label === "strong").length;
-    const weak = entries.filter((e) => e.label === "weak").length;
-    expect(strong).toBeGreaterThan(0);
-    expect(weak).toBeGreaterThan(0);
+    const strong = entries.filter((e) => e.label === OracleLabel.Strong).length;
+    const weak = entries.filter((e) => e.label === OracleLabel.Weak).length;
+    expect(strong).toBe(103);
+    expect(weak).toBeGreaterThanOrEqual(3);
   });
 
   it("RQ1-GPT4 has more spread: strong + weak + wrong", () => {
     const entries = parseOracle(REPO_ROOT, "RQ1-GPT4");
-    const strong = entries.filter((e) => e.label === "strong").length;
-    const weak = entries.filter((e) => e.label === "weak").length;
+    const strong = entries.filter((e) => e.label === OracleLabel.Strong).length;
+    const weak = entries.filter((e) => e.label === OracleLabel.Weak).length;
     // Paper: 34 strong, 15 weak, 7 wrong = 22 non-strong
     expect(strong).toBeGreaterThan(0);
     expect(weak).toBeGreaterThan(0);

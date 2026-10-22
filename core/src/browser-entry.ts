@@ -3,7 +3,8 @@
  */
 import { CovStatus, TokenType } from "./types.js";
 import { ProofNode } from "./proof-node.js";
-import { Proof, parseProof } from "./proof.js";
+import { Proof, analyzeReport, parseProof } from "./proof.js";
+import type { CoverageReport } from "./report/coverage-report.js";
 import { generateSpansFragment, getDependsOn, getProvedBy, getProves } from "./rendering.js";
 
 const root: Record<string, unknown> =
@@ -22,6 +23,11 @@ root.parseProof = function (dafnyCode: string, proofLog: string): Proof {
   root.sampleLog = proofLog;
   root.sourceCode = dafnyCode;
   return parseProof(dafnyCode, proofLog);
+};
+
+root.analyzeReport = function (sourceCode: string, report: CoverageReport): Proof {
+  root.sourceCode = sourceCode;
+  return analyzeReport(sourceCode, report);
 };
 
 root.generateSpansFragment = function (code: string, proof: Proof): string {

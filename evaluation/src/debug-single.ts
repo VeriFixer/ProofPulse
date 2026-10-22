@@ -15,9 +15,10 @@ import {
   parseProof,
   TokenType,
   CovStatus,
-  type NodeData,
+  UnitKind,
 } from "@proofpulse/core";
 import { classifyPostcondition, classifyInvariant, classifyPrecondition, classifySpec, classifyAll } from "./classifier.js";
+import { dafnyRunOptions, dafnyRunError } from "./benchmark-runner.js";
 
 // ─── CLI parsing ───────────────────────────────────────────────────────────
 const args = process.argv.slice(2);
@@ -62,10 +63,11 @@ async function main() {
 
   // Step 1: Run Dafny
   console.log("\n[1] Running Dafny verification...");
-  const dafnyResult = await runDafny(filePath, { dafnyPath, timeoutSeconds: timeout });
+  const dafnyResult = await runDafny(filePath, dafnyRunOptions({ dafnyPath, timeoutSeconds: timeout }));
 
-  if (dafnyResult.error || dafnyResult.timedOut) {
-    console.error(`Dafny failed: ${dafnyResult.error ?? "timeout"}`);
+  const runError = dafnyRunError(dafnyResult);
+  if (runError !== undefined) {
+    console.error(`Dafny failed: ${runError}`);
     process.exit(1);
   }
   console.log(`    Exit code: ${dafnyResult.exitCode}`);
@@ -97,8 +99,8 @@ async function main() {
   if (postTops.length === 0) {
     console.log(`    → Result: "none" (no postcondition tops)`);
   } else {
-    const methodTops = postTops.filter(n => !n.methodType.includes("well-formedness"));
-    const wfTops = postTops.filter(n => n.methodType.includes("well-formedness"));
+    const methodTops = postTops.filter(n => n.methodType !== UnitKind.WellFormedness);
+    const wfTops = postTops.filter(n => n.methodType === UnitKind.WellFormedness);
     console.log(`    Well-formedness tops (skipped): ${wfTops.length}`);
     console.log(`    Method/correctness tops: ${methodTops.length}`);
 
@@ -137,8 +139,8 @@ async function main() {
   if (invTops.length === 0) {
     console.log(`    → Result: "none" (no invariant tops)`);
   } else {
-    const methodTops = invTops.filter(n => !n.methodType.includes("well-formedness"));
-    const wfTops = invTops.filter(n => n.methodType.includes("well-formedness"));
+    const methodTops = invTops.filter(n => n.methodType !== UnitKind.WellFormedness);
+    const wfTops = invTops.filter(n => n.methodType === UnitKind.WellFormedness);
     console.log(`    Well-formedness tops (skipped): ${wfTops.length}`);
     console.log(`    Method/correctness tops: ${methodTops.length}`);
 
@@ -174,21 +176,21 @@ async function main() {
   console.log(`\n[7] Precondition classification steps:`);
   const preNodes = allNodes.filter(n => n.getType() === TokenType.Precondition);
   console.log(`    Precondition nodes: ${preNodes.length}`);
-  const preMethodNodes = preNodes.filter(n => !n.methodType.includes("well-formedness"));
-  const preWfNodes = preNodes.filter(n => n.methodType.includes("well-formedness"));
+  const preMethodNodes = preNodes.filter(n => n.methodType !== UnitKind.WellFormedness);
+  const preWfNodes = preNodes.filter(n => n.methodType === UnitKind.WellFormedness);
   console.log(`    Well-formedness (skipped): ${preWfNodes.length}`);
   console.log(`    Method/correctness: ${preMethodNodes.length}`);
   for (const n of preNodes) {
     const icon = statusIcon(n.covStatus);
-    const skipped = n.methodType.includes("well-formedness") ? " [SKIPPED]" : "";
+    const skipped = n.methodType === UnitKind.WellFormedness ? " [SKIPPED]" : "";
     console.log(`    ${icon} [${n.start.line}:${n.start.col}] covStatus=${n.covStatus} methodType="${n.methodType}"${skipped}`);
   }
-  const preResult = classifyPrecondition(allNodes as NodeData[]);
+  const preResult = classifyPrecondition(allNodes);
   console.log(`    → Precondition result: "${preResult}"`);
 
   // ── Overall ──
   console.log(`\n[8] Overall classification:`);
-  const categories = classifyAll(graph, allNodes as NodeData[]);
+  const categories = classifyAll(graph, allNodes);
   const overall = classifySpec(graph);
   console.log(`    postcondition: ${categories.postcondition}`);
   console.log(`    precondition:  ${categories.precondition}`);

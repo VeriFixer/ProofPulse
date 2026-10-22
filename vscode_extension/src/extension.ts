@@ -3,6 +3,7 @@ import { registerRunAnalysis, registerGetProofReport, runAnalysis } from "./comm
 import { clearDecorations } from "./decorations";
 import { getRunOnSave } from "./config";
 import { needsInstall, installDafny } from "./dafny-installer";
+import { backendForDocument } from "./backends";
 
 export function activate(context: vscode.ExtensionContext): void {
   registerRunAnalysis(context);
@@ -11,7 +12,7 @@ export function activate(context: vscode.ExtensionContext): void {
   // Clear decorations on edit (stale until next analysis)
   context.subscriptions.push(
     vscode.workspace.onDidChangeTextDocument((e) => {
-      if (!e.document.fileName.endsWith(".dfy")) return;
+      if (!backendForDocument(e.document)) return;
       const editor = vscode.window.activeTextEditor;
       if (editor && editor.document === e.document) {
         clearDecorations(editor);
@@ -19,10 +20,10 @@ export function activate(context: vscode.ExtensionContext): void {
     }),
   );
 
-  // Run analysis on save for .dfy files
+  // Run analysis on save for files a backend handles
   context.subscriptions.push(
     vscode.workspace.onDidSaveTextDocument((doc) => {
-      if (!doc.fileName.endsWith(".dfy")) return;
+      if (!backendForDocument(doc)) return;
       if (!getRunOnSave()) return;
       const editor = vscode.window.visibleTextEditors.find((e) => e.document === doc);
       if (editor) {
@@ -31,11 +32,11 @@ export function activate(context: vscode.ExtensionContext): void {
     }),
   );
 
-  // Run analysis when a .dfy file becomes the active editor (covers open, tab switch)
+  // Run analysis when a supported file becomes the active editor (covers open, tab switch)
   context.subscriptions.push(
     vscode.window.onDidChangeActiveTextEditor((editor) => {
       if (!editor) return;
-      if (!editor.document.fileName.endsWith(".dfy")) return;
+      if (!backendForDocument(editor.document)) return;
       if (!getRunOnSave()) return;
       runAnalysis(editor, context);
     }),
@@ -45,17 +46,17 @@ export function activate(context: vscode.ExtensionContext): void {
   if (needsInstall(context)) {
     installDafny(context).then((binPath) => {
       if (binPath) {
-        // Trigger analysis on active .dfy file after install
+        // Trigger analysis on the active supported file after install
         const editor = vscode.window.activeTextEditor;
-        if (editor && editor.document.fileName.endsWith(".dfy") && getRunOnSave()) {
+        if (editor && backendForDocument(editor.document) && getRunOnSave()) {
           runAnalysis(editor, context);
         }
       }
     });
   } else {
-    // Run on the already-active .dfy file at activation time
+    // Run on the already-active supported file at activation time
     const activeEditor = vscode.window.activeTextEditor;
-    if (activeEditor && activeEditor.document.fileName.endsWith(".dfy") && getRunOnSave()) {
+    if (activeEditor && backendForDocument(activeEditor.document) && getRunOnSave()) {
       runAnalysis(activeEditor, context);
     }
   }

@@ -366,7 +366,9 @@ async function loadCoverage() {
         return;
     }
 
-    currentProof = window.parseProof(data.source, data.log);
+    currentProof = data.report
+      ? window.analyzeReport(data.source, data.report)
+      : window.parseProof(data.source, data.log);
     const lineStatuses = currentProof.lineStatus;
     const src = window.getSourceCode();
     const fragment = window.generateSpansFragment(src, currentProof);

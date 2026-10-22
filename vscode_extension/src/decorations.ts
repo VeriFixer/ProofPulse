@@ -1,6 +1,6 @@
 import * as path from "node:path";
 import * as vscode from "vscode";
-import { CovStatus, ProofNode } from "@proofpulse/core";
+import { assertNever, CovStatus, ProofNode, TokenType } from "@proofpulse/core";
 
 interface DecorationTypes {
   uncoveredGutter: vscode.TextEditorDecorationType;
@@ -13,26 +13,40 @@ interface DecorationTypes {
 let currentTypes: DecorationTypes | null = null;
 
 /** Type-aware explanation for Uncovered status */
-function uncoveredExplanation(type: string): string {
+function uncoveredExplanation(type: TokenType): string {
   switch (type) {
-    case "Postcondition": return "Postcondition not proven by any code path.";
-    case "Precondition": return "Precondition not used in any proof obligation.";
-    case "AssertionManual": return "Manual assertion not covered by proof dependencies.";
-    case "LoopInvariant": return "Loop invariant not covered by proof dependencies.";
-    case "CodeLine": return "Code line not contributing to any proof obligation.";
-    default: return "Not covered by any proof path.";
+    case TokenType.Postcondition: return "Postcondition not proven by any code path.";
+    case TokenType.Precondition: return "Precondition not used in any proof obligation.";
+    case TokenType.AssertionManual: return "Manual assertion not covered by proof dependencies.";
+    case TokenType.LoopInvariant: return "Loop invariant not covered by proof dependencies.";
+    case TokenType.CodeLine: return "Code line not contributing to any proof obligation.";
+    case TokenType.AssertionAutomatic:
+    case TokenType.Call:
+    case TokenType.Assume:
+    case TokenType.Axiom:
+    case TokenType.Lemma:
+    case TokenType.Undefined:
+      return "Not covered by any proof path.";
+    default: return assertNever(type, "token type");
   }
 }
 
 /** Type-aware explanation for CovTest status */
-function covTestExplanation(type: string): string {
+function covTestExplanation(type: TokenType): string {
   switch (type) {
-    case "Postcondition": return "Postcondition not used in calling code (potentially unused method).";
-    case "Precondition": return "Precondition only used in calling tests, unnecessary to prove postconditions.";
-    case "CodeLine": return "Code used only by test assertions, not by postcondition proofs.";
-    case "AssertionManual": return "Assertion covered only by test paths, not postcondition proofs.";
-    case "LoopInvariant": return "Loop invariant covered only by test paths, not postcondition proofs.";
-    default: return "Covered only by test/non-postcondition assertions.";
+    case TokenType.Postcondition: return "Postcondition not used in calling code (potentially unused method).";
+    case TokenType.Precondition: return "Precondition only used in calling tests, unnecessary to prove postconditions.";
+    case TokenType.CodeLine: return "Code used only by test assertions, not by postcondition proofs.";
+    case TokenType.AssertionManual: return "Assertion covered only by test paths, not postcondition proofs.";
+    case TokenType.LoopInvariant: return "Loop invariant covered only by test paths, not postcondition proofs.";
+    case TokenType.AssertionAutomatic:
+    case TokenType.Call:
+    case TokenType.Assume:
+    case TokenType.Axiom:
+    case TokenType.Lemma:
+    case TokenType.Undefined:
+      return "Covered only by test/non-postcondition assertions.";
+    default: return assertNever(type, "token type");
   }
 }
 

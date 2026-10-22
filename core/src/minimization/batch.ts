@@ -14,25 +14,16 @@ import {
   firstHead,
   extractNamedLabel,
   parsePositiveIntCommand,
+  SmtCommand,
+  SMT_QUERY_COMMANDS as QUERY_COMMANDS,
 } from "./smt2-parser.js";
 import { buildScript, minimizeCoreForBlock } from "./minimizer.js";
-import { runZ3, parseStatus, parseCoreFromMarkedOutput } from "./z3-runner.js";
+import { runZ3, parseStatus, parseCoreFromMarkedOutput, SolverStatus } from "./z3-runner.js";
 
 // ---------------------------------------------------------------------------
 // Constants
 // ---------------------------------------------------------------------------
 
-const QUERY_COMMANDS = new Set([
-  "check-sat",
-  "check-sat-assuming",
-  "get-unsat-core",
-  "get-model",
-  "get-assignment",
-  "get-value",
-  "get-proof",
-  "get-info",
-  "echo",
-]);
 
 // ---------------------------------------------------------------------------
 // Types
@@ -109,8 +100,8 @@ async function processFile(
     const cmd = commands[i];
     const head = cmd.head;
 
-    if (head === "push") {
-      const count = parsePositiveIntCommand(cmd.text, "push");
+    if (head === SmtCommand.Push) {
+      const count = parsePositiveIntCommand(cmd.text, SmtCommand.Push);
       for (let k = 0; k < count; k++) {
         frames.push([]);
       }
@@ -118,8 +109,8 @@ async function processFile(
       continue;
     }
 
-    if (head === "pop") {
-      const count = parsePositiveIntCommand(cmd.text, "pop");
+    if (head === SmtCommand.Pop) {
+      const count = parsePositiveIntCommand(cmd.text, SmtCommand.Pop);
       if (count >= frames.length) {
         throw new SMT2Error(`Pop underflow: ${cmd.text}`);
       }
@@ -130,14 +121,14 @@ async function processFile(
       continue;
     }
 
-    if (head === "reset") {
+    if (head === SmtCommand.Reset) {
       frames.length = 0;
       frames.push([]);
       i++;
       continue;
     }
 
-    if (head === "check-sat" || head === "check-sat-assuming") {
+    if (head === SmtCommand.CheckSat || head === SmtCommand.CheckSatAssuming) {
       blockIndex++;
       const queryBlock: Command[] = [cmd];
       i++;
@@ -145,8 +136,8 @@ async function processFile(
         i < commands.length &&
         commands[i].head !== null &&
         QUERY_COMMANDS.has(commands[i].head!) &&
-        commands[i].head !== "check-sat" &&
-        commands[i].head !== "check-sat-assuming"
+        commands[i].head !== SmtCommand.CheckSat &&
+        commands[i].head !== SmtCommand.CheckSatAssuming
       ) {
         queryBlock.push(commands[i]);
         i++;
@@ -163,9 +154,9 @@ async function processFile(
       }
 
       const status = parseStatus(proc.stdout);
-      const requestedCore = queryBlock.some((q) => q.head === "get-unsat-core");
+      const requestedCore = queryBlock.some((q) => q.head === SmtCommand.GetUnsatCore);
 
-      if (!requestedCore || status !== "unsat") {
+      if (!requestedCore || status !== SolverStatus.Unsat) {
         // Forward z3 output without marker
         const rendered = await runZ3(
           z3Bin,

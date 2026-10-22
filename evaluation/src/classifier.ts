@@ -1,17 +1,21 @@
-import { type ProofGraph, type NodeData, TokenType, CovStatus } from "@proofpulse/core";
+import { type ProofGraph, type NodeData, TokenType, CovStatus, UnitKind } from "@proofpulse/core";
+import { Classification, OracleLabel, PreconditionNeed, SpecStrength } from "./types.js";
+
+/** The node fields precondition classification needs (satisfied by ProofNode and NodeData). */
+export type PreconditionNodeInfo = Pick<NodeData, "type" | "covStatus" | "methodType">;
 
 export interface CategoryClassification {
-  postcondition: "strong" | "weak" | "none";
-  precondition: "required" | "optional" | "none";
-  invariant: "strong" | "weak" | "none";
+  postcondition: SpecStrength;
+  precondition: PreconditionNeed;
+  invariant: SpecStrength;
 }
 
 export interface ClassificationResult {
   taskId: string;
   filePath: string;
-  classification: "strong" | "weak" | "error";
+  classification: Classification;
   categories: CategoryClassification;
-  oracleLabel: "strong" | "weak" | "wrong";
+  oracleLabel: OracleLabel;
   postconditionLines: number[];
   preconditionLines: number[];
   invariantLines: number[];
@@ -24,87 +28,88 @@ export interface ClassificationResult {
  * Postcondition classification:
  * Only consider tops with method-type correctness (skip well-formedness → always strong).
  * For each correctness postcondition top, collect provedBy ∪ proofUnused nodes.
- * If any node in that set is Uncovered → weak.
- * If all covered (CovComplete or CovTest) → strong.
+ * Only CodeLine nodes in that set count. If there are none, or any of them is
+ * Uncovered or CovTest → weak. If all are CovComplete → strong.
  */
-export function classifyPostcondition(graph: ProofGraph): "strong" | "weak" | "none" {
+export function classifyPostcondition(graph: ProofGraph): SpecStrength {
   const topNodes = graph.getAllTopNodes();
   const postTops = topNodes.filter(n => n.getType() === TokenType.Postcondition);
-  if (postTops.length === 0) return "none";
+  if (postTops.length === 0) return SpecStrength.None;
 
   // Only consider correctness (method) type tops
-  const methodTops = postTops.filter(n => !n.methodType.includes("well-formedness"));
+  const methodTops = postTops.filter(n => n.methodType !== UnitKind.WellFormedness);
   // If all postcondition tops are well-formedness, classify as strong
-  if (methodTops.length === 0) return "strong";
+  if (methodTops.length === 0) return SpecStrength.Strong;
 
   // For each method-type top, check if all CodeLine nodes in provedBy ∪ proofUnused are covered
   for (const top of methodTops) {
     const deps = new Set([...top.provedBy, ...top.proofUnused]);
     const codeLineDeps = [...deps].filter(d => d.getType() === TokenType.CodeLine);
     // Empty code line deps means nothing substantive proves this postcondition → weak
-    if (codeLineDeps.length === 0) return "weak";
+    if (codeLineDeps.length === 0) return SpecStrength.Weak;
     for (const dep of codeLineDeps) {
-      if (dep.covStatus === CovStatus.Uncovered || dep.covStatus == CovStatus.CovTest) return "weak";
+      if (dep.covStatus === CovStatus.Uncovered || dep.covStatus === CovStatus.CovTest) return SpecStrength.Weak;
     }
   }
 
-  return "strong";
+  return SpecStrength.Strong;
 }
 
 /**
  * Precondition classification — only consider correctness methodType (skip well-formedness).
+ * Optional only when every such precondition is Uncovered; otherwise required.
  */
-export function classifyPrecondition(nodes: NodeData[]): "required" | "optional" | "none" {
+export function classifyPrecondition(nodes: readonly PreconditionNodeInfo[]): PreconditionNeed {
   const preconditions = nodes.filter(
-    (n) => n.type === TokenType.Precondition && !(n.methodType ?? "").includes("well-formedness")
+    (n) => n.type === TokenType.Precondition && n.methodType !== UnitKind.WellFormedness
   );
-  if (preconditions.length === 0) return "none";
+  if (preconditions.length === 0) return PreconditionNeed.None;
 
   const allUncovered = preconditions.every(
     (n) => (n.covStatus === CovStatus.Uncovered)
   );
-  return allUncovered ? "optional" : "required";
+  return allUncovered ? PreconditionNeed.Optional : PreconditionNeed.Required;
 }
 
 /**
  * Invariant classification:
  * Only consider tops with method-type correctness (skip well-formedness → always strong).
  * For each correctness invariant top, collect provedBy ∪ proofUnused nodes.
- * If any node in that set is Uncovered → weak.
- * If all covered (CovComplete or CovTest) → strong.
+ * Only CodeLine nodes in that set count. If there are none, or any of them is
+ * Uncovered or CovTest → weak. If all are CovComplete → strong.
  */
-export function classifyInvariant(graph: ProofGraph): "strong" | "weak" | "none" {
+export function classifyInvariant(graph: ProofGraph): SpecStrength {
   const topNodes = graph.getAllTopNodes();
   const invTops = topNodes.filter(n => n.getType() === TokenType.LoopInvariant);
-  if (invTops.length === 0) return "none";
+  if (invTops.length === 0) return SpecStrength.None;
 
   // Only consider correctness (method) type tops
-  const methodTops = invTops.filter(n => !n.methodType.includes("well-formedness"));
+  const methodTops = invTops.filter(n => n.methodType !== UnitKind.WellFormedness);
   // If all invariant tops are well-formedness, classify as strong
-  if (methodTops.length === 0) return "strong";
+  if (methodTops.length === 0) return SpecStrength.Strong;
 
   // For each method-type top, check if all CodeLine nodes in provedBy ∪ proofUnused are covered
   for (const top of methodTops) {
     const deps = new Set([...top.provedBy, ...top.proofUnused]);
     const codeLineDeps = [...deps].filter(d => d.getType() === TokenType.CodeLine);
     // Empty code line deps means nothing substantive proves this invariant → weak
-    if (codeLineDeps.length === 0) return "weak";
+    if (codeLineDeps.length === 0) return SpecStrength.Weak;
     for (const dep of codeLineDeps) {
-      if (dep.covStatus === CovStatus.Uncovered || dep.covStatus == CovStatus.CovTest) return "weak";
+      if (dep.covStatus === CovStatus.Uncovered || dep.covStatus === CovStatus.CovTest) return SpecStrength.Weak;
     }
   }
 
-  return "strong";
+  return SpecStrength.Strong;
 }
 
 /** Overall classification: strong postcondition = strong, else weak. */
-export function classifySpec(graph: ProofGraph): "strong" | "weak" {
+export function classifySpec(graph: ProofGraph): Classification.Strong | Classification.Weak {
   const post = classifyPostcondition(graph);
-  return post === "strong" ? "strong" : "weak";
+  return post === SpecStrength.Strong ? Classification.Strong : Classification.Weak;
 }
 
 /** Classify all three categories at once. */
-export function classifyAll(graph: ProofGraph, nodes: NodeData[]): CategoryClassification {
+export function classifyAll(graph: ProofGraph, nodes: readonly PreconditionNodeInfo[]): CategoryClassification {
   return {
     postcondition: classifyPostcondition(graph),
     precondition: classifyPrecondition(nodes),

@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { chmod, mkdir, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { tmpdir } from "node:os";
-import { resolveDafnyPathWithSource, resolveZ3PathWithSource } from "../../../core/src/dafny-runner.js";
+import { resolveDafnyPathWithSource, resolveZ3PathWithSource } from "../../../core/src/backends/dafny/runner.js";
 
 async function createExecutable(filePath: string): Promise<void> {
   await mkdir(dirname(filePath), { recursive: true });

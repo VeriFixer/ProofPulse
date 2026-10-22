@@ -73,8 +73,9 @@ function buildGraph(specs: NodeSpec[]): ProofGraph {
       { line: spec.startLine, col: spec.startCol },
       { line: spec.startLine, col: spec.endCol },
       `method_${i}`,
-      "",
+      UnitKind.Correctness,
       `token ${i}`,
+      dafnyMessageKind(`token ${i}`),
     );
     node.setCovStatus(spec.covStatus);
     graph.addNode(node);
@@ -207,11 +208,11 @@ describe("Property 6: Line status uses two-level span aggregation", () => {
     const sourceCode = "line 1\nline 2";
     const graph = new ProofGraph();
 
-    const n1 = new ProofNode(FILE, { line: 1, col: 1 }, { line: 1, col: 5 }, "m1", "", "t1");
+    const n1 = new ProofNode(FILE, { line: 1, col: 1 }, { line: 1, col: 5 }, "m1", UnitKind.Correctness, "t1", dafnyMessageKind("t1"));
     n1.setCovStatus(CovStatus.CovComplete);
     graph.addNode(n1);
 
-    const n2 = new ProofNode(FILE, { line: 1, col: 6 }, { line: 1, col: 10 }, "m2", "", "t2");
+    const n2 = new ProofNode(FILE, { line: 1, col: 6 }, { line: 1, col: 10 }, "m2", UnitKind.Correctness, "t2", dafnyMessageKind("t2"));
     n2.setCovStatus(CovStatus.Uncovered);
     graph.addNode(n2);
 
@@ -230,6 +231,8 @@ describe("Property 6: Line status uses two-level span aggregation", () => {
  */
 
 import { getNodesByLine } from "../../../core/src/coverage.js";
+import { UnitKind } from "../../../core/src/report/coverage-report.js";
+import { dafnyMessageKind } from "../../../core/src/backends/dafny/messages.js";
 
 /** Node with a random span: start line <= end line, random columns */
 interface SpanNodeSpec {
@@ -275,8 +278,9 @@ function buildSpanGraph(specs: SpanNodeSpec[]): ProofGraph {
       { line: spec.startLine, col: spec.startCol },
       { line: spec.endLine, col: spec.endCol },
       "",
-      "",
+      UnitKind.Correctness,
       `span token ${i}`,
+      dafnyMessageKind(`span token ${i}`),
     );
     graph.addNode(node);
   });

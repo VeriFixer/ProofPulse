@@ -1,26 +1,33 @@
 import { describe, it, expect } from "vitest";
 import { computeConfusionMatrix, computeMetrics, formatTable, type ConfusionMatrix } from "../reporter.js";
 import type { ClassificationResult } from "../classifier.js";
+import { Classification, OracleLabel, PreconditionNeed, SpecStrength } from "../types.js";
 
-function makeResult(classification: "strong" | "weak" | "error", oracleLabel: "strong" | "weak" | "wrong"): ClassificationResult {
+const POST_FOR: Record<Classification, SpecStrength> = {
+  [Classification.Strong]: SpecStrength.Strong,
+  [Classification.Weak]: SpecStrength.Weak,
+  [Classification.Error]: SpecStrength.None,
+};
+
+function makeResult(classification: Classification, oracleLabel: OracleLabel): ClassificationResult {
   return {
     taskId: "t1", filePath: "/f.dfy", classification, oracleLabel,
-    categories: { postcondition: classification === "error" ? "none" : classification === "strong" ? "strong" : "weak", precondition: "none", invariant: "none" },
+    categories: { postcondition: POST_FOR[classification], precondition: PreconditionNeed.None, invariant: SpecStrength.None },
     postconditionLines: [], preconditionLines: [], invariantLines: [], bodyLines: [], coverageStatuses: {},
   };
 }
 
 describe("computeConfusionMatrix", () => {
   it("counts TP/FP/TN/FN correctly", () => {
-    const results = [makeResult("strong", "strong"), makeResult("strong", "weak"), makeResult("weak", "weak"), makeResult("weak", "strong")];
+    const results = [makeResult(Classification.Strong, OracleLabel.Strong), makeResult(Classification.Strong, OracleLabel.Weak), makeResult(Classification.Weak, OracleLabel.Weak), makeResult(Classification.Weak, OracleLabel.Strong)];
     expect(computeConfusionMatrix(results)).toEqual({ tp: 1, fp: 1, tn: 1, fn: 1 });
   });
   it("excludes error results", () => {
-    const results = [makeResult("strong", "strong"), makeResult("error", "strong")];
+    const results = [makeResult(Classification.Strong, OracleLabel.Strong), makeResult(Classification.Error, OracleLabel.Strong)];
     expect(computeConfusionMatrix(results)).toEqual({ tp: 1, fp: 0, tn: 0, fn: 0 });
   });
   it("excludes oracle=wrong results", () => {
-    const results = [makeResult("strong", "strong"), makeResult("strong", "wrong"), makeResult("weak", "wrong")];
+    const results = [makeResult(Classification.Strong, OracleLabel.Strong), makeResult(Classification.Strong, OracleLabel.Wrong), makeResult(Classification.Weak, OracleLabel.Wrong)];
     expect(computeConfusionMatrix(results)).toEqual({ tp: 1, fp: 0, tn: 0, fn: 0 });
   });
   it("returns zeros for empty", () => {

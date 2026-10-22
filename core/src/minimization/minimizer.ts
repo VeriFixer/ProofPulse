@@ -2,8 +2,8 @@
  * Core minimization algorithm — ported from Python minimize_unsat_core_trace.py
  */
 
-import { Command, SMT2Error } from "./smt2-parser.js";
-import { runZ3, parseStatus, parseCoreFromMarkedOutput } from "./z3-runner.js";
+import { Command, SMT2Error, SmtCommand } from "./smt2-parser.js";
+import { runZ3, parseStatus, parseCoreFromMarkedOutput, SolverStatus } from "./z3-runner.js";
 
 const CORE_MARKER = "__UNSAT_CORE_MARKER__";
 
@@ -29,7 +29,7 @@ export function buildScript(
 
   if (addMarker) {
     for (const q of queryBlock) {
-      if (q.head === "get-unsat-core") {
+      if (q.head === SmtCommand.GetUnsatCore) {
         parts.push(`(echo "${CORE_MARKER}")`);
       }
       parts.push(q.text);
@@ -130,7 +130,7 @@ export async function minimizeCoreForBlock(
     }
 
     const status = parseStatus(result.stdout);
-    if (status === "unsat") {
+    if (status === SolverStatus.Unsat) {
       const newCore = parseCoreFromMarkedOutput(result.stdout);
       active = normalizeCore(newCore, trialKept);
       i = 0;

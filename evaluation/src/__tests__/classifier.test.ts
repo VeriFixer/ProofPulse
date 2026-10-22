@@ -1,16 +1,18 @@
 import { describe, it, expect } from "vitest";
 import { classifyPostcondition, classifyPrecondition, classifyInvariant, classifySpec } from "../classifier.js";
-import { TokenType, CovStatus, type NodeData, ProofNode, ProofGraph } from "@proofpulse/core";
+import { TokenType, CovStatus, UnitKind, type NodeData, ProofNode, ProofGraph, nodeKindForTokenType } from "@proofpulse/core";
+import { Classification, PreconditionNeed, SpecStrength } from "../types.js";
 
-function makeNode(type: TokenType, covStatus: CovStatus, line = 1, prooftext = ""): NodeData {
+function makeNode(type: TokenType, covStatus: CovStatus, line = 1, prooftext = "", methodType?: UnitKind): NodeData {
   return {
     id: `node-${line}`, file: "test.dfy",
     start: { line, col: 0 }, end: { line, col: 10 },
     prooftexts: [prooftext], roles: { isTop: false, isCall: false, isProvedBy: false, isUnused: false }, type, covStatus, covStatusInternal: covStatus,
+    ...(methodType ? { methodType } : {}),
   };
 }
 
-/** Map TokenType to a prooftext that classifyNodeType will resolve correctly. */
+/** A representative Dafny message for each TokenType (the node kind is passed explicitly). */
 function prooftextForType(type: TokenType): string {
   switch (type) {
     case TokenType.Postcondition: return "this postcondition holds";
@@ -24,15 +26,16 @@ function prooftextForType(type: TokenType): string {
 }
 
 /** Build a ProofGraph from specs. Postcondition/LoopInvariant types are added as tops.
+ * Each node's kind is derived from its TokenType via nodeKindForTokenType.
  * provedByLines maps a top's line to an array of prover lines (for building edges). */
-function buildGraph(specs: { type: TokenType; covStatus: CovStatus; line?: number; prooftext?: string; isTop?: boolean; methodType?: string }[], provedByLines?: Record<number, number[]>): ProofGraph {
+function buildGraph(specs: { type: TokenType; covStatus: CovStatus; line?: number; prooftext?: string; isTop?: boolean; methodType?: UnitKind }[], provedByLines?: Record<number, number[]>): ProofGraph {
   const graph = new ProofGraph();
   const nodesByLine = new Map<number, ProofNode>();
   for (const s of specs) {
     const line = s.line ?? 1;
     const prooftext = s.prooftext || prooftextForType(s.type);
-    const methodType = s.methodType ?? "correctness";
-    const node = new ProofNode("test.dfy", { line, col: 0 }, { line, col: 10 }, "", methodType, prooftext);
+    const methodType = s.methodType ?? UnitKind.Correctness;
+    const node = new ProofNode("test.dfy", { line, col: 0 }, { line, col: 10 }, "", methodType, prooftext, nodeKindForTokenType(s.type));
     node.covStatus = s.covStatus;
     node.covStatusInternal = s.covStatus;
     if (!graph.hasNode(node.getId())) {
@@ -61,40 +64,56 @@ function buildGraph(specs: { type: TokenType; covStatus: CovStatus; line?: numbe
 describe("classifyPostcondition", () => {
   it("none when no postconditions", () => {
     const graph = buildGraph([{ type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 1 }]);
-    expect(classifyPostcondition(graph)).toBe("none");
+    expect(classifyPostcondition(graph)).toBe(SpecStrength.None);
   });
   it("strong when post has all provedBy covered", () => {
     const graph = buildGraph([
       { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1, prooftext: "this postcondition holds", isTop: true },
       { type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 2 },
     ], { 1: [2] });
-    expect(classifyPostcondition(graph)).toBe("strong");
+    expect(classifyPostcondition(graph)).toBe(SpecStrength.Strong);
   });
   it("weak when a provedBy node is uncovered", () => {
     const graph = buildGraph([
       { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1, prooftext: "this postcondition holds", isTop: true },
       { type: TokenType.CodeLine, covStatus: CovStatus.Uncovered, line: 2 },
     ], { 1: [2] });
-    expect(classifyPostcondition(graph)).toBe("weak");
+    expect(classifyPostcondition(graph)).toBe(SpecStrength.Weak);
   });
   it("weak when post has no provedBy (tautology)", () => {
     const graph = buildGraph([
       { type: TokenType.Postcondition, covStatus: CovStatus.Uncovered, line: 1, prooftext: "this postcondition holds", isTop: true },
     ]);
-    expect(classifyPostcondition(graph)).toBe("weak");
+    expect(classifyPostcondition(graph)).toBe(SpecStrength.Weak);
   });
   it("strong when only well-formedness postconditions exist", () => {
     const graph = buildGraph([
-      { type: TokenType.Postcondition, covStatus: CovStatus.Uncovered, line: 1, prooftext: "this postcondition holds", isTop: true, methodType: "well-formedness" },
+      { type: TokenType.Postcondition, covStatus: CovStatus.Uncovered, line: 1, prooftext: "this postcondition holds", isTop: true, methodType: UnitKind.WellFormedness },
     ]);
-    expect(classifyPostcondition(graph)).toBe("strong");
+    expect(classifyPostcondition(graph)).toBe(SpecStrength.Strong);
   });
-  it("strong with CovTest provedBy nodes", () => {
+  // CovTest (covered only by test/ghost code) counts as weak since ee280f2.
+  it("weak with CovTest provedBy nodes", () => {
     const graph = buildGraph([
       { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1, prooftext: "this postcondition holds", isTop: true },
       { type: TokenType.CodeLine, covStatus: CovStatus.CovTest, line: 2 },
     ], { 1: [2] });
-    expect(classifyPostcondition(graph)).toBe("strong");
+    expect(classifyPostcondition(graph)).toBe(SpecStrength.Weak);
+  });
+  it("weak when only non-CodeLine deps exist", () => {
+    const graph = buildGraph([
+      { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1, prooftext: "this postcondition holds", isTop: true },
+      { type: TokenType.AssertionManual, covStatus: CovStatus.CovComplete, line: 2, prooftext: "assertion always holds" },
+    ], { 1: [2] });
+    expect(classifyPostcondition(graph)).toBe(SpecStrength.Weak);
+  });
+  it("well-formedness tops are ignored when correctness tops exist", () => {
+    const graph = buildGraph([
+      { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1, isTop: true },
+      { type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 2 },
+      { type: TokenType.Postcondition, covStatus: CovStatus.Uncovered, line: 3, isTop: true, methodType: UnitKind.WellFormedness },
+    ], { 1: [2] });
+    expect(classifyPostcondition(graph)).toBe(SpecStrength.Strong);
   });
   it("strong when non-CodeLine dep is uncovered (ignored)", () => {
     const graph = buildGraph([
@@ -102,62 +121,72 @@ describe("classifyPostcondition", () => {
       { type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 2 },
       { type: TokenType.AssertionManual, covStatus: CovStatus.Uncovered, line: 3, prooftext: "assertion always holds" },
     ], { 1: [2, 3] });
-    expect(classifyPostcondition(graph)).toBe("strong");
+    expect(classifyPostcondition(graph)).toBe(SpecStrength.Strong);
   });
 });
 
 describe("classifyPrecondition", () => {
   it("none when no preconditions", () => {
-    expect(classifyPrecondition([])).toBe("none");
+    expect(classifyPrecondition([])).toBe(PreconditionNeed.None);
   });
   it("required when all covered", () => {
     expect(classifyPrecondition([
       makeNode(TokenType.Precondition, CovStatus.CovComplete, 1),
-    ])).toBe("required");
+    ])).toBe(PreconditionNeed.Required);
   });
-  it("optional when any uncovered", () => {
+  // Optional only when ALL correctness preconditions are uncovered (since 0285ad8).
+  it("required when only some are uncovered", () => {
     expect(classifyPrecondition([
       makeNode(TokenType.Precondition, CovStatus.CovComplete, 1),
       makeNode(TokenType.Precondition, CovStatus.Uncovered, 2),
-    ])).toBe("optional");
+    ])).toBe(PreconditionNeed.Required);
+  });
+  it("ignores well-formedness preconditions", () => {
+    expect(classifyPrecondition([
+      makeNode(TokenType.Precondition, CovStatus.CovComplete, 1, "", UnitKind.WellFormedness),
+      makeNode(TokenType.Precondition, CovStatus.Uncovered, 2, "", UnitKind.Correctness),
+    ])).toBe(PreconditionNeed.Optional);
+    expect(classifyPrecondition([
+      makeNode(TokenType.Precondition, CovStatus.CovComplete, 1, "", UnitKind.WellFormedness),
+    ])).toBe(PreconditionNeed.None);
   });
   it("optional when all uncovered", () => {
     expect(classifyPrecondition([
       makeNode(TokenType.Precondition, CovStatus.Uncovered, 1),
-    ])).toBe("optional");
+    ])).toBe(PreconditionNeed.Optional);
   });
 });
 
 describe("classifyInvariant", () => {
   it("none when no invariants", () => {
     const graph = buildGraph([]);
-    expect(classifyInvariant(graph)).toBe("none");
+    expect(classifyInvariant(graph)).toBe(SpecStrength.None);
   });
   it("strong when all provedBy nodes covered", () => {
     const graph = buildGraph([
       { type: TokenType.LoopInvariant, covStatus: CovStatus.CovComplete, line: 1, prooftext: "loop invariant always holds", isTop: true },
       { type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 2 },
     ], { 1: [2] });
-    expect(classifyInvariant(graph)).toBe("strong");
+    expect(classifyInvariant(graph)).toBe(SpecStrength.Strong);
   });
   it("weak when a provedBy node is uncovered", () => {
     const graph = buildGraph([
       { type: TokenType.LoopInvariant, covStatus: CovStatus.CovComplete, line: 1, prooftext: "loop invariant always holds", isTop: true },
       { type: TokenType.CodeLine, covStatus: CovStatus.Uncovered, line: 2 },
     ], { 1: [2] });
-    expect(classifyInvariant(graph)).toBe("weak");
+    expect(classifyInvariant(graph)).toBe(SpecStrength.Weak);
   });
   it("weak when invariant has no provedBy (tautology)", () => {
     const graph = buildGraph([
       { type: TokenType.LoopInvariant, covStatus: CovStatus.Uncovered, line: 1, prooftext: "loop invariant always holds", isTop: true },
     ]);
-    expect(classifyInvariant(graph)).toBe("weak");
+    expect(classifyInvariant(graph)).toBe(SpecStrength.Weak);
   });
   it("strong when only well-formedness invariants exist", () => {
     const graph = buildGraph([
-      { type: TokenType.LoopInvariant, covStatus: CovStatus.Uncovered, line: 1, prooftext: "loop invariant always holds", isTop: true, methodType: "well-formedness" },
+      { type: TokenType.LoopInvariant, covStatus: CovStatus.Uncovered, line: 1, prooftext: "loop invariant always holds", isTop: true, methodType: UnitKind.WellFormedness },
     ]);
-    expect(classifyInvariant(graph)).toBe("strong");
+    expect(classifyInvariant(graph)).toBe(SpecStrength.Strong);
   });
 });
 
@@ -167,10 +196,10 @@ describe("classifySpec (overall)", () => {
       { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1, prooftext: "this postcondition holds", isTop: true },
       { type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 2 },
     ], { 1: [2] });
-    expect(classifySpec(graph)).toBe("strong");
+    expect(classifySpec(graph)).toBe(Classification.Strong);
   });
   it("weak when no postconditions", () => {
     const graph = buildGraph([]);
-    expect(classifySpec(graph)).toBe("weak");
+    expect(classifySpec(graph)).toBe(Classification.Weak);
   });
 });

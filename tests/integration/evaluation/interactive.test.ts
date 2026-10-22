@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest";
+import { Classification, OracleLabel } from "../../../evaluation/src/types.js";
 import {
   formatInteractiveOutput,
   type InteractiveStep,
@@ -8,8 +9,8 @@ function makeStep(overrides?: Partial<InteractiveStep>): InteractiveStep {
   return {
     filePath: "test/file.dfy",
     coverageJson: { line1: "CovComplete" },
-    classification: "strong",
-    oracleLabel: "strong",
+    classification: Classification.Strong,
+    oracleLabel: OracleLabel.Strong,
     pass: true,
     ...overrides,
   };
@@ -28,7 +29,7 @@ describe("formatInteractiveOutput", () => {
   });
 
   it("includes classification and oracle label", () => {
-    const out = formatInteractiveOutput(makeStep({ classification: "weak", oracleLabel: "weak" }));
+    const out = formatInteractiveOutput(makeStep({ classification: Classification.Weak, oracleLabel: OracleLabel.Weak }));
     expect(out).toContain("Classification: weak");
     expect(out).toContain("Oracle classification: weak");
   });
@@ -44,7 +45,7 @@ describe("formatInteractiveOutput", () => {
   });
 
   it("handles error classification", () => {
-    const out = formatInteractiveOutput(makeStep({ classification: "error" }));
+    const out = formatInteractiveOutput(makeStep({ classification: Classification.Error }));
     expect(out).toContain("Classification: error");
   });
 });

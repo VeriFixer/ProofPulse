@@ -14,8 +14,11 @@ import {
   firstHead,
   extractNamedLabel,
   parsePositiveIntCommand,
+  SmtCommand,
+  SMT_QUERY_COMMANDS as QUERY_COMMANDS,
 } from "./smt2-parser.js";
 import { minimizeCoreForBlock } from "./minimizer.js";
+import { Z3WrapperEnv } from "./env.js";
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -23,24 +26,13 @@ import { minimizeCoreForBlock } from "./minimizer.js";
 
 const SENTINEL = "__PP_SENTINEL__";
 
-const QUERY_COMMANDS = new Set([
-  "check-sat",
-  "check-sat-assuming",
-  "get-unsat-core",
-  "get-model",
-  "get-assignment",
-  "get-value",
-  "get-proof",
-  "get-info",
-  "echo",
-]);
 
 // ---------------------------------------------------------------------------
 // Config from environment
 // ---------------------------------------------------------------------------
 
-const Z3_PATH = process.env["PROOFPULSE_Z3_PATH"] || "z3";
-const LOG_FILE = process.env["PROOFPULSE_WRAPPER_LOG"] || "";
+const Z3_PATH = process.env[Z3WrapperEnv.SolverPath] || "z3";
+const LOG_FILE = process.env[Z3WrapperEnv.LogFile] || "";
 
 function log(msg: string): void {
   if (LOG_FILE) {
@@ -54,7 +46,7 @@ function log(msg: string): void {
 
 function makeCmd(text: string): Command {
   const head = firstHead(text);
-  const label = head === "assert" ? extractNamedLabel(text) : null;
+  const label = head === SmtCommand.Assert ? extractNamedLabel(text) : null;
   return { text, head, label };
 }
 
@@ -178,7 +170,7 @@ export async function main(): Promise<number> {
   let timeoutMs: number | undefined;
 
   // Track last check-sat for get-unsat-core pairing
-  let lastCheckSatCmd: Command = { text: "(check-sat)", head: "check-sat", label: null };
+  let lastCheckSatCmd: Command = { text: "(check-sat)", head: SmtCommand.CheckSat, label: null };
 
   const reader = createStdinReader(process.stdin);
   const z3Reader = createZ3Reader(z3Proc.stdout!);
@@ -204,7 +196,7 @@ export async function main(): Promise<number> {
       log(`cmd: ${head} | ${raw.slice(0, 80)}`);
 
       // --- Detect (set-option :timeout N) ---
-      if (head === "set-option") {
+      if (head === SmtCommand.SetOption) {
         const m = raw.match(/:timeout\s+(\d+)/);
         if (m) {
           timeoutMs = parseInt(m[1], 10);
@@ -213,8 +205,8 @@ export async function main(): Promise<number> {
       }
 
       // --- State tracking ---
-      if (head === "push") {
-        const count = parsePositiveIntCommand(cmd.text, "push");
+      if (head === SmtCommand.Push) {
+        const count = parsePositiveIntCommand(cmd.text, SmtCommand.Push);
         for (let i = 0; i < count; i++) {
           frames.push([]);
         }
@@ -223,8 +215,8 @@ export async function main(): Promise<number> {
         continue;
       }
 
-      if (head === "pop") {
-        const count = parsePositiveIntCommand(cmd.text, "pop");
+      if (head === SmtCommand.Pop) {
+        const count = parsePositiveIntCommand(cmd.text, SmtCommand.Pop);
         for (let i = 0; i < count; i++) {
           if (frames.length > 1) {
             frames.pop();
@@ -235,7 +227,7 @@ export async function main(): Promise<number> {
         continue;
       }
 
-      if (head === "reset") {
+      if (head === SmtCommand.Reset) {
         frames.length = 0;
         frames.push([]);
         const resp = await forwardToZ3(raw);
@@ -244,7 +236,7 @@ export async function main(): Promise<number> {
       }
 
       // --- Query block: check-sat possibly followed by get-unsat-core ---
-      if (head === "check-sat" || head === "check-sat-assuming") {
+      if (head === SmtCommand.CheckSat || head === SmtCommand.CheckSatAssuming) {
         const statusResp = await forwardToZ3(raw);
         log(`check-sat response: ${statusResp}`);
         emit(statusResp);
@@ -252,7 +244,7 @@ export async function main(): Promise<number> {
         continue;
       }
 
-      if (head === "get-unsat-core") {
+      if (head === SmtCommand.GetUnsatCore) {
         // Get the core from live z3
         const coreResp = await forwardToZ3(raw);
         log(`get-unsat-core response: ${coreResp.slice(0, 200)}`);
@@ -302,18 +294,18 @@ export async function main(): Promise<number> {
       }
 
       // --- Non-query command (assert, declare, define, set-option, etc.) ---
-      if (cmd.label !== null || head === "assert") {
+      if (cmd.label !== null || head === SmtCommand.Assert) {
         frames[frames.length - 1].push(cmd);
       } else if (
-        head === "declare-fun" ||
-        head === "declare-sort" ||
-        head === "declare-const" ||
-        head === "declare-datatypes" ||
-        head === "define-fun" ||
-        head === "define-sort" ||
-        head === "set-option" ||
-        head === "set-info" ||
-        head === "set-logic"
+        head === SmtCommand.DeclareFun ||
+        head === SmtCommand.DeclareSort ||
+        head === SmtCommand.DeclareConst ||
+        head === SmtCommand.DeclareDatatypes ||
+        head === SmtCommand.DefineFun ||
+        head === SmtCommand.DefineSort ||
+        head === SmtCommand.SetOption ||
+        head === SmtCommand.SetInfo ||
+        head === SmtCommand.SetLogic
       ) {
         frames[frames.length - 1].push(cmd);
       }

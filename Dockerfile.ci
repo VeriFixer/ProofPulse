@@ -38,7 +38,7 @@ RUN dafny --version && z3 --version
 WORKDIR /app
 
 COPY package.json package-lock.json vitest.config.ts ./
-COPY core/package.json core/tsconfig.json ./core/
+COPY core/package.json core/tsconfig.json core/vitest.config.ts ./core/
 COPY evaluation/package.json ./evaluation/
 COPY vscode_extension/package.json ./vscode_extension/
 
@@ -49,6 +49,11 @@ COPY core/scripts/ ./core/scripts/
 COPY web_viewer/ ./web_viewer/
 RUN npm run build:core
 RUN npm run build:viewer
+
+# Sources the unit/property/evaluation suites import (tests/run-all.sh)
+COPY evaluation/src/ ./evaluation/src/
+COPY evaluation/tsconfig.json evaluation/vitest.config.ts evaluation/oracle-overrides.json ./evaluation/
+COPY vscode_extension/src/ ./vscode_extension/src/
 
 COPY tests/ ./tests/
 COPY dataset/ ./dataset/

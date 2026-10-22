@@ -4,6 +4,8 @@ import { CovStatus, TokenType } from "../../../core/src/types.js";
 import { ProofNode } from "../../../core/src/proof-node.js";
 import { ProofGraph } from "../../../core/src/proof-graph.js";
 import { getNodesByLine } from "../../../core/src/coverage.js";
+import { UnitKind } from "../../../core/src/report/coverage-report.js";
+import { dafnyMessageKind } from "../../../core/src/backends/dafny/messages.js";
 
 const FILE = "test.dfy";
 const COV_STATUSES = [CovStatus.CovComplete, CovStatus.CovTest, CovStatus.Uncovered] as const;
@@ -114,8 +116,9 @@ function buildNodeFromSpec(spec: NodeSpec, index: number): ProofNode {
     { line: spec.startLine, col: spec.startCol + offset },
     { line: spec.endLine, col: spec.endCol + offset },
     "",
-    "",
+    UnitKind.Correctness,
     spec.prooftext,
+    dafnyMessageKind(spec.prooftext),
   );
   node.setCovStatus(spec.covStatus);
   node.setCovStatusInternal(spec.covStatusInternal);

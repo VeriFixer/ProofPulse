@@ -6,6 +6,7 @@
  */
 import * as path from "node:path";
 import { parseAllOracles, ALL_DATASETS, type DatasetId } from "./oracle-parser.js";
+import { OracleLabel, PreconditionNeed } from "./types.js";
 
 const repoRoot = process.argv.includes("--repo-root")
   ? process.argv[process.argv.indexOf("--repo-root") + 1]
@@ -24,17 +25,17 @@ for (const ds of ALL_DATASETS) {
   }
 
   const withPost = entries.filter((e) => e.labels.postcondition != null);
-  const postStrong = withPost.filter((e) => e.labels.postcondition === "strong").length;
-  const postWeak = withPost.filter((e) => e.labels.postcondition === "weak").length;
-  const postWrong = withPost.filter((e) => e.labels.postcondition === "wrong").length;
+  const postStrong = withPost.filter((e) => e.labels.postcondition === OracleLabel.Strong).length;
+  const postWeak = withPost.filter((e) => e.labels.postcondition === OracleLabel.Weak).length;
+  const postWrong = withPost.filter((e) => e.labels.postcondition === OracleLabel.Wrong).length;
 
   const withInv = entries.filter((e) => e.labels.invariant != null);
-  const invStrong = withInv.filter((e) => e.labels.invariant === "strong").length;
-  const invWeak = withInv.filter((e) => e.labels.invariant === "weak").length;
+  const invStrong = withInv.filter((e) => e.labels.invariant === OracleLabel.Strong).length;
+  const invWeak = withInv.filter((e) => e.labels.invariant === OracleLabel.Weak).length;
 
   const withPre = entries.filter((e) => e.labels.precondition != null);
-  const preRequired = withPre.filter((e) => e.labels.precondition === "required").length;
-  const preOptional = withPre.filter((e) => e.labels.precondition === "optional").length;
+  const preRequired = withPre.filter((e) => e.labels.precondition === PreconditionNeed.Required).length;
+  const preOptional = withPre.filter((e) => e.labels.precondition === PreconditionNeed.Optional).length;
 
   console.log(`\n${"─".repeat(70)}`);
   console.log(`${ds.id} (verified with post tag: ${entries.length})`);
