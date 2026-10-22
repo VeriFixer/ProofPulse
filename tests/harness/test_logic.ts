@@ -1,7 +1,8 @@
 import os from 'os';
 import path from 'path';
 import fs from 'fs';
-import { parseProof, runDafny as coreRunDafny, DafnyReportParser, applyCoverage, resolveDafnyPathWithSource, resolveZ3PathWithSource, probeVersion } from '@proofpulse/core';
+import { parseProof, runDafny as coreRunDafny, DafnyReportParser, applyCoverage, resolveDafnyPathWithSource, resolveZ3PathWithSource, probeVersion, RunStatus, VerifierId, DEFAULT_DAFNY_COMMAND } from '@proofpulse/core';
+import type { DafnyRunResult } from '@proofpulse/core';
 import YAML from 'js-yaml';
 
 const fsp = fs.promises;
@@ -251,19 +252,24 @@ function normalizeSnapshot(obj: any): void {
  * If --update-snapshots is passed and the section is empty or mismatches,
  * the .dfy file is rewritten with the actual YAML embedded.
  */
-async function runSnapshotTest(srcFile: string, opts: RunOptions = {}): Promise<RunTestResult> {
-  const dafnyRes = await coreRunDafny(srcFile, {
-    dafnyPath: opts.dafnyPath,
+/** Run Dafny for one test file with the harness options (CI: minimization + no abstract interpretation). */
+function runDafnyFor(srcFile: string, opts: RunOptions): Promise<DafnyRunResult> {
+  return coreRunDafny(srcFile, {
+    toolPath: opts.dafnyPath,
     timeoutSeconds: DAFNY_TIMEOUT_SEC,
-    forceMinimization: opts.forceMinimization,
-    noAbstractInterpretation: opts.noAbstractInterpretation,
+    ...(opts.forceMinimization ? { minimization: {} } : {}),
+    backendOptions: { backend: VerifierId.Dafny, noAbstractInterpretation: opts.noAbstractInterpretation },
   });
+}
 
-  if (dafnyRes.timedOut) {
+async function runSnapshotTest(srcFile: string, opts: RunOptions = {}): Promise<RunTestResult> {
+  const dafnyRes = await runDafnyFor(srcFile, opts);
+
+  if (dafnyRes.status === RunStatus.TimedOut) {
     return { srcFile, status: 'failed', reason: 'timeout' };
   }
-  if (dafnyRes.error) {
-    return { srcFile, status: 'skipped', reason: 'dafny_failed', dafnyRes: { ok: false, reason: dafnyRes.error } };
+  if (dafnyRes.status !== RunStatus.Completed) {
+    return { srcFile, status: 'skipped', reason: 'dafny_failed', dafnyRes: { ok: false, reason: dafnyRes.errorMessage ?? dafnyRes.status } };
   }
 
   const log = dafnyRes.log ?? '';
@@ -402,18 +408,13 @@ async function runTest(srcFile: string, opts: RunOptions = {}): Promise<RunTestR
     return runSnapshotTest(srcFile, opts);
   }
 
-  const dafnyRes = await coreRunDafny(srcFile, {
-    dafnyPath: opts.dafnyPath,
-    timeoutSeconds: DAFNY_TIMEOUT_SEC,
-    forceMinimization: opts.forceMinimization,
-    noAbstractInterpretation: opts.noAbstractInterpretation,
-  });
+  const dafnyRes = await runDafnyFor(srcFile, opts);
 
-  if (dafnyRes.timedOut) {
+  if (dafnyRes.status === RunStatus.TimedOut) {
     return { srcFile, status: 'failed', reason: 'timeout' };
   }
-  if (dafnyRes.error) {
-    return { srcFile, status: 'skipped', reason: 'dafny_failed', dafnyRes: { ok: false, reason: dafnyRes.error } };
+  if (dafnyRes.status !== RunStatus.Completed) {
+    return { srcFile, status: 'skipped', reason: 'dafny_failed', dafnyRes: { ok: false, reason: dafnyRes.errorMessage ?? dafnyRes.status } };
   }
 
   let src: string;
@@ -496,8 +497,8 @@ export async function runAllTests(opts: RunOptions = {}): Promise<RunAllTestsRes
   const testsRoot = opts.testsRoot || DEFAULT_TESTS_ROOT;
   const startTime = performance.now();
 
-  const dafnyResolved = resolveDafnyPathWithSource(opts.dafnyPath ?? 'dafny');
-  const dafnyBin = dafnyResolved?.path ?? opts.dafnyPath ?? 'dafny';
+  const dafnyResolved = resolveDafnyPathWithSource(opts.dafnyPath ?? DEFAULT_DAFNY_COMMAND);
+  const dafnyBin = dafnyResolved?.path ?? opts.dafnyPath ?? DEFAULT_DAFNY_COMMAND;
   const z3Resolved = dafnyResolved ? resolveZ3PathWithSource(dafnyBin) : undefined;
   const z3Bin = z3Resolved?.path ?? 'z3';
   const dafnyVersion = probeVersionShort(dafnyBin);

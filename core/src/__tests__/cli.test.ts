@@ -81,7 +81,9 @@ method Add(a: int, b: int) returns (c: int)
   });
 
   it("--generate-yaml with unwritable path should exit with error code", () => {
-    const unwritablePath = "/root/cannot-write-here.yaml"; // Typically unwritable for regular users
+    // A file inside a directory that does not exist cannot be written by any
+    // user (including root, e.g. in the CI container).
+    const unwritablePath = path.join(os.tmpdir(), `proofpulse-missing-dir-${process.pid}`, "cannot-write-here.yaml");
     
     expect(() => {
       execSync(

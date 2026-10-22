@@ -10,25 +10,25 @@ import {
   truncateSource,
   type AgentClassificationResult,
   type DivergenceInfo,
-  type RootCause,
 } from "../agent-helpers.js";
+import {
+  Classification,
+  ErrorDirection,
+  OracleLabel,
+  PreconditionNeed,
+  RootCause,
+  SpecCategory,
+  SpecStrength,
+} from "../types.js";
 import type { ClassificationResult, CategoryClassification } from "../classifier.js";
 import type { OracleEntry } from "../oracle-parser.js";
 
 // --- Arbitraries ---
 
-const arbRootCause: fc.Arbitrary<RootCause> = fc.constantFrom(
-  "quantifier_not_tracked",
-  "trivially_true_spec",
-  "oracle_error",
-  "multi_method",
-  "tool_limitation",
-  "insufficient_coverage_model",
-  "other",
-);
+const arbRootCause: fc.Arbitrary<RootCause> = fc.constantFrom(...Object.values(RootCause));
 
-const arbCategory = fc.constantFrom("postcondition" as const, "precondition" as const, "invariant" as const);
-const arbDirection = fc.constantFrom("FP" as const, "FN" as const);
+const arbCategory = fc.constantFrom(...Object.values(SpecCategory));
+const arbDirection = fc.constantFrom(...Object.values(ErrorDirection));
 
 const arbAgentClassificationResult: fc.Arbitrary<AgentClassificationResult> = fc.record({
   dataset: fc.string({ minLength: 1, maxLength: 20 }),
@@ -164,22 +164,22 @@ describe("Property 4: Divergence identification correctness", () => {
    * Validates: Requirements 3.2
    */
   it("identifyDivergences returns exactly entries where predicted != oracle", () => {
-    const arbPostLabel = fc.constantFrom("strong" as const, "weak" as const);
-    const arbPreLabel = fc.constantFrom("required" as const, "optional" as const);
-    const arbInvLabel = fc.constantFrom("strong" as const, "weak" as const);
+    const arbPostLabel = fc.constantFrom(OracleLabel.Strong, OracleLabel.Weak);
+    const arbPreLabel = fc.constantFrom(PreconditionNeed.Required, PreconditionNeed.Optional);
+    const arbInvLabel = fc.constantFrom(OracleLabel.Strong as const, OracleLabel.Weak as const);
 
     const arbCategoryClassification: fc.Arbitrary<CategoryClassification> = fc.record({
-      postcondition: fc.constantFrom("strong" as const, "weak" as const, "none" as const),
-      precondition: fc.constantFrom("required" as const, "optional" as const, "none" as const),
-      invariant: fc.constantFrom("strong" as const, "weak" as const, "none" as const),
+      postcondition: fc.constantFrom(...Object.values(SpecStrength)),
+      precondition: fc.constantFrom(...Object.values(PreconditionNeed)),
+      invariant: fc.constantFrom(...Object.values(SpecStrength)),
     });
 
     const arbClassResult = fc.record({
       taskId: fc.integer({ min: 1, max: 999 }).map(String),
       filePath: fc.constant("/tmp/test.dfy"),
-      classification: fc.constantFrom("strong" as const, "weak" as const),
+      classification: fc.constantFrom(Classification.Strong, Classification.Weak),
       categories: arbCategoryClassification,
-      oracleLabel: fc.constantFrom("strong" as const, "weak" as const, "wrong" as const),
+      oracleLabel: fc.constantFrom(...Object.values(OracleLabel)),
       postconditionLines: fc.constant([] as number[]),
       preconditionLines: fc.constant([] as number[]),
       invariantLines: fc.constant([] as number[]),
@@ -190,9 +190,9 @@ describe("Property 4: Divergence identification correctness", () => {
     const arbOracleEntry = fc.record({
       taskId: fc.integer({ min: 1, max: 999 }).map(String),
       filePath: fc.constant("/tmp/test.dfy"),
-      label: fc.constantFrom("strong" as const, "weak" as const, "wrong" as const),
+      label: fc.constantFrom(...Object.values(OracleLabel)),
       labels: fc.record({
-        postcondition: fc.oneof(fc.constant(undefined), arbPostLabel, fc.constant("wrong" as const)),
+        postcondition: fc.oneof(fc.constant(undefined), arbPostLabel, fc.constant(OracleLabel.Wrong)),
         precondition: fc.oneof(fc.constant(undefined), arbPreLabel),
         invariant: fc.oneof(fc.constant(undefined), arbInvLabel),
       }),
@@ -215,35 +215,35 @@ describe("Property 4: Divergence identification correctness", () => {
 
           // Manually compute expected divergences
           const expected: Array<{ taskId: string; category: string; direction: string }> = [];
-          for (const r of results) {
-            if (r.classification === "error") continue;
+          for (const r of results as ClassificationResult[]) {
+            if (r.classification === Classification.Error) continue;
             const oracle = oracleMap.get(r.taskId);
             if (!oracle) continue;
 
             // Postcondition
-            if (oracle.labels.postcondition && oracle.labels.postcondition !== "wrong" && r.categories.postcondition !== "none") {
-              const pred = r.categories.postcondition === "strong";
-              const actual = oracle.labels.postcondition === "strong";
+            if (oracle.labels.postcondition && oracle.labels.postcondition !== OracleLabel.Wrong && r.categories.postcondition !== SpecStrength.None) {
+              const pred = r.categories.postcondition === SpecStrength.Strong;
+              const actual = oracle.labels.postcondition === OracleLabel.Strong;
               if (pred !== actual) {
-                expected.push({ taskId: r.taskId, category: "postcondition", direction: pred ? "FP" : "FN" });
+                expected.push({ taskId: r.taskId, category: SpecCategory.Postcondition, direction: pred ? ErrorDirection.FalsePositive : ErrorDirection.FalseNegative });
               }
             }
 
             // Precondition
-            if (oracle.labels.precondition && r.categories.precondition !== "none") {
-              const pred = r.categories.precondition === "required";
-              const actual = oracle.labels.precondition === "required";
+            if (oracle.labels.precondition && r.categories.precondition !== PreconditionNeed.None) {
+              const pred = r.categories.precondition === PreconditionNeed.Required;
+              const actual = oracle.labels.precondition === PreconditionNeed.Required;
               if (pred !== actual) {
-                expected.push({ taskId: r.taskId, category: "precondition", direction: pred ? "FP" : "FN" });
+                expected.push({ taskId: r.taskId, category: SpecCategory.Precondition, direction: pred ? ErrorDirection.FalsePositive : ErrorDirection.FalseNegative });
               }
             }
 
             // Invariant
-            if (oracle.labels.invariant && r.categories.invariant !== "none") {
-              const pred = r.categories.invariant === "strong";
-              const actual = oracle.labels.invariant === "strong";
+            if (oracle.labels.invariant && r.categories.invariant !== SpecStrength.None) {
+              const pred = r.categories.invariant === SpecStrength.Strong;
+              const actual = oracle.labels.invariant === OracleLabel.Strong;
               if (pred !== actual) {
-                expected.push({ taskId: r.taskId, category: "invariant", direction: pred ? "FP" : "FN" });
+                expected.push({ taskId: r.taskId, category: SpecCategory.Invariant, direction: pred ? ErrorDirection.FalsePositive : ErrorDirection.FalseNegative });
               }
             }
           }

@@ -6,23 +6,25 @@ import * as path from "node:path";
 
 import type { ClassificationResult } from "./classifier.js";
 import type { OracleEntry } from "./oracle-parser.js";
+import {
+  Classification,
+  ErrorDirection,
+  OracleLabel,
+  PreconditionNeed,
+  RootCause,
+  SpecCategory,
+  SpecStrength,
+} from "./types.js";
+
+export { RootCause };
 
 // --- Types (2.1) ---
-
-export type RootCause =
-  | "quantifier_not_tracked"
-  | "trivially_true_spec"
-  | "oracle_error"
-  | "multi_method"
-  | "tool_limitation"
-  | "insufficient_coverage_model"
-  | "other";
 
 export interface AgentClassificationResult {
   dataset: string;
   taskId: string;
-  category: "postcondition" | "precondition" | "invariant";
-  direction: "FP" | "FN";
+  category: SpecCategory;
+  direction: ErrorDirection;
   predicted: string;
   oracle: string;
   rootCause: RootCause;
@@ -36,8 +38,8 @@ export interface AgentClassificationResult {
 export interface DivergenceInfo {
   dataset: string;
   taskId: string;
-  category: "postcondition" | "precondition" | "invariant";
-  direction: "FP" | "FN";
+  category: SpecCategory;
+  direction: ErrorDirection;
   predicted: string;
   oracle: string;
   source: string;
@@ -47,18 +49,9 @@ export interface DivergenceInfo {
 
 // --- Validation (2.2) ---
 
-const VALID_ROOT_CAUSES: RootCause[] = [
-  "quantifier_not_tracked",
-  "trivially_true_spec",
-  "oracle_error",
-  "multi_method",
-  "tool_limitation",
-  "insufficient_coverage_model",
-  "other",
-];
-
-const VALID_CATEGORIES = ["postcondition", "precondition", "invariant"] as const;
-const VALID_DIRECTIONS = ["FP", "FN"] as const;
+const VALID_ROOT_CAUSES: readonly string[] = Object.values(RootCause);
+const VALID_CATEGORIES: readonly string[] = Object.values(SpecCategory);
+const VALID_DIRECTIONS: readonly string[] = Object.values(ErrorDirection);
 
 export function validateClassificationResult(obj: unknown): obj is AgentClassificationResult {
   if (obj === null || typeof obj !== "object") return false;
@@ -66,11 +59,11 @@ export function validateClassificationResult(obj: unknown): obj is AgentClassifi
 
   if (typeof o.dataset !== "string") return false;
   if (typeof o.taskId !== "string") return false;
-  if (!VALID_CATEGORIES.includes(o.category as typeof VALID_CATEGORIES[number])) return false;
-  if (!VALID_DIRECTIONS.includes(o.direction as typeof VALID_DIRECTIONS[number])) return false;
+  if (!VALID_CATEGORIES.includes(o.category as string)) return false;
+  if (!VALID_DIRECTIONS.includes(o.direction as string)) return false;
   if (typeof o.predicted !== "string") return false;
   if (typeof o.oracle !== "string") return false;
-  if (!VALID_ROOT_CAUSES.includes(o.rootCause as RootCause)) return false;
+  if (!VALID_ROOT_CAUSES.includes(o.rootCause as string)) return false;
   if (typeof o.explanation !== "string") return false;
   if (typeof o.confidence !== "number" || Number.isNaN(o.confidence) || o.confidence < 0 || o.confidence > 1) return false;
   if (typeof o.oracleError !== "boolean") return false;
@@ -162,7 +155,7 @@ export function identifyDivergences(
   const divergences: DivergenceInfo[] = [];
 
   for (const r of results) {
-    if (r.classification === "error") continue;
+    if (r.classification === Classification.Error) continue;
     const oracle = oracleMap.get(r.taskId);
     if (!oracle) continue;
 
@@ -174,15 +167,15 @@ export function identifyDivergences(
     }
 
     // Postcondition: strong/weak vs oracle postcondition label, skip oracle="wrong"
-    if (oracle.labels.postcondition && oracle.labels.postcondition !== "wrong") {
-      const pred = r.categories.postcondition === "strong";
-      const actual = oracle.labels.postcondition === "strong";
-      if (pred !== actual && r.categories.postcondition !== "none") {
-        const direction: "FP" | "FN" = pred ? "FP" : "FN";
+    if (oracle.labels.postcondition && oracle.labels.postcondition !== OracleLabel.Wrong) {
+      const pred = r.categories.postcondition === SpecStrength.Strong;
+      const actual = oracle.labels.postcondition === OracleLabel.Strong;
+      if (pred !== actual && r.categories.postcondition !== SpecStrength.None) {
+        const direction = pred ? ErrorDirection.FalsePositive : ErrorDirection.FalseNegative;
         divergences.push({
           dataset,
           taskId: r.taskId,
-          category: "postcondition",
+          category: SpecCategory.Postcondition,
           direction,
           predicted: r.categories.postcondition,
           oracle: oracle.labels.postcondition,
@@ -194,15 +187,15 @@ export function identifyDivergences(
     }
 
     // Precondition: required/optional vs oracle precondition label
-    if (oracle.labels.precondition && r.categories.precondition !== "none") {
-      const pred = r.categories.precondition === "required";
-      const actual = oracle.labels.precondition === "required";
+    if (oracle.labels.precondition && r.categories.precondition !== PreconditionNeed.None) {
+      const pred = r.categories.precondition === PreconditionNeed.Required;
+      const actual = oracle.labels.precondition === PreconditionNeed.Required;
       if (pred !== actual) {
-        const direction: "FP" | "FN" = pred ? "FP" : "FN";
+        const direction = pred ? ErrorDirection.FalsePositive : ErrorDirection.FalseNegative;
         divergences.push({
           dataset,
           taskId: r.taskId,
-          category: "precondition",
+          category: SpecCategory.Precondition,
           direction,
           predicted: r.categories.precondition,
           oracle: oracle.labels.precondition,
@@ -214,15 +207,15 @@ export function identifyDivergences(
     }
 
     // Invariant: strong/weak vs oracle invariant label
-    if (oracle.labels.invariant && r.categories.invariant !== "none") {
-      const pred = r.categories.invariant === "strong";
-      const actual = oracle.labels.invariant === "strong";
+    if (oracle.labels.invariant && r.categories.invariant !== SpecStrength.None) {
+      const pred = r.categories.invariant === SpecStrength.Strong;
+      const actual = oracle.labels.invariant === OracleLabel.Strong;
       if (pred !== actual) {
-        const direction: "FP" | "FN" = pred ? "FP" : "FN";
+        const direction = pred ? ErrorDirection.FalsePositive : ErrorDirection.FalseNegative;
         divergences.push({
           dataset,
           taskId: r.taskId,
-          category: "invariant",
+          category: SpecCategory.Invariant,
           direction,
           predicted: r.categories.invariant,
           oracle: oracle.labels.invariant,

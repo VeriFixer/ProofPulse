@@ -1,41 +1,66 @@
 #!/usr/bin/env node
 /**
- * ProofPulse CLI — run coverage analysis on a Dafny file.
+ * ProofPulse CLI — run proof coverage analysis on a source file.
  *
  * Usage:
- *   npx proofpulse <file.dfy> [options]
+ *   npx proofpulse <file> [options]
  *
  * Options:
+ *   --backend <id>        Verifier backend (default: from the file extension; available: dafny)
  *   --dafny-path <path>   Path to Dafny binary (default: "dafny")
  *   --minimize            Enable unsat core minimization
  *   --no-abstract-interpretation  Disable abstract interpretation
  *   --timeout <seconds>   Verification timeout (default: 60)
+ *   --report <path>       Analyze a saved coverage report instead of running the verifier
+ *   --emit-report <path>  Write the coverage report of this run (.json → JSON, else YAML)
  *   --log                 Print YAML report (only uncovered/partial nodes)
  *   --log-verbose         Print full YAML report (all nodes + proof dependencies)
  *   -h, --help            Show help
  */
 import * as fs from "node:fs";
-import { runDafny } from "./dafny-runner.js";
-import { parseProof } from "./proof.js";
+import { analyzeReport } from "./proof.js";
 import { generateTextReport } from "./report.js";
+import { createDefaultRegistry } from "./backends/registry.js";
+import { BackendOptions, RunStatus } from "./backends/backend.js";
+import { CoverageReport, VerifierId, enumValues } from "./report/coverage-report.js";
+import { parseCoverageReport, reportFormatForPath, serializeCoverageReport } from "./report/io.js";
+import { DEFAULT_DAFNY_COMMAND } from "./backends/dafny/runner.js";
+import { assertNever } from "./util/assert-never.js";
+
+/** How much of the text report to print. */
+enum LogMode {
+  None = "none",
+  Default = "default",
+  Verbose = "verbose",
+}
+
+const VERIFIER_IDS = enumValues(VerifierId);
 
 function printHelp() {
   console.log(`
-ProofPulse — Dafny proof coverage analysis
+ProofPulse — proof coverage analysis
 
 Usage:
-  npx proofpulse <file.dfy> [options]
+  npx proofpulse <file> [options]
 
 Options:
+  --backend <id>        Verifier backend (default: from the file extension; available: dafny)
   --dafny-path <path>   Path to Dafny binary (default: "dafny")
   --minimize            Enable unsat core minimization
   --no-abstract-interpretation  Disable abstract interpretation
   --timeout <seconds>   Verification timeout (default: 60)
+  --report <path>       Analyze a saved coverage report (YAML/JSON) instead of running the verifier
+  --emit-report <path>  Write the coverage report of this run (.json → JSON, otherwise YAML)
   --log                 Print YAML report (only uncovered/partial nodes)
   --log-verbose         Print full YAML report (all nodes + proof dependencies)
   --generate-yaml <path>  Write full YAML to file (can be combined with --log-verbose)
   -h, --help            Show help
 `.trim());
+}
+
+function fail(message: string): never {
+  console.error(message);
+  process.exit(1);
 }
 
 async function main() {
@@ -47,15 +72,24 @@ async function main() {
   }
 
   let filePath = "";
-  let dafnyPath = "dafny";
+  let backendId: VerifierId | undefined;
+  let dafnyPath = DEFAULT_DAFNY_COMMAND;
   let minimize = false;
   let noAbstractInterpretation = false;
   let timeout = 60;
-  let logMode: "none" | "default" | "verbose" = "none";
+  let logMode = LogMode.None;
   let generateYamlPath: string | null = null;
+  let reportPath: string | null = null;
+  let emitReportPath: string | null = null;
 
   for (let i = 0; i < args.length; i++) {
     switch (args[i]) {
+      case "--backend": {
+        const id = args[++i];
+        if (!VERIFIER_IDS.has(id)) fail(`Error: unknown backend "${id}"`);
+        backendId = id as VerifierId;
+        break;
+      }
       case "--dafny-path":
         dafnyPath = args[++i];
         break;
@@ -69,13 +103,19 @@ async function main() {
         timeout = parseInt(args[++i], 10);
         break;
       case "--log":
-        logMode = "default";
+        logMode = LogMode.Default;
         break;
       case "--log-verbose":
-        logMode = "verbose";
+        logMode = LogMode.Verbose;
         break;
       case "--generate-yaml":
         generateYamlPath = args[++i];
+        break;
+      case "--report":
+        reportPath = args[++i];
+        break;
+      case "--emit-report":
+        emitReportPath = args[++i];
         break;
       default:
         if (!args[i].startsWith("-")) {
@@ -84,53 +124,77 @@ async function main() {
     }
   }
 
-  if (!filePath) {
-    console.error("Error: no .dfy file specified");
-    process.exit(1);
+  if (!filePath) fail("Error: no source file specified");
+  if (!fs.existsSync(filePath)) fail(`Error: file not found: ${filePath}`);
+
+  let report: CoverageReport;
+  if (reportPath) {
+    try {
+      report = parseCoverageReport(fs.readFileSync(reportPath, "utf-8"));
+    } catch (err) {
+      fail(`Error reading coverage report ${reportPath}: ${(err as Error).message}`);
+    }
+  } else {
+    const registry = createDefaultRegistry();
+    const backend = backendId ? registry.get(backendId) : registry.backendForFile(filePath);
+    if (!backend) {
+      fail(backendId
+        ? `Error: backend "${backendId}" is not available`
+        : `Error: no backend handles ${filePath} (supported: ${registry.fileExtensions().join(", ")})`);
+    }
+
+    const options: BackendOptions = {
+      toolPath: dafnyPath,
+      timeoutSeconds: timeout,
+      ...(minimize ? { minimization: {} } : {}),
+      ...(backend.id === VerifierId.Dafny
+        ? { backendOptions: { backend: VerifierId.Dafny, noAbstractInterpretation } }
+        : {}),
+    };
+    const run = await backend.run(filePath, options);
+
+    switch (run.status) {
+      case RunStatus.Completed:
+        break;
+      case RunStatus.TimedOut:
+        fail(`${backend.displayName} timed out`);
+      case RunStatus.Aborted:
+        fail(`${backend.displayName} run aborted`);
+      case RunStatus.Failed:
+        fail(`${backend.displayName} error: ${run.errorMessage}`);
+      default:
+        assertNever(run.status, "run status");
+    }
+    report = run.report!;
   }
 
-  if (!fs.existsSync(filePath)) {
-    console.error(`Error: file not found: ${filePath}`);
-    process.exit(1);
-  }
-
-  const result = await runDafny(filePath, {
-    dafnyPath,
-    forceMinimization: minimize,
-    noAbstractInterpretation,
-    timeoutSeconds: timeout,
-  });
-
-  if (result.error) {
-    console.error(`Dafny error: ${result.error}`);
-    process.exit(1);
-  }
-
-  if (result.timedOut) {
-    console.error("Dafny timed out");
-    process.exit(1);
+  if (emitReportPath) {
+    try {
+      fs.writeFileSync(emitReportPath, serializeCoverageReport(report, reportFormatForPath(emitReportPath)));
+    } catch (err) {
+      fail(`Error writing coverage report to ${emitReportPath}: ${(err as Error).message}`);
+    }
   }
 
   const sourceCode = fs.readFileSync(filePath, "utf-8");
-  const proof = parseProof(sourceCode, result.log);
+  const proof = analyzeReport(sourceCode, report);
 
   if (generateYamlPath) {
     try {
       fs.writeFileSync(generateYamlPath, proof.proofGraph.toYAML());
     } catch (err) {
-      console.error(`Error writing YAML to ${generateYamlPath}: ${(err as Error).message}`);
-      process.exit(1);
+      fail(`Error writing YAML to ${generateYamlPath}: ${(err as Error).message}`);
     }
   }
 
   // Default: always print the report (--log or --log-verbose just controls verbosity)
   // If neither flag given, print default (compact) report
-  if (logMode === "none") {
-    logMode = "default";
+  if (logMode === LogMode.None) {
+    logMode = LogMode.Default;
   }
 
-  const report = generateTextReport(sourceCode, proof, { verbose: logMode === "verbose" });
-  console.log(report);
+  const textReport = generateTextReport(sourceCode, proof, { verbose: logMode === LogMode.Verbose });
+  console.log(textReport);
 }
 
 main().catch((err) => {

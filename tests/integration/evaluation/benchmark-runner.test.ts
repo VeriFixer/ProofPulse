@@ -1,11 +1,12 @@
 import { describe, it, expect } from "vitest";
+import { Classification } from "../../../evaluation/src/types.js";
 import { computeComparisonMetrics } from "../../../evaluation/src/benchmark-runner.js";
 
 describe("computeComparisonMetrics", () => {
   it("counts changed classifications", () => {
     const result = computeComparisonMetrics(
-      ["strong", "weak", "error"],
-      ["strong", "strong", "error"],
+      [Classification.Strong, Classification.Weak, Classification.Error],
+      [Classification.Strong, Classification.Strong, Classification.Error],
       [100, 200, 300],
       [110, 210, 310],
     );
@@ -14,8 +15,8 @@ describe("computeComparisonMetrics", () => {
 
   it("computes addedTimeMs as minimized total minus baseline total", () => {
     const result = computeComparisonMetrics(
-      ["strong", "weak"],
-      ["strong", "weak"],
+      [Classification.Strong, Classification.Weak],
+      [Classification.Strong, Classification.Weak],
       [100, 200],
       [150, 250],
     );
@@ -26,8 +27,8 @@ describe("computeComparisonMetrics", () => {
 
   it("computes slowdownFactor as ratio of totals", () => {
     const result = computeComparisonMetrics(
-      ["strong"],
-      ["strong"],
+      [Classification.Strong],
+      [Classification.Strong],
       [200],
       [400],
     );
@@ -36,8 +37,8 @@ describe("computeComparisonMetrics", () => {
 
   it("returns slowdownFactor 0 when baseline total is 0", () => {
     const result = computeComparisonMetrics(
-      ["strong"],
-      ["strong"],
+      [Classification.Strong],
+      [Classification.Strong],
       [0],
       [100],
     );

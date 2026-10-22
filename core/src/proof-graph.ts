@@ -1,6 +1,32 @@
 import YAML from "js-yaml";
 import { ProofNode } from "./proof-node.js";
-import { CovStatus, SourceLocation } from "./types.js";
+import { CovStatus, SourceLocation, TokenType } from "./types.js";
+import {
+  CoverageReport,
+  NodeKind,
+  PROOF_UNIT_KINDS,
+  QueryOutcome,
+  ReportNode,
+  ReportQuery,
+  ReportUnit,
+  UnitKind,
+  enumValues,
+  isCallKind,
+} from "./report/coverage-report.js";
+import { nodeKindForTokenType } from "./node-kind.js";
+
+const OUTCOME_VALUES = enumValues(QueryOutcome);
+const UNIT_KIND_VALUES = enumValues(UnitKind);
+
+/** Milliseconds → "hh:mm:ss.fffffff" (the batch duration format used in graph YAML). */
+export function formatDuration(ms: number): string {
+  const ticks = Math.round(ms * 1e4);
+  const totalSeconds = Math.floor(ticks / 1e7);
+  const fraction = ticks % 1e7;
+  const pad = (n: number) => String(n).padStart(2, "0");
+  const hms = `${pad(Math.floor(totalSeconds / 3600))}:${pad(Math.floor(totalSeconds / 60) % 60)}:${pad(totalSeconds % 60)}`;
+  return fraction === 0 ? hms : `${hms}.${String(fraction).padStart(7, "0")}`;
+}
 
 export class ProofGraph {
   private nodes: Map<string, ProofNode> = new Map();
@@ -10,18 +36,99 @@ export class ProofGraph {
     start: SourceLocation,
     end: SourceLocation,
     methodName: string,
-    methodType: string,
+    methodType: UnitKind,
     prooftext: string,
+    kind: NodeKind,
   ): ProofNode {
-    const temp = new ProofNode(file, start, end, methodName, methodType, prooftext);
+    const temp = new ProofNode(file, start, end, methodName, methodType, prooftext, kind);
     const id = temp.getId();
     const existing = this.nodes.get(id);
     if (existing) {
-      existing.addProoftext(prooftext);
+      existing.addProoftext(prooftext, kind);
       return existing;
     }
     this.nodes.set(id, temp);
     return temp;
+  }
+
+  /**
+   * Build a proof graph from a coverage report.
+   *
+   * Units whose kind is not a proof obligation (e.g. well-formedness) are
+   * skipped. Queries are replayed in report order so that merged nodes see
+   * their occurrences in the same order the verifier reported them.
+   */
+  static fromReport(report: CoverageReport): ProofGraph {
+    const graph = new ProofGraph();
+    const nodes = new Map<string, ReportNode>(report.nodes.map((n) => [n.id, n]));
+    const paths = new Map<string, string>(report.sources.map((s) => [s.id, s.path]));
+
+    for (const unit of report.units) {
+      if (!PROOF_UNIT_KINDS.has(unit.kind)) continue;
+      for (const query of unit.queries) {
+        graph.addQuery(unit, query, nodes, paths);
+      }
+    }
+    return graph;
+  }
+
+  private addQuery(
+    unit: ReportUnit,
+    query: ReportQuery,
+    nodes: ReadonlyMap<string, ReportNode>,
+    paths: ReadonlyMap<string, string>,
+  ): void {
+    const place = (id: string): { node: ProofNode; report: ReportNode } => {
+      const report = nodes.get(id)!;
+      const node = this.getOrCreate(
+        paths.get(report.span.file)!,
+        // Copies: graph nodes must not share position objects (YAML would emit anchors).
+        { ...report.span.start },
+        { ...report.span.end },
+        unit.name,
+        unit.kind,
+        report.message,
+        report.kind,
+      );
+      return { node, report };
+    };
+
+    const linkCallTargets = (call: ProofNode, report: ReportNode) => {
+      if (!call.roles.isCall) return;
+      for (const targetId of report.callTargets ?? []) {
+        const target = place(targetId).node;
+        this.connectCall(call.getId(), target.getId());
+      }
+    };
+
+    const tops: ProofNode[] = [];
+    for (const goalId of query.goals) {
+      const top = place(goalId).node;
+      top.addRole("isTop");
+      top.topMeta = {
+        batchIndex: query.index,
+        batchOutcome: query.outcome,
+        batchDuration: query.durationMs === undefined ? undefined : formatDuration(query.durationMs),
+        batchResourceCount: query.resourceCount,
+      };
+      tops.push(top);
+    }
+
+    for (const usedId of query.used) {
+      const { node, report } = place(usedId);
+      node.addRole("isProvedBy");
+      if (isCallKind(report.kind)) node.addRole("isCall");
+      for (const top of tops) this.addProvedBy(top.getId(), node.getId());
+      linkCallTargets(node, report);
+    }
+
+    for (const unusedId of query.unused) {
+      const { node, report } = place(unusedId);
+      node.addRole("isUnused");
+      if (isCallKind(report.kind)) node.addRole("isCall");
+      for (const top of tops) this.markProofUnused(top.getId(), node.getId());
+      linkCallTargets(node, report);
+    }
   }
 
   addNode(node: ProofNode): void {
@@ -213,18 +320,23 @@ export class ProofGraph {
 
     // Reconstruct nodes
     for (const item of data.nodes) {
+      // Graph YAML stores the final token type, not per-occurrence kinds;
+      // give every occurrence the kind that maps back to that type.
+      const kind = nodeKindForTokenType(item.type as TokenType) ?? NodeKind.Other;
+      const methodType = UNIT_KIND_VALUES.has(item.methodType) ? (item.methodType as UnitKind) : UnitKind.Other;
       const node = new ProofNode(
         item.file,
         item.start,
         item.end,
         item.methodName,
-        item.methodType,
+        methodType,
         item.prooftexts[0] ?? "",
+        kind,
       );
 
       // Add remaining prooftexts
       for (let i = 1; i < item.prooftexts.length; i++) {
-        node.addProoftext(item.prooftexts[i]);
+        node.addProoftext(item.prooftexts[i], kind);
       }
 
       // Restore roles
@@ -237,7 +349,12 @@ export class ProofGraph {
 
       // Restore topMeta
       if (item.topMeta) {
-        node.topMeta = item.topMeta;
+        node.topMeta = {
+          ...item.topMeta,
+          batchOutcome: OUTCOME_VALUES.has(item.topMeta.batchOutcome)
+            ? (item.topMeta.batchOutcome as QueryOutcome)
+            : QueryOutcome.Error,
+        };
       }
 
       // Restore coverage status

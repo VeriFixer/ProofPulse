@@ -1,5 +1,6 @@
 import type { ClassificationResult } from "./classifier.js";
 import type { OracleEntry } from "./oracle-parser.js";
+import { Classification, OracleLabel, PreconditionNeed, SpecStrength } from "./types.js";
 
 export interface ConfusionMatrix {
   tp: number;
@@ -24,11 +25,11 @@ export interface CategoryTable {
 }
 
 export function computeConfusionMatrix(results: ClassificationResult[]): ConfusionMatrix {
-  const filtered = results.filter((r) => r.classification !== "error" && r.oracleLabel !== "wrong");
+  const filtered = results.filter((r) => r.classification !== Classification.Error && r.oracleLabel !== OracleLabel.Wrong);
   let tp = 0, fp = 0, tn = 0, fn = 0;
   for (const r of filtered) {
-    const predicted = r.classification === "strong";
-    const actual = r.oracleLabel === "strong";
+    const predicted = r.classification === Classification.Strong;
+    const actual = r.oracleLabel === OracleLabel.Strong;
     if (predicted && actual) tp++;
     else if (predicted && !actual) fp++;
     else if (!predicted && actual) fn++;
@@ -55,11 +56,11 @@ export function formatTable(cm: ConfusionMatrix, metrics: Metrics, results?: Cla
   lines.push(`  Pred Strong     ${String(cm.tp).padStart(5)}          ${String(cm.fp).padStart(5)}`);
   lines.push(`  Pred Weak       ${String(cm.fn).padStart(5)}          ${String(cm.tn).padStart(5)}`);
   if (results) {
-    const wrong = results.filter((r) => r.oracleLabel === "wrong" && r.classification !== "error");
+    const wrong = results.filter((r) => r.oracleLabel === OracleLabel.Wrong && r.classification !== Classification.Error);
     if (wrong.length > 0) {
       lines.push("");
       lines.push(`Oracle=Wrong (excluded, ${wrong.length} entries):`);
-      lines.push(`  ProofPulse said strong: ${wrong.filter((r) => r.classification === "strong").length}  weak: ${wrong.filter((r) => r.classification === "weak").length}`);
+      lines.push(`  ProofPulse said strong: ${wrong.filter((r) => r.classification === Classification.Strong).length}  weak: ${wrong.filter((r) => r.classification === Classification.Weak).length}`);
     }
   }
   lines.push("");
@@ -78,15 +79,15 @@ export function computeCategoryTables(
   entries: OracleEntry[],
 ): CategoryTable[] {
   const entryMap = new Map(entries.map((e) => [e.taskId, e]));
-  const nonError = results.filter((r) => r.classification !== "error");
+  const nonError = results.filter((r) => r.classification !== Classification.Error);
 
   // --- Postconditions ---
   const withPost = nonError.filter((r) => entryMap.get(r.taskId)?.labels.postcondition != null);
-  const postForCM = withPost.filter((r) => entryMap.get(r.taskId)!.labels.postcondition !== "wrong");
+  const postForCM = withPost.filter((r) => entryMap.get(r.taskId)!.labels.postcondition !== OracleLabel.Wrong);
   let pTP = 0, pFP = 0, pTN = 0, pFN = 0;
   for (const r of postForCM) {
-    const pred = r.categories.postcondition === "strong";
-    const actual = entryMap.get(r.taskId)!.labels.postcondition === "strong";
+    const pred = r.categories.postcondition === SpecStrength.Strong;
+    const actual = entryMap.get(r.taskId)!.labels.postcondition === OracleLabel.Strong;
     if (pred && actual) pTP++; else if (pred && !actual) pFP++; else if (!pred && actual) pFN++; else pTN++;
   }
   const postCM: ConfusionMatrix = { tp: pTP, fp: pFP, tn: pTN, fn: pFN };
@@ -94,21 +95,21 @@ export function computeCategoryTables(
     label: "Postconditions (positive=Strong, excl. oracle=wrong)",
     total: withPost.length,
     rows: [
-      { name: "Strong", predicted: withPost.filter((r) => r.categories.postcondition === "strong").length, oracle: withPost.filter((r) => entryMap.get(r.taskId)!.labels.postcondition === "strong").length },
-      { name: "Weak", predicted: withPost.filter((r) => r.categories.postcondition === "weak").length, oracle: withPost.filter((r) => entryMap.get(r.taskId)!.labels.postcondition === "weak").length },
-      { name: "Wrong (excl.)", predicted: 0, oracle: withPost.filter((r) => entryMap.get(r.taskId)!.labels.postcondition === "wrong").length },
-      { name: "None (no nodes)", predicted: withPost.filter((r) => r.categories.postcondition === "none").length, oracle: 0 },
+      { name: "Strong", predicted: withPost.filter((r) => r.categories.postcondition === SpecStrength.Strong).length, oracle: withPost.filter((r) => entryMap.get(r.taskId)!.labels.postcondition === OracleLabel.Strong).length },
+      { name: "Weak", predicted: withPost.filter((r) => r.categories.postcondition === SpecStrength.Weak).length, oracle: withPost.filter((r) => entryMap.get(r.taskId)!.labels.postcondition === OracleLabel.Weak).length },
+      { name: "Wrong (excl.)", predicted: 0, oracle: withPost.filter((r) => entryMap.get(r.taskId)!.labels.postcondition === OracleLabel.Wrong).length },
+      { name: "None (no nodes)", predicted: withPost.filter((r) => r.categories.postcondition === SpecStrength.None).length, oracle: 0 },
     ],
     confusionMatrix: postCM, metrics: computeMetrics(postCM),
   };
 
   // --- Preconditions ---
   const withPre = nonError.filter((r) => entryMap.get(r.taskId)?.labels.precondition != null);
-  const preForCM = withPre.filter((r) => r.categories.precondition !== "none");
+  const preForCM = withPre.filter((r) => r.categories.precondition !== PreconditionNeed.None);
   let rTP = 0, rFP = 0, rTN = 0, rFN = 0;
   for (const r of preForCM) {
-    const pred = r.categories.precondition === "required";
-    const actual = entryMap.get(r.taskId)!.labels.precondition === "required";
+    const pred = r.categories.precondition === PreconditionNeed.Required;
+    const actual = entryMap.get(r.taskId)!.labels.precondition === PreconditionNeed.Required;
     if (pred && actual) rTP++; else if (pred && !actual) rFP++; else if (!pred && actual) rFN++; else rTN++;
   }
   const preCM: ConfusionMatrix = { tp: rTP, fp: rFP, tn: rTN, fn: rFN };
@@ -116,20 +117,20 @@ export function computeCategoryTables(
     label: "Preconditions (positive=Required)",
     total: withPre.length,
     rows: [
-      { name: "Required", predicted: withPre.filter((r) => r.categories.precondition === "required").length, oracle: withPre.filter((r) => entryMap.get(r.taskId)!.labels.precondition === "required").length },
-      { name: "Optional", predicted: withPre.filter((r) => r.categories.precondition === "optional").length, oracle: withPre.filter((r) => entryMap.get(r.taskId)!.labels.precondition === "optional").length },
-      { name: "None (no nodes)", predicted: withPre.filter((r) => r.categories.precondition === "none").length, oracle: 0 },
+      { name: "Required", predicted: withPre.filter((r) => r.categories.precondition === PreconditionNeed.Required).length, oracle: withPre.filter((r) => entryMap.get(r.taskId)!.labels.precondition === PreconditionNeed.Required).length },
+      { name: "Optional", predicted: withPre.filter((r) => r.categories.precondition === PreconditionNeed.Optional).length, oracle: withPre.filter((r) => entryMap.get(r.taskId)!.labels.precondition === PreconditionNeed.Optional).length },
+      { name: "None (no nodes)", predicted: withPre.filter((r) => r.categories.precondition === PreconditionNeed.None).length, oracle: 0 },
     ],
     confusionMatrix: preCM, metrics: computeMetrics(preCM),
   };
 
   // --- Invariants ---
   const withInv = nonError.filter((r) => entryMap.get(r.taskId)?.labels.invariant != null);
-  const invForCM = withInv.filter((r) => r.categories.invariant !== "none");
+  const invForCM = withInv.filter((r) => r.categories.invariant !== SpecStrength.None);
   let iTP = 0, iFP = 0, iTN = 0, iFN = 0;
   for (const r of invForCM) {
-    const pred = r.categories.invariant === "strong";
-    const actual = entryMap.get(r.taskId)!.labels.invariant === "strong";
+    const pred = r.categories.invariant === SpecStrength.Strong;
+    const actual = entryMap.get(r.taskId)!.labels.invariant === OracleLabel.Strong;
     if (pred && actual) iTP++; else if (pred && !actual) iFP++; else if (!pred && actual) iFN++; else iTN++;
   }
   const invCM: ConfusionMatrix = { tp: iTP, fp: iFP, tn: iTN, fn: iFN };
@@ -137,9 +138,9 @@ export function computeCategoryTables(
     label: "Invariants (positive=Strong)",
     total: withInv.length,
     rows: [
-      { name: "Strong", predicted: withInv.filter((r) => r.categories.invariant === "strong").length, oracle: withInv.filter((r) => entryMap.get(r.taskId)!.labels.invariant === "strong").length },
-      { name: "Weak/Wrong", predicted: withInv.filter((r) => r.categories.invariant === "weak").length, oracle: withInv.filter((r) => entryMap.get(r.taskId)!.labels.invariant === "weak").length },
-      { name: "None (no nodes)", predicted: withInv.filter((r) => r.categories.invariant === "none").length, oracle: 0 },
+      { name: "Strong", predicted: withInv.filter((r) => r.categories.invariant === SpecStrength.Strong).length, oracle: withInv.filter((r) => entryMap.get(r.taskId)!.labels.invariant === OracleLabel.Strong).length },
+      { name: "Weak/Wrong", predicted: withInv.filter((r) => r.categories.invariant === SpecStrength.Weak).length, oracle: withInv.filter((r) => entryMap.get(r.taskId)!.labels.invariant === OracleLabel.Weak).length },
+      { name: "None (no nodes)", predicted: withInv.filter((r) => r.categories.invariant === SpecStrength.None).length, oracle: 0 },
     ],
     confusionMatrix: invCM, metrics: computeMetrics(invCM),
   };

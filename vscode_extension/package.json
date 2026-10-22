@@ -62,38 +62,44 @@
           "default": "",
           "markdownDescription": "Path to a custom Dafny executable. Only used when `#proofpulse.useCustomDafny#` is enabled. Can be an absolute path or `dafny` to use the system PATH."
         },
-        "proofpulse.z3Path": {
+        "proofpulse.solverPath": {
           "order": 2,
           "type": "string",
           "default": "",
-          "description": "Path to the Z3 binary (for core minimization). Leave empty to auto-resolve from the Dafny installation."
+          "markdownDescription": "Path to the solver (Z3) the verifier runs with. Leave empty to use the verifier's own default (for Dafny: its bundled Z3)."
+        },
+        "proofpulse.z3Path": {
+          "order": 3,
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Path to the Z3 binary used by core minimization. Leave empty to use `#proofpulse.solverPath#`, or auto-resolve from the Dafny installation."
         },
         "proofpulse.timeoutSeconds": {
-          "order": 3,
+          "order": 4,
           "type": "number",
           "default": 60,
           "description": "Timeout in seconds for Dafny verification"
         },
         "proofpulse.runOnSave": {
-          "order": 4,
+          "order": 5,
           "type": "boolean",
           "default": true,
           "description": "Automatically run coverage analysis when a .dfy file is saved"
         },
         "proofpulse.forceMinimization": {
-          "order": 5,
+          "order": 6,
           "type": "boolean",
           "default": false,
           "markdownDescription": "Enable unsat core minimization for Z3 solver calls. **Experimental:** tested on Linux (Nobara/Fedora). Not known if well supported on other platforms."
         },
         "proofpulse.noAbstractInterpretation": {
-          "order": 6,
+          "order": 7,
           "type": "boolean",
           "default": false,
           "description": "Disable Dafny's abstract interpretation pass (--no-abstract-interpretation)"
         },
         "proofpulse.decorationOpacity": {
-          "order": 7,
+          "order": 8,
           "type": "number",
           "default": 0.08,
           "minimum": 0.0,

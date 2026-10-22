@@ -6,10 +6,16 @@ import {
   parseProof,
   generateTextReport,
   type NodeData,
+  type DafnyRunOptions,
+  type DafnyRunResult,
   TokenType,
   CovStatus,
+  RunStatus,
+  VerifierId,
+  assertNever,
 } from "@proofpulse/core";
 import { buildLogPath } from "./agent-helpers.js";
+import { Classification, PreconditionNeed, SpecStrength, classificationMatchesOracle } from "./types.js";
 import { parseOracle, type DatasetId, type OracleEntry } from "./oracle-parser.js";
 import {
   classifySpec,
@@ -29,8 +35,8 @@ import {
 
 export interface ComparisonEntry {
   taskId: string;
-  baselineClassification: string;
-  minimizedClassification: string;
+  baselineClassification: Classification;
+  minimizedClassification: Classification;
   changed: boolean;
   baselineDurationMs: number;
   minimizedDurationMs: number;
@@ -85,7 +91,33 @@ export interface BenchmarkResults {
   summary: { total: number; processed: number; errors: number; skipped: number };
 }
 
-function isInvariantNode(n: NodeData): boolean {
+/** Options for one evaluation Dafny run (CLI flags → core runner options). */
+export function dafnyRunOptions(opts: {
+  dafnyPath?: string;
+  timeoutSeconds?: number;
+  forceMinimization?: boolean;
+  noAbstractInterpretation?: boolean;
+}): DafnyRunOptions {
+  return {
+    toolPath: opts.dafnyPath,
+    timeoutSeconds: opts.timeoutSeconds,
+    ...(opts.forceMinimization ? { minimization: {} } : {}),
+    backendOptions: { backend: VerifierId.Dafny, noAbstractInterpretation: opts.noAbstractInterpretation },
+  };
+}
+
+/** Error text for a Dafny run that did not complete; undefined when it completed. */
+export function dafnyRunError(result: DafnyRunResult): string | undefined {
+  switch (result.status) {
+    case RunStatus.Completed: return undefined;
+    case RunStatus.TimedOut: return result.errorMessage ?? "timeout";
+    case RunStatus.Aborted: return result.errorMessage ?? "aborted";
+    case RunStatus.Failed: return result.errorMessage ?? "failed";
+    default: return assertNever(result.status, "run status");
+  }
+}
+
+function isInvariantNode(n: Pick<NodeData, "prooftexts">): boolean {
   return (n.prooftexts[0] ?? "").includes("loop invariant");
 }
 
@@ -98,8 +130,8 @@ async function processEntry(
   options: BenchmarkOptions,
 ): Promise<TimedClassificationResult> {
   const startMs = Date.now();
-  let classification: "strong" | "weak" | "error";
-  let categories: CategoryClassification = { postcondition: "none", precondition: "none", invariant: "none" };
+  let classification: Classification;
+  let categories: CategoryClassification = { postcondition: SpecStrength.None, precondition: PreconditionNeed.None, invariant: SpecStrength.None };
   let postconditionLines: number[] = [];
   let preconditionLines: number[] = [];
   let invariantLines: number[] = [];
@@ -108,23 +140,19 @@ async function processEntry(
   let errorMsg: string | undefined;
 
   try {
-    const dafnyResult = await runDafny(entry.filePath, {
-      dafnyPath: options.dafnyPath,
-      timeoutSeconds: options.timeoutSeconds,
-      forceMinimization: options.forceMinimization,
-      noAbstractInterpretation: options.noAbstractInterpretation,
-    });
+    const dafnyResult = await runDafny(entry.filePath, dafnyRunOptions(options));
 
-    if (dafnyResult.error || dafnyResult.timedOut) {
-      classification = "error";
-      errorMsg = dafnyResult.error ?? "timeout";
+    const runError = dafnyRunError(dafnyResult);
+    if (runError !== undefined) {
+      classification = Classification.Error;
+      errorMsg = runError;
     } else {
       const sourceCode = fs.readFileSync(entry.filePath, "utf-8");
       const proof = parseProof(sourceCode, dafnyResult.log);
       const nodes = proof.proofGraph.getAllNodes();
 
       classification = classifySpec(proof.proofGraph);
-      categories = classifyAll(proof.proofGraph, nodes as NodeData[]);
+      categories = classifyAll(proof.proofGraph, nodes);
 
       postconditionLines = nodes
         .filter((n) => n.type === TokenType.Postcondition)
@@ -161,7 +189,7 @@ async function processEntry(
       }
     }
   } catch (err) {
-    classification = "error";
+    classification = Classification.Error;
     errorMsg = (err as Error).message;
   }
 
@@ -262,8 +290,8 @@ export async function runBenchmark(
 }
 
 export function computeComparisonMetrics(
-  baselineClassifications: string[],
-  minimizedClassifications: string[],
+  baselineClassifications: readonly Classification[],
+  minimizedClassifications: readonly Classification[],
   baselineDurations: number[],
   minimizedDurations: number[],
 ): { changedResults: number; addedTimeMs: number; slowdownFactor: number; baselineTotalMs: number; minimizedTotalMs: number } {
@@ -299,10 +327,10 @@ function buildBenchmarkResults(
   outputPath: string,
 ): BenchmarkResults {
   const total = entries.length;
-  const errors = results.filter((r) => r.classification === "error").length;
+  const errors = results.filter((r) => r.classification === Classification.Error).length;
   const confusionMatrix = computeConfusionMatrix(results);
   const metrics = computeMetrics(confusionMatrix);
-  const processed = results.filter((r) => r.classification !== "error").length;
+  const processed = results.filter((r) => r.classification !== Classification.Error).length;
 
   const catTables = computeCategoryTables(results, entries);
   console.log(formatCategoryTables(catTables));
@@ -380,7 +408,7 @@ async function runSequential(
       console.log(`${"─".repeat(60)}`);
       console.log(`Coverage post=${result.categories.postcondition} pre=${result.categories.precondition} inv=${result.categories.invariant}`);
       console.log(`Oracle   post=${entry.labels.postcondition ?? "-"} pre=${entry.labels.precondition ?? "-"} inv=${entry.labels.invariant ?? "-"}`);
-      console.log(`Overall: coverage=${result.classification} oracle=${entry.label} ${result.classification === entry.label ? "PASS ✓" : "FAIL ✗"}`);
+      console.log(`Overall: coverage=${result.classification} oracle=${entry.label} ${classificationMatchesOracle(result.classification, entry.label) ? "PASS ✓" : "FAIL ✗"}`);
       if (result.error) console.log(`Error: ${result.error}`);
       console.log(`${"═".repeat(60)}\n`);
     }
@@ -393,7 +421,7 @@ async function runSequential(
           coverageJson: result.coverageStatuses,
           classification: result.classification,
           oracleLabel: entry.label,
-          pass: result.classification === entry.label,
+          pass: classificationMatchesOracle(result.classification, entry.label),
         });
       } catch {}
     }

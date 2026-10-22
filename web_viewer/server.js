@@ -5,7 +5,7 @@ import { join, extname, resolve, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { homedir } from 'node:os';
-import { runDafny } from '@proofpulse/core';
+import { assertNever, createDefaultRegistry, parseCoverageReport, RunStatus, VerifierId } from '@proofpulse/core';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -134,28 +134,46 @@ export function startServer(port = 8080, coverageData = null) {
   });
 }
 
+const registry = createDefaultRegistry();
+
+/** Throw an error carrying the HTTP status/body the server should answer with. */
+function httpError(status, message) {
+  const err = new Error(message);
+  err.httpStatus = status;
+  err.httpBody = { error: message };
+  return err;
+}
+
 /**
- * Compute coverage for a .dfy file. Checks cache first, falls back to runDafny.
+ * Compute coverage for a source file. Checks cache first, falls back to running
+ * the file's verifier backend (or loads a saved coverage report).
  * Returns coverage data object or throws with { status, body } for HTTP errors.
  * @param {string} filePath
- * @param {{ dafnyPath?: string, timeoutSeconds?: number, forceMinimization?: boolean }} [options]
- * @returns {Promise<{ source: string, log: string, fromCache: boolean, cacheTimestamp?: number, minimized?: boolean, error?: string, exitCode?: number }>}
+ * @param {{ backendOptions?: import('@proofpulse/core').BackendOptions, reportPath?: string, minimized?: boolean }} [options]
+ * @returns {Promise<{ source: string, log?: string, report?: object, fromCache: boolean, cacheTimestamp?: number, minimized?: boolean, error?: string, exitCode?: number }>}
  */
-export async function computeCoverage(filePath, options) {
+export async function computeCoverage(filePath, options = {}) {
   const resolved = resolve(filePath);
 
   if (!existsSync(resolved)) {
-    const err = new Error(`File not found: ${filePath}`);
-    err.httpStatus = 404;
-    err.httpBody = { error: `File not found: ${filePath}` };
-    throw err;
+    throw httpError(404, `File not found: ${filePath}`);
   }
 
-  if (!resolved.endsWith('.dfy')) {
-    const err = new Error(`Not a .dfy file: ${filePath}`);
-    err.httpStatus = 400;
-    err.httpBody = { error: `Not a .dfy file: ${filePath}` };
-    throw err;
+  const backend = registry.backendForFile(resolved);
+  if (!backend) {
+    throw httpError(400, `Not a supported file (${registry.fileExtensions().join(', ')}): ${filePath}`);
+  }
+
+  const source = await fsReadFile(resolved, 'utf8');
+
+  // A saved coverage report: no verifier run, no cache.
+  if (options.reportPath) {
+    try {
+      const report = parseCoverageReport(await fsReadFile(options.reportPath, 'utf8'));
+      return { source, report, fromCache: false };
+    } catch (e) {
+      throw httpError(400, `Invalid coverage report ${options.reportPath}: ${e.message}`);
+    }
   }
 
   // Check cache first
@@ -170,40 +188,38 @@ export async function computeCoverage(filePath, options) {
     };
   }
 
-  // Cache miss — run dafny
-  const source = await fsReadFile(resolved, 'utf8');
-
+  // Cache miss — run the verifier
   let result;
   try {
-    result = await runDafny(resolved, options);
+    result = await backend.run(resolved, options.backendOptions ?? {});
   } catch {
-    const err = new Error('dafny not available');
-    err.httpStatus = 500;
-    err.httpBody = { error: 'dafny not available' };
-    throw err;
+    throw httpError(500, `${backend.displayName} not available`);
   }
 
-  if (result.error && result.error.includes('not found')) {
-    const err = new Error('dafny not available');
-    err.httpStatus = 500;
-    err.httpBody = { error: 'dafny not available' };
-    throw err;
+  switch (result.status) {
+    case RunStatus.Completed:
+    case RunStatus.Aborted:
+      break;
+    case RunStatus.TimedOut:
+      throw httpError(504, 'Verification timed out');
+    case RunStatus.Failed:
+      if (result.errorMessage && result.errorMessage.includes('not found')) {
+        throw httpError(500, `${backend.displayName} not available`);
+      }
+      break;
+    default:
+      assertNever(result.status, 'run status');
   }
 
-  if (result.timedOut) {
-    const err = new Error('Verification timed out');
-    err.httpStatus = 504;
-    err.httpBody = { error: 'Verification timed out' };
-    throw err;
-  }
-
-  const coverage = { source, log: result.log, fromCache: false };
-  if (result.error) coverage.error = result.error;
+  const log = result.rawLog ?? '';
+  const coverage = { source, log, fromCache: false };
+  if (result.report) coverage.report = result.report;
+  if (result.status !== RunStatus.Completed) coverage.error = result.errorMessage ?? result.status;
   if (result.exitCode !== undefined && result.exitCode !== 0) coverage.exitCode = result.exitCode;
 
   // Write cache (non-blocking, non-fatal)
-  const minimized = !!(options && options.forceMinimization);
-  await writeCache(resolved, source, result.log, minimized);
+  const minimized = options.backendOptions?.minimization !== undefined;
+  await writeCache(resolved, source, log, minimized);
 
   return coverage;
 }
@@ -211,11 +227,18 @@ export async function computeCoverage(filePath, options) {
 /**
  * Parse CLI arguments from argv.
  * Supports: --file <path> --dafny-path <path> --timeout <sec> --force-minimization
+ *           --no-abstract-interpretation --report <coverage-report.yaml|json>
  * @param {string[]} argv
- * @returns {{ file: string|null, dafnyPath?: string, timeout?: number, forceMinimization?: boolean }}
  */
 function parseCLIArgs(argv) {
-  const result = { file: null, dafnyPath: undefined, timeout: undefined, forceMinimization: undefined };
+  const result = {
+    file: null,
+    dafnyPath: undefined,
+    timeout: undefined,
+    forceMinimization: false,
+    noAbstractInterpretation: false,
+    reportPath: undefined,
+  };
   for (let i = 0; i < argv.length; i++) {
     switch (argv[i]) {
       case '--file':
@@ -230,6 +253,12 @@ function parseCLIArgs(argv) {
       case '--force-minimization':
         result.forceMinimization = true;
         break;
+      case '--no-abstract-interpretation':
+        result.noAbstractInterpretation = true;
+        break;
+      case '--report':
+        result.reportPath = argv[++i];
+        break;
     }
   }
   return result;
@@ -240,15 +269,19 @@ const isMain = process.argv[1] && resolve(process.argv[1]) === resolve(fileURLTo
 if (isMain) {
   const args = parseCLIArgs(process.argv);
   if (!args.file) {
-    process.stderr.write('Usage: node server.js --file <path.dfy> [--dafny-path <path>] [--timeout <sec>] [--force-minimization]\n');
+    process.stderr.write('Usage: node server.js --file <path> [--dafny-path <path>] [--timeout <sec>] [--force-minimization] [--no-abstract-interpretation] [--report <coverage-report>]\n');
     process.exit(1);
   }
 
   try {
     const coverageData = await computeCoverage(args.file, {
-      dafnyPath: args.dafnyPath,
-      timeoutSeconds: args.timeout,
-      forceMinimization: args.forceMinimization,
+      reportPath: args.reportPath,
+      backendOptions: {
+        toolPath: args.dafnyPath,
+        timeoutSeconds: args.timeout,
+        ...(args.forceMinimization ? { minimization: {} } : {}),
+        backendOptions: { backend: VerifierId.Dafny, noAbstractInterpretation: args.noAbstractInterpretation },
+      },
     });
     await startServer(0, coverageData);
   } catch (err) {

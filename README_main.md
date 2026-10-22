@@ -221,6 +221,12 @@ Options:
 - `--timeout <seconds>` — Verification timeout (default: 60)
 - `--log` — Print YAML log (only methods with uncovered/partial nodes)
 - `--log-verbose` — Print full YAML log (all nodes + proof dependencies per method)
+- `--generate-yaml <path>` — Write the full proof graph YAML to a file
+- `--backend <id>` — Verifier backend (default: chosen from the file extension; available: `dafny`)
+- `--emit-report <path>` — Also write the language-neutral coverage report (`proofpulse-coverage/v1`; `.json` → JSON, otherwise YAML)
+- `--report <path>` — Analyze a saved coverage report instead of running the verifier
+
+The coverage report format is defined by the JSON Schema in `core/schema/proofpulse-coverage-v1.json`.
 
 Example that can be run on docker:
 ```shell

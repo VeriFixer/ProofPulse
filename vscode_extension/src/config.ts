@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import { DEFAULT_DAFNY_COMMAND } from "@proofpulse/core";
 import { isBundledInstalled, getBundledDafnyPath } from "./dafny-installer";
 
 /**
@@ -12,7 +13,7 @@ export function getDafnyPath(context?: vscode.ExtensionContext): string {
 
   if (useCustom) {
     const custom = cfg.get<string>("customDafnyPath", "")?.trim();
-    return custom || "dafny"; // empty means "search PATH"
+    return custom || DEFAULT_DAFNY_COMMAND; // empty means "search PATH"
   }
 
   // Default: use bundled
@@ -20,8 +21,8 @@ export function getDafnyPath(context?: vscode.ExtensionContext): string {
     return getBundledDafnyPath(context);
   }
 
-  // Bundled not yet installed — return "dafny" as fallback (installer will handle it)
-  return "dafny";
+  // Bundled not yet installed — fall back to PATH lookup (installer will handle it)
+  return DEFAULT_DAFNY_COMMAND;
 }
 
 export function getTimeout(): number {
@@ -36,6 +37,12 @@ export function getForceMinimization(): boolean {
   return vscode.workspace.getConfiguration("proofpulse").get<boolean>("forceMinimization", false);
 }
 
+/** Solver binary the verifier runs with; empty = the verifier's own default. */
+export function getSolverPath(): string {
+  return vscode.workspace.getConfiguration("proofpulse").get<string>("solverPath", "").trim();
+}
+
+/** Z3 binary the core minimizer forwards to; empty = solverPath, else auto-resolve. */
 export function getZ3Path(): string {
   return vscode.workspace.getConfiguration("proofpulse").get<string>("z3Path", "");
 }

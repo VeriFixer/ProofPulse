@@ -42,6 +42,9 @@ skip_suite() {
 echo -e "${BOLD}${CYAN}ProofPulse — Full Test Suite${RESET}"
 echo -e "${GRAY}$(date)${RESET}"
 
+# 0. Core library tests
+run_suite "Core tests" bash -c "cd core && npx vitest --run"
+
 # 1. Unit tests (vitest)
 run_suite "Unit tests" npx vitest --run --config vitest.config.ts tests/unit/
 
@@ -52,7 +55,7 @@ run_suite "Property tests" npx vitest --run --config vitest.config.ts tests/prop
 run_suite "Integration tests" npx vitest --run --config vitest.config.ts tests/integration/
 
 # 4. Server unit tests (node:test)
-run_suite "Server tests" node --test tests/unit/web_viewer/server.test.js
+run_suite "Server tests" node --test tests/unit/web_viewer/server.test.js tests/property/web_viewer/server.property.test.js tests/property/web_viewer/server-file-input.property.test.js
 
 # 5. Bundle tests (node:test)
 run_suite "Bundle tests" node --test tests/unit/web_viewer/bundle-viewer.test.js
@@ -62,7 +65,8 @@ run_suite "Evaluation tests" npm test -w evaluation
 
 # 7. Dafny regression suite (requires dafny)
 if command -v dafny &>/dev/null; then
-  run_suite "Dafny regression" npx tsx tests/harness/cli.ts
+  # Same flags as CI (Dockerfile.ci CMD): the snapshots were recorded with them
+  run_suite "Dafny regression" npx tsx tests/harness/cli.ts --force-minimization --no-abstract-interpretation
 else
   skip_suite "Dafny regression" "dafny not in PATH"
 fi

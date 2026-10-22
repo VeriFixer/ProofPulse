@@ -1,16 +1,17 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { OracleLabel, PreconditionNeed } from "./types.js";
 
 export interface OracleLabels {
-  postcondition?: "strong" | "weak" | "wrong";
-  invariant?: "strong" | "weak";
-  precondition?: "required" | "optional";
+  postcondition?: OracleLabel;
+  invariant?: OracleLabel.Strong | OracleLabel.Weak;
+  precondition?: PreconditionNeed.Required | PreconditionNeed.Optional;
 }
 
 export interface OracleEntry {
   taskId: string;
   filePath: string;
-  label: "strong" | "weak" | "wrong";
+  label: OracleLabel;
   labels: OracleLabels;
   dataset: string;
   dafnyCode: string;
@@ -45,24 +46,21 @@ interface RawOracleEntry {
 export function extractLabels(note: string): OracleLabels {
   const labels: OracleLabels = {};
 
-  if (/\[STRONG-POST\]/.test(note)) labels.postcondition = "strong";
-  else if (/\[WEAK-POST\]/.test(note)) labels.postcondition = "weak";
-  else if (/\[WRONG\]/.test(note)) labels.postcondition = "wrong";
+  if (/\[STRONG-POST\]/.test(note)) labels.postcondition = OracleLabel.Strong;
+  else if (/\[WEAK-POST\]/.test(note)) labels.postcondition = OracleLabel.Weak;
+  else if (/\[WRONG\]/.test(note)) labels.postcondition = OracleLabel.Wrong;
 
-  if (/\[STRONG-INV\]/.test(note)) labels.invariant = "strong";
-  else if (/\[WEAK-INV\]/.test(note)) labels.invariant = "weak";
+  if (/\[STRONG-INV\]/.test(note)) labels.invariant = OracleLabel.Strong;
+  else if (/\[WEAK-INV\]/.test(note)) labels.invariant = OracleLabel.Weak;
 
-  if (/\[REQUIRED-PRE\]/.test(note)) labels.precondition = "required";
-  else if (/\[OPTIONAL-PRE\]/.test(note)) labels.precondition = "optional";
+  if (/\[REQUIRED-PRE\]/.test(note)) labels.precondition = PreconditionNeed.Required;
+  else if (/\[OPTIONAL-PRE\]/.test(note)) labels.precondition = PreconditionNeed.Optional;
 
   return labels;
 }
 
-function overallLabel(labels: OracleLabels): "strong" | "weak" | "wrong" | null {
-  if (labels.postcondition === "strong") return "strong";
-  if (labels.postcondition === "weak") return "weak";
-  if (labels.postcondition === "wrong") return "wrong";
-  return null;
+function overallLabel(labels: OracleLabels): OracleLabel | null {
+  return labels.postcondition ?? null;
 }
 
 /**

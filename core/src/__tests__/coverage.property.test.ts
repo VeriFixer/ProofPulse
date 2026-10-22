@@ -4,6 +4,7 @@ import { computeLineStatus, getNodesByLine } from "../coverage.js";
 import { CovStatus } from "../types.js";
 import { ProofNode } from "../proof-node.js";
 import { ProofGraph } from "../proof-graph.js";
+import { NodeKind, UnitKind } from "../report/coverage-report.js";
 
 /**
  * Property 6: Line status is worst-case of token statuses
@@ -49,8 +50,9 @@ function buildGraph(specs: NodeSpec[]): ProofGraph {
       { line: spec.startLine, col },
       { line: spec.startLine, col: col + 5 },
       "",
-      "",
+      UnitKind.Correctness,
       `token ${i}`,
+      NodeKind.Code,
     );
     node.setCovStatus(spec.covStatus);
     graph.addNode(node);
@@ -197,8 +199,9 @@ function buildSpanGraph(specs: SpanNodeSpec[]): ProofGraph {
       { line: spec.startLine, col: spec.startCol },
       { line: spec.endLine, col: spec.endCol },
       "",
-      "",
+      UnitKind.Correctness,
       `span token ${i}`,
+      NodeKind.Code,
     );
     graph.addNode(node);
   });

@@ -5,6 +5,9 @@ import * as https from "https";
 import * as http from "http";
 import { execSync } from "child_process";
 
+/** Button label of the "no pre-built Dafny" warning. */
+const OPEN_SETTINGS_ACTION = "Open Settings";
+
 /** GitHub release zip URL for each platform */
 const RELEASE_URLS: Record<string, string> = {
   "linux-x64": "https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-x64-ubuntu-22.04.zip",
@@ -93,9 +96,9 @@ export async function installDafny(context: vscode.ExtensionContext): Promise<st
   if (!platformKey) {
     const action = await vscode.window.showWarningMessage(
       `ProofPulse: No pre-built Dafny for ${process.platform}-${process.arch}. Enable "Use Custom Dafny" in settings and provide your own binary.`,
-      "Open Settings"
+      OPEN_SETTINGS_ACTION
     );
-    if (action === "Open Settings") {
+    if (action === OPEN_SETTINGS_ACTION) {
       vscode.commands.executeCommand("workbench.action.openSettings", "proofpulse.useCustomDafny");
     }
     return undefined;

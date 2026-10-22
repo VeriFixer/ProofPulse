@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VeriFixer/ProofPulse/core/schema/proofpulse-coverage-v1.json",
+  "title": "ProofPulse coverage report (proofpulse-coverage/v1)",
+  "description": "Language-neutral proof coverage report: which facts each successful solver query used and did not use. Mirrors core/src/report/coverage-report.ts.",
+  "type": "object",
+  "required": ["schema", "tool", "sources", "units", "nodes"],
+  "properties": {
+    "schema": { "const": "proofpulse-coverage/v1" },
+    "tool": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "enum": ["dafny", "verus", "kani"] },
+        "version": { "type": "string" },
+        "solver": {
+          "type": "object",
+          "required": ["kind"],
+          "properties": {
+            "kind": { "enum": ["z3", "cvc5", "cbmc"] },
+            "version": { "type": "string" }
+          }
+        },
+        "minimized": { "type": "boolean" }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path"],
+        "properties": {
+          "id": { "type": "string" },
+          "path": { "type": "string" },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        }
+      }
+    },
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "kind", "queries"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "kind": {
+            "description": "Unknown values are read as \"other\".",
+            "type": "string",
+            "examples": ["correctness", "well-formedness", "termination", "harness", "other"]
+          },
+          "queries": { "type": "array", "items": { "$ref": "#/$defs/query" } }
+        }
+      }
+    },
+    "nodes": { "type": "array", "items": { "$ref": "#/$defs/node" } }
+  },
+  "$defs": {
+    "position": {
+      "type": "object",
+      "required": ["line", "col"],
+      "properties": {
+        "line": { "type": "integer" },
+        "col": { "type": "integer" }
+      }
+    },
+    "span": {
+      "type": "object",
+      "required": ["file", "start", "end"],
+      "properties": {
+        "file": { "type": "string", "description": "Id of an entry in sources." },
+        "start": { "$ref": "#/$defs/position" },
+        "end": { "$ref": "#/$defs/position" }
+      }
+    },
+    "node": {
+      "type": "object",
+      "required": ["id", "kind", "span", "message"],
+      "properties": {
+        "id": { "type": "string" },
+        "kind": {
+          "description": "Unknown values are read as \"other\".",
+          "type": "string",
+          "examples": [
+            "precondition", "postcondition", "assert", "implicit-check", "assume", "invariant",
+            "call-requires", "call-ensures", "axiom", "lemma", "code", "other"
+          ]
+        },
+        "span": { "$ref": "#/$defs/span" },
+        "message": { "type": "string", "description": "The verifier's description, e.g. \"this postcondition holds\"." },
+        "text": { "type": "string", "description": "Source text of the element, when known." },
+        "callTargets": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "query": {
+      "type": "object",
+      "required": ["id", "index", "outcome", "goals", "used", "unused"],
+      "properties": {
+        "id": { "type": "string" },
+        "index": { "type": "integer" },
+        "outcome": {
+          "enum": ["Valid", "Invalid", "TimeOut", "OutOfMemory", "OutOfResource", "Undetermined", "Bounded", "Error"]
+        },
+        "durationMs": { "type": "number" },
+        "resourceCount": { "type": "integer" },
+        "goals": { "type": "array", "items": { "type": "string" } },
+        "used": { "type": "array", "items": { "type": "string" } },
+        "unused": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

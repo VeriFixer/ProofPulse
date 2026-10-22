@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeAll, afterAll } from "vitest";
-import { runDafny } from "../../../core/src/dafny-runner.js";
+import { runDafny } from "../../../core/src/backends/dafny/runner.js";
+import { RunStatus } from "../../../core/src/backends/backend.js";
 import { mkdtemp, writeFile, chmod, rm } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { tmpdir } from "node:os";
@@ -38,27 +39,27 @@ afterAll(async () => {
 });
 
 describe("runDafny abort behavior", () => {
-  it("pre-aborted signal returns immediately with error 'aborted'", async () => {
+  it("pre-aborted signal returns immediately with status Aborted", async () => {
     const controller = new AbortController();
     controller.abort(); // abort before calling
 
     const start = Date.now();
     const result = await runDafny(TEST_DFY, {
-      dafnyPath: fakeDafnyPath,
+      toolPath: fakeDafnyPath,
       signal: controller.signal,
     });
     const elapsed = Date.now() - start;
 
-    expect(result.error).toBe("aborted");
+    expect(result.status).toBe(RunStatus.Aborted);
     expect(elapsed).toBeLessThan(1000); // should return almost instantly
   });
 
-  it("mid-run abort kills process and returns error 'aborted'", async () => {
+  it("mid-run abort kills process and returns status Aborted", async () => {
     const controller = new AbortController();
 
     const start = Date.now();
     const resultPromise = runDafny(TEST_DFY, {
-      dafnyPath: fakeDafnyPath,
+      toolPath: fakeDafnyPath,
       signal: controller.signal,
       timeoutSeconds: 30,
     });
@@ -69,7 +70,7 @@ describe("runDafny abort behavior", () => {
     const result = await resultPromise;
     const elapsed = Date.now() - start;
 
-    expect(result.error).toBe("aborted");
+    expect(result.status).toBe(RunStatus.Aborted);
     expect(elapsed).toBeLessThan(2000); // should resolve well before timeout
   });
 });
