@@ -1,4 +1,4 @@
-import { CovStatus, TokenType } from "./types.js";
+import { CovStatus, TokenType, VacuityRole } from "./types.js";
 import { ProofNode } from "./proof-node.js";
 import { ProofGraph } from "./proof-graph.js";
 import { UnitKind } from "./report/coverage-report.js";
@@ -211,14 +211,30 @@ export function applyCoverageSemantic(graph: ProofGraph): void {
   }
 }
 
+/** Vacuity roles that override a node's coverage status. */
+const VACUOUS_ROLES: ReadonlySet<VacuityRole> = new Set([VacuityRole.Goal, VacuityRole.Cause, VacuityRole.Affected]);
+
 /**
- * Run both coverage passes on a graph.
+ * Pass 3: nodes that take part only in vacuous proofs are Vacuous, whatever
+ * the earlier passes decided: a goal proved from contradictory facts, the facts
+ * that contradict, and what is only reached under the contradiction.
+ * Intentionally vacuous goals keep their status.
+ */
+export function applyCoverageVacuity(graph: ProofGraph): void {
+  for (const node of graph.getAllNodes()) {
+    if (node.vacuity && VACUOUS_ROLES.has(node.vacuity)) node.setCovStatus(CovStatus.Vacuous);
+  }
+}
+
+/**
+ * Run the coverage passes on a graph.
  * Also propagates coverage through call connections.
  */
 export function applyCoverage(graph: ProofGraph): void {
   applyCoverageInternal(graph);
   applyCoverageConnections(graph);
   applyCoverageSemantic(graph);
+  applyCoverageVacuity(graph);
 }
 
 /**
@@ -249,6 +265,7 @@ function applyCoverageConnections(graph: ProofGraph): void {
  *    — same code used in multiple contexts, if any covers it, it's covered
  * 3. Across distinct spans on same line: worst-case (Uncovered > CovTest > CovComplete)
  *    — different code on same line, if any part is uncovered the line is flagged
+ * Vacuous wins in both: a vacuous proof is a defect even where another context covers the code.
  * 
  * Default is CovComplete for lines with no tokens.
  */
@@ -294,6 +311,7 @@ export function computeLineStatus(graph: ProofGraph, sourceCode: string): CovSta
 
 function bestStatus(a: CovStatus, b: CovStatus): CovStatus {
   const rank: Record<CovStatus, number> = {
+    [CovStatus.Vacuous]: 3,
     [CovStatus.CovComplete]: 2,
     [CovStatus.CovTest]: 1,
     [CovStatus.Uncovered]: 0,
@@ -306,6 +324,7 @@ function worstStatus(a: CovStatus, b: CovStatus): CovStatus {
     [CovStatus.CovComplete]: 2,
     [CovStatus.CovTest]: 1,
     [CovStatus.Uncovered]: 0,
+    [CovStatus.Vacuous]: -1,
   };
   return rank[a] <= rank[b] ? a : b;
 }

@@ -11,6 +11,8 @@
   --color-covtest-underline: #fffb00;
   --color-uncovered-text: #e06050;
   --color-covtest-text: #d4a840;
+  --color-vacuous: #8a3ffc;
+  --color-vacuous-text: #b98cff;
   --color-related-bg: rgba(100, 180, 255, 0.12);
   --gutter-width: 56px;
 }
@@ -103,6 +105,10 @@ body {
   color: #022054;
 }
 
+.line[data-status="Vacuous"] > .lnum {
+  background: var(--color-vacuous);
+}
+
 /* tokens */
 .token {
   position: relative;
@@ -162,6 +168,14 @@ body {
   text-decoration-color: var(--color-uncovered);
   text-decoration-thickness: 2px;
   color: var(--color-uncovered-text)
+}
+
+/* vacuous token: violet text + wavy violet underline */
+.token[data-status="vacuous"] {
+  text-decoration: underline wavy;
+  text-decoration-color: var(--color-vacuous);
+  text-decoration-thickness: 2px;
+  color: var(--color-vacuous-text)
 }
 
 /* covtest token: amber text + yellow underline */

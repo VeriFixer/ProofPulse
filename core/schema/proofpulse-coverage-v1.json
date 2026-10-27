@@ -105,7 +105,8 @@
         "resourceCount": { "type": "integer" },
         "goals": { "type": "array", "items": { "type": "string" } },
         "used": { "type": "array", "items": { "type": "string" } },
-        "unused": { "type": "array", "items": { "type": "string" } }
+        "unused": { "type": "array", "items": { "type": "string" } },
+        "vacuity": { "enum": ["vacuous", "intentional"] }
       }
     }
   }

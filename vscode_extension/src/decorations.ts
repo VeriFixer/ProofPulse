@@ -1,12 +1,14 @@
 import * as path from "node:path";
 import * as vscode from "vscode";
-import { assertNever, CovStatus, ProofNode, TokenType } from "@proofpulse/core";
+import { assertNever, CovStatus, ProofNode, TokenType, vacuityExplanation } from "@proofpulse/core";
 
 interface DecorationTypes {
   uncoveredGutter: vscode.TextEditorDecorationType;
   covTestGutter: vscode.TextEditorDecorationType;
+  vacuousGutter: vscode.TextEditorDecorationType;
   uncoveredInline: vscode.TextEditorDecorationType;
   covTestInline: vscode.TextEditorDecorationType;
+  vacuousInline: vscode.TextEditorDecorationType;
 }
 
 /** Module-level reference to current decoration types so clearDecorations can dispose them. */
@@ -68,11 +70,22 @@ export function createDecorationTypes(opacity: number, extensionPath: string): D
       gutterIconPath: path.join(extensionPath, "media", "gutter-covtest.svg"),
       gutterIconSize: "contain",
     }),
+    vacuousGutter: vscode.window.createTextEditorDecorationType({
+      isWholeLine: true,
+      backgroundColor: `rgba(150, 80, 255, ${opacity})`,
+      overviewRulerColor: "rgba(150, 80, 255, 0.8)",
+      overviewRulerLane: vscode.OverviewRulerLane.Left,
+      gutterIconPath: path.join(extensionPath, "media", "gutter-vacuous.svg"),
+      gutterIconSize: "contain",
+    }),
     uncoveredInline: vscode.window.createTextEditorDecorationType({
       // No particular text decoration apllied for now but can change
     }),
     covTestInline: vscode.window.createTextEditorDecorationType({
       // No particular text decoration apllied for now but can change
+    }),
+    vacuousInline: vscode.window.createTextEditorDecorationType({
+      textDecoration: "underline wavy rgba(150, 80, 255, 0.9)",
     }),
   };
 }
@@ -109,10 +122,12 @@ export function applyDecorations(
   // Build maps: line index (0-based) → nodes on that line, by status
   const uncoveredNodesByLine = new Map<number, ProofNode[]>();
   const covTestNodesByLine = new Map<number, ProofNode[]>();
+  const vacuousNodesByLine = new Map<number, ProofNode[]>();
   for (const node of nodes) {
     const map = node.covStatus === CovStatus.Uncovered ? uncoveredNodesByLine
       : node.covStatus === CovStatus.CovTest ? covTestNodesByLine
-        : null;
+        : node.covStatus === CovStatus.Vacuous ? vacuousNodesByLine
+          : null;
     if (!map) continue;
     for (let line = node.start.line; line <= node.end.line; line++) {
       const idx = line - 1;
@@ -125,10 +140,29 @@ export function applyDecorations(
   // Gutter decorations with hover messages
   const uncoveredGutterOpts: vscode.DecorationOptions[] = [];
   const covTestGutterOpts: vscode.DecorationOptions[] = [];
+  const vacuousGutterOpts: vscode.DecorationOptions[] = [];
 
   for (let i = 0; i < lineStatus.length; i++) {
     const status = lineStatus[i];
-    if (status === CovStatus.Uncovered) {
+    if (status === CovStatus.Vacuous) {
+      const lineNodes = vacuousNodesByLine.get(i) ?? [];
+      const hover = new vscode.MarkdownString(undefined, true);
+      hover.isTrusted = true;
+      hover.supportHtml = true;
+
+      for (const n of lineNodes) {
+        hover.appendMarkdown(`🟣 \`${nodeSnippet(n)}\` *(Line ${n.start.line}:${n.start.col})*  \n`);
+        hover.appendMarkdown(`${vacuityExplanation(n.vacuity)}  \n\n`);
+      }
+
+      hover.appendMarkdown(`---\n`);
+      hover.appendMarkdown(`[$(graph) Click to Generate Proof Coverage Report](command:proofpulse.getProofReport)`);
+
+      vacuousGutterOpts.push({
+        range: new vscode.Range(i, 0, i, 0),
+        hoverMessage: hover,
+      });
+    } else if (status === CovStatus.Uncovered) {
       const lineNodes = uncoveredNodesByLine.get(i) ?? [];
       const hover = new vscode.MarkdownString(undefined, true);
       hover.isTrusted = true;
@@ -177,9 +211,12 @@ export function applyDecorations(
   // Inline decorations — ranges only, no hover
   const uncoveredInlineRanges: vscode.Range[] = [];
   const covTestInlineRanges: vscode.Range[] = [];
+  const vacuousInlineRanges: vscode.Range[] = [];
 
   for (const node of nodes) {
-    if (node.covStatus === CovStatus.Uncovered) {
+    if (node.covStatus === CovStatus.Vacuous) {
+      vacuousInlineRanges.push(nodeToRange(node));
+    } else if (node.covStatus === CovStatus.Uncovered) {
       uncoveredInlineRanges.push(nodeToRange(node));
     } else if (node.covStatus === CovStatus.CovTest) {
       covTestInlineRanges.push(nodeToRange(node));
@@ -190,6 +227,8 @@ export function applyDecorations(
   editor.setDecorations(types.covTestGutter, covTestGutterOpts);
   editor.setDecorations(types.uncoveredInline, uncoveredInlineRanges);
   editor.setDecorations(types.covTestInline, covTestInlineRanges);
+  editor.setDecorations(types.vacuousGutter, vacuousGutterOpts);
+  editor.setDecorations(types.vacuousInline, vacuousInlineRanges);
 }
 
 export function clearDecorations(editor: vscode.TextEditor): void {
@@ -198,6 +237,8 @@ export function clearDecorations(editor: vscode.TextEditor): void {
     editor.setDecorations(currentTypes.covTestGutter, []);
     editor.setDecorations(currentTypes.uncoveredInline, []);
     editor.setDecorations(currentTypes.covTestInline, []);
+    editor.setDecorations(currentTypes.vacuousGutter, []);
+    editor.setDecorations(currentTypes.vacuousInline, []);
     disposeCurrentTypes();
   }
 }
@@ -208,6 +249,8 @@ function disposeCurrentTypes(): void {
     currentTypes.covTestGutter.dispose();
     currentTypes.uncoveredInline.dispose();
     currentTypes.covTestInline.dispose();
+    currentTypes.vacuousGutter.dispose();
+    currentTypes.vacuousInline.dispose();
     currentTypes = null;
   }
 }

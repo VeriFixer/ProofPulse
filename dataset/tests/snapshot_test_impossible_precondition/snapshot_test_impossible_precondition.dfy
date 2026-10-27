@@ -37,8 +37,9 @@ method DemoImpossiblePrecondition(a: int)
 //::       batchIndex: 1
 //::       batchOutcome: Valid
 //::       batchResourceCount: 3974
-//::     covStatus: CovTest
+//::     covStatus: Vacuous
 //::     covStatusInternal: CovComplete
+//::     vacuity: goal
 //::   - locationId: >-
 //::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|3,12-3,37
 //::     file: snapshot_test_impossible_precondition.dfy
@@ -60,8 +61,9 @@ method DemoImpossiblePrecondition(a: int)
 //::     type: Precondition
 //::     usedByNumber: 1
 //::     topMeta: null
-//::     covStatus: CovComplete
+//::     covStatus: Vacuous
 //::     covStatusInternal: CovComplete
+//::     vacuity: cause
 //::   - locationId: >-
 //::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|6,7-6,17
 //::     file: snapshot_test_impossible_precondition.dfy
@@ -83,8 +85,9 @@ method DemoImpossiblePrecondition(a: int)
 //::     type: CodeLine
 //::     usedByNumber: 0
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: Vacuous
 //::     covStatusInternal: Uncovered
+//::     vacuity: affected
 //::   - locationId: >-
 //::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|7,7-7,17
 //::     file: snapshot_test_impossible_precondition.dfy
@@ -106,8 +109,9 @@ method DemoImpossiblePrecondition(a: int)
 //::     type: CodeLine
 //::     usedByNumber: 0
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: Vacuous
 //::     covStatusInternal: Uncovered
+//::     vacuity: affected
 //::   - locationId: >-
 //::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|8,3-8,13
 //::     file: snapshot_test_impossible_precondition.dfy
@@ -129,8 +133,9 @@ method DemoImpossiblePrecondition(a: int)
 //::     type: CodeLine
 //::     usedByNumber: 0
 //::     topMeta: null
-//::     covStatus: Uncovered
+//::     covStatus: Vacuous
 //::     covStatusInternal: Uncovered
+//::     vacuity: affected
 //::   - locationId: >-
 //::       snapshot_test_impossible_precondition.dfy|DemoImpossiblePrecondition|correctness|9,1-9,1
 //::     file: snapshot_test_impossible_precondition.dfy
@@ -154,8 +159,9 @@ method DemoImpossiblePrecondition(a: int)
 //::     type: AssertionAutomatic
 //::     usedByNumber: 0
 //::     topMeta: null
-//::     covStatus: CovComplete
+//::     covStatus: Vacuous
 //::     covStatusInternal: Uncovered
+//::     vacuity: affected
 //:: edges:
 //::   provedBy:
 //::     - top: >-

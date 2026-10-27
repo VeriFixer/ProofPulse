@@ -31,5 +31,5 @@ export function analyzeReport(sourceCode: string, report: CoverageReport): Proof
 
 /** Dafny convenience: analyze a Dafny text verification log. */
 export function parseProof(dafnyCode: string, proofLog: string): Proof {
-  return new Proof(dafnyLogToReport(proofLog), dafnyCode);
+  return new Proof(dafnyLogToReport(proofLog, { sourceText: dafnyCode }), dafnyCode);
 }

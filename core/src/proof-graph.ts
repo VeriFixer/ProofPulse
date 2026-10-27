@@ -1,6 +1,6 @@
 import YAML from "js-yaml";
 import { ProofNode } from "./proof-node.js";
-import { CovStatus, SourceLocation, TokenType } from "./types.js";
+import { CovStatus, SourceLocation, TokenType, VacuityRole } from "./types.js";
 import {
   CoverageReport,
   NodeKind,
@@ -10,6 +10,7 @@ import {
   ReportQuery,
   ReportUnit,
   UnitKind,
+  Vacuity,
   enumValues,
   isCallKind,
 } from "./report/coverage-report.js";
@@ -17,6 +18,32 @@ import { nodeKindForTokenType } from "./node-kind.js";
 
 const OUTCOME_VALUES = enumValues(QueryOutcome);
 const UNIT_KIND_VALUES = enumValues(UnitKind);
+const VACUITY_ROLE_VALUES = enumValues(VacuityRole);
+
+/** Where a node occurs, split by whether the query was proved vacuously. */
+interface Occurrences {
+  soundGoal: boolean;
+  soundUsed: boolean;
+  soundAny: boolean;
+  vacuousGoal: boolean;
+  intentionalGoal: boolean;
+  vacuousUsed: boolean;
+  vacuousAny: boolean;
+}
+
+/**
+ * Vacuity role of a node from its occurrences. A node is only flagged when no
+ * sound (non-vacuous) query relies on it in the same way: a precondition that
+ * also proves a real goal is not a cause, and code reached by a sound query is
+ * not unreachable.
+ */
+function vacuityRole(o: Occurrences): VacuityRole | undefined {
+  if (o.vacuousGoal && !o.soundGoal) return VacuityRole.Goal;
+  if (o.intentionalGoal && !o.soundGoal) return VacuityRole.Intentional;
+  if (o.vacuousUsed && !o.soundUsed) return VacuityRole.Cause;
+  if (o.vacuousAny && !o.soundAny) return VacuityRole.Affected;
+  return undefined;
+}
 
 /** Milliseconds → "hh:mm:ss.fffffff" (the batch duration format used in graph YAML). */
 export function formatDuration(ms: number): string {
@@ -63,11 +90,16 @@ export class ProofGraph {
     const nodes = new Map<string, ReportNode>(report.nodes.map((n) => [n.id, n]));
     const paths = new Map<string, string>(report.sources.map((s) => [s.id, s.path]));
 
+    const occurrences = new Map<ProofNode, Occurrences>();
     for (const unit of report.units) {
       if (!PROOF_UNIT_KINDS.has(unit.kind)) continue;
       for (const query of unit.queries) {
-        graph.addQuery(unit, query, nodes, paths);
+        graph.addQuery(unit, query, nodes, paths, occurrences);
       }
+    }
+    for (const [node, o] of occurrences) {
+      const role = vacuityRole(o);
+      if (role) node.vacuity = role;
     }
     return graph;
   }
@@ -77,7 +109,31 @@ export class ProofGraph {
     query: ReportQuery,
     nodes: ReadonlyMap<string, ReportNode>,
     paths: ReadonlyMap<string, string>,
+    occurrences: Map<ProofNode, Occurrences>,
   ): void {
+    // Intentionally vacuous queries count as sound for everything but their goal.
+    const vacuous = query.vacuity === Vacuity.Vacuous;
+    const intentional = query.vacuity === Vacuity.Intentional;
+    const occur = (node: ProofNode, as: "goal" | "used" | "unused"): void => {
+      let o = occurrences.get(node);
+      if (!o) {
+        o = { soundGoal: false, soundUsed: false, soundAny: false, vacuousGoal: false, intentionalGoal: false, vacuousUsed: false, vacuousAny: false };
+        occurrences.set(node, o);
+      }
+      if (vacuous) {
+        o.vacuousAny = true;
+        if (as === "goal") o.vacuousGoal = true;
+        if (as === "used") o.vacuousUsed = true;
+      } else {
+        o.soundAny = true;
+        if (as === "goal") {
+          if (intentional) o.intentionalGoal = true;
+          else o.soundGoal = true;
+        }
+        if (as === "used") o.soundUsed = true;
+      }
+    };
+
     const place = (id: string): { node: ProofNode; report: ReportNode } => {
       const report = nodes.get(id)!;
       const node = this.getOrCreate(
@@ -112,11 +168,13 @@ export class ProofGraph {
         batchResourceCount: query.resourceCount,
       };
       tops.push(top);
+      occur(top, "goal");
     }
 
     for (const usedId of query.used) {
       const { node, report } = place(usedId);
       node.addRole("isProvedBy");
+      occur(node, "used");
       if (isCallKind(report.kind)) node.addRole("isCall");
       for (const top of tops) this.addProvedBy(top.getId(), node.getId());
       linkCallTargets(node, report);
@@ -125,6 +183,7 @@ export class ProofGraph {
     for (const unusedId of query.unused) {
       const { node, report } = place(unusedId);
       node.addRole("isUnused");
+      occur(node, "unused");
       if (isCallKind(report.kind)) node.addRole("isCall");
       for (const top of tops) this.markProofUnused(top.getId(), node.getId());
       linkCallTargets(node, report);
@@ -277,6 +336,8 @@ export class ProofGraph {
       topMeta: node.topMeta ?? null,
       covStatus: node.covStatus,
       covStatusInternal: node.covStatusInternal,
+      // Only written when set, so graphs without vacuity keep their YAML.
+      ...(node.vacuity ? { vacuity: node.vacuity } : {}),
     }));
 
     const edges: {
@@ -360,6 +421,7 @@ export class ProofGraph {
       // Restore coverage status
       node.setCovStatus(item.covStatus ?? CovStatus.Uncovered);
       node.setCovStatusInternal(item.covStatusInternal ?? CovStatus.Uncovered);
+      if (VACUITY_ROLE_VALUES.has(item.vacuity)) node.vacuity = item.vacuity as VacuityRole;
 
       this.addNode(node);
     }

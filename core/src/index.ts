@@ -1,14 +1,14 @@
-export { CovStatus, TokenType } from "./types.js";
+export { CovStatus, TokenType, VacuityRole } from "./types.js";
 export type { SourceLocation, NodeData } from "./types.js";
 export { ProofNode } from "./proof-node.js";
 export type { Roles, TopMeta } from "./proof-node.js";
 export { ProofGraph, formatDuration } from "./proof-graph.js";
 export { Proof, parseProof, analyzeReport } from "./proof.js";
 export { tokenTypeForKinds, nodeKindForTokenType } from "./node-kind.js";
-export { applyCoverage, applyCoverageInternal, applyCoverageSemantic, computeLineStatus, getNodesByLine } from "./coverage.js";
+export { applyCoverage, applyCoverageInternal, applyCoverageSemantic, applyCoverageVacuity, computeLineStatus, getNodesByLine } from "./coverage.js";
 export { serializeProofGraph, deserializeProofGraph } from "./serialization.js";
 export { generateSpansFragment, getDependsOn, getProvedBy, getProves } from "./rendering.js";
-export { generateTextReport } from "./report.js";
+export { generateTextReport, vacuityExplanation } from "./report.js";
 export type { ReportOptions } from "./report.js";
 export { buildSpanTree, computeSpanTreeLineStatus, computeLineStatusFromTree, minStatus, maxStatus } from "./span-tree.js";
 export type { SpanNode } from "./span-tree.js";
@@ -21,6 +21,7 @@ export {
   UnitKind,
   QueryOutcome,
   NodeKind,
+  Vacuity,
   PROOF_UNIT_KINDS,
   isCallKind,
 } from "./report/coverage-report.js";

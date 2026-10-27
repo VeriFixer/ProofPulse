@@ -1,0 +1,207 @@
+
+Dafny program verifier finished with 10 verified, 0 errors
+
+Results for IncVacuous (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.1368024
+  Overall resource count: 3176
+  Maximum assertion batch time: 00:00:00.1368024
+  Maximum assertion batch resource count: 3176
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.1368024
+    Resource count: 3176
+
+    Assertions:
+      test_vacuity.dfy(5,11)-(5,15): this postcondition holds
+
+    Proof dependencies:
+      test_vacuity.dfy(3,12)-(3,16): requires clause
+      test_vacuity.dfy(4,12)-(4,16): requires clause
+
+    Unused by proof:
+      test_vacuity.dfy(5,11)-(5,15): ensures clause
+      test_vacuity.dfy(7,3)-(7,13): assignment (or return)
+      test_vacuity.dfy(8,1)-(8,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for IncOk (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.1367960
+  Overall resource count: 3045
+  Maximum assertion batch time: 00:00:00.1367960
+  Maximum assertion batch resource count: 3045
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.1367960
+    Resource count: 3045
+
+    Assertions:
+      test_vacuity.dfy(13,11)-(13,15): this postcondition holds
+
+    Proof dependencies:
+      test_vacuity.dfy(13,11)-(13,15): ensures clause
+      test_vacuity.dfy(15,3)-(15,13): assignment (or return)
+
+    Unused by proof:
+      test_vacuity.dfy(12,12)-(12,16): requires clause
+      test_vacuity.dfy(16,1)-(16,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for AssumeFalse (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.1367729
+  Overall resource count: 3532
+  Maximum assertion batch time: 00:00:00.1367729
+  Maximum assertion batch resource count: 3532
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.1367729
+    Resource count: 3532
+
+    Assertions:
+      test_vacuity.dfy(20,11)-(20,20): this postcondition holds
+
+    Proof dependencies:
+      test_vacuity.dfy(22,19)-(22,24): assume statement
+
+    Unused by proof:
+      test_vacuity.dfy(20,11)-(20,20): ensures clause
+      test_vacuity.dfy(23,3)-(23,9): assignment (or return)
+      test_vacuity.dfy(24,1)-(24,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for DeadBranch (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.2964792
+  Overall resource count: 7191
+  Maximum assertion batch time: 00:00:00.1687096
+  Maximum assertion batch resource count: 4229
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.1687096
+    Resource count: 4229
+
+    Assertions:
+      test_vacuity.dfy(29,11)-(29,16): this postcondition holds
+
+    Proof dependencies:
+      test_vacuity.dfy(28,12)-(28,16): requires clause
+      test_vacuity.dfy(29,11)-(29,16): ensures clause
+      test_vacuity.dfy(35,5)-(35,11): assignment (or return)
+
+    Unused by proof:
+      test_vacuity.dfy(32,5)-(32,19): assertion always holds
+      test_vacuity.dfy(33,5)-(33,12): assignment (or return)
+      test_vacuity.dfy(37,1)-(37,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.1277696
+    Resource count: 2962
+
+    Assertions:
+      test_vacuity.dfy(32,5)-(32,19): assertion always holds
+
+    Proof dependencies:
+      test_vacuity.dfy(28,12)-(28,16): requires clause
+
+    Unused by proof:
+      test_vacuity.dfy(29,11)-(29,16): ensures clause
+      test_vacuity.dfy(32,5)-(32,19): assertion always holds
+      test_vacuity.dfy(33,5)-(33,12): assignment (or return)
+      test_vacuity.dfy(35,5)-(35,11): assignment (or return)
+      test_vacuity.dfy(37,1)-(37,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for MaxIsUpperBound (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.3719535
+  Overall resource count: 12114
+  Maximum assertion batch time: 00:00:00.1275128
+  Maximum assertion batch resource count: 4185
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.1275128
+    Resource count: 4069
+
+    Assertions:
+      test_vacuity.dfy(42,11)-(42,16): this postcondition holds
+
+    Proof dependencies:
+      test_vacuity.dfy(42,11)-(42,16): ensures clause
+      test_vacuity.dfy(45,5)-(45,17): assertion always holds
+
+    Unused by proof:
+      test_vacuity.dfy(41,12)-(41,40): requires clause
+      test_vacuity.dfy(42,21)-(42,26): ensures clause
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.1255683
+    Resource count: 4185
+
+    Assertions:
+      test_vacuity.dfy(42,21)-(42,26): this postcondition holds
+
+    Proof dependencies:
+      test_vacuity.dfy(42,21)-(42,26): ensures clause
+      test_vacuity.dfy(45,5)-(45,17): assertion always holds
+
+    Unused by proof:
+      test_vacuity.dfy(41,12)-(41,40): requires clause
+      test_vacuity.dfy(42,11)-(42,16): ensures clause
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.1188724
+    Resource count: 3860
+
+    Assertions:
+      test_vacuity.dfy(45,5)-(45,17): assertion always holds
+
+    Proof dependencies:
+      test_vacuity.dfy(41,12)-(41,40): requires clause
+
+    Unused by proof:
+      test_vacuity.dfy(42,11)-(42,16): ensures clause
+      test_vacuity.dfy(42,21)-(42,26): ensures clause
+      test_vacuity.dfy(45,5)-(45,17): assertion always holds
+
+Results for AbsNonNegative (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.0264490
+  Overall resource count: 7518
+  Maximum assertion batch time: 00:00:00.0133923
+  Maximum assertion batch resource count: 3905
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0130567
+    Resource count: 3905
+
+    Assertions:
+      test_vacuity.dfy(52,11)-(52,16): this postcondition holds
+
+    Proof dependencies:
+      test_vacuity.dfy(52,11)-(52,16): ensures clause
+      test_vacuity.dfy(55,5)-(55,35): assertion always holds
+
+    Unused by proof:
+      test_vacuity.dfy(51,12)-(51,41): requires clause
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0133923
+    Resource count: 3613
+
+    Assertions:
+      test_vacuity.dfy(55,5)-(55,35): assertion always holds
+
+    Proof dependencies:
+      test_vacuity.dfy(51,12)-(51,41): requires clause
+
+    Unused by proof:
+      test_vacuity.dfy(52,11)-(52,16): ensures clause
+      test_vacuity.dfy(55,5)-(55,35): assertion always holds

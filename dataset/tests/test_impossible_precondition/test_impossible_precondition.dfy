@@ -9,12 +9,12 @@ method DemoImpossiblePrecondition(a: int)
 }
 
 //::: Name - Impossible precondition makes postcondition vacuously true
-//::: Description - When precondition is unsatisfiable, postcondition is CovComplete (!) and body is Uncovered
+//::: Description - The unsatisfiable precondition proves the postcondition alone, so precondition, postcondition and body are Vacuous
 //::: L1 - CovComplete
 //::: L2 - CovComplete
-//::: L3 - CovComplete
-//::: L4 - CovTest
+//::: L3 - Vacuous
+//::: L4 - Vacuous
 //::: L5 - CovComplete
-//::: L6 - Uncovered
-//::: L7 - Uncovered
-//::: L8 - Uncovered
+//::: L6 - Vacuous
+//::: L7 - Vacuous
+//::: L8 - Vacuous

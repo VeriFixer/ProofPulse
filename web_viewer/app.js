@@ -120,7 +120,15 @@ function getNodeDisplayText(node, maxLen) {
 }
 
 /** Context-aware status explanation based on token type + coverage status */
-function statusExplanation(status, type) {
+function statusExplanation(status, type, vacuity) {
+  if (status === 'Vacuous') {
+    switch (vacuity) {
+      case 'goal': return 'Proved vacuously: the facts on its path contradict each other, so it was never really checked.';
+      case 'cause': return 'Part of a contradiction that makes a proof vacuous.';
+      case 'affected': return 'Only reached under contradictory facts: unreachable in every proof that sees it.';
+      default: return 'Takes part only in vacuous proofs.';
+    }
+  }
   if (status === 'Uncovered') {
     switch (type) {
       case 'Postcondition': return 'Postcondition not proven by any code path.';
@@ -144,6 +152,7 @@ function statusExplanation(status, type) {
 }
 
 function statusColor(status) {
+  if (status === 'Vacuous') return 'var(--color-vacuous-text)';
   if (status === 'Uncovered') return 'var(--color-uncovered-text)';
   if (status === 'CovTest') return 'var(--color-covtest-text)';
   return 'var(--color-covcomplete-text)';
@@ -261,7 +270,7 @@ function renderPanel(tokenEl, proof) {
       statusHtml += `<div class="token-card-row">${statusDot(internalStatus)} <strong>Internal:</strong> ${statusLabel(internalStatus)}</div>`;
     }
 
-    const explanation = statusExplanation(token.covStatus, token.type);
+    const explanation = statusExplanation(token.covStatus, token.type, token.vacuity);
     const proofMsg = cleanProoftext(token.prooftext);
 
     const usageCount = window.getUsageCount ? window.getUsageCount(id, proof) : 0;
