@@ -2,7 +2,7 @@
   "name": "proofpulse-vscode",
   "displayName": "ProofPulse",
   "description": "Dafny proof coverage analysis for VSCode — inline coverage decorations, scrollbar marks, and hover diagnostics for proof dependencies.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "publisher": "proofpulse",
   "icon": "media/icon.png",
   "galleryBanner": {
@@ -121,7 +121,7 @@
     }
   },
   "dependencies": {
-    "@proofpulse/core": "0.1.0"
+    "@proofpulse/core": "1.0.0"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",
