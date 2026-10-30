@@ -59,6 +59,8 @@ COPY tests/ ./tests/
 COPY dataset/ ./dataset/
 COPY dafny-synthesis/ ./dafny-synthesis/
 
-ENV DAFNY_TIMEOUT_SEC=120
+# Limit for one file's whole Dafny run. The heaviest test (test_complex_10)
+# takes about 55 s locally and up to 120 s on the shared CI runners.
+ENV DAFNY_TIMEOUT_SEC=240
 
 CMD ["npm", "test", "--", "--dafny-path", "/usr/local/bin/dafny", "--force-minimization", "--no-abstract-interpretation"]
