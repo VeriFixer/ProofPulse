@@ -6,6 +6,7 @@
  */
 import {
   COVERAGE_REPORT_SCHEMA,
+  NodeKind,
   CoverageReport,
   QueryOutcome,
   ReportNode,
@@ -18,7 +19,7 @@ import {
   isCallKind,
 } from "../../report/coverage-report.js";
 import type { ParsedBatch } from "./log-parser.js";
-import { dafnyMessageKind } from "./messages.js";
+import { dafnyMessageKind, isAssertStatement } from "./messages.js";
 
 /** Callee clause a call-site message points at. */
 enum ClauseKind {
@@ -95,6 +96,53 @@ function batchVacuity(batch: ParsedBatch, sourceLines: readonly string[] | undef
   return sourceLines && isIntentionalContradiction(sourceLines, goal) ? Vacuity.Intentional : Vacuity.Vacuous;
 }
 
+function locKey(l: Spanned): string {
+  return `${l.file}|${l.startLine},${l.startCol}-${l.endLine},${l.endCol}`;
+}
+
+function before(a: number, b: number, c: number, d: number): boolean {
+  return a < c || (a === c && b <= d);
+}
+
+/** `outer` contains `inner` (equal ranges count). */
+function contains(outer: Spanned, inner: Spanned): boolean {
+  return outer.file === inner.file
+    && before(outer.startLine, outer.startCol, inner.startLine, inner.startCol)
+    && before(inner.endLine, inner.endCol, outer.endLine, outer.endCol);
+}
+
+function rangeSize(l: Spanned): number {
+  return (l.endLine - l.startLine) * 100000 + (l.endCol - l.startCol);
+}
+
+/**
+ * The assertions each used assert statement stands for. Both ranges are the
+ * ranges of Dafny AST nodes, so an assertion belongs to the innermost assert
+ * statement whose range contains it (parentheses, split conjuncts and asserts
+ * nested in expressions included); no source text is read.
+ */
+function assertionsOfStatements(batches: readonly ParsedBatch[]): Map<string, Located[]> {
+  const statements = new Map<string, Located>();
+  const assertions = new Map<string, Located>();
+  for (const b of batches) {
+    for (const l of [b.topAssertion, ...b.provedBy, ...b.unusedBy]) {
+      if (isAssertStatement(l.proofText)) statements.set(locKey(l), l);
+      else if (dafnyMessageKind(l.proofText) === NodeKind.Assert) assertions.set(locKey(l), l);
+    }
+  }
+  const out = new Map<string, Located[]>();
+  for (const a of assertions.values()) {
+    let owner: Located | undefined;
+    for (const s of statements.values()) {
+      if (contains(s, a) && (!owner || rangeSize(s) < rangeSize(owner))) owner = s;
+    }
+    if (!owner) continue;
+    const list = out.get(locKey(owner));
+    if (list) list.push(a); else out.set(locKey(owner), [a]);
+  }
+  return out;
+}
+
 class ReportBuilder {
   private readonly sources = new Map<string, ReportSource>();
   private readonly nodes = new Map<string, ReportNode>();
@@ -162,6 +210,10 @@ class ReportBuilder {
 export function dafnyBatchesToReport(batches: readonly ParsedBatch[], info: DafnyReportInfo = {}): CoverageReport {
   const builder = new ReportBuilder();
   const sourceLines = info.sourceText?.split(/\r?\n/);
+  const statementAssertions = assertionsOfStatements(batches);
+  // A used (or unused) assert statement is its assertions, used (or unused).
+  const nodesOf = (locs: readonly Located[]): string[] => locs.flatMap((l) =>
+    (isAssertStatement(l.proofText) ? statementAssertions.get(locKey(l)) : undefined) ?? [l]).map((l) => builder.node(l));
   let unit: ReportUnit | undefined;
 
   for (const batch of batches) {
@@ -173,8 +225,8 @@ export function dafnyBatchesToReport(batches: readonly ParsedBatch[], info: Dafn
     // Node creation order mirrors the log: top, then each dependency (and its
     // callee clause), then each unused fact.
     const goal = builder.node(batch.topAssertion);
-    const used = batch.provedBy.map((p) => builder.node(p));
-    const unused = batch.unusedBy.map((p) => builder.node(p));
+    const used = nodesOf(batch.provedBy);
+    const unused = nodesOf(batch.unusedBy);
     const vacuity = batchVacuity(batch, sourceLines);
 
     unit.queries.push({

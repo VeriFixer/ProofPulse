@@ -29,12 +29,14 @@ const STATUS_RE = /(?:^|\n)(sat|unsat|unknown)\s*$/m;
 /**
  * Run z3 on a script string via temp file. Optional timeout in ms.
  * No default timeout — only applies when caller provides one.
- * Temp file deleted in finally block.
+ * Temp file deleted in finally block. `params` are extra z3 parameters
+ * (`name=value`).
  */
 export async function runZ3(
   z3Bin: string,
   scriptText: string,
-  timeoutMs?: number
+  timeoutMs?: number,
+  params: string[] = []
 ): Promise<Z3Result> {
   const tmpPath = join(
     tmpdir(),
@@ -44,7 +46,7 @@ export async function runZ3(
 
   try {
     return await new Promise<Z3Result>((resolve) => {
-      const child = spawn(z3Bin, ["-smt2", tmpPath], {
+      const child = spawn(z3Bin, [...params, "-smt2", tmpPath], {
         stdio: ["ignore", "pipe", "pipe"],
       });
 

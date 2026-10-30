@@ -90,7 +90,8 @@ function extractMethods(sourceCode: string): MethodBlock[] {
     let foundOpen = false;
     let endLine = lines.length;
     for (let j = i; j < lines.length; j++) {
-      for (const ch of lines[j]) {
+      // Attributes such as {:trigger F(x)} are not blocks
+      for (const ch of lines[j].replace(/\{:[^{}]*\}/g, "")) {
         if (ch === "{") { braceDepth++; foundOpen = true; }
         if (ch === "}") braceDepth--;
       }

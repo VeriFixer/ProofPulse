@@ -23,6 +23,6 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
     result := false ;
 }
 
-//::: Name - Quantifers trigger not tracked
-//::: Description - Some great finds (13,77) and some bugs
+//::: Name - Parenthesized assert used by a postcondition
+//::: Description - Dafny reports the use as an assert statement whose range includes the parentheses; the assertion inside it must be covered
 //::: L18 - CovComplete

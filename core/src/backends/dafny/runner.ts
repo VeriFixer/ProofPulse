@@ -4,10 +4,10 @@ import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { basename, dirname, isAbsolute, join, resolve } from "node:path";
 import { homedir, tmpdir, platform } from "node:os";
 import { RunStatus } from "../backend.js";
-import type { BackendOptions, MinimizerCommand } from "../backend.js";
+import type { BackendOptions } from "../backend.js";
 import { VerifierId } from "../../report/coverage-report.js";
 import { IS_MAC, IS_WIN, isExecutableFile, probeVersion, resolveExecutableInPath } from "../../util/executables.js";
-import { Z3Minimizer } from "../../minimization/z3-minimizer.js";
+import { Z3Minimizer, Z3WrapperEnv, Z3WrapperMode } from "../../minimization/z3-minimizer.js";
 import { DafnyMinimizationHook } from "./minimization-hook.js";
 import { assertNever } from "../../util/assert-never.js";
 
@@ -445,40 +445,55 @@ export async function runDafny(filePath: string, options: DafnyRunOptions = {}):
     baseArgs.push("--no-abstract-interpretation");
   }
 
-  // Normal run: Dafny's own solver unless one is configured.
-  const runArgs = options.solver?.path ? [...baseArgs, "--solver-path", options.solver.path] : baseArgs;
-
-  // Minimization run: Dafny spawns the minimizer in place of z3.
-  let minimization: { args: string[]; env: Record<string, string> } | undefined;
-
-  if (options.minimization) {
-    const solver = resolveMinimizationSolver(
-      dafnyBin,
-      dafnySource,
-      options.minimization.solver?.path ?? options.solver?.path,
-      log,
+  // Every run spawns the z3 wrapper in place of z3: it makes sure each unsat
+  // core proves its goal on its own (z3's core leaves out facts that only
+  // supplied a trigger term) and, for the minimization run, minimizes it.
+  const solver = resolveMinimizationSolver(
+    dafnyBin,
+    dafnySource,
+    options.minimization?.solver?.path ?? options.solver?.path,
+    log,
+  );
+  if (options.minimization && !solver) {
+    return failed(
+      "Z3 not found in PATH or in the official Dafny VS Code extension bundle. " +
+      "Set proofpulse.z3Path to the full path of your z3 executable.",
     );
-    if (!solver) {
-      return failed(
-        "Z3 not found in PATH or in the official Dafny VS Code extension bundle. " +
-        "Set proofpulse.z3Path to the full path of your z3 executable.",
-      );
-    }
+  }
 
-    let cmd: MinimizerCommand;
+  const debugLines: string[] = [];
+  const wrapped = async (mode: Z3WrapperMode, logFile: string): Promise<{ args: string[]; env: Record<string, string> }> => {
+    const cmd = await new Z3Minimizer().prepare(solver!.path, logFile, tmpDir, log);
+    const hooked = new DafnyMinimizationHook().apply(cmd);
+    debugLines.push(...cmd.debugInfo);
+    return { args: [...baseArgs, ...hooked.args], env: { ...hooked.env, [Z3WrapperEnv.Mode]: mode } };
+  };
+
+  // Normal run: the wrapper in check mode; without a z3 to wrap, Dafny's own solver.
+  let normal: { args: string[]; env?: Record<string, string> } = {
+    args: options.solver?.path ? [...baseArgs, "--solver-path", options.solver.path] : baseArgs,
+  };
+  if (solver) {
     try {
-      cmd = await new Z3Minimizer().prepare(
-        solver.path,
-        options.minimization.logFile ?? join(tmpDir, WRAPPER_LOG_FILE),
-        tmpDir,
-        log,
-      );
+      normal = await wrapped(Z3WrapperMode.Check, join(tmpDir, WRAPPER_LOG_FILE));
+    } catch (err) {
+      log(`[warn] z3 wrapper unavailable, cores are not checked: ${(err as Error).message}`);
+    }
+  } else {
+    log("[warn] z3 not found, cores are not checked: facts that only supply trigger terms may show as uncovered");
+  }
+
+  // Minimization run: the wrapper in minimize mode.
+  let minimization: { args: string[]; env: Record<string, string> } | undefined;
+  if (options.minimization) {
+    try {
+      minimization = await wrapped(Z3WrapperMode.Minimize, options.minimization.logFile ?? join(tmpDir, WRAPPER_LOG_FILE));
     } catch (err) {
       return failed((err as Error).message);
     }
-    const hooked = new DafnyMinimizationHook().apply(cmd);
-    minimization = { args: [...baseArgs, ...hooked.args], env: hooked.env };
+  }
 
+  if (solver) {
     // Persist debug info for post-mortem
     const debugInfo = [
       `platform: ${platform()}`,
@@ -486,7 +501,7 @@ export async function runDafny(filePath: string, options: DafnyRunOptions = {}):
       `dafnyVersion: ${dafnyVersion ?? "unknown"}`,
       `z3Path: ${solver.path} (source: ${solver.source})`,
       `z3Version: ${solver.version ?? "unknown"}`,
-      ...cmd.debugInfo,
+      ...debugLines,
     ].join("\n");
     await writeFile(join(tmpDir, DEBUG_INFO_FILE), debugInfo, "utf8").catch(() => {});
   }
@@ -496,8 +511,8 @@ export async function runDafny(filePath: string, options: DafnyRunOptions = {}):
   try {
     // Two-phase progressive run: Phase_1 (normal) → callback → Phase_2 (minimization)
     if (minimization && options.onPreliminaryResult) {
-      log(`[info] Phase_1 (normal): ${dafnyBin} ${runArgs.join(" ")}`);
-      const phase1 = await spawnDafny(dafnyBin, runArgs, tmpDir, timeoutSec, undefined, options.signal);
+      log(`[info] Phase_1 (normal): ${dafnyBin} ${normal.args.join(" ")}`);
+      const phase1 = await spawnDafny(dafnyBin, normal.args, tmpDir, timeoutSec, normal.env, options.signal);
       // Phase 1 errors are reported without minimization debug context.
       const phase1Result = await collectResult(phase1, tmpDir, "");
       if (phase1Result.status !== RunStatus.Completed) {
@@ -529,10 +544,10 @@ export async function runDafny(filePath: string, options: DafnyRunOptions = {}):
     }
 
     // Single-phase run (minimized when configured)
-    const args = minimization?.args ?? runArgs;
-    log(`[info] Spawning: ${dafnyBin} ${args.join(" ")}`);
-    const result = await spawnDafny(dafnyBin, args, tmpDir, timeoutSec, minimization?.env, options.signal);
-    const debugContext = await readDebugContext({ wrapperLogDir: minimization ? tmpDir : undefined, debugInfoDir: tmpDir });
+    const run = minimization ?? normal;
+    log(`[info] Spawning: ${dafnyBin} ${run.args.join(" ")}`);
+    const result = await spawnDafny(dafnyBin, run.args, tmpDir, timeoutSec, run.env, options.signal);
+    const debugContext = await readDebugContext({ wrapperLogDir: run.env ? tmpDir : undefined, debugInfoDir: tmpDir });
     return withVersion(await collectResult(result, tmpDir, debugContext));
   } finally {
     rm(tmpDir, { recursive: true, force: true }).catch(() => {});

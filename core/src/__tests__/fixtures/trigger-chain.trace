@@ -1,0 +1,195 @@
+[tool-version] Z3 4.12.1
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #3 pi
+[mk-app] #4 euler
+[mk-var] datatype#0 0
+[mk-var] datatype#1 1
+[mk-app] datatype#2 insert datatype#0 datatype#1
+[mk-app] datatype#3 pattern datatype#2
+[mk-app] datatype#4 head datatype#2
+[mk-app] datatype#5 = datatype#0 datatype#4
+[mk-quant] datatype#6 constructor_accessor_axiom 2 datatype#3 datatype#5
+[attach-var-names] datatype#6 (;k!0) (;List)
+[mk-app] datatype#7 tail datatype#2
+[mk-app] datatype#8 = datatype#1 datatype#7
+[mk-quant] datatype#9 constructor_accessor_axiom 2 datatype#3 datatype#8
+[attach-var-names] datatype#9 (;k!0) (;List)
+[mk-app] #5 bv
+[attach-meaning] #5 bv #b1
+[mk-app] #6 bv
+[attach-meaning] #6 bv #b0
+[attach-meaning] #5 bv #b1
+[attach-meaning] #6 bv #b0
+[attach-meaning] #6 bv #b0
+[mk-var] #7 0
+[mk-var] #8 1
+[mk-var] #9 2
+[mk-var] #10 3
+[mk-var] #11 4
+[mk-var] #12 5
+[mk-var] #13 6
+[mk-var] #14 7
+[mk-var] #15 8
+[mk-var] #16 9
+[mk-var] #17 10
+[mk-var] #18 11
+[mk-var] #19 12
+[mk-var] #20 13
+[mk-var] #21 14
+[mk-app] #22 + #15 #13
+[attach-enode] #1 0
+[attach-enode] #2 0
+[mk-app] #23 id1
+[mk-app] #24 aux$$id1
+[mk-app] #25 => #24 #23
+[mk-app] #26 not #24
+[mk-app] #27 or #23 #26
+[inst-discovered] theory-solving 0 basic# ; #25
+[mk-app] #28 = #25 #27
+[instance] 0 #28
+[attach-enode] #28 0
+[end-of-instance]
+[mk-var] #28 0
+[mk-app] #29 f #28
+[mk-app] #30 Q #29
+[mk-app] #31 g #28
+[mk-app] #32 pattern #31
+[mk-quant] #33 k!14 1 #32 #30
+[attach-var-names] #33 (|x| ; |Int|)
+[mk-app] #34 => #23 #33
+[mk-app] #35 not #23
+[mk-app] #36 or #35 #33
+[inst-discovered] theory-solving 0 basic# ; #34
+[mk-app] #37 = #34 #36
+[instance] 0 #37
+[attach-enode] #37 0
+[end-of-instance]
+[mk-app] #37 id2
+[mk-app] #38 aux$$id2
+[mk-app] #39 => #38 #37
+[mk-app] #40 not #38
+[mk-app] #41 or #37 #40
+[inst-discovered] theory-solving 0 basic# ; #39
+[mk-app] #42 = #39 #41
+[instance] 0 #42
+[attach-enode] #42 0
+[end-of-instance]
+[mk-app] #42 R #28
+[mk-app] #43 pattern #29
+[mk-quant] #44 k!16 1 #43 #42
+[attach-var-names] #44 (|y| ; |Int|)
+[mk-app] #45 => #37 #44
+[mk-app] #46 not #37
+[mk-app] #47 or #46 #44
+[inst-discovered] theory-solving 0 basic# ; #45
+[mk-app] #48 = #45 #47
+[instance] 0 #48
+[attach-enode] #48 0
+[end-of-instance]
+[mk-app] #48 id3
+[mk-app] #49 aux$$id3
+[mk-app] #50 => #49 #48
+[mk-app] #51 not #49
+[mk-app] #52 or #48 #51
+[inst-discovered] theory-solving 0 basic# ; #50
+[mk-app] #53 = #50 #52
+[instance] 0 #53
+[attach-enode] #53 0
+[end-of-instance]
+[mk-app] #53 a
+[mk-app] #54 g #53
+[mk-app] #55 Int
+[attach-meaning] #55 arith 0
+[mk-app] #56 > #54 #55
+[mk-app] #57 => #48 #56
+[mk-app] #58 <= #54 #55
+[mk-app] #59 not #58
+[inst-discovered] theory-solving 0 arith# ; #56
+[mk-app] #60 = #56 #59
+[instance] 0 #60
+[attach-enode] #60 0
+[end-of-instance]
+[mk-app] #60 not #48
+[mk-app] #61 or #60 #59
+[mk-app] #62 => #48 #59
+[inst-discovered] theory-solving 0 basic# ; #62
+[mk-app] #63 = #62 #61
+[instance] 0 #63
+[attach-enode] #63 0
+[end-of-instance]
+[mk-app] #62 id4
+[mk-app] #63 aux$$id4
+[mk-app] #64 => #63 #62
+[mk-app] #65 not #63
+[mk-app] #66 or #62 #65
+[inst-discovered] theory-solving 0 basic# ; #64
+[mk-app] #67 = #64 #66
+[instance] 0 #67
+[attach-enode] #67 0
+[end-of-instance]
+[mk-app] #67 Int
+[attach-meaning] #67 arith 7
+[mk-app] #68 Q #67
+[mk-app] #69 => #62 #68
+[mk-app] #70 not #62
+[mk-app] #71 or #68 #70
+[inst-discovered] theory-solving 0 basic# ; #69
+[mk-app] #72 = #69 #71
+[instance] 0 #72
+[attach-enode] #72 0
+[end-of-instance]
+[mk-app] #72 R #53
+[mk-app] #73 not #72
+[begin-check] 0
+[mk-app] #74 Int
+[attach-meaning] #74 arith 1
+[attach-enode] #74 0
+[mk-app] #75 Real
+[attach-meaning] #75 arith 1
+[attach-enode] #75 0
+[attach-enode] #55 0
+[mk-app] #76 Real
+[attach-meaning] #76 arith 0
+[attach-enode] #76 0
+[attach-enode] #53 0
+[attach-enode] #54 0
+[attach-enode] #67 0
+[attach-enode] #68 0
+[attach-enode] #72 0
+[assign] (not #72) justification -1: 
+[push] 0
+[assign] #24 justification -1: 
+[assign] #38 justification -1: 
+[assign] #49 justification -1: 
+[assign] #63 justification -1: 
+[assign] #23 bin 2
+[assign] #37 bin 5
+[assign] #48 bin 8
+[assign] #62 bin 11
+[assign] #33 bin 1
+[assign] #44 bin 4
+[assign] (not #58) bin 7
+[assign] #68 bin 10
+[eq-expl] #53 root
+[new-match] 0x558e1027cf08 #33 #32 #53 ; #54
+[mk-app] #77 f #53
+[mk-app] #78 Q #77
+[mk-app] #79 not #33
+[mk-app] #80 or #79 #78
+[instance] 0x558e1027cf08 ; 1
+[attach-enode] #77 1
+[attach-enode] #78 1
+[assign] #78 justification -1: 3
+[end-of-instance]
+[new-match] 0x558e1027d068 #44 #43 #53 ; #77
+[mk-app] #81 not #44
+[mk-app] #82 or #81 #72
+[instance] 0x558e1027d068 ; 2
+[end-of-instance]
+[pop] 1 1
+[mk-app] #3 string
+[mk-app] #4 string
+[eof]

@@ -9431,19 +9431,103 @@ class Secret{
 //::       - assertion always holds
 //::       - assertion always holds
 //::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
 //::     roles:
 //::       isTop: true
 //::       isCall: false
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 57
 //::       batchOutcome: Valid
 //::       batchResourceCount: 36976
 //::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
 //::     file: snapshot_test_complex_7.dfy
 //::     start:
@@ -9540,123 +9624,102 @@ class Secret{
 //::       - assertion always holds
 //::       - assertion always holds
 //::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
 //::     roles:
 //::       isTop: true
 //::       isCall: false
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 58
 //::       batchOutcome: Valid
 //::       batchResourceCount: 37028
 //::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
-//::     file: snapshot_test_complex_7.dfy
-//::     start:
-//::       line: 27
-//::       col: 11
-//::     end:
-//::       line: 27
-//::       col: 34
-//::     methodName: Q1
-//::     methodType: correctness
-//::     prooftexts:
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: CodeLine
-//::     usedByNumber: 1
-//::     topMeta: null
-//::     covStatus: CovTest
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::     file: snapshot_test_complex_7.dfy
@@ -12370,6 +12433,25 @@ class Secret{
 //::       - assertion always holds
 //::       - assertion always holds
 //::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
 //::     roles:
 //::       isTop: true
 //::       isCall: false
@@ -12414,6 +12496,25 @@ class Secret{
 //::       - assertion always holds
 //::       - assertion always holds
 //::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
 //::     roles:
 //::       isTop: true
 //::       isCall: false
@@ -12425,46 +12526,6 @@ class Secret{
 //::       batchIndex: 6
 //::       batchOutcome: Valid
 //::       batchResourceCount: 13642
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
-//::     file: snapshot_test_complex_7.dfy
-//::     start:
-//::       line: 77
-//::       col: 15
-//::     end:
-//::       line: 77
-//::       col: 44
-//::     methodName: Secret.Main
-//::     methodType: correctness
-//::     prooftexts:
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: CodeLine
-//::     usedByNumber: 0
-//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
@@ -12874,19 +12935,38 @@ class Secret{
 //::       - assertion always holds
 //::       - assertion always holds
 //::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
 //::     roles:
 //::       isTop: true
 //::       isCall: false
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
 //::       batchResourceCount: 19806
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
+//::     covStatus: CovTest
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
 //::     file: snapshot_test_complex_7.dfy
 //::     start:
@@ -12918,57 +12998,36 @@ class Secret{
 //::       - assertion always holds
 //::       - assertion always holds
 //::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
 //::     roles:
 //::       isTop: true
 //::       isCall: false
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
 //::       batchResourceCount: 17834
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
-//::     file: snapshot_test_complex_7.dfy
-//::     start:
-//::       line: 81
-//::       col: 15
-//::     end:
-//::       line: 81
-//::       col: 36
-//::     methodName: Secret.Main
-//::     methodType: correctness
-//::     prooftexts:
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: true
-//::       isUnused: true
-//::     type: CodeLine
-//::     usedByNumber: 1
-//::     topMeta: null
 //::     covStatus: CovTest
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
@@ -13209,6 +13268,25 @@ class Secret{
 //::       - assertion always holds
 //::       - assertion always holds
 //::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
 //::     roles:
 //::       isTop: true
 //::       isCall: false
@@ -13253,6 +13331,25 @@ class Secret{
 //::       - assertion always holds
 //::       - assertion always holds
 //::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
+//::       - assertion always holds
 //::     roles:
 //::       isTop: true
 //::       isCall: false
@@ -13264,46 +13361,6 @@ class Secret{
 //::       batchIndex: 18
 //::       batchOutcome: Valid
 //::       batchResourceCount: 21724
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
-//::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
-//::     file: snapshot_test_complex_7.dfy
-//::     start:
-//::       line: 85
-//::       col: 15
-//::     end:
-//::       line: 85
-//::       col: 35
-//::     methodName: Secret.Main
-//::     methodType: correctness
-//::     prooftexts:
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::       - assert statement
-//::     roles:
-//::       isTop: false
-//::       isCall: false
-//::       isProvedBy: false
-//::       isUnused: true
-//::     type: CodeLine
-//::     usedByNumber: 0
-//::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Main|correctness|42,14-42,19
@@ -13709,7 +13766,8 @@ class Secret{
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|28,5-28,81
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|4,35-4,38
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
 //::     - top: snapshot_test_complex_7.dfy|Q1|correctness|31,54-31,56
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|6,5-6,5
@@ -13800,7 +13858,8 @@ class Secret{
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
+//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
+//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::       provers:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -13861,7 +13920,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -13925,7 +13983,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -13990,7 +14047,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14054,7 +14110,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14119,7 +14174,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14184,7 +14238,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14249,7 +14302,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14314,7 +14366,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14379,7 +14430,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14444,7 +14494,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14509,7 +14558,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14574,7 +14622,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14639,7 +14686,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14705,7 +14751,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14769,7 +14814,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14834,7 +14878,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14898,7 +14941,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -14963,7 +15005,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15028,7 +15069,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15093,7 +15133,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15158,7 +15197,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15222,7 +15260,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15284,7 +15321,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15348,7 +15384,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15412,7 +15447,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15476,7 +15510,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15540,7 +15573,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15604,7 +15636,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15669,7 +15700,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15731,7 +15761,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15795,7 +15824,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15860,7 +15888,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15923,7 +15950,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -15987,7 +16013,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -16051,7 +16076,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -16116,7 +16140,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -16180,7 +16203,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -16244,7 +16266,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -16309,7 +16330,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -16373,7 +16393,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -16438,7 +16457,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,25
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -16501,7 +16519,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,25
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -16564,7 +16582,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,25
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
+//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -16629,7 +16647,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,71-28,71
@@ -16693,7 +16710,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,71-28,71
@@ -16758,7 +16774,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,71-28,71
@@ -16823,7 +16838,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,71-28,74
@@ -16887,7 +16901,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17015,7 +17028,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17079,7 +17091,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17144,7 +17155,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17209,7 +17219,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17273,7 +17282,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17338,7 +17346,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17402,7 +17409,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17466,7 +17472,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,28
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,12-27,20
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|27,25-27,33
-//::         - snapshot_test_complex_7.dfy|Q1|correctness|27,11-27,34
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,46-28,48
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,58
 //::         - snapshot_test_complex_7.dfy|Q1|correctness|28,58-28,61
@@ -17676,7 +17681,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
@@ -17684,12 +17688,10 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -17697,7 +17699,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
@@ -17705,19 +17706,17 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
+//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
@@ -17725,19 +17724,17 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
+//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
@@ -17745,12 +17742,10 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -17758,19 +17753,16 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,21-79,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -17778,19 +17770,16 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,21-79,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|79,21-79,21
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -17798,7 +17787,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
@@ -17806,12 +17794,10 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -17819,7 +17805,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
@@ -17827,12 +17812,10 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -17840,19 +17823,17 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,21-79,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
+//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -17860,19 +17841,17 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,21-79,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
+//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -17880,7 +17859,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
@@ -17888,12 +17866,10 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -17901,7 +17877,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
@@ -17909,12 +17884,10 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -17922,7 +17895,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
@@ -17930,11 +17902,10 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
+//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
 //::     - top: snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
@@ -17942,7 +17913,6 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,16-77,32
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,21-77,42
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|77,15-77,44
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,16-78,27
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|78,9-78,39
@@ -17950,11 +17920,10 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|79,13-79,40
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,16-81,21
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,30-81,35
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|81,15-81,36
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,16-83,16
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|83,9-83,35
 //::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,16-85,21
-//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,15-85,35
+//::         - snapshot_test_complex_7.dfy|Secret.Main|correctness|85,29-85,34
 //::   connections:
 //::     - call: snapshot_test_complex_7.dfy|Secret.Main|correctness|76,13-76,54
 //::       targets:

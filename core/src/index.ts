@@ -57,7 +57,7 @@ export type {
   ToolInfo,
 } from "./backends/backend.js";
 export { BackendRegistry, createDefaultRegistry } from "./backends/registry.js";
-export { Z3Minimizer, Z3WrapperEnv } from "./minimization/z3-minimizer.js";
+export { Z3Minimizer, Z3WrapperEnv, Z3WrapperMode } from "./minimization/z3-minimizer.js";
 export { assertNever } from "./util/assert-never.js";
 
 // Dafny backend

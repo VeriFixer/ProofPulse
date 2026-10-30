@@ -3,7 +3,8 @@
  * Port of Python z3-minimizer-wrapper.py.
  *
  * Proxies stdin/stdout to real z3, intercepts check-sat + get-unsat-core
- * sequences to perform unsat-core minimization.
+ * sequences to make sure each core proves its goal on its own and, in
+ * minimize mode, to minimize it.
  */
 
 import { spawn, execFileSync } from "node:child_process";
@@ -17,8 +18,8 @@ import {
   SmtCommand,
   SMT_QUERY_COMMANDS as QUERY_COMMANDS,
 } from "./smt2-parser.js";
-import { minimizeCoreForBlock } from "./minimizer.js";
-import { Z3WrapperEnv } from "./env.js";
+import { CoreCheck, minimizeCoreForBlock, sufficientCore } from "./minimizer.js";
+import { Z3WrapperEnv, Z3WrapperMode } from "./env.js";
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -33,6 +34,7 @@ const SENTINEL = "__PP_SENTINEL__";
 
 const Z3_PATH = process.env[Z3WrapperEnv.SolverPath] || "z3";
 const LOG_FILE = process.env[Z3WrapperEnv.LogFile] || "";
+const MODE = process.env[Z3WrapperEnv.Mode] === Z3WrapperMode.Check ? Z3WrapperMode.Check : Z3WrapperMode.Minimize;
 
 function log(msg: string): void {
   if (LOG_FILE) {
@@ -249,7 +251,6 @@ export async function main(): Promise<number> {
         const coreResp = await forwardToZ3(raw);
         log(`get-unsat-core response: ${coreResp.slice(0, 200)}`);
 
-        // Try to minimize
         try {
           const ctx = currentContext(frames);
           const queryBlock: Command[] = [lastCheckSatCmd, cmd];
@@ -263,24 +264,27 @@ export async function main(): Promise<number> {
           }
 
           if (initialCore.length > 0) {
-            // Do NOT pass Boogie's per-query timeout to minimization.
-            // Minimization spawns fresh z3 on full context — needs more time.
+            // Do NOT pass Boogie's per-query timeout to the re-runs.
+            // They spawn fresh z3 on the full context — need more time.
             // Passing the tight Boogie timeout causes all trials to time out,
             // making every label appear "required" (no minimization).
-            const minimized = await minimizeCoreForBlock(
-              Z3_PATH,
-              ctx,
-              queryBlock,
-              initialCore,
-              undefined
-            );
-            emit("(" + minimized.join(" ") + ")");
-            log(`minimized core: ${initialCore.length} -> ${minimized.length}`);
+            const checked = await sufficientCore(Z3_PATH, ctx, queryBlock, initialCore, undefined);
+            if (checked.check === CoreCheck.Trace) {
+              log(`core does not prove the goal alone, added facts that supplied trigger terms: ${initialCore.join(" ")} -> ${checked.core.join(" ")}`);
+            } else if (checked.check === CoreCheck.AllFacts) {
+              log(`core does not prove the goal alone, keeping all ${checked.core.length} facts: ${initialCore.join(" ")}`);
+            }
+            let core = checked.core;
+            if (MODE === Z3WrapperMode.Minimize) {
+              core = await minimizeCoreForBlock(Z3_PATH, ctx, queryBlock, core, undefined);
+              log(`minimized core: ${checked.core.length} -> ${core.length}`);
+            }
+            emit("(" + core.join(" ") + ")");
           } else {
             emit(coreResp);
           }
         } catch (e: unknown) {
-          log(`minimization failed, passing through: ${e}`);
+          log(`core check failed, passing through: ${e}`);
           emit(coreResp);
         }
         continue;
