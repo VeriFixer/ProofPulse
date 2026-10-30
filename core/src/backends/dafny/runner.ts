@@ -444,6 +444,9 @@ export async function runDafny(filePath: string, options: DafnyRunOptions = {}):
   if (dafnyOptions?.noAbstractInterpretation) {
     baseArgs.push("--no-abstract-interpretation");
   }
+  if (dafnyOptions?.cores) {
+    baseArgs.push("--cores", String(dafnyOptions.cores));
+  }
 
   // Every run spawns the z3 wrapper in place of z3: it makes sure each unsat
   // core proves its goal on its own (z3's core leaves out facts that only

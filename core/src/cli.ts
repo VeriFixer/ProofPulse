@@ -10,6 +10,7 @@
  *   --dafny-path <path>   Path to Dafny binary (default: "dafny")
  *   --minimize            Enable unsat core minimization
  *   --no-abstract-interpretation  Disable abstract interpretation
+ *   --cores <n>           Solver processes Dafny runs in parallel (default: Dafny's, half the cores)
  *   --timeout <seconds>   Verification timeout (default: 60)
  *   --report <path>       Analyze a saved coverage report instead of running the verifier
  *   --emit-report <path>  Write the coverage report of this run (.json → JSON, else YAML)
@@ -49,6 +50,7 @@ Options:
   --dafny-path <path>   Path to Dafny binary (default: "dafny")
   --minimize            Enable unsat core minimization
   --no-abstract-interpretation  Disable abstract interpretation
+  --cores <n>           Solver processes Dafny runs in parallel (default: Dafny's, half the cores)
   --timeout <seconds>   Verification timeout (default: 60)
   --report <path>       Analyze a saved coverage report (YAML/JSON) instead of running the verifier
   --emit-report <path>  Write the coverage report of this run (.json → JSON, otherwise YAML)
@@ -78,6 +80,7 @@ async function main() {
   let dafnyPath = DEFAULT_DAFNY_COMMAND;
   let minimize = false;
   let noAbstractInterpretation = false;
+  let cores: number | undefined;
   let timeout = 60;
   let logMode = LogMode.None;
   let showImplicit = false;
@@ -101,6 +104,10 @@ async function main() {
         break;
       case "--no-abstract-interpretation":
         noAbstractInterpretation = true;
+        break;
+      case "--cores":
+        cores = parseInt(args[++i], 10);
+        if (!(cores >= 1)) fail("Error: --cores needs a positive number");
         break;
       case "--timeout":
         timeout = parseInt(args[++i], 10);
@@ -154,7 +161,7 @@ async function main() {
       timeoutSeconds: timeout,
       ...(minimize ? { minimization: {} } : {}),
       ...(backend.id === VerifierId.Dafny
-        ? { backendOptions: { backend: VerifierId.Dafny, noAbstractInterpretation } }
+        ? { backendOptions: { backend: VerifierId.Dafny, noAbstractInterpretation, cores } }
         : {}),
     };
     const run = await backend.run(filePath, options);
