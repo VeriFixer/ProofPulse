@@ -1,4 +1,3 @@
-import * as path from "node:path";
 import * as vscode from "vscode";
 import { assertNever, CovStatus, flaggedExpressions, ProofNode, spanEndCol, TokenType, vacuityExplanation } from "@proofpulse/core";
 
@@ -70,7 +69,7 @@ const STATUS_ICON: Record<CovStatus, string> = {
   [CovStatus.CovComplete]: "",
 };
 
-/** Worst first: decides the gutter mark of a line with several flagged expressions. */
+/** Worst first: decides the ruler mark of a line with several flagged expressions. */
 const SEVERITY: Record<CovStatus, number> = {
   [CovStatus.Vacuous]: 0,
   [CovStatus.Uncovered]: 1,
@@ -79,11 +78,12 @@ const SEVERITY: Record<CovStatus, number> = {
 };
 
 /**
- * Gutter types mark the line (gutter icon + overview ruler) so flagged lines
- * stay easy to find while scrolling; inline types colour only the flagged
- * expression.
+ * Line types mark the line on the overview ruler (no gutter icon, which would
+ * clash with the Dafny extension's gutter) so flagged lines stay easy to find
+ * while scrolling, and carry the per-line hover; inline types colour only the
+ * flagged expression.
  */
-export function createDecorationTypes(opacity: number, extensionPath: string): DecorationTypes {
+export function createDecorationTypes(opacity: number): DecorationTypes {
   const inline = (rgb: string): vscode.DecorationRenderOptions => ({
     backgroundColor: `rgba(${rgb}, ${opacity})`,
     border: `1px solid rgba(${rgb}, 0.55)`,
@@ -93,20 +93,14 @@ export function createDecorationTypes(opacity: number, extensionPath: string): D
     uncoveredGutter: vscode.window.createTextEditorDecorationType({
       overviewRulerColor: "rgba(255, 0, 0, 0.6)",
       overviewRulerLane: vscode.OverviewRulerLane.Left,
-      gutterIconPath: path.join(extensionPath, "media", "gutter-uncovered.svg"),
-      gutterIconSize: "contain",
     }),
     covTestGutter: vscode.window.createTextEditorDecorationType({
       overviewRulerColor: "rgba(255, 200, 0, 0.6)",
       overviewRulerLane: vscode.OverviewRulerLane.Left,
-      gutterIconPath: path.join(extensionPath, "media", "gutter-covtest.svg"),
-      gutterIconSize: "contain",
     }),
     vacuousGutter: vscode.window.createTextEditorDecorationType({
       overviewRulerColor: "rgba(150, 80, 255, 0.8)",
       overviewRulerLane: vscode.OverviewRulerLane.Left,
-      gutterIconPath: path.join(extensionPath, "media", "gutter-vacuous.svg"),
-      gutterIconSize: "contain",
     }),
     uncoveredInline: vscode.window.createTextEditorDecorationType(inline("255, 0, 0")),
     covTestInline: vscode.window.createTextEditorDecorationType(inline("255, 200, 0")),
@@ -121,12 +115,11 @@ export function applyDecorations(
   editor: vscode.TextEditor,
   nodes: ProofNode[],
   opacity: number,
-  extensionPath: string,
   showImplicitChecks = false,
 ): void {
   // Dispose old decoration types before creating fresh ones
   disposeCurrentTypes();
-  const types = createDecorationTypes(opacity, extensionPath);
+  const types = createDecorationTypes(opacity);
   currentTypes = types;
 
   const doc = editor.document;

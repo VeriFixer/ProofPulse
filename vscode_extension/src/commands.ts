@@ -98,7 +98,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
           onPreliminaryResult: (prelim) => {
             if (!isSessionCurrent(session) || prelim.status !== RunStatus.Completed || !prelim.report) return;
             const proof = analyzeReport(sourceCode, prelim.report);
-            applyDecorations(editor, proof.proofGraph.getAllNodes(), getDecorationOpacity(), context.extensionPath, getShowImplicitChecks());
+            applyDecorations(editor, proof.proofGraph.getAllNodes(), getDecorationOpacity(), getShowImplicitChecks());
             logInfo(`Applied preliminary decorations: ${proof.lineStatus.length} lines`);
             showStatusBar(`${backend.displayName} — Preliminary ✓ — Minimizing...`);
           },
@@ -139,7 +139,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
         }
 
         const proof = analyzeReport(sourceCode, result.report!);
-        applyDecorations(editor, proof.proofGraph.getAllNodes(), getDecorationOpacity(), context.extensionPath, getShowImplicitChecks());
+        applyDecorations(editor, proof.proofGraph.getAllNodes(), getDecorationOpacity(), getShowImplicitChecks());
         logInfo(`Applied decorations: ${proof.lineStatus.length} lines`);
         hideStatusBar();
 

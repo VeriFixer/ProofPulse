@@ -1,9 +1,14 @@
 {
   "name": "proofpulse-vscode",
   "displayName": "ProofPulse",
-  "description": "Dafny proof coverage analysis for VSCode — inline coverage decorations, gutter marks, and hover diagnostics for proof dependencies.",
+  "description": "Dafny proof coverage analysis for VSCode — inline coverage decorations, scrollbar marks, and hover diagnostics for proof dependencies.",
   "version": "0.1.0",
   "publisher": "proofpulse",
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#0f1a2e",
+    "theme": "dark"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
