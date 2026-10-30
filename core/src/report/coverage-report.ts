@@ -77,6 +77,8 @@ export enum NodeKind {
   Lemma = "lemma",
   /** Ordinary code (assignments, statements). */
   Code = "code",
+  /** One atom of an if/while condition (a sub-expression that is not &&, ||, ==>, <==> or !). */
+  Condition = "condition",
   Other = "other",
 }
 

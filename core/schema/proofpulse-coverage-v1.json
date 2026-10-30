@@ -83,7 +83,7 @@
           "type": "string",
           "examples": [
             "precondition", "postcondition", "assert", "implicit-check", "assume", "invariant",
-            "call-requires", "call-ensures", "axiom", "lemma", "code", "other"
+            "call-requires", "call-ensures", "axiom", "lemma", "code", "condition", "other"
           ]
         },
         "span": { "$ref": "#/$defs/span" },

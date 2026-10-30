@@ -37,6 +37,7 @@ export const DAFNY_MESSAGE_RULES: readonly MessageRule[] = [
   rule("loop invariant is maintained by the loop", NodeKind.Invariant),
   rule("loop invariant always holds", NodeKind.Invariant),
   rule("loop invariant", NodeKind.Invariant, MessageMatch.Equals),
+  rule("condition atom", NodeKind.Condition, MessageMatch.Equals),
   rule("index in range", NodeKind.ImplicitCheck),
   rule("target object is never null", NodeKind.ImplicitCheck),
   rule("array is never null", NodeKind.ImplicitCheck),

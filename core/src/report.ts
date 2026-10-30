@@ -23,6 +23,7 @@ function typeLabel(type: TokenType): string {
     case TokenType.AssertionManual: return "AssertionManual";
     case TokenType.AssertionAutomatic: return "AssertionAutomatic";
     case TokenType.CodeLine: return "CodeLine";
+    case TokenType.Condition: return "Condition";
     case TokenType.Call: return "Call";
     default: return "Unknown";
   }
@@ -47,6 +48,7 @@ function statusExplanation(status: CovStatus, type: TokenType, role?: VacuityRol
       case TokenType.AssertionManual: return "Manual assertion not covered by proof dependencies.";
       case TokenType.LoopInvariant: return "Loop invariant not covered by proof dependencies.";
       case TokenType.CodeLine: return "Code line not contributing to any proof obligation.";
+      case TokenType.Condition: return "The proof holds whichever way this condition part evaluates: it decides behaviour the contract leaves open.";
       default: return "Not covered by any proof path.";
     }
   }
@@ -55,6 +57,7 @@ function statusExplanation(status: CovStatus, type: TokenType, role?: VacuityRol
       case TokenType.Postcondition: return "Postcondition not used in calling code — only in test assertions.";
       case TokenType.Precondition: return "Precondition only used in calling tests, unnecessary to prove postconditions.";
       case TokenType.CodeLine: return "Code used only by test assertions, not by postcondition proofs.";
+      case TokenType.Condition: return "Condition part used only by test assertions, not by postcondition proofs.";
       case TokenType.LoopInvariant: return "Loop invariant covered only by test paths, not postcondition proofs.";
       case TokenType.AssertionManual: return "Assertion covered only by test paths, not postcondition proofs.";
       default: return "Covered only by test/non-postcondition assertions.";

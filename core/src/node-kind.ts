@@ -13,6 +13,7 @@ const KIND_TOKEN_TYPES: Readonly<Record<NodeKind, TokenType>> = {
   [NodeKind.Axiom]: TokenType.Axiom,
   [NodeKind.Lemma]: TokenType.Lemma,
   [NodeKind.Code]: TokenType.CodeLine,
+  [NodeKind.Condition]: TokenType.Condition,
   [NodeKind.Other]: TokenType.CodeLine,
 };
 
@@ -41,6 +42,7 @@ const TOKEN_TYPE_KINDS: Readonly<Record<TokenType, NodeKind>> = {
   [TokenType.LoopInvariant]: NodeKind.Invariant,
   [TokenType.Call]: NodeKind.CallEnsures,
   [TokenType.CodeLine]: NodeKind.Code,
+  [TokenType.Condition]: NodeKind.Condition,
   [TokenType.Assume]: NodeKind.Assume,
   [TokenType.Axiom]: NodeKind.Axiom,
   [TokenType.Lemma]: NodeKind.Lemma,
