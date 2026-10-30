@@ -12,11 +12,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ricostynha/ProofPulse"
+    "url": "https://github.com/VeriFixer/ProofPulse"
   },
-  "homepage": "https://github.com/ricostynha/ProofPulse#readme",
+  "homepage": "https://github.com/VeriFixer/ProofPulse#readme",
   "bugs": {
-    "url": "https://github.com/ricostynha/ProofPulse/issues"
+    "url": "https://github.com/VeriFixer/ProofPulse/issues"
   },
   "engines": {
     "vscode": "^1.85.0"
