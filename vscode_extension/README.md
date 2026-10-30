@@ -6,6 +6,7 @@ Analyses Dafny prover logs and shows proof coverage directly in the editor.
 
 - **Expression-level highlighting** — only the part of a clause that the proof does not need is coloured: red for uncovered, yellow for CovTest (needed only by tests), purple for vacuous
 - **Removal you can trust** — everything marked uncovered can be deleted together and the program still verifies, including facts whose only role is to trigger a quantifier
+- **Condition coverage** — each part of an `if`/`while` condition is marked: an uncovered part could be replaced by `true` or `false` and the proof still holds, so it decides behaviour the contract leaves open (often a missing postcondition)
 - **Hover diagnostics** — coverage status, proof text, type, and related dependency nodes
 - **Run on save** — automatically re-analyses when you save a `.dfy` file
 - **Command palette** — "ProofPulse: Run Coverage Analysis"
