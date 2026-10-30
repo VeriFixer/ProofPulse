@@ -2,9 +2,6 @@ import * as vscode from "vscode";
 import { assertNever, CovStatus, flaggedExpressions, ProofNode, spanEndCol, TokenType, vacuityExplanation } from "@proofpulse/core";
 
 interface DecorationTypes {
-  uncoveredGutter: vscode.TextEditorDecorationType;
-  covTestGutter: vscode.TextEditorDecorationType;
-  vacuousGutter: vscode.TextEditorDecorationType;
   uncoveredInline: vscode.TextEditorDecorationType;
   covTestInline: vscode.TextEditorDecorationType;
   vacuousInline: vscode.TextEditorDecorationType;
@@ -69,19 +66,9 @@ const STATUS_ICON: Record<CovStatus, string> = {
   [CovStatus.CovComplete]: "",
 };
 
-/** Worst first: decides the ruler mark of a line with several flagged expressions. */
-const SEVERITY: Record<CovStatus, number> = {
-  [CovStatus.Vacuous]: 0,
-  [CovStatus.Uncovered]: 1,
-  [CovStatus.CovTest]: 2,
-  [CovStatus.CovComplete]: 3,
-};
-
 /**
- * Line types mark the line on the overview ruler (no gutter icon, which would
- * clash with the Dafny extension's gutter) so flagged lines stay easy to find
- * while scrolling, and carry the per-line hover; inline types colour only the
- * flagged expression.
+ * Only the flagged expressions are coloured: no gutter icons or scrollbar
+ * marks, which would clash with the Dafny extension's own.
  */
 export function createDecorationTypes(opacity: number): DecorationTypes {
   const inline = (rgb: string): vscode.DecorationRenderOptions => ({
@@ -90,18 +77,6 @@ export function createDecorationTypes(opacity: number): DecorationTypes {
     borderRadius: "2px",
   });
   return {
-    uncoveredGutter: vscode.window.createTextEditorDecorationType({
-      overviewRulerColor: "rgba(255, 0, 0, 0.6)",
-      overviewRulerLane: vscode.OverviewRulerLane.Left,
-    }),
-    covTestGutter: vscode.window.createTextEditorDecorationType({
-      overviewRulerColor: "rgba(255, 200, 0, 0.6)",
-      overviewRulerLane: vscode.OverviewRulerLane.Left,
-    }),
-    vacuousGutter: vscode.window.createTextEditorDecorationType({
-      overviewRulerColor: "rgba(150, 80, 255, 0.8)",
-      overviewRulerLane: vscode.OverviewRulerLane.Left,
-    }),
     uncoveredInline: vscode.window.createTextEditorDecorationType(inline("255, 0, 0")),
     covTestInline: vscode.window.createTextEditorDecorationType(inline("255, 200, 0")),
     vacuousInline: vscode.window.createTextEditorDecorationType({
@@ -150,34 +125,14 @@ export function applyDecorations(
 
   const flagged = flaggedExpressions(nodes, { includeImplicit: showImplicitChecks });
 
-  // Inline: one decoration per flagged expression, hover for that expression only
+  // One decoration per flagged expression, hover for that expression only
   const inlineOpts = new Map<CovStatus, vscode.DecorationOptions[]>();
-  // Gutter: one mark per line holding a flagged expression, hover lists them all
-  const nodesByLine = new Map<number, ProofNode[]>();
   for (const n of flagged) {
     let opts = inlineOpts.get(n.covStatus);
     if (!opts) { opts = []; inlineOpts.set(n.covStatus, opts); }
     opts.push({ range: nodeToRange(doc, n), hoverMessage: hoverFor([n]) });
-
-    for (let line = n.start.line; line <= n.end.line; line++) {
-      const idx = line - 1;
-      let arr = nodesByLine.get(idx);
-      if (!arr) { arr = []; nodesByLine.set(idx, arr); }
-      arr.push(n);
-    }
   }
 
-  const gutterOpts = new Map<CovStatus, vscode.DecorationOptions[]>();
-  for (const [line, lineNodes] of nodesByLine) {
-    const worst = lineNodes.reduce((w, n) => SEVERITY[n.covStatus] < SEVERITY[w] ? n.covStatus : w, CovStatus.CovComplete);
-    let opts = gutterOpts.get(worst);
-    if (!opts) { opts = []; gutterOpts.set(worst, opts); }
-    opts.push({ range: new vscode.Range(line, 0, line, 0), hoverMessage: hoverFor(lineNodes) });
-  }
-
-  editor.setDecorations(types.uncoveredGutter, gutterOpts.get(CovStatus.Uncovered) ?? []);
-  editor.setDecorations(types.covTestGutter, gutterOpts.get(CovStatus.CovTest) ?? []);
-  editor.setDecorations(types.vacuousGutter, gutterOpts.get(CovStatus.Vacuous) ?? []);
   editor.setDecorations(types.uncoveredInline, inlineOpts.get(CovStatus.Uncovered) ?? []);
   editor.setDecorations(types.covTestInline, inlineOpts.get(CovStatus.CovTest) ?? []);
   editor.setDecorations(types.vacuousInline, inlineOpts.get(CovStatus.Vacuous) ?? []);
@@ -185,11 +140,8 @@ export function applyDecorations(
 
 export function clearDecorations(editor: vscode.TextEditor): void {
   if (currentTypes) {
-    editor.setDecorations(currentTypes.uncoveredGutter, []);
-    editor.setDecorations(currentTypes.covTestGutter, []);
     editor.setDecorations(currentTypes.uncoveredInline, []);
     editor.setDecorations(currentTypes.covTestInline, []);
-    editor.setDecorations(currentTypes.vacuousGutter, []);
     editor.setDecorations(currentTypes.vacuousInline, []);
     disposeCurrentTypes();
   }
@@ -197,11 +149,8 @@ export function clearDecorations(editor: vscode.TextEditor): void {
 
 function disposeCurrentTypes(): void {
   if (currentTypes) {
-    currentTypes.uncoveredGutter.dispose();
-    currentTypes.covTestGutter.dispose();
     currentTypes.uncoveredInline.dispose();
     currentTypes.covTestInline.dispose();
-    currentTypes.vacuousGutter.dispose();
     currentTypes.vacuousInline.dispose();
     currentTypes = null;
   }
