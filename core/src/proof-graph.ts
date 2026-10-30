@@ -15,6 +15,7 @@ import {
   isCallKind,
 } from "./report/coverage-report.js";
 import { nodeKindForTokenType } from "./node-kind.js";
+import { type CheckSupport, checksInClauses, collectCheckSupports } from "./check-support.js";
 
 const OUTCOME_VALUES = enumValues(QueryOutcome);
 const UNIT_KIND_VALUES = enumValues(UnitKind);
@@ -57,6 +58,10 @@ export function formatDuration(ms: number): string {
 
 export class ProofGraph {
   private nodes: Map<string, ProofNode> = new Map();
+  /** Checks of every unit and what their proofs used (see check-support.ts). */
+  checkSupports: CheckSupport[] = [];
+  /** Span keys of checks that sit inside a clause. */
+  checkSpansInClauses: Set<string> = new Set();
 
   getOrCreate(
     file: string,
@@ -101,6 +106,8 @@ export class ProofGraph {
       const role = vacuityRole(o);
       if (role) node.vacuity = role;
     }
+    graph.checkSupports = collectCheckSupports(report);
+    graph.checkSpansInClauses = checksInClauses(report);
     return graph;
   }
 

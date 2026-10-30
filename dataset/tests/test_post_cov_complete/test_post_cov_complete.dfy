@@ -9,8 +9,15 @@ method Main(){
     assert(b == 32);
 }
 
-//::: Name - Postcondition complete as it is used on Main
-//::: Description - Line 2 should be CovComplete as it is used on Main
+method Twice() returns (y: int)
+    ensures y == 64
+{
+    var b := ret32();
+    y := b + b;
+}
+
+//::: Name - Postcondition complete as a caller needs it
+//::: Description - Line 2 is CovComplete because Twice proves its own ensures from it (Main only tests it)
 //::: L1 - CovComplete
 //::: L2 - CovComplete
 //::: L3 - CovComplete

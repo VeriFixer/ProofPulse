@@ -44,6 +44,20 @@ describe("flaggedExpressions", () => {
     expect(cols(flaggedExpressions([check, vacuousCheck], { includeImplicit: true }))).toEqual([[3, 8], [10, 14]]);
   });
 
+  it("never reports a clause whose parts are covered", () => {
+    // the report has an unused node for the whole clause, but its parts are used
+    const clause = node(11, 22, CovStatus.Uncovered);
+    const lower = node(11, 16, CovStatus.CovComplete);
+    const upper = node(16, 22, CovStatus.CovComplete);
+    expect(flaggedExpressions([clause, lower, upper])).toEqual([]);
+  });
+
+  it("judges a clause by its clause parts, not by checks or calls inside it", () => {
+    const clause = node(11, 30, CovStatus.Uncovered);
+    const call = node(20, 30, CovStatus.CovComplete, NodeKind.Code);
+    expect(cols(flaggedExpressions([clause, call]))).toEqual([[11, 30]]);
+  });
+
   it("drops covered expressions", () => {
     expect(flaggedExpressions([node(1, 5, CovStatus.CovComplete)])).toEqual([]);
   });
@@ -54,6 +68,13 @@ describe("spanEndCol", () => {
   it("extends an end column at a token start over the whole token", () => {
     expect(line.slice(18, spanEndCol(line, line.indexOf("Length") + 1))).toBe("n < arr.Length");
     expect(line.slice(36, spanEndCol(line, line.indexOf("0.0") + 1))).toBe("x >= 0.0");
+  });
+  it("covers string and char literals up to the closing quote", () => {
+    const lit = `    requires forall i :: s[i] == '(' || s[i] == ')' && t in "ab\\"c"`;
+    expect(lit.slice(0, spanEndCol(lit, lit.indexOf("')'") + 1))).toMatch(/== '\)'$/);
+    expect(lit.slice(0, spanEndCol(lit, lit.indexOf('"ab') + 1))).toMatch(/"ab\\"c"$/);
+    const prime = "    ensures x' == y";
+    expect(spanEndCol(prime, prime.indexOf("'") + 1)).toBe(prime.indexOf("'") + 1);
   });
   it("leaves one-character tokens alone", () => {
     expect(spanEndCol(line, line.indexOf(";") + 1)).toBe(line.indexOf(";") + 1);

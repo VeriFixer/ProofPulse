@@ -94,7 +94,7 @@ method SplitStringIntoChars(s: string) returns (v: seq<char>)
 //::       batchIndex: 9
 //::       batchOutcome: Valid
 //::       batchResourceCount: 9019
-//::     covStatus: CovTest
+//::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_test_forall_needs_merging.dfy|SplitStringIntoChars|correctness|3,13-3,53

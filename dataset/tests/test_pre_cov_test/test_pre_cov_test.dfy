@@ -14,7 +14,8 @@ method Main(){
 //::: Description - Line 2 should be CovComplete
 //::: L1 - CovComplete
 //::: L2 - CovTest
-//::: L3 - CovComplete
+// The ensures is used only by a test assertion in Main (no caller needs the result for its own proof): CovTest.
+//::: L3 - CovTest
 //::: L4 - CovComplete
 //::: L5 - CovComplete
 //::: L9 - CovTest

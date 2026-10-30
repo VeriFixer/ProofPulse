@@ -2,6 +2,7 @@ import { CovStatus, TokenType, VacuityRole } from "./types.js";
 import { ProofNode } from "./proof-node.js";
 import { ProofGraph } from "./proof-graph.js";
 import { UnitKind } from "./report/coverage-report.js";
+import { applyCoverageCheckSupport, spanKey } from "./check-support.js";
 
 /** Facts a proof can use (not obligations): their final status is how they were used. */
 const USED_FACT_TYPES: ReadonlySet<TokenType> = new Set([TokenType.Call, TokenType.Assume, TokenType.Axiom, TokenType.Lemma]);
@@ -46,8 +47,14 @@ export function applyCoverageInternal(graph: ProofGraph): void {
 
     const topAlreadyCovered = top.getCovStatusInternal() === CovStatus.CovComplete;
 
+    // A check inside a clause only makes that clause well-defined: what it uses
+    // inherits the clause's status later (applyCoverageCheckSupport).
+    const checkInClause = top.getType() === TokenType.AssertionAutomatic && graph.checkSpansInClauses.has(spanKey(top));
+
     for (const dep of top.provedBy) {
-      if (top.getType() === TokenType.AssertionAutomatic) {
+      if (checkInClause) {
+        continue;
+      } else if (top.getType() === TokenType.AssertionAutomatic) {
         dep.setCovStatusInternal(CovStatus.CovComplete);
         dep.setCovStatus(CovStatus.CovComplete);
       } else if (topAlreadyCovered) {
@@ -193,9 +200,13 @@ export function applyCoverageSemantic(graph: ProofGraph): void {
         }
       }
 
-      // Check if this postcondition is a connection target (by span match)
+      // Used in a call: a call site refers to this postcondition (by span) and
+      // some caller needs the result, i.e. a caller's copy of the clause is part
+      // of a covered proof. A result only test assertions use leaves it CovTest.
       const span = `${node.file}|${node.start.line},${node.start.col}-${node.end.line},${node.end.col}`;
-      const isUsedInCall = connectionTargetSpans.has(span);
+      const isUsedInCall = connectionTargetSpans.has(span) &&
+        (rawSpanToNodes.get(rawSpan(node)) ?? []).some(copy =>
+          copy !== node && !copy.roles.isTop && copy.getCovStatusInternal() === CovStatus.CovComplete);
 
       if (hasRealProver && isUsedInCall) {
         node.setCovStatus(CovStatus.CovComplete);
@@ -209,6 +220,10 @@ export function applyCoverageSemantic(graph: ProofGraph): void {
       }
     }
   }
+}
+
+function rawSpan(node: ProofNode): string {
+  return `${node.file}|${node.start.line},${node.start.col}-${node.end.line},${node.end.col}`;
 }
 
 /** Vacuity roles that override a node's coverage status. */
@@ -234,6 +249,7 @@ export function applyCoverage(graph: ProofGraph): void {
   applyCoverageInternal(graph);
   applyCoverageConnections(graph);
   applyCoverageSemantic(graph);
+  applyCoverageCheckSupport(graph);
   applyCoverageVacuity(graph);
 }
 

@@ -65,13 +65,6 @@ method CylinderVolume:
     code: "radius >= 0.0"
     in: "requires radius >= 0.0 && height >= 0.0"
     message: "Precondition only used in calling tests, unnecessary to prove postconditions."
-  - line: 3
-    cols: 29-41
-    type: Precondition
-    status: CovTest
-    code: "height >= 0.0"
-    in: "requires radius >= 0.0 && height >= 0.0"
-    message: "Precondition only used in calling tests, unnecessary to prove postconditions."
   - line: 4
     cols: 11-23
     type: Postcondition
@@ -104,7 +97,7 @@ code-server --bind-addr 0.0.0.0:8080 --auth none /home/coder/project
 
 Note: A pop-up may appear in the browser-based VS Code asking you to trust the folder and allow the extensions to run. If ProofPulse does not start after accepting, you may need to enable the extension manually. Open the **Extensions** view in VS Code, search for **ProofPulse**, select it, and click **Enable**.
 
-3. Open any of the files under  `demo_examples/` in the VS Code window in your browser. You will see both Dafny and ProofPulse running. ProofPulse highlights the exact expressions that are not fully covered, and marks their lines in the gutter.
+3. Open any of the files under  `demo_examples/` in the VS Code window in your browser. You will see both Dafny and ProofPulse running. ProofPulse highlights the exact expressions that are not fully covered, and marks their lines on the scrollbar.
 
 END OF SMOKE TEST
 

@@ -125,7 +125,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       batchIndex: 15
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14121
-//::     covStatus: CovTest
+//::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|3,13-3,59
 //::     file: snapshot_test_index_in_range.dfy
@@ -380,7 +380,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|9,19-9,24
 //::     file: snapshot_test_index_in_range.dfy
 //::     start:
@@ -472,7 +472,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       batchIndex: 13
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16064
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,49
 //::     file: snapshot_test_index_in_range.dfy
