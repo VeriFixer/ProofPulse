@@ -1,0 +1,661 @@
+[tool-version] Z3 4.12.1
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #3 pi
+[mk-app] #4 euler
+[mk-var] datatype#0 0
+[mk-var] datatype#1 1
+[mk-app] datatype#2 insert datatype#0 datatype#1
+[mk-app] datatype#3 pattern datatype#2
+[mk-app] datatype#4 head datatype#2
+[mk-app] datatype#5 = datatype#0 datatype#4
+[mk-quant] datatype#6 constructor_accessor_axiom 2 datatype#3 datatype#5
+[attach-var-names] datatype#6 (;k!0) (;List)
+[mk-app] datatype#7 tail datatype#2
+[mk-app] datatype#8 = datatype#1 datatype#7
+[mk-quant] datatype#9 constructor_accessor_axiom 2 datatype#3 datatype#8
+[attach-var-names] datatype#9 (;k!0) (;List)
+[mk-app] #5 bv
+[attach-meaning] #5 bv #b1
+[mk-app] #6 bv
+[attach-meaning] #6 bv #b0
+[attach-meaning] #5 bv #b1
+[attach-meaning] #6 bv #b0
+[attach-meaning] #6 bv #b0
+[mk-var] #7 0
+[mk-var] #8 1
+[mk-var] #9 2
+[mk-var] #10 3
+[mk-var] #11 4
+[mk-var] #12 5
+[mk-var] #13 6
+[mk-var] #14 7
+[mk-var] #15 8
+[mk-var] #16 9
+[mk-var] #17 10
+[mk-var] #18 11
+[mk-var] #19 12
+[mk-var] #20 13
+[mk-var] #21 14
+[mk-app] #22 + #15 #13
+[attach-enode] #1 0
+[attach-enode] #2 0
+[mk-app] #23 tickleBool #1
+[mk-app] #24 tickleBool #2
+[mk-app] #25 and #23 #24
+[mk-app] #26 $generated@@2
+[mk-app] #27 $generated@@1 #26
+[mk-app] #28 Int
+[attach-meaning] #28 arith 0
+[mk-app] #29 = #27 #28
+[mk-app] #30 $generated@@3
+[mk-app] #31 $generated@@1 #30
+[mk-app] #32 Int
+[attach-meaning] #32 arith 1
+[mk-app] #33 = #31 #32
+[mk-app] #34 and #29 #33
+[mk-app] #35 $generated@@4
+[mk-app] #36 $generated@@1 #35
+[mk-app] #37 Int
+[attach-meaning] #37 arith 2
+[mk-app] #38 = #36 #37
+[mk-app] #39 and #34 #38
+[mk-var] #40 0
+[mk-app] #41 $generated@@5 #40
+[mk-app] #42 $generated@@6 #41
+[mk-app] #43 = #42 #40
+[mk-app] #44 pattern #41
+[mk-quant] #45 k!58 1 #44 #43
+[attach-var-names] #45 (|$generated@@11| ; |Bool|)
+[mk-app] #46 and #39 #45
+[mk-var] #47 0
+[mk-app] #48 $generated@@6 #47
+[mk-app] #49 $generated@@5 #48
+[mk-app] #50 = #49 #47
+[mk-app] #51 pattern #48
+[mk-quant] #52 k!60 1 #51 #50
+[attach-var-names] #52 (|$generated@@12| ; |T@U|)
+[mk-app] #53 and #46 #52
+[mk-var] #54 0
+[mk-app] #55 $generated@@7 #54
+[mk-app] #56 $generated@@8 #55
+[mk-app] #57 = #56 #54
+[mk-app] #58 pattern #55
+[mk-quant] #59 k!62 1 #58 #57
+[attach-var-names] #59 (|$generated@@13| ; |Int|)
+[mk-app] #60 and #53 #59
+[mk-app] #61 $generated@@8 #47
+[mk-app] #62 $generated@@7 #61
+[mk-app] #63 = #62 #47
+[mk-app] #64 pattern #61
+[mk-quant] #65 k!64 1 #64 #63
+[attach-var-names] #65 (|$generated@@14| ; |T@U|)
+[mk-app] #66 and #60 #65
+[mk-app] #67 $generated@@9 #7
+[mk-app] #68 $generated@@10 #67
+[mk-app] #69 = #68 #7
+[mk-app] #70 pattern #67
+[mk-quant] #71 k!66 1 #70 #69
+[attach-var-names] #71 (|$generated@@15| ; |Real|)
+[mk-app] #72 and #66 #71
+[mk-app] #73 $generated@@10 #47
+[mk-app] #74 $generated@@9 #73
+[mk-app] #75 = #74 #47
+[mk-app] #76 pattern #73
+[mk-quant] #77 k!68 1 #76 #75
+[attach-var-names] #77 (|$generated@@16| ; |T@U|)
+[mk-app] #78 and #72 #77
+[mk-app] #79 and #29 #33 #38 #45 #52 #59 #65 #71 #77
+[mk-var] #79 1
+[mk-var] #80 0
+[mk-app] #81 $generated #80 #79
+[mk-app] #82 $generated@@0 #80 #81
+[mk-app] #83 = #82 #79
+[mk-app] #84 pattern #81
+[mk-quant] #85 k!71 2 #84 #83
+[attach-var-names] #85 (|$generated@@18| ; |T@T|) (|$generated@@17| ; |T@U|)
+[mk-app] #86 $generated@@0 #80 #79
+[mk-app] #87 $generated #80 #86
+[mk-app] #88 = #87 #79
+[mk-app] #89 pattern #86
+[mk-quant] #90 k!75 2 #89 #88
+[attach-var-names] #90 (|$generated@@20| ; |T@T|) (|$generated@@19| ; |T@U|)
+[mk-var] #91 6
+[mk-var] #92 5
+[mk-var] #93 4
+[mk-var] #94 3
+[mk-var] #95 2
+[mk-app] #96 $generated@@28 #91 #92 #93 #95 #79 #47 #94
+[mk-app] #97 $generated@@21 #91 #92 #93 #96 #79 #47
+[mk-app] #98 = #97 #94
+[mk-quant] #99 k!78 7 #98
+[attach-var-names] #99 (|$generated@@38| ; |T@U|) (|$generated@@37| ; |T@U|) (|$generated@@36| ; |T@U|) (|$generated@@35| ; |T@U|) (|$generated@@34| ; |T@T|) (|$generated@@33| ; |T@T|) (|$generated@@32| ; |T@T|)
+[mk-var] #100 8
+[mk-var] #101 7
+[mk-var] #102 5
+[mk-var] #103 4
+[mk-app] #104 = #94 #79
+[mk-app] #105 $generated@@28 #100 #101 #91 #103 #94 #95 #102
+[mk-app] #106 $generated@@21 #100 #101 #91 #105 #79 #47
+[mk-app] #107 $generated@@21 #100 #101 #91 #103 #79 #47
+[mk-app] #108 = #106 #107
+[mk-app] #109 or #104 #108
+[mk-quant] #110 k!80 9 #109
+[attach-var-names] #110 (|$generated@@47| ; |T@U|) (|$generated@@46| ; |T@U|) (|$generated@@45| ; |T@U|) (|$generated@@44| ; |T@U|) (|$generated@@43| ; |T@U|) (|$generated@@42| ; |T@U|) (|$generated@@41| ; |T@T|) (|$generated@@40| ; |T@T|) (|$generated@@39| ; |T@T|)
+[mk-app] #111 = #95 #47
+[mk-app] #112 or #111 #108
+[mk-quant] #113 k!82 9 #112
+[attach-var-names] #113 (|$generated@@56| ; |T@U|) (|$generated@@55| ; |T@U|) (|$generated@@54| ; |T@U|) (|$generated@@53| ; |T@U|) (|$generated@@52| ; |T@U|) (|$generated@@51| ; |T@U|) (|$generated@@50| ; |T@T|) (|$generated@@49| ; |T@T|) (|$generated@@48| ; |T@T|)
+[mk-app] #114 and #110 #113
+[mk-app] #115 and #99 #114
+[mk-app] #116 $generated@@22
+[mk-app] #117 $generated@@1 #116
+[mk-app] #118 Int
+[attach-meaning] #118 arith 3
+[mk-app] #119 = #117 #118
+[mk-app] #120 and #115 #119
+[mk-app] #121 $generated@@23
+[mk-app] #122 $generated@@1 #121
+[mk-app] #123 Int
+[attach-meaning] #123 arith 4
+[mk-app] #124 = #122 #123
+[mk-app] #125 and #120 #124
+[mk-var] #126 3
+[mk-app] #127 $generated@@29 #93 #126 #79 #47 #95
+[mk-app] #128 $generated@@25 #93 #126 #127 #47
+[mk-app] #129 = #128 #95
+[mk-quant] #130 k!84 5 #129
+[attach-var-names] #130 (|$generated@@61| ; |T@U|) (|$generated@@60| ; |T@U|) (|$generated@@59| ; |T@U|) (|$generated@@58| ; |T@T|) (|$generated@@57| ; |T@T|)
+[mk-app] #131 and #125 #130
+[mk-app] #132 = #79 #47
+[mk-app] #133 $generated@@29 #92 #93 #95 #79 #94
+[mk-app] #134 $generated@@25 #92 #93 #133 #47
+[mk-app] #135 $generated@@25 #92 #93 #95 #47
+[mk-app] #136 = #134 #135
+[mk-app] #137 or #132 #136
+[mk-quant] #138 k!86 6 #137
+[attach-var-names] #138 (|$generated@@67| ; |T@U|) (|$generated@@66| ; |T@U|) (|$generated@@65| ; |T@U|) (|$generated@@64| ; |T@U|) (|$generated@@63| ; |T@T|) (|$generated@@62| ; |T@T|)
+[mk-app] #139 and #131 #138
+[mk-app] #140 $generated@@26
+[mk-app] #141 $generated@@1 #140
+[mk-app] #142 Int
+[attach-meaning] #142 arith 5
+[mk-app] #143 = #141 #142
+[mk-app] #144 and #139 #143
+[mk-var] #145 1
+[mk-app] #146 $generated@@27 #145 #80
+[mk-app] #147 $generated@@1 #146
+[mk-app] #148 Int
+[attach-meaning] #148 arith 6
+[mk-app] #149 = #147 #148
+[mk-quant] #150 k!86 2 #149
+[attach-var-names] #150 (|$generated@@69| ; |T@T|) (|$generated@@68| ; |T@T|)
+[mk-app] #151 and #144 #150
+[mk-app] #152 $generated@@30 #146
+[mk-app] #153 = #152 #145
+[mk-app] #154 pattern #146
+[mk-quant] #155 k!88 2 #154 #153
+[attach-var-names] #155 (|$generated@@71| ; |T@T|) (|$generated@@70| ; |T@T|)
+[mk-app] #156 and #151 #155
+[mk-app] #157 $generated@@31 #146
+[mk-app] #158 = #157 #80
+[mk-quant] #159 k!90 2 #154 #158
+[attach-var-names] #159 (|$generated@@73| ; |T@T|) (|$generated@@72| ; |T@T|)
+[mk-app] #160 and #156 #159
+[mk-app] #161 and #99 #110 #113 #119 #124 #130 #138 #143 #150 #155 #159
+[mk-var] #161 2
+[mk-app] #162 $generated@@24 #102 #103 #94 #161
+[mk-app] #163 $generated@@21 #116 #121 #26 #162 #79 #47
+[mk-app] #164 $generated@@6 #163
+[mk-app] #165 = #79 #102
+[mk-app] #166 not #165
+[mk-app] #167 not #1
+[mk-app] #168 or #166 #167
+[mk-app] #169 $generated@@27 #121 #140
+[mk-app] #170 $generated@@25 #116 #169 #103 #79
+[mk-app] #171 $generated@@25 #121 #140 #170 #94
+[mk-app] #172 $generated #26 #171
+[mk-app] #173 $generated@@6 #172
+[mk-app] #174 and #168 #173
+[mk-app] #175 => #174 #161
+[mk-app] #176 = #164 #175
+[mk-app] #177 pattern #163
+[mk-quant] #178 k!93 6 #177 #176
+[attach-var-names] #178 (|$generated@@79| ; |T@U|) (|$generated@@78| ; |T@U|) (|$generated@@77| ; |Bool|) (|$generated@@76| ; |T@U|) (|$generated@@75| ; |T@U|) (|$generated@@74| ; |T@U|)
+[inst-discovered] theory-solving 0 basic# ; #167
+[mk-app] #179 = #167 #2
+[instance] 0 #179
+[attach-enode] #179 0
+[end-of-instance]
+[mk-app] #179 or #166 #2
+[inst-discovered] theory-solving 0 basic# ; #179
+[mk-app] #180 = #179 #166
+[instance] 0 #180
+[attach-enode] #180 0
+[end-of-instance]
+[mk-app] #179 and #166 #173
+[mk-app] #180 not #179
+[mk-app] #181 or #180 #161
+[mk-app] #182 => #179 #161
+[inst-discovered] theory-solving 0 basic# ; #182
+[mk-app] #183 = #182 #181
+[instance] 0 #183
+[attach-enode] #183 0
+[end-of-instance]
+[mk-app] #182 = #164 #181
+[mk-quant] #183 k!93 6 #177 #182
+[attach-var-names] #183 (|$generated@@79| ; |T@U|) (|$generated@@78| ; |T@U|) (|$generated@@77| ; |Bool|) (|$generated@@76| ; |T@U|) (|$generated@@75| ; |T@U|) (|$generated@@74| ; |T@U|)
+[mk-app] #184 not #173
+[mk-app] #185 or #165 #184
+[mk-app] #186 not #185
+[inst-discovered] theory-solving 0 basic# ; #179
+[mk-app] #187 = #179 #186
+[instance] 0 #187
+[attach-enode] #187 0
+[end-of-instance]
+[mk-app] #187 not #186
+[inst-discovered] theory-solving 0 basic# ; #187
+[mk-app] #188 = #187 #185
+[instance] 0 #188
+[attach-enode] #188 0
+[end-of-instance]
+[mk-app] #186 or #161 #165 #184
+[mk-app] #187 or #185 #161
+[inst-discovered] theory-solving 0 basic# ; #187
+[mk-app] #188 = #187 #186
+[instance] 0 #188
+[attach-enode] #188 0
+[end-of-instance]
+[mk-app] #185 = #164 #186
+[mk-quant] #187 k!93 6 #177 #185
+[attach-var-names] #187 (|$generated@@79| ; |T@U|) (|$generated@@78| ; |T@U|) (|$generated@@77| ; |Bool|) (|$generated@@76| ; |T@U|) (|$generated@@75| ; |T@U|) (|$generated@@74| ; |T@U|)
+[mk-app] #179 pattern #96
+[mk-quant] #180 k!78 7 #179 #98
+[attach-var-names] #180 (|$generated@@38| ; |T@U|) (|$generated@@37| ; |T@U|) (|$generated@@36| ; |T@U|) (|$generated@@35| ; |T@U|) (|$generated@@34| ; |T@T|) (|$generated@@33| ; |T@T|) (|$generated@@32| ; |T@T|)
+[mk-app] #181 pattern #106
+[mk-quant] #182 k!80 9 #181 #109
+[attach-var-names] #182 (|$generated@@47| ; |T@U|) (|$generated@@46| ; |T@U|) (|$generated@@45| ; |T@U|) (|$generated@@44| ; |T@U|) (|$generated@@43| ; |T@U|) (|$generated@@42| ; |T@U|) (|$generated@@41| ; |T@T|) (|$generated@@40| ; |T@T|) (|$generated@@39| ; |T@T|)
+[mk-quant] #183 k!82 9 #181 #112
+[attach-var-names] #183 (|$generated@@56| ; |T@U|) (|$generated@@55| ; |T@U|) (|$generated@@54| ; |T@U|) (|$generated@@53| ; |T@U|) (|$generated@@52| ; |T@U|) (|$generated@@51| ; |T@U|) (|$generated@@50| ; |T@T|) (|$generated@@49| ; |T@T|) (|$generated@@48| ; |T@T|)
+[mk-app] #188 pattern #127
+[mk-quant] #189 k!84 5 #188 #129
+[attach-var-names] #189 (|$generated@@61| ; |T@U|) (|$generated@@60| ; |T@U|) (|$generated@@59| ; |T@U|) (|$generated@@58| ; |T@T|) (|$generated@@57| ; |T@T|)
+[mk-app] #190 pattern #134
+[mk-quant] #191 k!86 6 #190 #137
+[attach-var-names] #191 (|$generated@@67| ; |T@U|) (|$generated@@66| ; |T@U|) (|$generated@@65| ; |T@U|) (|$generated@@64| ; |T@U|) (|$generated@@63| ; |T@T|) (|$generated@@62| ; |T@T|)
+[mk-quant] #192 k!86 2 #154 #149
+[attach-var-names] #192 (|$generated@@69| ; |T@T|) (|$generated@@68| ; |T@T|)
+[inst-discovered] theory-solving 0 basic# ; #186
+[mk-app] #193 = #186 #186
+[instance] 0 #193
+[attach-enode] #193 0
+[end-of-instance]
+[inst-discovered] theory-solving 0 basic# ; #186
+[mk-app] #193 = #186 #186
+[instance] 0 #193
+[attach-enode] #193 0
+[end-of-instance]
+[attach-enode] #23 0
+[assign] #23 justification -1: 
+[attach-enode] #24 0
+[assign] #24 justification -1: 
+[attach-enode] #26 0
+[attach-enode] #27 0
+[attach-enode] #28 0
+[attach-enode] #29 0
+[assign] #29 justification -1: 
+[attach-enode] #30 0
+[attach-enode] #31 0
+[attach-enode] #32 0
+[attach-enode] #33 0
+[assign] #33 justification -1: 
+[attach-enode] #35 0
+[attach-enode] #36 0
+[attach-enode] #37 0
+[attach-enode] #38 0
+[assign] #38 justification -1: 
+[assign] #45 justification -1: 
+[assign] #52 justification -1: 
+[assign] #59 justification -1: 
+[assign] #65 justification -1: 
+[assign] #71 justification -1: 
+[assign] #77 justification -1: 
+[assign] #85 justification -1: 
+[assign] #90 justification -1: 
+[assign] #180 justification -1: 
+[assign] #182 justification -1: 
+[assign] #183 justification -1: 
+[attach-enode] #116 0
+[attach-enode] #117 0
+[attach-enode] #118 0
+[attach-enode] #119 0
+[assign] #119 justification -1: 
+[attach-enode] #121 0
+[attach-enode] #122 0
+[attach-enode] #123 0
+[attach-enode] #124 0
+[assign] #124 justification -1: 
+[assign] #189 justification -1: 
+[assign] #191 justification -1: 
+[attach-enode] #140 0
+[attach-enode] #141 0
+[attach-enode] #142 0
+[attach-enode] #143 0
+[assign] #143 justification -1: 
+[assign] #192 justification -1: 
+[assign] #155 justification -1: 
+[assign] #159 justification -1: 
+[assign] #187 justification -1: 
+[push] 0
+[mk-app] #193 $generated@@86
+[mk-app] #194 aux$$assume$$id10
+[mk-app] #195 => #194 #193
+[mk-app] #196 not #194
+[mk-app] #197 or #193 #196
+[inst-discovered] theory-solving 0 basic# ; #195
+[mk-app] #198 = #195 #197
+[instance] 0 #198
+[attach-enode] #198 0
+[end-of-instance]
+[mk-app] #198 $generated@@89
+[mk-app] #199 aux$$assume$$id11
+[mk-app] #200 => #199 #198
+[mk-app] #201 not #199
+[mk-app] #202 or #198 #201
+[inst-discovered] theory-solving 0 basic# ; #200
+[mk-app] #203 = #200 #202
+[instance] 0 #203
+[attach-enode] #203 0
+[end-of-instance]
+[mk-app] #203 $generated@@92
+[mk-app] #204 aux$$assume$$id12
+[mk-app] #205 => #204 #203
+[mk-app] #206 not #204
+[mk-app] #207 or #203 #206
+[inst-discovered] theory-solving 0 basic# ; #205
+[mk-app] #208 = #205 #207
+[instance] 0 #208
+[attach-enode] #208 0
+[end-of-instance]
+[mk-app] #208 $generated@@96
+[mk-app] #209 aux$$assert$$id13
+[mk-app] #210 => #209 #208
+[mk-app] #211 not #209
+[mk-app] #212 or #208 #211
+[inst-discovered] theory-solving 0 basic# ; #210
+[mk-app] #213 = #210 #212
+[instance] 0 #213
+[attach-enode] #213 0
+[end-of-instance]
+[mk-app] #213 ControlFlow #28 #28
+[mk-app] #214 = #213 #37
+[mk-app] #215 $generated@@81
+[mk-app] #216 $generated@@80 #215
+[mk-app] #217 $generated@@82 #215
+[mk-app] #218 and #216 #217
+[mk-app] #219 $generated@@84 #54
+[mk-app] #220 $generated@@85 #54
+[mk-app] #221 and #219 #220
+[mk-app] #222 $generated@@83 #54
+[mk-app] #223 pattern #222
+[mk-quant] #224 k!134 1 #223 #221
+[attach-var-names] #224 (|$generated@@98| ; |Int|)
+[mk-app] #225 and #218 #224
+[mk-app] #226 $generated@@87 #54
+[mk-app] #227 + #222 #32
+[mk-app] #228 = #226 #227
+[mk-quant] #229 k!136 1 #223 #228
+[attach-var-names] #229 (|$generated@@99| ; |Int|)
+[mk-app] #230 => #193 #229
+[mk-app] #231 $generated@@88 #54
+[mk-app] #232 pattern #226
+[mk-quant] #233 k!138 1 #232 #231
+[attach-var-names] #233 (|$generated@@100| ; |Int|)
+[mk-app] #234 and #230 #233
+[mk-app] #235 $generated@@90 #54
+[mk-quant] #236 k!140 1 #232 #235
+[attach-var-names] #236 (|$generated@@101| ; |Int|)
+[mk-app] #237 => #198 #236
+[mk-app] #238 $generated@@91
+[mk-app] #239 $generated@@85 #238
+[mk-app] #240 and #237 #239
+[mk-app] #241 and #234 #240
+[mk-app] #242 $generated@@83 #238
+[mk-app] #243 > #242 #28
+[mk-app] #244 => #203 #243
+[mk-app] #245 $generated@@93
+[mk-app] #246 $generated@@94
+[mk-app] #247 $generated@@95
+[mk-app] #248 $generated@@24 #246 #215 #247 #2
+[mk-app] #249 = #245 #248
+[mk-app] #250 and #244 #249
+[mk-app] #251 $generated@@88 #238
+[mk-app] #252 ControlFlow #28 #37
+[mk-app] #253 - #28 #32
+[mk-app] #254 = #252 #253
+[mk-app] #255 and #251 #254
+[mk-app] #256 and #250 #255
+[mk-app] #257 and #241 #256
+[mk-app] #258 $generated@@90 #238
+[mk-app] #259 and #208 #258
+[mk-app] #260 => #257 #259
+[mk-app] #261 => #225 #260
+[mk-app] #262 => #214 #261
+[mk-app] #263 not #262
+[mk-app] #264 and #216 #217 #224
+[mk-app] #265 + #32 #222
+[inst-discovered] theory-solving 0 arith# ; #227
+[mk-app] #266 = #227 #265
+[instance] 0 #266
+[attach-enode] #266 0
+[end-of-instance]
+[mk-app] #266 Int
+[attach-meaning] #266 arith (- 1)
+[mk-app] #267 * #266 #222
+[mk-app] #268 + #267 #226
+[attach-meaning] #266 arith (- 1)
+[mk-app] #269 * #266 #226
+[mk-app] #270 + #222 #269
+[attach-meaning] #266 arith (- 1)
+[mk-app] #267 = #270 #266
+[mk-app] #268 = #226 #265
+[inst-discovered] theory-solving 0 arith# ; #268
+[mk-app] #271 = #268 #267
+[instance] 0 #271
+[attach-enode] #271 0
+[end-of-instance]
+[mk-quant] #265 k!136 1 #223 #267
+[attach-var-names] #265 (|$generated@@99| ; |Int|)
+[mk-app] #268 not #193
+[mk-app] #271 or #268 #265
+[mk-app] #272 => #193 #265
+[inst-discovered] theory-solving 0 basic# ; #272
+[mk-app] #273 = #272 #271
+[instance] 0 #273
+[attach-enode] #273 0
+[end-of-instance]
+[mk-app] #272 not #198
+[mk-app] #273 or #272 #236
+[inst-discovered] theory-solving 0 basic# ; #237
+[mk-app] #274 = #237 #273
+[instance] 0 #274
+[attach-enode] #274 0
+[end-of-instance]
+[mk-app] #274 <= #242 #28
+[mk-app] #275 not #274
+[inst-discovered] theory-solving 0 arith# ; #243
+[mk-app] #276 = #243 #275
+[instance] 0 #276
+[attach-enode] #276 0
+[end-of-instance]
+[mk-app] #276 not #203
+[mk-app] #277 or #276 #275
+[mk-app] #278 => #203 #275
+[inst-discovered] theory-solving 0 basic# ; #278
+[mk-app] #279 = #278 #277
+[instance] 0 #279
+[attach-enode] #279 0
+[end-of-instance]
+[attach-meaning] #266 arith (- 1)
+[mk-app] #278 * #266 #32
+[mk-app] #279 + #28 #278
+[inst-discovered] theory-solving 0 arith# ; #253
+[mk-app] #280 = #253 #279
+[instance] 0 #280
+[attach-enode] #280 0
+[end-of-instance]
+[attach-meaning] #266 arith (- 1)
+[inst-discovered] theory-solving 0 arith# ; #278
+[mk-app] #280 = #278 #266
+[instance] 0 #280
+[attach-enode] #280 0
+[end-of-instance]
+[attach-meaning] #266 arith (- 1)
+[mk-app] #280 + #28 #266
+[inst-discovered] theory-solving 0 arith# ; #280
+[mk-app] #281 = #280 #266
+[instance] 0 #281
+[attach-enode] #281 0
+[end-of-instance]
+[mk-app] #280 = #252 #266
+[mk-app] #281 and #271 #233 #273 #239 #277 #249 #251 #280
+[mk-app] #282 not #281
+[mk-app] #283 or #282 #259
+[mk-app] #284 => #281 #259
+[inst-discovered] theory-solving 0 basic# ; #284
+[mk-app] #285 = #284 #283
+[instance] 0 #285
+[attach-enode] #285 0
+[end-of-instance]
+[mk-app] #284 not #264
+[mk-app] #285 or #259 #282 #284
+[mk-app] #286 => #264 #283
+[inst-discovered] theory-solving 0 basic# ; #286
+[mk-app] #287 = #286 #285
+[instance] 0 #287
+[attach-enode] #287 0
+[end-of-instance]
+[mk-app] #283 not #214
+[mk-app] #286 or #259 #282 #283 #284
+[mk-app] #287 => #214 #285
+[inst-discovered] theory-solving 0 basic# ; #287
+[mk-app] #288 = #287 #286
+[instance] 0 #288
+[attach-enode] #288 0
+[end-of-instance]
+[mk-app] #285 not #286
+[mk-app] #287 not #259
+[begin-check] 1
+[mk-app] #278 not #208
+[mk-app] #279 not #258
+[mk-app] #281 or #278 #279
+[mk-app] #282 not #281
+[inst-discovered] theory-solving 0 basic# ; #259
+[mk-app] #283 = #259 #282
+[instance] 0 #283
+[attach-enode] #283 0
+[end-of-instance]
+[mk-app] #283 not #282
+[inst-discovered] theory-solving 0 basic# ; #283
+[mk-app] #264 = #283 #281
+[instance] 0 #264
+[attach-enode] #264 0
+[end-of-instance]
+[mk-app] #283 not #219
+[mk-app] #264 not #220
+[mk-app] #284 or #283 #264
+[mk-app] #286 not #284
+[inst-discovered] theory-solving 0 basic# ; #221
+[mk-app] #285 = #221 #286
+[instance] 0 #285
+[attach-enode] #285 0
+[end-of-instance]
+[mk-quant] #285 k!134 1 #223 #286
+[attach-var-names] #285 (|$generated@@98| ; |Int|)
+[attach-enode] #238 0
+[attach-enode] #258 0
+[assign] #233 justification -1: 
+[attach-enode] #239 0
+[assign] #239 justification -1: 
+[attach-enode] #242 0
+[attach-enode] #245 0
+[attach-enode] #246 0
+[attach-enode] #215 0
+[attach-enode] #247 0
+[attach-enode] #248 0
+[attach-enode] #249 0
+[assign] #249 justification -1: 
+[attach-enode] #251 0
+[assign] #251 justification -1: 
+[attach-enode] #252 0
+[attach-enode] #266 0
+[attach-enode] #280 0
+[assign] #280 justification -1: 
+[attach-enode] #213 0
+[attach-enode] #214 0
+[assign] #214 justification -1: 
+[attach-enode] #216 0
+[assign] #216 justification -1: 
+[attach-enode] #217 0
+[assign] #217 justification -1: 
+[assign] #285 justification -1: 
+[push] 1
+[assign] #194 justification -1: 
+[assign] #199 justification -1: 
+[assign] #204 justification -1: 
+[assign] #209 justification -1: 
+[assign] #193 clause 26 -27
+[assign] #198 clause 28 -29
+[assign] #203 clause 30 -31
+[assign] #208 clause 32 -33
+[assign] #265 clause 35 -26
+[assign] #236 clause 37 -28
+[assign] (not #274) clause -39 -30
+[assign] (not #258) clause -34 -32
+[eq-expl] #238 root
+[new-match] 0x56425debd920 #285 #223 #238 ; #242
+[new-match] 0x56425debd950 #265 #223 #238 ; #242
+[mk-app] #282 $generated@@84 #238
+[mk-app] #287 not #282
+[mk-app] #288 not #239
+[mk-app] #289 or #287 #288
+[mk-app] #290 not #289
+[mk-app] #291 not #285
+[mk-app] #292 or #291 #290
+[instance] 0x56425debd920 ; 1
+[attach-enode] #282 1
+[assign] (not #289) justification -1: 46
+[end-of-instance]
+[mk-app] #293 $generated@@87 #238
+[mk-app] #294 * #266 #293
+[mk-app] #295 + #242 #294
+[mk-app] #296 = #295 #266
+[mk-app] #297 not #265
+[mk-app] #298 or #297 #296
+[instance] 0x56425debd950 ; 1
+[attach-enode] #293 1
+[attach-enode] #294 1
+[attach-enode] #295 1
+[attach-enode] #296 1
+[mk-app] #299 <= #295 #266
+[mk-app] #300 >= #295 #266
+[assign] #296 justification -1: 35
+[end-of-instance]
+[assign] #282 clause 47 48
+[assign] #299 clause 50 -49
+[assign] #300 clause 51 -49
+[new-match] 0x56425debdd78 #233 #232 #238 ; #293
+[new-match] 0x56425debdda8 #236 #232 #238 ; #293
+[mk-app] #301 not #236
+[mk-app] #302 or #301 #258
+[instance] 0x56425debdda8 ; 2
+[end-of-instance]
+[pop] 1 2
+[mk-app] #3 string
+[mk-app] #4 string
+[mk-app] #3 string
+[mk-app] #4 string
+[pop] 1 1
+[eof]

@@ -11,9 +11,9 @@ import { SolverKind } from "../report/coverage-report.js";
 import type { MinimizerCommand, SolverMinimizer } from "../backends/backend.js";
 import { IS_WIN, resolveExecutableInPath } from "../util/executables.js";
 
-import { Z3WrapperEnv } from "./env.js";
+import { Z3WrapperEnv, Z3WrapperMode } from "./env.js";
 
-export { Z3WrapperEnv };
+export { Z3WrapperEnv, Z3WrapperMode };
 
 // Works in both ESM (import.meta.url) and CJS (esbuild bundle provides __dirname)
 const moduleDir = (() => {

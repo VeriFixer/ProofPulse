@@ -212,7 +212,7 @@ This concludes the paper reproducibility steps. The sections below provide addit
 
 ProofPulse follows a linear pipeline:
 
-1. **Dafny execution** — `dafny-runner.ts` invokes Dafny with `--log-format text --isolate-assertions`, optionally routing Z3 through a minimizer wrapper.
+1. **Dafny execution** — `dafny-runner.ts` invokes Dafny with `--log-format text --isolate-assertions`, routing Z3 through ProofPulse's wrapper. The wrapper checks that each unsat core proves its goal on its own: z3's core leaves out facts whose only part in the proof is a term that triggers a quantifier, and the wrapper finds them in z3's trace (`core/src/minimization/trigger-trace.ts`). With `--minimize` it also minimizes the core.
 2. **Log parsing** — `DafnyReportParser` consumes the structured text log and extracts assertion batches (top assertions, proof dependencies, unused clauses).
 3. **Proof graph construction** — batches are converted to a `ProofGraph` (nodes = source spans, edges = provedBy / unused / call connections).
 4. **Coverage computation** — two passes (`applyCoverageInternal` + `applyCoverageSemantic`) classify each node as `CovComplete`, `CovTest`, or `Uncovered`.

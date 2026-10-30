@@ -48,6 +48,16 @@ export const DAFNY_MESSAGE_RULES: readonly MessageRule[] = [
   rule("sufficient reads clause to read array element", NodeKind.ImplicitCheck),
 ];
 
+/**
+ * An assert statement used as a fact by a later proof. Dafny reports it with
+ * the range of the whole asserted expression, while the assertion itself is
+ * checked (`assertion always holds`) with the ranges of the parts it splits the
+ * expression into: each conjunct, without enclosing parentheses.
+ */
+export function isAssertStatement(message: string): boolean {
+  return message === "assert statement";
+}
+
 /** Kind of one Dafny log message. Unrecognised messages are ordinary code. */
 export function dafnyMessageKind(message: string): NodeKind {
   for (const r of DAFNY_MESSAGE_RULES) {
