@@ -18,6 +18,7 @@ function uncoveredExplanation(type: TokenType): string {
     case TokenType.AssertionManual: return "Manual assertion not covered by proof dependencies.";
     case TokenType.LoopInvariant: return "Loop invariant not covered by proof dependencies.";
     case TokenType.CodeLine: return "Code line not contributing to any proof obligation.";
+    case TokenType.Condition: return "The proof holds whichever way this condition part evaluates: it decides behaviour the contract leaves open.";
     case TokenType.AssertionAutomatic:
     case TokenType.Call:
     case TokenType.Assume:
@@ -35,6 +36,7 @@ function covTestExplanation(type: TokenType): string {
     case TokenType.Postcondition: return "Postcondition not used in calling code (potentially unused method).";
     case TokenType.Precondition: return "Precondition only used in calling tests, unnecessary to prove postconditions.";
     case TokenType.CodeLine: return "Code used only by test assertions, not by postcondition proofs.";
+    case TokenType.Condition: return "Condition part used only by test assertions, not by postcondition proofs.";
     case TokenType.AssertionManual: return "Assertion covered only by test paths, not postcondition proofs.";
     case TokenType.LoopInvariant: return "Loop invariant covered only by test paths, not postcondition proofs.";
     case TokenType.AssertionAutomatic:

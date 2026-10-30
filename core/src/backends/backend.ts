@@ -63,6 +63,8 @@ export interface DafnySpecificOptions {
   backend: VerifierId.Dafny;
   /** Pass --no-abstract-interpretation. */
   noAbstractInterpretation?: boolean;
+  /** Pass --cores: how many solver processes Dafny runs in parallel. */
+  cores?: number;
 }
 
 export type BackendSpecificOptions = DafnySpecificOptions;

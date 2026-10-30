@@ -44,7 +44,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5122
+//::       batchResourceCount: 5247
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|3,20-3,23
@@ -72,7 +72,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5501
+//::       batchResourceCount: 5630
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|4,19-4,24
@@ -100,7 +100,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5580
+//::       batchResourceCount: 5705
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|7,5-7,12
@@ -148,6 +148,30 @@ function Id<T> (a : T) : T {
 //::       isUnused: true
 //::     type: CodeLine
 //::     usedByNumber: 1
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|6,6-6,10
+//::     file: snapshot_test_irrelevant_postconditions.dfy
+//::     start:
+//::       line: 6
+//::       col: 6
+//::     end:
+//::       line: 6
+//::       col: 10
+//::     methodName: Abs
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -207,10 +231,12 @@ function Id<T> (a : T) : T {
 //::   provedBy:
 //::     - top: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|3,20-3,23
 //::       provers:
+//::         - snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|6,6-6,10
 //::         - snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|9,5-9,16
 //::         - snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|13,1-15,1
 //::     - top: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|4,19-4,24
 //::       provers:
+//::         - snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|6,6-6,10
 //::         - snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|7,5-7,12
 //::   proofUnused:
 //::     - top: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|2,11-2,16
@@ -219,6 +245,7 @@ function Id<T> (a : T) : T {
 //::         - snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|4,19-4,24
 //::         - snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|7,5-7,12
 //::         - snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|9,5-9,16
+//::         - snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|6,6-6,10
 //::         - snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|11,1-11,1
 //::     - top: snapshot_test_irrelevant_postconditions.dfy|Abs|correctness|3,20-3,23
 //::       unused:

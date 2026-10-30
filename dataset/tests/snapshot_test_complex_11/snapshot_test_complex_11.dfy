@@ -987,7 +987,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 23
 //::       batchOutcome: Valid
-//::       batchResourceCount: 24125
+//::       batchResourceCount: 24384
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|8,24-8,31
@@ -1062,7 +1062,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
-//::       batchResourceCount: 24226
+//::       batchResourceCount: 24485
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|9,19-9,29
@@ -1187,7 +1187,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
-//::       batchResourceCount: 29913
+//::       batchResourceCount: 29539
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|10,56-10,56
@@ -1608,7 +1608,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 26
 //::       batchOutcome: Valid
-//::       batchResourceCount: 122891
+//::       batchResourceCount: 92974
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|11,33-11,33
@@ -1955,7 +1955,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 27
 //::       batchOutcome: Valid
-//::       batchResourceCount: 64647
+//::       batchResourceCount: 68025
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|12,33-12,33
@@ -2302,7 +2302,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 28
 //::       batchOutcome: Valid
-//::       batchResourceCount: 77452
+//::       batchResourceCount: 65887
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,12
@@ -2524,7 +2524,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 31
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20670
+//::       batchResourceCount: 20450
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|15,23-15,26
@@ -2598,7 +2598,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 32
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20794
+//::       batchResourceCount: 20552
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|15,13-15,27
@@ -2742,7 +2742,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20642
+//::       batchResourceCount: 20447
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,22
@@ -2816,7 +2816,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20766
+//::       batchResourceCount: 20549
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
@@ -2890,7 +2890,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20911
+//::       batchResourceCount: 20830
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
@@ -2964,7 +2964,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 30
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21026
+//::       batchResourceCount: 20942
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
@@ -3033,6 +3033,146 @@ function Max(a: seq<int>) : (m: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 3
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::     file: snapshot_test_complex_11.dfy
+//::     start:
+//::       line: 16
+//::       col: 19
+//::     end:
+//::       line: 16
+//::       col: 26
+//::     methodName: DifferenceMinMax
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
+//::     file: snapshot_test_complex_11.dfy
+//::     start:
+//::       line: 14
+//::       col: 12
+//::     end:
+//::       line: 14
+//::       col: 19
+//::     methodName: DifferenceMinMax
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
 //::     usedByNumber: 3
 //::     topMeta: null
 //::     covStatus: CovComplete
@@ -3108,7 +3248,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21954
+//::       batchResourceCount: 22237
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
@@ -3182,7 +3322,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22137
+//::       batchResourceCount: 22394
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -3256,7 +3396,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
-//::       batchResourceCount: 24532
+//::       batchResourceCount: 25402
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,33-19,33
@@ -3330,7 +3470,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22101
+//::       batchResourceCount: 22346
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,33-19,38
@@ -3404,7 +3544,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22209
+//::       batchResourceCount: 22465
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,9-19,39
@@ -3478,7 +3618,7 @@ function Max(a: seq<int>) : (m: int)
 //::     topMeta:
 //::       batchIndex: 22
 //::       batchOutcome: Valid
-//::       batchResourceCount: 40800
+//::       batchResourceCount: 32687
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|21,12-21,12
@@ -4159,13 +4299,16 @@ function Max(a: seq<int>) : (m: int)
 //::       provers:
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|5,9-5,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|6,9-6,23
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|15,13-15,27
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
 //::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|10,19-10,72
 //::       provers:
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|5,9-5,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|9,19-9,29
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|15,13-15,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
 //::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|11,19-11,39
 //::       provers:
@@ -4173,6 +4316,7 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|5,9-5,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|25,1-32,1
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|10,19-10,72
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|15,13-15,27
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,9-19,39
 //::     - top: snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|12,19-12,39
@@ -4182,6 +4326,7 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|34,1-41,1
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|10,19-10,72
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|11,19-11,39
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,9-19,39
 //::   proofUnused:
@@ -4224,6 +4369,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4276,6 +4423,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4325,6 +4474,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4377,6 +4528,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4428,6 +4581,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4480,6 +4635,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4531,6 +4688,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4583,6 +4742,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4635,6 +4796,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4686,6 +4849,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4738,6 +4903,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4792,6 +4959,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4844,6 +5013,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4896,6 +5067,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -4948,6 +5121,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5000,6 +5175,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5053,6 +5230,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5105,6 +5284,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5157,6 +5338,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5208,6 +5391,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5262,6 +5447,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5314,6 +5501,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5366,6 +5555,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5417,6 +5608,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5471,6 +5664,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5523,6 +5718,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5575,6 +5772,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5627,6 +5826,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5679,6 +5880,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5731,6 +5934,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5783,6 +5988,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,22
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5835,6 +6042,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,22
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -5888,6 +6097,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,33-19,33
@@ -5940,6 +6151,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,33-19,33
@@ -5992,6 +6205,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,33-19,33
@@ -6044,6 +6259,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -6096,6 +6313,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -6148,6 +6367,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -6200,6 +6421,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -6252,6 +6475,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -6304,6 +6529,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -6356,6 +6583,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28
@@ -6408,6 +6637,8 @@ function Max(a: seq<int>) : (m: int)
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,23-17,26
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|17,13-17,27
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|16,19-16,26
+//::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|14,12-14,19
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,16
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,23
 //::         - snapshot_test_complex_11.dfy|DifferenceMinMax|correctness|19,16-19,28

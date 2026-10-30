@@ -94,9 +94,9 @@ export function applyCoverageSemantic(graph: ProofGraph): void {
     }
   }
 
-  // CodeLines: covStatus = covStatusInternal
+  // CodeLines and condition atoms: covStatus = covStatusInternal
   for (const node of allNodes) {
-    if (node.getType() === TokenType.CodeLine) {
+    if (node.getType() === TokenType.CodeLine || node.getType() === TokenType.Condition) {
       node.setCovStatus(node.getCovStatusInternal());
     }
   }

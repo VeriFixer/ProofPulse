@@ -994,7 +994,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 120
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21555
+//::       batchResourceCount: 21695
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|26,27-26,44
@@ -1155,7 +1155,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 121
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21705
+//::       batchResourceCount: 21850
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|26,55-26,72
@@ -1316,7 +1316,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 122
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21842
+//::       batchResourceCount: 21982
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|27,13-28,50
@@ -1477,7 +1477,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 123
 //::       batchOutcome: Valid
-//::       batchResourceCount: 25125
+//::       batchResourceCount: 25265
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|30,31-30,34
@@ -2570,7 +2570,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 94
 //::       batchOutcome: Valid
-//::       batchResourceCount: 29958
+//::       batchResourceCount: 30161
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|33,24-33,32
@@ -2728,13 +2728,13 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
-//::     usedByNumber: 0
+//::     usedByNumber: 4
 //::     topMeta:
 //::       batchIndex: 95
 //::       batchOutcome: Valid
-//::       batchResourceCount: 29981
+//::       batchResourceCount: 30209
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|34,60-34,63
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -5113,7 +5113,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 96
 //::       batchOutcome: Valid
-//::       batchResourceCount: 62136
+//::       batchResourceCount: 62193
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
@@ -5550,7 +5550,164 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 24354
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
+//::     file: snapshot_test_complex_13.dfy
+//::     start:
+//::       line: 32
+//::       col: 11
+//::     end:
+//::       line: 32
+//::       col: 18
+//::     methodName: multiply
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 9
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -5866,7 +6023,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 119
 //::       batchOutcome: Valid
-//::       batchResourceCount: 25217
+//::       batchResourceCount: 25203
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -6186,7 +6343,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 46
 //::       batchOutcome: Valid
-//::       batchResourceCount: 39774
+//::       batchResourceCount: 40155
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|40,28-40,36
@@ -6344,13 +6501,13 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
-//::     usedByNumber: 0
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 47
 //::       batchOutcome: Valid
-//::       batchResourceCount: 39916
+//::       batchResourceCount: 39861
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|41,64-41,67
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -6509,7 +6666,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 118
 //::       batchOutcome: Valid
-//::       batchResourceCount: 26370
+//::       batchResourceCount: 26328
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|42,17-42,17
@@ -7078,7 +7235,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 108
 //::       batchOutcome: Valid
-//::       batchResourceCount: 27277
+//::       batchResourceCount: 27182
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|42,20-42,20
@@ -7239,7 +7396,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 109
 //::       batchOutcome: Valid
-//::       batchResourceCount: 27935
+//::       batchResourceCount: 27974
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|42,23-42,23
@@ -7400,7 +7557,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 110
 //::       batchOutcome: Valid
-//::       batchResourceCount: 27927
+//::       batchResourceCount: 27940
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|42,55-42,55
@@ -7561,7 +7718,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 111
 //::       batchOutcome: Valid
-//::       batchResourceCount: 28371
+//::       batchResourceCount: 28380
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|42,59-42,59
@@ -7722,7 +7879,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 112
 //::       batchOutcome: Valid
-//::       batchResourceCount: 28555
+//::       batchResourceCount: 28568
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|42,30-42,61
@@ -8431,7 +8588,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 117
 //::       batchOutcome: Valid
-//::       batchResourceCount: 28110
+//::       batchResourceCount: 28012
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|41,23-42,61
@@ -8729,7 +8886,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 48
 //::       batchOutcome: Valid
-//::       batchResourceCount: 42791
+//::       batchResourceCount: 42617
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|44,17-44,17
@@ -9298,7 +9455,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 98
 //::       batchOutcome: Valid
-//::       batchResourceCount: 30822
+//::       batchResourceCount: 30785
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|44,20-44,20
@@ -9459,7 +9616,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 99
 //::       batchOutcome: Valid
-//::       batchResourceCount: 31839
+//::       batchResourceCount: 31843
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|44,22-44,22
@@ -9620,7 +9777,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 100
 //::       batchOutcome: Valid
-//::       batchResourceCount: 31814
+//::       batchResourceCount: 31852
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|44,54-44,54
@@ -9781,7 +9938,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 101
 //::       batchOutcome: Valid
-//::       batchResourceCount: 31626
+//::       batchResourceCount: 31656
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|44,57-44,57
@@ -9942,7 +10099,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 102
 //::       batchOutcome: Valid
-//::       batchResourceCount: 31804
+//::       batchResourceCount: 31842
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
@@ -10651,7 +10808,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 107
 //::       batchOutcome: Valid
-//::       batchResourceCount: 31333
+//::       batchResourceCount: 31297
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
@@ -10949,7 +11106,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 49
 //::       batchOutcome: Valid
-//::       batchResourceCount: 107108
+//::       batchResourceCount: 109355
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
@@ -11384,9 +11541,166 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 97
 //::       batchOutcome: Valid
-//::       batchResourceCount: 32666
+//::       batchResourceCount: 32638
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
+//::     file: snapshot_test_complex_13.dfy
+//::     start:
+//::       line: 39
+//::       col: 15
+//::     end:
+//::       line: 39
+//::       col: 22
+//::     methodName: multiply
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 6
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -12110,7 +12424,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 28899
+//::       batchResourceCount: 28895
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -12271,7 +12585,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 29967
+//::       batchResourceCount: 30122
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -12432,7 +12746,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 30383
+//::       batchResourceCount: 30274
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,20
@@ -12593,7 +12907,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 30608
+//::       batchResourceCount: 30382
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,26
@@ -13047,7 +13361,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 91
 //::       batchOutcome: Valid
-//::       batchResourceCount: 33363
+//::       batchResourceCount: 33369
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|49,27-49,40
@@ -13367,7 +13681,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 39
 //::       batchOutcome: Valid
-//::       batchResourceCount: 42662
+//::       batchResourceCount: 43766
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|49,32-49,40
@@ -13525,11 +13839,11 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
-//::     usedByNumber: 1
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 40
 //::       batchOutcome: Valid
-//::       batchResourceCount: 42732
+//::       batchResourceCount: 42561
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|50,68-50,71
@@ -13690,7 +14004,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 90
 //::       batchOutcome: Valid
-//::       batchResourceCount: 34598
+//::       batchResourceCount: 34517
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|51,21-51,21
@@ -14259,7 +14573,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 80
 //::       batchOutcome: Valid
-//::       batchResourceCount: 35366
+//::       batchResourceCount: 35513
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|51,24-51,24
@@ -14420,7 +14734,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 81
 //::       batchOutcome: Valid
-//::       batchResourceCount: 35678
+//::       batchResourceCount: 35953
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|51,27-51,27
@@ -14581,7 +14895,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 82
 //::       batchOutcome: Valid
-//::       batchResourceCount: 36566
+//::       batchResourceCount: 36641
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|51,59-51,59
@@ -14742,7 +15056,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 83
 //::       batchOutcome: Valid
-//::       batchResourceCount: 37873
+//::       batchResourceCount: 38143
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|51,63-51,63
@@ -14903,7 +15217,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 84
 //::       batchOutcome: Valid
-//::       batchResourceCount: 38073
+//::       batchResourceCount: 38341
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|51,34-51,65
@@ -15612,7 +15926,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 89
 //::       batchOutcome: Valid
-//::       batchResourceCount: 37072
+//::       batchResourceCount: 37205
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|50,27-51,65
@@ -15911,7 +16225,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 41
 //::       batchOutcome: Valid
-//::       batchResourceCount: 110671
+//::       batchResourceCount: 107803
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|53,21-53,21
@@ -16480,7 +16794,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 70
 //::       batchOutcome: Valid
-//::       batchResourceCount: 39191
+//::       batchResourceCount: 38966
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|53,24-53,24
@@ -16641,7 +16955,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 71
 //::       batchOutcome: Valid
-//::       batchResourceCount: 39302
+//::       batchResourceCount: 39083
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|53,26-53,26
@@ -16802,7 +17116,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 72
 //::       batchOutcome: Valid
-//::       batchResourceCount: 39636
+//::       batchResourceCount: 39574
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|53,58-53,58
@@ -16963,7 +17277,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 73
 //::       batchOutcome: Valid
-//::       batchResourceCount: 41216
+//::       batchResourceCount: 41160
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|53,61-53,61
@@ -17124,7 +17438,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 74
 //::       batchOutcome: Valid
-//::       batchResourceCount: 41399
+//::       batchResourceCount: 41343
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|53,33-53,63
@@ -17833,7 +18147,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 79
 //::       batchOutcome: Valid
-//::       batchResourceCount: 40360
+//::       batchResourceCount: 40574
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|52,27-53,63
@@ -18132,7 +18446,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 42
 //::       batchOutcome: Valid
-//::       batchResourceCount: 103890
+//::       batchResourceCount: 103365
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|54,52-54,52
@@ -18293,7 +18607,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 50
 //::       batchOutcome: Valid
-//::       batchResourceCount: 42825
+//::       batchResourceCount: 42811
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|54,55-54,55
@@ -18454,7 +18768,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 51
 //::       batchOutcome: Valid
-//::       batchResourceCount: 43002
+//::       batchResourceCount: 42984
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|54,27-54,56
@@ -19163,7 +19477,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 56
 //::       batchOutcome: Valid
-//::       batchResourceCount: 41785
+//::       batchResourceCount: 41813
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,21-55,21
@@ -19732,7 +20046,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 57
 //::       batchOutcome: Valid
-//::       batchResourceCount: 41920
+//::       batchResourceCount: 41854
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,24-55,24
@@ -19893,7 +20207,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 58
 //::       batchOutcome: Valid
-//::       batchResourceCount: 42026
+//::       batchResourceCount: 41968
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,26-55,26
@@ -20054,7 +20368,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 59
 //::       batchOutcome: Valid
-//::       batchResourceCount: 42028
+//::       batchResourceCount: 41968
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,60-55,60
@@ -20215,7 +20529,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 60
 //::       batchOutcome: Valid
-//::       batchResourceCount: 42008
+//::       batchResourceCount: 41942
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,63-55,63
@@ -20376,7 +20690,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 61
 //::       batchOutcome: Valid
-//::       batchResourceCount: 42070
+//::       batchResourceCount: 41994
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,66-55,66
@@ -20537,7 +20851,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 62
 //::       batchOutcome: Valid
-//::       batchResourceCount: 43703
+//::       batchResourceCount: 43683
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
@@ -21383,7 +21697,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 68
 //::       batchOutcome: Valid
-//::       batchResourceCount: 42274
+//::       batchResourceCount: 42318
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
@@ -21682,7 +21996,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 43
 //::       batchOutcome: Valid
-//::       batchResourceCount: 201392
+//::       batchResourceCount: 127914
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
@@ -22117,9 +22431,166 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 69
 //::       batchOutcome: Valid
-//::       batchResourceCount: 42543
+//::       batchResourceCount: 42475
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
+//::     file: snapshot_test_complex_13.dfy
+//::     start:
+//::       line: 48
+//::       col: 19
+//::     end:
+//::       line: 48
+//::       col: 26
+//::     methodName: multiply
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 4
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::     file: snapshot_test_complex_13.dfy
 //::     start:
@@ -22686,7 +23157,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
-//::       batchResourceCount: 37294
+//::       batchResourceCount: 37231
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
@@ -22847,7 +23318,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
-//::       batchResourceCount: 37373
+//::       batchResourceCount: 37384
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -23169,7 +23640,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 27
 //::       batchOutcome: Valid
-//::       batchResourceCount: 37554
+//::       batchResourceCount: 37562
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,28-57,28
@@ -23738,7 +24209,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 28
 //::       batchOutcome: Valid
-//::       batchResourceCount: 37650
+//::       batchResourceCount: 37659
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,31-57,31
@@ -23899,7 +24370,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
-//::       batchResourceCount: 37749
+//::       batchResourceCount: 37747
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,33-57,33
@@ -24221,7 +24692,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 31
 //::       batchOutcome: Valid
-//::       batchResourceCount: 37923
+//::       batchResourceCount: 37842
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,41-57,41
@@ -24382,7 +24853,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 32
 //::       batchOutcome: Valid
-//::       batchResourceCount: 38130
+//::       batchResourceCount: 38048
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,43-57,43
@@ -24543,7 +25014,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 33
 //::       batchOutcome: Valid
-//::       batchResourceCount: 40307
+//::       batchResourceCount: 40250
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,48-57,48
@@ -24704,7 +25175,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 34
 //::       batchOutcome: Valid
-//::       batchResourceCount: 38175
+//::       batchResourceCount: 38211
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,51-57,51
@@ -24865,7 +25336,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 35
 //::       batchOutcome: Valid
-//::       batchResourceCount: 38929
+//::       batchResourceCount: 38984
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,53-57,53
@@ -25026,7 +25497,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 36
 //::       batchOutcome: Valid
-//::       batchResourceCount: 38592
+//::       batchResourceCount: 38595
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,55
@@ -25637,7 +26108,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 38
 //::       batchOutcome: Valid
-//::       batchResourceCount: 40225
+//::       batchResourceCount: 40119
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|61,13-61,21
@@ -25955,7 +26426,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 45
 //::       batchOutcome: Valid
-//::       batchResourceCount: 38001
+//::       batchResourceCount: 37892
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|63,9-63,17
@@ -26273,7 +26744,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     topMeta:
 //::       batchIndex: 93
 //::       batchOutcome: Valid
-//::       batchResourceCount: 29037
+//::       batchResourceCount: 29275
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_13.dfy|multiply|correctness|65,1-65,1
@@ -26765,6 +27236,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|26,27-26,44
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|26,55-26,72
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|33,19-33,24
 //::       provers:
@@ -26773,6 +27245,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|33,24-33,32
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|31,9-31,15
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|63,9-63,17
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|35,13-35,13
 //::       provers:
@@ -26791,9 +27264,13 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|31,9-31,15
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|41,23-42,61
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|63,9-63,17
+//::     - top: snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::       provers:
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|33,24-33,32
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,28
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
@@ -26801,6 +27278,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|40,28-40,36
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|61,13-61,21
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|42,17-42,17
 //::       provers:
@@ -26808,12 +27286,14 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|42,20-42,20
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|30,5-30,42
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|33,24-33,32
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|42,23-42,23
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|30,5-30,42
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|42,30-42,61
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|25,14-25,31
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|33,24-33,32
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|41,23-42,61
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
@@ -26824,6 +27304,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|44,20-44,20
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|30,5-30,42
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|33,19-33,24
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|44,22-44,22
 //::       provers:
@@ -26835,25 +27316,32 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|25,14-25,31
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|10,1-21,1
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|49,32-49,40
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|52,27-53,63
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|61,13-61,21
+//::     - top: snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::       provers:
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|40,28-40,36
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|30,5-30,42
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|30,5-30,42
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|33,19-33,24
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|30,5-30,42
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,28
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,20
 //::       provers:
@@ -26865,6 +27353,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|49,32-49,40
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|58,17-58,25
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|51,21-51,21
 //::       provers:
@@ -26878,6 +27367,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|51,34-51,65
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|25,14-25,31
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|33,24-33,32
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|50,27-51,65
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|30,5-30,42
@@ -26899,6 +27389,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|53,33-53,63
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|25,14-25,31
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|40,28-40,36
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|52,27-53,63
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|30,5-30,42
@@ -26914,6 +27406,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|54,27-54,56
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|25,14-25,31
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|55,21-55,21
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
@@ -26936,6 +27430,8 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|49,27-49,40
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|25,14-25,31
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|1,1-8,1
@@ -26943,8 +27439,12 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|10,1-21,1
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|30,5-30,42
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,55
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|58,17-58,25
+//::     - top: snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::       provers:
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|49,32-49,40
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::       provers:
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
@@ -26968,9 +27468,11 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|57,41-57,41
 //::       provers:
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|57,43-57,43
 //::       provers:
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|49,27-49,32
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|57,51-57,51
 //::       provers:
@@ -26978,6 +27480,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,43-57,43
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|57,53-57,53
 //::       provers:
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
 //::     - top: snapshot_test_complex_13.dfy|multiply|correctness|48,13-60,13
 //::       provers:
@@ -27015,6 +27518,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -27036,6 +27540,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -27073,6 +27578,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -27118,6 +27624,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -27139,6 +27646,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -27176,6 +27684,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -27221,6 +27730,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -27242,6 +27752,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -27279,6 +27790,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -27324,6 +27836,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -27345,6 +27858,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -27382,6 +27896,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -27447,6 +27962,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -27484,6 +28000,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -27531,6 +28048,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -27552,6 +28070,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -27589,6 +28108,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -27635,6 +28155,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -27656,6 +28177,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -27693,6 +28215,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -27738,6 +28261,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -27759,6 +28283,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -27796,6 +28321,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -27842,6 +28368,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -27863,6 +28390,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -27900,6 +28428,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -27947,6 +28476,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -27968,6 +28498,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -28005,6 +28536,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -28051,6 +28583,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -28072,6 +28605,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -28109,6 +28643,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -28153,6 +28688,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -28174,6 +28710,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -28211,6 +28748,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -28256,6 +28794,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -28277,6 +28816,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -28314,6 +28854,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -28360,6 +28901,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -28381,6 +28923,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -28418,6 +28961,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -28464,6 +29008,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -28485,6 +29030,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -28522,6 +29068,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -28569,6 +29116,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -28590,6 +29138,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -28627,6 +29176,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -28673,6 +29223,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -28694,6 +29245,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -28731,6 +29283,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -28779,6 +29332,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -28800,6 +29354,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -28837,6 +29392,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -28884,6 +29440,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,28
@@ -28904,6 +29461,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -28941,6 +29499,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -28988,6 +29547,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,28-40,36
@@ -29007,6 +29567,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -29044,6 +29605,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -29092,6 +29654,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,28
@@ -29111,6 +29674,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -29148,6 +29712,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -29196,6 +29761,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -29216,6 +29782,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -29253,6 +29820,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -29299,6 +29867,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -29320,6 +29889,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -29357,6 +29927,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -29393,7 +29964,6 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|33,29-33,32
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|33,19-33,32
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|33,19-33,24
-//::         - snapshot_test_complex_13.dfy|multiply|correctness|33,24-33,32
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,60-34,63
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,13-35,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,16-35,16
@@ -29403,6 +29973,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -29423,6 +29994,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -29460,6 +30032,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -29506,6 +30079,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -29526,6 +30100,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -29563,6 +30138,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -29610,6 +30186,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -29630,6 +30207,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -29667,6 +30245,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -29714,6 +30293,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -29734,6 +30314,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -29771,6 +30352,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -29818,6 +30400,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -29839,6 +30422,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -29876,6 +30460,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -29923,6 +30508,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -29944,6 +30530,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -29981,6 +30568,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -30027,6 +30615,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -30048,6 +30637,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -30085,6 +30675,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -30150,6 +30741,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -30187,6 +30779,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -30233,6 +30826,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,28
@@ -30252,6 +30846,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -30289,6 +30884,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -30335,6 +30931,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -30355,6 +30952,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -30392,6 +30990,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -30439,6 +31038,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -30459,6 +31059,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -30496,6 +31097,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -30543,6 +31145,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -30564,6 +31167,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -30601,6 +31205,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -30648,6 +31253,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,28
@@ -30668,6 +31274,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -30705,6 +31312,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -30753,6 +31361,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -30774,6 +31383,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -30811,6 +31421,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -30857,6 +31468,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -30878,6 +31490,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -30915,6 +31528,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -30981,6 +31595,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -31017,6 +31632,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -31063,6 +31679,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -31119,6 +31736,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -31165,6 +31783,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -31186,6 +31805,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -31222,6 +31842,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -31269,6 +31890,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -31290,6 +31912,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -31326,6 +31949,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -31373,6 +31997,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -31394,6 +32019,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -31429,6 +32055,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -31477,6 +32104,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -31498,6 +32126,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -31533,6 +32162,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -31581,6 +32211,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -31602,6 +32233,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -31638,6 +32270,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -31685,6 +32318,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -31706,6 +32340,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -31743,6 +32378,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -31790,6 +32426,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -31811,6 +32448,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -31846,6 +32484,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -31892,6 +32531,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -31913,6 +32553,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -31949,6 +32590,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -31996,6 +32638,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -32017,6 +32660,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -32053,6 +32697,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -32100,6 +32745,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -32121,6 +32767,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -32157,6 +32804,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -32204,6 +32852,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -32225,6 +32874,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -32262,6 +32912,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -32308,6 +32959,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -32329,6 +32981,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -32366,6 +33019,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -32413,6 +33067,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -32434,6 +33089,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -32471,6 +33127,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -32518,6 +33175,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -32539,6 +33197,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -32574,6 +33233,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -32621,6 +33281,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -32642,6 +33303,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -32677,6 +33339,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -32724,6 +33387,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -32745,6 +33409,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -32780,6 +33445,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -32827,6 +33493,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -32848,6 +33515,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -32884,6 +33552,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -32931,6 +33600,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -32952,6 +33622,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -32989,6 +33660,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -33035,6 +33707,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -33056,6 +33729,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -33093,6 +33767,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -33140,6 +33815,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -33161,6 +33837,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -33196,6 +33873,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -33243,6 +33921,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -33264,6 +33943,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -33299,6 +33979,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -33346,6 +34027,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -33367,6 +34049,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -33404,6 +34087,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -33451,6 +34135,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -33472,6 +34157,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -33509,6 +34195,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -33556,6 +34243,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -33577,6 +34265,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -33612,6 +34301,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -33659,6 +34349,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -33680,6 +34371,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -33715,6 +34407,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -33762,6 +34455,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -33783,6 +34477,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -33818,6 +34513,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -33865,6 +34561,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -33886,6 +34583,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -33921,6 +34619,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -33968,6 +34667,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -33989,6 +34689,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -34024,6 +34725,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -34071,6 +34773,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -34092,6 +34795,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -34129,6 +34833,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -34176,6 +34881,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -34197,6 +34903,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -34232,6 +34939,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -34281,6 +34989,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -34302,6 +35011,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -34339,6 +35049,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -34386,6 +35097,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -34407,6 +35119,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -34444,6 +35157,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -34491,6 +35205,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -34512,6 +35227,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -34548,6 +35264,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,23
@@ -34594,6 +35311,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -34615,6 +35333,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -34651,6 +35370,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,23
@@ -34697,6 +35417,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -34718,6 +35439,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -34754,6 +35476,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -34800,6 +35523,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -34821,6 +35545,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -34858,6 +35583,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -34905,6 +35631,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -34926,6 +35653,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -34962,6 +35690,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -35008,6 +35737,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -35029,6 +35759,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -35065,6 +35796,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -35111,6 +35843,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -35132,6 +35865,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -35169,6 +35903,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -35236,6 +35971,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,19-47,19
@@ -35272,6 +36008,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -35318,6 +36055,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -35339,6 +36077,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -35421,6 +36160,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -35442,6 +36182,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -35479,6 +36220,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -35524,6 +36266,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -35545,6 +36288,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -35582,6 +36326,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -35627,6 +36372,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -35684,6 +36430,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -35730,6 +36477,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -35751,6 +36499,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -35788,6 +36537,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -35833,6 +36583,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -35854,6 +36605,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -35891,6 +36643,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22
@@ -35936,6 +36689,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|35,26-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|34,19-35,57
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|32,15-32,18
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|32,11-32,18
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|37,13-37,19
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,33-40,36
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|40,23-40,36
@@ -35957,6 +36711,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|44,29-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|43,23-44,59
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|39,19-39,22
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|39,15-39,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|46,17-46,22
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,13-47,13
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|47,16-47,16
@@ -35994,6 +36749,7 @@ method multiply(m1: array2<int>, m2: array2<int>) returns (m3: array2<int>)
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|55,31-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|54,27-55,67
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|48,23-48,26
+//::         - snapshot_test_complex_13.dfy|multiply|correctness|48,19-48,26
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,17-57,17
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,20-57,20
 //::         - snapshot_test_complex_13.dfy|multiply|correctness|57,22-57,22

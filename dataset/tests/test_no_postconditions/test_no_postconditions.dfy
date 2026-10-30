@@ -15,7 +15,7 @@ function Id<T> (a : T) : T {
 //::: Description - Code lines should appear uncovered
 //::: L1 - CovComplete
 //::: L2 - CovComplete
-//::: L3 - CovComplete
+//::: L3 - Uncovered
 //::: L4 - Uncovered
 //::: L5 - CovComplete
 //::: L6 - Uncovered

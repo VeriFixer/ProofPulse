@@ -85,7 +85,7 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12068
+//::       batchResourceCount: 12184
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -186,7 +186,7 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9722
+//::       batchResourceCount: 9705
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -223,7 +223,7 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9778
+//::       batchResourceCount: 9761
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: >-
@@ -359,7 +359,7 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11526
+//::       batchResourceCount: 11625
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -431,6 +431,38 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
+//::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,20
+//::     file: snapshot_test_cascading_inequality_invariant.dfy
+//::     start:
+//::       line: 9
+//::       col: 12
+//::     end:
+//::       line: 9
+//::       col: 20
+//::     methodName: ContainsK
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
 //::       snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
 //::     file: snapshot_test_cascading_inequality_invariant.dfy
 //::     start:
@@ -490,12 +522,16 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::         - >-
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,20
+//::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
 //::     - top: >-
 //::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::       provers:
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|4,5-4,20
+//::         - >-
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,20
 //::   proofUnused:
 //::     - top: >-
 //::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|5,14-5,14
@@ -520,6 +556,8 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
+//::         - >-
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,20
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
 //::     - top: >-
@@ -569,6 +607,8 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
 //::         - >-
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,20
+//::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
 //::     - top: >-
 //::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|6,24-6,31
@@ -593,6 +633,8 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
+//::         - >-
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,20
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
 //::     - top: >-
@@ -619,6 +661,8 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
 //::         - >-
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,20
+//::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
 //::     - top: >-
 //::         snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
@@ -643,6 +687,8 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,15
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
+//::         - >-
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,20
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
 //::         - >-
@@ -670,6 +716,8 @@ method ContainsK(s: seq<int>, k: int) returns (result: bool)
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|7,19-7,67
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|10,13-10,27
+//::         - >-
+//::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|9,12-9,20
 //::         - >-
 //::           snapshot_test_cascading_inequality_invariant.dfy|ContainsK|correctness|14,1-14,1
 //::   connections: []

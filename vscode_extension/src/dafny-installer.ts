@@ -8,11 +8,18 @@ import { execSync } from "child_process";
 /** Button label of the "no pre-built Dafny" warning. */
 const OPEN_SETTINGS_ACTION = "Open Settings";
 
+/** Release of the ProofPulse Dafny build the extension installs. */
+const DAFNY_RELEASE = "0.2.0-proofpulse";
+const RELEASE_BASE = `https://github.com/VeriFixer/dafny_proofpulse/releases/download/v${DAFNY_RELEASE}/dafny-${DAFNY_RELEASE}`;
+
+/** Install folders are named after the release, so a new release is downloaded again. */
+const INSTALL_DIR_PREFIX = "dafny-proofpulse";
+
 /** GitHub release zip URL for each platform */
 const RELEASE_URLS: Record<string, string> = {
-  "linux-x64": "https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-x64-ubuntu-22.04.zip",
-  "darwin-arm64": "https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-arm64-macos-14.zip",
-  "win32-x64": "https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-x64-windows-2022.zip",
+  "linux-x64": `${RELEASE_BASE}-x64-ubuntu-22.04.zip`,
+  "darwin-arm64": `${RELEASE_BASE}-arm64-macos-14.zip`,
+  "win32-x64": `${RELEASE_BASE}-x64-windows-2022.zip`,
 };
 
 function getPlatformKey(): string | undefined {
@@ -26,7 +33,18 @@ function getPlatformKey(): string | undefined {
 
 /** Where we install Dafny inside the extension's globalStorage */
 export function getInstallDir(context: vscode.ExtensionContext): string {
-  return path.join(context.globalStorageUri.fsPath, "dafny-proofpulse");
+  return path.join(context.globalStorageUri.fsPath, `${INSTALL_DIR_PREFIX}-${DAFNY_RELEASE}`);
+}
+
+/** Remove installs of earlier releases. */
+function removeOldInstalls(context: vscode.ExtensionContext): void {
+  const storage = context.globalStorageUri.fsPath;
+  const current = path.basename(getInstallDir(context));
+  for (const entry of fs.readdirSync(storage)) {
+    if (entry.startsWith(INSTALL_DIR_PREFIX) && entry !== current) {
+      try { fs.rmSync(path.join(storage, entry), { recursive: true, force: true }); } catch { /* ignore */ }
+    }
+  }
 }
 
 /** Path to the dafny binary inside our managed install */
@@ -161,6 +179,7 @@ export async function installDafny(context: vscode.ExtensionContext): Promise<st
           fs.chmodSync(bin, 0o755);
         }
 
+        removeOldInstalls(context);
         progress.report({ message: "Dafny ready ✓", increment: 10 });
         vscode.window.showInformationMessage("ProofPulse: Custom Dafny 4.11.1 installed and ready.");
         return bin;

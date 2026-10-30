@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { classifyPostcondition, classifyPrecondition, classifyInvariant, classifySpec } from "../classifier.js";
+import { classifyPostcondition, classifyPrecondition, classifyInvariant, classifySpec, classifyMethods } from "../classifier.js";
 import { TokenType, CovStatus, UnitKind, type NodeData, ProofNode, ProofGraph, nodeKindForTokenType } from "@proofpulse/core";
 import { Classification, PreconditionNeed, SpecStrength } from "../types.js";
 
@@ -21,6 +21,7 @@ function prooftextForType(type: TokenType): string {
     case TokenType.Call: return "ensures clause at foo(1,1)-(1,5)";
     case TokenType.AssertionManual: return "assertion always holds";
     case TokenType.AssertionAutomatic: return "index in range";
+    case TokenType.Condition: return "condition atom";
     default: return "some code line";
   }
 }
@@ -28,14 +29,14 @@ function prooftextForType(type: TokenType): string {
 /** Build a ProofGraph from specs. Postcondition/LoopInvariant types are added as tops.
  * Each node's kind is derived from its TokenType via nodeKindForTokenType.
  * provedByLines maps a top's line to an array of prover lines (for building edges). */
-function buildGraph(specs: { type: TokenType; covStatus: CovStatus; line?: number; prooftext?: string; isTop?: boolean; methodType?: UnitKind }[], provedByLines?: Record<number, number[]>): ProofGraph {
+function buildGraph(specs: { type: TokenType; covStatus: CovStatus; line?: number; prooftext?: string; isTop?: boolean; methodType?: UnitKind; method?: string }[], provedByLines?: Record<number, number[]>): ProofGraph {
   const graph = new ProofGraph();
   const nodesByLine = new Map<number, ProofNode>();
   for (const s of specs) {
     const line = s.line ?? 1;
     const prooftext = s.prooftext || prooftextForType(s.type);
     const methodType = s.methodType ?? UnitKind.Correctness;
-    const node = new ProofNode("test.dfy", { line, col: 0 }, { line, col: 10 }, "", methodType, prooftext, nodeKindForTokenType(s.type));
+    const node = new ProofNode("test.dfy", { line, col: 0 }, { line, col: 10 }, s.method ?? "", methodType, prooftext, nodeKindForTokenType(s.type));
     node.covStatus = s.covStatus;
     node.covStatusInternal = s.covStatus;
     if (!graph.hasNode(node.getId())) {
@@ -201,5 +202,49 @@ describe("classifySpec (overall)", () => {
   it("weak when no postconditions", () => {
     const graph = buildGraph([]);
     expect(classifySpec(graph)).toBe(Classification.Weak);
+  });
+});
+
+describe("condition atoms", () => {
+  it("an unused condition atom makes the postcondition weak", () => {
+    const graph = buildGraph([
+      { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1 },
+      { type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 2 },
+      { type: TokenType.Condition, covStatus: CovStatus.Uncovered, line: 3 },
+    ], { 1: [2, 3] });
+    expect(classifyPostcondition(graph)).toBe(SpecStrength.Weak);
+  });
+
+  it("used condition atoms keep the postcondition strong", () => {
+    const graph = buildGraph([
+      { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1 },
+      { type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 2 },
+      { type: TokenType.Condition, covStatus: CovStatus.CovComplete, line: 3 },
+    ], { 1: [2, 3] });
+    expect(classifyPostcondition(graph)).toBe(SpecStrength.Strong);
+  });
+});
+
+describe("classifyMethods", () => {
+  it("classifies each method on its own", () => {
+    const graph = buildGraph([
+      { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1, method: "Good" },
+      { type: TokenType.CodeLine, covStatus: CovStatus.CovComplete, line: 2, method: "Good" },
+      { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 3, method: "M.C.Bad" },
+      { type: TokenType.CodeLine, covStatus: CovStatus.Uncovered, line: 4, method: "M.C.Bad" },
+    ], { 1: [2], 3: [4] });
+    expect(classifySpec(graph)).toBe(Classification.Weak);
+    const methods = classifyMethods(graph, graph.getAllNodes());
+    expect(methods.map(m => [m.method, m.classification, m.categories.postcondition])).toEqual([
+      ["Good", Classification.Strong, SpecStrength.Strong],
+      ["M.C.Bad", Classification.Weak, SpecStrength.Weak],
+    ]);
+  });
+
+  it("skips well-formedness-only methods", () => {
+    const graph = buildGraph([
+      { type: TokenType.Postcondition, covStatus: CovStatus.CovComplete, line: 1, method: "F", methodType: UnitKind.WellFormedness },
+    ]);
+    expect(classifyMethods(graph, graph.getAllNodes())).toEqual([]);
   });
 });

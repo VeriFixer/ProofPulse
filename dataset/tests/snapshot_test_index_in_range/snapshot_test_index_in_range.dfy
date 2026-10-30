@@ -124,7 +124,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14121
+//::       batchResourceCount: 14261
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|3,13-3,59
@@ -169,7 +169,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15291
+//::       batchResourceCount: 15431
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|5,9-5,14
@@ -425,7 +425,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15966
+//::       batchResourceCount: 16107
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|9,24-9,31
@@ -467,13 +467,13 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16064
+//::       batchResourceCount: 16036
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,49
 //::     file: snapshot_test_index_in_range.dfy
 //::     start:
@@ -688,7 +688,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20676
+//::       batchResourceCount: 20639
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
@@ -777,7 +777,48 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 14890
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
+//::     file: snapshot_test_index_in_range.dfy
+//::     start:
+//::       line: 8
+//::       col: 11
+//::     end:
+//::       line: 8
+//::       col: 17
+//::     methodName: zeroVector
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 3
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::     file: snapshot_test_index_in_range.dfy
 //::     start:
@@ -880,7 +921,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14296
+//::       batchResourceCount: 14289
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
@@ -946,7 +987,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15010
+//::       batchResourceCount: 14996
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1093,7 +1134,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15699
+//::       batchResourceCount: 15671
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_index_in_range.dfy|zeroVector|correctness|15,1-15,1
@@ -1184,6 +1225,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|6,5-6,28
 //::     - top: snapshot_test_index_in_range.dfy|zeroVector|correctness|3,13-3,59
 //::       provers:
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::     - top: snapshot_test_index_in_range.dfy|zeroVector|correctness|9,19-9,24
 //::       provers:
@@ -1192,6 +1234,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::     - top: snapshot_test_index_in_range.dfy|zeroVector|correctness|9,24-9,31
 //::       provers:
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|7,9-7,15
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|13,9-13,19
 //::     - top: snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,49
 //::       provers:
@@ -1205,12 +1248,16 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|7,9-7,15
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|13,9-13,19
+//::     - top: snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::       provers:
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|9,24-9,31
 //::     - top: snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::       provers:
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|6,5-6,28
 //::     - top: snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::       provers:
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|6,5-6,28
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|9,19-9,24
 //::     - top: snapshot_test_index_in_range.dfy|zeroVector|correctness|8,5-14,5
 //::       provers:
@@ -1232,6 +1279,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,53
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1252,6 +1300,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,53
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1294,6 +1343,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,53
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1314,6 +1364,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,53
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1335,6 +1386,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,53
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1357,6 +1409,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,53
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1376,6 +1429,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,49
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1397,6 +1451,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,53
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1420,6 +1475,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,53
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1441,6 +1497,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,53
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19
@@ -1468,6 +1525,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,5-14,5
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|15,1-15,1
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|9,19-9,24
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::     - top: snapshot_test_index_in_range.dfy|zeroVector|correctness|8,5-14,5
 //::       unused:
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|2,13-2,28
@@ -1484,6 +1542,7 @@ method zeroVector(n : array<int>) returns (ex:array<int>)
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,49-10,53
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|10,19-10,58
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,15-8,17
+//::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|8,11-8,17
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,9
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,13
 //::         - snapshot_test_index_in_range.dfy|zeroVector|correctness|12,9-12,19

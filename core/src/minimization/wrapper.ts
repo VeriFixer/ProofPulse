@@ -27,6 +27,10 @@ import { Z3WrapperEnv, Z3WrapperMode } from "./env.js";
 
 const SENTINEL = "__PP_SENTINEL__";
 
+/** A re-run gets this many times the live query's time, and at least RERUN_MIN_MS. */
+const RERUN_FACTOR = 10;
+const RERUN_MIN_MS = 2000;
+
 
 // ---------------------------------------------------------------------------
 // Config from environment
@@ -143,6 +147,11 @@ function currentContext(frames: SolverState): Command[] {
 // Main
 // ---------------------------------------------------------------------------
 
+/** Time limit for one re-run of a query that the live z3 answered in `queryMs`. */
+export function rerunTimeoutMs(queryMs: number): number {
+  return Math.max(RERUN_MIN_MS, RERUN_FACTOR * queryMs);
+}
+
 export async function main(): Promise<number> {
   // Handle -version: Boogie calls this first
   if (process.argv.includes("-version")) {
@@ -170,6 +179,7 @@ export async function main(): Promise<number> {
   // Track solver state for minimization
   const frames: SolverState = [[]];
   let timeoutMs: number | undefined;
+  let lastCheckSatMs = 0;
 
   // Track last check-sat for get-unsat-core pairing
   let lastCheckSatCmd: Command = { text: "(check-sat)", head: SmtCommand.CheckSat, label: null };
@@ -239,8 +249,10 @@ export async function main(): Promise<number> {
 
       // --- Query block: check-sat possibly followed by get-unsat-core ---
       if (head === SmtCommand.CheckSat || head === SmtCommand.CheckSatAssuming) {
+        const started = Date.now();
         const statusResp = await forwardToZ3(raw);
-        log(`check-sat response: ${statusResp}`);
+        lastCheckSatMs = Date.now() - started;
+        log(`check-sat response: ${statusResp} (${lastCheckSatMs}ms)`);
         emit(statusResp);
         lastCheckSatCmd = cmd;
         continue;
@@ -264,11 +276,12 @@ export async function main(): Promise<number> {
           }
 
           if (initialCore.length > 0) {
-            // Do NOT pass Boogie's per-query timeout to the re-runs.
-            // They spawn fresh z3 on the full context — need more time.
-            // Passing the tight Boogie timeout causes all trials to time out,
-            // making every label appear "required" (no minimization).
-            const checked = await sufficientCore(Z3_PATH, ctx, queryBlock, initialCore, undefined);
+            // Do NOT pass Boogie's per-query timeout to the re-runs: they spawn
+            // fresh z3 on the full context and need more time. They still need a
+            // limit, since without a fact z3 may search forever (non-linear
+            // arithmetic); a re-run that times out keeps the fact.
+            const rerunMs = rerunTimeoutMs(lastCheckSatMs);
+            const checked = await sufficientCore(Z3_PATH, ctx, queryBlock, initialCore, rerunMs);
             if (checked.check === CoreCheck.Trace) {
               log(`core does not prove the goal alone, added facts that supplied trigger terms: ${initialCore.join(" ")} -> ${checked.core.join(" ")}`);
             } else if (checked.check === CoreCheck.AllFacts) {
@@ -276,7 +289,7 @@ export async function main(): Promise<number> {
             }
             let core = checked.core;
             if (MODE === Z3WrapperMode.Minimize) {
-              core = await minimizeCoreForBlock(Z3_PATH, ctx, queryBlock, core, undefined);
+              core = await minimizeCoreForBlock(Z3_PATH, ctx, queryBlock, core, rerunMs);
               log(`minimized core: ${checked.core.length} -> ${core.length}`);
             }
             emit("(" + core.join(" ") + ")");

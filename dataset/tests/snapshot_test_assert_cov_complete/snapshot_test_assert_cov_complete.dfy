@@ -113,7 +113,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16378
+//::       batchResourceCount: 16499
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -286,7 +286,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 10947
+//::       batchResourceCount: 10956
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
@@ -318,7 +318,35 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16476
+//::       batchResourceCount: 16612
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: >-
+//::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|9,6-9,10
+//::     file: snapshot_test_assert_cov_complete.dfy
+//::     start:
+//::       line: 9
+//::       col: 6
+//::     end:
+//::       line: 9
+//::       col: 10
+//::     methodName: CardinalitySubsetLt
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //:: edges:
@@ -351,6 +379,8 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28
 //::         - >-
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20
+//::         - >-
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|9,6-9,10
 //::     - top: >-
 //::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19
 //::       provers:
@@ -360,6 +390,8 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28
 //::         - >-
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20
+//::         - >-
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|9,6-9,10
 //::   proofUnused:
 //::     - top: >-
 //::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,9-6,29
@@ -378,6 +410,8 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
 //::         - >-
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19
+//::         - >-
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|9,6-9,10
 //::     - top: >-
 //::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|3,11-3,19
 //::       unused:
@@ -393,6 +427,8 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|7,7-7,20
 //::         - >-
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
+//::         - >-
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|9,6-9,10
 //::     - top: >-
 //::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|8,3-8,25
 //::       unused:
@@ -408,6 +444,8 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
 //::         - >-
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19
+//::         - >-
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|9,6-9,10
 //::     - top: >-
 //::         snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
 //::       unused:
@@ -425,6 +463,8 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|10,5-10,31
 //::         - >-
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|12,5-12,19
+//::         - >-
+//::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|9,6-9,10
 //::         - >-
 //::           snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28
 //::         - >-

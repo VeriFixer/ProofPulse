@@ -124,7 +124,7 @@ method Main()
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12899
+//::       batchResourceCount: 13006
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
@@ -159,7 +159,7 @@ method Main()
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12938
+//::       batchResourceCount: 13044
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
@@ -414,7 +414,7 @@ method Main()
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12871
+//::       batchResourceCount: 12944
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
@@ -515,6 +515,37 @@ method Main()
 //::       isUnused: true
 //::     type: CodeLine
 //::     usedByNumber: 1
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,20
+//::     file: snapshot_forall_evaluator.dfy
+//::     start:
+//::       line: 10
+//::       col: 12
+//::     end:
+//::       line: 10
+//::       col: 20
+//::     methodName: AllElementsEqual
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -852,6 +883,10 @@ method Main()
 //::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
 //::       provers:
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,20
+//::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
+//::       provers:
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,20
 //::     - top: snapshot_forall_evaluator.dfy|Main|correctness|20,5-20,5
 //::       provers:
 //::         - snapshot_forall_evaluator.dfy|Main|correctness|19,9-19,24
@@ -879,6 +914,7 @@ method Main()
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,20
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
 //::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|3,24-3,66
 //::       unused:
@@ -893,6 +929,7 @@ method Main()
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,19-8,65
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,20
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
 //::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|4,25-4,66
 //::       unused:
@@ -924,6 +961,7 @@ method Main()
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,20
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
 //::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,57
 //::       unused:
@@ -940,6 +978,7 @@ method Main()
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,20
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
 //::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,57-8,60
 //::       unused:
@@ -956,6 +995,7 @@ method Main()
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,20
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
 //::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
 //::       unused:
@@ -972,6 +1012,7 @@ method Main()
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,20
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
 //::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
 //::       unused:
@@ -988,6 +1029,7 @@ method Main()
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,20
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
 //::     - top: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,15
 //::       unused:
@@ -1004,6 +1046,7 @@ method Main()
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|8,30-8,65
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,12
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|11,13-11,28
+//::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|10,12-10,20
 //::         - snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|15,1-15,1
 //::     - top: snapshot_forall_evaluator.dfy|Main|correctness|19,22-19,22
 //::       unused:

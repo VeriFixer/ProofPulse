@@ -73,7 +73,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5503
+//::       batchResourceCount: 5632
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|3,19-3,24
@@ -101,7 +101,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5553
+//::       batchResourceCount: 5682
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|8,5-8,12
@@ -149,6 +149,30 @@ function Id<T> (a : T) : T {
 //::       isUnused: true
 //::     type: CodeLine
 //::     usedByNumber: 1
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|7,6-7,10
+//::     file: snapshot_test_find_irrelevant_assertions.dfy
+//::     start:
+//::       line: 7
+//::       col: 6
+//::     end:
+//::       line: 7
+//::       col: 10
+//::     methodName: Abs
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -208,11 +232,13 @@ function Id<T> (a : T) : T {
 //::   provedBy:
 //::     - top: snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|2,20-2,23
 //::       provers:
+//::         - snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|7,6-7,10
 //::         - >-
 //::           snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|10,5-10,15
 //::         - snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|14,1-16,1
 //::     - top: snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|3,19-3,24
 //::       provers:
+//::         - snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|7,6-7,10
 //::         - snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|8,5-8,12
 //::   proofUnused:
 //::     - top: snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|5,3-5,19
@@ -222,6 +248,7 @@ function Id<T> (a : T) : T {
 //::         - snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|8,5-8,12
 //::         - >-
 //::           snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|10,5-10,15
+//::         - snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|7,6-7,10
 //::         - snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|12,1-12,1
 //::     - top: snapshot_test_find_irrelevant_assertions.dfy|Abs|correctness|2,20-2,23
 //::       unused:

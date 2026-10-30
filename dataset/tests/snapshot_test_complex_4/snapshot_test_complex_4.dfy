@@ -1461,7 +1461,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14984
+//::       batchResourceCount: 15124
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
@@ -1512,7 +1512,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
-//::       batchResourceCount: 17182
+//::       batchResourceCount: 17309
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
@@ -1696,8 +1696,8 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       - loop invariant always holds
 //::       - loop invariant
 //::       - loop invariant always holds
-//::       - loop invariant
 //::       - loop invariant always holds
+//::       - loop invariant
 //::       - loop invariant
 //::       - loop invariant always holds
 //::       - this loop invariant is maintained by the loop
@@ -1731,13 +1731,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
-//::     usedByNumber: 3
+//::     usedByNumber: 4
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 17412
+//::       batchResourceCount: 17478
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -2198,7 +2198,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 29791
+//::       batchResourceCount: 30636
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
@@ -2305,7 +2305,54 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15634
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 68
+//::       col: 12
+//::     end:
+//::       line: 68
+//::       col: 18
+//::     methodName: ArraySum
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 5
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -2432,7 +2479,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15116
+//::       batchResourceCount: 15152
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
@@ -2510,7 +2557,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15806
+//::       batchResourceCount: 15888
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -2561,7 +2608,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15582
+//::       batchResourceCount: 15594
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
@@ -2612,7 +2659,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15711
+//::       batchResourceCount: 15712
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,24
@@ -2663,7 +2710,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15806
+//::       batchResourceCount: 15830
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
@@ -2714,7 +2761,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16155
+//::       batchResourceCount: 16224
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
@@ -2885,7 +2932,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 17230
+//::       batchResourceCount: 17279
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
@@ -3082,7 +3129,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 23
 //::       batchOutcome: Valid
-//::       batchResourceCount: 9838
+//::       batchResourceCount: 9958
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
@@ -3308,7 +3355,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 10845
+//::       batchResourceCount: 10873
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
@@ -3402,7 +3449,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14718
+//::       batchResourceCount: 14823
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
@@ -3447,13 +3494,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15003
+//::       batchResourceCount: 14835
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -3589,7 +3636,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11696
+//::       batchResourceCount: 11811
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
@@ -3637,7 +3684,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12060
+//::       batchResourceCount: 12139
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
@@ -3685,7 +3732,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11789
+//::       batchResourceCount: 11904
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
@@ -3733,7 +3780,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12149
+//::       batchResourceCount: 12229
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
@@ -3806,7 +3853,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21657
+//::       batchResourceCount: 20849
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
@@ -3902,9 +3949,53 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13179
+//::       batchResourceCount: 13281
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 110
+//::       col: 16
+//::     end:
+//::       line: 110
+//::       col: 22
+//::     methodName: IsSorted
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 4
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -3950,7 +4041,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12719
+//::       batchResourceCount: 12931
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
@@ -3998,7 +4089,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13103
+//::       batchResourceCount: 13247
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
@@ -4046,7 +4137,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13014
+//::       batchResourceCount: 13222
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
@@ -4094,7 +4185,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13190
+//::       batchResourceCount: 13387
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
@@ -4210,6 +4301,50 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 114
+//::       col: 16
+//::     end:
+//::       line: 114
+//::       col: 28
+//::     methodName: IsSorted
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -4299,9 +4434,53 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14417
+//::       batchResourceCount: 14344
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 104
+//::       col: 9
+//::     end:
+//::       line: 104
+//::       col: 20
+//::     methodName: IsSorted
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -4430,7 +4609,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
-//::       batchResourceCount: 10809
+//::       batchResourceCount: 11145
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
@@ -4546,7 +4725,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11273
+//::       batchResourceCount: 11134
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25
@@ -4648,9 +4827,37 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5787
+//::       batchResourceCount: 5878
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|140,16-140,20
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 140
+//::       col: 16
+//::     end:
+//::       line: 140
+//::       col: 20
+//::     methodName: IsPrime
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -4680,7 +4887,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6646
+//::       batchResourceCount: 6751
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
@@ -4708,6 +4915,34 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: CodeLine
 //::     usedByNumber: 1
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,26
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 144
+//::       col: 17
+//::     end:
+//::       line: 144
+//::       col: 26
+//::     methodName: IsPrime
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -4768,9 +5003,9 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
-//::       batchResourceCount: 7160
+//::       batchResourceCount: 7161
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -4800,9 +5035,37 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
-//::       batchResourceCount: 7331
+//::       batchResourceCount: 7197
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|135,8-135,13
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 135
+//::       col: 8
+//::     end:
+//::       line: 135
+//::       col: 13
+//::     methodName: IsPrime
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 1
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -4974,7 +5237,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14358
+//::       batchResourceCount: 14498
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
@@ -5026,7 +5289,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
-//::       batchResourceCount: 18390
+//::       batchResourceCount: 18530
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
@@ -5078,7 +5341,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15282
+//::       batchResourceCount: 15418
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
@@ -5328,7 +5591,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16737
+//::       batchResourceCount: 16881
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
@@ -5377,13 +5640,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16839
+//::       batchResourceCount: 16815
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -5803,7 +6066,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 23345
+//::       batchResourceCount: 24111
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
@@ -5913,7 +6176,55 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       batchOutcome: Valid
 //::       batchResourceCount: 15155
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 169
+//::       col: 12
+//::     end:
+//::       line: 169
+//::       col: 18
+//::     methodName: Reverse
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 3
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -6044,7 +6355,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14533
+//::       batchResourceCount: 14526
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
@@ -6124,7 +6435,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15244
+//::       batchResourceCount: 15230
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -6176,7 +6487,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14991
+//::       batchResourceCount: 14961
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
@@ -6228,7 +6539,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15089
+//::       batchResourceCount: 15065
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
@@ -6276,11 +6587,11 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15297
+//::       batchResourceCount: 15275
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
@@ -6455,7 +6766,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16451
+//::       batchResourceCount: 16444
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
@@ -6695,7 +7006,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 22
 //::       batchOutcome: Valid
-//::       batchResourceCount: 10505
+//::       batchResourceCount: 10624
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
@@ -6871,6 +7182,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 192
+//::       col: 9
+//::     end:
+//::       line: 192
+//::       col: 20
+//::     methodName: NoDups
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -6915,7 +7269,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11511
+//::       batchResourceCount: 11542
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
@@ -7007,7 +7361,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15358
+//::       batchResourceCount: 15443
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
@@ -7051,13 +7405,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15643
+//::       batchResourceCount: 15449
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -7189,7 +7543,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12402
+//::       batchResourceCount: 12455
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
@@ -7236,7 +7590,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12770
+//::       batchResourceCount: 12787
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
@@ -7283,7 +7637,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12495
+//::       batchResourceCount: 12548
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
@@ -7330,7 +7684,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12859
+//::       batchResourceCount: 12877
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
@@ -7401,7 +7755,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20167
+//::       batchResourceCount: 20559
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
@@ -7494,9 +7848,52 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13848
+//::       batchResourceCount: 13911
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 197
+//::       col: 12
+//::     end:
+//::       line: 197
+//::       col: 18
+//::     methodName: NoDups
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 4
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::     file: snapshot_test_complex_4.dfy
 //::     start:
@@ -7541,7 +7938,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13371
+//::       batchResourceCount: 13581
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
@@ -7588,7 +7985,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13644
+//::       batchResourceCount: 13973
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
@@ -7635,7 +8032,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13664
+//::       batchResourceCount: 13876
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
@@ -7682,7 +8079,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13962
+//::       batchResourceCount: 14040
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
@@ -7725,6 +8122,49 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       isUnused: true
 //::     type: CodeLine
 //::     usedByNumber: 1
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
+//::     file: snapshot_test_complex_4.dfy
+//::     start:
+//::       line: 201
+//::       col: 13
+//::     end:
+//::       line: 201
+//::       col: 26
+//::     methodName: NoDups
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -7815,7 +8255,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15057
+//::       batchResourceCount: 14964
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -7967,10 +8407,12 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|64,9-64,67
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|63,13-63,27
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
 //::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|70,52-70,52
 //::       provers:
@@ -7992,6 +8434,9 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,28
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|73,9-73,19
+//::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|69,19-69,26
 //::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
@@ -7999,12 +8444,15 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|66,5-66,28
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
 //::       provers:
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,24-72,27
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
 //::       provers:
@@ -8012,9 +8460,12 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
@@ -8022,6 +8473,8 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
 //::       provers:
@@ -8033,12 +8486,18 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
+//::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::       provers:
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
 //::       provers:
@@ -8047,17 +8506,24 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,26
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
 //::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|130,13-130,79
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|135,8-135,13
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|136,9-136,25
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,16-140,20
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,26
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
 //::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
+//::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,16-140,20
 //::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
@@ -8067,6 +8533,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|164,13-164,81
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|165,13-165,23
 //::       provers:
@@ -8078,6 +8545,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
 //::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|171,52-171,52
 //::       provers:
@@ -8094,15 +8562,20 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|168,9-168,21
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,35
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|174,9-174,19
+//::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,24-170,31
 //::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
 //::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|167,5-167,30
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
 //::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,34
 //::       provers:
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
 //::       provers:
@@ -8110,9 +8583,12 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
@@ -8120,6 +8596,8 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
 //::       provers:
@@ -8131,12 +8609,18 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
+//::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::       provers:
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
 //::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::       provers:
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::       provers:
@@ -8385,6 +8869,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8411,6 +8896,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8464,6 +8950,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8491,6 +8978,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8519,6 +9007,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8545,6 +9034,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8572,6 +9062,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8599,6 +9090,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8626,6 +9118,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8652,6 +9145,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,67
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8679,6 +9173,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8708,6 +9203,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8735,6 +9231,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8772,6 +9269,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,5-74,5
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|75,1-75,1
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|67,9-67,21
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::     - top: snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
 //::       unused:
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|62,14-62,28
@@ -8790,6 +9288,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,20
@@ -8844,6 +9343,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8897,6 +9397,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,67-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|70,19-70,70
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,16-68,18
+//::         - snapshot_test_complex_4.dfy|ArraySum|correctness|68,12-68,18
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,9
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,9-72,12
 //::         - snapshot_test_complex_4.dfy|ArraySum|correctness|72,17-72,17
@@ -8922,13 +9423,16 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
 //::       unused:
@@ -8951,10 +9455,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
 //::       unused:
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
@@ -8972,13 +9479,16 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,29
 //::       unused:
@@ -8996,13 +9506,16 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
@@ -9021,15 +9534,18 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
 //::       unused:
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|100,13-100,80
@@ -9047,13 +9563,16 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
 //::       unused:
@@ -9071,13 +9590,16 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
 //::       unused:
@@ -9096,13 +9618,16 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::       unused:
@@ -9120,13 +9645,16 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,79
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::       unused:
@@ -9144,13 +9672,16 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|102,5-102,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|103,9-103,21
@@ -9172,13 +9703,16 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::       unused:
@@ -9198,12 +9732,15 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::       unused:
@@ -9214,7 +9751,6 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|106,9-106,15
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,34-111,36
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,24-111,36
-//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|111,29-111,36
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,23
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,69
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,69-112,74
@@ -9222,12 +9758,15 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::       unused:
@@ -9247,12 +9786,15 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::       unused:
@@ -9275,8 +9817,10 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|118,13-118,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsSorted|correctness|110,9-119,9
 //::       unused:
@@ -9296,11 +9840,14 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,79-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|112,23-112,82
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,20-110,22
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|110,16-110,22
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,16
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,21
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,25
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,25-114,28
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|116,17-116,29
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|114,16-114,28
+//::         - snapshot_test_complex_4.dfy|IsSorted|correctness|104,9-104,20
 //::         - snapshot_test_complex_4.dfy|IsSorted|correctness|121,1-121,1
 //::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
 //::       unused:
@@ -9310,11 +9857,14 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,16-140,20
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,26
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|135,8-135,13
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|133,5-133,20
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
@@ -9338,11 +9888,14 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|138,13-138,25
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,16-140,20
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,26
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|135,8-135,13
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
 //::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
 //::       unused:
@@ -9353,10 +9906,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,16-140,20
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,26
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|135,8-135,13
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
 //::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
 //::       unused:
@@ -9370,8 +9926,10 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,26
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|149,13-149,23
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|135,8-135,13
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
 //::     - top: snapshot_test_complex_4.dfy|IsPrime|correctness|140,9-150,9
 //::       unused:
@@ -9383,9 +9941,12 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,23
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,69-141,73
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|141,23-141,78
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,16-140,20
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,21
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|146,17-146,33
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|144,17-144,26
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|140,20-140,20
+//::         - snapshot_test_complex_4.dfy|IsPrime|correctness|135,8-135,13
 //::         - snapshot_test_complex_4.dfy|IsPrime|correctness|153,1-153,1
 //::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|167,21-167,23
 //::       unused:
@@ -9406,6 +9967,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9432,6 +9994,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9484,6 +10047,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9511,6 +10075,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9537,6 +10102,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9564,6 +10130,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9592,6 +10159,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9617,6 +10185,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9644,6 +10213,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9671,6 +10241,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9697,6 +10268,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,65-171,67
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9724,6 +10296,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9753,6 +10326,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9780,6 +10354,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9816,6 +10391,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,5-175,5
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|176,1-176,1
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|170,19-170,24
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::     - top: snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
 //::       unused:
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|163,13-163,30
@@ -9835,6 +10411,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,22-173,24
@@ -9862,6 +10439,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9916,6 +10494,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,63-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|171,19-171,77
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,16-169,18
+//::         - snapshot_test_complex_4.dfy|Reverse|correctness|169,12-169,18
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,9
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,9-173,15
 //::         - snapshot_test_complex_4.dfy|Reverse|correctness|173,20-173,20
@@ -9930,6 +10509,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
@@ -9941,11 +10521,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -9955,6 +10537,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
@@ -9973,7 +10556,9 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::       unused:
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
@@ -9982,6 +10567,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
@@ -9992,11 +10578,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10007,6 +10595,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|189,5-189,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
@@ -10017,11 +10606,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10043,15 +10634,18 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::     - top: snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
 //::       unused:
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|186,14-186,66
@@ -10060,6 +10654,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
@@ -10070,11 +10665,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10086,6 +10683,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
@@ -10095,11 +10693,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10111,6 +10711,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
@@ -10121,11 +10722,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10137,6 +10740,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
@@ -10146,11 +10750,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,74
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10160,6 +10766,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|187,13-187,78
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
@@ -10171,11 +10778,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10189,6 +10798,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
@@ -10200,11 +10810,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10216,6 +10828,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
@@ -10227,10 +10840,12 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10242,9 +10857,9 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
-//::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,24-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,64
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,64-199,69
@@ -10252,10 +10867,12 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10267,6 +10884,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
@@ -10278,10 +10896,12 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10293,6 +10913,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
@@ -10307,6 +10928,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|206,9-206,19
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,5-207,5
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
@@ -10318,6 +10940,7 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|190,9-190,21
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,11
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|194,9-194,15
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|192,9-192,20
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,29-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,31
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|198,19-198,24
@@ -10329,11 +10952,13 @@ method NoDups (a : array<int>) returns (noDups : bool)
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,74-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|199,19-199,77
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,16-197,18
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|197,12-197,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,13
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,18
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,23
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,23-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|203,13-203,28
+//::         - snapshot_test_complex_4.dfy|NoDups|correctness|201,13-201,26
 //::         - snapshot_test_complex_4.dfy|NoDups|correctness|208,1-208,1
 //::   connections: []
 //::

@@ -1,7 +1,7 @@
 FROM codercom/code-server:latest
 
-# Custom ProofPulse Dafny build (4.11.1 + --no-abstract-interpretation + {:id} passification fix)
-ARG DAFNY_ZIP_URL="https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-x64-ubuntu-22.04.zip"
+# Custom ProofPulse Dafny build (4.11.1 + --no-abstract-interpretation + {:id} passification fix + condition atom coverage)
+ARG DAFNY_ZIP_URL="https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.2.0-proofpulse/dafny-0.2.0-proofpulse-x64-ubuntu-22.04.zip"
 USER root
 
 # System deps

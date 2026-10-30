@@ -60,9 +60,41 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6945
+//::       batchResourceCount: 7161
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|8,8-8,25
+//::     file: snapshot_test_assert_parenthesized.dfy
+//::     start:
+//::       line: 8
+//::       col: 8
+//::     end:
+//::       line: 8
+//::       col: 25
+//::     methodName: IsSublist
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|6,13-6,60
 //::     file: snapshot_test_assert_parenthesized.dfy
 //::     start:
@@ -98,7 +130,7 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11431
+//::       batchResourceCount: 11579
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|9,9-9,22
@@ -244,7 +276,7 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21407
+//::       batchResourceCount: 20241
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|17,19-17,38
@@ -292,7 +324,7 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13333
+//::       batchResourceCount: 13649
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|18,20-18,42
@@ -363,7 +395,7 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13780
+//::       batchResourceCount: 14233
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|19,13-19,24
@@ -428,6 +460,38 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::       isUnused: true
 //::     type: CodeLine
 //::     usedByNumber: 1
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|17,12-17,38
+//::     file: snapshot_test_assert_parenthesized.dfy
+//::     start:
+//::       line: 17
+//::       col: 12
+//::     end:
+//::       line: 17
+//::       col: 38
+//::     methodName: IsSublist
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -543,6 +607,9 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::     covStatusInternal: CovComplete
 //:: edges:
 //::   provedBy:
+//::     - top: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|14,14-14,14
+//::       provers:
+//::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|8,8-8,25
 //::     - top: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|6,13-6,60
 //::       provers:
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|1,1-3,1
@@ -554,10 +621,17 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|18,20-18,42
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|19,13-19,24
+//::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|8,8-8,25
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|9,9-9,22
 //::     - top: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|15,19-15,71
 //::       provers:
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|1,1-3,1
+//::         - >-
+//::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|17,12-17,38
+//::     - top: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|18,20-18,42
+//::       provers:
+//::         - >-
+//::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|17,12-17,38
 //::   proofUnused:
 //::     - top: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|14,14-14,14
 //::       unused:
@@ -574,11 +648,14 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|19,13-19,24
 //::         - >-
+//::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|17,12-17,38
+//::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|23,5-23,21
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|24,1-24,1
 //::     - top: snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|6,13-6,60
 //::       unused:
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|9,9-9,22
+//::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|8,8-8,25
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|12,5-12,21
 //::         - >-
@@ -591,6 +668,8 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|18,20-18,42
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|19,13-19,24
+//::         - >-
+//::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|17,12-17,38
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|24,1-24,1
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|23,5-23,21
@@ -598,6 +677,7 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::       unused:
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|6,13-6,60
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|9,9-9,22
+//::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|8,8-8,25
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|12,5-12,21
 //::         - >-
@@ -610,6 +690,8 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|18,20-18,42
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|19,13-19,24
+//::         - >-
+//::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|17,12-17,38
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|23,5-23,21
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|24,1-24,1
@@ -617,6 +699,7 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::       unused:
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|6,13-6,60
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|9,9-9,22
+//::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|8,8-8,25
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|12,5-12,21
 //::         - >-
@@ -629,6 +712,8 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|18,20-18,42
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|19,13-19,24
+//::         - >-
+//::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|17,12-17,38
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|23,5-23,21
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|24,1-24,1
@@ -636,6 +721,7 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::       unused:
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|6,13-6,60
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|9,9-9,22
+//::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|8,8-8,25
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|12,5-12,21
 //::         - >-
@@ -648,6 +734,8 @@ method IsSublist ( sub : seq < int > , main : seq < int >) returns ( result : bo
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|18,20-18,42
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|19,13-19,24
+//::         - >-
+//::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|17,12-17,38
 //::         - >-
 //::           snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|23,5-23,21
 //::         - snapshot_test_assert_parenthesized.dfy|IsSublist|correctness|24,1-24,1

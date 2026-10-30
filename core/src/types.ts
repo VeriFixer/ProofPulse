@@ -29,6 +29,7 @@ export enum TokenType {
   LoopInvariant = "LoopInvariant",
   Call = "Call",
   CodeLine = "CodeLine",
+  Condition = "Condition",
   Assume = "Assume",
   Axiom = "Axiom",
   Lemma = "Lemma",
