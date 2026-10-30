@@ -1,8 +1,8 @@
 FROM ubuntu:24.04
 
-# Custom ProofPulse Dafny build (4.11.1 + --no-abstract-interpretation + {:id} passification fix)
+# Custom ProofPulse Dafny build (4.11.1 + --no-abstract-interpretation + {:id} passification fix + condition atom coverage)
 # Override with --build-arg DAFNY_ZIP_URL=<url> for other builds
-ARG DAFNY_ZIP_URL="https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.1.0-proofpulse/dafny-0.1.0-proofpulse-x64-ubuntu-22.04.zip"
+ARG DAFNY_ZIP_URL="https://github.com/VeriFixer/dafny_proofpulse/releases/download/v0.2.0-proofpulse/dafny-0.2.0-proofpulse-x64-ubuntu-22.04.zip"
 
 ENV DEBIAN_FRONTEND=noninteractive
 

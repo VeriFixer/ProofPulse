@@ -11616,7 +11616,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 10209
+//::       batchResourceCount: 10421
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|54,14-54,23
@@ -11674,11 +11674,11 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Postcondition
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12369
+//::       batchResourceCount: 12475
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,35-56,44
@@ -11711,7 +11711,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13309
+//::       batchResourceCount: 13427
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,17-58,27
@@ -11744,7 +11744,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13476
+//::       batchResourceCount: 13583
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,36-58,45
@@ -11777,7 +11777,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
-//::       batchResourceCount: 13225
+//::       batchResourceCount: 13298
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|59,13-59,35
@@ -11810,7 +11810,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 6
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15006
+//::       batchResourceCount: 15074
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|59,40-59,51
@@ -11843,7 +11843,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11338
+//::       batchResourceCount: 11440
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,13
@@ -11876,7 +11876,7 @@ class Secret{
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 8446
+//::       batchResourceCount: 8589
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
@@ -11970,7 +11970,36 @@ class Secret{
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: CodeLine
-//::     usedByNumber: 1
+//::     usedByNumber: 2
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_7.dfy|Secret.Guess|correctness|61,13-61,18
+//::     file: snapshot_test_complex_7.dfy
+//::     start:
+//::       line: 61
+//::       col: 13
+//::     end:
+//::       line: 61
+//::       col: 18
+//::     methodName: Secret.Guess
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -13798,14 +13827,18 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Init|correctness|49,9-49,20
 //::     - top: snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,17-56,27
 //::       provers:
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|61,13-61,18
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|64,13-64,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::     - top: snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,35-56,44
 //::       provers:
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,17-56,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::     - top: snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,17-58,27
 //::       provers:
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|61,13-61,18
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
@@ -17567,6 +17600,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|64,13-64,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|61,13-61,18
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|71,9-71,25
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|72,5-72,5
@@ -17588,14 +17622,13 @@ class Secret{
 //::     - top: snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,35-56,44
 //::       unused:
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|54,14-54,23
-//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|56,17-56,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,17-58,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|58,36-58,45
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|59,13-59,35
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|59,40-59,51
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,13
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|64,13-64,27
-//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|61,13-61,18
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,9
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|71,9-71,25
@@ -17624,6 +17657,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,13
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|61,13-61,18
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,9
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|71,9-71,25
@@ -17640,6 +17674,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|64,13-64,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|61,13-61,18
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,9
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|71,9-71,25
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|72,5-72,5
@@ -17655,6 +17690,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|64,13-64,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|61,13-61,18
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,9
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|72,5-72,5
@@ -17670,6 +17706,7 @@ class Secret{
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|63,13-63,26
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|64,13-64,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|68,13-68,28
+//::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|61,13-61,18
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,9
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|70,9-70,27
 //::         - snapshot_test_complex_7.dfy|Secret.Guess|correctness|71,9-71,25

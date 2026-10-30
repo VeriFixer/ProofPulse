@@ -42,7 +42,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 4386
+//::       batchResourceCount: 4527
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_no_postconditions.dfy|Abs|correctness|4,5-4,12
@@ -89,6 +89,28 @@ function Id<T> (a : T) : T {
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_no_postconditions.dfy|Abs|correctness|3,6-3,10
+//::     file: snapshot_test_no_postconditions.dfy
+//::     start:
+//::       line: 3
+//::       col: 6
+//::     end:
+//::       line: 3
+//::       col: 10
+//::     methodName: Abs
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 0
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy: []
 //::   proofUnused:
@@ -96,5 +118,6 @@ function Id<T> (a : T) : T {
 //::       unused:
 //::         - snapshot_test_no_postconditions.dfy|Abs|correctness|4,5-4,12
 //::         - snapshot_test_no_postconditions.dfy|Abs|correctness|6,5-6,15
+//::         - snapshot_test_no_postconditions.dfy|Abs|correctness|3,6-3,10
 //::   connections: []
 //::

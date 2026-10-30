@@ -118,7 +118,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 35
 //::       batchOutcome: Valid
-//::       batchResourceCount: 29383
+//::       batchResourceCount: 29766
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
@@ -294,7 +294,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 48
 //::       batchOutcome: Valid
-//::       batchResourceCount: 18756
+//::       batchResourceCount: 20270
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
@@ -384,7 +384,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 49
 //::       batchOutcome: Valid
-//::       batchResourceCount: 17827
+//::       batchResourceCount: 18582
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
@@ -647,11 +647,11 @@ method SelectionSort(a: array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
-//::     usedByNumber: 2
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 36
 //::       batchOutcome: Valid
-//::       batchResourceCount: 29415
+//::       batchResourceCount: 29814
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
@@ -1258,7 +1258,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 37
 //::       batchOutcome: Valid
-//::       batchResourceCount: 60191
+//::       batchResourceCount: 55161
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|10,48-10,48
@@ -1775,7 +1775,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 38
 //::       batchOutcome: Valid
-//::       batchResourceCount: 55409
+//::       batchResourceCount: 55761
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|11,24-11,24
@@ -2178,7 +2178,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 39
 //::       batchOutcome: Valid
-//::       batchResourceCount: 80584
+//::       batchResourceCount: 69178
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
@@ -2469,6 +2469,92 @@ method SelectionSort(a: array<int>)
 //::       batchResourceCount: 21067
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
+//::     file: snapshot_test_complex_3.dfy
+//::     start:
+//::       line: 7
+//::       col: 9
+//::     end:
+//::       line: 7
+//::       col: 16
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -2837,7 +2923,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 47
 //::       batchOutcome: Valid
-//::       batchResourceCount: 19991
+//::       batchResourceCount: 20094
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -3011,11 +3097,11 @@ method SelectionSort(a: array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
-//::     usedByNumber: 5
+//::     usedByNumber: 6
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
-//::       batchResourceCount: 26513
+//::       batchResourceCount: 26734
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
@@ -3107,7 +3193,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
-//::       batchResourceCount: 26741
+//::       batchResourceCount: 26972
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
@@ -3194,11 +3280,11 @@ method SelectionSort(a: array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: LoopInvariant
-//::     usedByNumber: 2
+//::     usedByNumber: 4
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 23857
+//::       batchResourceCount: 24460
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
@@ -3288,7 +3374,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 43
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20899
+//::       batchResourceCount: 21002
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
@@ -3378,7 +3464,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 44
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22077
+//::       batchResourceCount: 22184
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
@@ -3468,7 +3554,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 45
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20996
+//::       batchResourceCount: 21099
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
@@ -3558,7 +3644,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 46
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22221
+//::       batchResourceCount: 22330
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
@@ -3715,7 +3801,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
-//::       batchResourceCount: 43115
+//::       batchResourceCount: 41447
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
@@ -4003,9 +4089,95 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 42
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22154
+//::       batchResourceCount: 22257
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
+//::     file: snapshot_test_complex_3.dfy
+//::     start:
+//::       line: 14
+//::       col: 11
+//::     end:
+//::       line: 14
+//::       col: 18
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -4093,7 +4265,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20912
+//::       batchResourceCount: 21110
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
@@ -4183,7 +4355,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21896
+//::       batchResourceCount: 22396
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
@@ -4273,7 +4445,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21194
+//::       batchResourceCount: 21399
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
@@ -4363,7 +4535,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22804
+//::       batchResourceCount: 23088
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
@@ -4449,6 +4621,92 @@ method SelectionSort(a: array<int>)
 //::       isUnused: true
 //::     type: CodeLine
 //::     usedByNumber: 3
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
+//::     file: snapshot_test_complex_3.dfy
+//::     start:
+//::       line: 18
+//::       col: 10
+//::     end:
+//::       line: 18
+//::       col: 25
+//::     methodName: SelectionSort
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -4625,7 +4883,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 24023
+//::       batchResourceCount: 25731
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -4715,7 +4973,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 24348
+//::       batchResourceCount: 26341
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
@@ -4805,7 +5063,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 22
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20726
+//::       batchResourceCount: 21079
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
@@ -4961,7 +5219,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22039
+//::       batchResourceCount: 22432
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
@@ -5051,7 +5309,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21223
+//::       batchResourceCount: 21580
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
@@ -5269,11 +5527,11 @@ method SelectionSort(a: array<int>)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
-//::     usedByNumber: 2
+//::     usedByNumber: 3
 //::     topMeta:
 //::       batchIndex: 32
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22676
+//::       batchResourceCount: 23132
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
@@ -5363,7 +5621,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 28
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21686
+//::       batchResourceCount: 22092
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
@@ -5453,7 +5711,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21837
+//::       batchResourceCount: 22242
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
@@ -5824,7 +6082,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 30
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22078
+//::       batchResourceCount: 22445
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,35-23,38
@@ -5914,7 +6172,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 31
 //::       batchOutcome: Valid
-//::       batchResourceCount: 22210
+//::       batchResourceCount: 22605
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
@@ -6090,7 +6348,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 33
 //::       batchOutcome: Valid
-//::       batchResourceCount: 30676
+//::       batchResourceCount: 31073
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
@@ -6180,7 +6438,7 @@ method SelectionSort(a: array<int>)
 //::     topMeta:
 //::       batchIndex: 34
 //::       batchOutcome: Valid
-//::       batchResourceCount: 31511
+//::       batchResourceCount: 31963
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //:: edges:
@@ -6191,6 +6449,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
 //::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|10,15-10,59
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|4,11-4,49
 //::       provers:
@@ -6203,6 +6462,7 @@ method SelectionSort(a: array<int>)
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
 //::       provers:
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
@@ -6218,8 +6478,8 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,15-9,72
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
-//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|24,5-24,13
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::       provers:
@@ -6238,6 +6498,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
 //::       provers:
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
@@ -6253,11 +6514,13 @@ method SelectionSort(a: array<int>)
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::       provers:
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::       provers:
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
@@ -6274,11 +6537,14 @@ method SelectionSort(a: array<int>)
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
 //::       provers:
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
-//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,19
 //::       provers:
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,39
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,32
@@ -6314,6 +6580,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6326,11 +6593,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6382,11 +6651,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6425,6 +6696,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6437,11 +6709,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6480,6 +6754,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6492,11 +6767,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6534,6 +6811,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6546,11 +6824,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6590,6 +6870,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6602,11 +6883,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6645,6 +6928,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6657,11 +6941,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6700,6 +6986,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6712,11 +6999,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6755,6 +7044,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6767,11 +7057,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6810,6 +7102,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6822,11 +7115,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6865,6 +7160,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6877,11 +7173,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6921,6 +7219,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6933,11 +7232,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -6975,6 +7276,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -6987,11 +7289,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7030,6 +7334,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7042,11 +7347,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7084,6 +7391,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7096,11 +7404,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7139,6 +7449,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7151,11 +7462,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7195,6 +7508,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7207,11 +7521,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7251,6 +7567,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7263,11 +7580,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7307,6 +7626,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7319,11 +7639,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7363,6 +7685,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7375,11 +7698,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7419,6 +7744,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
@@ -7430,11 +7756,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7474,6 +7802,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7485,11 +7814,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7529,6 +7860,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
@@ -7539,11 +7871,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7594,11 +7928,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7615,6 +7951,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
 //::       unused:
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
@@ -7639,6 +7976,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7650,11 +7988,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7693,6 +8033,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
@@ -7703,11 +8044,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7747,6 +8090,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7758,11 +8102,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7801,6 +8147,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
@@ -7811,11 +8158,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7855,6 +8204,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
@@ -7866,11 +8216,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7911,6 +8263,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7923,11 +8276,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -7967,6 +8322,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -7979,10 +8335,12 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8021,6 +8379,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8034,6 +8393,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8073,6 +8433,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8085,10 +8446,12 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8127,6 +8490,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8136,10 +8500,12 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8179,6 +8545,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8191,11 +8558,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
@@ -8234,6 +8603,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8246,10 +8616,12 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,5
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|23,5-23,8
@@ -8287,6 +8659,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8299,11 +8672,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8325,6 +8700,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|6,7-6,12
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,25-8,27
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,48-9,50
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,61
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|9,61-9,64
@@ -8340,23 +8716,23 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
-//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
-//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
-//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8373,7 +8749,9 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,9
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,15-8,20
-//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,11-23,11
 //::       unused:
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
@@ -8398,6 +8776,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8410,11 +8789,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8453,21 +8834,23 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
-//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,44
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,44-16,52
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,57
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8485,6 +8868,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,3-25,3
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,22-15,31
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,31-15,38
 //::     - top: snapshot_test_complex_3.dfy|SelectionSort|correctness|23,24-23,24
 //::       unused:
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|3,11-3,62
@@ -8509,6 +8893,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8521,11 +8906,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8564,6 +8951,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8576,11 +8964,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8619,6 +9009,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8631,11 +9022,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8674,6 +9067,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8686,11 +9080,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8729,6 +9125,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8741,11 +9138,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5
@@ -8784,6 +9183,7 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,47-11,47
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|11,15-11,53
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,14-7,16
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|7,9-7,16
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|13,9-13,28
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,36-15,38
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,38
@@ -8796,11 +9196,13 @@ method SelectionSort(a: array<int>)
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,57-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|16,17-16,60
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,16-14,18
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,18
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,10
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,13
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,17
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,17-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|19,9-19,20
+//::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|18,10-18,25
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|21,7-21,15
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,11-14,11
 //::         - snapshot_test_complex_3.dfy|SelectionSort|correctness|14,5-22,5

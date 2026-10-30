@@ -46,8 +46,31 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5818
+//::       batchResourceCount: 6058
 //::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|9,6-9,10
+//::     file: snapshot_test_irrelevant_lines_for_proof.dfy
+//::     start:
+//::       line: 9
+//::       col: 6
+//::     end:
+//::       line: 9
+//::       col: 10
+//::     methodName: Abs
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
+//::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|12,5-12,15
 //::     file: snapshot_test_irrelevant_lines_for_proof.dfy
@@ -118,7 +141,7 @@ function Id<T> (a : T) : T {
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5868
+//::       batchResourceCount: 6109
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|6,5-6,11
@@ -140,6 +163,29 @@ function Id<T> (a : T) : T {
 //::       isProvedBy: false
 //::       isUnused: true
 //::     type: CodeLine
+//::     usedByNumber: 0
+//::     topMeta: null
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
+//::   - locationId: snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|5,6-5,11
+//::     file: snapshot_test_irrelevant_lines_for_proof.dfy
+//::     start:
+//::       line: 5
+//::       col: 6
+//::     end:
+//::       line: 5
+//::       col: 11
+//::     methodName: Abs
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: Condition
 //::     usedByNumber: 0
 //::     topMeta: null
 //::     covStatus: Uncovered
@@ -198,11 +244,13 @@ function Id<T> (a : T) : T {
 //::   provedBy:
 //::     - top: snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|2,20-2,23
 //::       provers:
+//::         - snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|9,6-9,10
 //::         - >-
 //::           snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|12,5-12,15
 //::         - snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|16,1-18,1
 //::     - top: snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|3,19-3,24
 //::       provers:
+//::         - snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|9,6-9,10
 //::         - >-
 //::           snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|10,5-10,12
 //::   proofUnused:
@@ -210,6 +258,7 @@ function Id<T> (a : T) : T {
 //::       unused:
 //::         - snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|3,19-3,24
 //::         - snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|6,5-6,11
+//::         - snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|5,6-5,11
 //::         - >-
 //::           snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|10,5-10,12
 //::         - snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|14,1-14,1
@@ -217,6 +266,7 @@ function Id<T> (a : T) : T {
 //::       unused:
 //::         - snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|2,20-2,23
 //::         - snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|6,5-6,11
+//::         - snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|5,6-5,11
 //::         - >-
 //::           snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|12,5-12,15
 //::         - snapshot_test_irrelevant_lines_for_proof.dfy|Abs|correctness|14,1-14,1

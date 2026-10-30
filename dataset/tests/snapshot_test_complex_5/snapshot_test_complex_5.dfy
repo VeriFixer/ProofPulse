@@ -151,7 +151,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 1
 //::       batchOutcome: Valid
-//::       batchResourceCount: 3105
+//::       batchResourceCount: 3309
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|18,23-18,27
@@ -217,7 +217,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Precondition
-//::     usedByNumber: 10
+//::     usedByNumber: 8
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -284,7 +284,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Precondition
-//::     usedByNumber: 4
+//::     usedByNumber: 5
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -356,7 +356,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12157
+//::       batchResourceCount: 12394
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|23,12-23,12
@@ -425,7 +425,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 39
 //::       batchOutcome: Valid
-//::       batchResourceCount: 4047
+//::       batchResourceCount: 4234
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|23,14-23,14
@@ -494,7 +494,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 40
 //::       batchOutcome: Valid
-//::       batchResourceCount: 4255
+//::       batchResourceCount: 4452
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|23,9-23,16
@@ -767,7 +767,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 44
 //::       batchOutcome: Valid
-//::       batchResourceCount: 4996
+//::       batchResourceCount: 5116
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|26,12-26,12
@@ -836,7 +836,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 16
 //::       batchOutcome: Valid
-//::       batchResourceCount: 4758
+//::       batchResourceCount: 4903
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|26,14-26,14
@@ -905,7 +905,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 17
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5450
+//::       batchResourceCount: 4988
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|26,9-26,16
@@ -950,7 +950,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       - call
 //::       - call
 //::       - call
-//::       - ensures clause at snapshot_test_complex_5.dfy(15,23)-(15,48) from call
 //::       - call
 //::       - call
 //::       - call
@@ -971,7 +970,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: Call
-//::     usedByNumber: 2
+//::     usedByNumber: 1
 //::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
@@ -1041,7 +1040,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 18
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5167
+//::       batchResourceCount: 5289
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|28,20-28,20
@@ -1110,7 +1109,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5314
+//::       batchResourceCount: 5396
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|28,23-28,23
@@ -1179,7 +1178,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5558
+//::       batchResourceCount: 5643
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|28,33-28,33
@@ -1248,7 +1247,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5699
+//::       batchResourceCount: 5790
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|28,36-28,40
@@ -1362,7 +1361,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 23
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6420
+//::       batchResourceCount: 6272
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|28,9-28,42
@@ -1427,11 +1426,11 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 2
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6030
+//::       batchResourceCount: 6289
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|29,16-29,20
@@ -1500,7 +1499,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6127
+//::       batchResourceCount: 6384
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|29,9-29,26
@@ -1569,7 +1568,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 26
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6076
+//::       batchResourceCount: 6384
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|30,20-30,20
@@ -1638,7 +1637,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 27
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6232
+//::       batchResourceCount: 6483
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|30,23-30,23
@@ -1707,7 +1706,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 28
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6335
+//::       batchResourceCount: 6586
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|30,33-30,33
@@ -1776,7 +1775,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6461
+//::       batchResourceCount: 6691
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|30,36-30,36
@@ -1845,7 +1844,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 30
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6551
+//::       batchResourceCount: 6867
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|30,9-30,38
@@ -1910,13 +1909,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 0
+//::     usedByNumber: 2
 //::     topMeta:
 //::       batchIndex: 31
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6706
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
+//::       batchResourceCount: 7122
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|31,12-31,12
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -1983,7 +1982,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 32
 //::       batchOutcome: Valid
-//::       batchResourceCount: 6805
+//::       batchResourceCount: 7175
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|31,9-31,14
@@ -2119,7 +2118,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 33
 //::       batchOutcome: Valid
-//::       batchResourceCount: 7173
+//::       batchResourceCount: 7535
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|32,23-32,23
@@ -2188,7 +2187,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 34
 //::       batchOutcome: Valid
-//::       batchResourceCount: 7323
+//::       batchResourceCount: 7687
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|32,9-32,30
@@ -2257,7 +2256,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 35
 //::       batchOutcome: Valid
-//::       batchResourceCount: 7452
+//::       batchResourceCount: 7818
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|33,9-33,15
@@ -2391,7 +2390,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 36
 //::       batchOutcome: Valid
-//::       batchResourceCount: 7709
+//::       batchResourceCount: 8031
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|34,22-34,22
@@ -2460,7 +2459,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 37
 //::       batchOutcome: Valid
-//::       batchResourceCount: 7754
+//::       batchResourceCount: 8098
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|34,28-34,28
@@ -2682,7 +2681,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 38
 //::       batchOutcome: Valid
-//::       batchResourceCount: 7889
+//::       batchResourceCount: 8260
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|36,12-36,12
@@ -2751,7 +2750,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 2
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5064
+//::       batchResourceCount: 4833
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|36,14-36,14
@@ -2820,7 +2819,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5334
+//::       batchResourceCount: 5012
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|36,9-36,16
@@ -2955,7 +2954,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5166
+//::       batchResourceCount: 5316
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|37,9-37,28
@@ -3162,7 +3161,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
-//::       batchResourceCount: 5912
+//::       batchResourceCount: 6715
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|38,20-38,20
@@ -3231,7 +3230,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
-//::       batchResourceCount: 7095
+//::       batchResourceCount: 7337
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
@@ -3300,7 +3299,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 10
 //::       batchOutcome: Valid
-//::       batchResourceCount: 7537
+//::       batchResourceCount: 7777
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
@@ -3522,7 +3521,137 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 11
 //::       batchOutcome: Valid
-//::       batchResourceCount: 7731
+//::       batchResourceCount: 7973
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 25
+//::       col: 16
+//::     end:
+//::       line: 25
+//::       col: 25
+//::     methodName: GCD1
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 4
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 22
+//::       col: 8
+//::     end:
+//::       line: 22
+//::       col: 12
+//::     methodName: GCD1
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
@@ -3591,7 +3720,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11958
+//::       batchResourceCount: 12219
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
@@ -3660,7 +3789,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 11986
+//::       batchResourceCount: 12230
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -3882,7 +4011,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 12926
+//::       batchResourceCount: 13192
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD1|correctness|41,1-41,1
@@ -4049,7 +4178,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     methodName: GCD1
 //::     methodType: correctness
 //::     prooftexts:
-//::       - ensures clause
 //::       - ensures clause
 //::       - ensures clause
 //::     roles:
@@ -4452,7 +4580,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 26
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20564
+//::       batchResourceCount: 20684
 //::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|48,5-48,10
@@ -4538,8 +4666,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     type: Call
 //::     usedByNumber: 1
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|49,8-49,8
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -4709,7 +4837,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
-//::     usedByNumber: 2
+//::     usedByNumber: 3
 //::     topMeta:
 //::       batchIndex: 3
 //::       batchOutcome: Valid
@@ -4801,8 +4929,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     type: Call
 //::     usedByNumber: 3
 //::     topMeta: null
-//::     covStatus: CovTest
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|51,45-51,45
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -5627,13 +5755,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 2
+//::     usedByNumber: 3
 //::     topMeta:
 //::       batchIndex: 4
 //::       batchOutcome: Valid
 //::       batchResourceCount: 8840
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|53,11-53,85
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -5778,13 +5906,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 2
+//::     usedByNumber: 3
 //::     topMeta:
 //::       batchIndex: 5
 //::       batchOutcome: Valid
 //::       batchResourceCount: 8798
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|55,43-55,43
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6369,13 +6497,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 1
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 7
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11127
 //::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|57,29-57,34
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6520,13 +6648,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 1
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 8
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11128
 //::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|57,39-57,51
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -6671,13 +6799,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 1
+//::     usedByNumber: 0
 //::     topMeta:
 //::       batchIndex: 9
 //::       batchOutcome: Valid
 //::       batchResourceCount: 11190
 //::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|59,41-59,45
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8010,7 +8138,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 33
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14939
+//::       batchResourceCount: 14867
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|63,9-63,14
@@ -8062,7 +8190,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       - call
 //::       - call
 //::       - call
-//::       - ensures clause at snapshot_test_complex_5.dfy(6,13)-(6,26) from call
 //::       - call
 //::       - call
 //::       - call
@@ -8090,14 +8217,14 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       - call
 //::     roles:
 //::       isTop: false
-//::       isCall: true
-//::       isProvedBy: true
+//::       isCall: false
+//::       isProvedBy: false
 //::       isUnused: true
-//::     type: Call
-//::     usedByNumber: 1
+//::     type: CodeLine
+//::     usedByNumber: 0
 //::     topMeta: null
-//::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatus: Uncovered
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|65,17-65,17
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8183,7 +8310,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 34
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15216
+//::       batchResourceCount: 15199
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|65,19-65,19
@@ -8267,13 +8394,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 35
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15426
+//::       batchResourceCount: 15387
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|64,9-65,26
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8355,13 +8482,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionManual
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 36
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15595
-//::     covStatus: Uncovered
-//::     covStatusInternal: Uncovered
+//::       batchResourceCount: 15581
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|66,9-66,15
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8531,7 +8658,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 37
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15786
+//::       batchResourceCount: 15748
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|68,19-68,19
@@ -8619,9 +8746,9 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 38
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15923
+//::       batchResourceCount: 15831
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|68,25-68,25
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -8917,7 +9044,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 39
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16143
+//::       batchResourceCount: 16074
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|70,12-70,12
@@ -9005,7 +9132,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 12
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14712
+//::       batchResourceCount: 14882
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|70,14-70,14
@@ -9093,7 +9220,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 13
 //::       batchOutcome: Valid
-//::       batchResourceCount: 14830
+//::       batchResourceCount: 14960
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|70,9-70,16
@@ -9267,7 +9394,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 32
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15254
+//::       batchResourceCount: 15421
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|73,43-73,43
@@ -9355,7 +9482,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 27
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15695
+//::       batchResourceCount: 15879
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|73,45-73,45
@@ -9443,7 +9570,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 28
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15823
+//::       batchResourceCount: 16003
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|73,55-73,55
@@ -9531,7 +9658,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 29
 //::       batchOutcome: Valid
-//::       batchResourceCount: 15943
+//::       batchResourceCount: 16141
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|73,58-73,62
@@ -9683,7 +9810,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 31
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16088
+//::       batchResourceCount: 16247
 //::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|73,39-73,64
@@ -9834,7 +9961,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 14
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16269
+//::       batchResourceCount: 16437
 //::     covStatus: Uncovered
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|76,22-76,26
@@ -9918,13 +10045,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       isProvedBy: true
 //::       isUnused: true
 //::     type: AssertionAutomatic
-//::     usedByNumber: 0
+//::     usedByNumber: 1
 //::     topMeta:
 //::       batchIndex: 15
 //::       batchOutcome: Valid
-//::       batchResourceCount: 16306
+//::       batchResourceCount: 16635
 //::     covStatus: CovComplete
-//::     covStatusInternal: Uncovered
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|76,9-76,28
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -10206,7 +10333,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 19
 //::       batchOutcome: Valid
-//::       batchResourceCount: 17354
+//::       batchResourceCount: 17504
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|78,17-78,17
@@ -10294,7 +10421,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 20
 //::       batchOutcome: Valid
-//::       batchResourceCount: 18313
+//::       batchResourceCount: 18759
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
@@ -10382,7 +10509,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 21
 //::       batchOutcome: Valid
-//::       batchResourceCount: 18485
+//::       batchResourceCount: 18939
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
@@ -10680,7 +10807,91 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 22
 //::       batchOutcome: Valid
-//::       batchResourceCount: 18832
+//::       batchResourceCount: 19292
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
+//::     file: snapshot_test_complex_5.dfy
+//::     start:
+//::       line: 62
+//::       col: 8
+//::     end:
+//::       line: 62
+//::       col: 13
+//::     methodName: GCD2
+//::     methodType: correctness
+//::     prooftexts:
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::       - condition atom
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Condition
+//::     usedByNumber: 2
+//::     topMeta: null
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
@@ -10768,7 +10979,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 23
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20584
+//::       batchResourceCount: 20724
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
@@ -10856,7 +11067,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 24
 //::       batchOutcome: Valid
-//::       batchResourceCount: 20338
+//::       batchResourceCount: 20468
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovTest
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -11154,7 +11365,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     topMeta:
 //::       batchIndex: 25
 //::       batchOutcome: Valid
-//::       batchResourceCount: 21062
+//::       batchResourceCount: 21201
 //::     covStatus: CovComplete
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|82,1-82,1
@@ -11379,7 +11590,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     methodType: correctness
 //::     prooftexts:
 //::       - ensures clause
-//::       - ensures clause
 //::     roles:
 //::       isTop: false
 //::       isCall: false
@@ -11388,8 +11598,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     type: Postcondition
 //::     usedByNumber: 0
 //::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_complex_5.dfy|GCD2|correctness|15,23-15,48
 //::     file: snapshot_test_complex_5.dfy
 //::     start:
@@ -11414,8 +11624,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     type: Postcondition
 //::     usedByNumber: 0
 //::     topMeta: null
-//::     covStatus: Uncovered
-//::     covStatusInternal: CovTest
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
 //:: edges:
 //::   provedBy:
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,20
@@ -11430,9 +11640,11 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|23,14-23,14
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,14-18,18
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|24,9-24,24
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,23-18,27
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,14-18,18
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|26,12-26,12
 //::       provers:
@@ -11455,6 +11667,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|28,36-28,40
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,20
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|28,9-28,42
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,23-18,27
@@ -11462,6 +11675,9 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|29,16-29,20
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,20
+//::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|29,9-29,26
+//::       provers:
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|30,20-30,20
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|26,12-26,12
@@ -11473,8 +11689,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|26,14-26,14
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|30,9-30,38
 //::       provers:
-//::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,23-18,27
-//::         - snapshot_test_complex_5.dfy|GCD1|correctness|26,9-26,16
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,9-28,42
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|31,12-31,12
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|26,14-26,14
@@ -11486,7 +11702,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|26,14-26,14
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|32,9-32,30
 //::       provers:
-//::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,9-28,42
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,9-30,38
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|31,9-31,14
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|34,20-34,20
 //::       provers:
@@ -11496,12 +11712,12 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|26,14-26,14
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|34,9-34,29
 //::       provers:
-//::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,9-28,42
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,9-30,38
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|31,9-31,14
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|33,9-33,15
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|36,12-36,12
 //::       provers:
-//::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,23-18,27
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,14-18,18
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|36,14-36,14
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,23-18,27
@@ -11512,6 +11728,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,23-18,27
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,20
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|38,20-38,20
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|36,12-36,12
@@ -11590,17 +11807,23 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|65,17-65,17
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|63,12-63,12
+//::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|65,19-65,19
+//::       provers:
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|49,10-49,10
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|64,9-65,26
 //::       provers:
-//::         - snapshot_test_complex_5.dfy|GCD2|correctness|57,20-57,24
-//::         - snapshot_test_complex_5.dfy|GCD2|correctness|57,29-57,34
-//::         - snapshot_test_complex_5.dfy|GCD2|correctness|57,39-57,51
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|51,11-51,54
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|53,11-53,85
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|68,17-68,17
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|63,12-63,12
+//::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|68,19-68,19
+//::       provers:
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|65,19-65,19
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|67,9-68,26
 //::       provers:
-//::         - snapshot_test_complex_5.dfy|GCD2|correctness|63,9-63,14
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|64,9-65,26
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|66,9-66,15
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|70,12-70,12
 //::       provers:
@@ -11614,9 +11837,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|73,39-73,64
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|70,9-70,16
+//::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|76,22-76,26
+//::       provers:
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|76,9-76,28
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|44,23-44,28
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|76,22-76,26
 //::     - top: snapshot_test_complex_5.dfy|GCD2|correctness|78,17-78,17
 //::       provers:
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|70,12-70,12
@@ -11681,6 +11908,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -11730,6 +11959,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -11777,6 +12008,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -11825,6 +12058,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -11874,6 +12108,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -11923,6 +12159,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -11971,6 +12209,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12019,6 +12259,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12067,6 +12309,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12115,6 +12359,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12163,6 +12409,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12212,6 +12460,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12261,6 +12511,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12309,6 +12561,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12358,6 +12612,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12406,6 +12661,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12454,6 +12711,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12502,6 +12761,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12551,6 +12812,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12559,6 +12822,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|30,9-30,38
 //::       unused:
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,14-18,18
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,23-18,27
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|19,13-19,25
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|23,12-23,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|23,14-23,14
@@ -12573,7 +12837,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,23-28,23
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,33-28,33
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,36-28,40
-//::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,9-28,42
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|29,16-29,20
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|29,9-29,26
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,20-30,20
@@ -12599,6 +12862,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12647,6 +12911,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12695,6 +12961,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12743,6 +13011,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12766,13 +13036,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,23-28,23
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,33-28,33
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,36-28,40
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,9-28,42
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|29,16-29,20
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|29,9-29,26
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,20-30,20
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,23-30,23
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,33-30,33
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,36-30,36
-//::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,9-30,38
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|31,12-31,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|31,9-31,14
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|32,20-32,20
@@ -12791,6 +13061,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12839,6 +13111,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12887,6 +13161,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12910,13 +13186,13 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,23-28,23
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,33-28,33
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,36-28,40
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|28,9-28,42
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|29,16-29,20
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|29,9-29,26
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,20-30,20
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,23-30,23
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,33-30,33
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,36-30,36
-//::         - snapshot_test_complex_5.dfy|GCD1|correctness|30,9-30,38
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|31,12-31,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|31,9-31,14
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|32,20-32,20
@@ -12934,6 +13210,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -12941,7 +13219,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|41,1-41,1
 //::     - top: snapshot_test_complex_5.dfy|GCD1|correctness|36,12-36,12
 //::       unused:
-//::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,14-18,18
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|18,23-18,27
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|19,13-19,25
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|23,12-23,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|23,14-23,14
@@ -12982,6 +13260,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -13030,6 +13310,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -13078,6 +13360,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -13127,6 +13411,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -13176,6 +13462,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -13224,6 +13512,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,20-38,20
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -13272,6 +13562,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,20-38,20
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -13319,6 +13611,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,5-40,25
@@ -13365,6 +13659,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,20-38,20
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,9-38,29
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,5-40,25
@@ -13412,6 +13708,8 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,20-38,20
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,22-38,22
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|38,28-38,28
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|25,16-25,25
+//::         - snapshot_test_complex_5.dfy|GCD1|correctness|22,8-22,12
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,16-40,16
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,18-40,18
 //::         - snapshot_test_complex_5.dfy|GCD1|correctness|40,24-40,24
@@ -13478,6 +13776,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -13546,6 +13845,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -13612,6 +13912,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -13679,6 +13980,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -13747,6 +14049,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -13815,6 +14118,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -13883,6 +14187,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -13950,6 +14255,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14018,6 +14324,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14086,6 +14393,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14155,6 +14463,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14223,6 +14532,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14292,6 +14602,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14360,6 +14671,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14428,6 +14740,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14496,6 +14809,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14564,6 +14878,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14632,6 +14947,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14700,6 +15016,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14769,6 +15086,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14838,6 +15156,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14906,6 +15225,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -14973,6 +15293,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15041,6 +15362,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15109,6 +15431,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15178,6 +15501,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15246,6 +15570,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15314,6 +15639,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15381,6 +15707,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15449,6 +15776,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15517,6 +15845,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15586,6 +15915,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15655,6 +15985,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15722,6 +16053,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15789,6 +16121,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15802,7 +16135,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|48,8-48,8
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|48,5-48,10
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|49,8-49,8
-//::         - snapshot_test_complex_5.dfy|GCD2|correctness|49,10-49,10
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|49,5-49,12
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|51,45-51,45
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|51,47-51,47
@@ -15857,6 +16189,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -15992,6 +16325,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16039,7 +16373,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|63,12-63,12
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|63,9-63,14
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|65,17-65,17
-//::         - snapshot_test_complex_5.dfy|GCD2|correctness|65,19-65,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|64,9-65,26
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|66,9-66,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|68,17-68,17
@@ -16060,6 +16393,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16108,7 +16442,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|63,9-63,14
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|65,17-65,17
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|65,19-65,19
-//::         - snapshot_test_complex_5.dfy|GCD2|correctness|64,9-65,26
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|68,17-68,17
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|68,19-68,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|68,25-68,25
@@ -16127,6 +16460,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16194,6 +16528,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16261,6 +16596,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16329,6 +16665,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16396,6 +16733,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16464,6 +16802,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16532,6 +16871,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16601,6 +16941,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16670,6 +17011,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16806,6 +17148,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16874,6 +17217,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -16941,6 +17285,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,17-78,17
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -17009,6 +17354,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,17-78,17
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -17077,6 +17423,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|80,5-81,22
@@ -17144,6 +17491,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|77,9-78,26
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|80,5-81,22
@@ -17210,6 +17558,7 @@ method GCD2(a: int, b: int) returns (r: int)
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,17-78,17
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,19-78,19
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|78,25-78,25
+//::         - snapshot_test_complex_5.dfy|GCD2|correctness|62,8-62,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,13-81,13
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,15-81,15
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|81,21-81,21
@@ -17243,9 +17592,6 @@ method GCD2(a: int, b: int) returns (r: int)
 //::     - call: snapshot_test_complex_5.dfy|GCD2|correctness|49,5-49,12
 //::       targets:
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|15,23-15,48
-//::     - call: snapshot_test_complex_5.dfy|GCD2|correctness|63,9-63,14
-//::       targets:
-//::         - snapshot_test_complex_5.dfy|GCD2|correctness|6,13-6,26
 //::     - call: snapshot_test_complex_5.dfy|GCD2|correctness|70,9-70,16
 //::       targets:
 //::         - snapshot_test_complex_5.dfy|GCD2|correctness|15,23-15,48
