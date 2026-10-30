@@ -25,7 +25,7 @@ interface CliArgs {
   forceMinimization: boolean;
   compareMinimization: boolean;
   noAbstractInterpretation: boolean;
-  file?: string;  // Single-file mode: classify one .dfy file, output JSON to stdout
+  file?: string;  // Single-file mode: classify one .dfy file and each of its methods, output JSON to stdout
 }
 
 function printHelp(): void {
@@ -34,7 +34,7 @@ Usage: npx tsx evaluation/src/cli.ts [options]
 
 Options:
   -h, --help                    Show this help message
-  --file <path>                 Single-file mode: classify one .dfy file, output JSON to stdout
+  --file <path>                 Single-file mode: classify one .dfy file and each of its methods, output JSON to stdout
   --repo-root <path>            Path to dafny-synthesis repo (default: "dafny-synthesis")
   --dafny-path <path>           Dafny binary path (default: "dafny")
   --timeout <seconds>           Per-file verification timeout (default: 60)
@@ -124,7 +124,7 @@ async function main() {
     }
 
     const { runDafny, parseProof, RunStatus } = await import("@proofpulse/core");
-    const { classifySpec, classifyAll } = await import("./classifier.js");
+    const { classifySpec, classifyAll, classifyMethods } = await import("./classifier.js");
 
     try {
       const dafnyStart = Date.now();
@@ -152,6 +152,7 @@ async function main() {
       const classifyStart = Date.now();
       const classification = classifySpec(proof.proofGraph);
       const categories = classifyAll(proof.proofGraph, nodes);
+      const methods = classifyMethods(proof.proofGraph, nodes);
       const classifySeconds = (Date.now() - classifyStart) / 1000;
 
       // Step timing, so the Python side can show where time goes per file
@@ -159,7 +160,7 @@ async function main() {
       // needing to instrument the subprocess boundary from outside.
       const timing = { dafny_seconds: dafnySeconds, parse_seconds: parseSeconds, classify_seconds: classifySeconds };
 
-      console.log(JSON.stringify({ classification, categories, timing }));
+      console.log(JSON.stringify({ classification, categories, methods, timing }));
     } catch (err: any) {
       console.log(JSON.stringify({ classification: Classification.Error, categories: NO_CATEGORIES, error: err.message ?? String(err) }));
     }
