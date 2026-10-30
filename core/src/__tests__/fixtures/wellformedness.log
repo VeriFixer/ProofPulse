@@ -1,0 +1,937 @@
+
+Results for sum (well-formedness)
+  Overall outcome: Correct
+  Overall time: 00:00:01.3076305
+  Overall resource count: 36451
+  Maximum assertion batch time: 00:00:00.2653652
+  Maximum assertion batch resource count: 7685
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.2649692
+    Resource count: 7050
+
+    Assertions:
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+
+    Proof dependencies:
+      wellformedness.dfy(2,12)-(2,24): requires clause
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+
+    Unused by proof:
+      wellformedness.dfy(4,18)-(4,18): function call result
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+      wellformedness.dfy(4,25)-(4,37): decreases expression at index 1 is bounded below by 0
+      wellformedness.dfy(4,25)-(4,37): loop or recursion terminates
+      wellformedness.dfy(4,41)-(4,48): index in range
+      wellformedness.dfy(4,25)-(4,48): function call result
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.2639777
+    Resource count: 7137
+
+    Assertions:
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+
+    Proof dependencies:
+      wellformedness.dfy(2,12)-(2,24): requires clause
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+
+    Unused by proof:
+      wellformedness.dfy(4,18)-(4,18): function call result
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+      wellformedness.dfy(4,25)-(4,37): decreases expression at index 1 is bounded below by 0
+      wellformedness.dfy(4,25)-(4,37): loop or recursion terminates
+      wellformedness.dfy(4,41)-(4,48): index in range
+      wellformedness.dfy(4,25)-(4,48): function call result
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.2625648
+    Resource count: 7267
+
+    Assertions:
+      wellformedness.dfy(4,25)-(4,37): decreases expression at index 1 is bounded below by 0
+
+    Proof dependencies:
+      wellformedness.dfy(4,25)-(4,37): decreases expression at index 1 is bounded below by 0
+
+    Unused by proof:
+      wellformedness.dfy(2,12)-(2,24): requires clause
+      wellformedness.dfy(4,18)-(4,18): function call result
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+      wellformedness.dfy(4,25)-(4,37): loop or recursion terminates
+      wellformedness.dfy(4,41)-(4,48): index in range
+      wellformedness.dfy(4,25)-(4,48): function call result
+
+  Assertion batch 4:
+    Outcome: Valid
+    Duration: 00:00:00.2653652
+    Resource count: 7312
+
+    Assertions:
+      wellformedness.dfy(4,25)-(4,37): loop or recursion terminates
+
+    Proof dependencies:
+      wellformedness.dfy(4,25)-(4,37): loop or recursion terminates
+
+    Unused by proof:
+      wellformedness.dfy(2,12)-(2,24): requires clause
+      wellformedness.dfy(4,18)-(4,18): function call result
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+      wellformedness.dfy(4,25)-(4,37): decreases expression at index 1 is bounded below by 0
+      wellformedness.dfy(4,41)-(4,48): index in range
+      wellformedness.dfy(4,25)-(4,48): function call result
+
+  Assertion batch 5:
+    Outcome: Valid
+    Duration: 00:00:00.2507536
+    Resource count: 7685
+
+    Assertions:
+      wellformedness.dfy(4,41)-(4,48): index in range
+
+    Proof dependencies:
+      wellformedness.dfy(2,12)-(2,24): requires clause
+      wellformedness.dfy(4,41)-(4,48): index in range
+
+    Unused by proof:
+      wellformedness.dfy(4,18)-(4,18): function call result
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+      wellformedness.dfy(4,25)-(4,37): function precondition satisfied
+      wellformedness.dfy(4,25)-(4,37): decreases expression at index 1 is bounded below by 0
+      wellformedness.dfy(4,25)-(4,37): loop or recursion terminates
+      wellformedness.dfy(4,25)-(4,48): function call result
+
+Results for Get (well-formedness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.7331894
+  Overall resource count: 21708
+  Maximum assertion batch time: 00:00:00.2504288
+  Maximum assertion batch resource count: 8304
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.2495091
+    Resource count: 7978
+
+    Assertions:
+      wellformedness.dfy(10,16)-(10,16): array is never null
+
+    Proof dependencies:
+      wellformedness.dfy(10,16)-(10,16): array is never null
+
+    Unused by proof:
+      wellformedness.dfy(9,21)-(9,23): target object is never null
+      wellformedness.dfy(9,12)-(9,23): method requires clause
+      wellformedness.dfy(10,16)-(10,19): index in range
+      wellformedness.dfy(10,11)-(10,19): method ensures clause
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.2504288
+    Resource count: 8304
+
+    Assertions:
+      wellformedness.dfy(10,16)-(10,19): index in range
+
+    Proof dependencies:
+      wellformedness.dfy(9,12)-(9,23): method requires clause
+      wellformedness.dfy(10,16)-(10,19): index in range
+
+    Unused by proof:
+      wellformedness.dfy(9,21)-(9,23): target object is never null
+      wellformedness.dfy(10,16)-(10,16): array is never null
+      wellformedness.dfy(10,11)-(10,19): method ensures clause
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.2332515
+    Resource count: 5426
+
+    Assertions:
+      wellformedness.dfy(9,21)-(9,23): target object is never null
+
+    Proof dependencies:
+      wellformedness.dfy(9,21)-(9,23): target object is never null
+
+    Unused by proof:
+      wellformedness.dfy(9,12)-(9,23): method requires clause
+      wellformedness.dfy(10,16)-(10,16): array is never null
+      wellformedness.dfy(10,16)-(10,19): index in range
+      wellformedness.dfy(10,11)-(10,19): method ensures clause
+
+Results for Get (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.1733931
+  Overall resource count: 21754
+  Maximum assertion batch time: 00:00:00.0667266
+  Maximum assertion batch resource count: 8832
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0493707
+    Resource count: 6340
+
+    Assertions:
+      wellformedness.dfy(12,8)-(12,8): array is never null
+
+    Proof dependencies:
+      wellformedness.dfy(12,8)-(12,8): array is never null
+
+    Unused by proof:
+      wellformedness.dfy(9,12)-(9,17): requires clause
+      wellformedness.dfy(9,17)-(9,23): requires clause
+      wellformedness.dfy(10,11)-(10,19): ensures clause
+      wellformedness.dfy(12,8)-(12,11): index in range
+      wellformedness.dfy(12,3)-(12,12): assignment (or return)
+      wellformedness.dfy(13,1)-(13,1): out-parameter 'x', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0572958
+    Resource count: 6582
+
+    Assertions:
+      wellformedness.dfy(12,8)-(12,11): index in range
+
+    Proof dependencies:
+      wellformedness.dfy(9,12)-(9,17): requires clause
+      wellformedness.dfy(9,17)-(9,23): requires clause
+      wellformedness.dfy(12,8)-(12,11): index in range
+
+    Unused by proof:
+      wellformedness.dfy(10,11)-(10,19): ensures clause
+      wellformedness.dfy(12,8)-(12,8): array is never null
+      wellformedness.dfy(12,3)-(12,12): assignment (or return)
+      wellformedness.dfy(13,1)-(13,1): out-parameter 'x', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0667266
+    Resource count: 8832
+
+    Assertions:
+      wellformedness.dfy(10,11)-(10,19): this postcondition holds
+
+    Proof dependencies:
+      wellformedness.dfy(10,11)-(10,19): ensures clause
+      wellformedness.dfy(12,3)-(12,12): assignment (or return)
+
+    Unused by proof:
+      wellformedness.dfy(9,12)-(9,17): requires clause
+      wellformedness.dfy(9,17)-(9,23): requires clause
+      wellformedness.dfy(12,8)-(12,8): array is never null
+      wellformedness.dfy(12,8)-(12,11): index in range
+      wellformedness.dfy(13,1)-(13,1): out-parameter 'x', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for UseGet (well-formedness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.1495193
+  Overall resource count: 19782
+  Maximum assertion batch time: 00:00:00.0565353
+  Maximum assertion batch resource count: 7925
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0565353
+    Resource count: 4844
+
+    Assertions:
+      wellformedness.dfy(16,12)-(16,14): target object is never null
+
+    Proof dependencies:
+      wellformedness.dfy(16,12)-(16,14): target object is never null
+
+    Unused by proof:
+      wellformedness.dfy(16,12)-(16,23): method requires clause
+      wellformedness.dfy(17,16)-(17,16): array is never null
+      wellformedness.dfy(17,16)-(17,19): index in range
+      wellformedness.dfy(17,11)-(17,19): method ensures clause
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0534917
+    Resource count: 7013
+
+    Assertions:
+      wellformedness.dfy(17,16)-(17,16): array is never null
+
+    Proof dependencies:
+      wellformedness.dfy(17,16)-(17,16): array is never null
+
+    Unused by proof:
+      wellformedness.dfy(16,12)-(16,14): target object is never null
+      wellformedness.dfy(16,12)-(16,23): method requires clause
+      wellformedness.dfy(17,16)-(17,19): index in range
+      wellformedness.dfy(17,11)-(17,19): method ensures clause
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0394923
+    Resource count: 7925
+
+    Assertions:
+      wellformedness.dfy(17,16)-(17,19): index in range
+
+    Proof dependencies:
+      wellformedness.dfy(16,12)-(16,23): method requires clause
+      wellformedness.dfy(17,16)-(17,19): index in range
+
+    Unused by proof:
+      wellformedness.dfy(16,12)-(16,14): target object is never null
+      wellformedness.dfy(17,16)-(17,16): array is never null
+      wellformedness.dfy(17,11)-(17,19): method ensures clause
+
+Results for UseGet (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.1604572
+  Overall resource count: 23022
+  Maximum assertion batch time: 00:00:00.0763608
+  Maximum assertion batch resource count: 10384
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0555850
+    Resource count: 6221
+
+    Assertions:
+      wellformedness.dfy(19,3)-(19,17): the precondition always holds
+
+    Proof dependencies:
+      wellformedness.dfy(19,3)-(19,17): requires clause at wellformedness.dfy(9,12)-(9,17) from call
+
+    Unused by proof:
+      wellformedness.dfy(16,12)-(16,23): requires clause
+      wellformedness.dfy(17,11)-(17,19): ensures clause
+      wellformedness.dfy(19,3)-(19,17): call
+      wellformedness.dfy(19,3)-(19,17): assignment (or return)
+      wellformedness.dfy(20,1)-(20,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0285114
+    Resource count: 6417
+
+    Assertions:
+      wellformedness.dfy(19,3)-(19,17): the precondition always holds
+
+    Proof dependencies:
+      wellformedness.dfy(16,12)-(16,23): requires clause
+      wellformedness.dfy(19,3)-(19,17): requires clause at wellformedness.dfy(9,17)-(9,23) from call
+
+    Unused by proof:
+      wellformedness.dfy(17,11)-(17,19): ensures clause
+      wellformedness.dfy(19,3)-(19,17): call
+      wellformedness.dfy(19,3)-(19,17): assignment (or return)
+      wellformedness.dfy(20,1)-(20,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0763608
+    Resource count: 10384
+
+    Assertions:
+      wellformedness.dfy(17,11)-(17,19): this postcondition holds
+
+    Proof dependencies:
+      wellformedness.dfy(17,11)-(17,19): ensures clause
+      wellformedness.dfy(19,3)-(19,17): assignment (or return)
+      wellformedness.dfy(19,3)-(19,17): ensures clause at wellformedness.dfy(10,11)-(10,19) from call
+
+    Unused by proof:
+      wellformedness.dfy(16,12)-(16,23): requires clause
+      wellformedness.dfy(19,3)-(19,17): call
+      wellformedness.dfy(20,1)-(20,1): out-parameter 'y', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for SumStep (well-formedness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.2514175
+  Overall resource count: 36456
+  Maximum assertion batch time: 00:00:00.0932492
+  Maximum assertion batch resource count: 7464
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0932492
+    Resource count: 7113
+
+    Assertions:
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+
+    Proof dependencies:
+      wellformedness.dfy(24,12)-(24,23): method requires clause
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+
+    Unused by proof:
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+      wellformedness.dfy(25,40)-(25,43): index in range
+      wellformedness.dfy(25,11)-(25,43): method ensures clause
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0287121
+    Resource count: 7140
+
+    Assertions:
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+
+    Proof dependencies:
+      wellformedness.dfy(24,12)-(24,23): method requires clause
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+
+    Unused by proof:
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+      wellformedness.dfy(25,40)-(25,43): index in range
+      wellformedness.dfy(25,11)-(25,43): method ensures clause
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0231257
+    Resource count: 7447
+
+    Assertions:
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+
+    Proof dependencies:
+      wellformedness.dfy(24,12)-(24,23): method requires clause
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+
+    Unused by proof:
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+      wellformedness.dfy(25,40)-(25,43): index in range
+      wellformedness.dfy(25,11)-(25,43): method ensures clause
+
+  Assertion batch 4:
+    Outcome: Valid
+    Duration: 00:00:00.0525515
+    Resource count: 7464
+
+    Assertions:
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+
+    Proof dependencies:
+      wellformedness.dfy(24,12)-(24,23): method requires clause
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+
+    Unused by proof:
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+      wellformedness.dfy(25,40)-(25,43): index in range
+      wellformedness.dfy(25,11)-(25,43): method ensures clause
+
+  Assertion batch 5:
+    Outcome: Valid
+    Duration: 00:00:00.0537790
+    Resource count: 7292
+
+    Assertions:
+      wellformedness.dfy(25,40)-(25,43): index in range
+
+    Proof dependencies:
+      wellformedness.dfy(25,40)-(25,43): index in range
+
+    Unused by proof:
+      wellformedness.dfy(24,12)-(24,23): method requires clause
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+      wellformedness.dfy(25,11)-(25,23): function precondition satisfied
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+      wellformedness.dfy(25,28)-(25,36): function precondition satisfied
+      wellformedness.dfy(25,11)-(25,43): method ensures clause
+
+Results for SumStep (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.0344558
+  Overall resource count: 8731
+  Maximum assertion batch time: 00:00:00.0344558
+  Maximum assertion batch resource count: 8731
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0344558
+    Resource count: 8731
+
+    Assertions:
+      wellformedness.dfy(25,11)-(25,43): this postcondition holds
+
+    Proof dependencies:
+      wellformedness.dfy(1,1)-(5,1): function definition for sum
+      wellformedness.dfy(24,12)-(24,17): requires clause
+      wellformedness.dfy(25,11)-(25,43): ensures clause
+
+    Unused by proof:
+      wellformedness.dfy(24,17)-(24,23): requires clause
+
+Results for Total (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:01.2379093
+  Overall resource count: 138498
+  Maximum assertion batch time: 00:00:00.1428588
+  Maximum assertion batch resource count: 13016
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.1051457
+    Resource count: 6606
+
+    Assertions:
+      wellformedness.dfy(35,15)-(35,20): this loop invariant holds on entry
+
+    Proof dependencies:
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0934397
+    Resource count: 6799
+
+    Assertions:
+      wellformedness.dfy(35,20)-(35,27): this loop invariant holds on entry
+
+    Proof dependencies:
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0789688
+    Resource count: 8266
+
+    Assertions:
+      wellformedness.dfy(36,15)-(36,28): this loop invariant holds on entry
+
+    Proof dependencies:
+      wellformedness.dfy(1,1)-(5,1): function definition for sum
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+
+    Unused by proof:
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 4:
+    Outcome: Valid
+    Duration: 00:00:00.0741619
+    Resource count: 9985
+
+    Assertions:
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+
+    Proof dependencies:
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 5:
+    Outcome: Valid
+    Duration: 00:00:00.0717110
+    Resource count: 10058
+
+    Assertions:
+      wellformedness.dfy(38,14)-(38,17): index in range
+
+    Proof dependencies:
+      wellformedness.dfy(38,14)-(38,17): index in range
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 6:
+    Outcome: Valid
+    Duration: 00:00:00.1428588
+    Resource count: 10619
+
+    Assertions:
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+
+    Proof dependencies:
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 7:
+    Outcome: Valid
+    Duration: 00:00:00.1032487
+    Resource count: 10803
+
+    Assertions:
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+
+    Proof dependencies:
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 8:
+    Outcome: Valid
+    Duration: 00:00:00.1029504
+    Resource count: 11209
+
+    Assertions:
+      wellformedness.dfy(35,15)-(35,20): this loop invariant is maintained by the loop
+
+    Proof dependencies:
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 9:
+    Outcome: Valid
+    Duration: 00:00:00.0859772
+    Resource count: 11242
+
+    Assertions:
+      wellformedness.dfy(35,20)-(35,27): this loop invariant is maintained by the loop
+
+    Proof dependencies:
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 10:
+    Outcome: Valid
+    Duration: 00:00:00.1116745
+    Resource count: 13016
+
+    Assertions:
+      wellformedness.dfy(36,15)-(36,28): this loop invariant is maintained by the loop
+
+    Proof dependencies:
+      wellformedness.dfy(1,1)-(5,1): function definition for sum
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 11:
+    Outcome: Valid
+    Duration: 00:00:00.1063623
+    Resource count: 9787
+
+    Assertions:
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+    Proof dependencies:
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+
+  Assertion batch 12:
+    Outcome: Valid
+    Duration: 00:00:00.0618538
+    Resource count: 9900
+
+    Assertions:
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+
+    Proof dependencies:
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 13:
+    Outcome: Valid
+    Duration: 00:00:00.0613605
+    Resource count: 10105
+
+    Assertions:
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+
+    Proof dependencies:
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 14:
+    Outcome: Valid
+    Duration: 00:00:00.0381960
+    Resource count: 10103
+
+    Assertions:
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+
+    Proof dependencies:
+      wellformedness.dfy(35,15)-(35,27): loop invariant
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+
+    Unused by proof:
+      wellformedness.dfy(32,3)-(32,9): assignment (or return)
+      wellformedness.dfy(33,7)-(33,13): assignment (or return)
+      wellformedness.dfy(35,15)-(35,20): loop invariant always holds
+      wellformedness.dfy(35,20)-(35,27): loop invariant always holds
+      wellformedness.dfy(36,15)-(36,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(36,20)-(36,28): function precondition satisfied
+      wellformedness.dfy(36,15)-(36,28): loop invariant
+      wellformedness.dfy(36,15)-(36,28): loop invariant always holds
+      wellformedness.dfy(38,10)-(38,10): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(38,14)-(38,17): index in range
+      wellformedness.dfy(38,5)-(38,18): assignment (or return)
+      wellformedness.dfy(39,5)-(39,15): assignment (or return)
+      wellformedness.dfy(34,13)-(34,15): decreases expression is bounded below by 0
+      wellformedness.dfy(34,3)-(40,3): loop or recursion terminates
+      wellformedness.dfy(41,1)-(41,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for Grow (correctness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.0857568
+  Overall resource count: 18367
+  Maximum assertion batch time: 00:00:00.0571248
+  Maximum assertion batch resource count: 9980
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0571248
+    Resource count: 8387
+
+    Assertions:
+      wellformedness.dfy(52,3)-(52,17): the precondition always holds
+
+    Proof dependencies:
+      wellformedness.dfy(49,12)-(49,18): requires clause
+      wellformedness.dfy(51,3)-(51,15): assignment (or return)
+      wellformedness.dfy(52,3)-(52,17): requires clause at wellformedness.dfy(45,12)-(45,16) from call
+
+    Unused by proof:
+      wellformedness.dfy(52,15)-(52,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(52,3)-(52,17): call
+      wellformedness.dfy(53,17)-(53,17): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(53,3)-(53,19): assertion always holds
+      wellformedness.dfy(54,1)-(54,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.0286320
+    Resource count: 9980
+
+    Assertions:
+      wellformedness.dfy(53,3)-(53,19): assertion always holds
+
+    Proof dependencies:
+      wellformedness.dfy(52,3)-(52,17): ensures clause at wellformedness.dfy(46,11)-(46,19) from call
+      wellformedness.dfy(53,3)-(53,19): assertion always holds
+
+    Unused by proof:
+      wellformedness.dfy(49,12)-(49,18): requires clause
+      wellformedness.dfy(51,3)-(51,15): assignment (or return)
+      wellformedness.dfy(52,15)-(52,15): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(52,3)-(52,17): call
+      wellformedness.dfy(53,17)-(53,17): variable 't', which is subject to definite-assignment rules, is always initialized here
+      wellformedness.dfy(54,1)-(54,1): out-parameter 't', which is subject to definite-assignment rules, is always initialized at this return point

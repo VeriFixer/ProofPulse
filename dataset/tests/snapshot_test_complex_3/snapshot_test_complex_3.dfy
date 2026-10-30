@@ -562,7 +562,7 @@ method SelectionSort(a: array<int>)
 //::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|8,20-8,27
 //::     file: snapshot_test_complex_3.dfy
 //::     start:
@@ -2925,7 +2925,7 @@ method SelectionSort(a: array<int>)
 //::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_complex_3.dfy|SelectionSort|correctness|15,17-15,22
 //::     file: snapshot_test_complex_3.dfy
 //::     start:

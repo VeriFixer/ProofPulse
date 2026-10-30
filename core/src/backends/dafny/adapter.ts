@@ -7,11 +7,13 @@
 import {
   COVERAGE_REPORT_SCHEMA,
   CoverageReport,
+  QueryOutcome,
   ReportNode,
   ReportSource,
   ReportTool,
   ReportUnit,
   SolverKind,
+  Vacuity,
   VerifierId,
   isCallKind,
 } from "../../report/coverage-report.js";
@@ -52,6 +54,45 @@ export interface DafnyReportInfo {
   version?: string;
   solverVersion?: string;
   minimized?: boolean;
+  /** Text of the verified file; lets vacuous `assert false` / `{:contradiction}` goals count as intentional. */
+  sourceText?: string;
+}
+
+type Spanned = Omit<Located, "proofText">;
+
+function sameSpan(a: Spanned, b: Spanned): boolean {
+  return a.file === b.file && a.startLine === b.startLine && a.startCol === b.startCol
+    && a.endLine === b.endLine && a.endCol === b.endCol;
+}
+
+/** `assert false` and `assert {:contradiction} …` are vacuous on purpose. */
+const INTENTIONAL_CONTRADICTION_RE = /^assert\s+(\{:contradiction\}|false\b)/;
+
+/**
+ * Whether the goal belongs to an intentionally vacuous `assert`. Dafny splits
+ * conjunctions into one goal per conjunct, so the span may start inside the
+ * assertion: look back to the nearest `assert` on the goal's first line.
+ */
+function isIntentionalContradiction(sourceLines: readonly string[], goal: Spanned): boolean {
+  const line = sourceLines[goal.startLine - 1];
+  if (line === undefined) return false;
+  const keyword = "assert";
+  const at = line.slice(0, goal.startCol - 1 + keyword.length).lastIndexOf(keyword);
+  return at >= 0 && INTENTIONAL_CONTRADICTION_RE.test(line.slice(at));
+}
+
+/**
+ * Vacuity of one batch. Dafny lists a goal's own dependency (its `ensures
+ * clause`, or the assertion itself) under "Proof dependencies" when the proof
+ * needs it. When that dependency is reported unused instead, the facts on the
+ * path are contradictory: this is Dafny's `--warn-contradictory-assumptions` check.
+ */
+function batchVacuity(batch: ParsedBatch, sourceLines: readonly string[] | undefined): Vacuity | undefined {
+  if (batch.outcome !== QueryOutcome.Valid) return undefined;
+  const goal = batch.topAssertion;
+  if (batch.provedBy.some((p) => sameSpan(p, goal))) return undefined;
+  if (!batch.unusedBy.some((u) => sameSpan(u, goal))) return undefined;
+  return sourceLines && isIntentionalContradiction(sourceLines, goal) ? Vacuity.Intentional : Vacuity.Vacuous;
 }
 
 class ReportBuilder {
@@ -120,6 +161,7 @@ class ReportBuilder {
  */
 export function dafnyBatchesToReport(batches: readonly ParsedBatch[], info: DafnyReportInfo = {}): CoverageReport {
   const builder = new ReportBuilder();
+  const sourceLines = info.sourceText?.split(/\r?\n/);
   let unit: ReportUnit | undefined;
 
   for (const batch of batches) {
@@ -133,6 +175,7 @@ export function dafnyBatchesToReport(batches: readonly ParsedBatch[], info: Dafn
     const goal = builder.node(batch.topAssertion);
     const used = batch.provedBy.map((p) => builder.node(p));
     const unused = batch.unusedBy.map((p) => builder.node(p));
+    const vacuity = batchVacuity(batch, sourceLines);
 
     unit.queries.push({
       id: `${unit.id}q${unit.queries.length}`,
@@ -143,6 +186,7 @@ export function dafnyBatchesToReport(batches: readonly ParsedBatch[], info: Dafn
       goals: [goal],
       used,
       unused,
+      ...(vacuity ? { vacuity } : {}),
     });
   }
 

@@ -4,6 +4,20 @@ export enum CovStatus {
   CovComplete = "CovComplete",
   CovTest = "CovTest",
   Uncovered = "Uncovered",
+  /** Proved, used or reached only through contradictory facts (see VacuityRole). */
+  Vacuous = "Vacuous",
+}
+
+/** Why a node is Vacuous, or that its vacuous proof is intentional. */
+export enum VacuityRole {
+  /** Goal proved only from contradictory facts. */
+  Goal = "goal",
+  /** Fact in the contradiction behind a vacuous goal, and needed by no sound proof. */
+  Cause = "cause",
+  /** Seen only in vacuous proofs: unreachable under the contradiction. */
+  Affected = "affected",
+  /** Goal proved by contradiction on purpose; keeps its normal status. */
+  Intentional = "intentional",
 }
 
 export enum TokenType {
@@ -35,6 +49,7 @@ export interface NodeData {
   type: TokenType;
   covStatus: CovStatus;
   covStatusInternal: CovStatus;
+  vacuity?: VacuityRole;
   methodName?: string;
   methodType?: UnitKind;
 }

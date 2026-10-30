@@ -1,3 +1,4 @@
+import { readFile } from "node:fs/promises";
 import {
   BackendCapabilities,
   BackendOptions,
@@ -13,7 +14,7 @@ import { DafnyRunResult, DEFAULT_DAFNY_COMMAND, probeVersion, resolveDafnyPathWi
 import { dafnyLogToReport } from "./log-parser.js";
 
 /** Convert a raw Dafny run into a backend result with a coverage report. */
-export function dafnyRunToBackendRun(result: DafnyRunResult, minimized: boolean): BackendRun {
+export function dafnyRunToBackendRun(result: DafnyRunResult, minimized: boolean, sourceText?: string): BackendRun {
   const base = {
     status: result.status,
     rawLog: result.log,
@@ -22,7 +23,7 @@ export function dafnyRunToBackendRun(result: DafnyRunResult, minimized: boolean)
   };
   if (result.status !== RunStatus.Completed) return base;
   try {
-    return { ...base, report: dafnyLogToReport(result.log, { version: result.dafnyVersion, minimized }) };
+    return { ...base, report: dafnyLogToReport(result.log, { version: result.dafnyVersion, minimized, sourceText }) };
   } catch (err) {
     return { ...base, status: RunStatus.Failed, errorMessage: `could not read Dafny log: ${(err as Error).message}` };
   }
@@ -45,10 +46,12 @@ export class DafnyBackend implements VerifierBackend {
 
   async run(file: string, opts: BackendOptions = {}): Promise<BackendRun> {
     const { onPreliminaryResult, ...rest } = opts;
+    // Read before verifying so the text matches the log's spans.
+    const sourceText = await readFile(file, "utf-8").catch(() => undefined);
     const result = await runDafny(file, {
       ...rest,
-      ...(onPreliminaryResult ? { onPreliminaryResult: (r: DafnyRunResult) => onPreliminaryResult(dafnyRunToBackendRun(r, false)) } : {}),
+      ...(onPreliminaryResult ? { onPreliminaryResult: (r: DafnyRunResult) => onPreliminaryResult(dafnyRunToBackendRun(r, false, sourceText)) } : {}),
     });
-    return dafnyRunToBackendRun(result, opts.minimization !== undefined);
+    return dafnyRunToBackendRun(result, opts.minimization !== undefined, sourceText);
   }
 }

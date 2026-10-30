@@ -155,7 +155,7 @@ method Main() {
 //::       batchIndex: 1
 //::       batchOutcome: Valid
 //::       batchResourceCount: 3492
-//::     covStatus: CovComplete
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_test_method_call.dfy|ret32|correctness|5,5-5,12
 //::     file: snapshot_test_method_call.dfy

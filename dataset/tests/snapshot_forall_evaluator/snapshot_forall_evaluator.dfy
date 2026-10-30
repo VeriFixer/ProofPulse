@@ -160,7 +160,7 @@ method Main()
 //::       batchIndex: 8
 //::       batchOutcome: Valid
 //::       batchResourceCount: 12938
-//::     covStatus: CovComplete
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: snapshot_forall_evaluator.dfy|AllElementsEqual|correctness|6,5-6,19
 //::     file: snapshot_forall_evaluator.dfy

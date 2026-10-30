@@ -58,8 +58,10 @@ function contains(parent: SpanNode, child: SpanNode): boolean {
     !(parent.startCol === child.startCol && parent.endCol === child.endCol);
 }
 
+/** Worst-case status: Vacuous < Uncovered < CovTest < CovComplete. */
 export function minStatus(a: CovStatus, b: CovStatus): CovStatus {
   const order: Record<CovStatus, number> = {
+    [CovStatus.Vacuous]: -1,
     [CovStatus.Uncovered]: 0,
     [CovStatus.CovTest]: 1,
     [CovStatus.CovComplete]: 2,
@@ -68,13 +70,15 @@ export function minStatus(a: CovStatus, b: CovStatus): CovStatus {
 }
 
 /**
- * Best-case status: CovComplete > CovTest > Uncovered.
+ * Best-case status: CovComplete > CovTest > Uncovered. Vacuous still wins:
+ * a vacuous proof is a defect even where another context covers the code.
  */
 export function maxStatus(a: CovStatus, b: CovStatus): CovStatus {
   const order: Record<CovStatus, number> = {
     [CovStatus.Uncovered]: 0,
     [CovStatus.CovTest]: 1,
     [CovStatus.CovComplete]: 2,
+    [CovStatus.Vacuous]: 3,
   };
   return order[a] >= order[b] ? a : b;
 }

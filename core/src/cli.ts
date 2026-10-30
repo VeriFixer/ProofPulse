@@ -15,6 +15,7 @@
  *   --emit-report <path>  Write the coverage report of this run (.json → JSON, else YAML)
  *   --log                 Print YAML report (only uncovered/partial nodes)
  *   --log-verbose         Print full YAML report (all nodes + proof dependencies)
+ *   --show-implicit       Also report implicit checks in the YAML report
  *   -h, --help            Show help
  */
 import * as fs from "node:fs";
@@ -53,6 +54,7 @@ Options:
   --emit-report <path>  Write the coverage report of this run (.json → JSON, otherwise YAML)
   --log                 Print YAML report (only uncovered/partial nodes)
   --log-verbose         Print full YAML report (all nodes + proof dependencies)
+  --show-implicit       Also report implicit checks (null, index range, ...) in the YAML report
   --generate-yaml <path>  Write full YAML to file (can be combined with --log-verbose)
   -h, --help            Show help
 `.trim());
@@ -78,6 +80,7 @@ async function main() {
   let noAbstractInterpretation = false;
   let timeout = 60;
   let logMode = LogMode.None;
+  let showImplicit = false;
   let generateYamlPath: string | null = null;
   let reportPath: string | null = null;
   let emitReportPath: string | null = null;
@@ -107,6 +110,9 @@ async function main() {
         break;
       case "--log-verbose":
         logMode = LogMode.Verbose;
+        break;
+      case "--show-implicit":
+        showImplicit = true;
         break;
       case "--generate-yaml":
         generateYamlPath = args[++i];
@@ -193,7 +199,7 @@ async function main() {
     logMode = LogMode.Default;
   }
 
-  const textReport = generateTextReport(sourceCode, proof, { verbose: logMode === LogMode.Verbose });
+  const textReport = generateTextReport(sourceCode, proof, { verbose: logMode === LogMode.Verbose, includeImplicit: showImplicit });
   console.log(textReport);
 }
 

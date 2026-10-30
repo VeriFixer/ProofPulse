@@ -1,4 +1,4 @@
-import { CovStatus, TokenType, SourceLocation } from "./types.js";
+import { CovStatus, TokenType, SourceLocation, VacuityRole } from "./types.js";
 import { NodeKind, QueryOutcome, UnitKind } from "./report/coverage-report.js";
 import { tokenTypeForKinds } from "./node-kind.js";
 
@@ -36,6 +36,8 @@ export class ProofNode {
 
   covStatus: CovStatus;
   covStatusInternal: CovStatus;
+  /** Set when the node takes part in a vacuous (or intentionally vacuous) proof. */
+  vacuity?: VacuityRole;
 
   constructor(
     file: string,

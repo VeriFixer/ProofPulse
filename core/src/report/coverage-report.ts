@@ -48,6 +48,17 @@ export enum QueryOutcome {
   Error = "Error",
 }
 
+/**
+ * Whether a successful query was proved from contradictory facts: the goal
+ * itself was not needed, so the facts alone are unsatisfiable on the path to it.
+ */
+export enum Vacuity {
+  /** Proved only because the facts contradict each other. */
+  Vacuous = "vacuous",
+  /** Vacuous on purpose (proof by contradiction, unreachable-code assertion). */
+  Intentional = "intentional",
+}
+
 /** What a source element is, as far as the proof is concerned. */
 export enum NodeKind {
   Precondition = "precondition",
@@ -122,6 +133,8 @@ export interface ReportQuery {
   used: string[];
   /** Tracked nodes not in the unsat core. */
   unused: string[];
+  /** Set when the query was proved from contradictory facts; absent means not vacuous or unknown. */
+  vacuity?: Vacuity;
 }
 
 export interface ReportUnit {

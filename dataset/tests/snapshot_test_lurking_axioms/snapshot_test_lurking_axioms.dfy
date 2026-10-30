@@ -368,7 +368,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::     usedByNumber: 2
 //::     topMeta: null
 //::     covStatus: CovComplete
-//::     covStatusInternal: CovComplete
+//::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|7,15-7,20
 //::     file: snapshot_test_lurking_axioms.dfy
 //::     start:
@@ -474,7 +474,7 @@ method append(a:array<int>, b:int) returns (c:array<int>)
 //::       batchIndex: 15
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16529
-//::     covStatus: Uncovered
+//::     covStatus: CovComplete
 //::     covStatusInternal: Uncovered
 //::   - locationId: snapshot_test_lurking_axioms.dfy|append|correctness|8,40-8,40
 //::     file: snapshot_test_lurking_axioms.dfy

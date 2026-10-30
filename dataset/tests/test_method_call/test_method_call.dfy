@@ -17,7 +17,8 @@ method Main() {
 
 // Actually line 8 is expected CovComplete that it is what is recevign, this is not buging out as this behaviour is being ignored
 // Changed to uncovered hust for bug test to pass (it must give an error)
-//::: L2 - CovComplete
+// The ensures is used only by a test assertion in Main (no caller needs the result for its own proof): CovTest.
+//::: L2 - CovTest
 //::: L3 - CovTest
 //::: L8 - CovTest
 

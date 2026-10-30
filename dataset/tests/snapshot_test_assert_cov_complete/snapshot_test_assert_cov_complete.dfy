@@ -114,7 +114,7 @@ method CardinalitySubsetLt<T>(A: set<T>, B: set<T>)
 //::       batchIndex: 4
 //::       batchOutcome: Valid
 //::       batchResourceCount: 16378
-//::     covStatus: CovComplete
+//::     covStatus: CovTest
 //::     covStatusInternal: CovComplete
 //::   - locationId: >-
 //::       snapshot_test_assert_cov_complete.dfy|CardinalitySubsetLt|correctness|6,12-6,28

@@ -48,10 +48,15 @@ export function getZ3Path(): string {
 }
 
 export function getDecorationOpacity(): number {
-  const raw = vscode.workspace.getConfiguration("proofpulse").get<number>("decorationOpacity", 0.08);
+  const raw = vscode.workspace.getConfiguration("proofpulse").get<number>("decorationOpacity", 0.2);
   return Math.max(0.0, Math.min(0.5, raw));
 }
 
 export function getNoAbstractInterpretation(): boolean {
   return vscode.workspace.getConfiguration("proofpulse").get<boolean>("noAbstractInterpretation", false);
+}
+
+/** Also decorate implicit checks the verifier adds (null, index range, ...). */
+export function getShowImplicitChecks(): boolean {
+  return vscode.workspace.getConfiguration("proofpulse").get<boolean>("showImplicitChecks", false);
 }

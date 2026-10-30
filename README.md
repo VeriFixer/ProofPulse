@@ -55,27 +55,35 @@ Expected result:
 * The command completes successfully.
 * The output contains a coverage report 
 
-Expected:
+Expected (one entry per flagged expression; `cols` are 1-based, `in` gives the full line when the expression is only part of it):
 ```txt
 method CylinderVolume:
   - line: 3
+    cols: 12-24
     type: Precondition
     status: CovTest
-    code: "requires radius >= 0.0 && height >= 0.0"
+    code: "radius >= 0.0"
+    in: "requires radius >= 0.0 && height >= 0.0"
     message: "Precondition only used in calling tests, unnecessary to prove postconditions."
   - line: 4
+    cols: 11-23
     type: Postcondition
     status: CovTest
-    code: "ensures volume >= 0.0"
+    code: "volume >= 0.0"
+    in: "ensures volume >= 0.0"
     message: Postcondition not used in calling code — only in test assertions.
 
 method main:
   - line: 10
+    cols: 7-35
     type: Call
     status: Uncovered
-    code: "var a := CylinderVolume(3.0,4.0);"
+    code: "a := CylinderVolume(3.0,4.0);"
+    in: "var a := CylinderVolume(3.0,4.0);"
     message: Not covered by any proof path.
 ```
+
+Implicit checks the verifier adds (null, index range, ...) are left out unless you pass `--show-implicit`.
 
 #### VS code extension can run
 
@@ -89,7 +97,7 @@ code-server --bind-addr 0.0.0.0:8080 --auth none /home/coder/project
 
 Note: A pop-up may appear in the browser-based VS Code asking you to trust the folder and allow the extensions to run. If ProofPulse does not start after accepting, you may need to enable the extension manually. Open the **Extensions** view in VS Code, search for **ProofPulse**, select it, and click **Enable**.
 
-3. Open any of the files under  `demo_examples/` in the VS Code window in your browser. You will see both Dafny and ProofPulse running. ProofPulse colors lines based on their verification coverage status.
+3. Open any of the files under  `demo_examples/` in the VS Code window in your browser. You will see both Dafny and ProofPulse running. ProofPulse highlights the exact expressions that are not fully covered.
 
 END OF SMOKE TEST
 

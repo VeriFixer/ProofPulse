@@ -9,6 +9,13 @@ method Main(){
     assert(b == 32);
 }
 
+method Twice() returns (y: int)
+    ensures y == 64
+{
+    var b := ret32();
+    y := b + b;
+}
+
 
 //:: method Graph:
 //:: version: 2
@@ -159,6 +166,126 @@ method Main(){
 //::     topMeta: null
 //::     covStatus: Uncovered
 //::     covStatusInternal: CovTest
+//::   - locationId: snapshot_test_post_cov_complete.dfy|Twice|correctness|13,13-13,18
+//::     file: snapshot_test_post_cov_complete.dfy
+//::     start:
+//::       line: 13
+//::       col: 13
+//::     end:
+//::       line: 13
+//::       col: 18
+//::     methodName: Twice
+//::     methodType: correctness
+//::     prooftexts:
+//::       - this postcondition holds
+//::       - ensures clause
+//::     roles:
+//::       isTop: true
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: Postcondition
+//::     usedByNumber: 0
+//::     topMeta:
+//::       batchIndex: 1
+//::       batchOutcome: Valid
+//::       batchResourceCount: 4678
+//::     covStatus: CovTest
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_post_cov_complete.dfy|Twice|correctness|15,9-15,21
+//::     file: snapshot_test_post_cov_complete.dfy
+//::     start:
+//::       line: 15
+//::       col: 9
+//::     end:
+//::       line: 15
+//::       col: 21
+//::     methodName: Twice
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::       - >-
+//::         ensures clause at snapshot_test_post_cov_complete.dfy(2,13)-(2,16) from
+//::         call
+//::       - call
+//::     roles:
+//::       isTop: false
+//::       isCall: true
+//::       isProvedBy: true
+//::       isUnused: true
+//::     type: Call
+//::     usedByNumber: 1
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_post_cov_complete.dfy|Twice|correctness|2,13-2,16
+//::     file: snapshot_test_post_cov_complete.dfy
+//::     start:
+//::       line: 2
+//::       col: 13
+//::     end:
+//::       line: 2
+//::       col: 16
+//::     methodName: Twice
+//::     methodType: correctness
+//::     prooftexts:
+//::       - ensures clause
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: false
+//::     type: Postcondition
+//::     usedByNumber: 0
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_post_cov_complete.dfy|Twice|correctness|16,5-16,15
+//::     file: snapshot_test_post_cov_complete.dfy
+//::     start:
+//::       line: 16
+//::       col: 5
+//::     end:
+//::       line: 16
+//::       col: 15
+//::     methodName: Twice
+//::     methodType: correctness
+//::     prooftexts:
+//::       - assignment (or return)
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: true
+//::       isUnused: false
+//::     type: CodeLine
+//::     usedByNumber: 1
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: CovComplete
+//::   - locationId: snapshot_test_post_cov_complete.dfy|Twice|correctness|17,1-17,1
+//::     file: snapshot_test_post_cov_complete.dfy
+//::     start:
+//::       line: 17
+//::       col: 1
+//::     end:
+//::       line: 17
+//::       col: 1
+//::     methodName: Twice
+//::     methodType: correctness
+//::     prooftexts:
+//::       - >-
+//::         out-parameter 'y', which is subject to definite-assignment rules, is
+//::         always initialized at this return point
+//::     roles:
+//::       isTop: false
+//::       isCall: false
+//::       isProvedBy: false
+//::       isUnused: true
+//::     type: AssertionAutomatic
+//::     usedByNumber: 0
+//::     topMeta: null
+//::     covStatus: CovComplete
+//::     covStatusInternal: Uncovered
 //:: edges:
 //::   provedBy:
 //::     - top: snapshot_test_post_cov_complete.dfy|ret32|correctness|2,13-2,16
@@ -167,6 +294,10 @@ method Main(){
 //::     - top: snapshot_test_post_cov_complete.dfy|Main|correctness|9,5-9,20
 //::       provers:
 //::         - snapshot_test_post_cov_complete.dfy|Main|correctness|8,9-8,21
+//::     - top: snapshot_test_post_cov_complete.dfy|Twice|correctness|13,13-13,18
+//::       provers:
+//::         - snapshot_test_post_cov_complete.dfy|Twice|correctness|15,9-15,21
+//::         - snapshot_test_post_cov_complete.dfy|Twice|correctness|16,5-16,15
 //::   proofUnused:
 //::     - top: snapshot_test_post_cov_complete.dfy|ret32|correctness|2,13-2,16
 //::       unused:
@@ -174,8 +305,15 @@ method Main(){
 //::     - top: snapshot_test_post_cov_complete.dfy|Main|correctness|9,5-9,20
 //::       unused:
 //::         - snapshot_test_post_cov_complete.dfy|Main|correctness|8,9-8,21
+//::     - top: snapshot_test_post_cov_complete.dfy|Twice|correctness|13,13-13,18
+//::       unused:
+//::         - snapshot_test_post_cov_complete.dfy|Twice|correctness|15,9-15,21
+//::         - snapshot_test_post_cov_complete.dfy|Twice|correctness|17,1-17,1
 //::   connections:
 //::     - call: snapshot_test_post_cov_complete.dfy|Main|correctness|8,9-8,21
 //::       targets:
 //::         - snapshot_test_post_cov_complete.dfy|Main|correctness|2,13-2,16
+//::     - call: snapshot_test_post_cov_complete.dfy|Twice|correctness|15,9-15,21
+//::       targets:
+//::         - snapshot_test_post_cov_complete.dfy|Twice|correctness|2,13-2,16
 //::

@@ -1,7 +1,8 @@
-import { CovStatus, TokenType } from "./types.js";
+import { CovStatus, TokenType, VacuityRole } from "./types.js";
 import { ProofNode } from "./proof-node.js";
 import { ProofGraph } from "./proof-graph.js";
 import { UnitKind } from "./report/coverage-report.js";
+import { applyCoverageCheckSupport, spanKey } from "./check-support.js";
 
 /** Facts a proof can use (not obligations): their final status is how they were used. */
 const USED_FACT_TYPES: ReadonlySet<TokenType> = new Set([TokenType.Call, TokenType.Assume, TokenType.Axiom, TokenType.Lemma]);
@@ -46,8 +47,14 @@ export function applyCoverageInternal(graph: ProofGraph): void {
 
     const topAlreadyCovered = top.getCovStatusInternal() === CovStatus.CovComplete;
 
+    // A check inside a clause only makes that clause well-defined: what it uses
+    // inherits the clause's status later (applyCoverageCheckSupport).
+    const checkInClause = top.getType() === TokenType.AssertionAutomatic && graph.checkSpansInClauses.has(spanKey(top));
+
     for (const dep of top.provedBy) {
-      if (top.getType() === TokenType.AssertionAutomatic) {
+      if (checkInClause) {
+        continue;
+      } else if (top.getType() === TokenType.AssertionAutomatic) {
         dep.setCovStatusInternal(CovStatus.CovComplete);
         dep.setCovStatus(CovStatus.CovComplete);
       } else if (topAlreadyCovered) {
@@ -193,9 +200,13 @@ export function applyCoverageSemantic(graph: ProofGraph): void {
         }
       }
 
-      // Check if this postcondition is a connection target (by span match)
+      // Used in a call: a call site refers to this postcondition (by span) and
+      // some caller needs the result, i.e. a caller's copy of the clause is part
+      // of a covered proof. A result only test assertions use leaves it CovTest.
       const span = `${node.file}|${node.start.line},${node.start.col}-${node.end.line},${node.end.col}`;
-      const isUsedInCall = connectionTargetSpans.has(span);
+      const isUsedInCall = connectionTargetSpans.has(span) &&
+        (rawSpanToNodes.get(rawSpan(node)) ?? []).some(copy =>
+          copy !== node && !copy.roles.isTop && copy.getCovStatusInternal() === CovStatus.CovComplete);
 
       if (hasRealProver && isUsedInCall) {
         node.setCovStatus(CovStatus.CovComplete);
@@ -211,14 +222,35 @@ export function applyCoverageSemantic(graph: ProofGraph): void {
   }
 }
 
+function rawSpan(node: ProofNode): string {
+  return `${node.file}|${node.start.line},${node.start.col}-${node.end.line},${node.end.col}`;
+}
+
+/** Vacuity roles that override a node's coverage status. */
+const VACUOUS_ROLES: ReadonlySet<VacuityRole> = new Set([VacuityRole.Goal, VacuityRole.Cause, VacuityRole.Affected]);
+
 /**
- * Run both coverage passes on a graph.
+ * Pass 3: nodes that take part only in vacuous proofs are Vacuous, whatever
+ * the earlier passes decided: a goal proved from contradictory facts, the facts
+ * that contradict, and what is only reached under the contradiction.
+ * Intentionally vacuous goals keep their status.
+ */
+export function applyCoverageVacuity(graph: ProofGraph): void {
+  for (const node of graph.getAllNodes()) {
+    if (node.vacuity && VACUOUS_ROLES.has(node.vacuity)) node.setCovStatus(CovStatus.Vacuous);
+  }
+}
+
+/**
+ * Run the coverage passes on a graph.
  * Also propagates coverage through call connections.
  */
 export function applyCoverage(graph: ProofGraph): void {
   applyCoverageInternal(graph);
   applyCoverageConnections(graph);
   applyCoverageSemantic(graph);
+  applyCoverageCheckSupport(graph);
+  applyCoverageVacuity(graph);
 }
 
 /**
@@ -249,6 +281,7 @@ function applyCoverageConnections(graph: ProofGraph): void {
  *    — same code used in multiple contexts, if any covers it, it's covered
  * 3. Across distinct spans on same line: worst-case (Uncovered > CovTest > CovComplete)
  *    — different code on same line, if any part is uncovered the line is flagged
+ * Vacuous wins in both: a vacuous proof is a defect even where another context covers the code.
  * 
  * Default is CovComplete for lines with no tokens.
  */
@@ -294,6 +327,7 @@ export function computeLineStatus(graph: ProofGraph, sourceCode: string): CovSta
 
 function bestStatus(a: CovStatus, b: CovStatus): CovStatus {
   const rank: Record<CovStatus, number> = {
+    [CovStatus.Vacuous]: 3,
     [CovStatus.CovComplete]: 2,
     [CovStatus.CovTest]: 1,
     [CovStatus.Uncovered]: 0,
@@ -306,6 +340,7 @@ function worstStatus(a: CovStatus, b: CovStatus): CovStatus {
     [CovStatus.CovComplete]: 2,
     [CovStatus.CovTest]: 1,
     [CovStatus.Uncovered]: 0,
+    [CovStatus.Vacuous]: -1,
   };
   return rank[a] <= rank[b] ? a : b;
 }

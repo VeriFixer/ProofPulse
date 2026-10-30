@@ -1,6 +1,7 @@
 import { CovStatus } from "./types.js";
 import { ProofNode } from "./proof-node.js";
 import { ProofGraph } from "./proof-graph.js";
+import { spanEndCol } from "./flagged-expressions.js";
 
 function escapeHtml(str: string): string {
   return String(str)
@@ -20,7 +21,8 @@ interface Range {
 
 function tokenAttrs(tok: ProofNode): { dataId: string; dataStatus: string; classes: string; istopAttr: string } {
   let statusStr = "";
-  if (tok.getCovStatus() === CovStatus.Uncovered) statusStr = "uncovered";
+  if (tok.getCovStatus() === CovStatus.Vacuous) statusStr = "vacuous";
+  else if (tok.getCovStatus() === CovStatus.Uncovered) statusStr = "uncovered";
   else if (tok.getCovStatus() === CovStatus.CovTest) statusStr = "covered-test";
   else statusStr = "covered-complete";
 
@@ -51,7 +53,7 @@ export function generateSpansFragment(code: string, graph: ProofGraph): string {
     if (!Number.isInteger(sLine) || !Number.isInteger(sCol) || !Number.isInteger(eLine) || !Number.isInteger(eCol)) continue;
     if (sLine < 1 || sLine > lines.length || eLine < 1 || eLine > lines.length) continue;
     const startIndex = lineStart[sLine] + Math.max(0, sCol - 1);
-    const endIndex = lineStart[eLine] + eCol;
+    const endIndex = lineStart[eLine] + spanEndCol(lines[eLine - 1], eCol);
     if (isNaN(startIndex) || isNaN(endIndex) || startIndex < 0 || endIndex < startIndex) continue;
     ranges.push({ startIndex, endIndex, token: t, children: [] });
   }

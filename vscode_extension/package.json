@@ -1,17 +1,22 @@
 {
   "name": "proofpulse-vscode",
   "displayName": "ProofPulse",
-  "description": "Dafny proof coverage analysis for VSCode — inline coverage decorations, gutter marks, and hover diagnostics for proof dependencies.",
-  "version": "0.1.0",
+  "description": "Dafny proof coverage analysis for VSCode — inline coverage decorations and hover diagnostics for proof dependencies.",
+  "version": "1.0.0",
   "publisher": "proofpulse",
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#0f1a2e",
+    "theme": "dark"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ricostynha/ProofPulse"
+    "url": "https://github.com/VeriFixer/ProofPulse"
   },
-  "homepage": "https://github.com/ricostynha/ProofPulse#readme",
+  "homepage": "https://github.com/VeriFixer/ProofPulse#readme",
   "bugs": {
-    "url": "https://github.com/ricostynha/ProofPulse/issues"
+    "url": "https://github.com/VeriFixer/ProofPulse/issues"
   },
   "engines": {
     "vscode": "^1.85.0"
@@ -101,16 +106,22 @@
         "proofpulse.decorationOpacity": {
           "order": 8,
           "type": "number",
-          "default": 0.08,
+          "default": 0.2,
           "minimum": 0.0,
           "maximum": 0.5,
-          "description": "Opacity for line background decorations (0.0–0.5)"
+          "description": "Opacity for the background of highlighted expressions (0.0–0.5)"
+        },
+        "proofpulse.showImplicitChecks": {
+          "order": 9,
+          "type": "boolean",
+          "default": false,
+          "description": "Also highlight implicit checks the verifier adds (e.g. 'target object is never null', 'index in range'). Vacuous ones are always shown."
         }
       }
     }
   },
   "dependencies": {
-    "@proofpulse/core": "0.1.0"
+    "@proofpulse/core": "1.0.0"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",

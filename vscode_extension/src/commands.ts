@@ -10,7 +10,7 @@ import {
   VerifierBackend,
   VerifierId,
 } from "@proofpulse/core";
-import { getDafnyPath, getDecorationOpacity, getForceMinimization, getNoAbstractInterpretation, getSolverPath, getTimeout, getZ3Path } from "./config";
+import { getDafnyPath, getDecorationOpacity, getShowImplicitChecks, getForceMinimization, getNoAbstractInterpretation, getSolverPath, getTimeout, getZ3Path } from "./config";
 import { backendForDocument, backendForPath, supportedExtensionsLabel } from "./backends";
 import { applyDecorations } from "./decorations";
 import { startNewSession, isSessionCurrent } from "./run-session";
@@ -98,7 +98,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
           onPreliminaryResult: (prelim) => {
             if (!isSessionCurrent(session) || prelim.status !== RunStatus.Completed || !prelim.report) return;
             const proof = analyzeReport(sourceCode, prelim.report);
-            applyDecorations(editor, proof.lineStatus, proof.proofGraph.getAllNodes(), getDecorationOpacity(), context.extensionPath);
+            applyDecorations(editor, proof.proofGraph.getAllNodes(), getDecorationOpacity(), getShowImplicitChecks());
             logInfo(`Applied preliminary decorations: ${proof.lineStatus.length} lines`);
             showStatusBar(`${backend.displayName} — Preliminary ✓ — Minimizing...`);
           },
@@ -139,7 +139,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
         }
 
         const proof = analyzeReport(sourceCode, result.report!);
-        applyDecorations(editor, proof.lineStatus, proof.proofGraph.getAllNodes(), getDecorationOpacity(), context.extensionPath);
+        applyDecorations(editor, proof.proofGraph.getAllNodes(), getDecorationOpacity(), getShowImplicitChecks());
         logInfo(`Applied decorations: ${proof.lineStatus.length} lines`);
         hideStatusBar();
 

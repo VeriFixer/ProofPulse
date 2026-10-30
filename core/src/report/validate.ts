@@ -5,6 +5,7 @@ import {
   QueryOutcome,
   SolverKind,
   UnitKind,
+  Vacuity,
   VerifierId,
   enumValues,
 } from "./coverage-report.js";
@@ -25,6 +26,7 @@ const UNIT_KINDS = enumValues(UnitKind);
 const OUTCOMES = enumValues(QueryOutcome);
 const VERIFIERS = enumValues(VerifierId);
 const SOLVERS = enumValues(SolverKind);
+const VACUITIES = enumValues(Vacuity);
 
 function isObject(v: unknown): v is Record<string, unknown> {
   return typeof v === "object" && v !== null && !Array.isArray(v);
@@ -147,6 +149,7 @@ export function validateCoverageReport(data: unknown): CoverageReport {
       expectEnum(query.outcome, OUTCOMES, `${qp}/outcome`);
       if (query.durationMs !== undefined) expectNumber(query.durationMs, `${qp}/durationMs`);
       if (query.resourceCount !== undefined) expectInt(query.resourceCount, `${qp}/resourceCount`);
+      if (query.vacuity !== undefined) expectEnum(query.vacuity, VACUITIES, `${qp}/vacuity`);
 
       const refs = (field: "goals" | "used" | "unused"): void => {
         expectArray(query[field], `${qp}/${field}`).forEach((r, k) => {
