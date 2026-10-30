@@ -1,6 +1,6 @@
 import * as path from "node:path";
 import * as vscode from "vscode";
-import { assertNever, CovStatus, ProofNode, TokenType, vacuityExplanation } from "@proofpulse/core";
+import { assertNever, CovStatus, flaggedExpressions, ProofNode, spanEndCol, TokenType, vacuityExplanation } from "@proofpulse/core";
 
 interface DecorationTypes {
   uncoveredGutter: vscode.TextEditorDecorationType;
@@ -52,39 +52,66 @@ function covTestExplanation(type: TokenType): string {
   }
 }
 
+/** Explanation for a flagged node, by its status. */
+function nodeExplanation(n: ProofNode): string {
+  switch (n.covStatus) {
+    case CovStatus.Vacuous: return vacuityExplanation(n.vacuity);
+    case CovStatus.Uncovered: return uncoveredExplanation(n.getType());
+    case CovStatus.CovTest: return covTestExplanation(n.getType());
+    case CovStatus.CovComplete: return "";
+    default: return assertNever(n.covStatus, "coverage status");
+  }
+}
+
+const STATUS_ICON: Record<CovStatus, string> = {
+  [CovStatus.Vacuous]: "🟣",
+  [CovStatus.Uncovered]: "🔴",
+  [CovStatus.CovTest]: "🟡",
+  [CovStatus.CovComplete]: "",
+};
+
+/** Worst first: decides the gutter mark of a line with several flagged expressions. */
+const SEVERITY: Record<CovStatus, number> = {
+  [CovStatus.Vacuous]: 0,
+  [CovStatus.Uncovered]: 1,
+  [CovStatus.CovTest]: 2,
+  [CovStatus.CovComplete]: 3,
+};
+
+/**
+ * Gutter types mark the line (gutter icon + overview ruler) so flagged lines
+ * stay easy to find while scrolling; inline types colour only the flagged
+ * expression.
+ */
 export function createDecorationTypes(opacity: number, extensionPath: string): DecorationTypes {
+  const inline = (rgb: string): vscode.DecorationRenderOptions => ({
+    backgroundColor: `rgba(${rgb}, ${opacity})`,
+    border: `1px solid rgba(${rgb}, 0.55)`,
+    borderRadius: "2px",
+  });
   return {
     uncoveredGutter: vscode.window.createTextEditorDecorationType({
-      isWholeLine: true,
-      backgroundColor: `rgba(255, 0, 0, ${opacity})`,
       overviewRulerColor: "rgba(255, 0, 0, 0.6)",
       overviewRulerLane: vscode.OverviewRulerLane.Left,
       gutterIconPath: path.join(extensionPath, "media", "gutter-uncovered.svg"),
       gutterIconSize: "contain",
     }),
     covTestGutter: vscode.window.createTextEditorDecorationType({
-      isWholeLine: true,
-      backgroundColor: `rgba(255, 200, 0, ${opacity})`,
       overviewRulerColor: "rgba(255, 200, 0, 0.6)",
       overviewRulerLane: vscode.OverviewRulerLane.Left,
       gutterIconPath: path.join(extensionPath, "media", "gutter-covtest.svg"),
       gutterIconSize: "contain",
     }),
     vacuousGutter: vscode.window.createTextEditorDecorationType({
-      isWholeLine: true,
-      backgroundColor: `rgba(150, 80, 255, ${opacity})`,
       overviewRulerColor: "rgba(150, 80, 255, 0.8)",
       overviewRulerLane: vscode.OverviewRulerLane.Left,
       gutterIconPath: path.join(extensionPath, "media", "gutter-vacuous.svg"),
       gutterIconSize: "contain",
     }),
-    uncoveredInline: vscode.window.createTextEditorDecorationType({
-      // No particular text decoration apllied for now but can change
-    }),
-    covTestInline: vscode.window.createTextEditorDecorationType({
-      // No particular text decoration apllied for now but can change
-    }),
+    uncoveredInline: vscode.window.createTextEditorDecorationType(inline("255, 0, 0")),
+    covTestInline: vscode.window.createTextEditorDecorationType(inline("255, 200, 0")),
     vacuousInline: vscode.window.createTextEditorDecorationType({
+      ...inline("150, 80, 255"),
       textDecoration: "underline wavy rgba(150, 80, 255, 0.9)",
     }),
   };
@@ -92,10 +119,10 @@ export function createDecorationTypes(opacity: number, extensionPath: string): D
 
 export function applyDecorations(
   editor: vscode.TextEditor,
-  lineStatus: CovStatus[],
   nodes: ProofNode[],
   opacity: number,
   extensionPath: string,
+  showImplicitChecks = false,
 ): void {
   // Dispose old decoration types before creating fresh ones
   disposeCurrentTypes();
@@ -106,129 +133,61 @@ export function applyDecorations(
 
   /** Extract a readable code snippet for a node. Falls back to full line if range is too small. */
   function nodeSnippet(n: ProofNode): string {
-    const startLine = Math.max(0, n.start.line - 1);
-    const endLine = Math.max(0, n.end.line - 1);
-    const startCol = Math.max(0, n.start.col - 1);
-    const endCol = n.end.col;
-    const range = new vscode.Range(startLine, startCol, endLine, endCol);
-    let text = doc.getText(range).trim();
+    const range = nodeToRange(doc, n);
+    let text = doc.getText(range).replace(/\s+/g, " ").trim();
     // If extracted text is too short (single char like "=" or ">"), use the full line
-    if (text.length <= 2 && startLine < doc.lineCount) {
-      text = doc.lineAt(startLine).text.trim();
+    if (text.length <= 2 && range.start.line < doc.lineCount) {
+      text = doc.lineAt(range.start.line).text.trim();
     }
     return text.length > 60 ? text.slice(0, 57) + "..." : text;
   }
 
-  // Build maps: line index (0-based) → nodes on that line, by status
-  const uncoveredNodesByLine = new Map<number, ProofNode[]>();
-  const covTestNodesByLine = new Map<number, ProofNode[]>();
-  const vacuousNodesByLine = new Map<number, ProofNode[]>();
-  for (const node of nodes) {
-    const map = node.covStatus === CovStatus.Uncovered ? uncoveredNodesByLine
-      : node.covStatus === CovStatus.CovTest ? covTestNodesByLine
-        : node.covStatus === CovStatus.Vacuous ? vacuousNodesByLine
-          : null;
-    if (!map) continue;
-    for (let line = node.start.line; line <= node.end.line; line++) {
+  function hoverFor(lineNodes: ProofNode[]): vscode.MarkdownString {
+    const hover = new vscode.MarkdownString(undefined, true);
+    hover.isTrusted = true;
+    hover.supportHtml = true;
+    for (const n of lineNodes) {
+      hover.appendMarkdown(`${STATUS_ICON[n.covStatus]} \`${nodeSnippet(n)}\` *(Line ${n.start.line}:${n.start.col})*  \n`);
+      hover.appendMarkdown(`${nodeExplanation(n)}  \n\n`);
+    }
+    hover.appendMarkdown(`---\n`);
+    hover.appendMarkdown(`[$(graph) Click to Generate Proof Coverage Report](command:proofpulse.getProofReport)`);
+    return hover;
+  }
+
+  const flagged = flaggedExpressions(nodes, { includeImplicit: showImplicitChecks });
+
+  // Inline: one decoration per flagged expression, hover for that expression only
+  const inlineOpts = new Map<CovStatus, vscode.DecorationOptions[]>();
+  // Gutter: one mark per line holding a flagged expression, hover lists them all
+  const nodesByLine = new Map<number, ProofNode[]>();
+  for (const n of flagged) {
+    let opts = inlineOpts.get(n.covStatus);
+    if (!opts) { opts = []; inlineOpts.set(n.covStatus, opts); }
+    opts.push({ range: nodeToRange(doc, n), hoverMessage: hoverFor([n]) });
+
+    for (let line = n.start.line; line <= n.end.line; line++) {
       const idx = line - 1;
-      let arr = map.get(idx);
-      if (!arr) { arr = []; map.set(idx, arr); }
-      arr.push(node);
+      let arr = nodesByLine.get(idx);
+      if (!arr) { arr = []; nodesByLine.set(idx, arr); }
+      arr.push(n);
     }
   }
 
-  // Gutter decorations with hover messages
-  const uncoveredGutterOpts: vscode.DecorationOptions[] = [];
-  const covTestGutterOpts: vscode.DecorationOptions[] = [];
-  const vacuousGutterOpts: vscode.DecorationOptions[] = [];
-
-  for (let i = 0; i < lineStatus.length; i++) {
-    const status = lineStatus[i];
-    if (status === CovStatus.Vacuous) {
-      const lineNodes = vacuousNodesByLine.get(i) ?? [];
-      const hover = new vscode.MarkdownString(undefined, true);
-      hover.isTrusted = true;
-      hover.supportHtml = true;
-
-      for (const n of lineNodes) {
-        hover.appendMarkdown(`🟣 \`${nodeSnippet(n)}\` *(Line ${n.start.line}:${n.start.col})*  \n`);
-        hover.appendMarkdown(`${vacuityExplanation(n.vacuity)}  \n\n`);
-      }
-
-      hover.appendMarkdown(`---\n`);
-      hover.appendMarkdown(`[$(graph) Click to Generate Proof Coverage Report](command:proofpulse.getProofReport)`);
-
-      vacuousGutterOpts.push({
-        range: new vscode.Range(i, 0, i, 0),
-        hoverMessage: hover,
-      });
-    } else if (status === CovStatus.Uncovered) {
-      const lineNodes = uncoveredNodesByLine.get(i) ?? [];
-      const hover = new vscode.MarkdownString(undefined, true);
-      hover.isTrusted = true;
-      hover.supportHtml = true;
-
-      for (const n of lineNodes) {
-        const shortSnippet = nodeSnippet(n);
-
-        hover.appendMarkdown(`🔴 \`${shortSnippet}\` *(Line ${n.start.line}:${n.start.col})*  \n`);
-        hover.appendMarkdown(`${uncoveredExplanation(n.getType())}  \n\n`);
-      }
-
-      hover.appendMarkdown(`---\n`);
-      hover.appendMarkdown(`[$(graph) Click to Generate Proof Coverage Report](command:proofpulse.getProofReport)`);
-
-      uncoveredGutterOpts.push({
-        range: new vscode.Range(i, 0, i, 0),
-        hoverMessage: hover,
-      });
-    } else if (status === CovStatus.CovTest) {
-      const lineNodes = covTestNodesByLine.get(i) ?? [];
-      const hover = new vscode.MarkdownString(undefined, true);
-      hover.isTrusted = true;
-      hover.supportHtml = true;
-
-      if (lineNodes.length > 0) {
-        for (const n of lineNodes) {
-          const shortSnippet = nodeSnippet(n);
-          hover.appendMarkdown(`🟡 \`${shortSnippet}\` *(Line ${n.start.line}:${n.start.col})*  \n`);
-          hover.appendMarkdown(`${covTestExplanation(n.getType())}  \n\n`);
-        }
-      } else {
-          hover.appendMarkdown(`🟡 **CovTest** — covered by test assertions only  \n\n`);
-      }
-
-      hover.appendMarkdown(`---\n`);
-      hover.appendMarkdown(`[$(graph) Click to Generate Proof Coverage Report](command:proofpulse.getProofReport)`);
-
-      covTestGutterOpts.push({
-        range: new vscode.Range(i, 0, i, 0),
-        hoverMessage: hover,
-      });
-    }
+  const gutterOpts = new Map<CovStatus, vscode.DecorationOptions[]>();
+  for (const [line, lineNodes] of nodesByLine) {
+    const worst = lineNodes.reduce((w, n) => SEVERITY[n.covStatus] < SEVERITY[w] ? n.covStatus : w, CovStatus.CovComplete);
+    let opts = gutterOpts.get(worst);
+    if (!opts) { opts = []; gutterOpts.set(worst, opts); }
+    opts.push({ range: new vscode.Range(line, 0, line, 0), hoverMessage: hoverFor(lineNodes) });
   }
 
-  // Inline decorations — ranges only, no hover
-  const uncoveredInlineRanges: vscode.Range[] = [];
-  const covTestInlineRanges: vscode.Range[] = [];
-  const vacuousInlineRanges: vscode.Range[] = [];
-
-  for (const node of nodes) {
-    if (node.covStatus === CovStatus.Vacuous) {
-      vacuousInlineRanges.push(nodeToRange(node));
-    } else if (node.covStatus === CovStatus.Uncovered) {
-      uncoveredInlineRanges.push(nodeToRange(node));
-    } else if (node.covStatus === CovStatus.CovTest) {
-      covTestInlineRanges.push(nodeToRange(node));
-    }
-  }
-
-  editor.setDecorations(types.uncoveredGutter, uncoveredGutterOpts);
-  editor.setDecorations(types.covTestGutter, covTestGutterOpts);
-  editor.setDecorations(types.uncoveredInline, uncoveredInlineRanges);
-  editor.setDecorations(types.covTestInline, covTestInlineRanges);
-  editor.setDecorations(types.vacuousGutter, vacuousGutterOpts);
-  editor.setDecorations(types.vacuousInline, vacuousInlineRanges);
+  editor.setDecorations(types.uncoveredGutter, gutterOpts.get(CovStatus.Uncovered) ?? []);
+  editor.setDecorations(types.covTestGutter, gutterOpts.get(CovStatus.CovTest) ?? []);
+  editor.setDecorations(types.vacuousGutter, gutterOpts.get(CovStatus.Vacuous) ?? []);
+  editor.setDecorations(types.uncoveredInline, inlineOpts.get(CovStatus.Uncovered) ?? []);
+  editor.setDecorations(types.covTestInline, inlineOpts.get(CovStatus.CovTest) ?? []);
+  editor.setDecorations(types.vacuousInline, inlineOpts.get(CovStatus.Vacuous) ?? []);
 }
 
 export function clearDecorations(editor: vscode.TextEditor): void {
@@ -255,9 +214,15 @@ function disposeCurrentTypes(): void {
   }
 }
 
-function nodeToRange(node: ProofNode): vscode.Range {
+/**
+ * Node spans are 1-based, ending at the start of their last token; vscode
+ * ranges are 0-based and end-exclusive.
+ */
+function nodeToRange(doc: vscode.TextDocument, node: ProofNode): vscode.Range {
+  const endLine = Math.max(0, node.end.line - 1);
+  const endText = endLine < doc.lineCount ? doc.lineAt(endLine).text : "";
   return new vscode.Range(
-    node.start.line, node.start.col,
-    node.end.line, node.end.col,
+    Math.max(0, node.start.line - 1), Math.max(0, node.start.col - 1),
+    endLine, spanEndCol(endText, node.end.col),
   );
 }

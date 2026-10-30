@@ -9,6 +9,8 @@ export { applyCoverage, applyCoverageInternal, applyCoverageSemantic, applyCover
 export { serializeProofGraph, deserializeProofGraph } from "./serialization.js";
 export { generateSpansFragment, getDependsOn, getProvedBy, getProves } from "./rendering.js";
 export { generateTextReport, vacuityExplanation } from "./report.js";
+export { flaggedExpressions, isImplicitCheck, spanEndCol } from "./flagged-expressions.js";
+export type { FlaggedExpressionOptions } from "./flagged-expressions.js";
 export type { ReportOptions } from "./report.js";
 export { buildSpanTree, computeSpanTreeLineStatus, computeLineStatusFromTree, minStatus, maxStatus } from "./span-tree.js";
 export type { SpanNode } from "./span-tree.js";
