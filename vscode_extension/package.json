@@ -1,8 +1,8 @@
 {
   "name": "proofpulse-vscode",
   "displayName": "ProofPulse",
-  "description": "Dafny proof coverage analysis for VSCode — inline coverage decorations and hover diagnostics for proof dependencies.",
-  "version": "1.1.0",
+  "description": "See which parts of your Dafny proof actually matter: highlights unused, test-only and vacuous specs, assertions, code and conditions as you save.",
+  "version": "1.1.1",
   "publisher": "proofpulse",
   "icon": "media/icon.png",
   "galleryBanner": {
@@ -21,8 +21,8 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": ["Other", "Linters"],
-  "keywords": ["dafny", "proof", "coverage", "verification", "formal methods"],
+  "categories": ["Linters", "Testing", "Visualization", "Education"],
+  "keywords": ["dafny", "proof", "coverage", "verification", "formal methods", "vacuity", "smt", "z3", "assertions", "proof debugging", "teaching"],
   "activationEvents": [
     "onLanguage:dafny"
   ],
@@ -59,13 +59,13 @@
           "order": 0,
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Use a custom Dafny binary instead of the bundled ProofPulse build. When enabled, set `#proofpulse.customDafnyPath#` to your binary."
+          "markdownDescription": "Use your own build of the ProofPulse Dafny fork (github.com/VeriFixer/dafny_proofpulse) instead of the downloaded one. A standard Dafny release will mostly not work. When enabled, set `#proofpulse.customDafnyPath#` to your binary."
         },
         "proofpulse.customDafnyPath": {
           "order": 1,
           "type": "string",
           "default": "",
-          "markdownDescription": "Path to a custom Dafny executable. Only used when `#proofpulse.useCustomDafny#` is enabled. Can be an absolute path or `dafny` to use the system PATH."
+          "markdownDescription": "Path to the `dafny` executable of your ProofPulse Dafny build. Only used when `#proofpulse.useCustomDafny#` is enabled. Can be an absolute path or `dafny` to use the system PATH."
         },
         "proofpulse.solverPath": {
           "order": 2,
