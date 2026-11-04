@@ -6,6 +6,8 @@ import { ProofNode } from "./proof-node.js";
 import { Proof, analyzeReport, parseProof } from "./proof.js";
 import type { CoverageReport } from "./report/coverage-report.js";
 import { generateSpansFragment, getDependsOn, getProvedBy, getProves } from "./rendering.js";
+import { inUnprovedUnit, unprovedGoals } from "./coverage.js";
+import { UNPROVED_METHOD_NOTE, unprovedExplanation } from "./report.js";
 
 const root: Record<string, unknown> =
   typeof window !== "undefined" ? (window as unknown as Record<string, unknown>)
@@ -61,6 +63,18 @@ root.getConnections = function (key: string, proof: Proof): { node: ProofNode; d
 root.getCalledBy = function (key: string, proof: Proof): { node: ProofNode; depth: number }[] {
   return proof.proofGraph.getCalledBy(key).map(n => ({ node: n, depth: 1 }));
 };
+
+root.getUnprovedGoals = function (proof: Proof): ProofNode[] {
+  return unprovedGoals(proof.proofGraph);
+};
+
+/** Whether a node's status may be wrong because its method has an unproved goal. */
+root.mayBeMisreported = function (node: ProofNode, proof: Proof): boolean {
+  return inUnprovedUnit(proof.proofGraph.getAllNodes())(node);
+};
+
+root.unprovedExplanation = unprovedExplanation;
+root.UNPROVED_METHOD_NOTE = UNPROVED_METHOD_NOTE;
 
 root.getSampleLog = function (): unknown {
   return root.sampleLog;

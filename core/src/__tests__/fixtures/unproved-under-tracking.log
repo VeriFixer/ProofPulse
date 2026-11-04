@@ -1,0 +1,808 @@
+unproved-under-tracking.dfy(11,12): Error: a postcondition could not be proved on this return path
+   |
+11 |             return true;
+   |             ^^^^^^^^^^^^
+
+unproved-under-tracking.dfy(2,30): Related location: this is the postcondition that could not be proved
+  |
+2 |     ensures containsDuplicate <==>  exists i,j :: 0 <= i < j < |nums| && nums[i] == nums[j]
+  |                               ^^^^
+
+
+Dafny program verifier finished with 21 verified, 1 error
+
+Results for containsDuplicateIa (correctness)
+  Overall outcome: Errors
+  Overall time: 00:00:01.9236238
+  Overall resource count: 335912
+  Maximum assertion batch time: 00:00:00.1893577
+  Maximum assertion batch resource count: 27723
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.0985328
+    Resource count: 7988
+
+    Assertions:
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.1156951
+    Resource count: 12899
+
+    Assertions:
+      unproved-under-tracking.dfy(6,19)-(6,64): this loop invariant holds on entry
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 3:
+    Outcome: Valid
+    Duration: 00:00:00.0977213
+    Resource count: 13414
+
+    Assertions:
+      unproved-under-tracking.dfy(7,19)-(7,56): this loop invariant holds on entry
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 4:
+    Outcome: Valid
+    Duration: 00:00:00.1016199
+    Resource count: 13236
+
+    Assertions:
+      unproved-under-tracking.dfy(8,19)-(8,69): this loop invariant holds on entry
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 5:
+    Outcome: Valid
+    Duration: 00:00:00.0826133
+    Resource count: 15824
+
+    Assertions:
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 6:
+    Outcome: Valid
+    Duration: 00:00:00.0868631
+    Resource count: 15803
+
+    Assertions:
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 7:
+    Outcome: Valid
+    Duration: 00:00:00.0727859
+    Resource count: 17566
+
+    Assertions:
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 8:
+    Outcome: Valid
+    Duration: 00:00:00.0704385
+    Resource count: 16119
+
+    Assertions:
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 9:
+    Outcome: Valid
+    Duration: 00:00:00.0845586
+    Resource count: 16536
+
+    Assertions:
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 10:
+    Outcome: Valid
+    Duration: 00:00:00.1893577
+    Resource count: 22926
+
+    Assertions:
+      unproved-under-tracking.dfy(6,19)-(6,64): this loop invariant is maintained by the loop
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 11:
+    Outcome: Valid
+    Duration: 00:00:00.1257845
+    Resource count: 24791
+
+    Assertions:
+      unproved-under-tracking.dfy(7,19)-(7,56): this loop invariant is maintained by the loop
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 12:
+    Outcome: Valid
+    Duration: 00:00:00.1355675
+    Resource count: 27723
+
+    Assertions:
+      unproved-under-tracking.dfy(8,19)-(8,69): this loop invariant is maintained by the loop
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 13:
+    Outcome: Valid
+    Duration: 00:00:00.0932558
+    Resource count: 14612
+
+    Assertions:
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 14:
+    Outcome: Valid
+    Duration: 00:00:00.0755646
+    Resource count: 14632
+
+    Assertions:
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 15:
+    Outcome: Valid
+    Duration: 00:00:00.1028868
+    Resource count: 15073
+
+    Assertions:
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 16:
+    Outcome: Valid
+    Duration: 00:00:00.0754124
+    Resource count: 15109
+
+    Assertions:
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 17:
+    Outcome: Valid
+    Duration: 00:00:00.0676637
+    Resource count: 17099
+
+    Assertions:
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 18:
+    Outcome: Valid
+    Duration: 00:00:00.0709507
+    Resource count: 17123
+
+    Assertions:
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+  Assertion batch 19:
+    Outcome: Invalid
+    Duration: 00:00:00.0480339
+    Resource count: 18054
+
+    Assertions:
+      unproved-under-tracking.dfy(2,13)-(2,91): this postcondition holds
+
+  Assertion batch 20:
+    Outcome: Valid
+    Duration: 00:00:00.1283177
+    Resource count: 19385
+
+    Assertions:
+      unproved-under-tracking.dfy(2,13)-(2,91): this postcondition holds
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(2,13)-(2,91): ensures clause
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): assignment (or return)
+
+    Unused by proof:
+      unproved-under-tracking.dfy(4,9)-(4,34): assignment (or return)
+      unproved-under-tracking.dfy(5,13)-(5,13): lower bound does not exceed upper bound
+      unproved-under-tracking.dfy(6,55)-(6,64): lower bound in range
+      unproved-under-tracking.dfy(6,55)-(6,64): upper bound within range of sequence
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant
+      unproved-under-tracking.dfy(6,19)-(6,64): loop invariant always holds
+      unproved-under-tracking.dfy(7,36)-(7,45): lower bound in range
+      unproved-under-tracking.dfy(7,36)-(7,45): upper bound within range of sequence
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant
+      unproved-under-tracking.dfy(7,19)-(7,56): loop invariant always holds
+      unproved-under-tracking.dfy(8,52)-(8,58): index in range
+      unproved-under-tracking.dfy(8,63)-(8,69): index in range
+      unproved-under-tracking.dfy(8,19)-(8,69): loop invariant
+      unproved-under-tracking.dfy(10,12)-(10,18): index in range
+      unproved-under-tracking.dfy(11,13)-(11,24): assignment (or return)
+      unproved-under-tracking.dfy(11,13)-(11,24): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(10,12)-(10,23): condition atom
+      unproved-under-tracking.dfy(13,35)-(13,41): index in range
+      unproved-under-tracking.dfy(13,9)-(13,43): assignment (or return)
+      unproved-under-tracking.dfy(15,12)-(15,26): lower bound in range
+      unproved-under-tracking.dfy(15,12)-(15,26): upper bound within range of sequence
+      unproved-under-tracking.dfy(15,5)-(15,35): assertion always holds
+      unproved-under-tracking.dfy(16,5)-(16,17): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+      unproved-under-tracking.dfy(17,1)-(17,1): out-parameter 'containsDuplicate', which is subject to definite-assignment rules, is always initialized at this return point
+
+Results for containsDuplicateIa (well-formedness)
+  Overall outcome: Correct
+  Overall time: 00:00:00.2033263
+  Overall resource count: 17000
+  Maximum assertion batch time: 00:00:00.1026238
+  Maximum assertion batch resource count: 8569
+
+  Assertion batch 1:
+    Outcome: Valid
+    Duration: 00:00:00.1026238
+    Resource count: 8431
+
+    Assertions:
+      unproved-under-tracking.dfy(2,74)-(2,80): index in range
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(2,74)-(2,80): index in range
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,85)-(2,91): index in range
+      unproved-under-tracking.dfy(2,13)-(2,91): method ensures clause
+
+  Assertion batch 2:
+    Outcome: Valid
+    Duration: 00:00:00.1007025
+    Resource count: 8569
+
+    Assertions:
+      unproved-under-tracking.dfy(2,85)-(2,91): index in range
+
+    Proof dependencies:
+      unproved-under-tracking.dfy(2,85)-(2,91): index in range
+
+    Unused by proof:
+      unproved-under-tracking.dfy(2,74)-(2,80): index in range
+      unproved-under-tracking.dfy(2,13)-(2,91): method ensures clause

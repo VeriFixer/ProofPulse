@@ -38,6 +38,8 @@ export class ProofNode {
   covStatusInternal: CovStatus;
   /** Set when the node takes part in a vacuous (or intentionally vacuous) proof. */
   vacuity?: VacuityRole;
+  /** Outcome of the first query with this node as goal that the verifier did not prove. */
+  failedOutcome?: QueryOutcome;
 
   constructor(
     file: string,

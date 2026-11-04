@@ -11,7 +11,7 @@ import { NodeKind, UnitKind } from "../report/coverage-report.js";
  */
 
 const FILE = "test.dfy";
-const COV_STATUSES = [CovStatus.CovComplete, CovStatus.CovTest, CovStatus.Uncovered, CovStatus.Vacuous] as const;
+const COV_STATUSES = [CovStatus.CovComplete, CovStatus.CovTest, CovStatus.Uncovered, CovStatus.Vacuous, CovStatus.Unproved] as const;
 
 function worstCase(a: CovStatus, b: CovStatus): CovStatus {
   const rank: Record<CovStatus, number> = {
@@ -19,6 +19,7 @@ function worstCase(a: CovStatus, b: CovStatus): CovStatus {
     [CovStatus.CovTest]: 1,
     [CovStatus.Uncovered]: 2,
     [CovStatus.Vacuous]: 3,
+    [CovStatus.Unproved]: 4,
   };
   return rank[a] >= rank[b] ? a : b;
 }
@@ -113,7 +114,7 @@ describe("Property 6: Line status is worst-case of token statuses", () => {
     );
   });
 
-  it("a single Uncovered node on a line makes that line Uncovered unless another node is Vacuous", () => {
+  it("a single Uncovered node on a line makes that line Uncovered unless another node is Unproved or Vacuous", () => {
     fc.assert(
       fc.property(
         fc.integer({ min: 1, max: 10 }).chain((lineCount) =>
@@ -149,7 +150,8 @@ describe("Property 6: Line status is worst-case of token statuses", () => {
           const graph = buildGraph(specs);
           const actual = computeLineStatus(graph, sourceCode);
 
-          const expected = otherStatuses.includes(CovStatus.Vacuous) ? CovStatus.Vacuous : CovStatus.Uncovered;
+          const expected = otherStatuses.includes(CovStatus.Unproved) ? CovStatus.Unproved
+            : otherStatuses.includes(CovStatus.Vacuous) ? CovStatus.Vacuous : CovStatus.Uncovered;
           expect(actual[targetLine - 1]).toBe(expected);
         },
       ),

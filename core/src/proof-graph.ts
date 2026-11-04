@@ -174,6 +174,8 @@ export class ProofGraph {
         batchDuration: query.durationMs === undefined ? undefined : formatDuration(query.durationMs),
         batchResourceCount: query.resourceCount,
       };
+      // topMeta keeps the last query; a failure in any query must not be lost.
+      if (query.outcome !== QueryOutcome.Valid && !top.failedOutcome) top.failedOutcome = query.outcome;
       tops.push(top);
       occur(top, "goal");
     }
@@ -345,6 +347,7 @@ export class ProofGraph {
       covStatusInternal: node.covStatusInternal,
       // Only written when set, so graphs without vacuity keep their YAML.
       ...(node.vacuity ? { vacuity: node.vacuity } : {}),
+      ...(node.failedOutcome ? { failedOutcome: node.failedOutcome } : {}),
     }));
 
     const edges: {
@@ -429,6 +432,7 @@ export class ProofGraph {
       node.setCovStatus(item.covStatus ?? CovStatus.Uncovered);
       node.setCovStatusInternal(item.covStatusInternal ?? CovStatus.Uncovered);
       if (VACUITY_ROLE_VALUES.has(item.vacuity)) node.vacuity = item.vacuity as VacuityRole;
+      if (OUTCOME_VALUES.has(item.failedOutcome)) node.failedOutcome = item.failedOutcome as QueryOutcome;
 
       this.addNode(node);
     }

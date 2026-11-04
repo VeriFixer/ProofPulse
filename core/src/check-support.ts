@@ -135,6 +135,7 @@ export function checksInClauses(report: CoverageReport): Set<string> {
 }
 
 const RANK: Record<CovStatus, number> = {
+  [CovStatus.Unproved]: -2,
   [CovStatus.Vacuous]: -1,
   [CovStatus.Uncovered]: 0,
   [CovStatus.CovTest]: 1,

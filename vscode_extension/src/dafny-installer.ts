@@ -9,7 +9,7 @@ import { execSync } from "child_process";
 const OPEN_SETTINGS_ACTION = "Open Settings";
 
 /** Release of the ProofPulse Dafny build the extension installs. */
-const DAFNY_RELEASE = "0.2.0-proofpulse";
+const DAFNY_RELEASE = "0.3.0-proofpulse";
 const RELEASE_BASE = `https://github.com/VeriFixer/dafny_proofpulse/releases/download/v${DAFNY_RELEASE}/dafny-${DAFNY_RELEASE}`;
 
 /** Install folders are named after the release, so a new release is downloaded again. */

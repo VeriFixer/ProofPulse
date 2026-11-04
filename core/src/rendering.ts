@@ -21,7 +21,8 @@ interface Range {
 
 function tokenAttrs(tok: ProofNode): { dataId: string; dataStatus: string; classes: string; istopAttr: string } {
   let statusStr = "";
-  if (tok.getCovStatus() === CovStatus.Vacuous) statusStr = "vacuous";
+  if (tok.getCovStatus() === CovStatus.Unproved) statusStr = "unproved";
+  else if (tok.getCovStatus() === CovStatus.Vacuous) statusStr = "vacuous";
   else if (tok.getCovStatus() === CovStatus.Uncovered) statusStr = "uncovered";
   else if (tok.getCovStatus() === CovStatus.CovTest) statusStr = "covered-test";
   else statusStr = "covered-complete";

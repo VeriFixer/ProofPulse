@@ -7,6 +7,7 @@ ProofPulse answers that inside VS Code. Save a `.dfy` file and it highlights, ex
 - 🔴 **Uncovered**: code and specs no proof needs. Delete everything marked red and the program still verifies.
 - 🟡 **Test-only**: specs and code that only matter to test code or callers, not to any postcondition.
 - 🟣 **Vacuous**: parts of a contradiction (e.g. an unsatisfiable `requires`) that make a proof pass trivially.
+- 🟠 **Unproved**: goals the verifier could not prove during the analysis. The rest of that method's coverage may then be incomplete, and the hover says so.
 
 ProofPulse was presented at **ASE 2026** ([read the paper](https://doi.org/10.1145/3832783.3834600), open access) · [Watch the demo video](https://www.youtube.com/watch?v=8pO3NAodjoQ)
 
@@ -61,9 +62,10 @@ Each part of an `if` or `while` condition is checked too. An uncovered part coul
 | 🔴 red | Uncovered | Not used by any proof. Everything red can be removed together and the program still verifies. |
 | 🟡 yellow | CovTest | Used only by test assertions or callers, not to prove a postcondition. |
 | 🟣 purple, wavy | Vacuous | Part of a contradiction that makes a proof pass trivially. |
+| 🟠 orange, wavy | Unproved | A goal the verifier could not prove (invalid, timed out, ...). A failed proof reports no dependencies, so red and yellow marks in the same method may be wrong; their hover carries a note. |
 | none | CovComplete | Needed to prove a postcondition. |
 
-By default, implicit checks the verifier adds (null checks, index ranges, ...) are hidden, but vacuous ones are always shown. Turn on `proofpulse.showImplicitChecks` to see all of them.
+By default, implicit checks the verifier adds (null checks, index ranges, ...) are hidden, but vacuous and unproved ones are always shown. Turn on `proofpulse.showImplicitChecks` to see all of them.
 
 ## Commands
 
@@ -77,7 +79,7 @@ By default, implicit checks the verifier adds (null checks, index ranges, ...) a
 | `proofpulse.runOnSave` | `true` | Re-run the analysis whenever a `.dfy` file is saved. |
 | `proofpulse.timeoutSeconds` | `60` | Verification timeout, in seconds. |
 | `proofpulse.decorationOpacity` | `0.2` | Background opacity of highlights (`0.0` to `0.5`). |
-| `proofpulse.showImplicitChecks` | `false` | Also highlight implicit checks the verifier adds (null, index range, ...). Vacuous ones are always shown. |
+| `proofpulse.showImplicitChecks` | `false` | Also highlight implicit checks the verifier adds (null, index range, ...). Vacuous and unproved ones are always shown. |
 | `proofpulse.noAbstractInterpretation` | `false` | Pass `--no-abstract-interpretation` to Dafny. Can make coverage more precise for some proofs, by stopping Dafny from inferring facts automatically. |
 | `proofpulse.forceMinimization` | `false` | **Experimental.** Minimize Z3 unsat cores for tighter dependencies. Slower, and tested mainly on Linux. |
 | `proofpulse.useCustomDafny` | `false` | Use your own build of the [ProofPulse Dafny fork](https://github.com/VeriFixer/dafny_proofpulse) instead of the downloaded one. A standard Dafny release will mostly not work. |

@@ -6,6 +6,8 @@ export enum CovStatus {
   Uncovered = "Uncovered",
   /** Proved, used or reached only through contradictory facts (see VacuityRole). */
   Vacuous = "Vacuous",
+  /** Goal of a query the verifier did not prove (invalid, timed out, ...). */
+  Unproved = "Unproved",
 }
 
 /** Why a node is Vacuous, or that its vacuous proof is intentional. */

@@ -241,6 +241,42 @@ export function applyCoverageVacuity(graph: ProofGraph): void {
   }
 }
 
+/** Statuses a failed query can make wrong: the facts its goal needs look unused. */
+const UNRELIABLE_STATUSES: ReadonlySet<CovStatus> = new Set([CovStatus.Uncovered, CovStatus.CovTest]);
+
+function unitKey(node: ProofNode): string {
+  return `${node.methodName}|${node.methodType}`;
+}
+
+/**
+ * Nodes whose status may be wrong because their unit has an unproved goal: a
+ * failed query reports no dependencies, so a fact only that goal needs looks
+ * unused (Uncovered, CovTest). Postconditions are left out: their status says
+ * whether they are proved and whether callers use them.
+ */
+export function inUnprovedUnit(nodes: readonly ProofNode[]): (node: ProofNode) => boolean {
+  const failedUnits = new Set(nodes.filter(n => n.failedOutcome).map(unitKey));
+  return node => failedUnits.has(unitKey(node)) && UNRELIABLE_STATUSES.has(node.getCovStatus())
+    && node.getType() !== TokenType.Postcondition;
+}
+
+/** Goals the verifier did not prove, in source order. */
+export function unprovedGoals(graph: ProofGraph): ProofNode[] {
+  return graph.getAllNodes()
+    .filter(n => n.failedOutcome)
+    .sort((a, b) => a.start.line - b.start.line || a.start.col - b.start.col);
+}
+
+/**
+ * Pass 4: goals of failed queries are Unproved. Other statuses are kept; see
+ * inUnprovedUnit for which of them may be wrong.
+ */
+export function applyCoverageUnproved(graph: ProofGraph): void {
+  for (const node of graph.getAllNodes()) {
+    if (node.failedOutcome) node.setCovStatus(CovStatus.Unproved);
+  }
+}
+
 /**
  * Run the coverage passes on a graph.
  * Also propagates coverage through call connections.
@@ -251,6 +287,7 @@ export function applyCoverage(graph: ProofGraph): void {
   applyCoverageSemantic(graph);
   applyCoverageCheckSupport(graph);
   applyCoverageVacuity(graph);
+  applyCoverageUnproved(graph);
 }
 
 /**
@@ -281,7 +318,7 @@ function applyCoverageConnections(graph: ProofGraph): void {
  *    — same code used in multiple contexts, if any covers it, it's covered
  * 3. Across distinct spans on same line: worst-case (Uncovered > CovTest > CovComplete)
  *    — different code on same line, if any part is uncovered the line is flagged
- * Vacuous wins in both: a vacuous proof is a defect even where another context covers the code.
+ * Unproved, then Vacuous, win in both: a failed or vacuous proof is a defect even where another context covers the code.
  * 
  * Default is CovComplete for lines with no tokens.
  */
@@ -327,6 +364,7 @@ export function computeLineStatus(graph: ProofGraph, sourceCode: string): CovSta
 
 function bestStatus(a: CovStatus, b: CovStatus): CovStatus {
   const rank: Record<CovStatus, number> = {
+    [CovStatus.Unproved]: 4,
     [CovStatus.Vacuous]: 3,
     [CovStatus.CovComplete]: 2,
     [CovStatus.CovTest]: 1,
@@ -341,6 +379,7 @@ function worstStatus(a: CovStatus, b: CovStatus): CovStatus {
     [CovStatus.CovTest]: 1,
     [CovStatus.Uncovered]: 0,
     [CovStatus.Vacuous]: -1,
+    [CovStatus.Unproved]: -2,
   };
   return rank[a] <= rank[b] ? a : b;
 }

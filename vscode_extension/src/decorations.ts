@@ -1,10 +1,11 @@
 import * as vscode from "vscode";
-import { assertNever, CovStatus, flaggedExpressions, ProofNode, spanEndCol, TokenType, vacuityExplanation } from "@proofpulse/core";
+import { assertNever, CovStatus, flaggedExpressions, inUnprovedUnit, ProofNode, spanEndCol, TokenType, UNPROVED_METHOD_NOTE, unprovedExplanation, vacuityExplanation } from "@proofpulse/core";
 
 interface DecorationTypes {
   uncoveredInline: vscode.TextEditorDecorationType;
   covTestInline: vscode.TextEditorDecorationType;
   vacuousInline: vscode.TextEditorDecorationType;
+  unprovedInline: vscode.TextEditorDecorationType;
 }
 
 /** Module-level reference to current decoration types so clearDecorations can dispose them. */
@@ -53,6 +54,7 @@ function covTestExplanation(type: TokenType): string {
 /** Explanation for a flagged node, by its status. */
 function nodeExplanation(n: ProofNode): string {
   switch (n.covStatus) {
+    case CovStatus.Unproved: return unprovedExplanation(n.failedOutcome);
     case CovStatus.Vacuous: return vacuityExplanation(n.vacuity);
     case CovStatus.Uncovered: return uncoveredExplanation(n.getType());
     case CovStatus.CovTest: return covTestExplanation(n.getType());
@@ -62,6 +64,7 @@ function nodeExplanation(n: ProofNode): string {
 }
 
 const STATUS_ICON: Record<CovStatus, string> = {
+  [CovStatus.Unproved]: "🟠",
   [CovStatus.Vacuous]: "🟣",
   [CovStatus.Uncovered]: "🔴",
   [CovStatus.CovTest]: "🟡",
@@ -84,6 +87,10 @@ export function createDecorationTypes(opacity: number): DecorationTypes {
     vacuousInline: vscode.window.createTextEditorDecorationType({
       ...inline("150, 80, 255"),
       textDecoration: "underline wavy rgba(150, 80, 255, 0.9)",
+    }),
+    unprovedInline: vscode.window.createTextEditorDecorationType({
+      ...inline("255, 120, 0"),
+      textDecoration: "underline wavy rgba(255, 120, 0, 0.9)",
     }),
   };
 }
@@ -112,6 +119,8 @@ export function applyDecorations(
     return text.length > 60 ? text.slice(0, 57) + "..." : text;
   }
 
+  const mayBeWrong = inUnprovedUnit(nodes);
+
   function hoverFor(lineNodes: ProofNode[]): vscode.MarkdownString {
     const hover = new vscode.MarkdownString(undefined, true);
     hover.isTrusted = true;
@@ -119,6 +128,7 @@ export function applyDecorations(
     for (const n of lineNodes) {
       hover.appendMarkdown(`${STATUS_ICON[n.covStatus]} \`${nodeSnippet(n)}\` *(Line ${n.start.line}:${n.start.col})*  \n`);
       hover.appendMarkdown(`${nodeExplanation(n)}  \n\n`);
+      if (mayBeWrong(n)) hover.appendMarkdown(`⚠️ *${UNPROVED_METHOD_NOTE}*  \n\n`);
     }
     hover.appendMarkdown(`---\n`);
     hover.appendMarkdown(`[$(graph) Click to Generate Proof Coverage Report](command:proofpulse.getProofReport)`);
@@ -138,6 +148,7 @@ export function applyDecorations(
   editor.setDecorations(types.uncoveredInline, inlineOpts.get(CovStatus.Uncovered) ?? []);
   editor.setDecorations(types.covTestInline, inlineOpts.get(CovStatus.CovTest) ?? []);
   editor.setDecorations(types.vacuousInline, inlineOpts.get(CovStatus.Vacuous) ?? []);
+  editor.setDecorations(types.unprovedInline, inlineOpts.get(CovStatus.Unproved) ?? []);
 }
 
 export function clearDecorations(editor: vscode.TextEditor): void {
@@ -145,6 +156,7 @@ export function clearDecorations(editor: vscode.TextEditor): void {
     editor.setDecorations(currentTypes.uncoveredInline, []);
     editor.setDecorations(currentTypes.covTestInline, []);
     editor.setDecorations(currentTypes.vacuousInline, []);
+    editor.setDecorations(currentTypes.unprovedInline, []);
     disposeCurrentTypes();
   }
 }
@@ -154,6 +166,7 @@ function disposeCurrentTypes(): void {
     currentTypes.uncoveredInline.dispose();
     currentTypes.covTestInline.dispose();
     currentTypes.vacuousInline.dispose();
+    currentTypes.unprovedInline.dispose();
     currentTypes = null;
   }
 }

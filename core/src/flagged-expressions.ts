@@ -11,8 +11,8 @@
  *   the clause as a whole cannot go.
  *
  * Implicit checks the verifier adds (null, range, termination, ...) are hidden
- * unless `includeImplicit` is set, or they are vacuous: a vacuous proof is a
- * defect wherever it shows up.
+ * unless `includeImplicit` is set, or they are vacuous or unproved: a vacuous
+ * or failed proof is a defect wherever it shows up.
  */
 import { NodeKind } from "./report/coverage-report.js";
 import { CovStatus, TokenType, type SourceLocation } from "./types.js";
@@ -44,23 +44,27 @@ function strictlyContains(outer: ProofNode, inner: ProofNode): boolean {
   return s <= 0 && e <= 0 && (s !== 0 || e !== 0);
 }
 
-/** Which status wins when nodes share a span: the best one, but Vacuous over all. */
+/** Which status wins when nodes share a span: the best one, but Unproved and Vacuous over all. */
 const MERGE_RANK: Record<CovStatus, number> = {
   [CovStatus.Uncovered]: 0,
   [CovStatus.CovTest]: 1,
   [CovStatus.CovComplete]: 2,
   [CovStatus.Vacuous]: 3,
+  [CovStatus.Unproved]: 4,
 };
+
+/** Statuses shown even on implicit checks. */
+const ALWAYS_SHOWN: ReadonlySet<CovStatus> = new Set([CovStatus.Vacuous, CovStatus.Unproved]);
 
 /** Flagged (non-CovComplete) expressions to report, sorted by position. */
 export function flaggedExpressions(nodes: ProofNode[], options?: FlaggedExpressionOptions): ProofNode[] {
   const includeImplicit = options?.includeImplicit ?? false;
   const visible = nodes.filter(n =>
-    includeImplicit || !isImplicitCheck(n) || n.getCovStatus() === CovStatus.Vacuous);
+    includeImplicit || !isImplicitCheck(n) || ALWAYS_SHOWN.has(n.getCovStatus()));
 
   // Several nodes can share one span (the same clause seen from several
   // proofs): keep the best status, as the line status does, except that
-  // Vacuous wins (a vacuous proof is a defect wherever it shows up).
+  // Unproved and Vacuous win (a failed or vacuous proof is a defect wherever it shows up).
   const bySpan = new Map<string, ProofNode>();
   for (const n of visible) {
     const key = `${n.file}|${n.start.line},${n.start.col}-${n.end.line},${n.end.col}`;
