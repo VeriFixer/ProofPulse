@@ -5,8 +5,10 @@ import {
   BackendOptions,
   BackendRun,
   DEFAULT_DAFNY_COMMAND,
+  ProofGraph,
   RunStatus,
   SolverKind,
+  unprovedGoals,
   VerifierBackend,
   VerifierId,
 } from "@proofpulse/core";
@@ -48,6 +50,28 @@ function hideStatusBar(): void {
   if (statusBarItem) {
     statusBarItem.hide();
   }
+}
+
+/**
+ * Warn about goals the verifier did not prove: the editor shows no error for a
+ * goal that fails only under ProofPulse's dependency tracking.
+ */
+function reportUnprovedGoals(graph: ProofGraph): void {
+  const failed = unprovedGoals(graph);
+  if (failed.length === 0) return;
+  const ch = getOutputChannel();
+  ch.appendLine("--- UNPROVED GOALS ---");
+  for (const n of failed) {
+    ch.appendLine(`  ${n.file}:${n.start.line}:${n.start.col}  ${n.methodName}  ${n.failedOutcome}  ${n.prooftext}`);
+  }
+  ch.appendLine("In these methods, Uncovered and CovTest may be wrong: a failed proof reports no dependencies.");
+  ch.appendLine("If Dafny verifies the file on its own, the failure comes from the proof-dependency tracking ProofPulse needs.");
+  ch.appendLine("---");
+  const goals = failed.length === 1 ? "1 goal" : `${failed.length} goals`;
+  const methods = [...new Set(failed.map(n => n.methodName))].join(", ");
+  vscode.window
+    .showWarningMessage(`ProofPulse: ${goals} could not be proved in ${methods}; coverage there may be incomplete.`, "Show details")
+    .then(choice => { if (choice) ch.show(true); });
 }
 
 /** Options for a backend run, from the user's settings. */
@@ -142,6 +166,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
         applyDecorations(editor, proof.proofGraph.getAllNodes(), getDecorationOpacity(), getShowImplicitChecks());
         logInfo(`Applied decorations: ${proof.lineStatus.length} lines`);
         hideStatusBar();
+        reportUnprovedGoals(proof.proofGraph);
 
         // Write cache on successful completion
         try {

@@ -1,13 +1,15 @@
 /**
  * Generate a YAML log of ProofPulse coverage analysis.
  *
- * Default (--log): only nodes that are Vacuous, Uncovered or CovTest.
+ * Default (--log): only nodes that are Unproved, Vacuous, Uncovered or CovTest.
  * Verbose (--log-verbose): same + complete proof dependency graph.
  */
 import { CovStatus, TokenType, VacuityRole } from "./types.js";
+import { QueryOutcome } from "./report/coverage-report.js";
 import type { ProofNode } from "./proof-node.js";
 import type { Proof } from "./proof.js";
 import { flaggedExpressions, spanEndCol } from "./flagged-expressions.js";
+import { inUnprovedUnit } from "./coverage.js";
 
 export interface ReportOptions {
   verbose?: boolean;
@@ -39,7 +41,23 @@ export function vacuityExplanation(role: VacuityRole | undefined): string {
   }
 }
 
-function statusExplanation(status: CovStatus, type: TokenType, role?: VacuityRole): string {
+/** Explanation for an Unproved goal, by how its query ended. */
+export function unprovedExplanation(outcome: QueryOutcome | undefined): string {
+  const why = outcome === QueryOutcome.Invalid ? "could not be proved"
+    : outcome === QueryOutcome.TimeOut ? "timed out"
+    : outcome === QueryOutcome.OutOfResource ? "ran out of resources"
+    : outcome === QueryOutcome.OutOfMemory ? "ran out of memory"
+    : `was not proved (${outcome ?? "unknown outcome"})`;
+  return `This goal ${why} in the ProofPulse run, so coverage in its method is incomplete. ` +
+    "ProofPulse verifies with proof-dependency tracking, which can make a proof fail that passes without it.";
+}
+
+/** Note on a status that may be wrong because its method has an unproved goal (see inUnprovedUnit). */
+export const UNPROVED_METHOD_NOTE =
+  "Note: this method has a goal that could not be proved, and a failed proof reports no dependencies, so this status may be wrong: the failed goal may need it.";
+
+function statusExplanation(status: CovStatus, type: TokenType, role?: VacuityRole, outcome?: QueryOutcome): string {
+  if (status === CovStatus.Unproved) return unprovedExplanation(outcome);
   if (status === CovStatus.Vacuous) return vacuityExplanation(role);
   if (status === CovStatus.Uncovered) {
     switch (type) {
@@ -153,6 +171,7 @@ export function generateTextReport(
   }
 
   const flagged = flaggedExpressions(nodes, { includeImplicit: options?.includeImplicit });
+  const mayBeWrong = inUnprovedUnit(nodes);
   for (const method of methods) {
     const methodNodes = flagged.filter(n => n.start.line >= method.startLine && n.start.line <= method.endLine);
     if (methodNodes.length === 0) continue;
@@ -169,7 +188,8 @@ export function generateTextReport(
       out.push(`    status: ${status}`);
       out.push(`    code: ${yamlStr(expr)}`);
       if (expr !== lineText) out.push(`    in: ${yamlStr(lineText)}`);
-      out.push(`    message: ${yamlStr(statusExplanation(status, n.getType(), n.vacuity))}`);
+      out.push(`    message: ${yamlStr(statusExplanation(status, n.getType(), n.vacuity, n.failedOutcome))}`);
+      if (mayBeWrong(n)) out.push(`    note: ${yamlStr(UNPROVED_METHOD_NOTE)}`);
     }
   }
 

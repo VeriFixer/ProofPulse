@@ -121,7 +121,8 @@ function getNodeDisplayText(node, maxLen) {
 }
 
 /** Context-aware status explanation based on token type + coverage status */
-function statusExplanation(status, type, vacuity) {
+function statusExplanation(status, type, vacuity, failedOutcome) {
+  if (status === 'Unproved') return window.unprovedExplanation(failedOutcome);
   if (status === 'Vacuous') {
     switch (vacuity) {
       case 'goal': return 'Proved vacuously: the facts on its path contradict each other, so it was never really checked.';
@@ -155,6 +156,7 @@ function statusExplanation(status, type, vacuity) {
 }
 
 function statusColor(status) {
+  if (status === 'Unproved') return 'var(--color-unproved-text)';
   if (status === 'Vacuous') return 'var(--color-vacuous-text)';
   if (status === 'Uncovered') return 'var(--color-uncovered-text)';
   if (status === 'CovTest') return 'var(--color-covtest-text)';
@@ -273,7 +275,7 @@ function renderPanel(tokenEl, proof) {
       statusHtml += `<div class="token-card-row">${statusDot(internalStatus)} <strong>Internal:</strong> ${statusLabel(internalStatus)}</div>`;
     }
 
-    const explanation = statusExplanation(token.covStatus, token.type, token.vacuity);
+    const explanation = statusExplanation(token.covStatus, token.type, token.vacuity, token.failedOutcome);
     const proofMsg = cleanProoftext(token.prooftext);
 
     const usageCount = window.getUsageCount ? window.getUsageCount(id, proof) : 0;
@@ -284,6 +286,7 @@ function renderPanel(tokenEl, proof) {
       `<div class="token-card-row"><strong>Proves:</strong> ${usageCount} top assertion${usageCount !== 1 ? 's' : ''} · <strong>Contexts:</strong> ${methodContexts.length}</div>` +
       (methodContexts.length > 1 ? `<div class="token-card-row token-card-contexts"><small>${methodContexts.map(c => escapeHtml(c)).join(', ')}</small></div>` : '') +
       `<p class="token-card-hint">${escapeHtml(explanation)}</p>` +
+      (window.mayBeMisreported(token, proof) ? `<p class="token-card-hint token-card-note">${escapeHtml(window.UNPROVED_METHOD_NOTE)}</p>` : '') +
       (proofMsg ? `<div class="token-card-row"><strong>Message:</strong> <span class="token-card-proof">${escapeHtml(proofMsg)}</span></div>` : '');
 
     panelBody.appendChild(card);
@@ -363,6 +366,25 @@ function attachHandlers(proof) {
 
 let currentProof = null;
 
+/** List goals the verifier did not prove above the source: their coverage is incomplete. */
+function renderUnprovedBanner(proof) {
+    const banner = dollar('#unproved-banner');
+    const failed = window.getUnprovedGoals(proof);
+    banner.hidden = failed.length === 0;
+    if (failed.length === 0) { banner.innerHTML = ''; return; }
+    const goals = failed.length === 1 ? '1 goal' : `${failed.length} goals`;
+    const items = failed.map((n, i) =>
+        `<li><a href="#" data-goal-index="${i}">line ${n.start.line}</a> in ${escapeHtml(n.methodName)}: ${escapeHtml(n.failedOutcome)}</li>`).join('');
+    banner.innerHTML = `<strong>${goals} could not be proved.</strong> In ${failed.length === 1 ? 'its method' : 'their methods'}, Uncovered and CovTest may be wrong: ` +
+        `a failed proof reports no dependencies. If Dafny verifies the file on its own, the failure comes from the proof-dependency tracking ProofPulse needs.<ul>${items}</ul>`;
+    banner.querySelectorAll('[data-goal-index]').forEach(a => a.addEventListener('click', e => {
+        e.preventDefault();
+        const id = failed[Number(a.dataset.goalIndex)].getId();
+        const el = [...document.querySelectorAll('.token[data-id]')].find(t => t.dataset.id === id);
+        if (el) { el.scrollIntoView({ block: 'center' }); renderPanel(el, proof); }
+    }));
+}
+
 async function loadCoverage() {
     pre.innerHTML = '';
     panelBody.innerHTML = '';
@@ -386,8 +408,10 @@ async function loadCoverage() {
     const fragment = window.generateSpansFragment(src, currentProof);
     buildSourceDomFromFragment(fragment, src, lineStatuses);
     attachHandlers(currentProof);
+    renderUnprovedBanner(currentProof);
 
-    const uncovered = document.querySelector('.token[data-status="uncovered"]');
+    const uncovered = document.querySelector('.token[data-status="unproved"]')
+        || document.querySelector('.token[data-status="uncovered"]');
     if (uncovered) renderPanel(uncovered, currentProof);
     else {
         const first = document.querySelector('.token');
