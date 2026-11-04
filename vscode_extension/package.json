@@ -121,7 +121,7 @@
     }
   },
   "dependencies": {
-    "@proofpulse/core": "1.1.0"
+    "@proofpulse/core": "1.2.0"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",
