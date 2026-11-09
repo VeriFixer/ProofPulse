@@ -17,7 +17,7 @@ ProofPulse was presented at **ASE 2026** ([read the paper](https://doi.org/10.11
 
 1. Install **ProofPulse** and the official [Dafny extension](https://marketplace.visualstudio.com/items?itemName=dafny-lang.ide-vscode).
 2. Open a `.dfy` file. The first time, ProofPulse downloads its own Dafny build (a one-time download with a progress bar) and then analyses the file. This build carries the changes to Dafny and Boogie that ProofPulse relies on, so it is used instead of any Dafny you already have installed.
-3. Edit and save. Highlights update every time you save.
+3. Edit and save. Highlights update every time you save, method by method as each one is verified, so large files show results long before the whole file is done.
 
 No configuration, no Docker, no command line. Prebuilt for Linux x64, macOS (Apple silicon) and Windows x64.
 
@@ -77,7 +77,8 @@ By default, implicit checks the verifier adds (null checks, index ranges, ...) a
 | Setting | Default | Description |
 |---|---|---|
 | `proofpulse.runOnSave` | `true` | Re-run the analysis whenever a `.dfy` file is saved. |
-| `proofpulse.timeoutSeconds` | `60` | Verification timeout, in seconds. |
+| `proofpulse.timeoutSeconds` | `60` | Time limit for each proof goal, in seconds (Dafny's `--verification-time-limit`). |
+| `proofpulse.totalTimeoutSeconds` | `0` | Time limit for a whole run, in seconds; `0` means none. When it is hit, the methods verified by then stay highlighted. |
 | `proofpulse.decorationOpacity` | `0.2` | Background opacity of highlights (`0.0` to `0.5`). |
 | `proofpulse.showImplicitChecks` | `false` | Also highlight implicit checks the verifier adds (null, index range, ...). Vacuous and unproved ones are always shown. |
 | `proofpulse.noAbstractInterpretation` | `false` | Pass `--no-abstract-interpretation` to Dafny. Can make coverage more precise for some proofs, by stopping Dafny from inferring facts automatically. |
@@ -89,7 +90,7 @@ By default, implicit checks the verifier adds (null checks, index ranges, ...) a
 
 ## Troubleshooting
 
-- **No highlights appear.** Check that the file verifies in Dafny, then look at the **ProofPulse** channel in the Output panel. For long proofs, raise `proofpulse.timeoutSeconds`.
+- **No highlights appear.** Check that the file verifies in Dafny, then look at the **ProofPulse** channel in the Output panel. Highlights appear per method as Dafny verifies them, so on a large file wait for the status bar (`N methods done`). If a single goal times out, raise `proofpulse.timeoutSeconds`.
 - **Other platforms** (e.g. Linux ARM, Intel Mac). There is no prebuilt ProofPulse Dafny for these yet, and a standard Dafny release will mostly not work because ProofPulse needs its changes to Dafny and Boogie. You can build the [ProofPulse Dafny fork](https://github.com/VeriFixer/dafny_proofpulse) from source, then enable `proofpulse.useCustomDafny` and set `proofpulse.customDafnyPath` to it. Otherwise, please [open an issue](https://github.com/VeriFixer/ProofPulse/issues) so we know which platform to add.
 
 ## Paper

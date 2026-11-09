@@ -12,7 +12,7 @@ import {
   VerifierBackend,
   VerifierId,
 } from "@proofpulse/core";
-import { getDafnyPath, getDecorationOpacity, getShowImplicitChecks, getForceMinimization, getNoAbstractInterpretation, getSolverPath, getTimeout, getZ3Path } from "./config";
+import { getDafnyPath, getDecorationOpacity, getShowImplicitChecks, getForceMinimization, getNoAbstractInterpretation, getSolverPath, getTimeout, getTotalTimeout, getZ3Path } from "./config";
 import { backendForDocument, backendForPath, supportedExtensionsLabel } from "./backends";
 import { applyDecorations } from "./decorations";
 import { startNewSession, isSessionCurrent } from "./run-session";
@@ -74,6 +74,11 @@ function reportUnprovedGoals(graph: ProofGraph): void {
     .then(choice => { if (choice) ch.show(true); });
 }
 
+/** Methods with results in a report (a method's well-formedness and correctness are one). */
+function methodCount(report: { units: { name: string }[] }): number {
+  return new Set(report.units.map((u) => u.name)).size;
+}
+
 /** Options for a backend run, from the user's settings. */
 function backendOptions(backend: VerifierBackend, context: vscode.ExtensionContext): BackendOptions {
   const solverPath = getSolverPath();
@@ -81,6 +86,7 @@ function backendOptions(backend: VerifierBackend, context: vscode.ExtensionConte
   return {
     toolPath: getDafnyPath(context),
     timeoutSeconds: getTimeout(),
+    ...(getTotalTimeout() > 0 ? { totalTimeoutSeconds: getTotalTimeout() } : {}),
     ...(solverPath ? { solver: { kind: SolverKind.Z3, path: solverPath } } : {}),
     ...(getForceMinimization()
       ? { minimization: minimizationSolverPath ? { solver: { kind: SolverKind.Z3, path: minimizationSolverPath } } : {} }
@@ -106,6 +112,7 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
   logInfo(`Running ${backend.displayName} analysis on ${filePath} (forceMinimization=${forceMin}, session=${session.id})`);
   showStatusBar(`${backend.displayName} — Running...`);
 
+  let stage = "Running...";
   await vscode.window.withProgress(
     { location: vscode.ProgressLocation.Notification, title: "ProofPulse: Running analysis…", cancellable: false },
     async () => {
@@ -119,12 +126,20 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
           ...options,
           onWarning: (msg) => logInfo(msg),
           signal: session.abortController.signal,
+          onPartialResult: (partial) => {
+            if (!isSessionCurrent(session) || !partial.report) return;
+            const proof = analyzeReport(sourceCode, partial.report);
+            applyDecorations(editor, proof.proofGraph.getAllNodes(), getDecorationOpacity(), getShowImplicitChecks());
+            const done = methodCount(partial.report);
+            showStatusBar(`${backend.displayName} — ${stage} (${done} ${done === 1 ? "method" : "methods"} done)`);
+          },
           onPreliminaryResult: (prelim) => {
             if (!isSessionCurrent(session) || prelim.status !== RunStatus.Completed || !prelim.report) return;
             const proof = analyzeReport(sourceCode, prelim.report);
             applyDecorations(editor, proof.proofGraph.getAllNodes(), getDecorationOpacity(), getShowImplicitChecks());
             logInfo(`Applied preliminary decorations: ${proof.lineStatus.length} lines`);
-            showStatusBar(`${backend.displayName} — Preliminary ✓ — Minimizing...`);
+            stage = "Preliminary ✓ — Minimizing...";
+            showStatusBar(`${backend.displayName} — ${stage}`);
           },
         });
 
@@ -156,7 +171,18 @@ export async function runAnalysis(editor: vscode.TextEditor, context: vscode.Ext
           }
           case RunStatus.TimedOut:
             hideStatusBar();
-            vscode.window.showWarningMessage("ProofPulse: analysis timed out.");
+            if (!result.report) {
+              vscode.window.showWarningMessage("ProofPulse: analysis timed out.");
+              return;
+            }
+            // Show the methods that finished before the time limit.
+            {
+              const proof = analyzeReport(sourceCode, result.report);
+              applyDecorations(editor, proof.proofGraph.getAllNodes(), getDecorationOpacity(), getShowImplicitChecks());
+              const done = methodCount(result.report);
+              vscode.window.showWarningMessage(
+                `ProofPulse: analysis timed out; showing the ${done} ${done === 1 ? "method" : "methods"} that finished.`);
+            }
             return;
           default:
             assertNever(result.status, "run status");

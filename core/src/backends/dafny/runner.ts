@@ -1,4 +1,4 @@
-import { spawn } from "node:child_process";
+import { spawn, type ChildProcess } from "node:child_process";
 import { existsSync, readdirSync } from "node:fs";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { basename, dirname, isAbsolute, join, resolve } from "node:path";
@@ -22,6 +22,8 @@ export const DEFAULT_DAFNY_COMMAND = "dafny";
 
 const DEFAULT_TIMEOUT_SEC = 60;
 const PROVER_LOG_FILE = "prover_log.txt";
+/** How often the log file is read for newly finished methods. */
+const LOG_POLL_MS = 1000;
 const WRAPPER_LOG_FILE = "wrapper.log";
 const DEBUG_INFO_FILE = "debug_info.txt";
 
@@ -35,9 +37,11 @@ export interface DafnyRunResult {
   dafnyVersion?: string;
 }
 
-export interface DafnyRunOptions extends Omit<BackendOptions, "onPreliminaryResult"> {
+export interface DafnyRunOptions extends Omit<BackendOptions, "onPreliminaryResult" | "onPartialResult"> {
   /** Called with the unminimized run's result before the minimization run starts. */
   onPreliminaryResult?: (result: DafnyRunResult) => void;
+  /** Called while Dafny runs with the log of the methods finished so far. */
+  onPartialResult?: (result: DafnyRunResult) => void;
 }
 
 const failed = (errorMessage: string, exitCode = -1): DafnyRunResult =>
@@ -54,6 +58,41 @@ function normalizeFilePath(p: string): string {
     return normalized[0].toUpperCase() + normalized.slice(1);
   }
   return normalized;
+}
+
+const RESULTS_HEADER = "Results for ";
+
+/** Dafny's log split into its per-method blocks, each starting at a `Results for` line. */
+function logBlocks(log: string): { preamble: string; blocks: { scope: string; text: string }[] } {
+  const parts = log.split(/^(?=Results for )/m);
+  const preamble = parts[0].startsWith(RESULTS_HEADER) ? "" : parts.shift()!;
+  return {
+    preamble,
+    blocks: parts.map((text) => ({ scope: text.split("\n", 1)[0], text })),
+  };
+}
+
+/**
+ * `base` with the methods `newer` has results for replaced by those: the
+ * minimization run's log so far over the full log of the run before it.
+ */
+export function mergeLogs(base: string, newer: string): string {
+  const newerBlocks = new Map(logBlocks(newer).blocks.map((b) => [b.scope, b.text]));
+  const { preamble, blocks } = logBlocks(base);
+  const merged = blocks.map((b) => newerBlocks.get(b.scope) ?? b.text);
+  const baseScopes = new Set(blocks.map((b) => b.scope));
+  for (const [scope, text] of newerBlocks) if (!baseScopes.has(scope)) merged.push(text);
+  return preamble + merged.map((t) => (t.endsWith("\n") ? t : t + "\n")).join("");
+}
+
+/**
+ * The part of Dafny's log made of finished methods. Dafny writes and flushes
+ * each method's block as the method finishes, so the text before the last
+ * `Results for` line is complete, and so is all of it once the log stops growing.
+ */
+export function finishedMethodsLog(log: string, stoppedGrowing: boolean): string {
+  const finished = stoppedGrowing ? log : log.slice(0, Math.max(0, log.lastIndexOf("\n" + RESULTS_HEADER) + 1));
+  return finished.includes(RESULTS_HEADER) ? finished : "";
 }
 
 async function makeTempDir(): Promise<string> {
@@ -336,6 +375,7 @@ async function readDebugContext(dirs: { wrapperLogDir?: string; debugInfoDir: st
 
 /** Turn a finished spawn into a run result, reading Dafny's prover log on success. */
 async function collectResult(result: SpawnResult, runDir: string, debugContext: string): Promise<DafnyRunResult> {
+  const proverLog = () => readFile(join(runDir, PROVER_LOG_FILE), "utf8").catch(() => "");
   switch (result.status) {
     case SpawnStatus.Aborted:
       return { status: RunStatus.Aborted, log: "", exitCode: -1 };
@@ -344,7 +384,9 @@ async function collectResult(result: SpawnResult, runDir: string, debugContext: 
     case SpawnStatus.TimedOut:
       return {
         status: RunStatus.TimedOut,
-        log: "",
+        // The methods that finished before the time limit: Dafny writes each
+        // method's block at once, so once it is stopped every block is whole.
+        log: finishedMethodsLog(await proverLog(), true),
         exitCode: -1,
         ...(debugContext ? { errorMessage: `timed out${debugContext}` } : {}),
       };
@@ -358,12 +400,7 @@ async function collectResult(result: SpawnResult, runDir: string, debugContext: 
     return failed(`dafny exited ${result.exitCode}: ${result.stderr.slice(0, 500)}${debugContext}`, result.exitCode);
   }
 
-  let log = "";
-  try {
-    log = await readFile(join(runDir, PROVER_LOG_FILE), "utf8");
-  } catch {
-    log = result.stdout;
-  }
+  const log = (await proverLog()) || result.stdout;
   return { status: RunStatus.Completed, log, exitCode: result.exitCode };
 }
 
@@ -402,6 +439,7 @@ export async function runDafny(filePath: string, options: DafnyRunOptions = {}):
   }
 
   const timeoutSec = options.timeoutSeconds ?? DEFAULT_TIMEOUT_SEC;
+  const totalTimeoutSec = options.totalTimeoutSeconds;
 
   let tmpDir: string;
   try {
@@ -433,12 +471,12 @@ export async function runDafny(filePath: string, options: DafnyRunOptions = {}):
     "verify",
     effectivePath,
     "--verification-coverage-report", join(tmpDir, "cov"),
-    "--log-format", "text",
     "--isolate-assertions",
     "--allow-warnings", "true",
     "--verification-time-limit", String(timeoutSec),
-    "--boogie", "/proverOpt:O:smt.core.minimize=true",
-    "--boogie", "/proverOpt:O:sat.core.minimize=true",
+    // No smt.core.minimize / sat.core.minimize: with them z3 can run far past
+    // the time limit on hard queries (minutes, gigabytes), with z3 4.12.1 and
+    // 4.16.0 alike. The z3 wrapper checks (and in minimize mode minimizes) cores.
   ];
 
   if (dafnyOptions?.noAbstractInterpretation) {
@@ -469,14 +507,19 @@ export async function runDafny(filePath: string, options: DafnyRunOptions = {}):
     const cmd = await new Z3Minimizer().prepare(solver!.path, logFile, tmpDir, log);
     const hooked = new DafnyMinimizationHook().apply(cmd);
     debugLines.push(...cmd.debugInfo);
-    return { args: [...baseArgs, ...hooked.args], env: { ...hooked.env, [Z3WrapperEnv.Mode]: mode } };
+    const env: Record<string, string> = { ...hooked.env, [Z3WrapperEnv.Mode]: mode };
+    if (options.coreCheck?.triggerTrace === false) env[Z3WrapperEnv.TriggerTrace] = "0";
+    return { args: [...baseArgs, ...hooked.args], env };
   };
 
   // Normal run: the wrapper in check mode; without a z3 to wrap, Dafny's own solver.
   let normal: { args: string[]; env?: Record<string, string> } = {
     args: options.solver?.path ? [...baseArgs, "--solver-path", options.solver.path] : baseArgs,
   };
-  if (solver) {
+  if (solver && options.coreCheck?.useWrapper === false) {
+    normal = { args: [...baseArgs, "--solver-path", solver.path] };
+    log("[info] z3 wrapper not used, cores are not checked");
+  } else if (solver) {
     try {
       normal = await wrapped(Z3WrapperMode.Check, join(tmpDir, WRAPPER_LOG_FILE));
     } catch (err) {
@@ -511,15 +554,46 @@ export async function runDafny(filePath: string, options: DafnyRunOptions = {}):
 
   const withVersion = (r: DafnyRunResult): DafnyRunResult => (dafnyVersion ? { ...r, dafnyVersion } : r);
 
+  /**
+   * Run Dafny in `runDir` with its log written there. Dafny writes the log to
+   * stdout only once all methods are verified, but flushes a log file after
+   * each method, so the file is polled to report the methods finished so far.
+   */
+  const run = async (args: string[], runDir: string, env: Record<string, string> | undefined,
+    toLog: (finished: string) => string = (l) => l): Promise<SpawnResult> => {
+    const logFile = join(runDir, PROVER_LOG_FILE);
+    const onPartial = options.onPartialResult;
+    let poller: NodeJS.Timeout | undefined;
+    if (onPartial) {
+      let lastSize = -1;
+      let reported = "";
+      poller = setInterval(() => {
+        readFile(logFile, "utf8").then((text) => {
+          const finished = finishedMethodsLog(text, text.length === lastSize);
+          lastSize = text.length;
+          if (finished.length <= reported.length || options.signal?.aborted) return;
+          reported = finished;
+          onPartial(withVersion({ status: RunStatus.Completed, log: toLog(finished), exitCode: 0 }));
+        }, () => { /* not written yet */ });
+      }, LOG_POLL_MS);
+    }
+    try {
+      return await spawnDafny(dafnyBin, [...args, "--log-format", `text;LogFileName=${logFile}`], runDir,
+        totalTimeoutSec, env, options.signal);
+    } finally {
+      clearInterval(poller);
+    }
+  };
+
   try {
     // Two-phase progressive run: Phase_1 (normal) → callback → Phase_2 (minimization)
     if (minimization && options.onPreliminaryResult) {
       log(`[info] Phase_1 (normal): ${dafnyBin} ${normal.args.join(" ")}`);
-      const phase1 = await spawnDafny(dafnyBin, normal.args, tmpDir, timeoutSec, normal.env, options.signal);
+      const phase1 = await run(normal.args, tmpDir, normal.env);
       // Phase 1 errors are reported without minimization debug context.
       const phase1Result = await collectResult(phase1, tmpDir, "");
       if (phase1Result.status !== RunStatus.Completed) {
-        return { ...phase1Result, errorMessage: phase1Result.status === RunStatus.TimedOut ? undefined : phase1Result.errorMessage };
+        return withVersion({ ...phase1Result, errorMessage: phase1Result.status === RunStatus.TimedOut ? undefined : phase1Result.errorMessage });
       }
       options.onPreliminaryResult(withVersion(phase1Result));
 
@@ -538,19 +612,23 @@ export async function runDafny(filePath: string, options: DafnyRunOptions = {}):
 
       log(`[info] Phase_2 (minimization): ${dafnyBin} ${minimization.args.join(" ")}`);
       try {
-        const phase2 = await spawnDafny(dafnyBin, minimization.args, tmpDir2, timeoutSec, minimization.env, options.signal);
+        // Methods not minimized yet keep their results from Phase_1.
+        const phase2 = await run(minimization.args, tmpDir2, minimization.env, (log) => mergeLogs(phase1Result.log, log));
         const debugContext = await readDebugContext({ wrapperLogDir: tmpDir2, debugInfoDir: tmpDir });
-        return withVersion(await collectResult(phase2, tmpDir2, debugContext));
+        const phase2Result = await collectResult(phase2, tmpDir2, debugContext);
+        return withVersion(phase2Result.status === RunStatus.TimedOut
+          ? { ...phase2Result, log: mergeLogs(phase1Result.log, phase2Result.log) }
+          : phase2Result);
       } finally {
         rm(tmpDir2, { recursive: true, force: true }).catch(() => {});
       }
     }
 
     // Single-phase run (minimized when configured)
-    const run = minimization ?? normal;
-    log(`[info] Spawning: ${dafnyBin} ${run.args.join(" ")}`);
-    const result = await spawnDafny(dafnyBin, run.args, tmpDir, timeoutSec, run.env, options.signal);
-    const debugContext = await readDebugContext({ wrapperLogDir: run.env ? tmpDir : undefined, debugInfoDir: tmpDir });
+    const single = minimization ?? normal;
+    log(`[info] Spawning: ${dafnyBin} ${single.args.join(" ")}`);
+    const result = await run(single.args, tmpDir, single.env);
+    const debugContext = await readDebugContext({ wrapperLogDir: single.env ? tmpDir : undefined, debugInfoDir: tmpDir });
     return withVersion(await collectResult(result, tmpDir, debugContext));
   } finally {
     rm(tmpDir, { recursive: true, force: true }).catch(() => {});
@@ -560,6 +638,23 @@ export async function runDafny(filePath: string, options: DafnyRunOptions = {}):
 // ---------------------------------------------------------------------------
 // Spawn helper
 // ---------------------------------------------------------------------------
+
+/**
+ * Kill a process and everything it started: Dafny's solver processes (and
+ * the z3 wrapper's own z3s) outlive a Dafny killed on its own.
+ */
+function killProcessTree(child: ChildProcess): void {
+  if (child.pid === undefined) return;
+  try {
+    if (IS_WIN) {
+      spawn("taskkill", ["/pid", String(child.pid), "/T", "/F"], { stdio: "ignore" });
+    } else {
+      process.kill(-child.pid, "SIGKILL");
+    }
+  } catch {
+    child.kill("SIGKILL");
+  }
+}
 
 enum SpawnStatus {
   Exited = "exited",
@@ -578,9 +673,9 @@ function spawnDafny(
   bin: string,
   args: string[],
   cwd: string,
-  timeoutSec: number,
+  timeoutSec: number | undefined,
   extraEnv?: Record<string, string>,
-  signal?: AbortSignal
+  signal?: AbortSignal,
 ): Promise<SpawnResult> {
   if (signal?.aborted) {
     return Promise.resolve({ status: SpawnStatus.Aborted });
@@ -592,18 +687,20 @@ function spawnDafny(
     let done = false;
 
     const env = extraEnv ? { ...process.env, ...extraEnv } : undefined;
-    const child = spawn(bin, args, { cwd, env });
+    // In its own process group, so that stopping it also stops the solvers it started.
+    const child = spawn(bin, args, { cwd, env, detached: !IS_WIN });
+    const killAll = () => killProcessTree(child);
 
     let timedOut = false;
-    const timer = setTimeout(() => {
+    const timer = timeoutSec === undefined ? undefined : setTimeout(() => {
       timedOut = true;
-      child.kill("SIGKILL");
+      killAll();
     }, timeoutSec * 1000);
 
     // Resolve as soon as the run is aborted: a killed launcher's children can
     // keep the output pipes open, so waiting for "close" may take until they exit.
     signal?.addEventListener("abort", () => {
-      child.kill("SIGKILL");
+      killAll();
       clearTimeout(timer);
       if (!done) {
         done = true;

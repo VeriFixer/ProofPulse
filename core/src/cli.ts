@@ -11,7 +11,11 @@
  *   --minimize            Enable unsat core minimization
  *   --no-abstract-interpretation  Disable abstract interpretation
  *   --cores <n>           Solver processes Dafny runs in parallel (default: Dafny's, half the cores)
- *   --timeout <seconds>   Verification timeout (default: 60)
+ *   --timeout <seconds>   Time limit for each proof goal (default: 60)
+ *   --do-not-use-custom-wrapped-z3  Run z3 itself, without ProofPulse's wrapper (for timing)
+ *   --no-trigger-trace    Do not trace facts that supplied trigger terms (for timing)
+ *   --stream <path>       As each method is verified, append its findings to <path> ("-" = stdout)
+ *   --total-timeout <seconds>  Time limit for the whole run (default: none); the methods finished by then are reported
  *   --report <path>       Analyze a saved coverage report instead of running the verifier
  *   --emit-report <path>  Write the coverage report of this run (.json → JSON, else YAML)
  *   --log                 Print YAML report (only uncovered/partial nodes)
@@ -23,7 +27,7 @@ import * as fs from "node:fs";
 import { analyzeReport } from "./proof.js";
 import { generateTextReport } from "./report.js";
 import { createDefaultRegistry } from "./backends/registry.js";
-import { BackendOptions, RunStatus } from "./backends/backend.js";
+import { BackendOptions, CoreCheckConfig, RunStatus } from "./backends/backend.js";
 import { CoverageReport, VerifierId, enumValues } from "./report/coverage-report.js";
 import { parseCoverageReport, reportFormatForPath, serializeCoverageReport } from "./report/io.js";
 import { DEFAULT_DAFNY_COMMAND } from "./backends/dafny/runner.js";
@@ -51,7 +55,13 @@ Options:
   --minimize            Enable unsat core minimization
   --no-abstract-interpretation  Disable abstract interpretation
   --cores <n>           Solver processes Dafny runs in parallel (default: Dafny's, half the cores)
-  --timeout <seconds>   Verification timeout (default: 60)
+  --timeout <seconds>   Time limit for each proof goal (default: 60)
+  --do-not-use-custom-wrapped-z3  Run z3 itself, without ProofPulse's wrapper: cores are not checked
+                        (for timing; coverage may miss facts that only supplied trigger terms)
+  --no-trigger-trace    Do not trace facts that supplied trigger terms (for timing)
+  --stream <path>       As each method is verified, append its findings to <path> ("-" = stdout).
+                        Statuses that depend on callers not yet verified may change in the final report.
+  --total-timeout <seconds>  Time limit for the whole run (default: none); the methods finished by then are reported
   --report <path>       Analyze a saved coverage report (YAML/JSON) instead of running the verifier
   --emit-report <path>  Write the coverage report of this run (.json → JSON, otherwise YAML)
   --log                 Print YAML report (only uncovered/partial nodes)
@@ -82,6 +92,9 @@ async function main() {
   let noAbstractInterpretation = false;
   let cores: number | undefined;
   let timeout = 60;
+  let totalTimeout: number | undefined;
+  let streamPath: string | null = null;
+  const coreCheck: CoreCheckConfig = {};
   let logMode = LogMode.None;
   let showImplicit = false;
   let generateYamlPath: string | null = null;
@@ -111,6 +124,19 @@ async function main() {
         break;
       case "--timeout":
         timeout = parseInt(args[++i], 10);
+        break;
+      case "--do-not-use-custom-wrapped-z3":
+        coreCheck.useWrapper = false;
+        break;
+      case "--no-trigger-trace":
+        coreCheck.triggerTrace = false;
+        break;
+      case "--stream":
+        streamPath = args[++i];
+        break;
+      case "--total-timeout":
+        totalTimeout = parseInt(args[++i], 10);
+        if (!(totalTimeout >= 1)) fail("Error: --total-timeout needs a positive number");
         break;
       case "--log":
         logMode = LogMode.Default;
@@ -159,18 +185,44 @@ async function main() {
     const options: BackendOptions = {
       toolPath: dafnyPath,
       timeoutSeconds: timeout,
+      ...(totalTimeout !== undefined ? { totalTimeoutSeconds: totalTimeout } : {}),
+      ...(Object.keys(coreCheck).length > 0 ? { coreCheck } : {}),
       ...(minimize ? { minimization: {} } : {}),
       ...(backend.id === VerifierId.Dafny
         ? { backendOptions: { backend: VerifierId.Dafny, noAbstractInterpretation, cores } }
         : {}),
     };
-    const run = await backend.run(filePath, options);
+    // Name each method on stderr as it finishes, so long runs show progress,
+    // and with --stream write its findings out as well.
+    const source = streamPath ? fs.readFileSync(filePath, "utf-8") : "";
+    if (streamPath && streamPath !== "-") fs.writeFileSync(streamPath, "");
+    const finished = new Set<string>();
+    const run = await backend.run(filePath, {
+      ...options,
+      onPartialResult: (partial) => {
+        if (!partial.report) return;
+        const fresh = new Set(partial.report.units.map((u) => u.name).filter((name) => !finished.has(name)));
+        for (const name of fresh) {
+          finished.add(name);
+          console.error(`[${finished.size}] verified ${name}`);
+        }
+        if (streamPath && fresh.size > 0) {
+          const units = { ...partial.report, units: partial.report.units.filter((u) => fresh.has(u.name)) };
+          const findings = generateTextReport(source, analyzeReport(source, units), { includeImplicit: showImplicit });
+          const text = `${[...fresh].map((name) => `# verified ${name}`).join("\n")}\n${findings}\n`;
+          if (streamPath === "-") process.stdout.write(text);
+          else fs.appendFileSync(streamPath, text);
+        }
+      },
+    });
 
     switch (run.status) {
       case RunStatus.Completed:
         break;
       case RunStatus.TimedOut:
-        fail(`${backend.displayName} timed out`);
+        if (!run.report) fail(`${backend.displayName} timed out`);
+        console.error(`${backend.displayName} timed out; reporting the ${new Set(run.report.units.map((u) => u.name)).size} methods that finished`);
+        break;
       case RunStatus.Aborted:
         fail(`${backend.displayName} run aborted`);
       case RunStatus.Failed:

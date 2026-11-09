@@ -50,6 +50,7 @@ export type {
   BackendSpecificOptions,
   DafnySpecificOptions,
   SolverConfig,
+  CoreCheckConfig,
   MinimizationConfig,
   MinimizerCommand,
   MinimizationHook,

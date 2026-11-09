@@ -3,6 +3,8 @@ export enum Z3WrapperEnv {
   SolverPath = "PROOFPULSE_Z3_PATH",
   LogFile = "PROOFPULSE_WRAPPER_LOG",
   Mode = "PROOFPULSE_WRAPPER_MODE",
+  /** "0" skips reading z3's trace for facts that supplied trigger terms. */
+  TriggerTrace = "PROOFPULSE_TRIGGER_TRACE",
 }
 
 /** What the wrapper does with each unsat core. */

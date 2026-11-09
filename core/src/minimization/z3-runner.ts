@@ -46,7 +46,10 @@ export async function runZ3(
 
   try {
     return await new Promise<Z3Result>((resolve) => {
-      const child = spawn(z3Bin, [...params, "-smt2", tmpPath], {
+      // z3's own hard limit (seconds) ends the run even when this process is
+      // killed before its timer fires, e.g. by the verifier it serves.
+      const hardLimit = timeoutMs !== undefined ? [`-T:${Math.ceil(timeoutMs / 1000) + 1}`] : [];
+      const child = spawn(z3Bin, [...hardLimit, ...params, "-smt2", tmpPath], {
         stdio: ["ignore", "pipe", "pipe"],
       });
 

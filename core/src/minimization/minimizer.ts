@@ -184,7 +184,8 @@ export async function sufficientCore(
   contextCmds: Command[],
   queryBlock: Command[],
   core: string[],
-  timeoutMs?: number
+  timeoutMs?: number,
+  useTrace = true
 ): Promise<{ core: string[]; check: CoreCheck }> {
   const activeLabels = activeLabelsInContext(contextCmds);
   const normalized = normalizeCore(core, activeLabels);
@@ -193,7 +194,7 @@ export async function sufficientCore(
     return { core: normalized, check: CoreCheck.Core };
   }
 
-  const suppliers = await traceSuppliers(z3Bin, contextCmds, queryBlock, normalized, timeoutMs);
+  const suppliers = useTrace ? await traceSuppliers(z3Bin, contextCmds, queryBlock, normalized, timeoutMs) : [];
   if (suppliers.length > 0 && await proves([...normalized, ...suppliers])) {
     // The trace walk over-approximates (it follows every instantiation of the
     // kept quantifiers): drop suppliers the goal is proved without.

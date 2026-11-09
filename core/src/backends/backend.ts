@@ -51,6 +51,17 @@ export interface SolverConfig {
   path?: string;
 }
 
+/**
+ * How unsat cores are checked by ProofPulse's z3 wrapper: for timing its
+ * steps, the defaults (all on) are what analysis needs.
+ */
+export interface CoreCheckConfig {
+  /** false: the normal run gives the verifier z3 itself, without the wrapper; cores are not checked. */
+  useWrapper?: boolean;
+  /** false: no trace of the facts that supplied trigger terms when a core does not prove its goal alone. */
+  triggerTrace?: boolean;
+}
+
 export interface MinimizationConfig {
   /** Solver the minimizer forwards to. Defaults to the backend's own solver. */
   solver?: SolverConfig;
@@ -74,13 +85,20 @@ export interface BackendOptions {
   toolPath?: string;
   /** Solver the verifier runs with; the verifier's default when absent. */
   solver?: SolverConfig;
+  /** How unsat cores are checked; absent = fully. */
+  coreCheck?: CoreCheckConfig;
   /** Minimize unsat cores; absent = no minimization. */
   minimization?: MinimizationConfig;
+  /** Time limit for each proof goal. */
   timeoutSeconds?: number;
+  /** Time limit for the whole run; absent = none (each goal still has `timeoutSeconds`). */
+  totalTimeoutSeconds?: number;
   signal?: AbortSignal;
   onWarning?: (msg: string) => void;
   /** Called with the unminimized result before minimization starts (progressive backends). */
   onPreliminaryResult?: (run: BackendRun) => void;
+  /** Called while the verifier runs, each time more methods have finished, with the results so far. */
+  onPartialResult?: (run: BackendRun) => void;
   backendOptions?: BackendSpecificOptions;
 }
 
