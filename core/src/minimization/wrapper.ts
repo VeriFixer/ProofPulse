@@ -39,6 +39,7 @@ const RERUN_MIN_MS = 2000;
 const Z3_PATH = process.env[Z3WrapperEnv.SolverPath] || "z3";
 const LOG_FILE = process.env[Z3WrapperEnv.LogFile] || "";
 const MODE = process.env[Z3WrapperEnv.Mode] === Z3WrapperMode.Check ? Z3WrapperMode.Check : Z3WrapperMode.Minimize;
+const TRIGGER_TRACE = process.env[Z3WrapperEnv.TriggerTrace] !== "0";
 
 function log(msg: string): void {
   if (LOG_FILE) {
@@ -281,7 +282,7 @@ export async function main(): Promise<number> {
             // limit, since without a fact z3 may search forever (non-linear
             // arithmetic); a re-run that times out keeps the fact.
             const rerunMs = rerunTimeoutMs(lastCheckSatMs);
-            const checked = await sufficientCore(Z3_PATH, ctx, queryBlock, initialCore, rerunMs);
+            const checked = await sufficientCore(Z3_PATH, ctx, queryBlock, initialCore, rerunMs, TRIGGER_TRACE);
             if (checked.check === CoreCheck.Trace) {
               log(`core does not prove the goal alone, added facts that supplied trigger terms: ${initialCore.join(" ")} -> ${checked.core.join(" ")}`);
             } else if (checked.check === CoreCheck.AllFacts) {

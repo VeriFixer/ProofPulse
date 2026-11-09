@@ -83,7 +83,13 @@
           "order": 4,
           "type": "number",
           "default": 60,
-          "description": "Timeout in seconds for Dafny verification"
+          "description": "Time limit in seconds for each proof goal (Dafny's --verification-time-limit)"
+        },
+        "proofpulse.totalTimeoutSeconds": {
+          "order": 4,
+          "type": "number",
+          "default": 0,
+          "description": "Time limit in seconds for a whole run; 0 = no limit. Results of the methods that finished are shown as they come and kept when the limit is hit."
         },
         "proofpulse.runOnSave": {
           "order": 5,

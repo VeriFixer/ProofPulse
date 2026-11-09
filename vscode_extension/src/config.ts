@@ -29,6 +29,11 @@ export function getTimeout(): number {
   return vscode.workspace.getConfiguration("proofpulse").get<number>("timeoutSeconds", 60);
 }
 
+/** Time limit for a whole run; 0 = none. */
+export function getTotalTimeout(): number {
+  return vscode.workspace.getConfiguration("proofpulse").get<number>("totalTimeoutSeconds", 0);
+}
+
 export function getRunOnSave(): boolean {
   return vscode.workspace.getConfiguration("proofpulse").get<boolean>("runOnSave", true);
 }

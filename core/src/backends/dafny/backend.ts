@@ -21,7 +21,9 @@ export function dafnyRunToBackendRun(result: DafnyRunResult, minimized: boolean,
     exitCode: result.exitCode,
     ...(result.errorMessage !== undefined ? { errorMessage: result.errorMessage } : {}),
   };
-  if (result.status !== RunStatus.Completed) return base;
+  // A run that timed out still has the results of the methods it finished.
+  const hasResults = result.status === RunStatus.Completed || (result.status === RunStatus.TimedOut && result.log !== "");
+  if (!hasResults) return base;
   try {
     return { ...base, report: dafnyLogToReport(result.log, { version: result.dafnyVersion, minimized, sourceText }) };
   } catch (err) {
@@ -45,12 +47,13 @@ export class DafnyBackend implements VerifierBackend {
   }
 
   async run(file: string, opts: BackendOptions = {}): Promise<BackendRun> {
-    const { onPreliminaryResult, ...rest } = opts;
+    const { onPreliminaryResult, onPartialResult, ...rest } = opts;
     // Read before verifying so the text matches the log's spans.
     const sourceText = await readFile(file, "utf-8").catch(() => undefined);
     const result = await runDafny(file, {
       ...rest,
       ...(onPreliminaryResult ? { onPreliminaryResult: (r: DafnyRunResult) => onPreliminaryResult(dafnyRunToBackendRun(r, false, sourceText)) } : {}),
+      ...(onPartialResult ? { onPartialResult: (r: DafnyRunResult) => onPartialResult(dafnyRunToBackendRun(r, false, sourceText)) } : {}),
     });
     return dafnyRunToBackendRun(result, opts.minimization !== undefined, sourceText);
   }
